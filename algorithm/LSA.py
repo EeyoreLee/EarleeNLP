@@ -36,8 +36,8 @@ for i, w in enumerate(list_words):
     for j, d in enumerate(list_docs):
         X[i, j] = tf_idf(w, d, list_docs)
 
-# u, sigma, v_t  = svds(X, k=n_topic)
-u, sigma, v_t  = svd(X)
+u, sigma, v_t  = svds(X, k=n_topic)
+# u, sigma, v_t  = svd(X)
 
 word2vec_lsa = u
 
