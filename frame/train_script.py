@@ -21,10 +21,12 @@ from transformers import (
     AutoModel,
     AutoModelForPreTraining,
     AutoTokenizer,
+    AutoModelForSequenceClassification,
     TrainingArguments,
     HfArgumentParser,
     Trainer,
     set_seed,
+    PreTrainedTokenizerFast
 )
 
 from transformers.trainer_utils import get_last_checkpoint, is_main_process, is_torch_cuda_available
@@ -32,20 +34,9 @@ from transformers.utils import check_min_version
 import transformers
 
 
+
 class InvoiceTrainer(Trainer):
-    def _prepare_inputs(self, inputs: Dict[str, Union[torch.Tensor, Any]]) -> Dict[str, Union[torch.Tensor, Any]]:
-        """
-        Prepare :obj:`inputs` before feeding them to the model, converting them to tensors if they are not already and
-        handling potential state.
-        """
-        for k, v in inputs.items():
-            if hasattr(v, "to") and hasattr(v, "device"):
-                inputs[k] = v.to(self.args.device)
-
-        # if self.args.past_index >= 0 and self._past is not None:
-        #     inputs["mems"] = self._past
-
-        return inputs
+    ...
 
 
 logger = logging.getLogger(__name__)
@@ -57,24 +48,24 @@ class ModelArguments:
     Arguments pertaining to which model/config/tokenizer we are going to fine-tune from.
     """
 
-    model_name_or_path: str = field(
+    model_name_or_path: str = dataclasses.field(
         metadata={"help": "Path to pretrained model or model identifier from huggingface.co/models"}
     )
-    config_name: Optional[str] = field(
+    config_name: Optional[str] = dataclasses.field(
         default=None, metadata={"help": "Pretrained config name or path if not the same as model_name"}
     )
-    tokenizer_name: Optional[str] = field(
+    tokenizer_name: Optional[str] = dataclasses.field(
         default=None, metadata={"help": "Pretrained tokenizer name or path if not the same as model_name"}
     )
-    cache_dir: Optional[str] = field(
+    cache_dir: Optional[str] = dataclasses.field(
         default=None,
         metadata={"help": "Where do you want to store the pretrained models downloaded from huggingface.co"},
     )
-    model_revision: str = dataclass.field(
+    model_revision: str = dataclasses.field(
         default="main",
         metadata={"help": "The specific model version to use (can be a branch name, tag name or commit id)."},
     )
-    use_auth_token: bool = field(
+    use_auth_token: bool = dataclasses.field(
         default=False,
         metadata={
             "help": "Will use the token generated when running `transformers-cli login` (necessary to use this script "
@@ -88,7 +79,9 @@ class DataTrainingArguments():
 
     task_name: Optional[str] = dataclasses.field(default="ner", metadata={"help": "The name of the task (ner, pos...)."})
 
-    earlee: str = dataclasses.field(default='earlee')
+    author: str = dataclasses.field(default='earlee')
+
+    specific_num_labels: int = dataclasses.field(default=8, metadata={"help": "specific the num_labels if you want"})  # TODO auto load by dataset
 
 
 def main():
@@ -141,6 +134,8 @@ def main():
 
     # Set seed before initializing model.
     set_seed(training_args.seed)
+    num_labels = data_args.specific_num_labels
+
 
     config = AutoConfig.from_pretrained(
         model_args.config_name if model_args.config_name else model_args.model_name_or_path,
@@ -157,7 +152,7 @@ def main():
         revision=model_args.model_revision,
         use_auth_token=True if model_args.use_auth_token else None,
     )
-    model = AutoModelForTokenClassification.from_pretrained(
+    model = AutoModelForSequenceClassification.from_pretrained(
         model_args.model_name_or_path,
         from_tf=bool(".ckpt" in model_args.model_name_or_path),
         config=config,
@@ -165,7 +160,67 @@ def main():
         revision=model_args.model_revision,
         use_auth_token=True if model_args.use_auth_token else None,
     )
-    print('success')
+
+    # Tokenizer check: this script requires a fast tokenizer.
+    if not isinstance(tokenizer, PreTrainedTokenizerFast):
+        raise ValueError(
+            "This example script only works for models that have a fast tokenizer. Checkout the big table of models "
+            "at https://huggingface.co/transformers/index.html#bigtable to find the model types that meet this "
+            "requirement"
+        )
+
+    # Preprocessing the dataset
+    # Padding strategy
+    padding = "max_length" if data_args.pad_to_max_length else False
+
+    # Tokenize all texts and align the labels with them.
+    def tokenize_and_align_labels(examples):
+        tokenized_inputs = tokenizer(
+            # examples[text_column_name],
+            padding=padding,
+            truncation=True,
+            return_overflowing_tokens=True,
+            # We use this argument because the texts in our dataset are lists of words (with a label for each word).
+            is_split_into_words=True,
+        )
+
+        labels = []
+        bboxes = []
+        images = []
+        for batch_index in range(len(tokenized_inputs["input_ids"])):
+            word_ids = tokenized_inputs.word_ids(batch_index=batch_index)
+            org_batch_index = tokenized_inputs["overflow_to_sample_mapping"][batch_index]
+
+            label = examples[label_column_name][org_batch_index]
+            bbox = examples["bboxes"][org_batch_index]
+            image = examples["image"][org_batch_index]
+            previous_word_idx = None
+            label_ids = []
+            bbox_inputs = []
+            for word_idx in word_ids:
+                # Special tokens have a word id that is None. We set the label to -100 so they are automatically
+                # ignored in the loss function.
+                if word_idx is None:
+                    label_ids.append(-100)
+                    bbox_inputs.append([0, 0, 0, 0])
+                # We set the label for the first token of each word.
+                elif word_idx != previous_word_idx:
+                    label_ids.append(label_to_id[label[word_idx]])
+                    bbox_inputs.append(bbox[word_idx])
+                # For the other tokens in a word, we set the label to either the current label or -100, depending on
+                # the label_all_tokens flag.
+                else:
+                    label_ids.append(label_to_id[label[word_idx]] if data_args.label_all_tokens else -100)
+                    bbox_inputs.append(bbox[word_idx])
+                previous_word_idx = word_idx
+            labels.append(label_ids)
+            bboxes.append(bbox_inputs)
+            images.append(image)
+        tokenized_inputs["labels"] = labels
+        tokenized_inputs["bbox"] = bboxes
+        tokenized_inputs["image"] = images
+        return tokenized_inputs
+
 
 
 
