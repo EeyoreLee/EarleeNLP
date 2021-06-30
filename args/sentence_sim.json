@@ -1,0 +1,15 @@
+{
+    "tokenizer_max_length": 500,
+    "cosin_eps": 1e-8,
+    "pool_stride": 500,
+    "task_name": "test",
+    "output_dir": "/Users/lichunyu/Desktop/EarleeNLP/tmp",
+    "do_train": false,
+    "do_eval": true,
+    "seed": 42,
+    "num_train_epochs": 4,
+    "max_grad_norm": 1,
+    "per_device_train_batch_size": 4,
+    "per_device_eval_batch_size": 4,
+    "remove_unused_columns": false
+}

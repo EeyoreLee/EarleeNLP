@@ -1,2 +1,6 @@
 .vscode
 data/*
+bert-base-chinese/*
+models/runs/*
+runs/*
+.DS_Store
