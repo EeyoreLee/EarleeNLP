@@ -28,8 +28,8 @@ class GradCoeff(Function):
 
 a = torch.tensor([1.2], requires_grad=True)
 b = torch.tensor([.5], requires_grad=True)
-res = GradCoeff.apply(a, b)
-res.backward()
+func = GradCoeff.apply(a, b)
+func.backward()
 
 
 

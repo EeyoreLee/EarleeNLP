@@ -52,7 +52,7 @@ class SBert(nn.Module):
     def __init__(self, bert_pretrained_name='bert-base-chinese', pool_stride=1, cosin_eps=1e-8):
         super().__init__()
         self.bert_output = BertModel.from_pretrained(bert_pretrained_name)
-        self.pool = nn.AvgPool1d(kernel_size=pool_stride, stride=pool_stride)
+        # self.pool = nn.AvgPool1d(kernel_size=pool_stride, stride=pool_stride)
         self.cosin = nn.CosineSimilarity(dim=-1, eps=cosin_eps)
 
     def forward(self, input_ids1, token_type_ids1, attention_mask1, input_ids2, token_type_ids2, attention_mask2):
@@ -207,11 +207,11 @@ def main(debug_json=None):
     # Set seed before initializing model.
     set_seed(training_args.seed)
 
-    tokenizer = BertTokenizerFast.from_pretrained('/Users/lichunyu/Desktop/EarleeNLP/bert-base-chinese')
+    tokenizer = BertTokenizerFast.from_pretrained('/Users/lichunyu/data/models/bert-cls5')
     tokenizer.add_special_tokens({'additional_special_tokens':[SpecialToken.SIMSEP.value]})
 
     pool_stride, cosin_eps = model_args.pool_stride, model_args.cosin_eps
-    model = SBert(bert_pretrained_name='/Users/lichunyu/Desktop/EarleeNLP/bert-base-chinese', pool_stride=pool_stride, cosin_eps=cosin_eps)
+    model = SBert(bert_pretrained_name='/Users/lichunyu/data/models/bert-cls5', pool_stride=pool_stride, cosin_eps=cosin_eps)
 
 
     def compute_metrics(p):

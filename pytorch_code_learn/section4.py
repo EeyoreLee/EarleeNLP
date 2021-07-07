@@ -4,8 +4,59 @@
 @author: lichunyu
 '''
 
+from typing import overload
 import torch
-import torch.nn as nn
 
-class A(nn.Module):
+
+# class A(object):
+
+#     def __init__(cls, name, bases, attrs):
+#         pass
+
+
+
+def __init__(self, x):
+    self.x = x
+    print(self.x)
+
+
+@classmethod
+def cls_func(cls):
+    pass
+
+
+@staticmethod
+def static_func():
+    pass
+
+
+# A = type(
+#     'A',
+#     (object,),
+#     {
+#         '__init__': __init__,
+#         'cls_func': cls_func,
+#         'static_func': static_func
+#     }
+# )
+# a = A('x')
+
+class A(object):
+
+    def t(self):
+        print('A')
+
+
+class B(object):
+
+    def t(self):
+        print('B')
+
+
+class C(A, B):
     ...
+
+
+
+c = C()
+c.t()
