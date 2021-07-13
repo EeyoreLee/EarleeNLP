@@ -397,49 +397,6 @@ def main():
     )
 
 
-    # if training_args.do_train:
-    #     if "train" not in datasets:
-    #         raise ValueError("--do_train requires a train dataset")
-    #     train_dataset = datasets["train"]
-    #     if data_args.max_train_samples is not None:
-    #         train_dataset = train_dataset.select(range(data_args.max_train_samples))
-    #     train_dataset = train_dataset.map(
-    #         tokenize_and_align_labels,
-    #         batched=True,
-    #         remove_columns=remove_columns,
-    #         num_proc=data_args.preprocessing_num_workers,
-    #         load_from_cache_file=not data_args.overwrite_cache,
-    #     )
-
-    # if training_args.do_eval:
-    #     if "validation" not in datasets:
-    #         raise ValueError("--do_eval requires a validation dataset")
-    #     eval_dataset = datasets["validation"]
-    #     if data_args.max_val_samples is not None:
-    #         eval_dataset = eval_dataset.select(range(data_args.max_val_samples))
-    #     eval_dataset = eval_dataset.map(
-    #         tokenize_and_align_labels,
-    #         batched=True,
-    #         remove_columns=remove_columns,
-    #         num_proc=data_args.preprocessing_num_workers,
-    #         load_from_cache_file=not data_args.overwrite_cache,
-    #     )
-
-    # if training_args.do_predict:
-    #     if "test" not in datasets:
-    #         raise ValueError("--do_predict requires a test dataset")
-    #     test_dataset = datasets["test"]
-    #     if data_args.max_test_samples is not None:
-    #         test_dataset = test_dataset.select(range(data_args.max_test_samples))
-    #     test_dataset = test_dataset.map(
-    #         tokenize_and_align_labels,
-    #         batched=True,
-    #         remove_columns=remove_columns,
-    #         num_proc=data_args.preprocessing_num_workers,
-    #         load_from_cache_file=not data_args.overwrite_cache,
-    #     )
-
-
     # Training
     if training_args.do_train:
         checkpoint = last_checkpoint if last_checkpoint else None
