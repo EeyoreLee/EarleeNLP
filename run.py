@@ -34,6 +34,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score, accuracy_score, classification_report
 
 from models.BertForClassificationByDice import BertForClassificationByDice
+from plugin.FGM import FGM
 
 
 
@@ -198,7 +199,7 @@ def main(json_path=''):
     total_bt = time.time()
 
     optimizer = AdamW(model.parameters(),
-                  lr = 5e-6,
+                  lr = 1e-4,
                   eps = 1e-8
                 )
 
@@ -207,6 +208,8 @@ def main(json_path=''):
     scheduler = get_linear_schedule_with_warmup(optimizer, 
                                                 num_warmup_steps = 10, 
                                                 num_training_steps = total_steps)
+
+    fgm = FGM(model)
 
     for e in range(training_args.num_train_epochs):
 
@@ -240,6 +243,17 @@ def main(json_path=''):
             total_train_loss += loss.item()
 
             loss.backward()
+
+            fgm.attack(epsilon=1.2)
+            output_adv = model(
+                input_ids=input_ids,
+                attention_mask=attention_mask,
+                labels=labels
+            )
+
+            loss_adv = output_adv.loss
+            loss_adv.backward()
+            fgm.restore()
 
             optimizer.step()
             scheduler.step()
@@ -279,7 +293,6 @@ def main(json_path=''):
             label_ids = labels.to('cpu').numpy()
             total_eval_f1 += flat_f1(logits, label_ids)
             total_eval_acc += flat_acc(logits, label_ids)
-            # target_names = ['0', '1', '2', '3', '4']
             total_eval_p.extend(np.argmax(logits, axis=-1).flatten().tolist())
             total_eval_l.extend(label_ids.flatten().tolist())
 

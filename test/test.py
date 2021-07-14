@@ -19,26 +19,24 @@ import numpy as np
 
 # p = list(model.parameters())
 
-# # x = torch.tensor(1., requires_grad=True)
-# # y = x * 2
-# # y.backward()
-# # d_p = x.grad
-# pass
-class Ys(object):
-    """
-    test iiii
-    """
-
-    # @staticmethod
-    def test(self):
-        # print(self.__doc__)
-        print('he')
-
-
-
-
-
-# Ys.test(Ys())
-x = np.array([])
-x.extend(np.array([2,3,4]).tolist())
+x = torch.tensor(1., requires_grad=True)
+y = x * 2
+y.backward()
+y.backward()
+d_p = x.grad
 pass
+# class Ys(object):
+#     """
+#     test iiii
+#     """
+
+#     # @staticmethod
+#     def test(self):
+#         # print(self.__doc__)
+#         print('he')
+
+
+# # Ys.test(Ys())
+# x = np.array([])
+# x.extend(np.array([2,3,4]).tolist())
+# pass
