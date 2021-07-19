@@ -1,22 +1,14 @@
 # -*- encoding: utf-8 -*-
 '''
-@create_time: 2021/06/24 17:16:55
+@create_time: 2021/07/15 17:00:09
 @author: lichunyu
 '''
 
 import torch
-import torch.nn as nn
-from transformers import BertTokenizer
 from tokenizers import BertWordPieceTokenizer
-from torch.optim import SGD, AdamW
-import time
-import datetime
 import numpy as np
-import os
 from torch.utils.data import DataLoader, Dataset
 import json
-
-
 
 
 
@@ -46,7 +38,7 @@ class MRCNERDataset(Dataset):
     def __len__(self):
         return len(self.all_data)
 
-    def test_item(self, idx):
+    def __getitem__(self, item):
         """
         Args:
             item: int, idx
@@ -61,7 +53,7 @@ class MRCNERDataset(Dataset):
             label_idx: label id
 
         """
-        data = self.all_data[idx]
+        data = self.all_data[item]
         tokenizer = self.tokenzier
 
         qas_id = data.get("qas_id", "0.0")
@@ -187,35 +179,19 @@ class MRCNERDataset(Dataset):
         return lst
 
 
-def get_dataloader(prefix="train", limit: int = None) -> DataLoader:
-    """get training dataloader"""
-    """
-    load_mmap_dataset
-    """
-    json_path = '/root/EarleeNLP/data/zh_msra/mrc-ner.train'
+def get_dataloader(prefix="train", batch_size=8, limit: int = None) -> DataLoader:
+    json_path = '/root/EarleeNLP/data/zh_msra/mrc-ner.{}'.format(prefix)
     vocab_path = '/root/pretrain-models/bert-base-chinese/vocab.txt'
     dataset = MRCNERDataset(json_path=json_path,
                             tokenizer=BertWordPieceTokenizer(vocab_path),
                             max_length=150,
                             is_chinese=True,
-                            pad_to_maxlen=False
+                            pad_to_maxlen=True
                             )
 
     dataloader = DataLoader(
-        dataset=dataset
+        dataset=dataset,
+        batch_size=batch_size
     )
 
     return dataloader
-
-
-if __name__ == '__main__':
-    json_path = '/root/EarleeNLP/data/zh_msra/mrc-ner.train'
-    vocab_path = '/root/pretrain-models/bert-base-chinese/vocab.txt'
-    dataset = MRCNERDataset(json_path=json_path,
-                            tokenizer=BertWordPieceTokenizer(vocab_path),
-                            max_length=150,
-                            is_chinese=True,
-                            pad_to_maxlen=False
-                            )
-    res = dataset.test_item(6)
-    pass

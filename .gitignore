@@ -5,3 +5,4 @@ models/runs/*
 runs/*
 .DS_Store
 notebook/data/
+data/
