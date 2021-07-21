@@ -9,8 +9,11 @@ import torch
 import torch.nn as nn
 from torch import Tensor
 from typing import Optional
-from torch.nn.functional
+# from torch.nn.functional
 
+"""
+未测试过
+"""
 
 class AdaptiveDiceLoss(nn.Module):
     """

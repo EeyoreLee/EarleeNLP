@@ -1,0 +1,6 @@
+pytorch==1.6.0
+transformers
+numpy
+pandas
+scikit-learn
+tokenizers

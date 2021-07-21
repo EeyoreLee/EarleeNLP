@@ -32,7 +32,7 @@ def encode(query, context):
 
 
 
-m = torch.load('/ai/223/person/lichunyu/models/tmp/bert-2021-07-19-04-54-45-f1_0.pth')
+m = torch.load('/ai/223/person/lichunyu/models/ner-mrc/bert-2021-07-19-14-20-44-f1_86.pth')
 model = m.module
 
 input_ids, attention_mask, token_type_ids = encode(
