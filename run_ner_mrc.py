@@ -47,7 +47,7 @@ from loss.mrc_ner_dice_loss import DiceLoss as MRCDiceLoss
 
 logger = logging.getLogger(__name__)
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3,4,5'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3,4,5,6'
 
 
 @dataclass
@@ -323,8 +323,8 @@ def main(json_path=''):
             start_label_mask = batch[4].cuda()
             end_label_mask = batch[5].cuda()
             match_labels = batch[6].cuda()
-            sample_idx = batch[7].cuda()
-            label_idx = batch[8].cuda()
+            # sample_idx = batch[7].cuda()
+            label_idx = batch[7].cuda()
 
             attention_mask = (input_ids != 0).long()
 
@@ -396,8 +396,8 @@ def main(json_path=''):
             start_label_mask = batch[4].cuda()
             end_label_mask = batch[5].cuda()
             match_labels = batch[6].cuda()
-            sample_idx = batch[7].cuda()
-            label_idx = batch[8].cuda()
+            # sample_idx = batch[7].cuda()
+            label_idx = batch[7].cuda()
 
             attention_mask = (input_ids != 0).long()
 
@@ -446,10 +446,10 @@ def main(json_path=''):
         logger.info('Start to save checkpoint named {}'.format(current_ckpt))
         if custom_args.deploy is True:
             logger.info('>>>>>>>>>>>> saving the model <<<<<<<<<<<<<<')
-            torch.save(model, current_ckpt)
+            torch.save(model.module, current_ckpt)
         else:
             logger.info('>>>>>>>>>>>> saving the state_dict of model <<<<<<<<<<<<<')
-            torch.save(model.state_dict(), current_ckpt)
+            torch.save(model.module.state_dict(), current_ckpt)
 
 
 

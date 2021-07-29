@@ -58,7 +58,7 @@ class MRCNERDataset(Dataset):
 
         qas_id = data.get("qas_id", "0.0")
         sample_idx, label_idx = qas_id.split(".")
-        sample_idx = torch.LongTensor([int(sample_idx)])
+        # sample_idx = torch.LongTensor([int(sample_idx)])
         label_idx = torch.LongTensor([int(label_idx)])
 
         query = data["query"]
@@ -97,7 +97,11 @@ class MRCNERDataset(Dataset):
             origin_offset2token_idx_end[token_end] = token_idx
 
         new_start_positions = [origin_offset2token_idx_start[start] for start in start_positions]
-        new_end_positions = [origin_offset2token_idx_end[end] for end in end_positions]
+        try:
+            new_end_positions = [origin_offset2token_idx_end[end] for end in end_positions]
+        except Exception as e:
+            print(sample_idx)
+            raise(e)
 
         label_mask = [
             (0 if type_ids[token_idx] == 0 or offsets[token_idx] == (0, 0) else 1)
@@ -168,7 +172,7 @@ class MRCNERDataset(Dataset):
             torch.LongTensor(start_label_mask),
             torch.LongTensor(end_label_mask),
             match_labels,
-            sample_idx,
+            # sample_idx,
             label_idx
         ]
 
@@ -180,7 +184,7 @@ class MRCNERDataset(Dataset):
 
 
 def get_dataloader(prefix="train", batch_size=8, limit: int = None) -> DataLoader:
-    json_path = '/root/EarleeNLP/data/zh_msra/mrc-ner.{}'.format(prefix)
+    json_path = '/root/EarleeNLP/data/datafountain/mrc_ner.{}'.format(prefix)
     vocab_path = '/root/pretrain-models/bert-base-chinese/vocab.txt'
     dataset = MRCNERDataset(json_path=json_path,
                             tokenizer=BertWordPieceTokenizer(vocab_path),

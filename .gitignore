@@ -6,3 +6,4 @@ runs/*
 .DS_Store
 notebook/data/
 data/
+competition/

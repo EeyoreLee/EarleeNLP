@@ -1,6 +1,6 @@
 {
     "max_length": 150,
-    "output_dir": "/ai/223/person/lichunyu/models/tmp",
+    "output_dir": "/ai/223/person/lichunyu/models/df/query_type",
     "do_train": true,
     "do_eval": true,
     "seed": 42,
@@ -10,7 +10,7 @@
     "per_device_eval_batch_size": 4,
     "remove_unused_columns": false,
     "model_name_or_path": "/root/pretrain-models/bert-base-chinese",
-    "num_labels": 5,
-    "pickle_data_path": "/root/EarleeNLP/notebook/data/5cls_phase2.pkl",
+    "num_labels": 8,
+    "pickle_data_path": "/ai/223/person/lichunyu/datasets/dataf/query_type/query_type.pkl",
     "device": "cuda"
 }

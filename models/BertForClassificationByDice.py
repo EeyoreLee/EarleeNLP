@@ -78,7 +78,7 @@ class BertForClassificationByDice(BertPreTrainedModel):
 
             if self.config.problem_type == 'single_label_classification':
                 # loss_fct = DiceLoss()
-                loss_fct = FocalLoss(gamma=2, alpha=[3,2,2,2,1], reduction='sum')
+                loss_fct = FocalLoss(gamma=2, alpha=[1,1,1,1,1,1,1,1,5,4,1,1], reduction='sum')
                 loss = loss_fct(logits.view(-1, self.num_labels), labels.view(-1))
 
         if not return_dict:

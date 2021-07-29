@@ -169,7 +169,7 @@ def main(json_path=''):
         num_labels=custom_args.num_labels
     )
 
-    model = BertForClassificationByDice.from_pretrained(
+    model = BertForSequenceClassification.from_pretrained(
         custom_args.model_name_or_path,
         config=config
     )
@@ -199,14 +199,14 @@ def main(json_path=''):
     total_bt = time.time()
 
     optimizer = AdamW(model.parameters(),
-                  lr = 1e-4,
+                  lr = 5e-5,
                   eps = 1e-8
                 )
 
     total_steps = len(train_dataloader) * training_args.num_train_epochs
 
     scheduler = get_linear_schedule_with_warmup(optimizer, 
-                                                num_warmup_steps = 10, 
+                                                num_warmup_steps = 5, 
                                                 num_training_steps = total_steps)
 
     fgm = FGM(model)
