@@ -12,6 +12,7 @@ from transformers import (
 )
 import torch
 from tqdm import tqdm
+import torch.nn.functional as F
 
 
 COMMAND2IDX = {'查询状态': 0,
@@ -69,7 +70,7 @@ MRC_NER_LABEL = ['name',
                 'tag',
                 'song']
 
-
+#  第一版NER QUERY
 QUERY_MAP = {
     'name': '用以识别某一个体或群体(人和事物)的专属名词',
     'datetime_date': '发生某一事情的确定的日子或时期',
@@ -91,6 +92,29 @@ QUERY_MAP = {
     'song': '由歌词和曲谱相结合的一种艺术形式',
     'region': '某一范围的地方'
 }
+
+
+# QUERY_MAP = {
+#     'name': '用以识别某一个体或群体(人和事物)的专属名词',
+#     'datetime_date': '发生某一事情的确定的日子或时期',
+#     'departure': '出发的地方',
+#     'instrument': '用来演奏的乐器',
+#     'datetime_time': '物质的永恒运动、变化的持续性、顺序性的表现',
+#     'destination': '想要达到的地方',
+#     'appliance': '工作时所需用的器具',
+#     'notes': '听课、听报告、读书时所做的记录',
+#     'details': '所完成的具体的事或行动',
+#     'play_setting': '播放的方式',
+#     'artist': '杂技、戏曲、民间歌舞、曲艺演员',
+#     'city': '人口集中，居民以非农业人口为主，工商业比较发达的地区',
+#     'frequency': '每个对象出现的次数与总次数的比值',
+#     'channel': '电视台或电视网络',
+#     'age': '具体的年份日期',
+#     'album': '歌曲集合或专辑',
+#     'tag': '具有相同特征的事物所形成的类别',
+#     'song': '用来歌唱的音乐或歌曲',
+#     'region': '某一范围的地方'
+# }
 
 
 SUB_CLS_LABEL = [
@@ -145,7 +169,7 @@ REGION_MAP = {
 
 class NlpGoGo(object):
 
-    def __init__(self, cls_model_path, cls_config_path, ner_model_path, query_type_model_path=None, command_model_path=None, \
+    def __init__(self, cls_model_path, cls_config_path, ner_model_path, ood_model_path, query_type_model_path=None, command_model_path=None, \
                  device='cuda', max_length=150, policy:dict=None):
         """
         policy = {
@@ -164,8 +188,47 @@ class NlpGoGo(object):
             m = torch.load(ner_model_path, map_location=torch.device(device))
             self.ner_model = m
 
+        self.odd_model = torch.load(ood_model_path, map_location=torch.device(device))
+
         self.query_type_model = torch.load(query_type_model_path, map_location=torch.device(device))
         self.command_model = torch.load(command_model_path, map_location=torch.device(device))
+
+    def is_ood(self, text) -> bool:
+        input_ids = []
+        attention_mask = []
+        encoded_dict = self.tokenizer(
+                        text, 
+                        add_special_tokens = True,
+                        truncation='longest_first',
+                        max_length = self.max_length,
+                        padding = 'max_length',
+                        return_attention_mask = True,
+                        return_tensors = 'pt',
+                )
+
+        input_ids.append(encoded_dict['input_ids'])
+        attention_mask.append(encoded_dict['attention_mask'])
+        input_ids = torch.cat(input_ids, dim=0)
+        attention_mask = torch.cat(attention_mask, dim=0)
+
+        self.odd_model.eval()
+        with torch.no_grad():
+            input_ids = input_ids.to(self.device).to(torch.int64)
+            attention_mask = attention_mask.to(self.device).to(torch.int64)
+            output = self.odd_model(
+                input_ids=input_ids,
+                attention_mask=attention_mask
+            )
+
+        id2label = {idx: label for idx, label in enumerate(INTENT)}
+        if torch.max(F.softmax(output.logits)).detach().cpu().numpy().tolist() < 0.95:
+            intent = INTENT[-1]
+        else:
+            intent = id2label[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
+
+        if intent != INTENT[-1]:
+            return False
+        return True
 
     def classify(self, text):
         input_ids = []
@@ -195,6 +258,8 @@ class NlpGoGo(object):
             )
 
         id2label = {idx: label for idx, label in enumerate(INTENT)}
+        # if torch.max(F.softmax(output.logits)).detach().cpu().numpy().tolist() < 0.95:
+        #     return INTENT[-1]
         return id2label[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
 
     def ner(self, text, classification):
@@ -206,7 +271,7 @@ class NlpGoGo(object):
             query = QUERY_MAP[slot]
             encoded_dict = self.tokenizer(
                             query,
-                            text,
+                            normalization(text),
                             add_special_tokens = True,
                             truncation='longest_first',
                             max_length = self.max_length,
@@ -516,15 +581,21 @@ class NlpGoGo(object):
 
         id2query_type = {v: k for k, v in COMMAND2IDX.items()}
         return id2query_type[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
-        pass
 
     def go(self, data_path, output_path):
         res = defaultdict(dict)
         test_data = json.load(open(data_path, 'r'))
         for idx, text_dict in tqdm(test_data.items()):
             text = text_dict['text']
-            intent = self.classify(text)
+            ood = self.is_ood(text)
+            if ood is True:
+                intent = INTENT[-1]
+            else:
+                intent = self.classify(text)
             res[idx]['intent'] = intent
+            if self.policy['only_cls'] is True:
+                res[idx]['slots'] = {}
+                continue
             if intent == 'Other':
                 res[idx]['slots'] = {}
                 continue
@@ -566,12 +637,32 @@ class NlpGoGo(object):
         return output_path
 
 
+def  normalization(text):
+    candidate_num_list = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    candidate_letter_list = [
+        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+        'v', 'w', 'x', 'y', 'z',
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U',
+        'V', 'W', 'X', 'Y', 'Z'
+    ]
+
+    for i in candidate_num_list:
+        text = text.replace(i, '*')
+
+    for i in candidate_letter_list:
+        text = text.replace(i, '#')
+
+    return text
+
+
 if __name__ == '__main__':
     nlpgogo = NlpGoGo(
-        # cls_model_path='/ai/223/person/lichunyu/models/tmp/bert-2021-07-23-07-21-34-f1_98.pth',
-        cls_model_path='/ai/223/person/lichunyu/models/tmp/bert-2021-07-29-07-24-33-f1_97.pth',
+        cls_model_path='/ai/223/person/lichunyu/models/tmp/bert-2021-07-23-07-21-34-f1_98.pth',
+        ood_model_path='/ai/223/person/lichunyu/models/df/intent/bert-2021-08-02-14-35-46-f1_99.pth',  # odd acc 0.95
+        # cls_model_path='/ai/223/person/lichunyu/models/tmp/bert-2021-07-29-07-24-33-f1_97.pth',
         cls_config_path='/root/pretrain-models/bert-base-chinese',
         ner_model_path='/ai/223/person/lichunyu/models/tmp/bert-2021-07-28-15-18-42-f1_64.pth',
+        # ner_model_path='/ai/223/person/lichunyu/models/df/mrc-ner/bert-2021-08-02-07-30-50-f1_60.pth',  
         policy={
             'cls_model': 'bert',
             'only_cls': False
@@ -584,5 +675,6 @@ if __name__ == '__main__':
 
     _ = nlpgogo.go(
         data_path='/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.json',
+        # data_path='/root/EarleeNLP/data/datafountain/train.json',
         output_path='/ai/223/person/lichunyu/datasets/dataf/output/output.json'
     )

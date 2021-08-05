@@ -47,7 +47,7 @@ from loss.mrc_ner_dice_loss import DiceLoss as MRCDiceLoss
 
 logger = logging.getLogger(__name__)
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3,4,5,6'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3,4,5,6,7'
 
 
 @dataclass
@@ -79,7 +79,7 @@ class CustomizeArguments:
 
     weight_end: float = field(default=1.)
 
-    weight_span: float = field(default=1.)
+    weight_span: float = field(default=0.1)
 
 
 def tokenize_batch(
@@ -138,7 +138,7 @@ def gen_dataloader(df=None, df_train=None, df_eval=None, tokenizer=None, per_dev
 
 
 def compute_loss(_loss, start_logits, end_logits, span_logits,
-                    start_labels, end_labels, match_labels, start_label_mask, end_label_mask, loss_type='bces', span_loss_candidates='all'):
+                    start_labels, end_labels, match_labels, start_label_mask, end_label_mask, loss_type='dice', span_loss_candidates='all_'):
     batch_size, seq_len = start_logits.size()
 
     start_float_label_mask = start_label_mask.view(-1).float()
@@ -272,7 +272,7 @@ def main(json_path=''):
     #     max_length=custom_args.max_length,
     # )
 
-    train_dataloader = get_dataloader('train', 32)
+    train_dataloader = get_dataloader('train', 64)
     eval_dataloader = get_dataloader('test', 32)
     extra_loss = BCEWithLogitsLoss(reduction="none")
     extra_dice_loss = MRCDiceLoss(with_logits=True)
@@ -284,7 +284,7 @@ def main(json_path=''):
     total_bt = time.time()
 
     optimizer = AdamW(model.parameters(),
-                  lr = 2e-5,
+                  lr = 8e-6,
                   eps = 1e-8
                 )
 

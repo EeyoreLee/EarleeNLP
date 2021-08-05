@@ -17,6 +17,13 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3,4,5,6'
 
 device = 'cuda'
 
+
+class DFTest(object):
+
+    def __init__(self):
+        ...
+
+
 tokenizer = BertTokenizer.from_pretrained('/root/pretrain-models/bert-base-chinese')
 def encode(query, context):
     batch = tokenizer(
@@ -39,15 +46,15 @@ def encode(query, context):
 
 
 # m = torch.load('/ai/223/person/lichunyu/models/ner-mrc/bert-2021-07-19-14-20-44-f1_86.pth')
-model = torch.load('/ai/223/person/lichunyu/models/tmp/bert-2021-07-27-16-26-28-f1_58.pth')
+model = torch.load('/ai/223/person/lichunyu/models/tmp/bert-2021-07-28-15-18-42-f1_64.pth')
 # model = m.module
 
 input_ids = []
 attention_mask = []
 token_type_ids = []
 
-query_list = ['用以识别某一个体或群体(人和事物)的专属名词', '发生某一事情的确定的日子或时期', '人口集中，居民以非农业人口为主，工商业比较发达的地区', '工作时所需用的器具']
-text = '明晚天津会下雪吗'
+query_list = ['发生某一事情的确定的日子或时期', '人口集中，居民以非农业人口为主，工商业比较发达的地区', '工作时所需用的器具']
+text = '****'
 
 for query in query_list:
     batch = encode(

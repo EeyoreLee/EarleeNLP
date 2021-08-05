@@ -36,7 +36,7 @@ from sklearn.metrics import f1_score, accuracy_score, classification_report
 from models.BertForClassificationByDice import BertForClassificationByDice
 from plugin.FGM import FGM
 
-
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 logger = logging.getLogger(__name__)
 
@@ -169,7 +169,7 @@ def main(json_path=''):
         num_labels=custom_args.num_labels
     )
 
-    model = BertForSequenceClassification.from_pretrained(
+    model = BertForClassificationByDice.from_pretrained(
         custom_args.model_name_or_path,
         config=config
     )
@@ -194,8 +194,8 @@ def main(json_path=''):
 
     device = training_args.device if torch.cuda.is_available() else 'cpu'
 
-
-    model.to(device)
+    # model = nn.DataParallel(model)
+    model = model.cuda()
     total_bt = time.time()
 
     optimizer = AdamW(model.parameters(),
@@ -206,7 +206,7 @@ def main(json_path=''):
     total_steps = len(train_dataloader) * training_args.num_train_epochs
 
     scheduler = get_linear_schedule_with_warmup(optimizer, 
-                                                num_warmup_steps = 5, 
+                                                num_warmup_steps = 20, 
                                                 num_training_steps = total_steps)
 
     fgm = FGM(model)
@@ -226,9 +226,9 @@ def main(json_path=''):
                 elapsed = format_time(time.time() - bt)
                 logger.info('  Batch {:>5,}  of  {:>5,}.   Elapsed: {:}.'.format(step, len(train_dataloader), elapsed))
 
-            input_ids = batch[0].to(device)
-            attention_mask = batch[1].to(device)
-            labels = batch[2].to(device)
+            input_ids = batch[0].cuda()
+            attention_mask = batch[1].cuda()
+            labels = batch[2].cuda()
 
             model.zero_grad()
 
@@ -275,9 +275,9 @@ def main(json_path=''):
 
         for batch in eval_dataloader:
 
-            input_ids = batch[0].to(device)
-            attention_mask = batch[1].to(device)
-            labels = batch[2].to(device)
+            input_ids = batch[0].cuda()
+            attention_mask = batch[1].cuda()
+            labels = batch[2].cuda()
 
             with torch.no_grad():
                 output = model(
@@ -320,4 +320,5 @@ def main(json_path=''):
 
 
 if __name__ == '__main__':
-    main('/root/EarleeNLP/args/cls.json')
+    # main('/root/EarleeNLP/args/cls.json')
+    main('/root/EarleeNLP/args/df_intent.json')
