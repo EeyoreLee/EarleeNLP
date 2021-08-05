@@ -221,7 +221,7 @@ class NlpGoGo(object):
             )
 
         id2label = {idx: label for idx, label in enumerate(INTENT)}
-        if torch.max(F.softmax(output.logits)).detach().cpu().numpy().tolist() < 0.95:
+        if torch.max(F.softmax(output.logits)).detach().cpu().numpy().tolist() < 0.8:
             intent = INTENT[-1]
         else:
             intent = id2label[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
@@ -657,7 +657,8 @@ def  normalization(text):
 
 if __name__ == '__main__':
     nlpgogo = NlpGoGo(
-        cls_model_path='/ai/223/person/lichunyu/models/tmp/bert-2021-07-23-07-21-34-f1_98.pth',
+        # cls_model_path='/ai/223/person/lichunyu/models/tmp/bert-2021-07-23-07-21-34-f1_98.pth',
+        cls_model_path='/ai/223/person/lichunyu/models/df/intent/bert-2021-08-05-03-19-23-f1_99.pth',  # few_shot
         ood_model_path='/ai/223/person/lichunyu/models/df/intent/bert-2021-08-02-14-35-46-f1_99.pth',  # odd acc 0.95
         # cls_model_path='/ai/223/person/lichunyu/models/tmp/bert-2021-07-29-07-24-33-f1_97.pth',
         cls_config_path='/root/pretrain-models/bert-base-chinese',

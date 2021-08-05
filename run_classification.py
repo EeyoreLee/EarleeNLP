@@ -244,7 +244,7 @@ def main(json_path=''):
 
             loss.backward()
 
-            fgm.attack(epsilon=1.2)
+            fgm.attack(epsilon=0.9)
             output_adv = model(
                 input_ids=input_ids,
                 attention_mask=attention_mask,

@@ -39,7 +39,7 @@ from sklearn.metrics import f1_score, accuracy_score, classification_report
 from models.BertForClassificationByDice import BertForClassificationByDice
 from models.bert_query_ner import BertQueryNER, BertQueryNerConfig
 from plugin.FGM import FGM
-from tools.mrc_ner_dataloader import get_dataloader
+from utils.mrc_ner_dataloader import get_dataloader
 from loss.dice_loss import DiceLoss
 from metircs.functional.query_span_f1 import query_span_f1
 from loss.mrc_ner_dice_loss import DiceLoss as MRCDiceLoss
