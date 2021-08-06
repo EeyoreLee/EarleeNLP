@@ -7,3 +7,5 @@ runs/*
 notebook/data/
 data/
 competition/
+logs/
+cache/

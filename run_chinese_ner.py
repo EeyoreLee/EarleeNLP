@@ -20,22 +20,14 @@ import torch.nn.functional as F
 from torch import optim
 from transformers import TrainingArguments, HfArgumentParser
 from transformers.trainer_utils import is_main_process, get_last_checkpoint
+import fitlog
 
-from models.flat_bert import Lattice_Transformer_SeqLabel
+from models.flat_bert import Lattice_Transformer_SeqLabel, load_yangjie_rich_pretrain_word_list, equip_chinese_ner_with_lexicon, \
+    norm_static_embedding, BertEmbedding, LossInForward, SpanFPreRecMetric, AccuracyMetric, Trainer, FitlogCallback, LRScheduler, \
+        LambdaLR, GradientClipCallback, EarlyStopCallback, Callback, WarmupCallback
 from utils.common import print_info
+from utils.flat.base import load_ner
 
-
-yangjie_rich_pretrain_unigram_path = '/remote-home/xnli/data/pretrain/chinese/gigaword_chn.all.a2b.uni.ite50.vec'
-yangjie_rich_pretrain_bigram_path = '/remote-home/xnli/data/pretrain/chinese/gigaword_chn.all.a2b.bi.ite50.vec'
-yangjie_rich_pretrain_word_path = '/remote-home/xnli/data/pretrain/chinese/ctb.50d.vec'
-yangjie_rich_pretrain_char_and_word_path = '/remote-home/xnli/data/pretrain/chinese/yangjie_word_char_mix.txt'
-# lk_word_path = '/remote-home/xnli/data/pretrain/chinese/sgns.merge.word'
-lk_word_path_2 = '/remote-home/xnli/data/pretrain/chinese/sgns.merge.word_2'
-
-ontonote4ner_cn_path = '/remote-home/xnli/data/corpus/sequence_labelling/chinese_ner/OntoNote4NER'
-msra_ner_cn_path = '/remote-home/xnli/data/corpus/sequence_labelling/chinese_ner/MSRANER'
-resume_ner_path = '/remote-home/xnli/data/corpus/sequence_labelling/chinese_ner/ResumeNER'
-weibo_ner_path = '/remote-home/xnli/data/corpus/sequence_labelling/chinese_ner/WeiboNER'
 
 
 @dataclass
@@ -45,7 +37,7 @@ class CustomizeArguments:
 
     update_every: int = field(default=1)
 
-    status: str = field(default='train', metadata={"choice": "train/test"})
+    status: str = field(default='train', metadata={"help": "choice: train | test"})
 
     use_bert: int = field(default=1)
 
@@ -53,13 +45,13 @@ class CustomizeArguments:
 
     fix_bert_epoch: int = field(default=20)
 
-    after_bert: str = field(default='mlp', metadata={"choice": "mlp / lstm"})
+    after_bert: str = field(default='mlp', metadata={"help": "choice: mlp / lstm"})
 
     msg: str = field(default='11266')
 
     train_clip: bool = field(default=False, metadata={"help": "是不是要把train的char长度限制在200以内"})
 
-    debug: int = field(default=0)
+    # debug: int = field(default=0)
 
     gpumm: bool = field(default=False, metadata={"help": "查看显存"})
 
@@ -71,9 +63,9 @@ class CustomizeArguments:
 
     test_train: bool = field(default=False)
 
-    number_normalized: int = field(default=0, metadata={"choice": "0 | 1 | 2 | 3", "help": "0不norm，1只norm char,2norm char和bigram，3norm char，bigram和lattice"})
+    number_normalized: int = field(default=0, metadata={"help": "choice: 0 | 1 | 2 | 3", "help": "0不norm，1只norm char,2norm char和bigram，3norm char，bigram和lattice"})
 
-    lexicon_name: str = field(default='yj', metadata={"choice": "lk | yj"})
+    lexicon_name: str = field(default='yj', metadata={"help": "choice: lk | yj"})
 
     use_pytorch_dropout: int = field(default=0)
 
@@ -95,7 +87,7 @@ class CustomizeArguments:
 
     batch: int = field(default=10)
 
-    optim: str = field(default='sgd', metadata={"choice": "sgd | adam | adamw"})
+    optim: str = field(default='sgd', metadata={"help": "choice: sgd | adam | adamw"})
 
     lr: float = field(default=6e-4)
 
@@ -105,11 +97,11 @@ class CustomizeArguments:
 
     momentum: float = field(default=0.9)
 
-    init: str = field(default='uniform', metadata={"choice": "norm | uniform"})
+    init: str = field(default='uniform', metadata={"help": "choice: norm | uniform"})
 
     self_supervised: bool = field(default=False)
 
-    weight_decay: float = field(default=0)
+    # weight_decay: float = field(default=0.1)
 
     norm_embed: bool = field(default=True)
 
@@ -117,7 +109,7 @@ class CustomizeArguments:
 
     warmup: float = field(default=0.1)
 
-    model: str = field(default='transformer', metadata={"choice": "lstm | transformer"})
+    model: str = field(default='transformer', metadata={"help": "choice: lstm | transformer"})
 
     lattice: int = field(default=1)
 
@@ -135,7 +127,7 @@ class CustomizeArguments:
 
     scaled: bool = field(default=False)
 
-    ff_activate: str = field(default='relu', metadata={"choice": "leaky | relu"})
+    ff_activate: str = field(default='relu', metadata={"help": "choice: leaky | relu"})
 
     k_proj: bool = field(default=False)
 
@@ -163,7 +155,7 @@ class CustomizeArguments:
 
     four_pos_shared: bool = field(default=True)
 
-    four_pos_fusion: str = field(default='ff_two', metadata={"choices": "ff | attn | gate | ff_two | ff_linear", "help": "ff就是输入带非线性隐层的全连接，"
+    four_pos_fusion: str = field(default='ff_two', metadata={"help": "choice: ff | attn | gate | ff_two | ff_linear, ff就是输入带非线性隐层的全连接，"
                          "attn就是先计算出对每个位置编码的加权，然后求加权和"
                          "gate和attn类似，只不过就是计算的加权多了一个维度"})
 
@@ -193,7 +185,7 @@ class CustomizeArguments:
 
     embed_dropout_pos: str = field(default='0')
 
-    abs_pos_fusion_func: str = field(default='nonlinear_add', metadata={"choices": "'add' |'concat' | 'nonlinear_concat' | 'nonlinear_add' | 'concat_nonlinear' | 'add_nonlinear'"})
+    abs_pos_fusion_func: str = field(default='nonlinear_add', metadata={"help": "choice: 'add' |'concat' | 'nonlinear_concat' | 'nonlinear_add' | 'concat_nonlinear' | 'add_nonlinear'"})
 
     dataset: str = field(default='weibo')
 
@@ -221,8 +213,18 @@ class CustomizeArguments:
 
 
 def main(json_path):
+    yangjie_rich_pretrain_unigram_path = '/root/pretrain-models/flat/gigaword_chn.all.a2b.uni.ite50.vec'
+    yangjie_rich_pretrain_bigram_path = '/root/pretrain-models/flat/gigaword_chn.all.a2b.bi.ite50.vec'
+    yangjie_rich_pretrain_word_path = '/root/pretrain-models/flat/ctb.50d.vec'
+    yangjie_rich_pretrain_char_and_word_path = '/root/pretrain-models/flat/yangjie_word_char_mix.txt'
+    # lk_word_path = '/remote-home/xnli/data/pretrain/chinese/sgns.merge.word'
+    lk_word_path_2 = '/root/pretrain-models/flat/sgns.merge.word_2'
+
+    load_dataset_seed = 42
 
     logger = logging.getLogger(__name__)
+
+    fitlog.set_log_dir('logs')
 
     parser = HfArgumentParser((CustomizeArguments, TrainingArguments))
 
@@ -265,15 +267,21 @@ def main(json_path):
     if custom_args.test_batch == -1:
         custom_args.test_batch = custom_args.batch//2
 
-    if custom_args.device!='cpu':
-        assert custom_args.device.isdigit()
-        device = torch.device('cuda:{}'.format(custom_args.device))
-    else:
-        device = torch.device('cpu')
+    device = torch.device('cuda')
 
     refresh_data = False
 
-    datasets, vocabs, embeddings = load_weibo_ner()
+    datasets, vocabs, embeddings = load_ner(
+        '/root/hub/golden-horse/data',
+        '/root/pretrain-models/flat/gigaword_chn.all.a2b.uni.ite50.vec',
+        '/root/pretrain-models/flat/gigaword_chn.all.a2b.bi.ite50.vec',
+        _refresh=False,
+        index_token=False,
+        train_clip=custom_args.train_clip,
+        char_min_freq=custom_args.char_min_freq,
+        bigram_min_freq=custom_args.bigram_min_freq,
+        only_train_min_freq=custom_args.only_train_min_freq
+    )
 
 
     if custom_args.gaz_dropout < 0:
@@ -286,7 +294,6 @@ def main(json_path):
     if custom_args.lexicon_name == 'lk':
         yangjie_rich_pretrain_word_path = lk_word_path_2
 
-    print('用的词表的路径:{}'.format(yangjie_rich_pretrain_word_path))
 
     w_list = load_yangjie_rich_pretrain_word_list(yangjie_rich_pretrain_word_path,
                                               _refresh=refresh_data,
@@ -403,7 +410,7 @@ def main(json_path):
 
 
     mode = {}
-    mode['debug'] = custom_args.debug
+    mode['debug'] = 0
     mode['gpumm'] = custom_args.gpumm
     # if custom_args.debug or args.gpumm:
     #     fitlog.debug()
@@ -540,7 +547,7 @@ def main(json_path):
         # optimizer = optim.SGD(model.parameters(),lr=args.lr,momentum=args.momentum,
         #                       weight_decay=args.weight_decay)
         optimizer = optim.SGD(param_,lr=custom_args.lr,momentum=custom_args.momentum,
-                            weight_decay=custom_args.weight_decay)
+                            weight_decay=0.)
 
     if custom_args.dataset == 'msra':
         datasets['dev']  = datasets['test']
@@ -598,3 +605,8 @@ def main(json_path):
                         update_every=custom_args.update_every)
 
         trainer.train()
+
+
+
+if __name__ == '__main__':
+    main('args/empty.json')

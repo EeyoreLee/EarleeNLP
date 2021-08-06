@@ -13,7 +13,7 @@ from models.flat_bert import StaticEmbedding, get_bigrams
 
 
 @cache_results(_cache_fp='cache/weiboNER_uni+bi', _refresh=False)
-def load_weibo_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_token=True,
+def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_token=True,
                    char_min_freq=1,bigram_min_freq=1,only_train_min_freq=0,char_word_dropout=0.01):
 
     loader = ConllLoader(['chars','target'])
@@ -63,10 +63,6 @@ def load_weibo_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,i
         char_vocab.index_dataset(*list(datasets.values()), field_name='chars', new_field_name='chars')
         bigram_vocab.index_dataset(*list(datasets.values()),field_name='bigrams',new_field_name='bigrams')
         label_vocab.index_dataset(*list(datasets.values()), field_name='target', new_field_name='target')
-
-    # for k,v in datasets.items():
-    #     v.set_input('chars','bigrams','seq_len','target')
-    #     v.set_target('target','seq_len')
 
     vocabs['bigram'] = bigram_vocab
 
