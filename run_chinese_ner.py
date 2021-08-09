@@ -15,12 +15,15 @@ import datetime
 from collections import defaultdict
 
 import torch
+from torch.autograd.grad_mode import no_grad
 import torch.nn as nn
 import torch.nn.functional as F
 from torch import optim
+from torch.utils.data import Dataset, DataLoader
+from torch.nn.utils.rnn import pad_sequence
+from torch.nn.utils import clip_grad_norm_
 from transformers import TrainingArguments, HfArgumentParser
 from transformers.trainer_utils import is_main_process, get_last_checkpoint
-import fitlog
 
 from models.flat_bert import Lattice_Transformer_SeqLabel, load_yangjie_rich_pretrain_word_list, equip_chinese_ner_with_lexicon, \
     norm_static_embedding, BertEmbedding, LossInForward, SpanFPreRecMetric, AccuracyMetric, Trainer, FitlogCallback, LRScheduler, \
@@ -28,6 +31,18 @@ from models.flat_bert import Lattice_Transformer_SeqLabel, load_yangjie_rich_pre
 from utils.common import print_info
 from utils.flat.base import load_ner
 
+
+
+class Unfreeze_Callback(Callback):
+    def __init__(self,bert_embedding,fix_epoch_num):
+        super().__init__()
+        self.bert_embedding = bert_embedding
+        self.fix_epoch_num = fix_epoch_num
+        assert self.bert_embedding.requires_grad == False
+
+    def on_epoch_begin(self):
+        if self.epoch == self.fix_epoch_num+1:
+            self.bert_embedding.requires_grad = True
 
 
 @dataclass
@@ -212,6 +227,56 @@ class CustomizeArguments:
     eval_pickle_data_path: str = field(default='')
 
 
+
+
+def collate_func(batch_dict):
+    batch_len = len(batch_dict)
+    max_seq_length = max([dic['seq_len'] for dic in batch_dict])
+    chars = pad_sequence([i['chars'] for i in batch_dict], batch_first=True)
+    target = pad_sequence([i['target'] for i in batch_dict], batch_first=True)
+    bigrams = pad_sequence([i['bigrams'] for i in batch_dict], batch_first=True)
+    seq_len = torch.tensor([i['seq_len'] for i in batch_dict])
+    lex_num = torch.tensor([i['lex_num'] for i in batch_dict])
+    lex_s = pad_sequence([i['lex_s'] for i in batch_dict], batch_first=True)
+    lex_e = pad_sequence([i['lex_e'] for i in batch_dict], batch_first=True)
+    lattice = pad_sequence([i['lattice'] for i in batch_dict], batch_first=True)
+    pos_s = pad_sequence([i['pos_s'] for i in batch_dict], batch_first=True)
+    pos_e = pad_sequence([i['pos_e'] for i in batch_dict], batch_first=True)
+    return [chars, target, bigrams, seq_len, lex_num, lex_s, lex_e, lattice, pos_s, pos_e]
+
+
+
+
+class NERDataset(Dataset):
+
+    def __init__(self, dataset):
+        self.dataset = dataset
+
+    def __len__(self) -> int:
+        return len(self.dataset)
+
+    def __getitem__(self, index: int):
+        row = self.dataset[index]
+        row['chars'] = torch.tensor(row['chars'])
+        row['target'] = torch.tensor(row['target'])
+        row['bigrams'] = torch.tensor(row['bigrams'])
+        row['seq_len'] = torch.tensor(row['seq_len'])
+        row['lex_num'] = torch.tensor(row['lex_num'])
+        row['lex_s'] = torch.tensor(row['lex_s'])
+        row['lex_e'] = torch.tensor(row['lex_e'])
+        row['lattice'] = torch.tensor(row['lattice'])
+        row['pos_s'] = torch.tensor(row['pos_s'])
+        row['pos_e'] = torch.tensor(row['pos_e'])
+        return row
+
+
+
+
+
+
+
+
+
 def main(json_path):
     yangjie_rich_pretrain_unigram_path = '/root/pretrain-models/flat/gigaword_chn.all.a2b.uni.ite50.vec'
     yangjie_rich_pretrain_bigram_path = '/root/pretrain-models/flat/gigaword_chn.all.a2b.bi.ite50.vec'
@@ -223,8 +288,6 @@ def main(json_path):
     load_dataset_seed = 42
 
     logger = logging.getLogger(__name__)
-
-    fitlog.set_log_dir('logs')
 
     parser = HfArgumentParser((CustomizeArguments, TrainingArguments))
 
@@ -240,6 +303,7 @@ def main(json_path):
         datefmt="%m/%d/%Y %H:%M:%S",
         handlers=[logging.StreamHandler(sys.stdout)],
     )
+
     logger.setLevel(logging.INFO if is_main_process(training_args.local_rank) else logging.WARN)
 
     logger.info(
@@ -275,9 +339,9 @@ def main(json_path):
         '/root/hub/golden-horse/data',
         '/root/pretrain-models/flat/gigaword_chn.all.a2b.uni.ite50.vec',
         '/root/pretrain-models/flat/gigaword_chn.all.a2b.bi.ite50.vec',
-        _refresh=False,
+        _refresh=True,
         index_token=False,
-        train_clip=custom_args.train_clip,
+        # train_clip=custom_args.train_clip,
         char_min_freq=custom_args.char_min_freq,
         bigram_min_freq=custom_args.bigram_min_freq,
         only_train_min_freq=custom_args.only_train_min_freq
@@ -428,7 +492,7 @@ def main(json_path):
     # fitlog.set_rng_seed(args.seed)
     torch.backends.cudnn.benchmark = False
 
-    bert_embedding = BertEmbedding(vocabs['lattice'],model_dir_or_name='cn-wwm',requires_grad=False,word_dropout=0.01)
+    bert_embedding = BertEmbedding(vocabs['lattice'],model_dir_or_name='cn-wwm',requires_grad=True,word_dropout=0.01)
 
     model = Lattice_Transformer_SeqLabel(
         embeddings['lattice'], 
@@ -485,43 +549,25 @@ def main(json_path):
                     exit(1208)
         print_info('{}init pram{}'.format('*' * 15, '*' * 15))
 
-    loss = LossInForward()
-    encoding_type = 'bmeso'
-    if custom_args.dataset == 'weibo':
-        encoding_type = 'bio'
-    f1_metric = SpanFPreRecMetric(vocabs['label'],pred='pred',target='target',seq_len='seq_len',encoding_type=encoding_type)
-    acc_metric = AccuracyMetric(pred='pred',target='target',seq_len='seq_len',)
-    acc_metric.set_metric_name('label_acc')
-    metrics = [
-        f1_metric,
-        acc_metric
-    ]
-    if custom_args.self_supervised:
-        chars_acc_metric = AccuracyMetric(pred='chars_pred',target='chars_target',seq_len='seq_len')
-        chars_acc_metric.set_metric_name('chars_acc')
-        metrics.append(chars_acc_metric)
 
-    if custom_args.see_param:
-        for n,p in model.named_parameters():
-            print_info('{}:{}'.format(n,p.size()))
-        print_info('see_param mode: finish')
-        if not custom_args.debug:
-            exit(1208)
-    datasets['train'].apply
-    if custom_args.see_convergence:
-        print_info('see_convergence = True')
-        print_info('so just test train acc|f1')
-        datasets['train'] = datasets['train'][:100]
-        if custom_args.optim == 'adam':
-            optimizer = optim.AdamW(model.parameters(), lr=custom_args.lr, weight_decay=custom_args.weight_decay)
-        elif custom_args.optim == 'sgd':
-            optimizer = optim.SGD(model.parameters(), lr=custom_args.lr, momentum=custom_args.momentum)
-        trainer = Trainer(datasets['train'], model, optimizer, loss, custom_args.batch,
-                        n_epochs=custom_args.epoch, dev_data=datasets['train'], metrics=metrics,
-                        device=device, dev_batch_size=custom_args.test_batch)
+    encoding_type = 'bio' # bmeso
 
-        trainer.train()
-        exit(1208)
+
+    train_ds = NERDataset(datasets['train'])
+    train_dataloader = DataLoader(
+        train_ds,
+        batch_size=8,
+        collate_fn=collate_func,
+        shuffle=True
+    )
+
+
+    dev_ds = NERDataset(datasets['dev'])
+    dev_dataloader = DataLoader(
+        dev_ds,
+        batch_size=8,
+        collate_fn=collate_func
+    )
 
 
     bert_embedding_param = list(model.bert_embedding.parameters())
@@ -549,62 +595,89 @@ def main(json_path):
         optimizer = optim.SGD(param_,lr=custom_args.lr,momentum=custom_args.momentum,
                             weight_decay=0.)
 
-    if custom_args.dataset == 'msra':
-        datasets['dev']  = datasets['test']
-    fitlog_evaluate_dataset = {'test':datasets['test']}
-    if custom_args.test_train:
-        fitlog_evaluate_dataset['train'] = datasets['train']
-    evaluate_callback = FitlogCallback(fitlog_evaluate_dataset,verbose=1)
-    lrschedule_callback = LRScheduler(lr_scheduler=LambdaLR(optimizer, lambda ep: 1 / (1 + 0.05*ep) ))
-    clip_callback = GradientClipCallback(clip_type='value', clip_value=5)
+    span_f1_metric = SpanFPreRecMetric(vocabs['label'], pred='pred', target='target', seq_len='seq_len', encoding_type=encoding_type)
 
-    class Unfreeze_Callback(Callback):
-        def __init__(self,bert_embedding,fix_epoch_num):
-            super().__init__()
-            self.bert_embedding = bert_embedding
-            self.fix_epoch_num = fix_epoch_num
-            assert self.bert_embedding.requires_grad == False
+    # scheduler = LambdaLR(optimizer, lambda ep: 1 / (1 + 0.05*ep) )
 
-        def on_epoch_begin(self):
-            if self.epoch == self.fix_epoch_num+1:
-                self.bert_embedding.requires_grad = True
+    epoch = 30
 
-    callbacks = [
-            evaluate_callback,
-            lrschedule_callback,
-            clip_callback
-        ]
-    if custom_args.use_bert:
-        if custom_args.fix_bert_epoch != 0:
-            callbacks.append(Unfreeze_Callback(bert_embedding,custom_args.fix_bert_epoch))
-        else:
-            bert_embedding.requires_grad = True
-    callbacks.append(EarlyStopCallback(custom_args.early_stop))
-    if custom_args.warmup > 0 and custom_args.model == 'transformer':
-        callbacks.append(WarmupCallback(warmup=custom_args.warmup))
+    model.cuda()
 
+    for epoch_n in range(epoch):
 
-    class record_best_test_callback(Callback):
-        def __init__(self,trainer,result_dict):
-            super().__init__()
-            self.trainer222 = trainer
-            self.result_dict = result_dict
+        model.train()
+        total_train_loss = 0
+        for step, batch in enumerate(train_dataloader):
+            #TODO BERT embedding 前20 epoch 冻结
+            # chars = batch[0].cuda()
+            target = batch[1].cuda()
+            bigrams = batch[2].cuda()
+            seq_len = batch[3].cuda()
+            lex_num = batch[4].cuda()
+            # lex_s = batch[5].cuda()
+            # lex_e = batch[6].cuda()
+            lattice = batch[7].cuda()
+            pos_s = batch[8].cuda()
+            pos_e = batch[9].cuda()
 
-        def on_valid_end(self, eval_result, metric_key, optimizer, better_result):
-            print(eval_result['data_test']['SpanFPreRecMetric']['f'])
+            model.zero_grad()
 
-    print(torch.rand(size=[3,3],device=device))
+            output = model(
+                lattice,
+                bigrams,
+                seq_len,
+                lex_num,
+                pos_s,
+                pos_e,
+                target
+            )
 
-    if custom_args.status == 'train':
-        trainer = Trainer(datasets['train'],model,optimizer,loss,custom_args.batch,
-                        n_epochs=custom_args.epoch,
-                        dev_data=datasets['dev'],
-                        metrics=metrics,
-                        device=device,callbacks=callbacks,dev_batch_size=custom_args.test_batch,
-                        test_use_tqdm=False,check_code_level=-1,
-                        update_every=custom_args.update_every)
+            loss = output['loss']
+            total_train_loss += loss.item()
 
-        trainer.train()
+            loss.backward()
+            optimizer.step()
+            # scheduler.step()
+        print('train loss: ' + str(total_train_loss / len(train_dataloader)))
+
+        model.eval()
+        total_eval_loss = 0
+        for step, batch in enumerate(dev_dataloader):
+            #TODO BERT embedding 前20 epoch 冻结
+            # chars = batch[0].cuda()
+            target = batch[1].cuda()
+            bigrams = batch[2].cuda()
+            seq_len = batch[3].cuda()
+            lex_num = batch[4].cuda()
+            # lex_s = batch[5].cuda()
+            # lex_e = batch[6].cuda()
+            lattice = batch[7].cuda()
+            pos_s = batch[8].cuda()
+            pos_e = batch[9].cuda()
+
+            with torch.no_grad():
+
+                output = model(
+                    lattice,
+                    bigrams,
+                    seq_len,
+                    lex_num,
+                    pos_s,
+                    pos_e,
+                    target
+                )
+            pred = output['pred']
+            loss = output['loss']
+            total_eval_loss += loss.item()
+            span_f1_metric.evaluate(pred, target, seq_len)
+
+        print(span_f1_metric.get_metric())
+        print('eval loss: ' + str(total_eval_loss / len(dev_dataloader)))
+
+    print('==============success==============')
+    print(span_f1_metric.get_metric())
+    pass
+
 
 
 

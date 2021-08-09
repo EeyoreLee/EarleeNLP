@@ -1315,15 +1315,6 @@ class Lattice_Transformer_SeqLabel(nn.Module):
         self.rel_pos_init = rel_pos_init
         self.embed_dropout_pos = embed_dropout_pos
 
-
-        # if self.relative_position:
-        #     print('现在还不支持相对编码！')
-        #     exit(1208)
-
-        # if self.add_position:
-        #     print('暂时只支持位置编码的concat模式')
-        #     exit(1208)
-
         if self.use_rel_pos and max_seq_len < 0:
             print_info('max_seq_len should be set if relative position encode')
             exit(1208)
@@ -1365,15 +1356,6 @@ class Lattice_Transformer_SeqLabel(nn.Module):
             self.pe_se = None
             self.pe_es = None
             self.pe_ee = None
-
-
-
-
-
-
-        # if self.add_position:
-        #     print('现在还不支持位置编码通过concat的方式加入')
-        #     exit(1208)
 
         self.layer_preprocess_sequence = layer_preprocess_sequence
         self.layer_postprocess_sequence = layer_postprocess_sequence
@@ -1446,13 +1428,13 @@ class Lattice_Transformer_SeqLabel(nn.Module):
 
     def forward(self, lattice, bigrams, seq_len, lex_num, pos_s, pos_e,
                 target, chars_target=None):
-        if self.mode['debug']:
-            print('lattice:{}'.format(lattice))
-            print('bigrams:{}'.format(bigrams))
-            print('seq_len:{}'.format(seq_len))
-            print('lex_num:{}'.format(lex_num))
-            print('pos_s:{}'.format(pos_s))
-            print('pos_e:{}'.format(pos_e))
+        # if self.mode['debug']:
+        # print('lattice:{}'.format(lattice))
+        # print('bigrams:{}'.format(bigrams))
+        # print('seq_len:{}'.format(seq_len))
+        # print('lex_num:{}'.format(lex_num))
+        # print('pos_s:{}'.format(pos_s))
+        # print('pos_e:{}'.format(pos_e))
 
         batch_size = lattice.size(0)
         max_seq_len_and_lex_num = lattice.size(1)
@@ -1550,29 +1532,31 @@ class Lattice_Transformer_SeqLabel(nn.Module):
 
         mask = seq_len_to_mask(seq_len).bool()
 
-        if self.mode['debug']:
-            print('debug mode:finish!')
-            exit(1208)
-        if self.training:
-            loss = self.crf(pred, target, mask).mean(dim=0)
-            if self.self_supervised:
-                # print('self supervised loss added!')
-                chars_pred = self.output_self_supervised(encoded)
-                chars_pred = chars_pred.view(size=[batch_size*max_seq_len,-1])
-                chars_target = chars_target.view(size=[batch_size*max_seq_len])
-                self_supervised_loss = self.loss_func(chars_pred,chars_target)
-                # print('self_supervised_loss:{}'.format(self_supervised_loss))
-                # print('supervised_loss:{}'.format(loss))
-                loss += self_supervised_loss
-            return {'loss': loss}
-        else:
-            pred, path = self.crf.viterbi_decode(pred, mask)
-            result = {'pred': pred}
-            if self.self_supervised:
-                chars_pred = self.output_self_supervised(encoded)
-                result['chars_pred'] = chars_pred
 
-            return result
+        loss = self.crf(pred, target, mask).mean(dim=0)
+        if self.training:
+            return {'loss': loss}
+
+
+        # if self.self_supervised:
+        #     chars_pred = self.output_self_supervised(encoded)
+        #     chars_pred = chars_pred.view(size=[batch_size*max_seq_len,-1])
+        #     chars_target = chars_target.view(size=[batch_size*max_seq_len])
+        #     self_supervised_loss = self.loss_func(chars_pred,chars_target)
+        #     loss += self_supervised_loss
+
+
+        # return {'loss': loss}
+        # else:
+
+        pred, path = self.crf.viterbi_decode(pred, mask)
+        result = {'pred': pred}
+        if self.self_supervised:
+            chars_pred = self.output_self_supervised(encoded)
+            result['chars_pred'] = chars_pred
+
+        result['loss'] = loss
+        return result
 
 
 class StaticEmbedding(TokenEmbedding):
@@ -2092,9 +2076,6 @@ def equip_chinese_ner_with_lexicon(datasets,vocabs,embeddings,w_list,word_embedd
         chars = ins['chars']
         lexicons = ins['lexicons']
         result = chars + list(map(lambda x:x[2],lexicons))
-        # print('lexicons:{}'.format(lexicons))
-        # print('lex_only:{}'.format(list(filter(lambda x:x[2],lexicons))))
-        # print('result:{}'.format(result))
         return result
 
     def get_pos_s(ins):
@@ -2172,82 +2153,3 @@ def load_yangjie_rich_pretrain_word_list(embedding_path,drop_characters=True):
 
     return w_list
 
-
-@cache_results(_cache_fp='cache/weiboNER_uni+bi', _refresh=False)
-def load_weibo_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_token=True,
-                   char_min_freq=1,bigram_min_freq=1,only_train_min_freq=0,char_word_dropout=0.01):
-
-    loader = ConllLoader(['chars','target'])
-    # bundle = loader.load(path)
-    #
-    # datasets = bundle.datasets
-
-    # print(datasets['train'][:5])
-
-    train_path = os.path.join(path,'weiboNER_2nd_conll.train_deseg')
-    dev_path = os.path.join(path, 'weiboNER_2nd_conll.dev_deseg')
-    test_path = os.path.join(path, 'weiboNER_2nd_conll.test_deseg')
-
-    paths = {}
-    paths['train'] = train_path
-    paths['dev'] = dev_path
-    paths['test'] = test_path
-
-    datasets = {}
-
-    for k,v in paths.items():
-        bundle = loader.load(v)
-        datasets[k] = bundle.datasets['train']
-
-    for k,v in datasets.items():
-        print('{}:{}'.format(k,len(v)))
-    # print(*list(datasets.keys()))
-    vocabs = {}
-    char_vocab = Vocabulary()
-    bigram_vocab = Vocabulary()
-    label_vocab = Vocabulary()
-
-    for k,v in datasets.items():
-        # ignore the word segmentation tag
-        v.apply_field(lambda x: [w[0] for w in x],'chars','chars')
-        v.apply_field(get_bigrams,'chars','bigrams')
-
-
-    char_vocab.from_dataset(datasets['train'],field_name='chars',no_create_entry_dataset=[datasets['dev'],datasets['test']])
-    label_vocab.from_dataset(datasets['train'],field_name='target')
-    print('label_vocab:{}\n{}'.format(len(label_vocab),label_vocab.idx2word))
-
-    for k,v in datasets.items():
-        # v.set_pad_val('target',-100)
-        v.add_seq_len('chars',new_field_name='seq_len')
-
-    vocabs['char'] = char_vocab
-    vocabs['label'] = label_vocab
-
-    bigram_vocab.from_dataset(datasets['train'],field_name='bigrams',no_create_entry_dataset=[datasets['dev'],datasets['test']])
-    if index_token:
-        char_vocab.index_dataset(*list(datasets.values()), field_name='chars', new_field_name='chars')
-        bigram_vocab.index_dataset(*list(datasets.values()),field_name='bigrams',new_field_name='bigrams')
-        label_vocab.index_dataset(*list(datasets.values()), field_name='target', new_field_name='target')
-
-    # for k,v in datasets.items():
-    #     v.set_input('chars','bigrams','seq_len','target')
-    #     v.set_target('target','seq_len')
-
-    vocabs['bigram'] = bigram_vocab
-
-    embeddings = {}
-
-    if unigram_embedding_path is not None:
-        unigram_embedding = StaticEmbedding(char_vocab, model_dir_or_name=unigram_embedding_path,
-                                            word_dropout=char_word_dropout,
-                                            min_freq=char_min_freq,only_train_min_freq=only_train_min_freq,)
-        embeddings['char'] = unigram_embedding
-
-    if bigram_embedding_path is not None:
-        bigram_embedding = StaticEmbedding(bigram_vocab, model_dir_or_name=bigram_embedding_path,
-                                           word_dropout=0.01,
-                                           min_freq=bigram_min_freq,only_train_min_freq=only_train_min_freq)
-        embeddings['bigram'] = bigram_embedding
-
-    return datasets, vocabs, embeddings
