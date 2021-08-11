@@ -12,15 +12,24 @@ from fastNLP.io.loader import ConllLoader
 from models.flat_bert import StaticEmbedding, get_bigrams
 
 
-@cache_results(_cache_fp='cache/weiboNER_uni+bi', _refresh=False)
+@cache_results(_cache_fp='cache/weiboNER_uni+bi_new', _refresh=False)
 def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_token=True,
-                   char_min_freq=1,bigram_min_freq=1,only_train_min_freq=0,char_word_dropout=0.01):
+                   char_min_freq=1,bigram_min_freq=1,only_train_min_freq=0,char_word_dropout=0.01, test_path=None):
 
     loader = ConllLoader(['chars','target'])
 
-    train_path = os.path.join(path,'weiboNER_2nd_conll.train_deseg')
-    dev_path = os.path.join(path, 'weiboNER_2nd_conll.dev_deseg')
-    test_path = os.path.join(path, 'weiboNER_2nd_conll.test_deseg')
+    # train_path = os.path.join(path,'weiboNER_2nd_conll.train_deseg')
+    # dev_path = os.path.join(path, 'weiboNER_2nd_conll.dev_deseg')
+    # test_path = os.path.join(path, 'weiboNER_2nd_conll.test_deseg')
+
+    train_path = '/ai/223/person/lichunyu/datasets/dataf/seq_label/seq_label.train'
+    dev_path = '/ai/223/person/lichunyu/datasets/dataf/seq_label/seq_label.test'
+
+    # train_path = '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.seq'
+    # dev_path = '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.seq'
+    # test_path = '/ai/223/person/lichunyu/datasets/tmp/test_one.txt'
+    if test_path is None:
+        test_path = '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.seq'
 
     paths = {}
     paths['train'] = train_path

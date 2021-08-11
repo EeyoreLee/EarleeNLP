@@ -27,7 +27,7 @@ def ner_span_f1(pred, target, seq_len, other_label=2, specical_idx=[0,1], label2
 
 
 
-def ner_extract(pred, seq_len, text, other_label=2, special_idx=None, label2idx:dict=None):
+def ner_extract(pred, seq_len, text, other_label=2, special_idx=None, label2idx:dict=None, idx2label:dict=None):
     """暂时只支持BIO
 
     :param pred: [description]
@@ -43,21 +43,32 @@ def ner_extract(pred, seq_len, text, other_label=2, special_idx=None, label2idx:
     """
     if special_idx is None:
         special_idx = [0, 1]
-    non_label_idx = special_idx.append(other_label)
-    idx2label = {v: k for k, v in label2idx.items()}
+    non_label_idx = special_idx + [other_label]
+    if idx2label is None:
+        idx2label = {v: k for k, v in label2idx.items()}
     batch_size = len(seq_len)
-    result = defaultdict(list)
+    result = defaultdict(dict)
     for batch_idx in range(batch_size):
         label_stack = []
         location_stack = []
         pred_item = pred[batch_idx][:seq_len[batch_idx]].cpu().tolist()
         for num_idx, label_idx in enumerate(pred_item):
-            if label_idx not in  non_label_idx:
+            if label_idx not in non_label_idx:
                 if label_stack and idx2label[label_idx][0] == 'B':
-                    result[batch_idx][label_stack[0][2:]].append(text[location_stack[0]: location_stack[-1]+1])
+                    if label_stack[0][2:] in result[text[batch_idx]]:
+                        result[text[batch_idx]][label_stack[0][2:]].append(text[batch_idx][location_stack[0]: location_stack[-1]+1])
+                    else:
+                        result[text[batch_idx]][label_stack[0][2:]] = []
+                        result[text[batch_idx]][label_stack[0][2:]].append(text[batch_idx][location_stack[0]: location_stack[-1]+1])
                     label_stack = []
                     location_stack = []
                 label_stack.append(idx2label[label_idx])
                 location_stack.append(num_idx)
+        if label_stack:
+            if label_stack[0][2:] in result[text[batch_idx]]:
+                result[text[batch_idx]][label_stack[0][2:]].append(text[batch_idx][location_stack[0]: location_stack[-1]+1])
+            else:
+                result[text[batch_idx]][label_stack[0][2:]] = []
+                result[text[batch_idx]][label_stack[0][2:]].append(text[batch_idx][location_stack[0]: location_stack[-1]+1])
 
     return result

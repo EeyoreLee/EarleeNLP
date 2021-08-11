@@ -22,7 +22,7 @@ from torch import optim
 from torch.utils.data import Dataset, DataLoader
 from torch.nn.utils.rnn import pad_sequence
 from torch.nn.utils import clip_grad_norm_
-from transformers import TrainingArguments, HfArgumentParser
+from transformers import TrainingArguments, HfArgumentParser, set_seed
 from transformers.trainer_utils import is_main_process, get_last_checkpoint
 
 from models.flat_bert import Lattice_Transformer_SeqLabel, load_yangjie_rich_pretrain_word_list, equip_chinese_ner_with_lexicon, \
@@ -311,6 +311,8 @@ def main(json_path):
         + f"distributed training: {bool(training_args.local_rank != -1)}, 16-bits training: {training_args.fp16}"
     )
 
+    set_seed(training_args.seed)
+
     over_all_dropout = -1
 
     if custom_args.ff_dropout_2 < 0:
@@ -360,7 +362,7 @@ def main(json_path):
 
 
     w_list = load_yangjie_rich_pretrain_word_list(yangjie_rich_pretrain_word_path,
-                                              _refresh=refresh_data,
+                                              _refresh=False,
                                               _cache_fp='cache/{}'.format(custom_args.lexicon_name))
 
     cache_name = os.path.join('cache',(custom_args.dataset+'_lattice'+'_only_train:{}'+
@@ -378,7 +380,7 @@ def main(json_path):
                                                                 embeddings,
                                                                 w_list,
                                                                 yangjie_rich_pretrain_word_path,
-                                                                _refresh=refresh_data,
+                                                                _refresh=True,
                                                                 _cache_fp=cache_name,
                                                                 only_lexicon_in_train=custom_args.only_lexicon_in_train,
                                                                 word_char_mix_embedding_path=yangjie_rich_pretrain_char_and_word_path,
@@ -494,6 +496,8 @@ def main(json_path):
 
     bert_embedding = BertEmbedding(vocabs['lattice'],model_dir_or_name='cn-wwm',requires_grad=True,word_dropout=0.01)
 
+    # model = torch.load('/ai/223/person/lichunyu/models/df/ner/flat-2021-08-09-08-40-44-f1_70.pth', map_location=torch.device('cuda'))
+
     model = Lattice_Transformer_SeqLabel(
         embeddings['lattice'], 
         embeddings['bigram'], 
@@ -558,13 +562,20 @@ def main(json_path):
         train_ds,
         batch_size=8,
         collate_fn=collate_func,
-        shuffle=True
+        # shuffle=True
     )
 
 
     dev_ds = NERDataset(datasets['dev'])
     dev_dataloader = DataLoader(
         dev_ds,
+        batch_size=8,
+        collate_fn=collate_func
+    )
+
+    test_ds = NERDataset(datasets['test'])
+    test_dataloader = DataLoader(
+        test_ds,
         batch_size=8,
         collate_fn=collate_func
     )
@@ -600,10 +611,42 @@ def main(json_path):
     # scheduler = LambdaLR(optimizer, lambda ep: 1 / (1 + 0.05*ep) )
 
     epoch = 30
-
+    # model = nn.DataParallel(model)
     model.cuda()
 
+
+
     for epoch_n in range(epoch):
+
+        if epoch_n >= 10:
+            model.eval()
+            for step, batch in enumerate(test_dataloader):
+                #TODO BERT embedding 前20 epoch 冻结
+                # chars = batch[0].cuda()
+                target = batch[1].cuda()
+                bigrams = batch[2].cuda()
+                seq_len = batch[3].cuda()
+                lex_num = batch[4].cuda()
+                # lex_s = batch[5].cuda()
+                # lex_e = batch[6].cuda()
+                lattice = batch[7].cuda()
+                pos_s = batch[8].cuda()
+                pos_e = batch[9].cuda()
+
+                with torch.no_grad():
+
+                    output = model(
+                        lattice,
+                        bigrams,
+                        seq_len,
+                        lex_num,
+                        pos_s,
+                        pos_e,
+                        target
+                    )
+                pred = output['pred']
+                pass
+
 
         model.train()
         total_train_loss = 0
@@ -671,7 +714,16 @@ def main(json_path):
             total_eval_loss += loss.item()
             span_f1_metric.evaluate(pred, target, seq_len)
 
-        print(span_f1_metric.get_metric())
+        _span_f1 = span_f1_metric.get_metric()
+        current_ckpt = training_args.output_dir + '/flat-' + datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S") + '-f1_' + str(int(_span_f1['f']*100)) + '.pth'
+
+        print(_span_f1)
+        if custom_args.deploy is True:
+            logger.info('>>>>>>>>>>>> saving the model <<<<<<<<<<<<<<')
+            torch.save(model, current_ckpt)
+        else:
+            logger.info('>>>>>>>>>>>> saving the state_dict of model <<<<<<<<<<<<<')
+            torch.save(model.state_dict(), current_ckpt)
         print('eval loss: ' + str(total_eval_loss / len(dev_dataloader)))
 
     print('==============success==============')
@@ -682,4 +734,4 @@ def main(json_path):
 
 
 if __name__ == '__main__':
-    main('args/empty.json')
+    main('args/df_flat.json')
