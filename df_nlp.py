@@ -260,6 +260,52 @@ IDX2LABEL = {
 }
 
 
+# IDX2LABEL = {
+#     0: '<pad>', 
+#     1: '<unk>', 
+#     2: 'O', 
+#     3: 'I-name', 
+#     4: 'I-datetime_date', 
+#     5: 'I-channel', 
+#     6: 'B-datetime_date', 
+#     7: 'I-datetime_time', 
+#     8: 'I-notes', 
+#     9: 'B-name', 
+#     10: 'I-artist', 
+#     11: 'I-appliance', 
+#     12: 'I-destination', 
+#     13: 'I-details', 
+#     14: 'I-frequency', 
+#     15: 'I-song', 
+#     16: 'B-artist', 
+#     17: 'B-datetime_time', 
+#     18: 'I-age', 
+#     19: 'I-city', 
+#     20: 'B-appliance', 
+#     21: 'B-destination', 
+#     22: 'B-city', 
+#     23: 'B-notes', 
+#     24: 'B-details', 
+#     25: 'B-channel', 
+#     26: 'I-tag', 
+#     27: 'I-album', 
+#     28: 'I-play_setting', 
+#     29: 'I-departure', 
+#     30: 'B-song', 
+#     31: 'B-tag', 
+#     32: 'I-region', 
+#     33: 'B-departure', 
+#     34: 'B-region', 
+#     35: 'B-age', 
+#     36: 'B-frequency', 
+#     37: 'B-play_setting', 
+#     38: 'B-album', 
+#     39: 'I-instrument', 
+#     40: 'B-instrument'
+#     }
+
+
+
 class NERDataset(Dataset):
 
     def __init__(self, dataset):
@@ -342,7 +388,7 @@ class NlpGoGo(object):
             )
 
         id2label = {idx: label for idx, label in enumerate(INTENT)}
-        if torch.max(F.softmax(output.logits)).detach().cpu().numpy().tolist() < 0.8:
+        if torch.max(F.softmax(output.logits)).detach().cpu().numpy().tolist() < 0.87:
             intent = INTENT[-1]
         else:
             intent = id2label[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
@@ -485,14 +531,14 @@ class NlpGoGo(object):
             '播放一下',
             '随机',
             '随便',
-            '来一首',
-            '找一首',
-            '放一首',
-            '听一下',
-            '听一首',
+            # '来一首',
+            # '找一首',
+            # '放一首',
+            # '听一下',
+            # '听一首',
             '任意',
-            '来首',
-            '来一个'
+            # '来首',
+            # '来一个'
         ]
         for i in cls_0:
             if i in text:
@@ -599,8 +645,8 @@ class NlpGoGo(object):
         for i in cls_4:
             if i in text:
                 return '风向'
-        if '风' in text:
-            return '风力'
+        # if '风' in text:
+        #     return '风力'
         return ''
 
     def weather_query_type(self, text):
@@ -835,7 +881,7 @@ class NlpGoGo(object):
             if self.policy['ner'] == 'flat':
                 # slots = self.flat_ner(text, intent)
                 slots = slots_list_all[n_idx]
-                slots = clean_slot_by_intent(slots, intent)
+                slots = clean_slot_by_intent(slots, intent, post=False)
             else:
                 slots = self.ner(text, intent)
 
@@ -869,7 +915,7 @@ class NlpGoGo(object):
             res[idx]['slots'] = slots
 
         with open(output_path, 'w') as f:
-            res_jsoned = json.dumps(res, ensure_ascii=False)
+            res_jsoned = json.dumps(res, ensure_ascii=False, indent=4)
             f.write(res_jsoned)
 
         return output_path
@@ -990,8 +1036,6 @@ def flat_slot_clean(slots_dict, intent=None, with_intent=False):
         real_slot_k = slot_k
         for i in INTENT:
             real_slot_k = real_slot_k.replace(i+'-', '')
-        if with_intent is True and real_slot_k not in CORRESPONDENCE[intent]:
-            continue
         if len(slot_v) == 1:
             res[real_slot_k] = slot_v[0]
         else:
@@ -999,10 +1043,15 @@ def flat_slot_clean(slots_dict, intent=None, with_intent=False):
     return res
 
 
-def clean_slot_by_intent(slots_dict, intent):
+def clean_slot_by_intent(slots_dict, intent, post=False):
     res = {}
     for k, v in slots_dict.items():
+        if post is True:
+            if intent not in k:
+                continue
+            k = k.replace(intent+'-', '')
         if k not in CORRESPONDENCE[intent]:
+            # print('bug found+++++++++++++++++++++++')
             continue
         res[k] = v
     return res
@@ -1030,7 +1079,8 @@ if __name__ == '__main__':
     nlpgogo = NlpGoGo(
         # cls_model_path='/ai/223/person/lichunyu/models/tmp/bert-2021-07-23-07-21-34-f1_98.pth',
         cls_model_path='/ai/223/person/lichunyu/models/df/intent/bert-2021-08-05-03-19-23-f1_99.pth',  # few_shot
-        ood_model_path='/ai/223/person/lichunyu/models/df/intent/bert-2021-08-02-14-35-46-f1_99.pth',  # odd acc 0.95
+        # ood_model_path='/ai/223/person/lichunyu/models/df/intent/bert-2021-08-02-14-35-46-f1_99.pth',  # odd acc 0.95
+        ood_model_path='/ai/223/person/lichunyu/models/df/intent/bert-2021-08-13-02-54-15-f1_98.pth',
         # cls_model_path='/ai/223/person/lichunyu/models/tmp/bert-2021-07-29-07-24-33-f1_97.pth',
         cls_config_path='/root/pretrain-models/bert-base-chinese',
         ner_model_path='/ai/223/person/lichunyu/models/tmp/bert-2021-07-28-15-18-42-f1_64.pth',

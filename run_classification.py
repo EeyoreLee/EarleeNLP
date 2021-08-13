@@ -36,7 +36,8 @@ from sklearn.metrics import f1_score, accuracy_score, classification_report
 from models.BertForClassificationByDice import BertForClassificationByDice
 from plugin.FGM import FGM
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+
+os.environ['CUDA_VISIBLE_DEVICES'] = '1,0'
 
 logger = logging.getLogger(__name__)
 
@@ -66,6 +67,8 @@ class CustomizeArguments:
 
     eval_pickle_data_path: str = field(default='')
 
+    log_file_path: str = field(default='logs/log.log')
+
 
 def tokenize_batch(df, tokenizer, max_length=510, text_name='text', label_name='label', **kwargs):
     input_ids = []
@@ -93,9 +96,10 @@ def tokenize_batch(df, tokenizer, max_length=510, text_name='text', label_name='
     return input_ids, attention_masks, labels
 
 
-def gen_dataloader(df=None, df_train=None, df_eval=None, tokenizer=None, per_device_train_batch_size=None, per_device_eval_batch_size=None, test_size=0.2, **kwargs):
+def gen_dataloader(df=None, df_train=None, df_eval=None, tokenizer=None, per_device_train_batch_size=None, \
+                per_device_eval_batch_size=None, test_size=0.2, label_name='label', **kwargs):
     if df is not None:
-        df_train, df_eval = train_test_split(df, test_size=test_size)
+        df_train, df_eval, _, _ = train_test_split(df, df[label_name], test_size=test_size, stratify=df[label_name])
     train_input_ids, train_attention_masks, train_labels = tokenize_batch(df_train, tokenizer, **kwargs)
     eval_input_ids, eval_attention_masks, eval_labels = tokenize_batch(df_eval, tokenizer,**kwargs)
     train_dataset = TensorDataset(train_input_ids, train_attention_masks, train_labels)
@@ -138,7 +142,7 @@ def main(json_path=''):
     logging.basicConfig(
         format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
         datefmt="%m/%d/%Y %H:%M:%S",
-        handlers=[logging.StreamHandler(sys.stdout)],
+        handlers=[logging.StreamHandler(sys.stdout), logging.FileHandler(custom_args.log_file_path)],
     )
     logger.setLevel(logging.INFO if is_main_process(training_args.local_rank) else logging.WARN)
 
@@ -169,7 +173,7 @@ def main(json_path=''):
         num_labels=custom_args.num_labels
     )
 
-    model = BertForClassificationByDice.from_pretrained(
+    model = BertForSequenceClassification.from_pretrained(
         custom_args.model_name_or_path,
         config=config
     )
@@ -185,6 +189,7 @@ def main(json_path=''):
         df=data,
         # df_train=df_train,
         # df_eval=df_eval,
+        label_name='label',
         tokenizer=tokenizer,
         per_device_train_batch_size=training_args.per_device_train_batch_size,
         per_device_eval_batch_size=training_args.per_device_eval_batch_size,
@@ -209,7 +214,7 @@ def main(json_path=''):
                                                 num_warmup_steps = 20, 
                                                 num_training_steps = total_steps)
 
-    fgm = FGM(model)
+    # fgm = FGM(model)
 
     for e in range(training_args.num_train_epochs):
 
@@ -244,16 +249,16 @@ def main(json_path=''):
 
             loss.backward()
 
-            fgm.attack(epsilon=0.9)
-            output_adv = model(
-                input_ids=input_ids,
-                attention_mask=attention_mask,
-                labels=labels
-            )
+            # fgm.attack(epsilon=0.9)
+            # output_adv = model(
+            #     input_ids=input_ids,
+            #     attention_mask=attention_mask,
+            #     labels=labels
+            # )
 
-            loss_adv = output_adv.loss
-            loss_adv.backward()
-            fgm.restore()
+            # loss_adv = output_adv.loss
+            # loss_adv.backward()
+            # fgm.restore()
 
             optimizer.step()
             scheduler.step()
@@ -321,4 +326,4 @@ def main(json_path=''):
 
 if __name__ == '__main__':
     # main('/root/EarleeNLP/args/cls.json')
-    main('/root/EarleeNLP/args/df_intent.json')
+    main('/root/EarleeNLP/args/df_intent_ood.json')

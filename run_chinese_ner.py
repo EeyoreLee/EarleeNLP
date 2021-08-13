@@ -610,7 +610,7 @@ def main(json_path):
 
     # scheduler = LambdaLR(optimizer, lambda ep: 1 / (1 + 0.05*ep) )
 
-    epoch = 30
+    epoch = 50
     # model = nn.DataParallel(model)
     model.cuda()
 
@@ -618,7 +618,7 @@ def main(json_path):
 
     for epoch_n in range(epoch):
 
-        if epoch_n >= 10:
+        if epoch_n >= 40:
             model.eval()
             for step, batch in enumerate(test_dataloader):
                 #TODO BERT embedding 前20 epoch 冻结
