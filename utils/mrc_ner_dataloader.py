@@ -184,7 +184,7 @@ class MRCNERDataset(Dataset):
 
 
 def get_dataloader(prefix="train", batch_size=8, limit: int = None) -> DataLoader:
-    json_path = '/root/EarleeNLP/data/datafountain/mrc_ner.{}'.format(prefix)
+    json_path = '/root/EarleeNLP/data/datafountain/mrc_ner_index.{}'.format(prefix)
     vocab_path = '/root/pretrain-models/bert-base-chinese/vocab.txt'
     dataset = MRCNERDataset(json_path=json_path,
                             tokenizer=BertWordPieceTokenizer(vocab_path),

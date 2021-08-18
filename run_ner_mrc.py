@@ -79,7 +79,7 @@ class CustomizeArguments:
 
     weight_end: float = field(default=1.)
 
-    weight_span: float = field(default=0.1)
+    weight_span: float = field(default=0.7)
 
 
 def tokenize_batch(
@@ -284,7 +284,7 @@ def main(json_path=''):
     total_bt = time.time()
 
     optimizer = AdamW(model.parameters(),
-                  lr = 8e-6,
+                  lr = 1e-5,
                   eps = 1e-8
                 )
 
@@ -425,7 +425,7 @@ def main(json_path=''):
             total_eval_loss += loss.item()
             start_preds, end_preds = start_logits > 0, end_logits > 0
             eval_f1 = query_span_f1(start_preds, end_preds, span_logits, start_label_mask, end_label_mask, match_labels)
-            logger.info('eval_f1 : {}'.format(eval_f1))
+            # logger.info('eval_f1 : {}'.format(eval_f1))
             total_eval_f1 += eval_f1
             # break
 

@@ -37,7 +37,7 @@ from models.BertForClassificationByDice import BertForClassificationByDice
 from plugin.FGM import FGM
 
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '1,0'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2'
 
 logger = logging.getLogger(__name__)
 
