@@ -23,6 +23,9 @@ from transformers import (
     set_seed,
     HfArgumentParser,
     TrainingArguments,
+    RobertaConfig,
+    RobertaForSequenceClassification,
+    RobertaTokenizerFast,
     BertForSequenceClassification,
     BertTokenizer,
     BertConfig,
@@ -37,7 +40,7 @@ from models.BertForClassificationByDice import BertForClassificationByDice
 from plugin.FGM import FGM
 
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3,4,5,6,7'
 
 logger = logging.getLogger(__name__)
 
@@ -75,7 +78,8 @@ def tokenize_batch(df, tokenizer, max_length=510, text_name='text', label_name='
     attention_masks = []
     for idx, row in df.iterrows():
         encoded_dict = tokenizer(
-                            row[text_name], 
+                            row[text_name],
+                            # row['pair'],
                             add_special_tokens = True,
                             truncation='longest_first',
                             max_length = max_length,
@@ -205,13 +209,13 @@ def main(json_path=''):
 
     optimizer = AdamW(model.parameters(),
                   lr = 5e-5,
-                  eps = 1e-8
+                  eps = 1e-6
                 )
 
     total_steps = len(train_dataloader) * training_args.num_train_epochs
 
     scheduler = get_linear_schedule_with_warmup(optimizer, 
-                                                num_warmup_steps = 20, 
+                                                num_warmup_steps = 2, 
                                                 num_training_steps = total_steps)
 
     # fgm = FGM(model)
@@ -244,6 +248,7 @@ def main(json_path=''):
             )
 
             loss = output.loss
+            # loss = loss.mean()
             logits = output.logits
             total_train_loss += loss.item()
 
@@ -291,6 +296,7 @@ def main(json_path=''):
                     labels=labels
                 )
                 loss = output.loss
+                # loss = loss.mean()
                 logits = output.logits
 
             total_eval_loss += loss.item()
@@ -317,13 +323,16 @@ def main(json_path=''):
         logger.info('Start to save checkpoint named {}'.format(current_ckpt))
         if custom_args.deploy is True:
             logger.info('>>>>>>>>>>>> saving the model <<<<<<<<<<<<<<')
+            # torch.save(model.module, current_ckpt)
             torch.save(model, current_ckpt)
         else:
             logger.info('>>>>>>>>>>>> saving the state_dict of model <<<<<<<<<<<<<')
+            # torch.save(model.module.state_dict(), current_ckpt)
             torch.save(model.state_dict(), current_ckpt)
 
 
 
 if __name__ == '__main__':
     # main('/root/EarleeNLP/args/cls.json')
-    main('/root/EarleeNLP/args/df_intent_ood.json')
+    # main('/root/EarleeNLP/args/df_intent_ood_roberta.json')
+    main('/root/EarleeNLP/args/news.json')

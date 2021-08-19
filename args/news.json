@@ -1,0 +1,16 @@
+{
+    "max_length": 300,
+    "output_dir": "/ai/223/person/lichunyu/models/tmp",
+    "do_train": true,
+    "do_eval": true,
+    "seed": 42,
+    "num_train_epochs": 6,
+    "max_grad_norm": 1,
+    "per_device_train_batch_size": 16,
+    "per_device_eval_batch_size": 4,
+    "remove_unused_columns": false,
+    "model_name_or_path": "/root/pretrain-models/bert-base-chinese",
+    "num_labels": 2,
+    "pickle_data_path": "/root/EarleeNLP/notebook/news.pkl",
+    "device": "cuda"
+}

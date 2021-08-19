@@ -8,7 +8,8 @@ import json
 from collections import defaultdict
 
 from transformers import (
-    BertTokenizer
+    BertTokenizer,
+    RobertaTokenizerFast
 )
 import torch
 from tqdm import tqdm
@@ -332,7 +333,7 @@ class NERDataset(Dataset):
 class NlpGoGo(object):
 
     def __init__(self, cls_model_path, cls_config_path, ner_model_path, ood_model_path, query_type_model_path=None, command_model_path=None, \
-                 device='cuda', max_length=150, policy:dict=None):
+                 device='cuda', max_length=150, policy:dict=None, ood_config_path=None):
         """
         policy = {
                 'cls_model': 'bert',
@@ -355,7 +356,12 @@ class NlpGoGo(object):
             m = torch.load(ner_model_path, map_location=torch.device(device))
             self.ner_model = m
 
-        self.odd_model = torch.load(ood_model_path, map_location=torch.device(device))
+        if policy['ood_model'] == 'roberta':
+            self.ood_model = torch.load(ood_model_path, map_location=torch.device(device))
+            self.ood_tokenizer = RobertaTokenizerFast.from_pretrained(ood_config_path)
+        else:
+            self.ood_model = torch.load(ood_model_path, map_location=torch.device(device))
+            self.ood_tokenizer = self.tokenizer
 
         self.query_type_model = torch.load(query_type_model_path, map_location=torch.device(device))
         self.command_model = torch.load(command_model_path, map_location=torch.device(device))
@@ -363,7 +369,7 @@ class NlpGoGo(object):
     def is_ood(self, text) -> bool:
         input_ids = []
         attention_mask = []
-        encoded_dict = self.tokenizer(
+        encoded_dict = self.ood_tokenizer(
                         text, 
                         add_special_tokens = True,
                         truncation='longest_first',
@@ -378,17 +384,17 @@ class NlpGoGo(object):
         input_ids = torch.cat(input_ids, dim=0)
         attention_mask = torch.cat(attention_mask, dim=0)
 
-        self.odd_model.eval()
+        self.ood_model.eval()
         with torch.no_grad():
             input_ids = input_ids.to(self.device).to(torch.int64)
             attention_mask = attention_mask.to(self.device).to(torch.int64)
-            output = self.odd_model(
+            output = self.ood_model(
                 input_ids=input_ids,
                 attention_mask=attention_mask
             )
 
         id2label = {idx: label for idx, label in enumerate(INTENT)}
-        if torch.max(F.softmax(output.logits)).detach().cpu().numpy().tolist() < 0.87:
+        if torch.max(F.softmax(output.logits)).detach().cpu().numpy().tolist() < 0.65:
             intent = INTENT[-1]
         else:
             intent = id2label[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
@@ -753,14 +759,6 @@ class NlpGoGo(object):
     def flat_ner_all(self, real_text_list):
         slots_list = []
 
-        # tmp_test_path = '/ai/223/person/lichunyu/datasets/tmp/test_one.txt'
-
-        # with open(tmp_test_path, 'w') as f:
-        #     normalization_text = normalization(text, letter='@')
-        #     normalization_text = normalization_text.replace(' ', '')
-        #     for char in normalization_text:
-        #         f.write(char + '\t' + 'O' + '\n')
-
 
         datasets, vocabs, embeddings = load_ner(
             '/root/hub/golden-horse/data',
@@ -1081,6 +1079,7 @@ if __name__ == '__main__':
         cls_model_path='/ai/223/person/lichunyu/models/df/intent/bert-2021-08-05-03-19-23-f1_99.pth',  # few_shot
         # ood_model_path='/ai/223/person/lichunyu/models/df/intent/bert-2021-08-02-14-35-46-f1_99.pth',  # odd acc 0.95
         ood_model_path='/ai/223/person/lichunyu/models/df/intent/bert-2021-08-13-02-54-15-f1_98.pth',
+        # ood_model_path='/ai/223/person/lichunyu/models/df/intent/bert-2021-08-19-04-09-06-f1_96.pth',  # roberta
         # cls_model_path='/ai/223/person/lichunyu/models/tmp/bert-2021-07-29-07-24-33-f1_97.pth',
         cls_config_path='/root/pretrain-models/bert-base-chinese',
         ner_model_path='/ai/223/person/lichunyu/models/tmp/bert-2021-07-28-15-18-42-f1_64.pth',
@@ -1088,12 +1087,14 @@ if __name__ == '__main__':
         policy={
             'cls_model': 'bert',
             'only_cls': False,
-            'ner': 'flat'
+            'ner': 'flat',
+            'ood_model': 'bert'
         },
         # query_type_model_path='/ai/223/person/lichunyu/models/df/query_type/bert-2021-07-29-02-27-35-f1_97.pth',
         query_type_model_path='/ai/223/person/lichunyu/models/df/query_type/bert-2021-07-29-07-48-11-f1_96.pth',
         # command_model_path='/ai/223/person/lichunyu/models/df/command/bert-2021-07-29-02-34-54-f1_97.pth'
-        command_model_path='/ai/223/person/lichunyu/models/df/command/bert-2021-07-29-07-43-15-f1_97.pth'
+        command_model_path='/ai/223/person/lichunyu/models/df/command/bert-2021-07-29-07-43-15-f1_97.pth',
+        ood_config_path='/root/pretrain-models/hfl-chinese-roberta-wwm-ext-large'
     )
 
     _ = nlpgogo.go(

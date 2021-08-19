@@ -291,7 +291,7 @@ def main(json_path=''):
     total_steps = len(train_dataloader) * training_args.num_train_epochs
 
     scheduler = get_linear_schedule_with_warmup(optimizer, 
-                                                num_warmup_steps = 10, 
+                                                num_warmup_steps = 5, 
                                                 num_training_steps = total_steps)
 
     weight_sum = custom_args.weight_start + custom_args.weight_end + custom_args.weight_span
