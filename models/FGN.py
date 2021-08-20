@@ -5,19 +5,10 @@
 '''
 
 import torch
+from torch.functional import split
 import torch.nn as nn
 import torch.nn.functional as F
 from transformers import BertModel, BertConfig
-
-
-class FGN(nn.Module):
-
-    def __init__(self):
-        super().__init__()
-        pass
-
-    def forward(self):
-        pass
 
 
 class CGSCNN(nn.Module):
@@ -56,6 +47,29 @@ class CGSCNN(nn.Module):
         return output
 
 
+def slide_window(_tensor, window_size=1, stride=None, pad=False):
+    batch = _tensor.shape[0]
+    seq_dim = _tensor.shape[1]
+    vec_len = _tensor.shape[-1]
+    if stride is None:
+        stride = window_size
+    if pad is True:
+        pad_num = (_tensor.shape[-1] - window_size) % stride
+        pad_dim = (
+            0,pad_num,
+            0,0,
+            0,0
+        )
+        _tensor = F.pad(_tensor, pad_dim)
+        vec_len += pad_num
+    slice_tensor = []
+    for i in range(0, vec_len-window_size+1, stride):
+        slice = _tensor[:, :, i:i+window_size].unsqueeze(-2)
+        slice_tensor.append(slice)
+    tensor_grouped = torch.cat(slice_tensor, dim=-2)
+    return tensor_grouped
+
+
 class OosSlidingWindow(nn.Module):
 
     def __init__(self, k_c, s_c, k_g, s_g, d_c=512, d_g=64):
@@ -70,15 +84,48 @@ class OosSlidingWindow(nn.Module):
         self.n = int(((d_c - k_c) / s_c) + 1)
 
     def forward(self, c_s, g_s):
-        c_s_group = None # TODO 关于c_s的slid window
-        g_s_group = None # TODO 关于g_s的slid window
-        c_s_group_r = c_s_group.repeat(1, self.n).reshape(self.n**2, -1).unsqueeze(dim=1)
-        g_s_group_r = g_s_group.repeat(self.n, 1).unsqueeze(dim=1)
-        outer = torch.einsum('bnc,bng->bncg', [c_s_group_r, g_s_group_r]).squeeze(dim=1).reshape(self.n, \
-                    self.n, c_s.shape[-1], g_s.shape[-1]).flatten(start_dim=-2)
+        batch = c_s.shape[0]
+        seq_len = c_s.shape[1]
+        c_s_group = slide_window(c_s, window_size=self.k_c, stride=self.s_c)
+        g_s_group = slide_window(g_s, window_size=self.k_g, stride=self.s_g)
+        c_s_group_r = c_s_group.repeat(1, 1, 1, self.n).reshape(batch, seq_len, self.n**2, -1, c_s_group.shape[-1])
+        g_s_group_r = g_s_group.repeat(1, 1, self.n, 1).unsqueeze(-2)
+        outer = torch.einsum('bsihc,bsihg->bsicg', [c_s_group_r, g_s_group_r]).squeeze(dim=-3).reshape(batch, \
+                seq_len, self.n, self.n, c_s_group_r.shape[-1], g_s_group_r.shape[-1]).flatten(start_dim=-3)
+        return outer
 
 
 class SliceAttention(nn.Module):
 
-    def __init__(self):
+    def __init__(self, k_c, k_g):
         super().__init__()
+        self.softmax = nn.Softmax()
+        self.sigmoid = nn.Sigmoid()
+        self.slice_linear = nn.Linear(k_c*k_g, k_c*k_g)
+        self.query = nn.Linear(k_c*k_g, k_c*k_g)
+
+    def forward(self, outer):
+        k = self.slice_linear(outer)
+        k = self.sigmoid(k)
+        k = k.transpose(-1, -2)
+        q = self.query(outer)
+        q = self.sigmoid(q)
+        attn = self.softmax(q*k)
+        output = attn @ outer
+        output = output.sum(-1)
+        return output
+
+
+class FGN(nn.Module):
+
+    def __init__(self, bert_model_name_or_path, num_embeddings, embedding_dim, k_c, s_c, k_g, s_g, d_c=512, d_g=64, dropout_prob=0.2):
+        super().__init__()
+        self.bert = BertModel.from_pretrained(bert_model_name_or_path)
+        self.cgs_cnn = CGSCNN(num_embeddings=num_embeddings, embedding_dim=embedding_dim, dropout_prob=dropout_prob)
+        self.oos_sliding_window = OosSlidingWindow(k_c=k_c, s_c=s_c, k_g=k_g, s_g=s_g, d_c=d_c, d_g=d_g)
+        self.slice_attention = SliceAttention(k_c=k_c, k_g=k_g)
+
+    def forward(self, input_ids, attention_mask=None, token_type_ids=None):
+        bert_output = self.bert(input_ids=input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids)
+        bert_output = bert_output.last_hidden_state
+        cgs_cnn_output = self.cgs_cnn(input_ids)
