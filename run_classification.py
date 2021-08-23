@@ -335,4 +335,5 @@ def main(json_path=''):
 if __name__ == '__main__':
     # main('/root/EarleeNLP/args/cls.json')
     # main('/root/EarleeNLP/args/df_intent_ood_roberta.json')
-    main('/root/EarleeNLP/args/news.json')
+    # main('/root/EarleeNLP/args/news.json')
+    main('/root/EarleeNLP/args/df_intent_ood.json')

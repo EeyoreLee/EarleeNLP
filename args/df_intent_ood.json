@@ -11,6 +11,6 @@
     "remove_unused_columns": false,
     "model_name_or_path": "/root/pretrain-models/bert-base-chinese",
     "num_labels": 12,
-    "pickle_data_path": "/root/EarleeNLP/data/datafountain/balance_ood_2703_other.pkl",
+    "pickle_data_path": "/root/EarleeNLP/data/datafountain/balance_ood_6000_other.pkl",
     "device": "cuda"
 }
