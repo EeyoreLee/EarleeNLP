@@ -186,6 +186,20 @@ def main(json_path=''):
         custom_args.tokenizer_name_or_path if custom_args.tokenizer_name_or_path else custom_args.model_name_or_path,
     )
 
+    # config = RobertaConfig.from_pretrained(
+    #     custom_args.config_name_or_path if custom_args.config_name_or_path else custom_args.model_name_or_path,
+    #     num_labels=custom_args.num_labels
+    # )
+
+    # model = RobertaForSequenceClassification.from_pretrained(
+    #     custom_args.model_name_or_path,
+    #     config=config
+    # )
+
+    # tokenizer = RobertaTokenizerFast.from_pretrained(
+    #     custom_args.tokenizer_name_or_path if custom_args.tokenizer_name_or_path else custom_args.model_name_or_path,
+    # )
+
     data = pd.read_pickle(custom_args.pickle_data_path)
     # df_train = pd.read_pickle(custom_args.train_pickle_data_path)
     # df_eval = pd.read_pickle(custom_args.eval_pickle_data_path)
@@ -203,7 +217,7 @@ def main(json_path=''):
 
     device = training_args.device if torch.cuda.is_available() else 'cpu'
 
-    # model = nn.DataParallel(model)
+    model = nn.DataParallel(model)
     model = model.cuda()
     total_bt = time.time()
 
@@ -248,7 +262,7 @@ def main(json_path=''):
             )
 
             loss = output.loss
-            # loss = loss.mean()
+            loss = loss.mean()
             logits = output.logits
             total_train_loss += loss.item()
 
@@ -296,7 +310,7 @@ def main(json_path=''):
                     labels=labels
                 )
                 loss = output.loss
-                # loss = loss.mean()
+                loss = loss.mean()
                 logits = output.logits
 
             total_eval_loss += loss.item()
@@ -324,16 +338,23 @@ def main(json_path=''):
         if custom_args.deploy is True:
             logger.info('>>>>>>>>>>>> saving the model <<<<<<<<<<<<<<')
             # torch.save(model.module, current_ckpt)
-            torch.save(model, current_ckpt)
+            if isinstance(model, nn.DataParallel):
+                torch.save(model.module, current_ckpt)
+            else:
+                torch.save(model, current_ckpt)
         else:
             logger.info('>>>>>>>>>>>> saving the state_dict of model <<<<<<<<<<<<<')
-            # torch.save(model.module.state_dict(), current_ckpt)
-            torch.save(model.state_dict(), current_ckpt)
+            if isinstance(model, nn.DataParallel):
+                torch.save(model.module.state_dict(), current_ckpt)
+            else:
+                torch.save(model.state_dict(), current_ckpt)
 
 
 
 if __name__ == '__main__':
     # main('/root/EarleeNLP/args/cls.json')
     # main('/root/EarleeNLP/args/df_intent_ood_roberta.json')
+    main('/root/EarleeNLP/args/df_intent_hfl_roberta.json')
     # main('/root/EarleeNLP/args/news.json')
-    main('/root/EarleeNLP/args/df_intent_ood.json')
+    # main('/root/EarleeNLP/args/df_intent_ood.json')
+    # main('/root/EarleeNLP/args/df_intent_ood_roberta_6000.json')
