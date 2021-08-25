@@ -5,3 +5,8 @@
 '''
 
 
+from datasets import load_metric
+
+metric = load_metric('seqeval')
+
+pass

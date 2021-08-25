@@ -1,8 +1,9 @@
 # -*- encoding: utf-8 -*-
 '''
-@create_time: 2021/07/07 13:59:47
+@create_time: 2021/08/24 14:22:27
 @author: lichunyu
 '''
+
 
 
 from dataclasses import dataclass, field
@@ -12,6 +13,7 @@ import time
 import uuid
 import os
 import sys
+import datasets
 
 import torch
 import torch.nn.functional as F
@@ -27,6 +29,7 @@ from transformers import (
     RobertaForSequenceClassification,
     RobertaTokenizerFast,
     BertForSequenceClassification,
+    BertForTokenClassification,
     BertTokenizer,
     BertConfig,
     AdamW,
@@ -155,21 +158,6 @@ def main(json_path=''):
         + f"distributed training: {bool(training_args.local_rank != -1)}, 16-bits training: {training_args.fp16}"
     )
 
-
-    # last_checkpoint = None
-    # if os.path.isdir(training_args.output_dir) and training_args.do_train and not training_args.overwrite_output_dir:
-    #     last_checkpoint = get_last_checkpoint(training_args.output_dir)
-    #     if last_checkpoint is None and len(os.listdir(training_args.output_dir)) > 0:
-    #         raise ValueError(
-    #             f"Output directory ({training_args.output_dir}) already exists and is not empty. "
-    #             "Use --overwrite_output_dir to overcome."
-    #         )
-    #     elif last_checkpoint is not None:
-    #         logger.info(
-    #             f"Checkpoint detected, resuming training at {last_checkpoint}. To avoid this behavior, change "
-    #             "the `--output_dir` or add `--overwrite_output_dir` to train from scratch."
-    #         )
-
     set_seed(training_args.seed)
 
     config = BertConfig.from_pretrained(
@@ -177,7 +165,7 @@ def main(json_path=''):
         num_labels=custom_args.num_labels
     )
 
-    model = BertForSequenceClassification.from_pretrained(
+    model = BertForTokenClassification.from_pretrained(
         custom_args.model_name_or_path,
         config=config
     )
@@ -186,27 +174,9 @@ def main(json_path=''):
         custom_args.tokenizer_name_or_path if custom_args.tokenizer_name_or_path else custom_args.model_name_or_path,
     )
 
-    # config = RobertaConfig.from_pretrained(
-    #     custom_args.config_name_or_path if custom_args.config_name_or_path else custom_args.model_name_or_path,
-    #     num_labels=custom_args.num_labels
-    # )
-
-    # model = RobertaForSequenceClassification.from_pretrained(
-    #     custom_args.model_name_or_path,
-    #     config=config
-    # )
-
-    # tokenizer = RobertaTokenizerFast.from_pretrained(
-    #     custom_args.tokenizer_name_or_path if custom_args.tokenizer_name_or_path else custom_args.model_name_or_path,
-    # )
-
     data = pd.read_pickle(custom_args.pickle_data_path)
-    # df_train = pd.read_pickle(custom_args.train_pickle_data_path)
-    # df_eval = pd.read_pickle(custom_args.eval_pickle_data_path)
     train_dataloader, eval_dataloader = gen_dataloader(
         df=data,
-        # df_train=df_train,
-        # df_eval=df_eval,
         label_name='label',
         tokenizer=tokenizer,
         per_device_train_batch_size=training_args.per_device_train_batch_size,
@@ -231,6 +201,8 @@ def main(json_path=''):
     scheduler = get_linear_schedule_with_warmup(optimizer, 
                                                 num_warmup_steps = 2, 
                                                 num_training_steps = total_steps)
+
+    seqeval = datasets.load_metric('seqeval')
 
     # fgm = FGM(model)
 
@@ -316,12 +288,18 @@ def main(json_path=''):
             total_eval_loss += loss.item()
             logits = logits.detach().cpu().numpy()
             label_ids = labels.to('cpu').numpy()
+
+
+
+
+
+
             total_eval_f1 += flat_f1(logits, label_ids)
             total_eval_acc += flat_acc(logits, label_ids)
             total_eval_p.extend(np.argmax(logits, axis=-1).flatten().tolist())
             total_eval_l.extend(label_ids.flatten().tolist())
 
-        logger.info(f'\n{classification_report(total_eval_p, total_eval_l, zero_division=1)}')
+        # logger.info(f'\n{classification_report(total_eval_p, total_eval_l, zero_division=1)}')
         avg_val_f1 = total_eval_f1 / len(eval_dataloader)
         avg_val_acc = total_eval_acc / len(eval_dataloader)
         logger.info('F1: {0:.2f}'.format(avg_val_f1))
@@ -352,9 +330,4 @@ def main(json_path=''):
 
 
 if __name__ == '__main__':
-    # main('/root/EarleeNLP/args/cls.json')
-    # main('/root/EarleeNLP/args/df_intent_ood_roberta.json')
-    main('/root/EarleeNLP/args/df_intent_ood_macbert.json')
-    # main('/root/EarleeNLP/args/news.json')
-    # main('/root/EarleeNLP/args/df_intent_ood.json')
-    # main('/root/EarleeNLP/args/df_intent_ood_roberta_6000.json')
+    main('/root/EarleeNLP/args/cls.json')
