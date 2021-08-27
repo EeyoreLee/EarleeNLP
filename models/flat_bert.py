@@ -1974,11 +1974,11 @@ def get_peking_time():
     return t
 
 
-@cache_results(_cache_fp='need_to_defined_fp',_refresh=True)
+# @cache_results(_cache_fp='need_to_defined_fp',_refresh=True)
 def equip_chinese_ner_with_lexicon(datasets,vocabs,embeddings,w_list,word_embedding_path=None,
                                    only_lexicon_in_train=False,word_char_mix_embedding_path=None,
                                    number_normalized=False,
-                                   lattice_min_freq=1,only_train_min_freq=0):
+                                   lattice_min_freq=1,only_train_min_freq=0, **kwargs):
     def normalize_char(inp):
         result = []
         for c in inp:
@@ -2107,8 +2107,10 @@ def equip_chinese_ner_with_lexicon(datasets,vocabs,embeddings,w_list,word_embedd
     vocabs['word'] = word_vocab
 
     lattice_vocab = Vocabulary()
-    lattice_vocab.from_dataset(datasets['train'],field_name='lattice',
-                               no_create_entry_dataset=[v for k,v in datasets.items() if k != 'train'])
+    lattice_vocab.from_dataset(datasets['train'],field_name='lattice',no_create_entry_dataset=[datasets['dev']])
+    # lattice_vocab.from_dataset(datasets['train'],field_name='lattice',
+                            #    no_create_entry_dataset=[v for k,v in datasets.items() if k != 'train'])
+    vocabs['lattice'] = lattice_vocab
     vocabs['lattice'] = lattice_vocab
 
     if word_embedding_path is not None:
@@ -2138,8 +2140,8 @@ def norm_static_embedding(x,norm=1):
         x.embedding.weight *= norm
 
 
-@cache_results(_cache_fp='cache/load_yangjie_rich_pretrain_word_list',_refresh=False)
-def load_yangjie_rich_pretrain_word_list(embedding_path,drop_characters=True):
+# @cache_results(_cache_fp='cache/load_yangjie_rich_pretrain_word_list',_refresh=False)
+def load_yangjie_rich_pretrain_word_list(embedding_path,drop_characters=True, **kwargs):
     f = open(embedding_path,'r')
     lines = f.readlines()
     w_list = []

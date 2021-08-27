@@ -12,9 +12,9 @@ from fastNLP.io.loader import ConllLoader
 from models.flat_bert import StaticEmbedding, get_bigrams
 
 
-@cache_results(_cache_fp='cache/weiboNER_uni+bi_new', _refresh=False)
+# @cache_results(_cache_fp='cache/weiboNER_uni+bi_new', _refresh=False)
 def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_token=True,
-                   char_min_freq=1,bigram_min_freq=1,only_train_min_freq=0,char_word_dropout=0.01, test_path=None):
+                   char_min_freq=1,bigram_min_freq=1,only_train_min_freq=0,char_word_dropout=0.01, test_path=None, **kwargs):
 
     loader = ConllLoader(['chars','target'])
 
@@ -56,7 +56,8 @@ def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_t
         v.apply_field(get_bigrams,'chars','bigrams')
 
 
-    char_vocab.from_dataset(datasets['train'],field_name='chars',no_create_entry_dataset=[datasets['dev'],datasets['test']])
+    # char_vocab.from_dataset(datasets['train'],field_name='chars',no_create_entry_dataset=[datasets['dev'],datasets['test']])
+    char_vocab.from_dataset(datasets['train'],field_name='chars',no_create_entry_dataset=[datasets['dev']])
     label_vocab.from_dataset(datasets['train'],field_name='target')
     print('label_vocab:{}\n{}'.format(len(label_vocab),label_vocab.idx2word))
 
@@ -67,7 +68,8 @@ def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_t
     vocabs['char'] = char_vocab
     vocabs['label'] = label_vocab
 
-    bigram_vocab.from_dataset(datasets['train'],field_name='bigrams',no_create_entry_dataset=[datasets['dev'],datasets['test']])
+    # bigram_vocab.from_dataset(datasets['train'],field_name='bigrams',no_create_entry_dataset=[datasets['dev'],datasets['test']])
+    bigram_vocab.from_dataset(datasets['train'],field_name='bigrams',no_create_entry_dataset=[datasets['dev']])
     if index_token:
         char_vocab.index_dataset(*list(datasets.values()), field_name='chars', new_field_name='chars')
         bigram_vocab.index_dataset(*list(datasets.values()),field_name='bigrams',new_field_name='bigrams')

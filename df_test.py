@@ -8,7 +8,7 @@ from torch.utils.data import Dataset, DataLoader
 from torch.nn.utils.rnn import pad_sequence
 
 from utils.flat.base import load_ner
-from models.flat_bert import load_yangjie_rich_pretrain_word_list, equip_chinese_ner_with_lexicon
+from models.flat_bert import get_embedding, load_yangjie_rich_pretrain_word_list, equip_chinese_ner_with_lexicon
 from metircs.functional.f1_score import ner_extract
 
 
@@ -180,21 +180,45 @@ datasets, vocabs, embeddings = load_ner(
     '/root/pretrain-models/flat/gigaword_chn.all.a2b.bi.ite50.vec',
     _refresh=True,
     index_token=False,
-    test_path=None
+    test_path='/root/EarleeNLP/notebook/test_A_text.seq_3shot'
     # train_clip=custom_args.train_clip,
     # char_min_freq=custom_args.char_min_freq,
     # bigram_min_freq=custom_args.bigram_min_freq,
     # only_train_min_freq=custom_args.only_train_min_freq
 )
 
+gt_datasets, gt_vocabs, gt_embedding = load_ner(
+    '/root/hub/golden-horse/data',
+    '/root/pretrain-models/flat/gigaword_chn.all.a2b.uni.ite50.vec',
+    '/root/pretrain-models/flat/gigaword_chn.all.a2b.bi.ite50.vec',
+    _refresh=True,
+    index_token=False,
+    # test_path='/root/EarleeNLP/notebook/test_A_text.seq_3shot'
+    )
+
 w_list = load_yangjie_rich_pretrain_word_list(yangjie_rich_pretrain_word_path,
-                                            _refresh=False,
+                                            _refresh=True,
                                             _cache_fp='cache/{}'.format('yj'))
 
 
 datasets, vocabs, embeddings = equip_chinese_ner_with_lexicon(datasets,
                                                             vocabs,
                                                             embeddings,
+                                                            w_list,
+                                                            yangjie_rich_pretrain_word_path,
+                                                            _refresh=True,
+                                                            # _cache_fp=cache_name,
+                                                            only_lexicon_in_train=False,
+                                                            word_char_mix_embedding_path=yangjie_rich_pretrain_char_and_word_path,
+                                                            number_normalized=0,
+                                                            lattice_min_freq=1,
+                                                            only_train_min_freq=True
+                                                            )
+
+
+gt_datasets, gt_vocabs, gt_embedding = equip_chinese_ner_with_lexicon(gt_datasets,
+                                                            gt_vocabs,
+                                                            gt_embedding,
                                                             w_list,
                                                             yangjie_rich_pretrain_word_path,
                                                             _refresh=True,
@@ -238,7 +262,7 @@ dev_dataloader = DataLoader(
 
 
 # model = torch.load('/ai/223/person/lichunyu/models/df/ner/flat-2021-08-10-07-50-01-f1_91.pth', map_location=torch.device('cuda'))
-model = torch.load('/ai/223/person/lichunyu/models/df/ner/flat-2021-08-10-07-50-01-f1_91.pth', map_location=torch.device('cuda'))
+model = torch.load('/ai/223/person/lichunyu/models/df/ner/flat-2021-08-25-10-07-45-f1_90.pth', map_location=torch.device('cuda'))
 
 model.eval()
 for step, batch in enumerate(dev_dataloader):

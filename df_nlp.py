@@ -18,6 +18,7 @@ from torch.utils.data import Dataset, DataLoader
 from torch.nn.utils.rnn import pad_sequence
 
 from utils.flat.base import load_ner
+from utils.common import text_rm_space
 from models.flat_bert import load_yangjie_rich_pretrain_word_list, equip_chinese_ner_with_lexicon
 from metircs.functional.f1_score import ner_extract
 
@@ -353,7 +354,7 @@ class NlpGoGo(object):
 
         if policy['only_cls'] is False:
             if self.policy['ner'] == 'flat':
-                self.ner_model = torch.load('/ai/223/person/lichunyu/models/df/ner/flat-2021-08-10-07-50-01-f1_91.pth', map_location=torch.device('cuda'))
+                self.ner_model = torch.load('/ai/223/person/lichunyu/models/df/ner/flat-2021-08-26-06-15-37-f1_92.pth', map_location=torch.device('cuda'))
         else:
             m = torch.load(ner_model_path, map_location=torch.device(device))
             self.ner_model = m
@@ -1304,7 +1305,8 @@ class NlpGoGo(object):
             pos_e = batch[9].cuda()
             raw_chars = batch[10]
             # text_list = [''.join(i) for i in raw_chars]
-            real_text = real_text.replace(' ', '')
+            # real_text = real_text.replace(' ', '')
+            _, offsets = text_rm_space(real_text)
             text_list = [real_text]
 
             with torch.no_grad():
@@ -1319,7 +1321,7 @@ class NlpGoGo(object):
                     target
                 )
             pred = output['pred']
-            res = ner_extract(pred, seq_len, text_list, idx2label=IDX2LABEL)
+            res = ner_extract(pred, seq_len, text_list, idx2label=IDX2LABEL, offsets=offsets)
             slots_list.append(flat_slot_clean(res))
         return slots_list
 

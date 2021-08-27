@@ -28,7 +28,7 @@ def ner_span_f1(pred, target, seq_len, other_label=2, specical_idx=[0,1], label2
 
 
 
-def ner_extract(pred, seq_len, text, other_label=2, special_idx=None, label2idx:dict=None, idx2label:dict=None):
+def ner_extract(pred, seq_len, text, other_label=2, special_idx=None, label2idx:dict=None, idx2label:dict=None, offsets=None):
     """[summary]
 
     :param pred: [description]
@@ -55,6 +55,8 @@ def ner_extract(pred, seq_len, text, other_label=2, special_idx=None, label2idx:
         idx2label = {v: k for k, v in label2idx.items()}
     batch_size = len(seq_len)
     result = defaultdict(dict)
+    if offsets is None:
+        offsets = [(idx, idx) for idx, _ in enumerate(text)]
     for batch_idx in range(batch_size):
         label_stack = []
         location_stack = []
@@ -89,7 +91,7 @@ def ner_extract(pred, seq_len, text, other_label=2, special_idx=None, label2idx:
                 #     label_stack = []
                 #     location_stack = []
                 label_stack.append(idx2label[label_idx])
-                location_stack.append(num_idx)
+                location_stack.append(offsets[num_idx][-1])
         if label_stack:
             if label_stack[0][2:] in result[text[batch_idx]]:
                 result[text[batch_idx]][label_stack[0][2:]].append(text[batch_idx][location_stack[0]: location_stack[-1]+1])

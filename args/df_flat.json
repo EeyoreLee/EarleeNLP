@@ -3,5 +3,6 @@
     "weight_decay": 0.1,
     "output_dir": "/ai/223/person/lichunyu/models/df/ner",
     "deploy": true,
-    "seed": 42
+    "seed": 42,
+    "optim": "adam"
 }

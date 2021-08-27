@@ -104,7 +104,7 @@ class CustomizeArguments:
 
     optim: str = field(default='sgd', metadata={"help": "choice: sgd | adam | adamw"})
 
-    lr: float = field(default=6e-4)
+    lr: float = field(default=5e-5)
 
     bert_lr_rate: float = field(default=0.05)
 
@@ -494,7 +494,7 @@ def main(json_path):
     # fitlog.set_rng_seed(args.seed)
     torch.backends.cudnn.benchmark = False
 
-    bert_embedding = BertEmbedding(vocabs['lattice'],model_dir_or_name='cn-wwm',requires_grad=True,word_dropout=0.01)
+    bert_embedding = BertEmbedding(vocabs['lattice'],model_dir_or_name='cn-wwm-ext',requires_grad=True,word_dropout=0.01)
 
     # model = torch.load('/ai/223/person/lichunyu/models/df/ner/flat-2021-08-09-08-40-44-f1_70.pth', map_location=torch.device('cuda'))
 
@@ -560,7 +560,7 @@ def main(json_path):
     train_ds = NERDataset(datasets['train'])
     train_dataloader = DataLoader(
         train_ds,
-        batch_size=8,
+        batch_size=32,
         collate_fn=collate_func,
         # shuffle=True
     )
@@ -569,7 +569,7 @@ def main(json_path):
     dev_ds = NERDataset(datasets['dev'])
     dev_dataloader = DataLoader(
         dev_ds,
-        batch_size=8,
+        batch_size=64,
         collate_fn=collate_func
     )
 
@@ -599,18 +599,19 @@ def main(json_path):
 
 
     if custom_args.optim == 'adam':
-        optimizer = optim.AdamW(param_,lr=custom_args.lr,weight_decay=custom_args.weight_decay)
+        optimizer = optim.AdamW(param_,lr=custom_args.lr)
+        print('adam')
     elif custom_args.optim == 'sgd':
         # optimizer = optim.SGD(model.parameters(),lr=args.lr,momentum=args.momentum,
         #                       weight_decay=args.weight_decay)
         optimizer = optim.SGD(param_,lr=custom_args.lr,momentum=custom_args.momentum,
-                            weight_decay=0.)
+                            weight_decay=0.1)
 
     span_f1_metric = SpanFPreRecMetric(vocabs['label'], pred='pred', target='target', seq_len='seq_len', encoding_type=encoding_type)
 
     # scheduler = LambdaLR(optimizer, lambda ep: 1 / (1 + 0.05*ep) )
 
-    epoch = 50
+    epoch = 100
     # model = nn.DataParallel(model)
     model.cuda()
 
