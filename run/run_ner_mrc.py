@@ -40,7 +40,7 @@ from utils.mrc_ner_dataloader import get_dataloader
 from loss.dice_loss import DiceLoss
 from metircs.functional.query_span_f1 import query_span_f1
 from loss.mrc_ner_dice_loss import DiceLoss as MRCDiceLoss
-from utils.common import CustomizeArguments
+from utils.args import CustomizeArguments
 
 
 logger = logging.getLogger(__name__)
@@ -184,7 +184,7 @@ def main(json_path=''):
     logging.basicConfig(
         format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
         datefmt="%m/%d/%Y %H:%M:%S",
-        handlers=[logging.StreamHandler(sys.stdout)],
+        handlers=[logging.StreamHandler(sys.stdout), logging.FileHandler(custom_args.log_file_path)],
     )
     logger.setLevel(logging.INFO if is_main_process(training_args.local_rank) else logging.WARN)
 

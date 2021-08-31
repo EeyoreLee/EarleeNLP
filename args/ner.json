@@ -1,0 +1,17 @@
+{
+    "max_length": 150,
+    "output_dir": "/ai/223/person/lichunyu/models/df/query_type",
+    "do_train": true,
+    "do_eval": true,
+    "seed": 42,
+    "num_train_epochs": 6,
+    "max_grad_norm": 1,
+    "per_device_train_batch_size": 16,
+    "per_device_eval_batch_size": 4,
+    "remove_unused_columns": false,
+    "model_name_or_path": "/root/pretrain-models/bert-base-chinese",
+    "num_labels": 81,
+    "pickle_data_path": "/ai/223/person/lichunyu/datasets/dataf/seq_label/seq_label_8927.pkl",
+    "device": "cuda",
+    "label_name": "seq_idx"
+}

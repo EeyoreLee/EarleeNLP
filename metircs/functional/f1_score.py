@@ -72,6 +72,7 @@ def ner_extract(pred, seq_len, text, other_label=2, special_idx=None, label2idx:
                 location_stack = []
                 continue
             if label_idx not in non_label_idx:
+                # if label_stack and (idx2label[label_idx][0] == 'B' or idx2label[label_idx].split('-')[-1] != label_stack[-1].split('-')[-1]):
                 if label_stack and idx2label[label_idx][0] == 'B':
                     if label_stack[0][2:] in result[text[batch_idx]]:
                         result[text[batch_idx]][label_stack[0][2:]].append(text[batch_idx][location_stack[0]: location_stack[-1]+1])
@@ -80,16 +81,6 @@ def ner_extract(pred, seq_len, text, other_label=2, special_idx=None, label2idx:
                         result[text[batch_idx]][label_stack[0][2:]].append(text[batch_idx][location_stack[0]: location_stack[-1]+1])
                     label_stack = []
                     location_stack = []
-                # if not label_stack and idx2label[label_idx][0] == 'I':
-                #     continue
-                # if label_stack and idx2label[label_idx][2:] != label_stack[0][2:]:
-                #     if label_stack[0][2:] in result[text[batch_idx]]:
-                #         result[text[batch_idx]][label_stack[0][2:]].append(text[batch_idx][location_stack[0]: location_stack[-1]+1])
-                #     else:
-                #         result[text[batch_idx]][label_stack[0][2:]] = []
-                #         result[text[batch_idx]][label_stack[0][2:]].append(text[batch_idx][location_stack[0]: location_stack[-1]+1])
-                #     label_stack = []
-                #     location_stack = []
                 label_stack.append(idx2label[label_idx])
                 location_stack.append(offsets[num_idx][-1])
         if label_stack:

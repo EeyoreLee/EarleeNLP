@@ -28,7 +28,8 @@ from transformers.trainer_utils import is_main_process, get_last_checkpoint
 from models.flat_bert import Lattice_Transformer_SeqLabel, load_yangjie_rich_pretrain_word_list, equip_chinese_ner_with_lexicon, \
     norm_static_embedding, BertEmbedding, LossInForward, SpanFPreRecMetric, AccuracyMetric, Trainer, FitlogCallback, LRScheduler, \
         LambdaLR, GradientClipCallback, EarlyStopCallback, Callback, WarmupCallback
-from utils.common import print_info, CustomizeArguments
+from utils.common import print_info
+from utils.args import CustomizeArguments
 from utils.flat.base import load_ner
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '1,2,3,4,5,6,7'
@@ -121,7 +122,7 @@ def main(json_path):
     logging.basicConfig(
         format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
         datefmt="%m/%d/%Y %H:%M:%S",
-        handlers=[logging.StreamHandler(sys.stdout)],
+        handlers=[logging.StreamHandler(sys.stdout), logging.FileHandler(custom_args.log_file_path)],
     )
 
     logger.setLevel(logging.INFO if is_main_process(training_args.local_rank) else logging.WARN)

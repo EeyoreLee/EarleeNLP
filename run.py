@@ -6,9 +6,15 @@
 
 from run.run_chinese_ner import main as run_chinese_ner
 from run.run_classification import main as run_classification
+from run.run_ner import main as run_ner
+
+
+def run(json_file_path=None):
+    pass
+
 
 
 
 
 if __name__ == '__main__':
-    run_classification('/root/EarleeNLP/args/df_intent_ood_macbert.json')
+    run_ner('/root/EarleeNLP/args/ner.json')

@@ -38,7 +38,7 @@ from sklearn.metrics import f1_score, accuracy_score, classification_report
 
 from models.BertForClassificationByDice import BertForClassificationByDice
 from plugin.FGM import FGM
-from utils.common import CustomizeArguments
+from utils.args import CustomizeArguments
 
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3,4,5,6,7'

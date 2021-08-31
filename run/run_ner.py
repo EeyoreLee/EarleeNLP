@@ -37,10 +37,12 @@ from transformers import (
 )
 from transformers.trainer_utils import is_main_process, get_last_checkpoint
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import f1_score, accuracy_score, classification_report
+from datasets import load_metric
 
 from models.BertForClassificationByDice import BertForClassificationByDice
 from plugin.FGM import FGM
+from utils.args import CustomizeArguments
+from utils.common import format_time, seq_idx2label
 
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3,4,5,6,7'
@@ -48,41 +50,98 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3,4,5,6,7'
 logger = logging.getLogger(__name__)
 
 
-@dataclass
-class CustomizeArguments:
 
-    author: str = field(default="earlee", metadata={"help": "author"})
+LABEL2IDX = {'O': 0,
+        'I-Video-Play-name': 1,
+        'I-Radio-Listen-channel': 2,
+        'I-Calendar-Query-datetime_date': 3,
+        'I-Alarm-Update-notes': 4,
+        'I-FilmTele-Play-name': 5,
+        'I-Alarm-Update-datetime_time': 6,
+        'I-Radio-Listen-name': 7,
+        'I-Alarm-Update-datetime_date': 8,
+        'I-HomeAppliance-Control-appliance': 9,
+        'I-Travel-Query-destination': 10,
+        'I-HomeAppliance-Control-details': 11,
+        'I-Radio-Listen-frequency': 12,
+        'I-Music-Play-song': 13,
+        'I-Weather-Query-datetime_date': 14,
+        'B-Calendar-Query-datetime_date': 15,
+        'I-Weather-Query-city': 16,
+        'B-HomeAppliance-Control-appliance': 17,
+        'B-Travel-Query-destination': 18,
+        'I-Video-Play-datetime_date': 19,
+        'I-Music-Play-artist': 20,
+        'B-Alarm-Update-datetime_date': 21,
+        'B-Weather-Query-city': 22,
+        'B-Video-Play-name': 23,
+        'B-Weather-Query-datetime_date': 24,
+        'B-Alarm-Update-datetime_time': 25,
+        'I-FilmTele-Play-artist': 26,
+        'B-Alarm-Update-notes': 27,
+        'B-HomeAppliance-Control-details': 28,
+        'B-FilmTele-Play-name': 29,
+        'B-Radio-Listen-channel': 30,
+        'I-Music-Play-age': 31,
+        'I-FilmTele-Play-age': 32,
+        'B-Radio-Listen-name': 33,
+        'I-FilmTele-Play-tag': 34,
+        'I-Music-Play-album': 35,
+        'B-Music-Play-artist': 36,
+        'B-FilmTele-Play-artist': 37,
+        'I-Travel-Query-departure': 38,
+        'B-Music-Play-song': 39,
+        'I-FilmTele-Play-play_setting': 40,
+        'I-Travel-Query-datetime_date': 41,
+        'B-Travel-Query-departure': 42,
+        'I-Radio-Listen-artist': 43,
+        'B-FilmTele-Play-tag': 44,
+        'I-Travel-Query-datetime_time': 45,
+        'B-Radio-Listen-frequency': 46,
+        'B-Radio-Listen-artist': 47,
+        'I-Video-Play-datetime_time': 48,
+        'B-Video-Play-datetime_date': 49,
+        'B-Travel-Query-datetime_date': 50,
+        'I-FilmTele-Play-region': 51,
+        'B-FilmTele-Play-region': 52,
+        'B-FilmTele-Play-play_setting': 53,
+        'I-TVProgram-Play-name': 54,
+        'B-FilmTele-Play-age': 55,
+        'B-Travel-Query-datetime_time': 56,
+        'B-Music-Play-age': 57,
+        'B-Music-Play-album': 58,
+        'I-Video-Play-region': 59,
+        'B-Video-Play-region': 60,
+        'I-Music-Play-instrument': 61,
+        'I-Weather-Query-datetime_time': 62,
+        'I-TVProgram-Play-channel': 63,
+        'B-Music-Play-instrument': 64,
+        'I-Audio-Play-name': 65,
+        'B-Video-Play-datetime_time': 66,
+        'B-Weather-Query-datetime_time': 67,
+        'B-TVProgram-Play-name': 68,
+        'I-TVProgram-Play-datetime_date': 69,
+        'I-Audio-Play-artist': 70,
+        'B-Audio-Play-name': 71,
+        'I-TVProgram-Play-datetime_time': 72,
+        'B-TVProgram-Play-channel': 73,
+        'B-TVProgram-Play-datetime_date': 74,
+        'B-Audio-Play-artist': 75,
+        'B-TVProgram-Play-datetime_time': 76,
+        'I-Audio-Play-play_setting': 77,
+        'B-Audio-Play-play_setting': 78,
+        'B-Audio-Play-tag': 79,
+        'I-Audio-Play-tag': 80}
 
-    model_name_or_path: str = field(default='', metadata={"help": "path of PTM"})
-
-    config_name_or_path: str = field(default='')
-
-    tokenizer_name_or_path: str = field(default='')
-
-    num_labels: int = field(default=-1)
-
-    pickle_data_path: str = field(default='')
-
-    test_size: float = field(default=0.2)
-
-    max_length: int = field(default=510)
-
-    deploy: bool = field(default=True, metadata={"help": "save the state_dict of the model if set the field false"})
-
-    train_pickle_data_path: str = field(default='')
-
-    eval_pickle_data_path: str = field(default='')
-
-    log_file_path: str = field(default='logs/log.log')
 
 
 def tokenize_batch(df, tokenizer, max_length=510, text_name='text', label_name='label', **kwargs):
     input_ids = []
     attention_masks = []
+    labels = []
     for idx, row in df.iterrows():
         encoded_dict = tokenizer(
                             row[text_name],
-                            # row['pair'],
                             add_special_tokens = True,
                             truncation='longest_first',
                             max_length = max_length,
@@ -91,48 +150,30 @@ def tokenize_batch(df, tokenizer, max_length=510, text_name='text', label_name='
                             return_tensors = 'pt',
                        )
 
-
         input_ids.append(encoded_dict['input_ids'])
-
         attention_masks.append(encoded_dict['attention_mask'])
+        labels.append([0]+row[label_name]+[0]+(max_length-2-len(row[label_name]))*[0])
+
 
     input_ids = torch.cat(input_ids, dim=0)
     attention_masks = torch.cat(attention_masks, dim=0)
-    labels = torch.tensor(df[label_name].tolist())
+    labels = torch.from_numpy(np.array(labels))
 
     return input_ids, attention_masks, labels
 
 
-def gen_dataloader(df=None, df_train=None, df_eval=None, tokenizer=None, per_device_train_batch_size=None, \
+def gen_ner_dataloader(df=None, df_train=None, df_eval=None, tokenizer=None, per_device_train_batch_size=None, \
                 per_device_eval_batch_size=None, test_size=0.2, label_name='label', **kwargs):
     if df is not None:
-        df_train, df_eval, _, _ = train_test_split(df, df[label_name], test_size=test_size, stratify=df[label_name])
-    train_input_ids, train_attention_masks, train_labels = tokenize_batch(df_train, tokenizer, **kwargs)
-    eval_input_ids, eval_attention_masks, eval_labels = tokenize_batch(df_eval, tokenizer,**kwargs)
+        df_train, df_eval, _, _ = train_test_split(df, df[label_name], test_size=test_size, stratify=df['seq_intent'])
+    train_input_ids, train_attention_masks, train_labels = tokenize_batch(df_train, tokenizer, label_name=label_name, **kwargs)
+    eval_input_ids, eval_attention_masks, eval_labels = tokenize_batch(df_eval, tokenizer, label_name=label_name, **kwargs)
     train_dataset = TensorDataset(train_input_ids, train_attention_masks, train_labels)
     eval_dataset = TensorDataset(eval_input_ids, eval_attention_masks, eval_labels)
     train_dataloader = DataLoader(train_dataset, sampler=RandomSampler(train_dataset), batch_size=per_device_train_batch_size)
     eval_dataloader = DataLoader(eval_dataset, sampler=SequentialSampler(eval_dataset), batch_size=per_device_eval_batch_size)
     return train_dataloader, eval_dataloader
 
-
-def flat_f1(preds, labels):
-
-    pred_flat = np.argmax(preds, axis=1).flatten()
-    labels_flat = labels.flatten()
-    return f1_score(labels_flat, pred_flat, average='micro')
-
-
-def flat_acc(p, l):
-    p_f = np.argmax(p, axis=1).flatten()
-    l_f = l.flatten()
-    return accuracy_score(l_f, p_f)
-
-
-def format_time(elapsed):
-
-    elapsed_rounded = int(round((elapsed)))
-    return str(datetime.timedelta(seconds=elapsed_rounded))
 
 
 def main(json_path=''):
@@ -175,15 +216,18 @@ def main(json_path=''):
     )
 
     data = pd.read_pickle(custom_args.pickle_data_path)
-    train_dataloader, eval_dataloader = gen_dataloader(
+
+    train_dataloader, eval_dataloader = gen_ner_dataloader(
         df=data,
-        label_name='label',
+        label_name=custom_args.label_name,
         tokenizer=tokenizer,
         per_device_train_batch_size=training_args.per_device_train_batch_size,
         per_device_eval_batch_size=training_args.per_device_eval_batch_size,
         test_size=custom_args.test_size,
         max_length=custom_args.max_length,
     )
+
+    metric_seqeval = load_metric('seqeval')
 
     device = training_args.device if torch.cuda.is_available() else 'cpu'
 
@@ -202,7 +246,7 @@ def main(json_path=''):
                                                 num_warmup_steps = 2, 
                                                 num_training_steps = total_steps)
 
-    seqeval = datasets.load_metric('seqeval')
+    seqeval_metric = datasets.load_metric('seqeval')
 
     # fgm = FGM(model)
 
@@ -288,18 +332,13 @@ def main(json_path=''):
             total_eval_loss += loss.item()
             logits = logits.detach().cpu().numpy()
             label_ids = labels.to('cpu').numpy()
+            mask = attention_mask.detach().cpu().numpy()
+
+            pred = seq_idx2label(logits.argmax(axis=-1), mask, label2idx=LABEL2IDX)
+            ref = seq_idx2label(label_ids, mask, label2idx=LABEL2IDX)
+            seqeval_metric.add_batch(predictions=pred, references=ref)
 
 
-
-
-
-
-            total_eval_f1 += flat_f1(logits, label_ids)
-            total_eval_acc += flat_acc(logits, label_ids)
-            total_eval_p.extend(np.argmax(logits, axis=-1).flatten().tolist())
-            total_eval_l.extend(label_ids.flatten().tolist())
-
-        # logger.info(f'\n{classification_report(total_eval_p, total_eval_l, zero_division=1)}')
         avg_val_f1 = total_eval_f1 / len(eval_dataloader)
         avg_val_acc = total_eval_acc / len(eval_dataloader)
         logger.info('F1: {0:.2f}'.format(avg_val_f1))
