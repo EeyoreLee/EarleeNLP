@@ -6,6 +6,7 @@
 
 import json
 from collections import defaultdict
+import os
 
 from transformers import (
     BertTokenizer,
@@ -21,6 +22,9 @@ from utils.flat.base import load_ner
 from utils.common import text_rm_space
 from models.flat_bert import load_yangjie_rich_pretrain_word_list, equip_chinese_ner_with_lexicon
 from metircs.functional.f1_score import ner_extract
+
+
+os.environ['CUDA_VISIBLE_DEVICES'] = '1,2,3,4,5,6,7'
 
 
 COMMAND2IDX = {'查询状态': 0,
@@ -354,7 +358,8 @@ class NlpGoGo(object):
 
         if policy['only_cls'] is False:
             if self.policy['ner'] == 'flat':
-                self.ner_model = torch.load('/ai/223/person/lichunyu/models/df/ner/flat-2021-08-26-06-15-37-f1_92.pth', map_location=torch.device('cuda'))
+                # self.ner_model = torch.load('/ai/223/person/lichunyu/models/df/ner/flat-2021-08-26-06-15-37-f1_92.pth', map_location=torch.device('cuda'))
+                self.ner_model = torch.load('/ai/223/person/lichunyu/models/df/ner/flat-2021-08-30-22-03-15-f1_92.pth', map_location=torch.device('cuda'))
         else:
             m = torch.load(ner_model_path, map_location=torch.device(device))
             self.ner_model = m

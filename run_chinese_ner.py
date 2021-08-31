@@ -31,7 +31,7 @@ from models.flat_bert import Lattice_Transformer_SeqLabel, load_yangjie_rich_pre
 from utils.common import print_info
 from utils.flat.base import load_ner
 
-
+os.environ['CUDA_VISIBLE_DEVICES'] = '1,2,3,4,5,6,7'
 
 class Unfreeze_Callback(Callback):
     def __init__(self,bert_embedding,fix_epoch_num):
@@ -494,7 +494,7 @@ def main(json_path):
     # fitlog.set_rng_seed(args.seed)
     torch.backends.cudnn.benchmark = False
 
-    bert_embedding = BertEmbedding(vocabs['lattice'],model_dir_or_name='cn-wwm-ext',requires_grad=True,word_dropout=0.01)
+    bert_embedding = BertEmbedding(vocabs['lattice'],model_dir_or_name='/root/.fastNLP/embedding/chinese-roberta-wwm-ext-large',requires_grad=True,word_dropout=0.01)
 
     # model = torch.load('/ai/223/person/lichunyu/models/df/ner/flat-2021-08-09-08-40-44-f1_70.pth', map_location=torch.device('cuda'))
 
@@ -611,7 +611,7 @@ def main(json_path):
 
     # scheduler = LambdaLR(optimizer, lambda ep: 1 / (1 + 0.05*ep) )
 
-    epoch = 100
+    epoch = 200
     # model = nn.DataParallel(model)
     model.cuda()
 
@@ -619,34 +619,34 @@ def main(json_path):
 
     for epoch_n in range(epoch):
 
-        if epoch_n >= 40:
-            model.eval()
-            for step, batch in enumerate(test_dataloader):
-                #TODO BERT embedding 前20 epoch 冻结
-                # chars = batch[0].cuda()
-                target = batch[1].cuda()
-                bigrams = batch[2].cuda()
-                seq_len = batch[3].cuda()
-                lex_num = batch[4].cuda()
-                # lex_s = batch[5].cuda()
-                # lex_e = batch[6].cuda()
-                lattice = batch[7].cuda()
-                pos_s = batch[8].cuda()
-                pos_e = batch[9].cuda()
+        # if epoch_n >= 40:
+        #     model.eval()
+        #     for step, batch in enumerate(test_dataloader):
+        #         #TODO BERT embedding 前20 epoch 冻结
+        #         # chars = batch[0].cuda()
+        #         target = batch[1].cuda()
+        #         bigrams = batch[2].cuda()
+        #         seq_len = batch[3].cuda()
+        #         lex_num = batch[4].cuda()
+        #         # lex_s = batch[5].cuda()
+        #         # lex_e = batch[6].cuda()
+        #         lattice = batch[7].cuda()
+        #         pos_s = batch[8].cuda()
+        #         pos_e = batch[9].cuda()
 
-                with torch.no_grad():
+        #         with torch.no_grad():
 
-                    output = model(
-                        lattice,
-                        bigrams,
-                        seq_len,
-                        lex_num,
-                        pos_s,
-                        pos_e,
-                        target
-                    )
-                pred = output['pred']
-                pass
+        #             output = model(
+        #                 lattice,
+        #                 bigrams,
+        #                 seq_len,
+        #                 lex_num,
+        #                 pos_s,
+        #                 pos_e,
+        #                 target
+        #             )
+        #         pred = output['pred']
+        #         pass
 
 
         model.train()
@@ -719,16 +719,16 @@ def main(json_path):
         current_ckpt = training_args.output_dir + '/flat-' + datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S") + '-f1_' + str(int(_span_f1['f']*100)) + '.pth'
 
         print(_span_f1)
+        print('eval loss: ' + str(total_eval_loss / len(dev_dataloader)))
         if custom_args.deploy is True:
             logger.info('>>>>>>>>>>>> saving the model <<<<<<<<<<<<<<')
             torch.save(model, current_ckpt)
         else:
             logger.info('>>>>>>>>>>>> saving the state_dict of model <<<<<<<<<<<<<')
             torch.save(model.state_dict(), current_ckpt)
-        print('eval loss: ' + str(total_eval_loss / len(dev_dataloader)))
 
+        print('\n')
     print('==============success==============')
-    print(span_f1_metric.get_metric())
     pass
 
 
