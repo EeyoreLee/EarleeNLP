@@ -4,9 +4,6 @@
 @author: lichunyu
 '''
 
-
-
-
 from dataclasses import dataclass, field
 import logging
 import datetime
@@ -43,43 +40,12 @@ from utils.mrc_ner_dataloader import get_dataloader
 from loss.dice_loss import DiceLoss
 from metircs.functional.query_span_f1 import query_span_f1
 from loss.mrc_ner_dice_loss import DiceLoss as MRCDiceLoss
+from utils.common import CustomizeArguments
 
 
 logger = logging.getLogger(__name__)
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3,4,5,6,7'
-
-
-@dataclass
-class CustomizeArguments:
-
-    author: str = field(default="earlee", metadata={"help": "author"})
-
-    model_name_or_path: str = field(default='', metadata={"help": "path of PTM"})
-
-    config_name_or_path: str = field(default='')
-
-    tokenizer_name_or_path: str = field(default='')
-
-    num_labels: int = field(default=-1)
-
-    pickle_data_path: str = field(default='')
-
-    test_size: float = field(default=0.2)
-
-    max_length: int = field(default=510)
-
-    deploy: bool = field(default=True, metadata={"help": "save the state_dict of the model if set the field is false"})
-
-    train_pickle_data_path: str = field(default='')
-
-    eval_pickle_data_path: str = field(default='')
-
-    weight_start: float = field(default=1.)
-
-    weight_end: float = field(default=1.)
-
-    weight_span: float = field(default=0.7)
 
 
 def tokenize_batch(

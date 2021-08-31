@@ -38,39 +38,12 @@ from sklearn.metrics import f1_score, accuracy_score, classification_report
 
 from models.BertForClassificationByDice import BertForClassificationByDice
 from plugin.FGM import FGM
+from utils.common import CustomizeArguments
 
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3,4,5,6,7'
 
 logger = logging.getLogger(__name__)
-
-
-@dataclass
-class CustomizeArguments:
-
-    author: str = field(default="earlee", metadata={"help": "author"})
-
-    model_name_or_path: str = field(default='', metadata={"help": "path of PTM"})
-
-    config_name_or_path: str = field(default='')
-
-    tokenizer_name_or_path: str = field(default='')
-
-    num_labels: int = field(default=-1)
-
-    pickle_data_path: str = field(default='')
-
-    test_size: float = field(default=0.2)
-
-    max_length: int = field(default=510)
-
-    deploy: bool = field(default=True, metadata={"help": "save the state_dict of the model if set the field false"})
-
-    train_pickle_data_path: str = field(default='')
-
-    eval_pickle_data_path: str = field(default='')
-
-    log_file_path: str = field(default='logs/log.log')
 
 
 def tokenize_batch(df, tokenizer, max_length=510, text_name='text', label_name='label', **kwargs):
