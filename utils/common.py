@@ -54,6 +54,8 @@ def format_time(elapsed):
 
 def bio_decode(label_ids, text, mask=None, seq_len=None, label2idx=None, idx2label=None, offsets=None):
     batch = label_ids.shape[0]
+    if isinstance(text, str):
+        text = [text]
     if idx2label is None:
         idx2label = {v: k for k, v in label2idx.items()}
     if seq_len is None:

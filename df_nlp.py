@@ -8,6 +8,7 @@ import json
 from collections import defaultdict
 import os
 
+
 from transformers import (
     BertTokenizer,
     RobertaTokenizerFast
@@ -19,9 +20,10 @@ from torch.utils.data import Dataset, DataLoader
 from torch.nn.utils.rnn import pad_sequence
 
 from utils.flat.base import load_ner
-from utils.common import text_rm_space
+from utils.common import text_rm_space, bio_decode
 from models.flat_bert import load_yangjie_rich_pretrain_word_list, equip_chinese_ner_with_lexicon
 from metircs.functional.f1_score import ner_extract
+from run.run_ner import LABEL2IDX
 
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '1,2,3,4,5,6,7'
@@ -135,7 +137,7 @@ SUB_CLS_LABEL = [
     'command',
     'index',
     'language',
-    # 'region',
+    'region',
     'type'
 ]
 
@@ -360,9 +362,9 @@ class NlpGoGo(object):
             if self.policy['ner'] == 'flat':
                 # self.ner_model = torch.load('/ai/223/person/lichunyu/models/df/ner/flat-2021-08-26-06-15-37-f1_92.pth', map_location=torch.device('cuda'))
                 self.ner_model = torch.load('/ai/223/person/lichunyu/models/df/ner/flat-2021-08-30-22-03-15-f1_92.pth', map_location=torch.device('cuda'))
-        else:
-            m = torch.load(ner_model_path, map_location=torch.device(device))
-            self.ner_model = m
+            else:
+                m = torch.load(ner_model_path, map_location=torch.device(device))
+                self.ner_model = m
 
         if policy['ood_model'] == 'roberta':
             self.ood_model = torch.load(ood_model_path, map_location=torch.device(device))
@@ -386,6 +388,7 @@ class NlpGoGo(object):
 
     def is_ood(self, text) -> bool:
         if self.policy['ood_model'] == 'ensemble':
+            vote = defaultdict(float)
             input_ids = []
             attention_mask = []
             encoded_dict = self.ood_bert_tokenizer(
@@ -417,6 +420,7 @@ class NlpGoGo(object):
                 bert_intent = INTENT[-1]
             else:
                 bert_intent = id2label[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
+            vote[bert_intent] += 1
 
 
             input_ids = []
@@ -450,6 +454,7 @@ class NlpGoGo(object):
                 bert_6000_intent = INTENT[-1]
             else:
                 bert_6000_intent = id2label[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
+            vote[bert_6000_intent] += 1
 
 
             input_ids = []
@@ -481,6 +486,7 @@ class NlpGoGo(object):
                 roberta_intent = INTENT[-1]
             else:
                 roberta_intent = id2label[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
+            vote[roberta_intent] += 1
 
 
             input_ids = []
@@ -512,6 +518,7 @@ class NlpGoGo(object):
                 roberta_6000_intent = INTENT[-1]
             else:
                 roberta_6000_intent = id2label[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
+            vote[roberta_6000_intent] += 1
 
             input_ids = []
             attention_mask = []
@@ -542,6 +549,7 @@ class NlpGoGo(object):
                 fake_roberta_6000_intent = INTENT[-1]
             else:
                 fake_roberta_6000_intent = id2label[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
+            vote[fake_roberta_6000_intent] += 1
 
             input_ids = []
             attention_mask = []
@@ -572,6 +580,7 @@ class NlpGoGo(object):
                 fake_roberta_2700_intent = INTENT[-1]
             else:
                 fake_roberta_2700_intent = id2label[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
+            vote[fake_roberta_2700_intent] += 1
 
             input_ids = []
             attention_mask = []
@@ -602,6 +611,13 @@ class NlpGoGo(object):
                 macbert_6000_intent = INTENT[-1]
             else:
                 macbert_6000_intent = id2label[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
+            vote[macbert_6000_intent] += 1
+
+            # vote = sorted(vote.items(), key=lambda x: x[-1])
+            # if vote[-1][0] != INTENT[-1]:
+            #     return False
+            # else:
+            #     return True
 
             if bert_intent != INTENT[-1] and roberta_intent != INTENT[-1] and bert_6000_intent != INTENT[-1] and roberta_6000_intent != INTENT[-1] and fake_roberta_6000_intent != INTENT[-1] and fake_roberta_2700_intent != INTENT[-1] and macbert_6000_intent != INTENT[-1]:
                 return False
@@ -913,14 +929,65 @@ class NlpGoGo(object):
 
 
     def ner(self, text, classification):
-        input_ids = []
-        attention_mask = []
-        token_type_ids = []
+        if self.policy['ner'] == 'mrc':
+            input_ids = []
+            attention_mask = []
+            token_type_ids = []
 
-        for slot in NER_CORRESPONDENCE[classification]:
-            query = QUERY_MAP[slot]
+            for slot in NER_CORRESPONDENCE[classification]:
+                query = QUERY_MAP[slot]
+                encoded_dict = self.tokenizer(
+                                query,
+                                normalization(text),
+                                add_special_tokens = True,
+                                truncation='longest_first',
+                                max_length = self.max_length,
+                                padding = 'max_length',
+                                return_attention_mask = True,
+                                return_token_type_ids=True,
+                                return_tensors = 'pt',
+                        )
+
+                input_ids.append(encoded_dict['input_ids'])
+                attention_mask.append(encoded_dict['attention_mask'])
+                token_type_ids.append(encoded_dict['token_type_ids'])
+            input_ids = torch.cat(input_ids, dim=0)
+            attention_mask = torch.cat(attention_mask, dim=0)
+            token_type_ids = torch.cat(token_type_ids, dim=0)
+
+            self.ner_model.eval()
+            with torch.no_grad():
+                input_ids = input_ids.to(self.device).to(torch.int64)
+                attention_mask = attention_mask.to(self.device).to(torch.int64)
+                token_type_ids = token_type_ids.to(self.device).to(torch.int64)
+                start_logits, end_logits, span_logits = self.ner_model(
+                    input_ids=input_ids,
+                    attention_mask=attention_mask,
+                    token_type_ids=token_type_ids
+                )
+
+            res = {}
+            for idx in range(len(NER_CORRESPONDENCE[classification])):
+                slot = self.compute_ner(
+                    text,
+                    start_logits[idx],
+                    end_logits[idx],
+                    span_logits[idx],
+                    token_type_ids[idx],
+                    NER_CORRESPONDENCE[classification][idx]
+                )
+                if len(slot) == 0:
+                    continue
+                elif len(slot) == 1:
+                    res[NER_CORRESPONDENCE[classification][idx]] = slot[0]
+                else:
+                    res[NER_CORRESPONDENCE[classification][idx]] = slot
+            return res
+        else:
+            input_ids = []
+            attention_mask = []
+            token_type_ids = []
             encoded_dict = self.tokenizer(
-                            query,
                             normalization(text),
                             add_special_tokens = True,
                             truncation='longest_first',
@@ -934,38 +1001,26 @@ class NlpGoGo(object):
             input_ids.append(encoded_dict['input_ids'])
             attention_mask.append(encoded_dict['attention_mask'])
             token_type_ids.append(encoded_dict['token_type_ids'])
-        input_ids = torch.cat(input_ids, dim=0)
-        attention_mask = torch.cat(attention_mask, dim=0)
-        token_type_ids = torch.cat(token_type_ids, dim=0)
-
-        self.ner_model.eval()
-        with torch.no_grad():
-            input_ids = input_ids.to(self.device).to(torch.int64)
-            attention_mask = attention_mask.to(self.device).to(torch.int64)
-            token_type_ids = token_type_ids.to(self.device).to(torch.int64)
-            start_logits, end_logits, span_logits = self.ner_model(
-                input_ids=input_ids,
-                attention_mask=attention_mask,
-                token_type_ids=token_type_ids
-            )
-
-        res = {}
-        for idx in range(len(NER_CORRESPONDENCE[classification])):
-            slot = self.compute_ner(
-                text,
-                start_logits[idx],
-                end_logits[idx],
-                span_logits[idx],
-                token_type_ids[idx],
-                NER_CORRESPONDENCE[classification][idx]
-            )
-            if len(slot) == 0:
-                continue
-            elif len(slot) == 1:
-                res[NER_CORRESPONDENCE[classification][idx]] = slot[0]
-            else:
-                res[NER_CORRESPONDENCE[classification][idx]] = slot
-        return res
+            input_ids = torch.cat(input_ids, dim=0)
+            attention_mask = torch.cat(attention_mask, dim=0)
+            token_type_ids = torch.cat(token_type_ids, dim=0)
+            self.ner_model.eval()
+            with torch.no_grad():
+                input_ids = input_ids.to(self.device).to(torch.int64)
+                attention_mask = attention_mask.to(self.device).to(torch.int64)
+                token_type_ids = token_type_ids.to(self.device).to(torch.int64)
+                output = self.ner_model(
+                    input_ids=input_ids,
+                    attention_mask=attention_mask,
+                    token_type_ids=token_type_ids
+                )
+                logits = output.logits.detach().cpu().numpy()
+                label_ids = logits.argmax(axis=-1)
+                mask = attention_mask.detach().cpu().numpy()
+                text, offset = text_rm_space(text)
+            res = bio_decode(label_ids, text, mask, label2idx=LABEL2IDX)
+            slots = flat_slot_clean(res)
+            return slots
 
     def compute_ner(self, text, _start_logits, _end_logits, _span_logits, _token_type_ids, classification):
         if len(_start_logits.shape) == 1:
@@ -1087,7 +1142,8 @@ class NlpGoGo(object):
                 return '降水量'
         cls_0 = [
             '穿',
-            '多加衣物'
+            # '多加衣物'
+            '衣物'
         ]
         for i in cls_0:
             if i in text:
@@ -1132,6 +1188,268 @@ class NlpGoGo(object):
         #     return '风力'
         return ''
 
+    def region_extract(self, text):
+        cls_0 = [
+            '美国',
+            '美剧',
+            '美片'
+        ]
+        for i in cls_0:
+            if i in text:
+                return '美国'
+        cls_1 = [
+            '日本'
+        ]
+        for i in cls_1:
+            if i in text:
+                return '日本'
+        cls_2 = [
+            '国产'
+        ]
+        for i in cls_2:
+            if i in text:
+                return '国产'
+        cls_3 = [
+            '香港',
+            '港片'
+        ]
+        for i in cls_3:
+            if i in text:
+                return '香港'
+        cls_4 = [
+            '法国'
+        ]
+        for i in cls_4:
+            if i in text:
+                return '法国'
+        cls_5 = [
+            '韩国',
+            '韩剧'
+        ]
+        for i in cls_5:
+            if i in text:
+                return '韩国'
+        cls_6 = [
+            '伦敦'
+        ]
+        for i in cls_6:
+            if i in text:
+                return '伦敦'
+        cls_7 = [
+            '欧美'
+        ]
+        for i in cls_7:
+            if i in text:
+                return '欧美'
+        cls_8 = [
+            '大陆',
+            '内地'
+        ]
+        for i in cls_8:
+            if i in text:
+                return '大陆'
+        cls_9 = [
+            '台湾'
+        ]
+        for i in cls_9:
+            if i in text:
+                return '台湾'
+        cls_10 = [
+            '上海'
+        ]
+        for i in cls_10:
+            if i in text:
+                return '上海'
+        cls_11 = [
+            '中国'
+        ]
+        for i in cls_11:
+            if i in text:
+                return '中国'
+        cls_12 = [
+            '英国'
+        ]
+        for i in cls_12:
+            if i in text:
+                return '英国'
+        cls_13 = [
+            '泰国',
+            '泰剧'
+        ]
+        for i in cls_13:
+            if i in text:
+                return '泰国'
+        cls_14 = [
+            '四川'
+        ]
+        for i in cls_14:
+            if i in text:
+                return '四川'
+        cls_15 = [
+            '国创'
+        ]
+        for i in cls_15:
+            if i in text:
+                return '国创'
+        cls_16 = [
+            '北京'
+        ]
+        for i in cls_16:
+            if i in text:
+                return '北京'
+        cls_17 = [
+            '安徽'
+        ]
+        for i in cls_17:
+            if i in text:
+                return '安徽'
+        cls_18 = [
+            '欧洲'
+        ]
+        for i in cls_18:
+            if i in text:
+                return '欧洲'
+        cls_19 = [
+            '重庆'
+        ]
+        for i in cls_19:
+            if i in text:
+                return '重庆'
+        cls_20 = [
+            '巴西'
+        ]
+        for i in cls_20:
+            if i in text:
+                return '巴西'
+        cls_21 = [
+            '温哥华'
+        ]
+        for i in cls_21:
+            if i in text:
+                return '温哥华'
+        cls_22 = [
+            '南京'
+        ]
+        for i in cls_22:
+            if i in text:
+                return '南京'
+        cls_23 = [
+            '伊朗'
+        ]
+        for i in cls_23:
+            if i in text:
+                return '伊朗'
+        cls_24 = [
+            '越南'
+        ]
+        for i in cls_24:
+            if i in text:
+                return '越南'
+        cls_25 = [
+            '意大利'
+        ]
+        for i in cls_25:
+            if i in text:
+                return '意大利'
+        cls_26 = [
+            '武汉'
+        ]
+        for i in cls_26:
+            if i in text:
+                return '武汉'
+        cls_27 = [
+            '新加坡'
+        ]
+        for i in cls_27:
+            if i in text:
+                return '新加坡'
+        cls_28 = [
+            '浙江'
+        ]
+        for i in cls_28:
+            if i in text:
+                return '浙江'
+        cls_29 = [
+            '俄罗斯'
+        ]
+        for i in cls_29:
+            if i in text:
+                return '俄罗斯'
+        cls_30 = [
+            '雅典'
+        ]
+        for i in cls_30:
+            if i in text:
+                return '雅典'
+        cls_31 = [
+            '印度'
+        ]
+        for i in cls_31:
+            if i in text:
+                return '印度'
+        cls_32 = [
+            '德国'
+        ]
+        for i in cls_32:
+            if i in text:
+                return '德国'
+        cls_33 = [
+            '湖南'
+        ]
+        for i in cls_33:
+            if i in text:
+                return '湖南'
+        cls_34 = [
+            '澳大利亚'
+        ]
+        for i in cls_34:
+            if i in text:
+                return '澳大利亚'
+        cls_35 = [
+            '洛阳'
+        ]
+        for i in cls_35:
+            if i in text:
+                return '洛阳'
+        cls_36 = [
+            '深圳'
+        ]
+        for i in cls_36:
+            if i in text:
+                return '深圳'
+        cls_37 = [
+            '意大利'
+        ]
+        for i in cls_37:
+            if i in text:
+                return '意大利'
+        cls_38 = [
+            '巴塞罗那'
+        ]
+        for i in cls_38:
+            if i in text:
+                return '巴塞罗那'
+        cls_39 = [
+            '西安'
+        ]
+        for i in cls_39:
+            if i in text:
+                return '西安'
+        cls_40 = [
+            '苏州'
+        ]
+        for i in cls_40:
+            if i in text:
+                return '苏州'
+        cls_41 = [
+            '辽宁'
+        ]
+        for i in cls_41:
+            if i in text:
+                return '辽宁'
+        return ''
+
+
     def weather_query_type(self, text):
         cls_0 = [
             '雾',
@@ -1144,8 +1462,8 @@ class NlpGoGo(object):
             return '多云'
         if '空气污染指数' in text:
             return '空气污染指数'
-        if '衣物' in text:
-            return '穿衣指数'
+        # if '衣物' in text:
+        #     return '穿衣指数'
         if '暴雨' in text:
             return '暴雨'
         if '雨' in text:
@@ -1157,6 +1475,16 @@ class NlpGoGo(object):
         if '台风' in text:
             return '台风'
         if '风' in text:
+            cls_4 = [
+                '风向',
+                '北风',
+                '东风',
+                '西风',
+                '南风',
+                ]
+            for i in cls_4:
+                if i in text:
+                    return ''
             return '风'
         if '雪' in text:
             return '雪'
@@ -1334,11 +1662,11 @@ class NlpGoGo(object):
     def go(self, data_path, output_path):
         res = defaultdict(dict)
         test_data = json.load(open(data_path, 'r'))
-        flat_text_list = []
-        for idx, text_dict in test_data.items():
-            text = text_dict['text']
-            flat_text_list.append(text)
         if self.policy['ner'] == 'flat':
+            flat_text_list = []
+            for idx, text_dict in test_data.items():
+                text = text_dict['text']
+                flat_text_list.append(text)
             slots_list_all = self.flat_ner_all(flat_text_list)
         for n_idx, (idx, text_dict) in tqdm(enumerate(test_data.items())):
             text = text_dict['text']
@@ -1360,11 +1688,17 @@ class NlpGoGo(object):
                 slots = clean_slot_by_intent(slots, intent, post=False)
             else:
                 slots = self.ner(text, intent)
+                slots = clean_slot_by_intent(slots, intent, post=False)
 
             if intent == 'Music-Play':
                 play_mode = self.music_play_play_mode(text)
                 if play_mode:
                     slots['play_mode'] = play_mode
+                language = self.music_play_language(text)
+                if language:
+                    slots['language'] = language
+
+            if intent == 'Audio-Play':
                 language = self.music_play_language(text)
                 if language:
                     slots['language'] = language
@@ -1387,6 +1721,11 @@ class NlpGoGo(object):
                 command = self.home_appliance_control_command(text)
                 if command:
                     slots['command'] = command
+
+            if intent == 'FilmTele-Play' or intent == 'Video-Play':
+                region = self.region_extract(text)
+                if region:
+                    slots['region'] = region
 
             res[idx]['slots'] = slots
 
@@ -1567,7 +1906,7 @@ if __name__ == '__main__':
         ood_macbert_model_path='/ai/223/person/lichunyu/models/df/intent/bert-2021-08-24-08-49-40-f1_98.pth',
         # cls_model_path='/ai/223/person/lichunyu/models/tmp/bert-2021-07-29-07-24-33-f1_97.pth',
         cls_config_path='/root/pretrain-models/bert-base-chinese',
-        ner_model_path='/ai/223/person/lichunyu/models/tmp/bert-2021-07-28-15-18-42-f1_64.pth',
+        ner_model_path='/ai/223/person/lichunyu/models/df/ner/bert-2021-09-01-10-31-48-f1_88.pth',
         # ner_model_path='/ai/223/person/lichunyu/models/df/mrc-ner/bert-2021-08-02-07-30-50-f1_60.pth',  
         policy={
             'cls_model': 'ensemble',

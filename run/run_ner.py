@@ -38,6 +38,7 @@ from transformers import (
 from transformers.trainer_utils import is_main_process, get_last_checkpoint
 from sklearn.model_selection import train_test_split
 from datasets import load_metric
+from seqeval.metrics import accuracy_score, f1_score, classification_report
 
 from models.BertForClassificationByDice import BertForClassificationByDice
 from plugin.FGM import FGM
@@ -246,7 +247,7 @@ def main(json_path=''):
                                                 num_warmup_steps = 2, 
                                                 num_training_steps = total_steps)
 
-    seqeval_metric = datasets.load_metric('seqeval')
+    # seqeval_metric = datasets.load_metric('seqeval')
 
     # fgm = FGM(model)
 
@@ -312,6 +313,8 @@ def main(json_path=''):
         total_eval_acc = 0
         total_eval_p = []
         total_eval_l = []
+        y_true = []
+        y_pred = []
 
         for batch in eval_dataloader:
 
@@ -336,13 +339,18 @@ def main(json_path=''):
 
             pred = seq_idx2label(logits.argmax(axis=-1), mask, label2idx=LABEL2IDX)
             ref = seq_idx2label(label_ids, mask, label2idx=LABEL2IDX)
-            seqeval_metric.add_batch(predictions=pred, references=ref)
+            y_pred.extend(pred)
+            y_true.extend(ref)
+            # seqeval_metric.add_batch(predictions=pred, references=ref)
 
-
-        avg_val_f1 = total_eval_f1 / len(eval_dataloader)
-        avg_val_acc = total_eval_acc / len(eval_dataloader)
-        logger.info('F1: {0:.2f}'.format(avg_val_f1))
-        logger.info('Acc: {0:.2f}'.format(avg_val_acc))
+        # _metric = seqeval_metric.compute()
+        # logger.info(_metric)
+        # avg_val_f1 = total_eval_f1 / len(eval_dataloader)
+        # avg_val_acc = total_eval_acc / len(eval_dataloader)
+        # logger.info('F1: {0:.2f}'.format(avg_val_f1))
+        # logger.info('Acc: {0:.2f}'.format(avg_val_acc))
+        logger.info(f'\n{classification_report(y_true=y_true, y_pred=y_pred)}')
+        eval_f1 = f1_score(y_true, y_pred)
 
         avg_val_loss = total_eval_loss / len(eval_dataloader)
         validation_time = format_time(time.time() - bt)
@@ -350,7 +358,7 @@ def main(json_path=''):
         logger.info('Validation Loss: {0:.2f}'.format(avg_val_loss))
         logger.info('Validation took: {:}'.format(validation_time))
 
-        current_ckpt = training_args.output_dir + '/bert-' + datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S") + '-f1_' + str(int(avg_val_f1*100)) + '.pth'
+        current_ckpt = training_args.output_dir + '/bert-' + datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S") + '-f1_' + str(int(eval_f1*100)) + '.pth'
         logger.info('Start to save checkpoint named {}'.format(current_ckpt))
         if custom_args.deploy is True:
             logger.info('>>>>>>>>>>>> saving the model <<<<<<<<<<<<<<')

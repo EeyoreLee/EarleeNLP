@@ -24,6 +24,7 @@ def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_t
 
     train_path = '/ai/223/person/lichunyu/datasets/dataf/seq_label/seq_label.train'
     dev_path = '/ai/223/person/lichunyu/datasets/dataf/seq_label/seq_label.test'
+    # train_path = '/ai/223/person/lichunyu/datasets/dataf/seq_label/seq_label_all_all.train'
 
     # train_path = '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.seq'
     # dev_path = '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.seq'
