@@ -4,5 +4,7 @@
     "output_dir": "/ai/223/person/lichunyu/models/df/ner",
     "deploy": true,
     "seed": 42,
-    "optim": "adam"
+    "optim": "adam",
+    "bert_lr_rate": 0.05,
+    "embed_lr_rate": 1
 }

@@ -17,4 +17,6 @@ def run(json_file_path=None):
 
 
 if __name__ == '__main__':
-    run_ner('/root/EarleeNLP/args/ner.json')
+    # run_ner('/root/EarleeNLP/args/ner.json')
+    # run_chinese_ner('/root/EarleeNLP/args/df_flat.json')
+    run_classification('/root/EarleeNLP/args/df_intent_all_aug.json')

@@ -381,7 +381,7 @@ def main(json_path):
     train_ds = NERDataset(datasets['train'])
     train_dataloader = DataLoader(
         train_ds,
-        batch_size=32,
+        batch_size=16,
         collate_fn=collate_func,
         # shuffle=True
     )
@@ -390,7 +390,7 @@ def main(json_path):
     dev_ds = NERDataset(datasets['dev'])
     dev_dataloader = DataLoader(
         dev_ds,
-        batch_size=64,
+        batch_size=32,
         collate_fn=collate_func
     )
 
@@ -439,6 +439,7 @@ def main(json_path):
 
 
     for epoch_n in range(epoch):
+        logger.info('======================epoch {}/{}=============================='.format(epoch_n, epoch))
 
         # if epoch_n >= 40:
         #     model.eval()
@@ -503,7 +504,7 @@ def main(json_path):
             loss.backward()
             optimizer.step()
             # scheduler.step()
-        print('train loss: ' + str(total_train_loss / len(train_dataloader)))
+        logger.info('train loss: ' + str(total_train_loss / len(train_dataloader)))
 
         model.eval()
         total_eval_loss = 0
@@ -539,8 +540,8 @@ def main(json_path):
         _span_f1 = span_f1_metric.get_metric()
         current_ckpt = training_args.output_dir + '/flat-' + datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S") + '-f1_' + str(int(_span_f1['f']*100)) + '.pth'
 
-        print(_span_f1)
-        print('eval loss: ' + str(total_eval_loss / len(dev_dataloader)))
+        logger.info(_span_f1)
+        logger.info('eval loss: ' + str(total_eval_loss / len(dev_dataloader)))
         if custom_args.deploy is True:
             logger.info('>>>>>>>>>>>> saving the model <<<<<<<<<<<<<<')
             torch.save(model, current_ckpt)
@@ -548,7 +549,7 @@ def main(json_path):
             logger.info('>>>>>>>>>>>> saving the state_dict of model <<<<<<<<<<<<<')
             torch.save(model.state_dict(), current_ckpt)
 
-        print('\n')
+        logger.info('\n')
     print('==============success==============')
     pass
 

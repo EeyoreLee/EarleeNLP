@@ -7,6 +7,7 @@
 import json
 from collections import defaultdict
 import os
+import numpy as np
 
 
 from transformers import (
@@ -342,7 +343,7 @@ class NlpGoGo(object):
     def __init__(self, cls_model_path, cls_config_path, ner_model_path, ood_model_path, ood_bert_model_path=None, \
                 ood_roberta_model_path=None, query_type_model_path=None, command_model_path=None, ood_bert_6000_model_path=None, \
                 ood_roberta_6000_model_path=None, ood_fake_roberta_6000_model_path=None, ood_fake_roberta_2700_model_path=None, \
-                ood_macbert_model_path=None, device='cuda', max_length=150, policy:dict=None, ood_config_path=None):
+                ood_macbert_model_path=None, device='cuda', max_length=150, policy:dict=None, ood_config_path=None, cls_ext_model_path=None):
         """
         policy = {
                 'cls_model': 'bert',
@@ -355,6 +356,7 @@ class NlpGoGo(object):
         self.policy = policy
         # if policy['cls_model'] == 'bert':
         self.cls_model = torch.load(cls_model_path, map_location=torch.device(device))
+        self.cls_ext_model = torch.load(cls_ext_model_path, map_location=torch.device(device))
         self.tokenizer = BertTokenizer.from_pretrained(cls_config_path)
         self.max_length = max_length
 
@@ -457,68 +459,68 @@ class NlpGoGo(object):
             vote[bert_6000_intent] += 1
 
 
-            input_ids = []
-            attention_mask = []
-            encoded_dict = self.ood_roberta_tokenizer(
-                            text, 
-                            add_special_tokens = True,
-                            truncation='longest_first',
-                            max_length = self.max_length,
-                            padding = 'max_length',
-                            return_attention_mask = True,
-                            return_tensors = 'pt',
-                    )
+            # input_ids = []
+            # attention_mask = []
+            # encoded_dict = self.ood_roberta_tokenizer(
+            #                 text, 
+            #                 add_special_tokens = True,
+            #                 truncation='longest_first',
+            #                 max_length = self.max_length,
+            #                 padding = 'max_length',
+            #                 return_attention_mask = True,
+            #                 return_tensors = 'pt',
+            #         )
 
-            input_ids.append(encoded_dict['input_ids'])
-            attention_mask.append(encoded_dict['attention_mask'])
-            input_ids = torch.cat(input_ids, dim=0)
-            attention_mask = torch.cat(attention_mask, dim=0)
+            # input_ids.append(encoded_dict['input_ids'])
+            # attention_mask.append(encoded_dict['attention_mask'])
+            # input_ids = torch.cat(input_ids, dim=0)
+            # attention_mask = torch.cat(attention_mask, dim=0)
 
-            self.ood_roberta_model.eval()
-            with torch.no_grad():
-                input_ids = input_ids.to(self.device).to(torch.int64)
-                attention_mask = attention_mask.to(self.device).to(torch.int64)
-                output = self.ood_roberta_model(
-                    input_ids=input_ids,
-                    attention_mask=attention_mask
-                )
-            if torch.max(F.softmax(output.logits)).detach().cpu().numpy().tolist() < 0.0:
-                roberta_intent = INTENT[-1]
-            else:
-                roberta_intent = id2label[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
-            vote[roberta_intent] += 1
+            # self.ood_roberta_model.eval()
+            # with torch.no_grad():
+            #     input_ids = input_ids.to(self.device).to(torch.int64)
+            #     attention_mask = attention_mask.to(self.device).to(torch.int64)
+            #     output = self.ood_roberta_model(
+            #         input_ids=input_ids,
+            #         attention_mask=attention_mask
+            #     )
+            # if torch.max(F.softmax(output.logits)).detach().cpu().numpy().tolist() < 0.0:
+            #     roberta_intent = INTENT[-1]
+            # else:
+            #     roberta_intent = id2label[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
+            # vote[roberta_intent] += 1
 
 
-            input_ids = []
-            attention_mask = []
-            encoded_dict = self.ood_roberta_tokenizer(
-                            text, 
-                            add_special_tokens = True,
-                            truncation='longest_first',
-                            max_length = self.max_length,
-                            padding = 'max_length',
-                            return_attention_mask = True,
-                            return_tensors = 'pt',
-                    )
+            # input_ids = []
+            # attention_mask = []
+            # encoded_dict = self.ood_roberta_tokenizer(
+            #                 text, 
+            #                 add_special_tokens = True,
+            #                 truncation='longest_first',
+            #                 max_length = self.max_length,
+            #                 padding = 'max_length',
+            #                 return_attention_mask = True,
+            #                 return_tensors = 'pt',
+            #         )
 
-            input_ids.append(encoded_dict['input_ids'])
-            attention_mask.append(encoded_dict['attention_mask'])
-            input_ids = torch.cat(input_ids, dim=0)
-            attention_mask = torch.cat(attention_mask, dim=0)
+            # input_ids.append(encoded_dict['input_ids'])
+            # attention_mask.append(encoded_dict['attention_mask'])
+            # input_ids = torch.cat(input_ids, dim=0)
+            # attention_mask = torch.cat(attention_mask, dim=0)
 
-            self.ood_roberta_6000_model.eval()
-            with torch.no_grad():
-                input_ids = input_ids.to(self.device).to(torch.int64)
-                attention_mask = attention_mask.to(self.device).to(torch.int64)
-                output = self.ood_roberta_6000_model(
-                    input_ids=input_ids,
-                    attention_mask=attention_mask
-                )
-            if torch.max(F.softmax(output.logits)).detach().cpu().numpy().tolist() < 0.0:
-                roberta_6000_intent = INTENT[-1]
-            else:
-                roberta_6000_intent = id2label[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
-            vote[roberta_6000_intent] += 1
+            # self.ood_roberta_6000_model.eval()
+            # with torch.no_grad():
+            #     input_ids = input_ids.to(self.device).to(torch.int64)
+            #     attention_mask = attention_mask.to(self.device).to(torch.int64)
+            #     output = self.ood_roberta_6000_model(
+            #         input_ids=input_ids,
+            #         attention_mask=attention_mask
+            #     )
+            # if torch.max(F.softmax(output.logits)).detach().cpu().numpy().tolist() < 0.0:
+            #     roberta_6000_intent = INTENT[-1]
+            # else:
+            #     roberta_6000_intent = id2label[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
+            # vote[roberta_6000_intent] += 1
 
             input_ids = []
             attention_mask = []
@@ -619,7 +621,8 @@ class NlpGoGo(object):
             # else:
             #     return True
 
-            if bert_intent != INTENT[-1] and roberta_intent != INTENT[-1] and bert_6000_intent != INTENT[-1] and roberta_6000_intent != INTENT[-1] and fake_roberta_6000_intent != INTENT[-1] and fake_roberta_2700_intent != INTENT[-1] and macbert_6000_intent != INTENT[-1]:
+            if bert_intent != INTENT[-1] and bert_6000_intent != INTENT[-1] and fake_roberta_6000_intent != INTENT[-1] and fake_roberta_2700_intent != INTENT[-1] and macbert_6000_intent != INTENT[-1]:
+            # if bert_intent != INTENT[-1] and roberta_intent != INTENT[-1] and bert_6000_intent != INTENT[-1] and roberta_6000_intent != INTENT[-1] and fake_roberta_6000_intent != INTENT[-1] and fake_roberta_2700_intent != INTENT[-1] and macbert_6000_intent != INTENT[-1]:
                 return False
             return True
 
@@ -695,6 +698,37 @@ class NlpGoGo(object):
 
         elif self.policy['cls_model'] == 'ensemble':
             vote = defaultdict(float)
+
+
+            # input_ids = []
+            # attention_mask = []
+            # encoded_dict = self.tokenizer(
+            #                 text, 
+            #                 add_special_tokens = True,
+            #                 truncation='longest_first',
+            #                 max_length = self.max_length,
+            #                 padding = 'max_length',
+            #                 return_attention_mask = True,
+            #                 return_tensors = 'pt',
+            #         )
+
+            # input_ids.append(encoded_dict['input_ids'])
+            # attention_mask.append(encoded_dict['attention_mask'])
+            # input_ids = torch.cat(input_ids, dim=0)
+            # attention_mask = torch.cat(attention_mask, dim=0)
+
+            # self.cls_ext_model.eval()
+            # with torch.no_grad():
+            #     input_ids = input_ids.to(self.device).to(torch.int64)
+            #     attention_mask = attention_mask.to(self.device).to(torch.int64)
+            #     output = self.cls_ext_model(
+            #         input_ids=input_ids,
+            #         attention_mask=attention_mask
+            #     )
+            #     bert_ext_logits = output.logits.detach().cpu().numpy()
+                # bert_ext_intent = id2label[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
+                # vote[bert_ext_intent] += 3.0
+
             input_ids = []
             attention_mask = []
             encoded_dict = self.tokenizer(
@@ -720,9 +754,13 @@ class NlpGoGo(object):
                     input_ids=input_ids,
                     attention_mask=attention_mask
                 )
+                # bert_base_logits = output.logits.detach().cpu().numpy()
                 bert_base_intent = id2label[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
                 vote[bert_base_intent] += 2.0
 
+            # bagging_logits = bert_ext_logits + bert_base_logits
+            # intent = id2label[np.argmax(bagging_logits).tolist()]
+            # return intent
 
             input_ids = []
             attention_mask = []
@@ -1134,8 +1172,10 @@ class NlpGoGo(object):
         if '紫外线' in text:
             return '紫外线指数'
         cls_5 = [
-            '降水',
-            '降雨'
+            '降水情况',
+            '降雨情况',
+            '降水量',
+            '降雨量'
         ]
         for i in cls_5:
             if i in text:
@@ -1447,6 +1487,12 @@ class NlpGoGo(object):
         for i in cls_41:
             if i in text:
                 return '辽宁'
+        cls_42 = [
+            '海口'
+        ]
+        for i in cls_42:
+            if i in text:
+                return '海口'
         return ''
 
 
@@ -1466,8 +1512,13 @@ class NlpGoGo(object):
         #     return '穿衣指数'
         if '暴雨' in text:
             return '暴雨'
-        if '雨' in text:
-            return '雨'
+        cls_1 = [
+            '雨',
+            '降水'
+        ]
+        for i in cls_1:
+            if i in text:
+                return '雨'
         if '晴' in text:
             return '晴'
         if '暴雪' in text:
@@ -1727,6 +1778,8 @@ class NlpGoGo(object):
                 if region:
                     slots['region'] = region
 
+            slots = slot_hash(slots)
+
             res[idx]['slots'] = slots
 
         with open(output_path, 'w') as f:
@@ -1837,6 +1890,13 @@ class NlpGoGo(object):
             return flat_slot_clean(res, intent=intent, with_intent=True)
 
 
+def slot_hash(slot):
+    if 'type' in slot and 'index' in slot:
+        if slot['type'] == '雨' and slot['index'] == '降水量':
+            return {k:v for k,v in slot.items() if k != 'type'}
+    return slot
+
+
 def dict_extract_one_value(dic):
     for k, v in dic.items():
         return v
@@ -1894,6 +1954,7 @@ if __name__ == '__main__':
     nlpgogo = NlpGoGo(
         # cls_model_path='/ai/223/person/lichunyu/models/tmp/bert-2021-07-23-07-21-34-f1_98.pth',
         cls_model_path='/ai/223/person/lichunyu/models/df/intent/bert-2021-08-05-03-19-23-f1_99.pth',  # few_shot
+        cls_ext_model_path='/ai/223/person/lichunyu/models/df/intent/bert-2021-09-02-12-19-11-f1_99.pth', # hfl ext eopch 3
         # cls_model_path='/ai/223/person/lichunyu/models/df/intent/bert-2021-08-24-02-18-47-f1_98.pth',   # hfl
         # ood_model_path='/ai/223/person/lichunyu/models/df/intent/bert-2021-08-02-14-35-46-f1_99.pth',  # odd acc 0.95
         ood_model_path='/ai/223/person/lichunyu/models/df/intent/bert-2021-08-13-02-54-15-f1_98.pth',
