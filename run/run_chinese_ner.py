@@ -14,6 +14,7 @@ import math
 import datetime
 from collections import defaultdict
 
+from fastNLP.core._logger import _add_file_handler, FastNLPLogger
 import torch
 from torch.autograd.grad_mode import no_grad
 import torch.nn as nn
@@ -32,7 +33,6 @@ from utils.common import print_info
 from utils.args import CustomizeArguments
 from utils.flat.base import load_ner
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '1,2,3,4,5,6,7'
 
 class Unfreeze_Callback(Callback):
     def __init__(self,bert_embedding,fix_epoch_num):
@@ -99,6 +99,7 @@ class NERDataset(Dataset):
 
 
 def main(json_path):
+
     yangjie_rich_pretrain_unigram_path = '/root/pretrain-models/flat/gigaword_chn.all.a2b.uni.ite50.vec'
     yangjie_rich_pretrain_bigram_path = '/root/pretrain-models/flat/gigaword_chn.all.a2b.bi.ite50.vec'
     yangjie_rich_pretrain_word_path = '/root/pretrain-models/flat/ctb.50d.vec'
@@ -118,6 +119,12 @@ def main(json_path):
         custom_args, training_args = parser.parse_json_file(json_file=os.path.abspath(sys.argv[1]))
     else:
         custom_args, training_args = parser.parse_args_into_dataclasses()
+
+    # os.environ['CUDA_VISIBLE_DEVICES'] = custom_args.cus_cuda_visible_devices
+
+    # _add_file_handler(logging, custom_args.log_file_path)
+    _logger = FastNLPLogger(__name__)
+    _logger.add_file(custom_args.log_file_path)
 
     logging.basicConfig(
         format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
@@ -167,7 +174,10 @@ def main(json_path):
         # train_clip=custom_args.train_clip,
         char_min_freq=custom_args.char_min_freq,
         bigram_min_freq=custom_args.bigram_min_freq,
-        only_train_min_freq=custom_args.only_train_min_freq
+        only_train_min_freq=custom_args.only_train_min_freq,
+        train_path=custom_args.train_path,
+        dev_path=custom_args.dev_path,
+        logger=logger
     )
 
 
@@ -239,12 +249,12 @@ def main(json_path):
                 train_seq_lex.append(v[i]['lex_num']+v[i]['seq_len'])
                 train_seq.append(v[i]['seq_len'])
                 if v[i]['seq_len'] >200:
-                    print('train里这个句子char长度已经超了200了')
-                    print(''.join(list(map(lambda x:vocabs['char'].to_word(x),v[i]['chars']))))
+                    logger.info('train里这个句子char长度已经超了200了')
+                    logger.info(''.join(list(map(lambda x:vocabs['char'].to_word(x),v[i]['chars']))))
                 else:
                     if v[i]['seq_len']+v[i]['lex_num']>400:
-                        print('train里这个句子char长度没超200，但是总长度超了400')
-                        print(''.join(list(map(lambda x: vocabs['char'].to_word(x), v[i]['chars']))))
+                        logger.info('train里这个句子char长度没超200，但是总长度超了400')
+                        logger.info(''.join(list(map(lambda x: vocabs['char'].to_word(x), v[i]['chars']))))
             if k == 'dev':
                 dev_seq_lex.append(v[i]['lex_num']+v[i]['seq_len'])
                 dev_seq.append(v[i]['seq_len'])
@@ -253,23 +263,23 @@ def main(json_path):
                 test_seq.append(v[i]['seq_len'])
 
 
-        print('{} 最长的句子是:{}'.format(k,list(map(lambda x:vocabs['char'].to_word(x),v[max_seq_len_i]['chars']))))
-        print('{} max_seq_len:{}'.format(k,max_seq_len))
-        print('{} max_lex_num:{}'.format(k, max_lex_num))
-        print('{} max_seq_lex:{}'.format(k, max_seq_lex))
+        logger.info('{} 最长的句子是:{}'.format(k,list(map(lambda x:vocabs['char'].to_word(x),v[max_seq_len_i]['chars']))))
+        logger.info('{} max_seq_len:{}'.format(k,max_seq_len))
+        logger.info('{} max_lex_num:{}'.format(k, max_lex_num))
+        logger.info('{} max_seq_lex:{}'.format(k, max_seq_lex))
 
     max_seq_len = max(* map(lambda x:max(x['seq_len']),datasets.values()))
 
     show_index = 4
-    print('raw_chars:{}'.format(list(datasets['train'][show_index]['raw_chars'])))
-    print('lexicons:{}'.format(list(datasets['train'][show_index]['lexicons'])))
-    print('lattice:{}'.format(list(datasets['train'][show_index]['lattice'])))
-    print('raw_lattice:{}'.format(list(map(lambda x:vocabs['lattice'].to_word(x),
+    logger.info('raw_chars:{}'.format(list(datasets['train'][show_index]['raw_chars'])))
+    logger.info('lexicons:{}'.format(list(datasets['train'][show_index]['lexicons'])))
+    logger.info('lattice:{}'.format(list(datasets['train'][show_index]['lattice'])))
+    logger.info('raw_lattice:{}'.format(list(map(lambda x:vocabs['lattice'].to_word(x),
                                     list(datasets['train'][show_index]['lattice'])))))
-    print('lex_s:{}'.format(list(datasets['train'][show_index]['lex_s'])))
-    print('lex_e:{}'.format(list(datasets['train'][show_index]['lex_e'])))
-    print('pos_s:{}'.format(list(datasets['train'][show_index]['pos_s'])))
-    print('pos_e:{}'.format(list(datasets['train'][show_index]['pos_e'])))
+    logger.info('lex_s:{}'.format(list(datasets['train'][show_index]['lex_s'])))
+    logger.info('lex_e:{}'.format(list(datasets['train'][show_index]['lex_e'])))
+    logger.info('pos_s:{}'.format(list(datasets['train'][show_index]['pos_s'])))
+    logger.info('pos_e:{}'.format(list(datasets['train'][show_index]['pos_e'])))
 
 
     for k, v in datasets.items():
@@ -284,14 +294,14 @@ def main(json_path):
 
 
     if custom_args.norm_embed > 0:
-        print('embedding:{}'.format(embeddings['char'].embedding.weight.size()))
-        print('norm embedding')
+        logger.info('embedding:{}'.format(embeddings['char'].embedding.weight.size()))
+        logger.info('norm embedding')
         for k,v in embeddings.items():
             norm_static_embedding(v, custom_args.norm_embed)
 
     if custom_args.norm_lattice_embed > 0:
-        print('embedding:{}'.format(embeddings['lattice'].embedding.weight.size()))
-        print('norm lattice embedding')
+        logger.info('embedding:{}'.format(embeddings['lattice'].embedding.weight.size()))
+        logger.info('norm lattice embedding')
         for k,v in embeddings.items():
             norm_static_embedding(v,custom_args.norm_embed)
 
@@ -428,7 +438,7 @@ def main(json_path):
         optimizer = optim.SGD(param_,lr=custom_args.lr,momentum=custom_args.momentum,
                             weight_decay=0.1)
 
-    span_f1_metric = SpanFPreRecMetric(vocabs['label'], pred='pred', target='target', seq_len='seq_len', encoding_type=encoding_type)
+    span_f1_metric = SpanFPreRecMetric(vocabs['label'], pred='pred', target='target', seq_len='seq_len', encoding_type=encoding_type, only_gross=False)
 
     # scheduler = LambdaLR(optimizer, lambda ep: 1 / (1 + 0.05*ep) )
 
@@ -440,36 +450,6 @@ def main(json_path):
 
     for epoch_n in range(epoch):
         logger.info('======================epoch {}/{}=============================='.format(epoch_n, epoch))
-
-        # if epoch_n >= 40:
-        #     model.eval()
-        #     for step, batch in enumerate(test_dataloader):
-        #         #TODO BERT embedding 前20 epoch 冻结
-        #         # chars = batch[0].cuda()
-        #         target = batch[1].cuda()
-        #         bigrams = batch[2].cuda()
-        #         seq_len = batch[3].cuda()
-        #         lex_num = batch[4].cuda()
-        #         # lex_s = batch[5].cuda()
-        #         # lex_e = batch[6].cuda()
-        #         lattice = batch[7].cuda()
-        #         pos_s = batch[8].cuda()
-        #         pos_e = batch[9].cuda()
-
-        #         with torch.no_grad():
-
-        #             output = model(
-        #                 lattice,
-        #                 bigrams,
-        #                 seq_len,
-        #                 lex_num,
-        #                 pos_s,
-        #                 pos_e,
-        #                 target
-        #             )
-        #         pred = output['pred']
-        #         pass
-
 
         model.train()
         total_train_loss = 0

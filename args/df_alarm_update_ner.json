@@ -1,0 +1,14 @@
+{
+    "author": "earlee",
+    "weight_decay": 0.1,
+    "output_dir": "/ai/223/person/lichunyu/models/df/ner",
+    "deploy": true,
+    "seed": 42,
+    "optim": "adam",
+    "bert_lr_rate": 0.05,
+    "embed_lr_rate": 1,
+    "train_path": "/ai/223/person/lichunyu/datasets/dataf/seq_label/Alarm-Update_detached.train",
+    "dev_path": "/ai/223/person/lichunyu/datasets/dataf/seq_label/Alarm-Update_detached.test",
+    "task": "chinese_ner",
+    "cus_cuda_visible_devices": "1"
+}

@@ -6,6 +6,8 @@
 
 from collections import defaultdict
 import datetime
+import random
+
 from sklearn.metrics import f1_score, accuracy_score, classification_report
 import numpy as np
 
@@ -117,6 +119,17 @@ def seq_idx2label(label_ids, mask=None, seq_len=None, label2idx=None, idx2label=
         seq_label = [idx2label[_] for _ in seq_idx]
         res.append(seq_label)
 
+    return res
+
+
+def get_piece_randint(start, end, n):
+    res = []
+    if (end - start + 1) < n:
+        raise Exception('范围内没足够整数')
+    while len(res) < n:
+        num = random.randint(start, end)
+        if num not in res:
+            res.append(num)
     return res
 
 

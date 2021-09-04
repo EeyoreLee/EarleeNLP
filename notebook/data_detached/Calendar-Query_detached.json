@@ -1,0 +1,7085 @@
+{
+    "NLU00037": {
+        "text": "五一劳动节是农历几时",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "五一劳动节"
+        }
+    },
+    "NLU00042": {
+        "text": "快帮我查一下明天是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU00046": {
+        "text": "农历的3月26是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "3月26"
+        }
+    },
+    "NLU00049": {
+        "text": "龙抬头是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "龙抬头"
+        }
+    },
+    "NLU00072": {
+        "text": "古尔邦节是农历的什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "古尔邦节"
+        }
+    },
+    "NLU00080": {
+        "text": "1月18日是农历几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "1月18日"
+        }
+    },
+    "NLU00082": {
+        "text": "快点帮我查查礼拜几是4月的17日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "17日"
+        }
+    },
+    "NLU00092": {
+        "text": "春节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "春节"
+        }
+    },
+    "NLU00093": {
+        "text": "多少月多少号是农历的2月12",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "2月12"
+        }
+    },
+    "NLU00104": {
+        "text": "星期几是母亲节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "母亲节"
+        }
+    },
+    "NLU00106": {
+        "text": "酥油花灯节是什么哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "酥油花灯节"
+        }
+    },
+    "NLU00137": {
+        "text": "农历的7初19是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "7初19"
+        }
+    },
+    "NLU00142": {
+        "text": "大后天是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大后天"
+        }
+    },
+    "NLU00148": {
+        "text": "今天是5号明天是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU00149": {
+        "text": "帮我看一看农历7月18和农历7月19哪天是9月2号啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "农历7月18",
+                "农历7月19",
+                "9月2号"
+            ]
+        }
+    },
+    "NLU00156": {
+        "text": "帮我查一下明年国庆节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明年国庆节"
+        }
+    },
+    "NLU00181": {
+        "text": "立即告诉我明天的农历是多少啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU00195": {
+        "text": "告诉我什么时候是清明节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "清明节"
+        }
+    },
+    "NLU00197": {
+        "text": "后天的农历是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "后天"
+        }
+    },
+    "NLU00202": {
+        "text": "现在就想查查下个月二十号是不是父亲节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "下个月二十号"
+        }
+    },
+    "NLU00214": {
+        "text": "你知道阴历5月22是阳历几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历5月22"
+        }
+    },
+    "NLU00229": {
+        "text": "查查昨天应该是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "昨天"
+        }
+    },
+    "NLU00232": {
+        "text": "9月9是什么节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "9月9"
+        }
+    },
+    "NLU00250": {
+        "text": "请问一下下周日是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "下周日"
+        }
+    },
+    "NLU00252": {
+        "text": "去年的谷雨是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "去年的谷雨"
+        }
+    },
+    "NLU00282": {
+        "text": "4月10日和4月9日哪天是星期三",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "4月10日",
+                "4月9日"
+            ]
+        }
+    },
+    "NLU00295": {
+        "text": "今年的那达慕什么时候举行",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的那达慕"
+        }
+    },
+    "NLU00306": {
+        "text": "马上瞅瞅几月几号是建党节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "建党节"
+        }
+    },
+    "NLU00309": {
+        "text": "赶紧说说几月几号是这个周一呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "周一"
+        }
+    },
+    "NLU00317": {
+        "text": "今年的寒露是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的寒露"
+        }
+    },
+    "NLU00319": {
+        "text": "查询星期三是什么节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期三"
+        }
+    },
+    "NLU00344": {
+        "text": "星期几是国庆节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "国庆节"
+        }
+    },
+    "NLU00355": {
+        "text": "看看九月有流星雨的那天是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "九月有流星雨"
+        }
+    },
+    "NLU00357": {
+        "text": "赶紧告诉我农历5月5是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历5月5"
+        }
+    },
+    "NLU00360": {
+        "text": "你现在就告诉我答案几月几号是这个礼拜六啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "礼拜六"
+        }
+    },
+    "NLU00375": {
+        "text": "六一儿童节的农历是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "儿童节"
+        }
+    },
+    "NLU00404": {
+        "text": "告诉我大前天是农历多少",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大前天"
+        }
+    },
+    "NLU00406": {
+        "text": "今年的愚人节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的愚人节"
+        }
+    },
+    "NLU00425": {
+        "text": "今年的中秋节是九月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中秋节"
+        }
+    },
+    "NLU00428": {
+        "text": "9月15号是星期几啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "9月15号"
+        }
+    },
+    "NLU00437": {
+        "text": "查询中国的阴历正月19日是星期几呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历正月19日"
+        }
+    },
+    "NLU00442": {
+        "text": "看一下4月21日是阴历多少",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "4月21日"
+        }
+    },
+    "NLU00447": {
+        "text": "美国的大蒜节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大蒜节"
+        }
+    },
+    "NLU00462": {
+        "text": "能不能帮我报下星期几是农历的2月初1",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "2月初1"
+        }
+    },
+    "NLU00473": {
+        "text": "元宵节在几月",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "元宵节"
+        }
+    },
+    "NLU00492": {
+        "text": "查查明天的日历表是多少号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU00495": {
+        "text": "狂欢节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "狂欢节"
+        }
+    },
+    "NLU00503": {
+        "text": "农历的中元节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中元节"
+        }
+    },
+    "NLU00512": {
+        "text": "现在能说说礼拜几是10月的10日吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "10日"
+        }
+    },
+    "NLU00524": {
+        "text": "查下日历后天的农历是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "后天"
+        }
+    },
+    "NLU00529": {
+        "text": "周末两天分别是多少号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "周末"
+        }
+    },
+    "NLU00534": {
+        "text": "我要马上知道大后天是农历几月初几呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大后天"
+        }
+    },
+    "NLU00535": {
+        "text": "加拿大的土拨鼠节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "土拨鼠节"
+        }
+    },
+    "NLU00635": {
+        "text": "帮我查一下后天是农历几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "后天"
+        }
+    },
+    "NLU00636": {
+        "text": "后天是不是清明节呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "后天"
+        }
+    },
+    "NLU00639": {
+        "text": "开门节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "开门节"
+        }
+    },
+    "NLU00643": {
+        "text": "回答我想知道今天是礼拜几呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU00656": {
+        "text": "我想知道中国的阴历4月15是哪一天呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历4月15"
+        }
+    },
+    "NLU00663": {
+        "text": "今年的忏悔节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的忏悔节"
+        }
+    },
+    "NLU00670": {
+        "text": "今年的几月几号是摩洛哥新娘节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "摩洛哥新娘节"
+        }
+    },
+    "NLU00717": {
+        "text": "我非常需要知道星期日是哪天啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期日"
+        }
+    },
+    "NLU00719": {
+        "text": "搜索3月5日是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "3月5日"
+        }
+    },
+    "NLU00736": {
+        "text": "今年的三月节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的三月节"
+        }
+    },
+    "NLU00737": {
+        "text": "赶快查一查几月几号是春节呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "春节"
+        }
+    },
+    "NLU00738": {
+        "text": "七夕是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "七夕"
+        }
+    },
+    "NLU00760": {
+        "text": "前年的国庆节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "前年的国庆节"
+        }
+    },
+    "NLU00761": {
+        "text": "农历的麦尔节是哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "麦尔节"
+        }
+    },
+    "NLU00762": {
+        "text": "农历的立夏是哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "立夏"
+        }
+    },
+    "NLU00768": {
+        "text": "我想要了解农历12月17是礼拜几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历12月17"
+        }
+    },
+    "NLU00775": {
+        "text": "告诉我祖鲁节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "祖鲁节"
+        }
+    },
+    "NLU00776": {
+        "text": "农历的什么时候是建军节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "建军节"
+        }
+    },
+    "NLU00777": {
+        "text": "给他报一下农历的几月几号是乞巧节啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "乞巧节"
+        }
+    },
+    "NLU00780": {
+        "text": "今年什么时候是虫王节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "虫王节"
+        }
+    },
+    "NLU00788": {
+        "text": "我想看看这个月15号是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "这个月15号"
+        }
+    },
+    "NLU00789": {
+        "text": "查下日历大前天是什么节日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大前天"
+        }
+    },
+    "NLU00818": {
+        "text": "陇端节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "陇端节"
+        }
+    },
+    "NLU00819": {
+        "text": "父亲节是几号？",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "父亲节"
+        }
+    },
+    "NLU00828": {
+        "text": "今年端午节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年端午节"
+        }
+    },
+    "NLU00831": {
+        "text": "关门节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "关门节"
+        }
+    },
+    "NLU00849": {
+        "text": "10月1日是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "10月1日"
+        }
+    },
+    "NLU00858": {
+        "text": "快看看星期二是几号啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期二"
+        }
+    },
+    "NLU00872": {
+        "text": "立刻告诉我12月12日是星期四还是星期五",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "12月12日"
+        }
+    },
+    "NLU00874": {
+        "text": "青年节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "青年节"
+        }
+    },
+    "NLU00883": {
+        "text": "我需要知道后天到底是几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "后天"
+        }
+    },
+    "NLU00893": {
+        "text": "快点查查青年节是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "青年节"
+        }
+    },
+    "NLU00896": {
+        "text": "明年建档节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明年建档节"
+        }
+    },
+    "NLU00901": {
+        "text": "2月13号是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "2月13号"
+        }
+    },
+    "NLU00909": {
+        "text": "今年的上巳节是哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的上巳节"
+        }
+    },
+    "NLU00913": {
+        "text": "问你今天是哪个节假日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU00918": {
+        "text": "圣帕特里克节是今年的什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "圣帕特里克节"
+        }
+    },
+    "NLU00939": {
+        "text": "中秋节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中秋节"
+        }
+    },
+    "NLU00946": {
+        "text": "周六是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "周六"
+        }
+    },
+    "NLU00974": {
+        "text": "3分钟以后帮我看看阴历的4月初3是礼拜6还是礼拜5",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历的4月初3"
+        }
+    },
+    "NLU00985": {
+        "text": "想知道这周有什么大型节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "这周"
+        }
+    },
+    "NLU00999": {
+        "text": "这个月的30号是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "这个月的30号"
+        }
+    },
+    "NLU01012": {
+        "text": "劳动节是10月1日吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "劳动节"
+        }
+    },
+    "NLU01023": {
+        "text": "我需要你让我知道农历3月12和农历3月13哪天是5月2号呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "农历3月12",
+                "农历3月13"
+            ]
+        }
+    },
+    "NLU01032": {
+        "text": "植树节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "植树节"
+        }
+    },
+    "NLU01040": {
+        "text": "1分钟之后赶紧告诉我星期日是哪天啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期日"
+        }
+    },
+    "NLU01045": {
+        "text": "帮我看看后天是几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "后天"
+        }
+    },
+    "NLU01052": {
+        "text": "告诉我今年的筷子节是哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的筷子节"
+        }
+    },
+    "NLU01062": {
+        "text": "大后天是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大后天"
+        }
+    },
+    "NLU01066": {
+        "text": "今年的复活节是哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的复活节"
+        }
+    },
+    "NLU01083": {
+        "text": "能查下劳动节是不是星期3吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "劳动节"
+        }
+    },
+    "NLU01090": {
+        "text": "星期几是火把节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "火把节"
+        }
+    },
+    "NLU01091": {
+        "text": "2分钟后给我说说星期几是农历的10月初7",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "10月初7"
+        }
+    },
+    "NLU01096": {
+        "text": "你帮我看看11月11日是什么节日呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "11月11日"
+        }
+    },
+    "NLU01101": {
+        "text": "赶紧看看什么节日是5月1日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "是5月1日"
+        }
+    },
+    "NLU01103": {
+        "text": "农历的6月9是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "6月9"
+        }
+    },
+    "NLU01109": {
+        "text": "今年几月几号是元旦",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "元旦"
+        }
+    },
+    "NLU01117": {
+        "text": "还能在问你一下中国的阴历9月19是哪一天吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历9月19"
+        }
+    },
+    "NLU01123": {
+        "text": "你快点告诉我农历正月15日是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历正月15日"
+        }
+    },
+    "NLU01156": {
+        "text": "农历的哪天是火把节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "火把节"
+        }
+    },
+    "NLU01165": {
+        "text": "六月多少号是端午节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "端午节"
+        }
+    },
+    "NLU01171": {
+        "text": "忏悔节是农历的什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "忏悔节"
+        }
+    },
+    "NLU01173": {
+        "text": "我要你马上打开日历查看农历4月20和农历4月21哪天是6月3号呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "农历4月20",
+                "农历4月21"
+            ]
+        }
+    },
+    "NLU01183": {
+        "text": "现在帮我瞅一瞅几月几号是农历的10月18",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "10月18"
+        }
+    },
+    "NLU01192": {
+        "text": "立刻告诉他一下中国的阴历1月12日是星期几呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历1月12日"
+        }
+    },
+    "NLU01200": {
+        "text": "春节是哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "春节"
+        }
+    },
+    "NLU01213": {
+        "text": "下周二是农历多少",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "下周二"
+        }
+    },
+    "NLU01217": {
+        "text": "给我哦看一看阴历的几月几号是9月13日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "9月13日"
+        }
+    },
+    "NLU01225": {
+        "text": "我想要知晓2020年的中秋节是不是8月15日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "2020年的中秋节",
+                "8月15日"
+            ]
+        }
+    },
+    "NLU01231": {
+        "text": "1月1号是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "1月1号"
+        }
+    },
+    "NLU01232": {
+        "text": "赶快搜索一下2018年的劳动节是不是5月1日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "2018年的劳动节"
+        }
+    },
+    "NLU01251": {
+        "text": "我想知道今年的小年是在几月份",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的小年"
+        }
+    },
+    "NLU01253": {
+        "text": "开斋节是农历什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "开斋节"
+        }
+    },
+    "NLU01271": {
+        "text": "这个月21号是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "21号"
+        }
+    },
+    "NLU01281": {
+        "text": "闻风节是哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "闻风节"
+        }
+    },
+    "NLU01294": {
+        "text": "报下阴历的几月几号是7月15日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "7月15日"
+        }
+    },
+    "NLU01297": {
+        "text": "青年节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "青年节"
+        }
+    },
+    "NLU01316": {
+        "text": "今年的元旦是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的元旦"
+        }
+    },
+    "NLU01318": {
+        "text": "人日节是农历的什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "人日节"
+        }
+    },
+    "NLU01341": {
+        "text": "什么节日是在五月初五那天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "五月初五"
+        }
+    },
+    "NLU01356": {
+        "text": "告诉我建军节是不是农历的9月初1",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "建军节"
+        }
+    },
+    "NLU01368": {
+        "text": "今年的樱花节是哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的樱花节"
+        }
+    },
+    "NLU01390": {
+        "text": "我需要知道星期5是几号呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期5"
+        }
+    },
+    "NLU01393": {
+        "text": "平安夜在星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "平安夜"
+        }
+    },
+    "NLU01395": {
+        "text": "用日历查查4月18日是农历3月初5还是3月初4呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "4月18日"
+        }
+    },
+    "NLU01403": {
+        "text": "是不是能告诉我4月2日和4月4日哪天是农历2月初6呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "4月2日",
+                "4月4日"
+            ]
+        }
+    },
+    "NLU01410": {
+        "text": "昨天是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "昨天"
+        }
+    },
+    "NLU01426": {
+        "text": "其实我想知道中国的阴历2月18日是星期几呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历2月18日"
+        }
+    },
+    "NLU01444": {
+        "text": "你赶快让我知道八月一日和七月一日哪个是建军节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "八月一日",
+                "七月一日"
+            ]
+        }
+    },
+    "NLU01452": {
+        "text": "重阳节是在星期二吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "重阳节"
+        }
+    },
+    "NLU01482": {
+        "text": "查下日历昨天应该是什么节日呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "昨天"
+        }
+    },
+    "NLU01494": {
+        "text": "我要知道中国少年先锋队诞辰日是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中国少年先锋队诞辰日"
+        }
+    },
+    "NLU01495": {
+        "text": "今年的雪顿节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的雪顿节"
+        }
+    },
+    "NLU01497": {
+        "text": "2020年5月12是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "2020年5月12"
+        }
+    },
+    "NLU01510": {
+        "text": "农历什么时候是盘王节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "盘王节"
+        }
+    },
+    "NLU01516": {
+        "text": "6月6是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "6月6"
+        }
+    },
+    "NLU01558": {
+        "text": "鬼节是农历的什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "鬼节"
+        }
+    },
+    "NLU01566": {
+        "text": "查查明天是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU01568": {
+        "text": "查询一下3月19是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "3月19"
+        }
+    },
+    "NLU01572": {
+        "text": "每年的清明节都是4月5日吗？",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "4月5日"
+        }
+    },
+    "NLU01573": {
+        "text": "告诉你我要查看农历3月初9是哪天呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历3月初9"
+        }
+    },
+    "NLU01583": {
+        "text": "我也不知道具体时间，你还是查一查周日是不是父亲节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "周日"
+        }
+    },
+    "NLU01609": {
+        "text": "泼水节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "泼水节"
+        }
+    },
+    "NLU01614": {
+        "text": "赶紧告诉我星期三是什么节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期三"
+        }
+    },
+    "NLU01627": {
+        "text": "18号是今天的日期吧",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "18号"
+        }
+    },
+    "NLU01630": {
+        "text": "明天是什么节日，外面这么热闹",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU01631": {
+        "text": "今年的立春是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的立春"
+        }
+    },
+    "NLU01633": {
+        "text": "星期几是诺鲁孜节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "诺鲁孜节"
+        }
+    },
+    "NLU01635": {
+        "text": "10月1日是农历几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "10月1日"
+        }
+    },
+    "NLU01641": {
+        "text": "9月23号是农历哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "9月23号"
+        }
+    },
+    "NLU01645": {
+        "text": "帮我查询一下今年的父亲节是哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的父亲节"
+        }
+    },
+    "NLU01663": {
+        "text": "快去查查农历的几月几号是乞巧节啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "乞巧节"
+        }
+    },
+    "NLU01671": {
+        "text": "我现在就想知道明天是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU01681": {
+        "text": "圣诞节是每年的几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "圣诞节"
+        }
+    },
+    "NLU01682": {
+        "text": "说一下阴历的几月几号是2月26日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "2月26日"
+        }
+    },
+    "NLU01691": {
+        "text": "查查看中国的阴历5月18是哪一天呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历5月18"
+        }
+    },
+    "NLU01695": {
+        "text": "可以让我知道阴历的9月初7是礼拜3还是礼拜4吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "9月初7"
+        }
+    },
+    "NLU01699": {
+        "text": "泼水节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "泼水节"
+        }
+    },
+    "NLU01714": {
+        "text": "元宵节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "元宵节"
+        }
+    },
+    "NLU01729": {
+        "text": "赶快告诉我大前天是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大前天"
+        }
+    },
+    "NLU01736": {
+        "text": "查查前天是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "前天"
+        }
+    },
+    "NLU01745": {
+        "text": "突尼斯的革命日是农历的什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "革命日"
+        }
+    },
+    "NLU01751": {
+        "text": "查一下芒种是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "芒种"
+        }
+    },
+    "NLU01755": {
+        "text": "这个月的17号是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "这个月的17号"
+        }
+    },
+    "NLU01767": {
+        "text": "告诉我答案星期几是父亲节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "父亲节"
+        }
+    },
+    "NLU01793": {
+        "text": "4月4日是农历几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "4月4日"
+        }
+    },
+    "NLU01801": {
+        "text": "马上让我知道阴历的几月几号是10月10日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "10月10日"
+        }
+    },
+    "NLU01802": {
+        "text": "请你帮我查下星期日是什么节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期日"
+        }
+    },
+    "NLU01810": {
+        "text": "星期五是哪天啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期五"
+        }
+    },
+    "NLU01816": {
+        "text": "速度告诉我礼拜四是哪天啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "礼拜四"
+        }
+    },
+    "NLU01817": {
+        "text": "帮我看一下去年的世界电信日是星期几。",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "世界电信日"
+        }
+    },
+    "NLU01825": {
+        "text": "新年除夕是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "新年除夕"
+        }
+    },
+    "NLU01840": {
+        "text": "今年的节礼日是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的节礼日"
+        }
+    },
+    "NLU01849": {
+        "text": "星期几是龙船节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "龙船节"
+        }
+    },
+    "NLU01853": {
+        "text": "赶快告诉我前天是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "前天"
+        }
+    },
+    "NLU01879": {
+        "text": "能告诉我6月1日是星期几吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "6月1日"
+        }
+    },
+    "NLU01886": {
+        "text": "什么节日是10月1日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "10月1日"
+        }
+    },
+    "NLU01889": {
+        "text": "我想知道大后天究竟是礼拜几呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大后天"
+        }
+    },
+    "NLU01892": {
+        "text": "能不能帮我看看农历8月23是礼拜几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历8月23"
+        }
+    },
+    "NLU01894": {
+        "text": "能不能告诉我答案星期几是农历的12月初5",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "12月初5"
+        }
+    },
+    "NLU01900": {
+        "text": "看一下今天是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU01928": {
+        "text": "今年的端午节是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的端午节"
+        }
+    },
+    "NLU01930": {
+        "text": "星期几是苗年",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "苗年"
+        }
+    },
+    "NLU01954": {
+        "text": "今天是农历多少日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU01965": {
+        "text": "前天是哪个节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "前天"
+        }
+    },
+    "NLU01966": {
+        "text": "马上告诉我阴历1月7是阳历几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历1月7"
+        }
+    },
+    "NLU01971": {
+        "text": "给我赶快查下星期五是农历多少号呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期五"
+        }
+    },
+    "NLU01976": {
+        "text": "我要查看农历6月11是礼拜几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历6月11"
+        }
+    },
+    "NLU01979": {
+        "text": "农历的什么时候是宰牲节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "宰牲节"
+        }
+    },
+    "NLU01990": {
+        "text": "给我查一查今年的春节是几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年"
+        }
+    },
+    "NLU01991": {
+        "text": "告诉我今天的农历是几月初几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU01996": {
+        "text": "星期几是圣诞节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "圣诞节"
+        }
+    },
+    "NLU02018": {
+        "text": "麻烦请你帮我查下星期四是农历多少号呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期四"
+        }
+    },
+    "NLU02022": {
+        "text": "给我查一查今年的儿童节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的儿童节"
+        }
+    },
+    "NLU02037": {
+        "text": "可否告诉我礼拜几是8月的23日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "8月的23日"
+        }
+    },
+    "NLU02043": {
+        "text": "告诉我答案什么节日是7月1日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "7月1日"
+        }
+    },
+    "NLU02056": {
+        "text": "明天的明天是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天的明天"
+        }
+    },
+    "NLU02068": {
+        "text": "农历的1月3是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "1月3"
+        }
+    },
+    "NLU02072": {
+        "text": "立刻瞅瞅农历的几月几号是中秋节啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中秋节"
+        }
+    },
+    "NLU02074": {
+        "text": "立刻看看星期日是哪天啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期日"
+        }
+    },
+    "NLU02079": {
+        "text": "中元节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中元节"
+        }
+    },
+    "NLU02097": {
+        "text": "查询一下情人节是哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "情人节"
+        }
+    },
+    "NLU02125": {
+        "text": "帮我查下10月1日是星期三还是星期二",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "10月1日"
+        }
+    },
+    "NLU02130": {
+        "text": "今年的葫芦节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的葫芦节"
+        }
+    },
+    "NLU02134": {
+        "text": "1分钟后告诉我4月5日是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "4月5日"
+        }
+    },
+    "NLU02135": {
+        "text": "帮我看一下端午节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "端午节"
+        }
+    },
+    "NLU02136": {
+        "text": "中秋节是这个月的星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中秋节"
+        }
+    },
+    "NLU02142": {
+        "text": "查一下这个周三是5月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "周三"
+        }
+    },
+    "NLU02151": {
+        "text": "立刻查询星期六是七夕节嘛",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期六"
+        }
+    },
+    "NLU02171": {
+        "text": "看看几月几号是儿童节呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "儿童节"
+        }
+    },
+    "NLU02180": {
+        "text": "9月28号是农历的几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "9月28号"
+        }
+    },
+    "NLU02196": {
+        "text": "我想知道大后天应该是多少号啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大后天"
+        }
+    },
+    "NLU02209": {
+        "text": "农历的送水节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "送水节"
+        }
+    },
+    "NLU02213": {
+        "text": "去年的国庆节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "去年的国庆节"
+        }
+    },
+    "NLU02214": {
+        "text": "今年的雨节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的雨节"
+        }
+    },
+    "NLU02220": {
+        "text": "15天后是几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "15天后"
+        }
+    },
+    "NLU02226": {
+        "text": "5月17日是农历几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "5月17日"
+        }
+    },
+    "NLU02243": {
+        "text": "今年的什么时候是蔵历元旦",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "蔵历元旦"
+        }
+    },
+    "NLU02251": {
+        "text": "五一劳动节是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "劳动节"
+        }
+    },
+    "NLU02254": {
+        "text": "速度的查询一下9月2日和9月3日哪天是农历7月初5呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "9月2日",
+                "9月3日"
+            ]
+        }
+    },
+    "NLU02257": {
+        "text": "赶快的让我知道农历的九月初八和农历九月初九哪天是重阳节呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "农历九月初九",
+                "九月初八"
+            ]
+        }
+    },
+    "NLU02278": {
+        "text": "现在我想知道什么节日是5月1日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "5月1日"
+        }
+    },
+    "NLU02293": {
+        "text": "查下日历前天是几号啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "前天"
+        }
+    },
+    "NLU02318": {
+        "text": "后天到底是几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "后天"
+        }
+    },
+    "NLU02327": {
+        "text": "我想知道春节是不是农历8月12",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "春节"
+        }
+    },
+    "NLU02342": {
+        "text": "少女节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "少女节"
+        }
+    },
+    "NLU02355": {
+        "text": "后天去上海玩是周几来着",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "后天"
+        }
+    },
+    "NLU02356": {
+        "text": "明天是农历的哪一天啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU02378": {
+        "text": "让我知道3月2日和3月4日哪天是农历1月16呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "3月2日",
+                "3月4日"
+            ]
+        }
+    },
+    "NLU02384": {
+        "text": "什么时候立秋",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "立秋"
+        }
+    },
+    "NLU02408": {
+        "text": "马上给我知道农历5月18是7月1日还是7月2日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历5月18"
+        }
+    },
+    "NLU02410": {
+        "text": "几月几号是火把节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "火把节"
+        }
+    },
+    "NLU02414": {
+        "text": "上个月的今天是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "上个月的今天"
+        }
+    },
+    "NLU02416": {
+        "text": "今年的5月20号是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的5月20号"
+        }
+    },
+    "NLU02417": {
+        "text": "帮我看看明年元宵节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明年元宵节"
+        }
+    },
+    "NLU02424": {
+        "text": "今年的元宵节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的元宵节"
+        }
+    },
+    "NLU02442": {
+        "text": "中国的阴历2月22是哪一天呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历2月22"
+        }
+    },
+    "NLU02468": {
+        "text": "能不能看一看礼拜几是9月的2日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "2日"
+        }
+    },
+    "NLU02476": {
+        "text": "父亲节是每年的几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "父亲节"
+        }
+    },
+    "NLU02483": {
+        "text": "星期二是农历几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期二"
+        }
+    },
+    "NLU02488": {
+        "text": "请问下周三期末考试是几号啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "下周三"
+        }
+    },
+    "NLU02491": {
+        "text": "帮我看看农历8月初7是哪天啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历8月初7"
+        }
+    },
+    "NLU02501": {
+        "text": "闻风节是农历的什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "闻风节"
+        }
+    },
+    "NLU02509": {
+        "text": "明天是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU02541": {
+        "text": "1分钟后看看星期几是建军节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "建军节"
+        }
+    },
+    "NLU02555": {
+        "text": "帮我查询一下农历7月1是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历7月1"
+        }
+    },
+    "NLU02556": {
+        "text": "告诉我明天是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU02564": {
+        "text": "查下中秋节是不是10月1日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中秋节"
+        }
+    },
+    "NLU02569": {
+        "text": "去搜搜看09年的青年节是农历的7月28吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "09年的青年节"
+        }
+    },
+    "NLU02585": {
+        "text": "我想知道昨天是几号呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "昨天"
+        }
+    },
+    "NLU02599": {
+        "text": "赶快看一看几月几号是这个周四",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "周四"
+        }
+    },
+    "NLU02601": {
+        "text": "这个月15号是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "这个月15号"
+        }
+    },
+    "NLU02606": {
+        "text": "下元节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "下元节"
+        }
+    },
+    "NLU02637": {
+        "text": "后天是周几呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "后天"
+        }
+    },
+    "NLU02649": {
+        "text": "下周五是几号呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "下周五"
+        }
+    },
+    "NLU02658": {
+        "text": "请帮我查查劳动节是农历几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "劳动节"
+        }
+    },
+    "NLU02685": {
+        "text": "昨天是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "昨天"
+        }
+    },
+    "NLU02687": {
+        "text": "看一下这周一是不是农历初六",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "这周一"
+        }
+    },
+    "NLU02690": {
+        "text": "农历的什么时候是男孩节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "男孩节"
+        }
+    },
+    "NLU02703": {
+        "text": "给我报下哪个节日是农历的12月30啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历的12月30"
+        }
+    },
+    "NLU02716": {
+        "text": "农历的惊蛰是哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "惊蛰"
+        }
+    },
+    "NLU02738": {
+        "text": "马上使用日历查看阴历的11月初3是礼拜5还是礼拜4",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "11月初3"
+        }
+    },
+    "NLU02742": {
+        "text": "今年什时候立秋",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "立秋"
+        }
+    },
+    "NLU02764": {
+        "text": "重阳节是农历几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "重阳节"
+        }
+    },
+    "NLU02805": {
+        "text": "能瞅瞅什么节日是6月1日吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "6月1日"
+        }
+    },
+    "NLU02811": {
+        "text": "可以看一下6月1日是什么节日吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "6月1日"
+        }
+    },
+    "NLU02815": {
+        "text": "告诉我明天是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU02823": {
+        "text": "立即瞅一瞅星期几是农历的7月初25",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "7月初25"
+        }
+    },
+    "NLU02843": {
+        "text": "复活节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "复活节"
+        }
+    },
+    "NLU02855": {
+        "text": "上上周5是哪个月",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "上上周5"
+        }
+    },
+    "NLU02865": {
+        "text": "阴历的几月几号是5月12日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "5月12日"
+        }
+    },
+    "NLU02875": {
+        "text": "赶快让我知道5月4日是劳动节还是青年节啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "5月4日"
+        }
+    },
+    "NLU02879": {
+        "text": "今年的什么时候是蚂拐节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "蚂拐节"
+        }
+    },
+    "NLU02884": {
+        "text": "查一下今年寒食节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年寒食节"
+        }
+    },
+    "NLU02888": {
+        "text": "几月几号是中元节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中元节"
+        }
+    },
+    "NLU02893": {
+        "text": "四月份有个什么节日来着",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "四月份"
+        }
+    },
+    "NLU02903": {
+        "text": "查一下今年的圣诞节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的圣诞节"
+        }
+    },
+    "NLU02911": {
+        "text": "抗日战争纪念日是几号？",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "抗日战争纪念日"
+        }
+    },
+    "NLU02921": {
+        "text": "下周二是农历多少号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "下周二"
+        }
+    },
+    "NLU02925": {
+        "text": "告诉我知道农历的11月初五和农历11月初六哪天是星期二啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "农历的11月初五",
+                "农历11月初六"
+            ]
+        }
+    },
+    "NLU02945": {
+        "text": "我想知道正月十五那天是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "正月十五"
+        }
+    },
+    "NLU02952": {
+        "text": "仲夏节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "仲夏节"
+        }
+    },
+    "NLU02960": {
+        "text": "1月15号是农历几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "1月15号"
+        }
+    },
+    "NLU02982": {
+        "text": "我想知道今天的农历是几月初几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU02986": {
+        "text": "告诉我清明节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "清明节"
+        }
+    },
+    "NLU02990": {
+        "text": "告诉我大前天是星期几呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大前天"
+        }
+    },
+    "NLU03022": {
+        "text": "这个小猫咪今天出生的，看一眼是农历多少日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU03045": {
+        "text": "酥油花灯节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "酥油花灯节"
+        }
+    },
+    "NLU03053": {
+        "text": "告诉我大前天是几号呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大前天"
+        }
+    },
+    "NLU03058": {
+        "text": "9月19是农历的什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "9月19"
+        }
+    },
+    "NLU03064": {
+        "text": "看一眼几月几号是农历的12月5日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "12月5日"
+        }
+    },
+    "NLU03074": {
+        "text": "告诉我大后天是个什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大后天"
+        }
+    },
+    "NLU03085": {
+        "text": "能查一下2018年父亲节是周几吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "2018年父亲节"
+        }
+    },
+    "NLU03086": {
+        "text": "能不能现在马上打开日历查看农历的七月初五和农历七月初七哪天是乞巧节呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "农历的七月初五",
+                "农历七月初七"
+            ]
+        }
+    },
+    "NLU03087": {
+        "text": "悄悄告诉我农历的3月初五和农历3月初六哪天是星期四呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "农历的3月初五",
+                "农历3月初六"
+            ]
+        }
+    },
+    "NLU03132": {
+        "text": "7月23号是农历几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "7月23号"
+        }
+    },
+    "NLU03146": {
+        "text": "明天是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU03153": {
+        "text": "帮我查查建军节是农历9月初1吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "建军节"
+        }
+    },
+    "NLU03163": {
+        "text": "8月1号是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "8月1号"
+        }
+    },
+    "NLU03167": {
+        "text": "问下你知道建党节是星期几吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "建党节"
+        }
+    },
+    "NLU03168": {
+        "text": "你赶快查查大前天是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大前天"
+        }
+    },
+    "NLU03181": {
+        "text": "请问今天是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU03189": {
+        "text": "过一会告诉我4月5日是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "4月5日"
+        }
+    },
+    "NLU03192": {
+        "text": "建军节是几月几号？",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "建军节"
+        }
+    },
+    "NLU03195": {
+        "text": "回答我星期日是哪天啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期日"
+        }
+    },
+    "NLU03208": {
+        "text": "农历的几月几号是端午节啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "端午节"
+        }
+    },
+    "NLU03209": {
+        "text": "马上查查星期五是今天吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "星期五",
+                "今天"
+            ]
+        }
+    },
+    "NLU03210": {
+        "text": "明年的情人节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明年的情人节"
+        }
+    },
+    "NLU03211": {
+        "text": "现在马上告诉我几月几号是这个礼拜日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "礼拜日"
+        }
+    },
+    "NLU03221": {
+        "text": "查看一下5月1日是阴历多少啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "5月1日"
+        }
+    },
+    "NLU03230": {
+        "text": "能否帮我看一看12月18日是农历10月初5还是10月初6呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "12月18日"
+        }
+    },
+    "NLU03240": {
+        "text": "几月几号是关门节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "关门节"
+        }
+    },
+    "NLU03241": {
+        "text": "我需要知道星期一是多少号呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期一"
+        }
+    },
+    "NLU03242": {
+        "text": "缅甸的独立日是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "独立日"
+        }
+    },
+    "NLU03244": {
+        "text": "明天是星期五吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU03245": {
+        "text": "告诉我昨天到底是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "昨天"
+        }
+    },
+    "NLU03249": {
+        "text": "下个月多少号是中秋节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中秋节"
+        }
+    },
+    "NLU03251": {
+        "text": "今年的国庆节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的国庆节"
+        }
+    },
+    "NLU03263": {
+        "text": "阴历的6月初3是礼拜3还是礼拜4",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "6月初3"
+        }
+    },
+    "NLU03267": {
+        "text": "下星期五是端午节吗？",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "下星期五"
+        }
+    },
+    "NLU03290": {
+        "text": "端午节农历多少号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "端午节"
+        }
+    },
+    "NLU03300": {
+        "text": "三月初二是几号啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "三月初二"
+        }
+    },
+    "NLU03301": {
+        "text": "拜托就查查端午节是不是星期一",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "端午节"
+        }
+    },
+    "NLU03304": {
+        "text": "今年的立夏是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的立夏"
+        }
+    },
+    "NLU03308": {
+        "text": "马上搜一下11月1日是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "11月1日"
+        }
+    },
+    "NLU03312": {
+        "text": "今天的日期是多少",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU03324": {
+        "text": "帮我查一下今年的元旦是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的元旦"
+        }
+    },
+    "NLU03350": {
+        "text": "哪天是中元节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中元节"
+        }
+    },
+    "NLU03357": {
+        "text": "给我看看星期二是农历几月几号呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期二"
+        }
+    },
+    "NLU03367": {
+        "text": "8月5日是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "8月5日"
+        }
+    },
+    "NLU03372": {
+        "text": "植树节是今年的什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "植树节"
+        }
+    },
+    "NLU03377": {
+        "text": "赶紧查查前天是哪个节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "前天"
+        }
+    },
+    "NLU03380": {
+        "text": "星期几是圣帕特里克节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "圣帕特里克节"
+        }
+    },
+    "NLU03382": {
+        "text": "帮我查看一下中秋节是不是星期3",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中秋节"
+        }
+    },
+    "NLU03397": {
+        "text": "速度看一看青年节是不是星期一",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "青年节"
+        }
+    },
+    "NLU03401": {
+        "text": "你现在能不能告诉我国庆节是几月几号啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "国庆节"
+        }
+    },
+    "NLU03404": {
+        "text": "帮我看看大后天是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大后天"
+        }
+    },
+    "NLU03409": {
+        "text": "立即查找我国传统节日端午节是农历多少号啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "端午节"
+        }
+    },
+    "NLU03418": {
+        "text": "农历几月几日是春节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "春节"
+        }
+    },
+    "NLU03419": {
+        "text": "农历什么时候是诺鲁孜节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "诺鲁孜节"
+        }
+    },
+    "NLU03427": {
+        "text": "花朝节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "花朝节"
+        }
+    },
+    "NLU03433": {
+        "text": "明年的除夕是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明年的除夕"
+        }
+    },
+    "NLU03448": {
+        "text": "祭敖包是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "祭敖包"
+        }
+    },
+    "NLU03463": {
+        "text": "圣诞节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "圣诞节"
+        }
+    },
+    "NLU03467": {
+        "text": "请帮我查询国庆节是10月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "国庆节"
+        }
+    },
+    "NLU03493": {
+        "text": "告诉我端午节是农历几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "端午节"
+        }
+    },
+    "NLU03518": {
+        "text": "今年中秋节是什么时候啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年中秋节"
+        }
+    },
+    "NLU03544": {
+        "text": "农历的哪天是圣瓦伦丁节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "圣瓦伦丁节"
+        }
+    },
+    "NLU03553": {
+        "text": "建军节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "建军节"
+        }
+    },
+    "NLU03557": {
+        "text": "今年的国庆节是周几请立即告诉我",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的国庆节"
+        }
+    },
+    "NLU03566": {
+        "text": "看一看建党节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "建党节"
+        }
+    },
+    "NLU03568": {
+        "text": "忏悔节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "忏悔节"
+        }
+    },
+    "NLU03578": {
+        "text": "4月27号是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "4月27号"
+        }
+    },
+    "NLU03600": {
+        "text": "帮我查看中国传统节日春节是农历多少号啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "春节"
+        }
+    },
+    "NLU03615": {
+        "text": "帮我看一下惊蛰是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "惊蛰"
+        }
+    },
+    "NLU03620": {
+        "text": "后天是周六么",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "后天"
+        }
+    },
+    "NLU03623": {
+        "text": "农历的9月12是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "9月12"
+        }
+    },
+    "NLU03632": {
+        "text": "告诉我明天是什么节假日吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU03635": {
+        "text": "今天是星期几啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU03642": {
+        "text": "除夕在几月几号呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "除夕"
+        }
+    },
+    "NLU03652": {
+        "text": "快点查询农历5月12是7月3日还是7月4日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历5月12"
+        }
+    },
+    "NLU03654": {
+        "text": "帮忙查下日历大后天究竟是礼拜几呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大后天"
+        }
+    },
+    "NLU03665": {
+        "text": "母亲节是在今年的几月几号？",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "母亲节"
+        }
+    },
+    "NLU03667": {
+        "text": "查询6月1日是劳动节还是儿童节啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "6月1日"
+        }
+    },
+    "NLU03676": {
+        "text": "我需要快点查查7月5日是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "7月5日"
+        }
+    },
+    "NLU03683": {
+        "text": "我想知道清明节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "清明节"
+        }
+    },
+    "NLU03688": {
+        "text": "今年的周几是火把节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "火把节"
+        }
+    },
+    "NLU03711": {
+        "text": "明年的宋干节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明年的宋干节"
+        }
+    },
+    "NLU03714": {
+        "text": "查下日历今天是哪个节假日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU03718": {
+        "text": "火把节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "火把节"
+        }
+    },
+    "NLU03724": {
+        "text": "查一下6月24日是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "6月24日"
+        }
+    },
+    "NLU03725": {
+        "text": "是否可以帮我查看一下建党节是7月1日吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "建党节"
+        }
+    },
+    "NLU03728": {
+        "text": "今年的成人节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的成人节"
+        }
+    },
+    "NLU03736": {
+        "text": "什么时候高考啊，那天是初几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "高考"
+        }
+    },
+    "NLU03737": {
+        "text": "告诉我什么时候是寒衣节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "寒衣节"
+        }
+    },
+    "NLU03751": {
+        "text": "5月20号是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "5月20号"
+        }
+    },
+    "NLU03753": {
+        "text": "我想知道下星期三是几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "下星期三"
+        }
+    },
+    "NLU03756": {
+        "text": "今年的花山节是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的花山节"
+        }
+    },
+    "NLU03759": {
+        "text": "12月24日是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "12月24日"
+        }
+    },
+    "NLU03763": {
+        "text": "告诉我知道农历的几月几号是元宵节啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "元宵节"
+        }
+    },
+    "NLU03779": {
+        "text": "能否快点查查10月19日是阴历多少",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "10月19日"
+        }
+    },
+    "NLU03784": {
+        "text": "帮我看看明年中秋节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明年中秋节"
+        }
+    },
+    "NLU03807": {
+        "text": "查下劳动节是农历几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "劳动节"
+        }
+    },
+    "NLU03812": {
+        "text": "帮我看看6月19日是农历几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "6月19日"
+        }
+    },
+    "NLU03826": {
+        "text": "清明节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "清明节"
+        }
+    },
+    "NLU03833": {
+        "text": "看眼上个月29号是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "上个月29号"
+        }
+    },
+    "NLU03841": {
+        "text": "今年的诺鲁孜节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的诺鲁孜节"
+        }
+    },
+    "NLU03848": {
+        "text": "周五是中秋吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "周五"
+        }
+    },
+    "NLU03852": {
+        "text": "告诉我昨天是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "昨天"
+        }
+    },
+    "NLU03854": {
+        "text": "星期几是蔵历元旦",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "蔵历元旦"
+        }
+    },
+    "NLU03859": {
+        "text": "现在我要查看阴历9月10是阳历几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历9月10"
+        }
+    },
+    "NLU03872": {
+        "text": "给我查一查今年的国庆节是星期5吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的国庆节"
+        }
+    },
+    "NLU03878": {
+        "text": "农历的哪天是新米节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "新米节"
+        }
+    },
+    "NLU03879": {
+        "text": "立即回答我星期二是几号呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期二"
+        }
+    },
+    "NLU03883": {
+        "text": "周几是开斋节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "开斋节"
+        }
+    },
+    "NLU03884": {
+        "text": "搜索下中国的阴历2月初2是什么节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历2月初2"
+        }
+    },
+    "NLU03887": {
+        "text": "后天是礼拜几了",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "后天"
+        }
+    },
+    "NLU03888": {
+        "text": "今年的敬老节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的敬老节"
+        }
+    },
+    "NLU03901": {
+        "text": "查下查下中国传统节日元宵节是多少号啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "元宵节"
+        }
+    },
+    "NLU03902": {
+        "text": "快速查询几月几号是劳动节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "劳动节"
+        }
+    },
+    "NLU03907": {
+        "text": "立刻请你告诉我知道中秋节到底是不是星期二",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中秋节"
+        }
+    },
+    "NLU03915": {
+        "text": "端午节是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "端午节"
+        }
+    },
+    "NLU03918": {
+        "text": "我很想知道中秋节是农历几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中秋节"
+        }
+    },
+    "NLU03930": {
+        "text": "查下看看我们中国传统节日元宵节是农历多少号啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "元宵节"
+        }
+    },
+    "NLU03933": {
+        "text": "平安夜那天是农历几月份",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "平安夜"
+        }
+    },
+    "NLU03942": {
+        "text": "5月的几号是母亲节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "母亲节"
+        }
+    },
+    "NLU03981": {
+        "text": "教师节是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "教师节"
+        }
+    },
+    "NLU03986": {
+        "text": "春节是在哪个月",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "春节"
+        }
+    },
+    "NLU03995": {
+        "text": "马上查查星期四是农历多少号呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期四"
+        }
+    },
+    "NLU04001": {
+        "text": "什么时候是仲夏节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "仲夏节"
+        }
+    },
+    "NLU04042": {
+        "text": "10天后是几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "10天后"
+        }
+    },
+    "NLU04052": {
+        "text": "马上查查1月1日是阴历多少",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "1月1日"
+        }
+    },
+    "NLU04056": {
+        "text": "请帮我运算一下十五号是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "十五号"
+        }
+    },
+    "NLU04057": {
+        "text": "惊蛰是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "惊蛰"
+        }
+    },
+    "NLU04059": {
+        "text": "查询一下今天是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU04065": {
+        "text": "去年的5月1号是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "去年的5月1号"
+        }
+    },
+    "NLU04072": {
+        "text": "查下日历昨天是几号呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "昨天"
+        }
+    },
+    "NLU04087": {
+        "text": "感恩节是11月的第四个星期四吗？",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "感恩节"
+        }
+    },
+    "NLU04091": {
+        "text": "现在看一下日历，星期几是国庆节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "国庆节"
+        }
+    },
+    "NLU04100": {
+        "text": "开天节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "开天节"
+        }
+    },
+    "NLU04107": {
+        "text": "教师节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "教师节"
+        }
+    },
+    "NLU04129": {
+        "text": "青年节是星期几啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "青年节"
+        }
+    },
+    "NLU04144": {
+        "text": "农历2月23是清明节吗？",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历2月23"
+        }
+    },
+    "NLU04158": {
+        "text": "元宵节是几月几日？",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "元宵节"
+        }
+    },
+    "NLU04162": {
+        "text": "寒食节是每年的几月几号？",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "寒食节"
+        }
+    },
+    "NLU04165": {
+        "text": "快查看一下8月7日是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "8月7日"
+        }
+    },
+    "NLU04167": {
+        "text": "农历的祖鲁节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "祖鲁节"
+        }
+    },
+    "NLU04173": {
+        "text": "快点看看中国传统节日清明节是哪一天啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "清明节"
+        }
+    },
+    "NLU04180": {
+        "text": "明天的农历是多少啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU04187": {
+        "text": "西班牙的西红柿大战是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "西红柿大战"
+        }
+    },
+    "NLU04188": {
+        "text": "赶紧帮我看看后天是个什么节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "后天"
+        }
+    },
+    "NLU04202": {
+        "text": "查下日历今天是礼拜几呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU04209": {
+        "text": "12月27是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "12月27"
+        }
+    },
+    "NLU04211": {
+        "text": "我要查看农历5月5是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历5月5"
+        }
+    },
+    "NLU04212": {
+        "text": "夏至出现在什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "夏至"
+        }
+    },
+    "NLU04240": {
+        "text": "帮我查一下这周日是7月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "这周日"
+        }
+    },
+    "NLU04256": {
+        "text": "查下日历大后天应该是多少号啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大后天"
+        }
+    },
+    "NLU04262": {
+        "text": "几月几号是南瓜节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "南瓜节"
+        }
+    },
+    "NLU04268": {
+        "text": "周几是国庆节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "国庆节"
+        }
+    },
+    "NLU04269": {
+        "text": "告诉他中国的阴历8月15是什么节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历8月15"
+        }
+    },
+    "NLU04298": {
+        "text": "查查后天是礼拜几了",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "后天"
+        }
+    },
+    "NLU04303": {
+        "text": "儿童节是农历的什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "儿童节"
+        }
+    },
+    "NLU04308": {
+        "text": "赶紧查询一下几月几号是农历的11月9日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "11月9日"
+        }
+    },
+    "NLU04320": {
+        "text": "三月节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "三月节"
+        }
+    },
+    "NLU04322": {
+        "text": "今年立夏是啥时候呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年立夏"
+        }
+    },
+    "NLU04323": {
+        "text": "给他查下八月一日和六月一日哪个是儿童节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "八月一日",
+                "六月一日"
+            ]
+        }
+    },
+    "NLU04325": {
+        "text": "帮我查查中秋节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中秋节"
+        }
+    },
+    "NLU04327": {
+        "text": "10分钟后告诉我什么节日是11月11日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "11月11日"
+        }
+    },
+    "NLU04355": {
+        "text": "快点告诉我大后天究竟是礼拜几呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大后天"
+        }
+    },
+    "NLU04364": {
+        "text": "今年的小满是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的小满"
+        }
+    },
+    "NLU04376": {
+        "text": "农历3月12和农历3月13哪天是5月2号呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "农历3月12",
+                "农历3月13"
+            ]
+        }
+    },
+    "NLU04382": {
+        "text": "蚂拐节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "蚂拐节"
+        }
+    },
+    "NLU04384": {
+        "text": "国庆节的农历是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "国庆节"
+        }
+    },
+    "NLU04394": {
+        "text": "查一下2019年清明节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "2019年清明节"
+        }
+    },
+    "NLU04404": {
+        "text": "今年的新米节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的新米节"
+        }
+    },
+    "NLU04413": {
+        "text": "告诉我前天的农历是多少号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "前天"
+        }
+    },
+    "NLU04420": {
+        "text": "今年什么时候是龙船节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "龙船节"
+        }
+    },
+    "NLU04429": {
+        "text": "大后天应该是多少号啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大后天"
+        }
+    },
+    "NLU04444": {
+        "text": "能查询哪个节日是农历的正月十五吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "正月十五"
+        }
+    },
+    "NLU04445": {
+        "text": "查查大前天是什么节日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大前天"
+        }
+    },
+    "NLU04471": {
+        "text": "去年的端午节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "去年的端午节"
+        }
+    },
+    "NLU04472": {
+        "text": "大后天究竟是礼拜几呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大后天"
+        }
+    },
+    "NLU04485": {
+        "text": "今年的10月1日是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的10月1日"
+        }
+    },
+    "NLU04487": {
+        "text": "12月29号是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "12月29号"
+        }
+    },
+    "NLU04489": {
+        "text": "帮我搜搜去年的中秋节是8月1日吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "去年的中秋节"
+        }
+    },
+    "NLU04500": {
+        "text": "天穿节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "天穿节"
+        }
+    },
+    "NLU04504": {
+        "text": "查找7月1日是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "7月1日"
+        }
+    },
+    "NLU04508": {
+        "text": "马上查查中国的阴历5月2日是星期几呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历5月2日"
+        }
+    },
+    "NLU04510": {
+        "text": "看一下这周四是不是农历初八",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "这周四"
+        }
+    },
+    "NLU04516": {
+        "text": "5月18号是农历的几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "5月18号"
+        }
+    },
+    "NLU04524": {
+        "text": "星期几是虫王节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "虫王节"
+        }
+    },
+    "NLU04558": {
+        "text": "5月1日是劳动节还是儿童节啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "5月1日"
+        }
+    },
+    "NLU04566": {
+        "text": "几月几号是萝卜节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "萝卜节"
+        }
+    },
+    "NLU04572": {
+        "text": "圣纪节的农历是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "圣纪节"
+        }
+    },
+    "NLU04575": {
+        "text": "儿童节是周几呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "儿童节"
+        }
+    },
+    "NLU04577": {
+        "text": "星期几是愚人节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "愚人节"
+        }
+    },
+    "NLU04587": {
+        "text": "帮我查查国庆节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "国庆节"
+        }
+    },
+    "NLU04608": {
+        "text": "农历的五月初五和农历五月初六哪天是端午节呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "农历的五月初五",
+                "农历五月初六"
+            ]
+        }
+    },
+    "NLU04610": {
+        "text": "元旦是几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "元旦"
+        }
+    },
+    "NLU04611": {
+        "text": "我想要知道礼拜几是7月的12日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "7月的12日"
+        }
+    },
+    "NLU04620": {
+        "text": "我真的好想知道劳动节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "劳动节"
+        }
+    },
+    "NLU04634": {
+        "text": "七夕节是农历几月几号？",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "七夕节"
+        }
+    },
+    "NLU04635": {
+        "text": "请帮我查询劳动节是农历多少呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "劳动节"
+        }
+    },
+    "NLU04640": {
+        "text": "知道大前天是农历多少吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大前天"
+        }
+    },
+    "NLU04641": {
+        "text": "农历的5月16是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "5月16"
+        }
+    },
+    "NLU04654": {
+        "text": "请告诉我8月1号是农历的几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "8月1号"
+        }
+    },
+    "NLU04678": {
+        "text": "上元节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "上元节"
+        }
+    },
+    "NLU04681": {
+        "text": "告诉我星期五是什么节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期五"
+        }
+    },
+    "NLU04683": {
+        "text": "15号出账单，那天礼拜几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "15号"
+        }
+    },
+    "NLU04686": {
+        "text": "查查今天的农历是几月初几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU04710": {
+        "text": "农历的清明节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "清明节"
+        }
+    },
+    "NLU04734": {
+        "text": "愚人节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "愚人节"
+        }
+    },
+    "NLU04753": {
+        "text": "现在告诉我10月10日是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "10月10日"
+        }
+    },
+    "NLU04787": {
+        "text": "命令你立即查查昨天到底是礼拜几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "昨天"
+        }
+    },
+    "NLU04797": {
+        "text": "立即说说中国的阴历9月20是哪一天呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历9月20"
+        }
+    },
+    "NLU04805": {
+        "text": "明年情人节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明年情人节"
+        }
+    },
+    "NLU04824": {
+        "text": "农历的什么时候是荔枝节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "荔枝节"
+        }
+    },
+    "NLU04835": {
+        "text": "我想知道后天的农历是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "后天"
+        }
+    },
+    "NLU04837": {
+        "text": "是否可以看一看星期几是农历的5月初9",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "5月初9"
+        }
+    },
+    "NLU04839": {
+        "text": "快点打开日历查看一下农历的蜡月十五和农历蜡月十六哪天是星期一啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "农历的蜡月十五",
+                "农历蜡月十六"
+            ]
+        }
+    },
+    "NLU04845": {
+        "text": "查下日历大后天是个什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大后天"
+        }
+    },
+    "NLU04846": {
+        "text": "赶紧告诉我星期几是农历的8月初2",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "8月初2"
+        }
+    },
+    "NLU04850": {
+        "text": "4月9号是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "4月9号"
+        }
+    },
+    "NLU04859": {
+        "text": "请问国庆节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "国庆节"
+        }
+    },
+    "NLU04861": {
+        "text": "冬至是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "冬至"
+        }
+    },
+    "NLU04886": {
+        "text": "你查询一下农历12月1是礼拜几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历12月1"
+        }
+    },
+    "NLU04891": {
+        "text": "麻烦给我查查农历8月15是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历8月15"
+        }
+    },
+    "NLU04914": {
+        "text": "南瓜节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "南瓜节"
+        }
+    },
+    "NLU04920": {
+        "text": "马上帮我查查昨天是几号呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "昨天"
+        }
+    },
+    "NLU04922": {
+        "text": "快速的告诉我大后天是农历几月初几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大后天"
+        }
+    },
+    "NLU04931": {
+        "text": "查询一下8月19日是农历7月初4还是7月初5呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "8月19日"
+        }
+    },
+    "NLU04941": {
+        "text": "七夕节是下个月的星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "七夕节"
+        }
+    },
+    "NLU04948": {
+        "text": "中元节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中元节"
+        }
+    },
+    "NLU04958": {
+        "text": "立刻报一下中国的阴历正月15是什么节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历正月15"
+        }
+    },
+    "NLU04965": {
+        "text": "立刻查查4月1日是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "4月1日"
+        }
+    },
+    "NLU04974": {
+        "text": "快点查一下星期五是什么节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期五"
+        }
+    },
+    "NLU04975": {
+        "text": "今年的哪天是建军节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "建军节"
+        }
+    },
+    "NLU05001": {
+        "text": "2月是农历几月",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "2月"
+        }
+    },
+    "NLU05002": {
+        "text": "中元节是这个月的周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中元节"
+        }
+    },
+    "NLU05045": {
+        "text": "能否查询5月10日和5月9日哪天是星期三",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "5月10日",
+                "5月9日"
+            ]
+        }
+    },
+    "NLU05048": {
+        "text": "我就想查询一下周日是建军节吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "周日"
+        }
+    },
+    "NLU05051": {
+        "text": "父亲节在今年的几月几号呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "父亲节"
+        }
+    },
+    "NLU05076": {
+        "text": "去年什么时候是感恩节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "感恩节"
+        }
+    },
+    "NLU05099": {
+        "text": "农历的五月初五是端午节还是重阳节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "五月初五"
+        }
+    },
+    "NLU05103": {
+        "text": "请帮我看看下星期三是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "下星期三"
+        }
+    },
+    "NLU05109": {
+        "text": "告诉我明天的日历表是多少号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU05110": {
+        "text": "上周4是多少号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "上周4"
+        }
+    },
+    "NLU05128": {
+        "text": "查查大后天是农历几月初几呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大后天"
+        }
+    },
+    "NLU05138": {
+        "text": "搜索一下2019年的端午节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "2019年的端午节"
+        }
+    },
+    "NLU05141": {
+        "text": "今年的元旦是农历的什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的元旦"
+        }
+    },
+    "NLU05143": {
+        "text": "今年的立夏是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的立夏"
+        }
+    },
+    "NLU05148": {
+        "text": "说一说几月几号是农历的11月5日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历的11月5日"
+        }
+    },
+    "NLU05151": {
+        "text": "星期几是宰牲节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "宰牲节"
+        }
+    },
+    "NLU05160": {
+        "text": "下周二是几月几号呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "下周二"
+        }
+    },
+    "NLU05165": {
+        "text": "去年的泼水节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "去年的泼水节"
+        }
+    },
+    "NLU05182": {
+        "text": "我需要知道几月几号是农历的10月初九",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "10月初九"
+        }
+    },
+    "NLU05183": {
+        "text": "快看一看建军节是多少号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "建军节"
+        }
+    },
+    "NLU05195": {
+        "text": "可以算一下10号我生日是周几吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "10号"
+        }
+    },
+    "NLU05200": {
+        "text": "少女节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "少女节"
+        }
+    },
+    "NLU05220": {
+        "text": "那达慕是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "那达慕"
+        }
+    },
+    "NLU05229": {
+        "text": "五月一日和六月一日哪个是儿童节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "五月一日",
+                "六月一日"
+            ]
+        }
+    },
+    "NLU05235": {
+        "text": "我想知道护士节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "护士节"
+        }
+    },
+    "NLU05248": {
+        "text": "查询中国的阴历七月初七是什么节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历七月初七"
+        }
+    },
+    "NLU05250": {
+        "text": "哪天是中和节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中和节"
+        }
+    },
+    "NLU05254": {
+        "text": "农历的哪天是关门节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "关门节"
+        }
+    },
+    "NLU05258": {
+        "text": "今年的七夕是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的七夕"
+        }
+    },
+    "NLU05259": {
+        "text": "帮我查一下今年的圣诞节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的圣诞节"
+        }
+    },
+    "NLU05266": {
+        "text": "帮我查看一下大后天是农历2月初几啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大后天"
+        }
+    },
+    "NLU05269": {
+        "text": "告诉我今天是礼拜几呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU05270": {
+        "text": "今年的感恩节是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的感恩节"
+        }
+    },
+    "NLU05276": {
+        "text": "能不能告诉我五月十五号是农历多少",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "五月十五号"
+        }
+    },
+    "NLU05283": {
+        "text": "7月13号是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "7月13号"
+        }
+    },
+    "NLU05307": {
+        "text": "农历的7月7是什么节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "7月7"
+        }
+    },
+    "NLU05308": {
+        "text": "农历的11月有哪个节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "11月"
+        }
+    },
+    "NLU05321": {
+        "text": "10月1号是什么节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "10月1号"
+        }
+    },
+    "NLU05322": {
+        "text": "腊八节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "腊八节"
+        }
+    },
+    "NLU05323": {
+        "text": "我想看看元宵节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "元宵节"
+        }
+    },
+    "NLU05334": {
+        "text": "加拿大土拨鼠节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "土拨鼠节"
+        }
+    },
+    "NLU05335": {
+        "text": "农历的苗年是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "苗年"
+        }
+    },
+    "NLU05337": {
+        "text": "农历的哪天是蔵历元旦",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "蔵历元旦"
+        }
+    },
+    "NLU05369": {
+        "text": "快查询农历的二月初五和农历三月初六哪天是星期一呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "农历的二月初五",
+                "农历三月初六"
+            ]
+        }
+    },
+    "NLU05372": {
+        "text": "立刻告诉我一下农历的几月几号是春节啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "春节"
+        }
+    },
+    "NLU05374": {
+        "text": "能告诉我正月十五是星期几吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "正月十五"
+        }
+    },
+    "NLU05382": {
+        "text": "11月27号是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "11月27号"
+        }
+    },
+    "NLU05384": {
+        "text": "这个月17号是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "17号"
+        }
+    },
+    "NLU05387": {
+        "text": "去年的今天是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "去年的今天"
+        }
+    },
+    "NLU05388": {
+        "text": "今年的立秋是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的立秋"
+        }
+    },
+    "NLU05398": {
+        "text": "是不是现在就能告诉我农历5月12和农历5月13哪天是7月2号呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "农历5月12",
+                "农历5月13"
+            ]
+        }
+    },
+    "NLU05407": {
+        "text": "开斋节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "开斋节"
+        }
+    },
+    "NLU05418": {
+        "text": "韩国的光复节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "光复节"
+        }
+    },
+    "NLU05431": {
+        "text": "看一看清明节农历多少",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "清明节"
+        }
+    },
+    "NLU05435": {
+        "text": "几月几号是沐浴节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "沐浴节"
+        }
+    },
+    "NLU05437": {
+        "text": "我想知道7月1号是农历几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "7月1号"
+        }
+    },
+    "NLU05458": {
+        "text": "快查查几月几号是农历的11月10",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "11月10"
+        }
+    },
+    "NLU05459": {
+        "text": "星期几是沐浴节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "沐浴节"
+        }
+    },
+    "NLU05467": {
+        "text": "听说明天妹妹过生日，农历是初几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU05471": {
+        "text": "星期几是万圣节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "万圣节"
+        }
+    },
+    "NLU05473": {
+        "text": "请问本周末是多少号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "本周末"
+        }
+    },
+    "NLU05478": {
+        "text": "帮我查一下9月10号是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "9月10号"
+        }
+    },
+    "NLU05503": {
+        "text": "马上查查星期六是哪天啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期六"
+        }
+    },
+    "NLU05509": {
+        "text": "农历的什么时候是重阳节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "重阳节"
+        }
+    },
+    "NLU05512": {
+        "text": "今年的鬼节是农历的什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的鬼节"
+        }
+    },
+    "NLU05529": {
+        "text": "星期几是花山节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "花山节"
+        }
+    },
+    "NLU05532": {
+        "text": "下元节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "下元节"
+        }
+    },
+    "NLU05535": {
+        "text": "正月十五是不是元宵节啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "正月十五"
+        }
+    },
+    "NLU05540": {
+        "text": "查一下9月8号是农历几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "9月8号"
+        }
+    },
+    "NLU05545": {
+        "text": "今年的圣纪节是哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的圣纪节"
+        }
+    },
+    "NLU05556": {
+        "text": "是否可以问你一下中国的阴历3月21日是星期几呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历3月21日"
+        }
+    },
+    "NLU05569": {
+        "text": "阔什节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阔什节"
+        }
+    },
+    "NLU05572": {
+        "text": "葫芦节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "葫芦节"
+        }
+    },
+    "NLU05577": {
+        "text": "看一下星期一是哪个节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期一"
+        }
+    },
+    "NLU05581": {
+        "text": "农历的哪天是护士节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "护士节"
+        }
+    },
+    "NLU05585": {
+        "text": "2021年六月一日是周几呢？",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "2021年六月一日"
+        }
+    },
+    "NLU05599": {
+        "text": "我想知道清明节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "清明节"
+        }
+    },
+    "NLU05604": {
+        "text": "1分钟后告诉我中国的阴历5月17是哪一天呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历5月17"
+        }
+    },
+    "NLU05636": {
+        "text": "告诉你我想知道几月几号是这个星期四",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期四"
+        }
+    },
+    "NLU05650": {
+        "text": "几月几号是驴节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "驴节"
+        }
+    },
+    "NLU05660": {
+        "text": "今年的5月18号是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的5月18号"
+        }
+    },
+    "NLU05663": {
+        "text": "农历10月22是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "10月22"
+        }
+    },
+    "NLU05666": {
+        "text": "给我查查农历8月初4是哪天呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历8月初4"
+        }
+    },
+    "NLU05668": {
+        "text": "今年的陀螺节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的陀螺节"
+        }
+    },
+    "NLU05673": {
+        "text": "想知道春节是农历几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "春节"
+        }
+    },
+    "NLU05702": {
+        "text": "昨天是农历几日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "昨天"
+        }
+    },
+    "NLU05714": {
+        "text": "麻烦问一下母亲节是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "母亲节"
+        }
+    },
+    "NLU05715": {
+        "text": "今年的植树节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的植树节"
+        }
+    },
+    "NLU05754": {
+        "text": "今年的泼水节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的泼水节"
+        }
+    },
+    "NLU05757": {
+        "text": "星期几是圣瓦伦丁节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "圣瓦伦丁节"
+        }
+    },
+    "NLU05759": {
+        "text": "今天是周四是几号呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU05770": {
+        "text": "马奶节是哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "马奶节"
+        }
+    },
+    "NLU05773": {
+        "text": "农历的祖鲁节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "祖鲁节"
+        }
+    },
+    "NLU05777": {
+        "text": "赶紧用日历查看农历的八月十五是中秋节还是重阳节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历的八月十五"
+        }
+    },
+    "NLU05785": {
+        "text": "能不能帮我查询阴历的5月初3是礼拜5还是礼拜4",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历的5月初3"
+        }
+    },
+    "NLU05791": {
+        "text": "告诉我知道前天是哪个节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "前天"
+        }
+    },
+    "NLU05797": {
+        "text": "快告诉我答案几月几号是春节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "春节"
+        }
+    },
+    "NLU05809": {
+        "text": "马上搜一下8月15日是礼拜几啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "8月15日"
+        }
+    },
+    "NLU05811": {
+        "text": "下元节是几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "下元节"
+        }
+    },
+    "NLU05815": {
+        "text": "农历3月初3是哪天啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历3月初3"
+        }
+    },
+    "NLU05818": {
+        "text": "查一下今年母亲节是哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年母亲节"
+        }
+    },
+    "NLU05821": {
+        "text": "帮我查一下荔枝节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "荔枝节"
+        }
+    },
+    "NLU05822": {
+        "text": "星期几是古尔邦节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "古尔邦节"
+        }
+    },
+    "NLU05829": {
+        "text": "赶快查下星期三是哪个节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期三"
+        }
+    },
+    "NLU05832": {
+        "text": "马上看看星期3是农历多少号呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期3"
+        }
+    },
+    "NLU05847": {
+        "text": "忏悔节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "忏悔节"
+        }
+    },
+    "NLU05857": {
+        "text": "可以给我查一查今年的春节是1月1日吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的春节"
+        }
+    },
+    "NLU05864": {
+        "text": "查查前天是礼拜几啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "前天"
+        }
+    },
+    "NLU05865": {
+        "text": "我想了解一下春分是啥时候的",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "春分"
+        }
+    },
+    "NLU05869": {
+        "text": "今年的开斋节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的开斋节"
+        }
+    },
+    "NLU05872": {
+        "text": "今年的几月几号是月亮节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "月亮节"
+        }
+    },
+    "NLU05905": {
+        "text": "查一下2015年的世界卫生日是在星期几。",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "2015年的世界卫生日"
+        }
+    },
+    "NLU05952": {
+        "text": "在日历里查下2月22日和2月24日哪天是农历正月初6呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "2月22日",
+                "2月24日"
+            ]
+        }
+    },
+    "NLU05953": {
+        "text": "过完元宵节是什么节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "元宵节"
+        }
+    },
+    "NLU05959": {
+        "text": "葫芦节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "葫芦节"
+        }
+    },
+    "NLU05980": {
+        "text": "我想知道大前天是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大前天"
+        }
+    },
+    "NLU05993": {
+        "text": "小寒是农历的什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "小寒"
+        }
+    },
+    "NLU06007": {
+        "text": "祭谷神节是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "祭谷神节"
+        }
+    },
+    "NLU06016": {
+        "text": "清明节是周几？",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "清明节"
+        }
+    },
+    "NLU06036": {
+        "text": "哪天是祭敖包节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "祭敖包节"
+        }
+    },
+    "NLU06049": {
+        "text": "几月几号是植树节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "植树节"
+        }
+    },
+    "NLU06058": {
+        "text": "给我看一下万圣节是几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "万圣节"
+        }
+    },
+    "NLU06069": {
+        "text": "查看一下昨天应该是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "昨天"
+        }
+    },
+    "NLU06087": {
+        "text": "查一下五四青年节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "五四青年节"
+        }
+    },
+    "NLU06090": {
+        "text": "说说中国的阴历2月17日是星期几呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历2月17日"
+        }
+    },
+    "NLU06091": {
+        "text": "帮我搜搜去年的青年节是不是农历8月22日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "去年的青年节"
+        }
+    },
+    "NLU06092": {
+        "text": "今年的几月几号是仲夏节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "仲夏节"
+        }
+    },
+    "NLU06094": {
+        "text": "今年的清明节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的清明节"
+        }
+    },
+    "NLU06107": {
+        "text": "告诉我这个月有哪些节日",
+        "intent": "Calendar-Query",
+        "slots": {}
+    },
+    "NLU06109": {
+        "text": "我想请你帮我查阴历9月11是阳历几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历9月11"
+        }
+    },
+    "NLU06153": {
+        "text": "明天的日历表是多少号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU06157": {
+        "text": "明天是我妈的生日，是农历多少日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU06159": {
+        "text": "马上告诉他今年的阴历9月12日是几月几号啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的阴历9月12日"
+        }
+    },
+    "NLU06160": {
+        "text": "今年的几月几号是宠物节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "宠物节"
+        }
+    },
+    "NLU06163": {
+        "text": "查询去年中国传统节日端午节是星期几啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "端午节"
+        }
+    },
+    "NLU06176": {
+        "text": "青年节是五月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "青年节"
+        }
+    },
+    "NLU06182": {
+        "text": "查一下周三是不是父亲节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "周三"
+        }
+    },
+    "NLU06193": {
+        "text": "大前天是什么节日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大前天"
+        }
+    },
+    "NLU06195": {
+        "text": "昨天是礼拜几来着，忘记了",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "昨天"
+        }
+    },
+    "NLU06198": {
+        "text": "下周一是几号了",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "下周一"
+        }
+    },
+    "NLU06202": {
+        "text": "银行休假日是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "银行休假日"
+        }
+    },
+    "NLU06213": {
+        "text": "帮我看看中国传统节日端午节是农历多少号啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "端午节"
+        }
+    },
+    "NLU06230": {
+        "text": "泰国猴子的自助餐是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {}
+    },
+    "NLU06262": {
+        "text": "上个月的4号是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "上个月的4号"
+        }
+    },
+    "NLU06267": {
+        "text": "麻烦告诉我下月8号是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "8号"
+        }
+    },
+    "NLU06279": {
+        "text": "查一下8月1日是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "8月1日"
+        }
+    },
+    "NLU06281": {
+        "text": "查查后天到底是几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "后天"
+        }
+    },
+    "NLU06283": {
+        "text": "今年的七夕节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的七夕节"
+        }
+    },
+    "NLU06288": {
+        "text": "今年10月1号是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年10月1号"
+        }
+    },
+    "NLU06290": {
+        "text": "麻烦请告诉我知道春节应该是农历多少呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "春节"
+        }
+    },
+    "NLU06293": {
+        "text": "赶快告诉我中国传统节日端午节是多少号啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "端午节"
+        }
+    },
+    "NLU06299": {
+        "text": "六一儿童节在星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "六一儿童节"
+        }
+    },
+    "NLU06311": {
+        "text": "这个月的26号是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "26号"
+        }
+    },
+    "NLU06316": {
+        "text": "植树节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "植树节"
+        }
+    },
+    "NLU06317": {
+        "text": "问问你知道农历7月7是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历7月7"
+        }
+    },
+    "NLU06324": {
+        "text": "请你帮我查查劳动节是不是5月2日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "劳动节"
+        }
+    },
+    "NLU06332": {
+        "text": "星期几是情人节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "情人节"
+        }
+    },
+    "NLU06335": {
+        "text": "天灸日是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "天灸日"
+        }
+    },
+    "NLU06343": {
+        "text": "速度点的查查大后天是个什么节假日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大后天"
+        }
+    },
+    "NLU06358": {
+        "text": "请问冬至是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "冬至"
+        }
+    },
+    "NLU06362": {
+        "text": "帮我查询端午节在星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "端午节"
+        }
+    },
+    "NLU06366": {
+        "text": "农历的哪天是蚂拐节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "蚂拐节"
+        }
+    },
+    "NLU06369": {
+        "text": "能查看一下6月12和7月12都是星期几吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "6月12",
+                "7月12"
+            ]
+        }
+    },
+    "NLU06380": {
+        "text": "语音报一下礼拜几是9月的13日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "13日"
+        }
+    },
+    "NLU06391": {
+        "text": "6月13号是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "6月13号"
+        }
+    },
+    "NLU06393": {
+        "text": "天灸日是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "天灸日"
+        }
+    },
+    "NLU06394": {
+        "text": "我是真的想要知晓2021年的青年节是不是农历8月12啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "2021年的青年节"
+        }
+    },
+    "NLU06399": {
+        "text": "立刻给我搜下中国的阴历12月1日是星期几呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历12月1日"
+        }
+    },
+    "NLU06403": {
+        "text": "告诉我昨天是几号呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "昨天"
+        }
+    },
+    "NLU06405": {
+        "text": "快点说说星期二是几号呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期二"
+        }
+    },
+    "NLU06407": {
+        "text": "现在我想要了解阴历12月11是阳历几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历12月11"
+        }
+    },
+    "NLU06408": {
+        "text": "今年的仲夏节是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的仲夏节"
+        }
+    },
+    "NLU06410": {
+        "text": "秋分具体是哪一天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "秋分"
+        }
+    },
+    "NLU06411": {
+        "text": "今年的冬至是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的冬至"
+        }
+    },
+    "NLU06447": {
+        "text": "能告诉我明天是端午节吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU06455": {
+        "text": "我想查下个月的二号是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "下个月的二号"
+        }
+    },
+    "NLU06460": {
+        "text": "帮我看看哪个节日是农历的九月初九啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "九月初九"
+        }
+    },
+    "NLU06461": {
+        "text": "能不能请你帮我查农历7月初1是哪天啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历7月初1"
+        }
+    },
+    "NLU06477": {
+        "text": "打开日历查看查看6月1日是青年节还是儿童节啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "6月1日"
+        }
+    },
+    "NLU06488": {
+        "text": "我想知道明天的农历是多少啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU06495": {
+        "text": "看看明年的元旦是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明年的元旦"
+        }
+    },
+    "NLU06513": {
+        "text": "星期五是植树节吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期五"
+        }
+    },
+    "NLU06517": {
+        "text": "查一查中国的阴历7月初7是什么节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历7月初7"
+        }
+    },
+    "NLU06526": {
+        "text": "请你告诉我几月几号是国庆节呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "国庆节"
+        }
+    },
+    "NLU06544": {
+        "text": "5分钟后帮我查询中国的阴历2月初8是昨天吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历2月初8"
+        }
+    },
+    "NLU06557": {
+        "text": "大前天是农历多少呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大前天"
+        }
+    },
+    "NLU06559": {
+        "text": "6月22号时候星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "6月22号"
+        }
+    },
+    "NLU06593": {
+        "text": "今天是农历几日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU06608": {
+        "text": "我想要知晓2021年的建军节是农历几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "2021年的建军节"
+        }
+    },
+    "NLU06609": {
+        "text": "请看一下星期5是哪天啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期5"
+        }
+    },
+    "NLU06616": {
+        "text": "周几是圣瓦伦丁节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "圣瓦伦丁节"
+        }
+    },
+    "NLU06620": {
+        "text": "情人节是哪一天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "情人节"
+        }
+    },
+    "NLU06630": {
+        "text": "请告诉我今年辛亥革命纪念日是星期几？",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年辛亥革命纪念日"
+        }
+    },
+    "NLU06632": {
+        "text": "下周四是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "下周四"
+        }
+    },
+    "NLU06638": {
+        "text": "傣族的泼水节是哪一天呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "泼水节"
+        }
+    },
+    "NLU06653": {
+        "text": "要过什么节日了下周三",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "下周三"
+        }
+    },
+    "NLU06656": {
+        "text": "建党节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "建党节"
+        }
+    },
+    "NLU06662": {
+        "text": "去年元旦是农历的什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "去年元旦"
+        }
+    },
+    "NLU06678": {
+        "text": "农历的什么时候是复活节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "复活节"
+        }
+    },
+    "NLU06689": {
+        "text": "几月几号是酥油花灯节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "酥油花灯节"
+        }
+    },
+    "NLU06699": {
+        "text": "立刻马上查查星期二是几号呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期二"
+        }
+    },
+    "NLU06704": {
+        "text": "查查今天是哪个节假日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU06727": {
+        "text": "我国传统节日清明节是哪一天啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "清明节"
+        }
+    },
+    "NLU06753": {
+        "text": "皮卡丘节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "皮卡丘节"
+        }
+    },
+    "NLU06766": {
+        "text": "明年的母亲节是几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明年的母亲节"
+        }
+    },
+    "NLU06773": {
+        "text": "哪号是农历初五",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历初五"
+        }
+    },
+    "NLU06790": {
+        "text": "语音播报下星期几是圣诞节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "圣诞节"
+        }
+    },
+    "NLU06791": {
+        "text": "我需要知道星期一是哪个节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期一"
+        }
+    },
+    "NLU06805": {
+        "text": "10月1日是阴历多少",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "10月1日"
+        }
+    },
+    "NLU06810": {
+        "text": "下周二是重阳节吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "下周二"
+        }
+    },
+    "NLU06819": {
+        "text": "我十分想知道星期几是农历的4月初19",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "4月初19"
+        }
+    },
+    "NLU06827": {
+        "text": "赛船节是今年的几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "赛船节"
+        }
+    },
+    "NLU06828": {
+        "text": "美国的双胞胎节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "双胞胎节"
+        }
+    },
+    "NLU06831": {
+        "text": "今天是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU06832": {
+        "text": "植树节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "植树节"
+        }
+    },
+    "NLU06837": {
+        "text": "10月8号是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "10月8号"
+        }
+    },
+    "NLU06845": {
+        "text": "中元节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中元节"
+        }
+    },
+    "NLU06847": {
+        "text": "月亮节的农历是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "月亮节"
+        }
+    },
+    "NLU06861": {
+        "text": "给我查询一下阴历9月15是阳历几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历9月15"
+        }
+    },
+    "NLU06864": {
+        "text": "祭谷神节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "祭谷神节"
+        }
+    },
+    "NLU06866": {
+        "text": "今年的元宵节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的元宵节"
+        }
+    },
+    "NLU06874": {
+        "text": "农历的天穿节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "天穿节"
+        }
+    },
+    "NLU06894": {
+        "text": "可不可以帮我查下我今年的生日是几号的吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的生日"
+        }
+    },
+    "NLU06897": {
+        "text": "今天是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU06900": {
+        "text": "农历的什么时候是七夕节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "七夕节"
+        }
+    },
+    "NLU06911": {
+        "text": "查下日历今天的日期是多少",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU06916": {
+        "text": "4月8是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "4月8"
+        }
+    },
+    "NLU06917": {
+        "text": "墨西哥宪法日是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "墨西哥宪法日"
+        }
+    },
+    "NLU06920": {
+        "text": "星期几是美国的大蒜节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大蒜节"
+        }
+    },
+    "NLU06923": {
+        "text": "3月2日是星期几？",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "3月2日"
+        }
+    },
+    "NLU06931": {
+        "text": "今年的节礼日是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的节礼日"
+        }
+    },
+    "NLU06933": {
+        "text": "劳动节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "劳动节"
+        }
+    },
+    "NLU06944": {
+        "text": "有没有什么节日是在八月份",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "八月份"
+        }
+    },
+    "NLU06949": {
+        "text": "我想知道三天后是什么节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "三天后"
+        }
+    },
+    "NLU06961": {
+        "text": "谢谢请你帮我查下星期六是哪天啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期六"
+        }
+    },
+    "NLU07001": {
+        "text": "帮我查查元旦是星期五吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "元旦"
+        }
+    },
+    "NLU07002": {
+        "text": "我想问一下端午节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "端午节"
+        }
+    },
+    "NLU07003": {
+        "text": "赶紧看一看青年节是5月1日吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "青年节"
+        }
+    },
+    "NLU07008": {
+        "text": "今年的桃花节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的桃花节"
+        }
+    },
+    "NLU07013": {
+        "text": "4月9日是农历几月几日？",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "4月9日"
+        }
+    },
+    "NLU07016": {
+        "text": "快点给我说说星期几是感恩节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "感恩节"
+        }
+    },
+    "NLU07021": {
+        "text": "上元节是农历几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "上元节"
+        }
+    },
+    "NLU07023": {
+        "text": "感恩节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "感恩节"
+        }
+    },
+    "NLU07031": {
+        "text": "腊月的几号是腊八节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "腊八节"
+        }
+    },
+    "NLU07036": {
+        "text": "敬老节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "敬老节"
+        }
+    },
+    "NLU07044": {
+        "text": "还有六天放暑假，那天是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "还有六天"
+        }
+    },
+    "NLU07064": {
+        "text": "我想查询圣诞节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "圣诞节"
+        }
+    },
+    "NLU07073": {
+        "text": "帮我看一下明天是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU07079": {
+        "text": "几月几号是苗年",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "苗年"
+        }
+    },
+    "NLU07085": {
+        "text": "看一下下周五是不是农历初五",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "下周五"
+        }
+    },
+    "NLU07089": {
+        "text": "能回答我星期五是哪个节日吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期五"
+        }
+    },
+    "NLU07102": {
+        "text": "查查大前天是农历多少",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大前天"
+        }
+    },
+    "NLU07110": {
+        "text": "建军节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "建军节"
+        }
+    },
+    "NLU07111": {
+        "text": "重阳节是农历多少日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "重阳节"
+        }
+    },
+    "NLU07121": {
+        "text": "今天是礼拜几呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU07124": {
+        "text": "帮我查一下劳动节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "劳动节"
+        }
+    },
+    "NLU07125": {
+        "text": "成人节是农历的什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "成人节"
+        }
+    },
+    "NLU07135": {
+        "text": "明年的儿童节是几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明年的儿童节"
+        }
+    },
+    "NLU07141": {
+        "text": "现在立刻给我报下几月几号是这个星期五",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期五"
+        }
+    },
+    "NLU07151": {
+        "text": "再过十天是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "再过十天"
+        }
+    },
+    "NLU07153": {
+        "text": "帮我查看一下这周六是不是清明节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "这周六"
+        }
+    },
+    "NLU07160": {
+        "text": "德国的狂欢节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "狂欢节"
+        }
+    },
+    "NLU07169": {
+        "text": "命令你马上告诉我后天是个什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "后天"
+        }
+    },
+    "NLU07171": {
+        "text": "今天是农历几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU07176": {
+        "text": "30秒后告诉我哪个节日是农历的正月十五啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "正月十五"
+        }
+    },
+    "NLU07186": {
+        "text": "我想知道中秋节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中秋节"
+        }
+    },
+    "NLU07204": {
+        "text": "麻烦查一下端午节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "端午节"
+        }
+    },
+    "NLU07214": {
+        "text": "几月几号是陀螺节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "陀螺节"
+        }
+    },
+    "NLU07230": {
+        "text": "我想知道今天是哪个节假日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU07236": {
+        "text": "8月12日是星期一还是星期二",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "8月12日"
+        }
+    },
+    "NLU07259": {
+        "text": "我七月初三过生日，具体是几号啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "七月初三"
+        }
+    },
+    "NLU07263": {
+        "text": "大前天是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大前天"
+        }
+    },
+    "NLU07267": {
+        "text": "泰国的猴子自助餐节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "猴子自助餐节"
+        }
+    },
+    "NLU07272": {
+        "text": "好想知道星期六是植树节吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期六"
+        }
+    },
+    "NLU07283": {
+        "text": "说一说星期四是农历多少号呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期四"
+        }
+    },
+    "NLU07284": {
+        "text": "帮我查看一下元宵节是星期几呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "元宵节"
+        }
+    },
+    "NLU07294": {
+        "text": "能快点帮我看看8月15日是礼拜几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "8月15日"
+        }
+    },
+    "NLU07306": {
+        "text": "能告诉我7月7号是星期几吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "7月7号"
+        }
+    },
+    "NLU07320": {
+        "text": "告诉我中国的阴历6月15日是星期几呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历6月15日"
+        }
+    },
+    "NLU07335": {
+        "text": "我想问问你知道农历9月14是礼拜几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历9月14"
+        }
+    },
+    "NLU07353": {
+        "text": "我想知道明年的重阳节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明年的重阳节"
+        }
+    },
+    "NLU07355": {
+        "text": "上周四是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "上周四"
+        }
+    },
+    "NLU07357": {
+        "text": "查下日历明天是什么节假日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU07361": {
+        "text": "能不能告诉我元旦是农历几月几日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "元旦"
+        }
+    },
+    "NLU07362": {
+        "text": "请帮我查农历5月5是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历5月5"
+        }
+    },
+    "NLU07381": {
+        "text": "腊八节是几月几号？",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "腊八节"
+        }
+    },
+    "NLU07383": {
+        "text": "赶紧给我查8月18日是星期几呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "8月18日"
+        }
+    },
+    "NLU07384": {
+        "text": "帮我查一下国庆节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "国庆节"
+        }
+    },
+    "NLU07387": {
+        "text": "今年的什么时候是仲夏节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "仲夏节"
+        }
+    },
+    "NLU07403": {
+        "text": "明天是几月几日？",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU07409": {
+        "text": "中国的阴历1月12日是星期几呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历1月12日"
+        }
+    },
+    "NLU07420": {
+        "text": "农历的什么时候是雪顿节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "雪顿节"
+        }
+    },
+    "NLU07429": {
+        "text": "农历什么时候是三月节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "三月节"
+        }
+    },
+    "NLU07441": {
+        "text": "我想知道几月几号是植树节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "植树节"
+        }
+    },
+    "NLU07455": {
+        "text": "可不可以查下日历今天的农历是几月初几呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU07473": {
+        "text": "帮我查看一下劳动节是不是农历8月12",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "劳动节"
+        }
+    },
+    "NLU07486": {
+        "text": "告诉我答案农历9月19是11月3日还是11月4日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历9月19"
+        }
+    },
+    "NLU07497": {
+        "text": "麻烦告诉我昨天是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "昨天"
+        }
+    },
+    "NLU07502": {
+        "text": "几月几号是三月节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "三月节"
+        }
+    },
+    "NLU07505": {
+        "text": "几月几号是寒食节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "寒食节"
+        }
+    },
+    "NLU07530": {
+        "text": "每年的护士节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "护士节"
+        }
+    },
+    "NLU07533": {
+        "text": "8月15是周几呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "8月15"
+        }
+    },
+    "NLU07534": {
+        "text": "赶快帮我看看12月25日是圣诞节还是感恩节啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "12月25日"
+        }
+    },
+    "NLU07539": {
+        "text": "去年的燕子节是周几啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "去年的燕子节"
+        }
+    },
+    "NLU07551": {
+        "text": "查一下今年6月3日是农历几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年6月3日"
+        }
+    },
+    "NLU07556": {
+        "text": "帮我查一下这周六是5月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "这周六"
+        }
+    },
+    "NLU07562": {
+        "text": "告诉我昨天应该是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "昨天"
+        }
+    },
+    "NLU07584": {
+        "text": "可以查查2020年的七夕节是周几吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "2020年的七夕节"
+        }
+    },
+    "NLU07585": {
+        "text": "是不是可以告诉我星期几是元旦啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "元旦"
+        }
+    },
+    "NLU07606": {
+        "text": "快帮我看一下农历的蜡月三十和农历正月三十哪天是春节呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "农历正月三十",
+                "春节",
+                "蜡月三十"
+            ]
+        }
+    },
+    "NLU07640": {
+        "text": "你知道农历11月初13是哪天呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历11月初13"
+        }
+    },
+    "NLU07649": {
+        "text": "我想知道七夕节是农历几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "七夕节"
+        }
+    },
+    "NLU07658": {
+        "text": "农历的什么时候是采花节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "采花节"
+        }
+    },
+    "NLU07659": {
+        "text": "世界和平日是在几月份？",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "世界和平日"
+        }
+    },
+    "NLU07667": {
+        "text": "告诉下我这个月九号是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "这个月九号"
+        }
+    },
+    "NLU07673": {
+        "text": "明天是周几呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU07681": {
+        "text": "今年的摩洛哥新娘节是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的摩洛哥新娘节"
+        }
+    },
+    "NLU07693": {
+        "text": "农历的什么时候是赛船节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "赛船节"
+        }
+    },
+    "NLU07711": {
+        "text": "农历的3月18是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "3月18"
+        }
+    },
+    "NLU07715": {
+        "text": "请告诉我中国的阴历9月初9是什么节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历9月初9"
+        }
+    },
+    "NLU07731": {
+        "text": "马上给我查查星期五是什么节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期五"
+        }
+    },
+    "NLU07749": {
+        "text": "查找星期几是农历的12月初5",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "12月初5"
+        }
+    },
+    "NLU07750": {
+        "text": "告诉我5月20号是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "5月20号"
+        }
+    },
+    "NLU07769": {
+        "text": "意大利的蛇节是哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "蛇节"
+        }
+    },
+    "NLU07778": {
+        "text": "周几是雪顿节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "雪顿节"
+        }
+    },
+    "NLU07784": {
+        "text": "能不能告诉我阴历的几月几号是2月14日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "2月14日"
+        }
+    },
+    "NLU07797": {
+        "text": "帮我看一下星期一是多少号呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期一"
+        }
+    },
+    "NLU07799": {
+        "text": "帮我查看一下青年节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "青年节"
+        }
+    },
+    "NLU07811": {
+        "text": "7月18日是农历6月初1还是6月初2呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "7月18日"
+        }
+    },
+    "NLU07814": {
+        "text": "我十分想知道端午节是不是5月5日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "端午节"
+        }
+    },
+    "NLU07817": {
+        "text": "什么时候是谷雨",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "谷雨"
+        }
+    },
+    "NLU07820": {
+        "text": "查一查国庆节是农历几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "国庆节"
+        }
+    },
+    "NLU07825": {
+        "text": "今年的谷雨是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的谷雨"
+        }
+    },
+    "NLU07832": {
+        "text": "5月1日是农历几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "5月1日"
+        }
+    },
+    "NLU07848": {
+        "text": "星期几是感恩节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "感恩节"
+        }
+    },
+    "NLU07870": {
+        "text": "农历的哪天是太阳节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "太阳节"
+        }
+    },
+    "NLU07875": {
+        "text": "昨天是几号呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "昨天"
+        }
+    },
+    "NLU07886": {
+        "text": "农历的什么时候是虫王节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "虫王节"
+        }
+    },
+    "NLU07898": {
+        "text": "农历的哪天是开门节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "开门节"
+        }
+    },
+    "NLU07901": {
+        "text": "小暑是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "小暑"
+        }
+    },
+    "NLU07902": {
+        "text": "可不可以帮我看看7月12日和7月14日哪天是农历6月初8呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "7月12日",
+                "7月14日",
+                "农历6月初8"
+            ]
+        }
+    },
+    "NLU07907": {
+        "text": "快速告诉我中国传统节日中秋节是多少号啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中秋节"
+        }
+    },
+    "NLU07932": {
+        "text": "马上查下农历的八月十五是端午节还是中秋节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历的八月十五"
+        }
+    },
+    "NLU07936": {
+        "text": "4月1日是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "4月1日"
+        }
+    },
+    "NLU07950": {
+        "text": "几月几号是圣纪节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "圣纪节"
+        }
+    },
+    "NLU07962": {
+        "text": "看一看中国传统节日清明节是多少号呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "清明节"
+        }
+    },
+    "NLU07970": {
+        "text": "现在搜索6月15日是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "6月15日"
+        }
+    },
+    "NLU07982": {
+        "text": "赶快去查查哪个节日是农历的七月初七啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "七月初七"
+        }
+    },
+    "NLU07984": {
+        "text": "几月几号是三朵节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "三朵节"
+        }
+    },
+    "NLU08006": {
+        "text": "5月的第二个周三是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "5月的第二个周三"
+        }
+    },
+    "NLU08010": {
+        "text": "我想知道明天是什么节假日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU08013": {
+        "text": "我想知道后天是礼拜几了",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "后天"
+        }
+    },
+    "NLU08017": {
+        "text": "马上回答我星期四是农历几号呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期四"
+        }
+    },
+    "NLU08036": {
+        "text": "今年星期几是春分",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "春分"
+        }
+    },
+    "NLU08039": {
+        "text": "几月几号是愚人节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "愚人节"
+        }
+    },
+    "NLU08044": {
+        "text": "你快点说说哪个节日是农历的四月初五啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "四月初五"
+        }
+    },
+    "NLU08054": {
+        "text": "农历的哪天是马奶节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "马奶节"
+        }
+    },
+    "NLU08063": {
+        "text": "给我查一下7月7号是农历几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "7月7号"
+        }
+    },
+    "NLU08066": {
+        "text": "我想知道中国的阴历七月初七是什么节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历七月初七"
+        }
+    },
+    "NLU08068": {
+        "text": "中国传统节日端午节是多少号啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "端午节"
+        }
+    },
+    "NLU08069": {
+        "text": "今年的5月1号是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的5月1号"
+        }
+    },
+    "NLU08073": {
+        "text": "马上查询星期二是几号呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期二"
+        }
+    },
+    "NLU08079": {
+        "text": "告诉我10月15日是阴历多少",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "10月15日"
+        }
+    },
+    "NLU08085": {
+        "text": "告诉我下周六是清明节吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "下周六"
+        }
+    },
+    "NLU08091": {
+        "text": "星期几是农历的4月初4",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "4月初4"
+        }
+    },
+    "NLU08095": {
+        "text": "我想知道明年的中秋节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明年的中秋节"
+        }
+    },
+    "NLU08097": {
+        "text": "星期五是什么节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期五"
+        }
+    },
+    "NLU08103": {
+        "text": "教师节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "教师节"
+        }
+    },
+    "NLU08157": {
+        "text": "帮我查看一下八月一日和七月一起都是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "八月一日",
+                "七月"
+            ]
+        }
+    },
+    "NLU08172": {
+        "text": "鬼节是哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "鬼节"
+        }
+    },
+    "NLU08226": {
+        "text": "我想知道明年端午节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明年端午节"
+        }
+    },
+    "NLU08236": {
+        "text": "农历的酥油花灯节是哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "酥油花灯节"
+        }
+    },
+    "NLU08253": {
+        "text": "我要你告诉我答案礼拜几是7月的15日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "15日"
+        }
+    },
+    "NLU08256": {
+        "text": "我想知道昨天的农历究竟是多少",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "昨天"
+        }
+    },
+    "NLU08260": {
+        "text": "查查大后天究竟是礼拜几呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大后天"
+        }
+    },
+    "NLU08290": {
+        "text": "藏历年是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "藏历年"
+        }
+    },
+    "NLU08302": {
+        "text": "帮我查一下这周二是是植树节吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "这周二"
+        }
+    },
+    "NLU08308": {
+        "text": "新米节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "新米节"
+        }
+    },
+    "NLU08322": {
+        "text": "星期几是荔枝节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "荔枝节"
+        }
+    },
+    "NLU08336": {
+        "text": "现在我需要知道劳动节在星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "劳动节"
+        }
+    },
+    "NLU08348": {
+        "text": "今年的中元节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的中元节"
+        }
+    },
+    "NLU08353": {
+        "text": "国庆节是农历几日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "国庆节"
+        }
+    },
+    "NLU08363": {
+        "text": "请你速度告诉我昨天的农历究竟是多少呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "昨天"
+        }
+    },
+    "NLU08368": {
+        "text": "圣帕特里克节是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "圣帕特里克节"
+        }
+    },
+    "NLU08374": {
+        "text": "父亲节一般都是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "父亲节"
+        }
+    },
+    "NLU08380": {
+        "text": "查一下国际消费日是什么时候。",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "国际消费日"
+        }
+    },
+    "NLU08382": {
+        "text": "元宵节是农历几日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "元宵节"
+        }
+    },
+    "NLU08398": {
+        "text": "我要你告诉我农历7月15是礼拜几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历7月15"
+        }
+    },
+    "NLU08400": {
+        "text": "告诉我后天是礼拜几了",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "后天"
+        }
+    },
+    "NLU08403": {
+        "text": "可以让我知道阴历9月14日是阳历几号吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历9月14日"
+        }
+    },
+    "NLU08404": {
+        "text": "麦尔节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "麦尔节"
+        }
+    },
+    "NLU08405": {
+        "text": "请告诉我前天是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "前天"
+        }
+    },
+    "NLU08421": {
+        "text": "九月初九是哪个节日哇",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "九月初九"
+        }
+    },
+    "NLU08425": {
+        "text": "建军节是农历几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "建军节"
+        }
+    },
+    "NLU08432": {
+        "text": "15天前是几月几号？",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "15天前"
+        }
+    },
+    "NLU08438": {
+        "text": "马上告诉我今天的日期是多少",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU08440": {
+        "text": "帮我看一下五月二十三号星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "五月二十三号"
+        }
+    },
+    "NLU08442": {
+        "text": "是不是能够查下日历大前天是几号呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大前天"
+        }
+    },
+    "NLU08458": {
+        "text": "这周三是农历的什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "这周三"
+        }
+    },
+    "NLU08462": {
+        "text": "能帮我看看农历8月15是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历8月15"
+        }
+    },
+    "NLU08481": {
+        "text": "马上该过端午节了吧，那天是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "端午节"
+        }
+    },
+    "NLU08486": {
+        "text": "陇端节是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "陇端节"
+        }
+    },
+    "NLU08501": {
+        "text": "请告诉我端午节是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "端午节"
+        }
+    },
+    "NLU08517": {
+        "text": "农历的12月23是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "12月23"
+        }
+    },
+    "NLU08524": {
+        "text": "今年的妇女节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的妇女节"
+        }
+    },
+    "NLU08525": {
+        "text": "八月一号是农历几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "八月一号"
+        }
+    },
+    "NLU08530": {
+        "text": "农历的白露是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "白露"
+        }
+    },
+    "NLU08542": {
+        "text": "告诉我前天是哪个节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "前天"
+        }
+    },
+    "NLU08543": {
+        "text": "今年几月几号是牛魂节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "牛魂节"
+        }
+    },
+    "NLU08570": {
+        "text": "农历的雨水是什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "雨水"
+        }
+    },
+    "NLU08580": {
+        "text": "农历4月12是6月3日还是6月4日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历4月12"
+        }
+    },
+    "NLU08583": {
+        "text": "星期几是开斋节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "开斋节"
+        }
+    },
+    "NLU08590": {
+        "text": "农历的三朵节是哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "三朵节"
+        }
+    },
+    "NLU08597": {
+        "text": "万圣节是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "万圣节"
+        }
+    },
+    "NLU08602": {
+        "text": "几月几号是月亮节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "月亮节"
+        }
+    },
+    "NLU08606": {
+        "text": "下周三是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "下周三"
+        }
+    },
+    "NLU08614": {
+        "text": "重阳节是在星期二吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "重阳节"
+        }
+    },
+    "NLU08666": {
+        "text": "这个月的29号是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "这个月的29号"
+        }
+    },
+    "NLU08668": {
+        "text": "我想知道植树节在星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "植树节"
+        }
+    },
+    "NLU08669": {
+        "text": "3月18号是农历几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "3月18号"
+        }
+    },
+    "NLU08678": {
+        "text": "我想你让我知道8月20日和8月19日哪天是星期日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": [
+                "8月20日",
+                "8月19日"
+            ]
+        }
+    },
+    "NLU08680": {
+        "text": "帮我查一下5月19日是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "5月19日"
+        }
+    },
+    "NLU08681": {
+        "text": "能否告诉我中国传统节日端午节是哪一天啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "端午节"
+        }
+    },
+    "NLU08700": {
+        "text": "3天后是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "3天后"
+        }
+    },
+    "NLU08708": {
+        "text": "父亲节是六月啥时候呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "父亲节"
+        }
+    },
+    "NLU08715": {
+        "text": "帮我查看明天是几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU08719": {
+        "text": "查下日历前天是礼拜几呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "前天"
+        }
+    },
+    "NLU08726": {
+        "text": "请告诉下我星期六是农历几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期六"
+        }
+    },
+    "NLU08729": {
+        "text": "这个月的7号是农历多少",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "这个月的7号"
+        }
+    },
+    "NLU08737": {
+        "text": "我想知道后天是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "后天"
+        }
+    },
+    "NLU08738": {
+        "text": "上周三是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "上周三"
+        }
+    },
+    "NLU08743": {
+        "text": "赶紧告诉我星期二是几月几号呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期二"
+        }
+    },
+    "NLU08748": {
+        "text": "星期几是添仓节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "添仓节"
+        }
+    },
+    "NLU08759": {
+        "text": "给我查询星期六是哪天啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "星期六"
+        }
+    },
+    "NLU08761": {
+        "text": "立春是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "立春"
+        }
+    },
+    "NLU08768": {
+        "text": "帮我查一下周六是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "周六"
+        }
+    },
+    "NLU08781": {
+        "text": "查看今年农历二月初九是啥时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年农历二月初九"
+        }
+    },
+    "NLU08789": {
+        "text": "立刻报下几月几号是青年节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "青年节"
+        }
+    },
+    "NLU08792": {
+        "text": "今年重阳节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年重阳节"
+        }
+    },
+    "NLU08798": {
+        "text": "腊八节是几月几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "腊八节"
+        }
+    },
+    "NLU08816": {
+        "text": "快点查查几月几号是这个周三呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "周三"
+        }
+    },
+    "NLU08817": {
+        "text": "小满是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "小满"
+        }
+    },
+    "NLU08825": {
+        "text": "农历什么时候是燕子节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "燕子节"
+        }
+    },
+    "NLU08826": {
+        "text": "昨天的农历究竟是多少",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "昨天"
+        }
+    },
+    "NLU08827": {
+        "text": "现在到明年的春节还要有多少天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明年的春节"
+        }
+    },
+    "NLU08828": {
+        "text": "你说一下这周三是不是植树节",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "这周三"
+        }
+    },
+    "NLU08834": {
+        "text": "我想知道今天的日期是多少",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU08837": {
+        "text": "你看一下今天什么节日，街上人挺多的",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今天"
+        }
+    },
+    "NLU08838": {
+        "text": "请帮我查农历1月19是礼拜几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历1月19"
+        }
+    },
+    "NLU08870": {
+        "text": "帮我查一下5月23日是农历几月几日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "5月23日"
+        }
+    },
+    "NLU08872": {
+        "text": "问你一下中国的阴历正月初一是什么节日呢",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "阴历正月初一"
+        }
+    },
+    "NLU08879": {
+        "text": "请问一下母亲节是周几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "母亲节"
+        }
+    },
+    "NLU08881": {
+        "text": "教师节是农历的什么时候",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "教师节"
+        }
+    },
+    "NLU08895": {
+        "text": "中和节是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "中和节"
+        }
+    },
+    "NLU08907": {
+        "text": "这周的星期三是不是什么节日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "这周的星期三"
+        }
+    },
+    "NLU08917": {
+        "text": "去查一下七夕节是周六吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "七夕节"
+        }
+    },
+    "NLU08919": {
+        "text": "请你立刻告诉我答案4月1日是什么节日",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "4月1日"
+        }
+    },
+    "NLU08930": {
+        "text": "请问能帮我查询一下端午节是不是周一",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "端午节"
+        }
+    },
+    "NLU08955": {
+        "text": "明天是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU08965": {
+        "text": "明年的端午节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明年的端午节"
+        }
+    },
+    "NLU08967": {
+        "text": "现在告诉我几月几号是农历的3月25",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "农历的3月25"
+        }
+    },
+    "NLU08990": {
+        "text": "帮我查下清明节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "清明节"
+        }
+    },
+    "NLU08996": {
+        "text": "查下日历大前天是农历多少",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "大前天"
+        }
+    },
+    "NLU09001": {
+        "text": "3月20是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "3月20"
+        }
+    },
+    "NLU09024": {
+        "text": "查查后天的农历是几号",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "后天"
+        }
+    },
+    "NLU09029": {
+        "text": "4月18号是农历的哪天",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "4月18号"
+        }
+    },
+    "NLU09063": {
+        "text": "马上报一下今年的阴历3月2是不是星期4呀",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "今年的阴历3月2"
+        }
+    },
+    "NLU09068": {
+        "text": "请告诉我答案阴历的几月几号是12月5日啊",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "12月5日"
+        }
+    },
+    "NLU09076": {
+        "text": "明天是什么节假日吗",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "明天"
+        }
+    },
+    "NLU09088": {
+        "text": "光复节是星期几",
+        "intent": "Calendar-Query",
+        "slots": {
+            "datetime_date": "光复节"
+        }
+    }
+}

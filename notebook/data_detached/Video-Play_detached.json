@@ -1,0 +1,7647 @@
+{
+    "NLU00004": {
+        "text": "我想看挑战两把s686打突变团竞的游戏视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "挑战两把s686打突变团竞的游戏视频"
+        }
+    },
+    "NLU00005": {
+        "text": "我想看和平精英上战神必备技巧的游戏视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "和平精英上战神必备技巧的游戏视频"
+        }
+    },
+    "NLU00006": {
+        "text": "2019年古装爱情电视剧小女花不弃的花絮播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "小女花不弃的花絮",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU00009": {
+        "text": "给我转播今天的女子双打乒乓球比赛现场",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "女子双打乒乓球比赛现场"
+        }
+    },
+    "NLU00015": {
+        "text": "给我找一个魔兽世界的比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "魔兽世界的比赛视频"
+        }
+    },
+    "NLU00035": {
+        "text": "我想看2020年谍战电视剧秋蝉第三集花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "秋蝉第三集花絮",
+            "datetime_time": "2020年"
+        }
+    },
+    "NLU00051": {
+        "text": "给我播放雨下解说今年讲解的所有关于植物大战僵尸的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "雨下解说今年讲解的所有关于植物大战僵尸的视频",
+            "datetime_date": "今年"
+        }
+    },
+    "NLU00056": {
+        "text": "很想看日本的电影预告随便播一个给我",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "电影预告",
+            "region": "日本"
+        }
+    },
+    "NLU00058": {
+        "text": "查找国产动漫全职高手第一季",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "全职高手",
+            "region": "国产"
+        }
+    },
+    "NLU00061": {
+        "text": "香港的电视剧鹿鼎记第三集花絮播放出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "鹿鼎记第三集花絮",
+            "region": "香港"
+        }
+    },
+    "NLU00068": {
+        "text": "今日法国有什么新闻看呢",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今日",
+            "region": "法国"
+        }
+    },
+    "NLU00070": {
+        "text": "播一个晚上23点45更新的国产动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_time": "23点45",
+            "region": "国产"
+        }
+    },
+    "NLU00073": {
+        "text": "王力宏2019年演唱会的视频找来看看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王力宏2019年演唱会的视频",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU00076": {
+        "text": "动漫虫师第10集帮我找一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "虫师"
+        }
+    },
+    "NLU00087": {
+        "text": "给我搜索2017年有关于讲解韩信的游戏视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "讲解韩信的游戏视频",
+            "datetime_date": "2017年"
+        }
+    },
+    "NLU00110": {
+        "text": "我想看2021年谍战电视剧风暴舞幕后故事",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "风暴舞幕后故事",
+            "datetime_time": "2021年"
+        }
+    },
+    "NLU00115": {
+        "text": "立即查看综艺向往的生活",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "向往的生活"
+        }
+    },
+    "NLU00135": {
+        "text": "给我来一个韩国女神李知恩iu唱blueming的音乐视频吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "女神李知恩iu唱blueming的音乐视频",
+            "region": "韩国"
+        }
+    },
+    "NLU00151": {
+        "text": "2019年男篮世界杯巴西对希腊的比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "男篮世界杯巴西对希腊的比赛视频",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU00164": {
+        "text": "我想看蜡笔小新第二季的和爸爸单独看家",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "蜡笔小新第二季的和爸爸单独看家"
+        }
+    },
+    "NLU00172": {
+        "text": "章子怡的首部电视剧的幕后花絮放来看一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "章子怡的首部电视剧的幕后花絮"
+        }
+    },
+    "NLU00175": {
+        "text": "能不能给我重新播放2012年伦敦奥运会1500米游泳孙杨击败霍顿夺冠的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "伦敦奥运会1500米游泳孙杨击败霍顿夺冠的视频",
+            "region": "伦敦",
+            "datetime_date": "2012年"
+        }
+    },
+    "NLU00180": {
+        "text": "能不能给我播放一下2021世界女排联赛土耳其对塞尔维亚的比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2021",
+            "name": "世界女排联赛土耳其对塞尔维亚的比赛视频"
+        }
+    },
+    "NLU00199": {
+        "text": "给我找出5月27日17点播出的动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月27日",
+            "datetime_time": "17点"
+        }
+    },
+    "NLU00208": {
+        "text": "播放欧美动漫超人",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "超人",
+            "region": "欧美"
+        }
+    },
+    "NLU00212": {
+        "text": "帮我找一个做肉松饭团的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "做肉松饭团的视频"
+        }
+    },
+    "NLU00235": {
+        "text": "今天播放最火的瘦脸操",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "瘦脸操",
+            "datetime_date": "今天"
+        }
+    },
+    "NLU00240": {
+        "text": "播放5月16号上午10点的英雄联盟竞技赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月16号",
+            "name": "英雄联盟竞技赛视频",
+            "datetime_time": "上午10点"
+        }
+    },
+    "NLU00241": {
+        "text": "动漫铁臂阿童木帮我找一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "铁臂阿童木"
+        }
+    },
+    "NLU00243": {
+        "text": "请给我播放2016年美国电视剧黑吃黑第四季花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "黑吃黑第四季花絮",
+            "datetime_time": "2016年",
+            "region": "美国"
+        }
+    },
+    "NLU00244": {
+        "text": "XYG比赛的视频帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "XYG比赛的视频"
+        }
+    },
+    "NLU00266": {
+        "text": "小猪佩奇是美国的吗播放一下看看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "小猪佩奇",
+            "region": "美国"
+        }
+    },
+    "NLU00279": {
+        "text": "5月27日雨下解说更新了变异食人花吞噬大僵尸的游戏视频吗",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月27日",
+            "name": "变异食人花吞噬大僵尸的游戏视频"
+        }
+    },
+    "NLU00285": {
+        "text": "4月25日讲解的兰陵王怒抓孙悟空的游戏视频可以给我找一下吗",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "4月25日",
+            "name": "4月25日讲解的兰陵王怒抓孙悟空的游戏视频"
+        }
+    },
+    "NLU00289": {
+        "text": "给我放一下易建联的篮球比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "易建联的篮球比赛视频"
+        }
+    },
+    "NLU00296": {
+        "text": "今晚AG超玩会梦泪有没有直播王者荣耀",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "AG超玩会梦泪有没有直播王者荣耀",
+            "datetime_time": "今晚"
+        }
+    },
+    "NLU00307": {
+        "text": "打开腾讯视频把昨天放的奔跑吧兄弟再给我重播一遍",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "昨天",
+            "name": "奔跑吧兄弟"
+        }
+    },
+    "NLU00311": {
+        "text": "给我搜索一下沈腾演的综艺王牌对王牌第6季",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "沈腾演的综艺王牌对王牌"
+        }
+    },
+    "NLU00327": {
+        "text": "放一下灵剑尊的第178 179集我想看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "灵剑尊"
+        }
+    },
+    "NLU00330": {
+        "text": "王者荣耀的比赛视频给我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀"
+        }
+    },
+    "NLU00339": {
+        "text": "我想看2017年的贪吃蛇大作战的游戏解说视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "贪吃蛇大作战的游戏解说视频",
+            "datetime_date": "2017年"
+        }
+    },
+    "NLU00340": {
+        "text": "放一个欧阳娜娜的电视剧幕后花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "欧阳娜娜的电视剧幕后花絮"
+        }
+    },
+    "NLU00347": {
+        "text": "给我回放5月21日的奔跑吧第5季精彩部分",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月21日",
+            "name": "奔跑吧第5季精彩部分"
+        }
+    },
+    "NLU00350": {
+        "text": "给我播放一个法国纪录片脸庞村庄吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "脸庞村庄",
+            "region": "法国"
+        }
+    },
+    "NLU00367": {
+        "text": "放一个听海的翻唱视频看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "听海的翻唱视频"
+        }
+    },
+    "NLU00368": {
+        "text": "动漫黑衣人第一季帮我找一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "黑衣人"
+        }
+    },
+    "NLU00370": {
+        "text": "给我来一个吴倩拍摄我只喜欢你的现场花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "吴倩拍摄我只喜欢你的现场花絮"
+        }
+    },
+    "NLU00381": {
+        "text": "播放刘谦在2018年春晚上魔术表演的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "刘谦在2018年春晚上魔术表演的视频",
+            "datetime_date": "2018年"
+        }
+    },
+    "NLU00391": {
+        "text": "七点我想看一下18年岳云鹏孙越爆笑相声合辑",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_time": "七点",
+            "name": "18年岳云鹏孙越爆笑相声合辑"
+        }
+    },
+    "NLU00393": {
+        "text": "播放欧美动漫精灵鼠小弟",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "精灵鼠小弟",
+            "region": "欧美"
+        }
+    },
+    "NLU00413": {
+        "text": "狐妖小红娘播放动漫类的",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "狐妖小红娘"
+        }
+    },
+    "NLU00415": {
+        "text": "今天更新的地平线4的相关视频放一个哈",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "地平线4",
+            "datetime_date": "今天"
+        }
+    },
+    "NLU00419": {
+        "text": "我想看2021年世界女排联赛中国女排VS韩国女排的比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "世界女排联赛中国女排VS韩国女排的比赛视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU00430": {
+        "text": "找一下每周三，20点更新的国产动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "每周三",
+            "datetime_time": "20点",
+            "region": "国产"
+        }
+    },
+    "NLU00439": {
+        "text": "找出5月27日22点播出的动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月27日",
+            "datetime_time": "22点"
+        }
+    },
+    "NLU00445": {
+        "text": "找陈奕迅2020年在上海的演唱会视频来放",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "陈奕迅2020年在上海的演唱会视频",
+            "region": "上海",
+            "datetime_date": "2020年"
+        }
+    },
+    "NLU00460": {
+        "text": "播一下晚上20点更新的完美的他的介绍视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "完美的他的介绍视频",
+            "datetime_time": "20点"
+        }
+    },
+    "NLU00466": {
+        "text": "lisa跳attention的视频还有吗我有点想看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "lisa跳attention的视频"
+        }
+    },
+    "NLU00469": {
+        "text": "查找国产动漫镇魂街第二季",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "镇魂街",
+            "region": "国产"
+        }
+    },
+    "NLU00482": {
+        "text": "播放欧美动漫正义联盟",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "正义联盟",
+            "region": "欧美"
+        }
+    },
+    "NLU00483": {
+        "text": "给我找一下2021年央视元宵晚会的魔术视频放来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "央视元宵晚会的魔术视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU00502": {
+        "text": "2月4日开始陆续播放的年的味儿还在更新吗我想看看",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2月4日",
+            "name": "年的味儿"
+        }
+    },
+    "NLU00519": {
+        "text": "那个中国电视剧陈情令的花絮播放一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "中国电视剧陈情令的花絮",
+            "region": "中国"
+        }
+    },
+    "NLU00542": {
+        "text": "找一部讲述美食的美国纪录片来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "美食的美国纪录片",
+            "region": "美国"
+        }
+    },
+    "NLU00543": {
+        "text": "我想要看今年刘半仙解说的迷你世界完整版游戏解说视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "刘半仙解说的迷你世界完整版游戏解说视频",
+            "datetime_date": "今年"
+        }
+    },
+    "NLU00560": {
+        "text": "找一个汪峰2019年演唱会的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "汪峰2019年演唱会的视频",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU00562": {
+        "text": "找一下刘涛在2020年跨年晚会上唱歌的视频来看",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2020年",
+            "name": "刘涛在2020年跨年晚会上唱歌的视频"
+        }
+    },
+    "NLU00565": {
+        "text": "帮我找一个做曲奇饼干的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "做曲奇饼干的视频"
+        }
+    },
+    "NLU00575": {
+        "text": "一禅小和尚第4集往后接着播放我要看呢",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "一禅小和尚"
+        }
+    },
+    "NLU00586": {
+        "text": "找出来韩庚跳舞的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "韩庚跳舞的视频"
+        }
+    },
+    "NLU00588": {
+        "text": "1月6日播放的新冠疫苗层出不穷还能找到其原视频吗",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "1月6日",
+            "name": "新冠疫苗层出不穷"
+        }
+    },
+    "NLU00589": {
+        "text": "回放今天下午5点开始的女子单打网球比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "女子单打网球比赛视频",
+            "datetime_time": "下午5点"
+        }
+    },
+    "NLU00590": {
+        "text": "今天有什么重大的国际新闻没有，放来看一下",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "重大的国际新闻"
+        }
+    },
+    "NLU00597": {
+        "text": "18年在中国大陆播出的动漫非人哉给我播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "非人哉",
+            "datetime_date": "18年",
+            "region": "中国大陆"
+        }
+    },
+    "NLU00600": {
+        "text": "播一个晚上20点更新的国产动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_time": "20点",
+            "region": "国产"
+        }
+    },
+    "NLU00601": {
+        "text": "我想看2021年中国女足加时4比3逆转韩国的比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "中国女足加时4比3逆转韩国的比赛视频",
+            "region": "中国",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU00614": {
+        "text": "放一下一人之下第3季相关视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "一下一人之下"
+        }
+    },
+    "NLU00625": {
+        "text": "给我放一个篮球明星杜兰特的NBA视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "篮球明星杜兰特的NBA视频"
+        }
+    },
+    "NLU00681": {
+        "text": "今天有没有啥好看的明星八卦新闻，放来看看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "好看的明星八卦",
+            "datetime_date": "今天"
+        }
+    },
+    "NLU00688": {
+        "text": "寻找李荣浩早期唱歌视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "李荣浩早期唱歌视频"
+        }
+    },
+    "NLU00694": {
+        "text": "放一下钟汉良最新电视剧的幕后花絮吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "钟汉良最新电视剧的幕后花絮"
+        }
+    },
+    "NLU00700": {
+        "text": "2021年在中国播出的司藤景甜cut视频帮我播放吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "司藤",
+            "datetime_date": "2021年",
+            "region": "中国"
+        }
+    },
+    "NLU00704": {
+        "text": "看5月12日的纪录片传奇故事",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月12日",
+            "name": "传奇故事"
+        }
+    },
+    "NLU00709": {
+        "text": "帮我找下美国的瑞克和莫蒂的第一集",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "瑞克和莫蒂的第一集",
+            "region": "美国"
+        }
+    },
+    "NLU00728": {
+        "text": "给我放一下国外新闻埃特纳火山再次喷发的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "埃特纳火山再次喷发的视频"
+        }
+    },
+    "NLU00756": {
+        "text": "播放麻辣女配这个动漫的普通话版",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "麻辣女配"
+        }
+    },
+    "NLU00759": {
+        "text": "美国纪录片迈克尔杰克逊就是这样在2009年上映的我想看看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "纪录片迈克尔杰克逊就是这样在2009年上映",
+            "region": "美国",
+            "datetime_date": "2009年"
+        }
+    },
+    "NLU00781": {
+        "text": "我想看周杰伦唱青花瓷的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "周杰伦唱青花瓷的视频"
+        }
+    },
+    "NLU00790": {
+        "text": "我要看经典的动漫舒克和贝塔",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "舒克和贝塔"
+        }
+    },
+    "NLU00791": {
+        "text": "回放一下昨天的篮球快报",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "昨天",
+            "name": "篮球快报"
+        }
+    },
+    "NLU00795": {
+        "text": "播放王者荣耀游戏直播",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀"
+        }
+    },
+    "NLU00805": {
+        "text": "按顺序播放巧虎早教的相关视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "巧虎早教"
+        }
+    },
+    "NLU00816": {
+        "text": "给我找一下2018年林丹对李宗伟的羽毛球大赛的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "林丹对李宗伟的羽毛球大赛的视频",
+            "datetime_date": "2018年"
+        }
+    },
+    "NLU00825": {
+        "text": "我想看动漫，给我播放一个羊羊运动会精彩解说吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "羊羊运动会精彩解说"
+        }
+    },
+    "NLU00829": {
+        "text": "诸葛亮百分之51的输出这个游戏解说视频帮我找找",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "诸葛亮百分之51的输出"
+        }
+    },
+    "NLU00834": {
+        "text": "不知道还能不能找到四川一女子密闭床头发现大蛇的新闻视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "四川一女子密闭床头发现大蛇的新闻视频",
+            "region": "四川"
+        }
+    },
+    "NLU00846": {
+        "text": "今天有关于韩国的新闻么，放来看看",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "韩国的新闻"
+        }
+    },
+    "NLU00847": {
+        "text": "接着放第3集葫芦小金刚是动漫啊别放错了",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "葫芦小金刚"
+        }
+    },
+    "NLU00852": {
+        "text": "播放一下国创动漫斗罗大陆",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "斗罗大陆",
+            "region": "国创"
+        }
+    },
+    "NLU00854": {
+        "text": "马上给放3点钟就开始播的吃鸡游戏的直播",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "吃鸡游戏",
+            "datetime_time": "3点钟"
+        }
+    },
+    "NLU00856": {
+        "text": "郭敬明的小时代幕后花絮放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "郭敬明的小时代幕后花絮"
+        }
+    },
+    "NLU00860": {
+        "text": "看国产动漫斗罗大陆",
+        "intent": "Video-Play",
+        "slots": {
+            "region": "大陆",
+            "name": "斗罗大陆"
+        }
+    },
+    "NLU00920": {
+        "text": "给我搜索一下去年世界女子体操比赛的精彩片段视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "去年",
+            "name": "世界女子体操比赛的精彩片段视频"
+        }
+    },
+    "NLU00923": {
+        "text": "纪录片无影灯下第十六集帮我查询一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "无影灯下"
+        }
+    },
+    "NLU00924": {
+        "text": "我想看2020年谍战电视剧新世界的花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "新世界的花絮",
+            "datetime_time": "2020年"
+        }
+    },
+    "NLU00926": {
+        "text": "找一下每周五，10点更新的国产动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "每周五",
+            "datetime_time": "10点",
+            "region": "国产"
+        }
+    },
+    "NLU00931": {
+        "text": "刘涛最新一期直播帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "刘涛最新一期直播"
+        }
+    },
+    "NLU00957": {
+        "text": "向往的生活播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "向往的生活"
+        }
+    },
+    "NLU00959": {
+        "text": "动漫憨豆先生第三季帮我找一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "憨豆先生"
+        }
+    },
+    "NLU00965": {
+        "text": "让我们看个益智类动画啊",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "益智类"
+        }
+    },
+    "NLU00977": {
+        "text": "5月21日的游戏视频遭遇演员阵容逆袭翻盘可不可以帮我找下呀",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月21日",
+            "name": "游戏视频遭遇演员阵容逆袭翻盘"
+        }
+    },
+    "NLU00986": {
+        "text": "搜索一下鬼吹灯2的第五章播放",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "鬼吹灯2的第五章"
+        }
+    },
+    "NLU00990": {
+        "text": "我想看5月17日吴海首刊大片的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月17日",
+            "name": "吴海首刊大片的视频"
+        }
+    },
+    "NLU00995": {
+        "text": "2021年的科幻类动漫英雄觉醒吧放给我",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "英雄觉醒",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU01005": {
+        "text": "放一下钟汉良2020年在浙江卫视春晚的演出视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2020年",
+            "name": "钟汉良2020年在浙江卫视春晚的演出视频"
+        }
+    },
+    "NLU01011": {
+        "text": "给我放一个蔡少芬唱歌的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "蔡少芬唱歌的视频"
+        }
+    },
+    "NLU01022": {
+        "text": "给我播放2019年二青会蹦床比赛的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "二青会蹦床比赛的视频",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU01033": {
+        "text": "快放今天晚上七点直播的绝地求生游戏",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "绝地求生",
+            "datetime_time": "晚上七点"
+        }
+    },
+    "NLU01035": {
+        "text": "请继续帮我播放郭德纲21年相声精选的第五章",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "郭德纲21年相声精选的第五章"
+        }
+    },
+    "NLU01044": {
+        "text": "我想看下在成团夜唱的BANG BANG",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "在成团夜唱的BANG BANG"
+        }
+    },
+    "NLU01050": {
+        "text": "随便播一个2021年晚上零点30更新的动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2021年",
+            "datetime_time": "零点30"
+        }
+    },
+    "NLU01056": {
+        "text": "找个4月25号的绝地求生游戏讲解视频来看",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "4月25号",
+            "name": "绝地求生游戏讲解视频"
+        }
+    },
+    "NLU01088": {
+        "text": "我想看蔡徐坤参加奔跑吧5聊身高欺负妹妹的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "蔡徐坤参加奔跑吧5聊身高欺负妹妹的视频"
+        }
+    },
+    "NLU01089": {
+        "text": "随便播一个2021年晚上23点45更新的动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2021年",
+            "datetime_time": "23点45"
+        }
+    },
+    "NLU01120": {
+        "text": "快点找出来有关电视剧白眉大侠的相关视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "白眉大侠的相关视频"
+        }
+    },
+    "NLU01128": {
+        "text": "我要看乒乓球的现场比赛合集",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "乒乓球的现场比赛合集"
+        }
+    },
+    "NLU01129": {
+        "text": "香港的电影唐伯虎点秋香的介绍视频播放出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "唐伯虎点秋香的介绍视频",
+            "region": "香港"
+        }
+    },
+    "NLU01132": {
+        "text": "给我找几个吉克隽逸的摇滚音乐演出视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "吉克隽逸的摇滚音乐演出视频"
+        }
+    },
+    "NLU01179": {
+        "text": "我现在想看和平精英的解说",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "和平精英的解说"
+        }
+    },
+    "NLU01181": {
+        "text": "我想看昨天下午的搏击比赛",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "昨天",
+            "name": "搏击比赛",
+            "datetime_time": "下午"
+        }
+    },
+    "NLU01198": {
+        "text": "给我放一下凤凰传奇2021年在吉林春晚唱歌真的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "凤凰传奇2021年在吉林春晚唱歌真的视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU01201": {
+        "text": "找出来张哲瀚跳舞的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "张哲瀚跳舞的视频"
+        }
+    },
+    "NLU01206": {
+        "text": "播一个周杰伦2020年嘉年华世界巡回演唱会的唱歌视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "周杰伦2020年嘉年华世界巡回演唱会的唱歌视频",
+            "datetime_date": "2020年"
+        }
+    },
+    "NLU01209": {
+        "text": "现在播放北京地区的新闻",
+        "intent": "Video-Play",
+        "slots": {
+            "region": "北京",
+            "datetime_time": "现在"
+        }
+    },
+    "NLU01234": {
+        "text": "我想看2021年3月9日单依纯发行的合唱单曲《漂洋过海来看你》的视频。",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2021年3月9日",
+            "name": "单依纯发行的合唱单曲《漂洋过海来看你》的视频"
+        }
+    },
+    "NLU01249": {
+        "text": "帮我二叔放个沈从文的文章视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "沈从文的文章视频"
+        }
+    },
+    "NLU01256": {
+        "text": "我女神李知恩iu出道十周年在韩国举办的那个演唱会视频还能找得到完整版吗",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "李知恩iu出道十周年在韩国举办的那个演唱会视频还能找得到完整版",
+            "region": "韩国",
+            "datetime_date": "十周年"
+        }
+    },
+    "NLU01261": {
+        "text": "查找张韶涵在2019年跨年演唱会上演唱的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2019年",
+            "name": "张韶涵在2019年跨年演唱会上演唱的视频"
+        }
+    },
+    "NLU01272": {
+        "text": "查找国产动漫百妖谱第二季",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "百妖谱",
+            "region": "国产"
+        }
+    },
+    "NLU01275": {
+        "text": "帮我找一个做土豆炖牛腩的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "做土豆炖牛腩的视频"
+        }
+    },
+    "NLU01286": {
+        "text": "我想看郭德纲和于谦说相声的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "郭德纲和于谦说相声的视频"
+        }
+    },
+    "NLU01303": {
+        "text": "能否帮我打开今年3月09日播放的这里是雅江河谷的样子",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今年3月09日",
+            "name": "这里是雅江河谷的样子"
+        }
+    },
+    "NLU01321": {
+        "text": "2019年都市爱情电视剧致我们暖暖的小时光的花絮播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "致我们暖暖的小时光的花絮",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU01325": {
+        "text": "周冬雨的电影幕后花絮有么，放来看看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "周冬雨的电影幕后花絮"
+        }
+    },
+    "NLU01327": {
+        "text": "给我播放一个虞书欣参加青春有你的特写视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "虞书欣参加青春有你的特写视频"
+        }
+    },
+    "NLU01330": {
+        "text": "给我转播英雄联盟竞技塞的现场",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "英雄联盟竞技塞的现场"
+        }
+    },
+    "NLU01345": {
+        "text": "给我直播一下今天炮哥吃鸡的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "今天炮哥吃鸡的视频"
+        }
+    },
+    "NLU01359": {
+        "text": "能不能给我找下2015年1月26日艾玛·沃特森作为联合国妇女署亲善大使，参加达沃斯论坛向CEO们谈女权的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2015年1月26日",
+            "name": [
+                "艾玛·沃特森作为联合国妇女署亲善大使",
+                "参加达沃斯论坛向CEO们谈女权的视频"
+            ]
+        }
+    },
+    "NLU01360": {
+        "text": "放胡歌的电视剧的花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "胡歌的电视剧的花絮"
+        }
+    },
+    "NLU01363": {
+        "text": "我想看霍建华电视剧的幕后花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "霍建华电视剧的幕后花絮"
+        }
+    },
+    "NLU01370": {
+        "text": "韩国电影釜山行的剧情介绍帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "釜山行的剧情介绍",
+            "region": "韩国"
+        }
+    },
+    "NLU01376": {
+        "text": "给我播放5月23日直播的和平精英宇宙飞船爆炸后的的解密的游戏视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月23日",
+            "name": "和平精英宇宙飞船爆炸后的的解密的游戏视频"
+        }
+    },
+    "NLU01380": {
+        "text": "放2018年王者荣耀冠军杯比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀冠军杯比赛视频",
+            "datetime_date": "2018年"
+        }
+    },
+    "NLU01386": {
+        "text": "打开腾讯视频帮我播放有关中国大案的纪录片吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "中国大案的纪录片",
+            "region": "中国"
+        }
+    },
+    "NLU01392": {
+        "text": "给我重新播放08年奥运会何雯娜蹦床比赛现场视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "奥运会何雯娜蹦床比赛现场视频",
+            "datetime_date": "08年"
+        }
+    },
+    "NLU01396": {
+        "text": "2021年在中国播出的拜托，快结婚吧的介绍视频帮我播放吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "拜托，快结婚吧的介绍视频",
+            "datetime_date": "2021年",
+            "region": "中国"
+        }
+    },
+    "NLU01398": {
+        "text": "给我转播一下中午12点的安徽午间新闻三分钟剪辑",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "安徽午间新闻三分钟剪辑",
+            "datetime_time": "中午12点",
+            "region": "安徽"
+        }
+    },
+    "NLU01405": {
+        "text": "帮我找一个做芒果慕斯的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "做芒果慕斯的视频"
+        }
+    },
+    "NLU01406": {
+        "text": "随便播一个2021年晚上10点更新的动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2021年",
+            "datetime_time": "10点"
+        }
+    },
+    "NLU01408": {
+        "text": "给我播放张艺兴跳舞的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "张艺兴跳舞的视频"
+        }
+    },
+    "NLU01417": {
+        "text": "我想看古装电视剧骊歌行幕后花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "骊歌行幕后花絮"
+        }
+    },
+    "NLU01430": {
+        "text": "给我找下2014年羽毛球世锦赛男双决赛的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "羽毛球世锦赛男双决赛的视频",
+            "datetime_date": "2014年"
+        }
+    },
+    "NLU01435": {
+        "text": "我要看战斗动漫山河剑心",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "山河剑心"
+        }
+    },
+    "NLU01446": {
+        "text": "我想看日本电视剧女神探夏洛克第二集的花絮帮我播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "女神探夏洛克第二集的花絮",
+            "region": "日本"
+        }
+    },
+    "NLU01455": {
+        "text": "找一下孙俪的电视剧安家的幕后花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "孙俪的电视剧安家的幕后花絮"
+        }
+    },
+    "NLU01469": {
+        "text": "查一下有哪几部欧洲纪录片好看的，播来看看",
+        "intent": "Video-Play",
+        "slots": {
+            "region": "欧洲"
+        }
+    },
+    "NLU01472": {
+        "text": "找出来王嘉尔跳舞的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王嘉尔跳舞的视频"
+        }
+    },
+    "NLU01475": {
+        "text": "找一下日本动漫冰菓",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "冰菓",
+            "region": "日本"
+        }
+    },
+    "NLU01483": {
+        "text": "4月24日讲解的嚣张无极限死的很难看这个游戏讲解视频给我再播放一次吧",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "4月24日",
+            "name": "嚣张无极限死的很难看"
+        }
+    },
+    "NLU01484": {
+        "text": "查找动漫咒术回战第三集",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "咒术回战"
+        }
+    },
+    "NLU01487": {
+        "text": "查询一下天天向上的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "天天向上"
+        }
+    },
+    "NLU01491": {
+        "text": "播放经典国漫三毛历险记的第10集",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "三毛历险记"
+        }
+    },
+    "NLU01498": {
+        "text": "绝地求生比赛的视频播一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "绝地求生比赛的视频"
+        }
+    },
+    "NLU01520": {
+        "text": "请帮我播放一下昨天王者荣耀况技赛的过程",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "昨天",
+            "name": "王者荣耀况技赛的过程"
+        }
+    },
+    "NLU01525": {
+        "text": "播放欧美动漫小黄人",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "小黄人",
+            "region": "欧美"
+        }
+    },
+    "NLU01529": {
+        "text": "我想2009年12月24日，汪峰在平安夜于深圳举办不插电演唱会的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2009年12月24日",
+            "name": "汪峰在平安夜于深圳举办不插电演唱会的视频"
+        }
+    },
+    "NLU01530": {
+        "text": "播放一个美国摇滚音乐MV来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "美国摇滚音乐MV",
+            "region": "美国"
+        }
+    },
+    "NLU01535": {
+        "text": "我想看时代少年团在3月1日拍摄广告时的现场花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "3月1日",
+            "name": "时代少年团在3月1日拍摄广告时的现场花絮"
+        }
+    },
+    "NLU01541": {
+        "text": "转播下午五点的王者荣耀游戏直播讲解",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀游戏直播讲解",
+            "datetime_time": "下午五点"
+        }
+    },
+    "NLU01574": {
+        "text": "我想看5月23日在意大利发生的缆车事故的新闻视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月23日",
+            "name": "5月23日在意大利发生的缆车事故的新闻视频"
+        }
+    },
+    "NLU01575": {
+        "text": "小猪佩奇给儿子放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "小猪佩奇"
+        }
+    },
+    "NLU01576": {
+        "text": "我想看李维周深在中国好声音一起演唱贝加尔湖的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "李维周深在中国好声音一起演唱贝加尔湖的视频"
+        }
+    },
+    "NLU01580": {
+        "text": "给我看下亚洲杯韩国韩国淘汰巴林的比赛视频吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "亚洲杯韩国韩国淘汰巴林的比赛视频",
+            "region": "韩国"
+        }
+    },
+    "NLU01590": {
+        "text": "我要看2012年的动漫大闹天宫",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "大闹天宫",
+            "datetime_date": "2012年"
+        }
+    },
+    "NLU01592": {
+        "text": "想看薛之谦认真的雪的幕后花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "薛之谦认真的雪的幕后花絮"
+        }
+    },
+    "NLU01607": {
+        "text": "找一些李敏镐五月份的影视片段让我看一下",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "五月份",
+            "name": "李敏镐五月份的影视片段"
+        }
+    },
+    "NLU01611": {
+        "text": "播放一下蒙面唱将猜猜猜",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "蒙面唱将猜猜猜"
+        }
+    },
+    "NLU01618": {
+        "text": "播放一个李准基主演的电视剧的介绍视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "李准基主演的电视剧的介绍视频"
+        }
+    },
+    "NLU01619": {
+        "text": "请帮我放一下2020年春晚魔术表演的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "春晚魔术表演的视频",
+            "datetime_date": "2020年"
+        }
+    },
+    "NLU01620": {
+        "text": "明星伙伴这个韩国电视剧的花絮帮我播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "明星伙伴这个韩国电视剧的花絮",
+            "region": "韩国"
+        }
+    },
+    "NLU01626": {
+        "text": "好想看美国的成龙历险记啊能找到吗",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "成龙历险记",
+            "region": "美国"
+        }
+    },
+    "NLU01634": {
+        "text": "播一下晚上22点更新的光荣与梦想的花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "光荣与梦想的花絮",
+            "datetime_time": "22点"
+        }
+    },
+    "NLU01647": {
+        "text": "给我播放古筝大师王中山的古筝曲",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "古筝大师王中山的古筝曲"
+        }
+    },
+    "NLU01655": {
+        "text": "给我放纪录片生门第五集",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "生门第五集"
+        }
+    },
+    "NLU01656": {
+        "text": "我想看谢可露露连续秒杀李白6次的那个游戏视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "谢可露露连续秒杀李白6次的那个游戏视频"
+        }
+    },
+    "NLU01660": {
+        "text": "我想看硬糖少女303今年唱双马尾的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "硬糖少女303今年唱双马尾的视频",
+            "datetime_date": "今年"
+        }
+    },
+    "NLU01672": {
+        "text": "成都AG超会玩的比赛视频帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "成都AG超会玩的比赛视频"
+        }
+    },
+    "NLU01674": {
+        "text": "重庆QGhappy比赛的视频帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "重庆QGhappy比赛的视频",
+            "region": "重庆"
+        }
+    },
+    "NLU01685": {
+        "text": "查询一下跑男5的相关视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "跑男5"
+        }
+    },
+    "NLU01700": {
+        "text": "阴阳师游戏的视频播一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "阴阳师游戏的视频"
+        }
+    },
+    "NLU01743": {
+        "text": "播放一个金素妍主演的电视剧的介绍视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "金素妍主演的电视剧的介绍视频"
+        }
+    },
+    "NLU01746": {
+        "text": "周杰伦的歌曲MV帮我搜索一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "周杰伦的歌曲MV"
+        }
+    },
+    "NLU01750": {
+        "text": "找一个讲述美国地理环境的纪录片来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "讲述美国地理环境的纪录片",
+            "region": "美国"
+        }
+    },
+    "NLU01758": {
+        "text": "蔡依林的歌曲MV帮我搜索一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "蔡依林的歌曲MV"
+        }
+    },
+    "NLU01759": {
+        "text": "鬼畜调教视频里面找个今天投稿的",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "鬼畜调教视频",
+            "datetime_date": "今天"
+        }
+    },
+    "NLU01763": {
+        "text": "2014年巴西世界杯给我回放一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "巴西世界杯",
+            "region": "巴西",
+            "datetime_date": "2014年"
+        }
+    },
+    "NLU01773": {
+        "text": "播放周日上的王牌对王牌",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "周日",
+            "name": "王牌对王牌"
+        }
+    },
+    "NLU01777": {
+        "text": "打开腾讯视频我要看5月3号下午3点直播的那个纪录片",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月3号",
+            "datetime_time": "下午3点"
+        }
+    },
+    "NLU01787": {
+        "text": "周二下午3点要看QQ飞车手游S联赛直播哦",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "周二",
+            "datetime_time": "下午3点",
+            "name": "QQ飞车手游S联赛"
+        }
+    },
+    "NLU01794": {
+        "text": "那个泰国电视剧宫第五集花絮帮我播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "宫第五集花絮",
+            "region": "泰国"
+        }
+    },
+    "NLU01806": {
+        "text": "给我随便放个动画片",
+        "intent": "Video-Play",
+        "slots": {}
+    },
+    "NLU01811": {
+        "text": "查找动漫火影忍者",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "火影忍者"
+        }
+    },
+    "NLU01819": {
+        "text": "美食纪录片人舌尖上的中国给我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "舌尖上的中国"
+        }
+    },
+    "NLU01830": {
+        "text": "放一下2020年那英的跨年演唱会视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "那英的跨年演唱会视频",
+            "datetime_date": "2020年"
+        }
+    },
+    "NLU01838": {
+        "text": "查找电影阿甘正传的讲解视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "阿甘正传的讲解视频"
+        }
+    },
+    "NLU01844": {
+        "text": "帮我找一个做意大利面的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "做意大利面的视频"
+        }
+    },
+    "NLU01845": {
+        "text": "转播下午2点的高尔夫球比赛现场",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "高尔夫球比赛",
+            "datetime_time": "下午2点"
+        }
+    },
+    "NLU01848": {
+        "text": "今天播放偶像来了",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "偶像来了"
+        }
+    },
+    "NLU01855": {
+        "text": "找到并播放81年的动漫九色鹿",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "九色鹿",
+            "datetime_date": "81年"
+        }
+    },
+    "NLU01863": {
+        "text": "找一下日本动漫我的青春恋爱物语果然有问题",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "我的青春恋爱物语果然有问题",
+            "region": "日本"
+        }
+    },
+    "NLU01864": {
+        "text": "给我播放昨天的蔡徐坤的情人MV",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "昨天",
+            "name": "情人MV"
+        }
+    },
+    "NLU01865": {
+        "text": "我想看日本纪录片中国之食文化",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "中国之食文化",
+            "region": "日本"
+        }
+    },
+    "NLU01868": {
+        "text": "有没有林心如唱歌的视频啊，放来看看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "林心如唱歌的视频"
+        }
+    },
+    "NLU01877": {
+        "text": "QQ飞车比赛的视频播一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "QQ飞车比赛的视频"
+        }
+    },
+    "NLU01901": {
+        "text": "播一个晚上18点更新的国产动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_time": "18点",
+            "region": "国产"
+        }
+    },
+    "NLU01914": {
+        "text": "回放2012年孙杨的游泳比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2012年",
+            "name": "孙杨的游泳比赛视频"
+        }
+    },
+    "NLU01932": {
+        "text": "给我放一下4月20号的刺激战场的比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "4月20号",
+            "name": "刺激战场的比赛视频"
+        }
+    },
+    "NLU01934": {
+        "text": "我想看今年老庄解说王者荣耀的最新一期的游戏视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "老庄解说王者荣耀的最新一期的游戏视频",
+            "datetime_date": "今年"
+        }
+    },
+    "NLU01947": {
+        "text": "动漫蜘蛛侠帮我找一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "蜘蛛侠"
+        }
+    },
+    "NLU01958": {
+        "text": "一直播放喜羊羊与灰太狼的动画片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "喜羊羊与灰太狼"
+        }
+    },
+    "NLU01961": {
+        "text": "给我转5月27号早上7点的NBA比赛现场",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月27号",
+            "name": "NBA比赛现场",
+            "datetime_time": "早上7点"
+        }
+    },
+    "NLU01969": {
+        "text": "查找国产动漫天官赐福",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "天官赐福",
+            "region": "国产"
+        }
+    },
+    "NLU01975": {
+        "text": "查询一下乘风破浪的姐姐的相关视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "乘风破浪的姐姐"
+        }
+    },
+    "NLU01983": {
+        "text": "给我播个美国Billboard榜榜首的音乐MV看看",
+        "intent": "Video-Play",
+        "slots": {
+            "region": "美国",
+            "name": "Billboard榜榜首的音乐MV"
+        }
+    },
+    "NLU01992": {
+        "text": "2021年的魔幻动漫找一个看",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU01993": {
+        "text": "再播放2010年温哥华冬奥会短道速滑女子3000米的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "冬奥会短道速滑女子3000米的视频",
+            "region": "温哥华",
+            "datetime_date": "2010年"
+        }
+    },
+    "NLU01998": {
+        "text": "给我回放5月25日只用雨林基站物资吃鸡的游戏教学视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月25日",
+            "name": "雨林基站物资吃鸡的游戏教学视频"
+        }
+    },
+    "NLU02000": {
+        "text": "给我放2021年的奇葩说",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "奇葩说",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU02006": {
+        "text": "2021年华晨宇唱歌的视频找一个出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "2021年华晨宇唱歌的视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU02012": {
+        "text": "搜王菲唱传奇的视频来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王菲唱传奇的视频"
+        }
+    },
+    "NLU02024": {
+        "text": "请给我播放2019年美国电视剧权力的游戏第八季预告片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "权力的游戏第八季预告片",
+            "datetime_time": "2019年"
+        }
+    },
+    "NLU02029": {
+        "text": "我想看2020年的搞笑类动漫随便给我放一个",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2020年"
+        }
+    },
+    "NLU02030": {
+        "text": "随便给我找一个冒险类的国漫",
+        "intent": "Video-Play",
+        "slots": {}
+    },
+    "NLU02060": {
+        "text": "放一收藏夹里的韩国美食纪录片",
+        "intent": "Video-Play",
+        "slots": {
+            "region": "韩国",
+            "name": "韩国美食纪录片"
+        }
+    },
+    "NLU02078": {
+        "text": "我想看2019年亚洲杯越南对也门的那一场比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "亚洲杯越南对也门的那一场比赛视频",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU02081": {
+        "text": "我想在周日晚上看关于历史类的节目，像解密这个类型的",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "周日",
+            "datetime_time": "晚上",
+            "name": "解密"
+        }
+    },
+    "NLU02095": {
+        "text": "我想要看斗罗大陆2021年最新版的游戏解说视频能找到不",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "斗罗大陆2021年最新版的游戏解说视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU02106": {
+        "text": "纪录片宠物医院2月18日就开播了，我还没看呢，帮我放一集哈",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "宠物医院",
+            "datetime_time": "2月18日"
+        }
+    },
+    "NLU02117": {
+        "text": "南京hero久竞比赛的视频帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "南京hero久竞比赛的视频",
+            "region": "南京"
+        }
+    },
+    "NLU02119": {
+        "text": "哈哈我要看动漫邋遢大王奇遇记按顺序放",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "邋遢大王奇遇记"
+        }
+    },
+    "NLU02126": {
+        "text": "我想看关于2021年伊朗军事的新闻视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2021年",
+            "region": "伊朗",
+            "name": "伊朗军事的新闻视频"
+        }
+    },
+    "NLU02149": {
+        "text": "2021年在中国播出的号手就位的介绍视频帮我播放吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "号手就位的介绍视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU02161": {
+        "text": "张庭2021年直播带货帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "张庭2021年直播带货",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU02164": {
+        "text": "动漫X的天使第6集帮我找一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "X的天使"
+        }
+    },
+    "NLU02184": {
+        "text": "很想看泰国的电视剧推荐视频随便播一个给我",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "电视剧推荐视频",
+            "region": "泰国"
+        }
+    },
+    "NLU02185": {
+        "text": "回放24号绝地求生游戏的比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "24号",
+            "name": "绝地求生游戏的比赛视频"
+        }
+    },
+    "NLU02218": {
+        "text": "播放5月10号英雄联盟的竞技比赛情况",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月10号",
+            "name": "英雄联盟的竞技比赛"
+        }
+    },
+    "NLU02222": {
+        "text": "播放萧亚轩唱歌的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "萧亚轩唱歌的视频"
+        }
+    },
+    "NLU02228": {
+        "text": "我想看我的偶像迪丽热巴在2018年金鹰女神的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "迪丽热巴在2018年金鹰女神的视频",
+            "datetime_date": "2018年"
+        }
+    },
+    "NLU02234": {
+        "text": "找几个美国纪录片的视频给我看看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "美国纪录片的视频",
+            "region": "美国"
+        }
+    },
+    "NLU02235": {
+        "text": "今年张大仙的讲解游戏的大仙不闹系列完整版视频还有吗",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今年",
+            "name": "张大仙的讲解游戏的大仙不闹系列完整版视频"
+        }
+    },
+    "NLU02238": {
+        "text": "放一下昨天下午4点的王者荣耀比赛解说",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "昨天",
+            "name": "王者荣耀比赛解说",
+            "datetime_time": "下午4点"
+        }
+    },
+    "NLU02242": {
+        "text": "香港的电视剧小当家第一集花絮播放出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "小当家第一集花絮",
+            "region": "香港"
+        }
+    },
+    "NLU02245": {
+        "text": "第三届王者荣耀全国大赛有吗，我想看看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "第三届王者荣耀全国大赛"
+        }
+    },
+    "NLU02261": {
+        "text": "帮我找一个做糖醋里脊的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "做糖醋里脊的视频"
+        }
+    },
+    "NLU02269": {
+        "text": "我想看赵小棠15岁跳舞的那段视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "赵小棠15岁跳舞的那段视频"
+        }
+    },
+    "NLU02279": {
+        "text": "我想看小野丽莎在2014年1月1日来北京工人体育馆与北京歌迷一起共度新年的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "1月1日",
+            "name": "小野丽莎在2014年1月1日来北京工人体育馆与北京歌迷一起共度新年的视频"
+        }
+    },
+    "NLU02283": {
+        "text": "请给我播放5月25号晚上7点的王者荣耀比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月25号",
+            "name": "王者荣耀比赛视频",
+            "datetime_time": "晚上7点"
+        }
+    },
+    "NLU02287": {
+        "text": "阿飞在5月22日讲解的怒拿二十杀的最强辅助这个游戏视频还能找到不",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月22日",
+            "name": "怒拿二十杀的最强辅助"
+        }
+    },
+    "NLU02298": {
+        "text": "找出5.31日20点45播出的动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5.31日",
+            "datetime_time": "20点45"
+        }
+    },
+    "NLU02303": {
+        "text": "给我找2019年林俊杰演唱会的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2019年",
+            "name": "林俊杰演唱会的视频"
+        }
+    },
+    "NLU02309": {
+        "text": "很想看越南的电视剧现场拍摄视频随便播一个给我",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "电视剧现场拍摄视频",
+            "region": "越南"
+        }
+    },
+    "NLU02316": {
+        "text": "查找陈奕迅2010年全国巡回演唱会的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2010年",
+            "name": "陈奕迅2010年全国巡回演唱会的视频"
+        }
+    },
+    "NLU02321": {
+        "text": "我想看2020年谍战电视剧风声的讲解视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "风声的讲解视频",
+            "datetime_time": "2020年"
+        }
+    },
+    "NLU02330": {
+        "text": "放一个杨幂演的电视剧的花絮来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "杨幂演的电视剧的花絮"
+        }
+    },
+    "NLU02333": {
+        "text": "播放荒野求生纪录片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "荒野求生"
+        }
+    },
+    "NLU02339": {
+        "text": "5月25日有没有关于韩国的新闻，放来看看",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月25日",
+            "name": "新闻",
+            "region": "韩国"
+        }
+    },
+    "NLU02340": {
+        "text": "昨天的乒乓球比赛给我回放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "昨天",
+            "name": "乒乓球比赛"
+        }
+    },
+    "NLU02357": {
+        "text": "找出来王一博跳舞的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王一博跳舞的视频"
+        }
+    },
+    "NLU02359": {
+        "text": "播放一下张艺谋的电影纪录片悬崖之上的幕后花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "张艺谋的电影纪录片悬崖之上的幕后花絮"
+        }
+    },
+    "NLU02363": {
+        "text": "我想看地球脉动的纪录片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "地球脉动的纪录片"
+        }
+    },
+    "NLU02380": {
+        "text": "给我搜索人生一串第二季纪录片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "人生一串"
+        }
+    },
+    "NLU02386": {
+        "text": "立刻找出来小米笔记本 Pro 15 锐龙版的测评视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "小米笔记本 Pro 15 锐龙版的测评视频"
+        }
+    },
+    "NLU02387": {
+        "text": "查找动漫蜡笔小新",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "蜡笔小新"
+        }
+    },
+    "NLU02392": {
+        "text": "我想看艾玛沃特森拍摄哈利波特时的花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "艾玛沃特森拍摄哈利波特时的花絮"
+        }
+    },
+    "NLU02403": {
+        "text": "今天我想看看有关新冠疫情的新闻视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "有关新冠疫情的新闻视频"
+        }
+    },
+    "NLU02406": {
+        "text": "我要看科幻国漫吞噬星空",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "吞噬星空"
+        }
+    },
+    "NLU02428": {
+        "text": "舒克贝塔的相关视频按照更新顺序播放",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "舒克贝塔"
+        }
+    },
+    "NLU02430": {
+        "text": "再播放一下2020年美国大选的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "美国大选的视频",
+            "region": "美国",
+            "datetime_date": "2020年"
+        }
+    },
+    "NLU02443": {
+        "text": "能找到今年于文文在为歌而赞唱歌的视频吗",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今年",
+            "name": "于文文在为歌而赞唱歌的视频"
+        }
+    },
+    "NLU02449": {
+        "text": "很想看韩国的电影预告片随便播一个给我",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "电影预告片",
+            "region": "韩国"
+        }
+    },
+    "NLU02475": {
+        "text": "播放5月15日下午两点的女子双打网球比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月15日",
+            "name": "女子双打网球比赛视频",
+            "datetime_time": "下午两点"
+        }
+    },
+    "NLU02480": {
+        "text": "找一个昨天早上九点的英雄联盟游戏直播的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "昨天",
+            "name": "英雄联盟游戏直播的视频",
+            "datetime_time": "早上九点"
+        }
+    },
+    "NLU02516": {
+        "text": "5月6日的英雄联盟比赛给我回放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月6日",
+            "name": "英雄联盟比赛"
+        }
+    },
+    "NLU02520": {
+        "text": "5月21日在日本发生的给小学生太空授课这个新闻视频给我再次回放下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月21日",
+            "name": "给小学生太空授课这个新闻视频",
+            "region": "日本"
+        }
+    },
+    "NLU02528": {
+        "text": "给我来一个英国的纪录片破茧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "破茧",
+            "region": "英国"
+        }
+    },
+    "NLU02547": {
+        "text": "可不可以给我来一个特效吃鸡的游戏视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "特效吃鸡的游戏视频"
+        }
+    },
+    "NLU02554": {
+        "text": "美食纪录片去你家吃饭好吗给我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "去你家吃饭好吗"
+        }
+    },
+    "NLU02587": {
+        "text": "找下5月26日的王者荣耀KPL职业联赛",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月26日",
+            "name": "王者荣耀KPL职业联赛"
+        }
+    },
+    "NLU02589": {
+        "text": "找一下日本动漫鬼灭之刃",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "鬼灭之刃",
+            "region": "日本"
+        }
+    },
+    "NLU02613": {
+        "text": "2017年上映的国外纪录片灯泡阴谋给我播放下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "灯泡阴谋",
+            "datetime_date": "2017年"
+        }
+    },
+    "NLU02628": {
+        "text": "还能找到2013年的风情温哥华这部纪录片吗",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "风情温哥华",
+            "datetime_date": "2013年"
+        }
+    },
+    "NLU02643": {
+        "text": "武汉eStarPro比赛的视频帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "武汉eStarPro比赛的视频",
+            "region": "武汉"
+        }
+    },
+    "NLU02646": {
+        "text": "日本动漫青春之旅给我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "青春之旅",
+            "region": "日本"
+        }
+    },
+    "NLU02665": {
+        "text": "美食纪录片水果传给我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "水果传"
+        }
+    },
+    "NLU02673": {
+        "text": "宋茜参加过的综艺节目帮我找出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "宋茜参加过的综艺节目"
+        }
+    },
+    "NLU02678": {
+        "text": "播一下晚上18点30更新的逆天奇案的预告片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "逆天奇案的预告片",
+            "datetime_time": "18点30"
+        }
+    },
+    "NLU02684": {
+        "text": "纪录片宇宙有道理第一季帮我查询一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "宇宙有道理"
+        }
+    },
+    "NLU02688": {
+        "text": "给我找一下张碧晨2019年在大陆地区参加的演唱会的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "张碧晨2019年在大陆地区参加的演唱会的视频",
+            "region": "大陆",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU02692": {
+        "text": "放一下马竞夺冠西甲联赛的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "马竞夺冠西甲联赛的视频"
+        }
+    },
+    "NLU02707": {
+        "text": "可以帮我查找一下2017年我是歌手的突围赛的视频吗",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2017年",
+            "name": "我是歌手的突围赛的视频"
+        }
+    },
+    "NLU02712": {
+        "text": "我爱看NBA赛事给我播一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "NBA赛事"
+        }
+    },
+    "NLU02727": {
+        "text": "播放一下国创动漫万界仙踪",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "万界仙踪",
+            "region": "国创"
+        }
+    },
+    "NLU02732": {
+        "text": "我想看傅欣瑶在酒吧驻唱的音乐视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "傅欣瑶在酒吧驻唱的音乐视频"
+        }
+    },
+    "NLU02746": {
+        "text": "今天有什么惊悚型的纪录片可以看吗",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "惊悚型的纪录片"
+        }
+    },
+    "NLU02757": {
+        "text": "我要看5月20日凌晨3点的那场意杯决赛",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月20日",
+            "name": "意杯决赛",
+            "datetime_time": "凌晨3点"
+        }
+    },
+    "NLU02765": {
+        "text": "我要看经典国漫葫芦娃",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "葫芦娃"
+        }
+    },
+    "NLU02775": {
+        "text": "帮我播放最近的王者荣耀竞技赛的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀竞技赛的视频"
+        }
+    },
+    "NLU02778": {
+        "text": "放一下2005年超级女声总决赛周笔畅的演唱视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2005年",
+            "name": "超级女声总决赛周笔畅的演唱视频"
+        }
+    },
+    "NLU02793": {
+        "text": "播放纪录片舌尖上的中国第5集",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "舌尖上的中国第5集"
+        }
+    },
+    "NLU02794": {
+        "text": "给我找一下2021年上映的觉醒年代的拍戏花絮视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "觉醒年代的拍戏花絮视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU02818": {
+        "text": "综艺节目说唱新世代的相关视频帮我查询一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "说唱新世代"
+        }
+    },
+    "NLU02831": {
+        "text": "放下2019年王者荣耀巅峰赛的讲解视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀巅峰赛的讲解视频",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU02858": {
+        "text": "播放NBA全明星赛给我",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "NBA全明星赛"
+        }
+    },
+    "NLU02873": {
+        "text": "上午10点的穿越火线游戏讲解视频播一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "穿越火线游戏讲解视频",
+            "datetime_time": "上午10点"
+        }
+    },
+    "NLU02891": {
+        "text": "国产动漫一人之下3帮我找出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "一人之下3",
+            "region": "国产"
+        }
+    },
+    "NLU02940": {
+        "text": "保卫萝卜通关的视频播一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "保卫萝卜通关的视频"
+        }
+    },
+    "NLU02959": {
+        "text": "傅欣瑶在南京酒吧驻场时唱的消失还能找到吗",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "傅欣瑶在南京酒吧驻场时唱的消失",
+            "region": "南京"
+        }
+    },
+    "NLU02973": {
+        "text": "给我放世界联赛中国女排挑战韩国的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "世界联赛中国女排挑战韩国的视频",
+            "region": "中国"
+        }
+    },
+    "NLU02984": {
+        "text": "牛马队友和牛马对手这个游戏视频再给我播放一下吧我很想看耶",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "牛马队友和牛马对手这个游戏视频"
+        }
+    },
+    "NLU02994": {
+        "text": "麻烦观看中国好声音第三季里排名前五的音乐",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "中国好声音第三季"
+        }
+    },
+    "NLU03003": {
+        "text": "我想看看刘涛在跨界歌王上唱歌放视频，有么",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "刘涛在跨界歌王上唱歌放视频"
+        }
+    },
+    "NLU03010": {
+        "text": "给我来一个中日女子蹦床对比的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "中日女子蹦床对比的视频"
+        }
+    },
+    "NLU03027": {
+        "text": "放一个讲述日本人文风情的日本纪录片来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "日本人文风情的日本纪录片",
+            "region": "日本"
+        }
+    },
+    "NLU03038": {
+        "text": "查询一下青春有你的相关视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "青春有你"
+        }
+    },
+    "NLU03063": {
+        "text": "今日发生的萌娃在游乐场认错妈妈的视频给我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "今日发生的萌娃在游乐场认错妈妈的视频"
+        }
+    },
+    "NLU03083": {
+        "text": "找个高人气的玩具类视频",
+        "intent": "Video-Play",
+        "slots": {}
+    },
+    "NLU03088": {
+        "text": "看佟丽娅在2021年春晚上唱歌的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "佟丽娅在2021年春晚上唱歌的视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU03091": {
+        "text": "请给我播放2016年新加坡纪录片寻味地图",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "寻味地图",
+            "region": "新加坡",
+            "datetime_date": "2016年"
+        }
+    },
+    "NLU03096": {
+        "text": "给我看下5月15日盘点水三种晶的隐藏功能这个游戏解说视频再给我打开吧",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月15日",
+            "name": "5月15日盘点水三种晶的隐藏功能这个游戏解说视频"
+        }
+    },
+    "NLU03100": {
+        "text": "看能不能找得到2016年那英在浙江卫视跨年上唱的默和征服的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "那英在浙江卫视跨年上唱的默和征服的视频",
+            "region": "浙江",
+            "datetime_date": "2016年"
+        }
+    },
+    "NLU03104": {
+        "text": "宋茜参加的下一站传奇的相关视频帮我找出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "宋茜参加的下一站传奇"
+        }
+    },
+    "NLU03109": {
+        "text": "请给我播放2020年美国电视剧恶魔之地的幕后故事",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "恶魔之地的幕后故事",
+            "datetime_time": "2020年",
+            "region": "美国"
+        }
+    },
+    "NLU03114": {
+        "text": "帮我播放海贼王的第一集我是路飞将要成为海贼王的男人",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "海贼王的第一集我是路飞将要成为海贼王的男人"
+        }
+    },
+    "NLU03120": {
+        "text": "我想了解大凉山，帮我找下纪录片走进大凉山吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "走进大凉山"
+        }
+    },
+    "NLU03122": {
+        "text": "给我找一下2019年电影反贪风暴4的精彩抢先看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "反贪风暴4的精彩抢先看",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU03124": {
+        "text": "天宝伏妖录动漫已经更新了，请播放13集",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "天宝伏妖录"
+        }
+    },
+    "NLU03127": {
+        "text": "把之前收藏的3月6日更新的奇葩说放了",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "3月6日",
+            "name": "奇葩说"
+        }
+    },
+    "NLU03131": {
+        "text": "能帮我找到陈赫参加爱情公寓三发布会的视频吗",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "陈赫参加爱情公寓三发布会的视频"
+        }
+    },
+    "NLU03140": {
+        "text": "找几个孙燕姿的演唱会视频来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "孙燕姿的演唱会视频"
+        }
+    },
+    "NLU03148": {
+        "text": "播放一个大岳丸CG视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "大岳丸CG视频"
+        }
+    },
+    "NLU03159": {
+        "text": "亚运会女子游泳比赛中日韩三国大战今年的亚运会比赛视频播放下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "亚运会女子游泳比赛中日韩三国大战",
+            "datetime_date": "今年"
+        }
+    },
+    "NLU03197": {
+        "text": "找几个穿越火线游戏比赛的视频来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "穿越火线游戏比赛的视频"
+        }
+    },
+    "NLU03202": {
+        "text": "韩国综艺节目交换的日子帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "交换的日子",
+            "region": "韩国"
+        }
+    },
+    "NLU03215": {
+        "text": "国产动漫魔道祖师帮我找出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "魔道祖师",
+            "region": "国产"
+        }
+    },
+    "NLU03219": {
+        "text": "纪录片超级武器帮我查询一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "超级武器"
+        }
+    },
+    "NLU03232": {
+        "text": "5月27日的怪鸟博士我莲藕认输了这个讲解植物大战僵尸的视频再给我播放一次吧",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月27日",
+            "name": "植物大战僵尸的视频"
+        }
+    },
+    "NLU03257": {
+        "text": "很想看俄罗斯的电影推荐视频随便播一个给我",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "电影推荐视频",
+            "region": "俄罗斯"
+        }
+    },
+    "NLU03273": {
+        "text": "你好，打开3月份英国的舞台剧看一看",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "3月份",
+            "region": "英国",
+            "name": "英国的舞台剧"
+        }
+    },
+    "NLU03281": {
+        "text": "学习穿搭视频播放出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "学习穿搭视频"
+        }
+    },
+    "NLU03284": {
+        "text": "今天有没有什么国际大新闻，放来看看",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "国际大新闻"
+        }
+    },
+    "NLU03296": {
+        "text": "播一下晚上22点更新的中流击水的介绍视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "中流击水的介绍视频",
+            "datetime_time": "22点"
+        }
+    },
+    "NLU03303": {
+        "text": "随便播一个2021年晚上20点更新的动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2021年",
+            "datetime_time": "20点"
+        }
+    },
+    "NLU03305": {
+        "text": "我想看2015年凤凰传奇和筷子兄弟在央视春晚一起唱的最炫小苹果的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "凤凰传奇和筷子兄弟在央视春晚一起唱的最炫小苹果的视频",
+            "datetime_date": "2015年"
+        }
+    },
+    "NLU03319": {
+        "text": "查找并播放快乐大本营",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "快乐大本营"
+        }
+    },
+    "NLU03329": {
+        "text": "重播一下下午4点的和平精英游戏讲解",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "和平精英游戏讲解",
+            "datetime_time": "下午4点"
+        }
+    },
+    "NLU03335": {
+        "text": "给我找一个阴阳师抽卡的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "阴阳师抽卡的视频"
+        }
+    },
+    "NLU03343": {
+        "text": "帮我找下悬崖之上的音乐视频吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "悬崖之上的音乐视频"
+        }
+    },
+    "NLU03346": {
+        "text": "播出12点的王者荣耀巅峰赛",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀巅峰赛",
+            "datetime_time": "12点"
+        }
+    },
+    "NLU03358": {
+        "text": "播放一个孔刘主演的电视剧的介绍视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "孔刘主演的电视剧的介绍视频"
+        }
+    },
+    "NLU03362": {
+        "text": "找一下何炅和谢娜主持的2018年的快乐大本营",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "何炅和谢娜主持的2018年的快乐大本营",
+            "datetime_date": "2018年"
+        }
+    },
+    "NLU03399": {
+        "text": "想看美国NBA球赛",
+        "intent": "Video-Play",
+        "slots": {
+            "region": "美国",
+            "name": "NBA"
+        }
+    },
+    "NLU03405": {
+        "text": "王心凌的歌曲MV帮我搜索一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王心凌的歌曲MV"
+        }
+    },
+    "NLU03415": {
+        "text": "马上播放5月14日的杭州西湖音乐节的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月14日",
+            "region": "杭州西湖",
+            "name": "杭州西湖音乐节的视频"
+        }
+    },
+    "NLU03439": {
+        "text": "播一下晚上20点更新的壮志高飞抢先看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "壮志高飞抢先看",
+            "datetime_time": "20点"
+        }
+    },
+    "NLU03441": {
+        "text": "给我找下2013年张杰在深圳举办的演唱会的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "张杰在深圳举办的演唱会的视频",
+            "datetime_date": "2013年"
+        }
+    },
+    "NLU03452": {
+        "text": "给我播放4月26日荣升贵9后的第一抽的游戏视频给我回放下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "4月26日",
+            "name": "荣升贵9后的第一抽的游戏视频"
+        }
+    },
+    "NLU03456": {
+        "text": "找一个2019年经典励志的纪录片来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "经典励志的纪录片",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU03457": {
+        "text": "我想看美国歌手泰勒2018年在日本举行演唱会的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "美国歌手泰勒2018年在日本举行演唱会的视频",
+            "region": "日本",
+            "datetime_date": "2018年"
+        }
+    },
+    "NLU03458": {
+        "text": "我看下英雄联盟竞技赛5月4号视频回放",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月4号",
+            "name": "英雄联盟竞技赛"
+        }
+    },
+    "NLU03468": {
+        "text": "我想看王者荣耀104段野王的教学讲堂可以吗",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀104段野王的教学讲堂"
+        }
+    },
+    "NLU03496": {
+        "text": "放一下张靓颖在2019年春节晚会上唱歌的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "张靓颖在2019年春节晚会上唱歌的视频",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU03502": {
+        "text": "迪丽热巴的长歌行有幕后花絮么，放来看看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "迪丽热巴的长歌行有幕后花絮"
+        }
+    },
+    "NLU03504": {
+        "text": "查找大学英语的教学视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "大学英语的教学视频"
+        }
+    },
+    "NLU03506": {
+        "text": "给我播放今年完整版的特效吃鸡系列游戏视频吧",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今年",
+            "name": "完整版的特效吃鸡系列游戏视频"
+        }
+    },
+    "NLU03510": {
+        "text": "我想看下有关中国历史的记录片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "中国历史的记录片",
+            "region": "中国"
+        }
+    },
+    "NLU03514": {
+        "text": "随便给我放一个今天的足球比赛来看看",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "足球比赛"
+        }
+    },
+    "NLU03517": {
+        "text": "放纪录片人世间的花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "人世间的花絮"
+        }
+    },
+    "NLU03519": {
+        "text": "2021年在中国播出的山河令的花絮帮我播放吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "山河令",
+            "datetime_date": "2021年",
+            "region": "中国"
+        }
+    },
+    "NLU03523": {
+        "text": "把昨天的英雄联盟比赛给我回放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "昨天",
+            "name": "英雄联盟比赛"
+        }
+    },
+    "NLU03528": {
+        "text": "播放动漫英雄再来的全部剧集按顺序播放",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "英雄再来"
+        }
+    },
+    "NLU03530": {
+        "text": "想搜索火箭少女101在2019年12月31日参加的湖南卫视跨年演唱会的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2019年12月31日",
+            "name": "火箭少女101在2019年12月31日参加的湖南卫视跨年演唱会的视频"
+        }
+    },
+    "NLU03536": {
+        "text": "放葫芦兄弟精彩合集给小孩看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "葫芦兄弟精彩合集"
+        }
+    },
+    "NLU03542": {
+        "text": "5月09日发生的八旬老人破世界纪录的新闻视频给我回放下吧我想看",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月09日",
+            "name": "八旬老人破世界纪录的新闻视频"
+        }
+    },
+    "NLU03551": {
+        "text": "给我找宫崎骏的采访视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "宫崎骏的采访视频"
+        }
+    },
+    "NLU03577": {
+        "text": "给我回放2014年巴西世界杯闭幕式",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "巴西世界杯闭幕式",
+            "region": "巴西",
+            "datetime_date": "2014年"
+        }
+    },
+    "NLU03584": {
+        "text": "我想看2020年谍战电视剧隐秘而伟大第五集的花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "隐秘而伟大第五集的花絮",
+            "datetime_time": "2020年"
+        }
+    },
+    "NLU03587": {
+        "text": "放一个梁静茹演唱会唱歌的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "梁静茹演唱会唱歌的视频"
+        }
+    },
+    "NLU03590": {
+        "text": "刘亦菲的电影的幕后花絮给我找一个",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "刘亦菲的电影的幕后花絮"
+        }
+    },
+    "NLU03592": {
+        "text": "按照时间顺序播放百变马丁的相关视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "百变马丁"
+        }
+    },
+    "NLU03594": {
+        "text": "2021年在中国播出的亲爱的柠檬先生的介绍视频帮我播放吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "亲爱的柠檬先生的介绍视频",
+            "datetime_date": "2021年",
+            "region": "中国"
+        }
+    },
+    "NLU03616": {
+        "text": "2021年五月天唱歌的视频找一个出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "2021年五月天唱歌的视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU03624": {
+        "text": "给我再一次播放2011年羽毛球世锦赛林丹对盖德的男单半决赛的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "羽毛球世锦赛林丹对盖德的男单半决赛的视频",
+            "datetime_date": "2011年"
+        }
+    },
+    "NLU03626": {
+        "text": "给我找下2008年雅典奥运会刘翔12秒91的破纪录视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "雅典奥运会刘翔12秒91的破纪录视频",
+            "region": "雅典",
+            "datetime_date": "2008年"
+        }
+    },
+    "NLU03633": {
+        "text": "给我搜索一下游泳世锦赛孙杨400米自由泳击败霍顿的比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "游泳世锦赛孙杨400米自由泳击败霍顿的比赛视频"
+        }
+    },
+    "NLU03634": {
+        "text": "李佳琦最新一期直播帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "李佳琦最新一期直播"
+        }
+    },
+    "NLU03637": {
+        "text": "小米11 uitra的开箱视频找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "小米11 uitra的开箱视频"
+        }
+    },
+    "NLU03644": {
+        "text": "播一个晚上零点30更新的国产动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_time": "零点30",
+            "region": "国产"
+        }
+    },
+    "NLU03651": {
+        "text": "我想看去年上映的泳者孙杨这部纪录片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "上映的泳者孙杨这部纪录片",
+            "datetime_date": "去年"
+        }
+    },
+    "NLU03659": {
+        "text": "给我来一个陈乔恩4月17日拍摄封面的花絮视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "4月17日",
+            "name": "陈乔恩4月17日拍摄封面的花絮视频"
+        }
+    },
+    "NLU03660": {
+        "text": "韩国电影徐福的介绍视频帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "徐福的介绍视频",
+            "region": "韩国"
+        }
+    },
+    "NLU03669": {
+        "text": "2021年易烊千玺拍摄送你一朵小红花的现场花絮还能找到吗",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "易烊千玺拍摄送你一朵小红花的现场花絮",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU03671": {
+        "text": "找几个周杰伦演唱会唱歌的视频来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "周杰伦演唱会唱歌的视频"
+        }
+    },
+    "NLU03673": {
+        "text": "我想看2019年男篮世界杯",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "男篮世界杯",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU03679": {
+        "text": "能不能搜一下王牌对王牌这个节目",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王牌对王牌"
+        }
+    },
+    "NLU03681": {
+        "text": "给我打开5月24日集齐所有火箭筒吃鸡的游戏视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月24日",
+            "name": "集齐所有火箭筒吃鸡的游戏视频"
+        }
+    },
+    "NLU03686": {
+        "text": "2月24日发生的C罗继续改写纪录这个新闻视频我想看",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2月24日",
+            "name": "C罗继续改写纪录这个新闻视频"
+        }
+    },
+    "NLU03690": {
+        "text": "查找电影老炮儿许晴cut",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "老炮儿许晴cut"
+        }
+    },
+    "NLU03692": {
+        "text": "给播放小猪佩奇的第三十九集的花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "小猪佩奇"
+        }
+    },
+    "NLU03703": {
+        "text": "王者荣耀KPL比赛的视频播一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀KPL比赛的视频"
+        }
+    },
+    "NLU03710": {
+        "text": "帮我找在上海王俊凯出席新品发布会的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "region": "上海",
+            "name": "在上海王俊凯出席新品发布会的视频"
+        }
+    },
+    "NLU03732": {
+        "text": "5月4日发生的青春有你倒牛奶事件的视频找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月4日",
+            "name": "青春有你倒牛奶事件的视频"
+        }
+    },
+    "NLU03740": {
+        "text": "给我来一个美国纪录片鸟瞰美国",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "鸟瞰美国",
+            "region": "美国"
+        }
+    },
+    "NLU03764": {
+        "text": "我想看而要创造今年讲解贪吃蛇大作战的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "讲解贪吃蛇大作战的视频",
+            "datetime_date": "今年"
+        }
+    },
+    "NLU03766": {
+        "text": "随便播一个2021年晚上17点更新的动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2021年",
+            "datetime_time": "17点"
+        }
+    },
+    "NLU03782": {
+        "text": "给我放一下成龙电影的幕后花絮吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "成龙电影的幕后花絮"
+        }
+    },
+    "NLU03786": {
+        "text": "我希望找到关于奇迹文学类的综艺观看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "奇迹文学类的综艺"
+        }
+    },
+    "NLU03793": {
+        "text": "我想看有关鲁班七号这个英雄的王者荣耀直播",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "鲁班七号这个英雄的王者荣耀直播"
+        }
+    },
+    "NLU03804": {
+        "text": "能不能给我来一个露娜极限反杀的游戏讲解视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "露娜极限反杀的游戏讲解视频"
+        }
+    },
+    "NLU03806": {
+        "text": "很想看越南的电影预告片随便播一个给我",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "电影预告片",
+            "region": "越南"
+        }
+    },
+    "NLU03810": {
+        "text": "放一个单依晨2020年在中国好声音里唱歌的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "单依晨2020年在中国好声音里唱歌的视频",
+            "datetime_date": "2020年"
+        }
+    },
+    "NLU03816": {
+        "text": "我想看下张大仙直播大小姐孙尚香急速翻滚飘逸秀走位的直播",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "张大仙直播大小姐孙尚香急速翻滚飘逸秀走位的直播"
+        }
+    },
+    "NLU03819": {
+        "text": "给我们找个益智类动画看呀",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "益智类"
+        }
+    },
+    "NLU03825": {
+        "text": "放一个关于动物的韩国纪录片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "动物的韩国纪录片",
+            "region": "韩国"
+        }
+    },
+    "NLU03828": {
+        "text": "播一个晚上19点更新的国产动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_time": "19点",
+            "region": "国产"
+        }
+    },
+    "NLU03834": {
+        "text": "回放上星期五晚上芒果TV的快乐大本营",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "上星期五",
+            "name": "快乐大本营",
+            "datetime_time": "晚上"
+        }
+    },
+    "NLU03839": {
+        "text": "播放一下4月18日英雄联盟比赛的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "4月18日",
+            "name": "英雄联盟比赛的视频"
+        }
+    },
+    "NLU03843": {
+        "text": "播一个晚上22点更新的国产动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_time": "22点",
+            "region": "国产"
+        }
+    },
+    "NLU03856": {
+        "text": "5月25号的王者荣耀比赛视频给我放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月25号",
+            "name": "王者荣耀比赛视频"
+        }
+    },
+    "NLU03864": {
+        "text": "我想找一下姚明在NBA打篮球的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "姚明在NBA打篮球的视频"
+        }
+    },
+    "NLU03868": {
+        "text": "给我随便找几个王者荣耀的比赛视频来看看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀的比赛视频"
+        }
+    },
+    "NLU03869": {
+        "text": "给我播放2012年国外纪录片神秘阿拉伯",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "神秘阿拉伯",
+            "datetime_date": "2012年"
+        }
+    },
+    "NLU03873": {
+        "text": "给我播放一个百集文献纪录片山河岁月的第三集湘江北去",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "百集文献纪录片山河岁月的第三集湘江北去"
+        }
+    },
+    "NLU03885": {
+        "text": "找一下刘翔的跨栏比赛视频，我想看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "刘翔的跨栏比赛视频"
+        }
+    },
+    "NLU03897": {
+        "text": "我想看修罗剑尊上周五更新的那一集",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "上周五",
+            "name": "修罗剑尊上周五更新的那一集"
+        }
+    },
+    "NLU03910": {
+        "text": "我现在想看郭德纲的相声视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "郭德纲的相声视频"
+        }
+    },
+    "NLU03912": {
+        "text": "帮我播放王者荣耀第一李白2160巅峰赛情况",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀第一李白2160巅峰赛情况"
+        }
+    },
+    "NLU03919": {
+        "text": "播放5月19日王者荣耀2021季中冠军赛对抗赛的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月19日",
+            "name": "王者荣耀2021季中冠军赛对抗赛的视频"
+        }
+    },
+    "NLU03928": {
+        "text": "播一下悬疑的深夜小茶馆这个节目",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "深夜小茶馆"
+        }
+    },
+    "NLU03937": {
+        "text": "查找国产动漫非人哉",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "非人哉",
+            "region": "国产"
+        }
+    },
+    "NLU03975": {
+        "text": "我想看去年12月4日上映哥德眼中最美的城市",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "去年12月4日",
+            "name": "哥德眼中最美的城市"
+        }
+    },
+    "NLU03983": {
+        "text": "能找到动漫版的白蛇传吧给我放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "白蛇传"
+        }
+    },
+    "NLU03993": {
+        "text": "让你播放八爪鱼绘画的相关视频呢啊",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "八爪鱼绘画"
+        }
+    },
+    "NLU04015": {
+        "text": "林依轮淘宝直播帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "林依轮淘宝直播"
+        }
+    },
+    "NLU04028": {
+        "text": "美国电影信条的预告片给我播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "信条的预告片",
+            "region": "美国"
+        }
+    },
+    "NLU04036": {
+        "text": "播放一个不知火CG视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "不知火CG视频"
+        }
+    },
+    "NLU04045": {
+        "text": "看今晚的快乐大本营",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_time": "今晚",
+            "name": "快乐大本营"
+        }
+    },
+    "NLU04046": {
+        "text": "我想看2014年最火的歌曲小苹果的音乐视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "小苹果的音乐视频",
+            "datetime_date": "2014年"
+        }
+    },
+    "NLU04066": {
+        "text": "播放一个金来沅主演的电视剧的介绍视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "金来沅主演的电视剧的介绍视频"
+        }
+    },
+    "NLU04080": {
+        "text": "找一个讲述韩国地理环境的纪录片来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "韩国地理环境的纪录片",
+            "region": "韩国"
+        }
+    },
+    "NLU04086": {
+        "text": "香港的电视剧金玉满堂第二十集花絮播放出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "金玉满堂第二十集花絮",
+            "region": "香港"
+        }
+    },
+    "NLU04090": {
+        "text": "国产动漫镇魂街2帮我找出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "镇魂街2",
+            "region": "国产"
+        }
+    },
+    "NLU04097": {
+        "text": "帮我找下韩国女团blackpink去年拍的纪录片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "韩国女团blackpink去年拍的纪录片",
+            "datetime_date": "去年"
+        }
+    },
+    "NLU04101": {
+        "text": "我看一下姚明以前的NBA比赛视频吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "姚明以前的NBA比赛视频"
+        }
+    },
+    "NLU04108": {
+        "text": "今晚十点世界女排联赛中国对韩国在哪个平台直播",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "世界女排联赛中国对韩国",
+            "datetime_time": "今晚十点"
+        }
+    },
+    "NLU04114": {
+        "text": "今天刚更新的小公主苏西播放给我看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "小公主苏西",
+            "datetime_date": "今天"
+        }
+    },
+    "NLU04115": {
+        "text": "找一下日本动漫妖精的尾巴",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "妖精的尾巴",
+            "region": "日本"
+        }
+    },
+    "NLU04121": {
+        "text": "给我放科比的纪录片来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "科比的纪录片"
+        }
+    },
+    "NLU04132": {
+        "text": "B站上鱼子溪的助眠视频给我播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "鱼子溪的助眠视频"
+        }
+    },
+    "NLU04135": {
+        "text": "用芒果TV看看今天下午三点的家常菜节目",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "家常菜",
+            "datetime_time": "下午三点"
+        }
+    },
+    "NLU04138": {
+        "text": "昨天的NBA比赛是上午10点吗，播来看看",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "昨天",
+            "name": "NBA比赛",
+            "datetime_time": "上午10点"
+        }
+    },
+    "NLU04146": {
+        "text": "2021年张哲瀚唱歌的视频找一个出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "张哲瀚唱歌的视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU04161": {
+        "text": "随便播一个2021年晚上19点更新的动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2021年",
+            "datetime_time": "19点"
+        }
+    },
+    "NLU04163": {
+        "text": "能否给我播放今年新秀李亚杰的跳水比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今年",
+            "name": "新秀李亚杰的跳水比赛视频"
+        }
+    },
+    "NLU04183": {
+        "text": "国产动漫喜羊羊与灰太狼帮我找出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "喜羊羊与灰太狼",
+            "region": "国产"
+        }
+    },
+    "NLU04185": {
+        "text": "我想看2020年谍战电视剧旗袍美探的剧情讲解视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "旗袍美探的剧情讲解视频",
+            "datetime_time": "2020年"
+        }
+    },
+    "NLU04218": {
+        "text": "2020年在中国播出的动漫天官赐福帮我放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "天官赐福",
+            "datetime_date": "2020年",
+            "region": "中国"
+        }
+    },
+    "NLU04222": {
+        "text": "播一个晚上17点更新的国产动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_time": "17点",
+            "region": "国产"
+        }
+    },
+    "NLU04272": {
+        "text": "选秀综艺创造营2021第一期给我播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "创造营2021"
+        }
+    },
+    "NLU04276": {
+        "text": "找一找动漫哈尔的移动城堡",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "哈尔的移动城堡"
+        }
+    },
+    "NLU04278": {
+        "text": "刘明月配音的动漫帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "刘明月配音的动漫"
+        }
+    },
+    "NLU04305": {
+        "text": "今年的喜洋洋与灰太狼是不是与以往的不一样",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今年",
+            "name": "喜洋洋与灰太狼"
+        }
+    },
+    "NLU04317": {
+        "text": "有没有迪丽热巴的电视剧长歌行的幕后花絮，放来看一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "迪丽热巴的电视剧长歌行的幕后花絮"
+        }
+    },
+    "NLU04326": {
+        "text": "找一找动漫魔道祖师",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "魔道祖师"
+        }
+    },
+    "NLU04334": {
+        "text": "周笔畅参加的下一站传奇的相关视频帮我找出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "周笔畅参加的下一站传奇"
+        }
+    },
+    "NLU04335": {
+        "text": "还能找得到凯文科恩演奏绿色花园的视频吗",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "凯文科恩演奏绿色花园的视频"
+        }
+    },
+    "NLU04343": {
+        "text": "帮我查看纪录片酒美的中国有多少集",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "酒美的中国"
+        }
+    },
+    "NLU04346": {
+        "text": "龚俊和张哲瀚参加快乐大本营的那期帮我找出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "龚俊和张哲瀚参加快乐大本营的那期"
+        }
+    },
+    "NLU04360": {
+        "text": "给我播放2018年省运会青少年组蹦床比赛的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "省运会青少年组蹦床比赛的视频",
+            "datetime_date": "2018年"
+        }
+    },
+    "NLU04380": {
+        "text": "我要看动漫枪火天灵第一季的第19集",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "枪火天灵"
+        }
+    },
+    "NLU04383": {
+        "text": "现在需要你播放百家讲坛中的雍正三十年",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "百家讲坛中的雍正三十年"
+        }
+    },
+    "NLU04391": {
+        "text": "帮我找一个做糖醋排骨的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "做糖醋排骨的视频"
+        }
+    },
+    "NLU04411": {
+        "text": "播放熊出没",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "熊出没"
+        }
+    },
+    "NLU04432": {
+        "text": "帮我找下去年张靓颖在中国新说唱的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "去年张靓颖在中国新说唱的视频",
+            "datetime_date": "去年"
+        }
+    },
+    "NLU04434": {
+        "text": "我想看这部动漫斗罗大陆",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "斗罗大陆"
+        }
+    },
+    "NLU04440": {
+        "text": "我还要看俄罗斯美食up主的吃播",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "俄罗斯美食up主的吃播",
+            "region": "俄罗斯"
+        }
+    },
+    "NLU04469": {
+        "text": "随便放个动画片",
+        "intent": "Video-Play",
+        "slots": {}
+    },
+    "NLU04482": {
+        "text": "给我播放2021年创造营衍生节目营人进去异次元会变成笨蛋吗第四集",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "创造营衍生节目营人进去异次元会变成笨蛋吗第四集",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU04488": {
+        "text": "搜索一下中国男团INTO1成团夜的比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "中国男团INTO1成团夜的比赛视频"
+        }
+    },
+    "NLU04492": {
+        "text": "查询一下创造营2021的相关视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "创造营2021"
+        }
+    },
+    "NLU04514": {
+        "text": "香港的电视剧法证先锋第一部剧情讲解播放出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "法证先锋第一部剧情讲解",
+            "region": "香港"
+        }
+    },
+    "NLU04547": {
+        "text": "找关于北京财经类型的视频我想学习一下",
+        "intent": "Video-Play",
+        "slots": {
+            "region": "北京",
+            "name": "北京财经类型的视频"
+        }
+    },
+    "NLU04550": {
+        "text": "去年杨健十米跳台夺冠的视频还能找到吗",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "去年",
+            "name": "杨健十米跳台夺冠的视频"
+        }
+    },
+    "NLU04551": {
+        "text": "帮我找个高热门玩家玩王者荣耀里貂蝉的直播",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "高热门玩家玩王者荣耀里貂蝉的直播"
+        }
+    },
+    "NLU04557": {
+        "text": "韩国综艺节目超人回来了帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "超人回来了",
+            "region": "韩国"
+        }
+    },
+    "NLU04560": {
+        "text": "5月20号的和平精英竞技比赛直播给我回放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月20号",
+            "name": "和平精英竞技比赛"
+        }
+    },
+    "NLU04564": {
+        "text": "很想看韩国的电视剧讲解视频随便播一个给我",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "电视剧讲解视频",
+            "region": "韩国"
+        }
+    },
+    "NLU04589": {
+        "text": "红米 Note 8 Pro的开箱视频找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "红米 Note 8 Pro"
+        }
+    },
+    "NLU04591": {
+        "text": "给我放一下关于印度新冠疫情的新闻",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "印度新冠疫情的新闻",
+            "region": "印度"
+        }
+    },
+    "NLU04597": {
+        "text": "放一下今天晚上的腾讯新闻",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "腾讯新闻",
+            "datetime_time": "晚上"
+        }
+    },
+    "NLU04609": {
+        "text": "立刻找出来华为MatePad10.8的测评视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "华为MatePad10.8的测评视频"
+        }
+    },
+    "NLU04612": {
+        "text": "找几个贝克汉姆的金典足球比赛视频来放",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "贝克汉姆的金典足球比赛视频"
+        }
+    },
+    "NLU04633": {
+        "text": "韩国综艺节目running man帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "running man",
+            "region": "韩国"
+        }
+    },
+    "NLU04650": {
+        "text": "2021年在中国播出的正青春拍摄花絮帮我播放吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "正青春拍摄花絮",
+            "datetime_date": "2021年",
+            "region": "中国"
+        }
+    },
+    "NLU04652": {
+        "text": "我想看B站上狐狸姐姐的助眠视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "狐狸姐姐的助眠视频"
+        }
+    },
+    "NLU04664": {
+        "text": "给我播放蒙面唱将猜猜猜",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "蒙面唱将猜猜猜"
+        }
+    },
+    "NLU04690": {
+        "text": "播放一下国创动漫武神主宰",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "武神主宰",
+            "region": "国创"
+        }
+    },
+    "NLU04694": {
+        "text": "B站上的说唱新世代的相关视频快点给我播放",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "说唱新世代"
+        }
+    },
+    "NLU04699": {
+        "text": "查找电影你的婚礼的花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "你的婚礼的花絮"
+        }
+    },
+    "NLU04709": {
+        "text": "B站上的我是特优声的相关视频快点给我播放",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "我是特优声"
+        }
+    },
+    "NLU04713": {
+        "text": "播一下晚上18点更新的大浪淘沙的介绍视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "大浪淘沙的介绍视频",
+            "datetime_time": "18点"
+        }
+    },
+    "NLU04714": {
+        "text": "放一下宫崎骏的动漫片龙猫第30分钟的片段",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "宫崎骏的动漫片龙猫第30分钟的片段"
+        }
+    },
+    "NLU04735": {
+        "text": "放一下刘德华2021年春晚表演的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "刘德华2021年春晚表演的视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU04740": {
+        "text": "5月24日关于讲解植物大战僵尸的这就是宇宙最强生物的游戏视频给我找下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月24日",
+            "name": "讲解植物大战僵尸的这就是宇宙最强生物的游戏视频"
+        }
+    },
+    "NLU04742": {
+        "text": "帮我回放下王者荣耀KPL春季赛",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀KPL春季赛"
+        }
+    },
+    "NLU04748": {
+        "text": "吴昕主持的快乐大本营帮我播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "吴昕主持的快乐大本营"
+        }
+    },
+    "NLU04749": {
+        "text": "播放一个帝释天CG视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "帝释天CG视频"
+        }
+    },
+    "NLU04751": {
+        "text": "找一下蔡依林2018年演唱会唱歌的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "蔡依林2018年演唱会唱歌的视频",
+            "datetime_date": "2018年"
+        }
+    },
+    "NLU04756": {
+        "text": "找一个美国的流行音乐视频来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "美国的流行音乐视频",
+            "region": "美国"
+        }
+    },
+    "NLU04766": {
+        "text": "那个台湾电视剧泡沫之夏的花絮播放一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "泡沫之夏的花絮",
+            "region": "台湾"
+        }
+    },
+    "NLU04768": {
+        "text": "我想看创造营2021年的二公比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "创造营2021年的二公比赛视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU04769": {
+        "text": "找一下每周六，20点更新的国产动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "每周六",
+            "datetime_time": "20点",
+            "region": "国产"
+        }
+    },
+    "NLU04774": {
+        "text": "我想看白敬亭拍摄八零九零的现场花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "白敬亭拍摄八零九零的现场花絮"
+        }
+    },
+    "NLU04778": {
+        "text": "昨天下午有没有跳水运动比赛啊，放来看看啊",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "昨天",
+            "name": "跳水运动比赛",
+            "datetime_time": "下午"
+        }
+    },
+    "NLU04781": {
+        "text": "播放一下在2014年6月23日艾莉婕发行的专辑《Blonde》的音乐MV吧",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2014年6月23日",
+            "name": "艾莉婕发行的专辑《Blonde》的音乐MV吧"
+        }
+    },
+    "NLU04783": {
+        "text": "我想看一下林丹的羽毛球比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "林丹的羽毛球比赛视频"
+        }
+    },
+    "NLU04800": {
+        "text": "国产动漫斗破苍穹帮我找出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "斗破苍穹",
+            "region": "国产"
+        }
+    },
+    "NLU04801": {
+        "text": "看杨幂唱歌的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "杨幂唱歌的视频"
+        }
+    },
+    "NLU04807": {
+        "text": "孙悦的篮球比赛视频给我放一个",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "孙悦的篮球比赛视频"
+        }
+    },
+    "NLU04827": {
+        "text": "小米11x的开箱视频找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "小米11x的开箱视频"
+        }
+    },
+    "NLU04838": {
+        "text": "S23赛季达摩打崩钟无艳这个精彩的游戏视频是在哪天播放的给我重播下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "S23赛季达摩打崩钟无艳这个精彩的游戏视频"
+        }
+    },
+    "NLU04840": {
+        "text": "潘长江的小品我想现在就看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "潘长江的小品"
+        }
+    },
+    "NLU04841": {
+        "text": "找出来张艺兴跳舞的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "张艺兴跳舞的视频"
+        }
+    },
+    "NLU04853": {
+        "text": "我想看今年的逗小猴开心的游戏讲解视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "逗小猴开心的游戏讲解视频",
+            "datetime_date": "今年"
+        }
+    },
+    "NLU04854": {
+        "text": "打开爱奇艺播放肖战的电视剧花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "肖战的电视剧花絮"
+        }
+    },
+    "NLU04863": {
+        "text": "播放下午4点的QQ飞车车神赛",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "QQ飞车车神赛",
+            "datetime_date": "下午4点"
+        }
+    },
+    "NLU04887": {
+        "text": "我想看在腾讯APP上播放的极限挑战了",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "极限挑战"
+        }
+    },
+    "NLU04898": {
+        "text": "三国演义动漫版的给放一下啊",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "三国演义"
+        }
+    },
+    "NLU04910": {
+        "text": "那个韩国电视剧恶之花的花絮播放一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "韩国电视剧恶之花的花絮",
+            "region": "韩国"
+        }
+    },
+    "NLU04930": {
+        "text": "可不可以帮我搜索下2019年汪峰的世界巡回演唱会的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2019年",
+            "name": "汪峰的世界巡回演唱会的视频"
+        }
+    },
+    "NLU04939": {
+        "text": "今天给我播放一个搞笑的欧美动漫先导片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "搞笑的欧美动漫先导片",
+            "region": "欧美",
+            "datetime_date": "今天"
+        }
+    },
+    "NLU04957": {
+        "text": "查找动漫名侦探柯南",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "名侦探柯南"
+        }
+    },
+    "NLU04971": {
+        "text": "给我播放3月5号的英雄联盟比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "3月5号",
+            "name": "英雄联盟比赛视频"
+        }
+    },
+    "NLU05004": {
+        "text": "给我搜索一部军事纪录片",
+        "intent": "Video-Play",
+        "slots": {}
+    },
+    "NLU05008": {
+        "text": "放一下杨幂求佛的MV",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "杨幂求佛的MV"
+        }
+    },
+    "NLU05009": {
+        "text": "帮我找一个做腰果虾仁的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "做腰果虾仁的视频"
+        }
+    },
+    "NLU05035": {
+        "text": "给我找一下任贤齐2020年巡回演唱会唱歌的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "任贤齐2020年巡回演唱会唱歌的视频",
+            "datetime_date": "2020年"
+        }
+    },
+    "NLU05056": {
+        "text": "快点找出来电视剧炊事班的故事拍摄花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "拍摄花絮"
+        }
+    },
+    "NLU05060": {
+        "text": "播放韩语教学视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "韩语教学视频"
+        }
+    },
+    "NLU05065": {
+        "text": "薇娅淘宝直播帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "薇娅淘宝直播"
+        }
+    },
+    "NLU05071": {
+        "text": "2019年上映的纪录片天启第二次世界大战给我找一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "天启第二次世界大战",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU05083": {
+        "text": "给我儿子来一个日本动漫电影龙猫的剧情简介解说视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "龙猫的剧情简介解说视频",
+            "region": "日本"
+        }
+    },
+    "NLU05087": {
+        "text": "魁拔之殊途全7集按顺序播放我想看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "魁拔之殊途"
+        }
+    },
+    "NLU05090": {
+        "text": "我想看雷佳音走红毯的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "雷佳音走红毯的视频"
+        }
+    },
+    "NLU05111": {
+        "text": "我要看B站的动漫天官赐福",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "天官赐福"
+        }
+    },
+    "NLU05113": {
+        "text": "我想看有关恐龙的纪录片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "恐龙的纪录片"
+        }
+    },
+    "NLU05137": {
+        "text": "我要看4月26号王者荣耀竞技赛的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "4月26号",
+            "name": "王者荣耀竞技赛的视频"
+        }
+    },
+    "NLU05144": {
+        "text": "日本动漫魔王勇者给我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "魔王勇者",
+            "region": "日本"
+        }
+    },
+    "NLU05147": {
+        "text": "国产动漫天宝伏妖录帮我找出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "天宝伏妖录",
+            "region": "国产"
+        }
+    },
+    "NLU05154": {
+        "text": "我想看时代少年团2020年在湖南卫视春晚上唱歌的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "时代少年团2020年在湖南卫视春晚上唱歌的视频",
+            "datetime_date": "2020年"
+        }
+    },
+    "NLU05159": {
+        "text": "放一下5月25日的关于美国新冠疫情方面的新闻",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月25日",
+            "name": "美国新冠疫情方面的新闻",
+            "region": "美国"
+        }
+    },
+    "NLU05162": {
+        "text": "给我来一个2018上映的关于旅游的国外纪录片吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "旅游的国外纪录片",
+            "datetime_date": "2018"
+        }
+    },
+    "NLU05163": {
+        "text": "请给我播放2019年美国电视剧守望者第一季剧情讲解",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "守望者第一季剧情讲解",
+            "datetime_time": "2019年",
+            "region": "美国"
+        }
+    },
+    "NLU05169": {
+        "text": "国产动漫画江湖之不良人帮我找出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "画江湖之不良人",
+            "region": "国产"
+        }
+    },
+    "NLU05176": {
+        "text": "我想看拍摄花絮2019年谍战电视剧光荣时代的",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "拍摄花絮2019年谍战电视剧光荣时代的",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU05178": {
+        "text": "放一个讲述中国人文风情的纪录片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "中国人文风情的纪录片"
+        }
+    },
+    "NLU05179": {
+        "text": "现在给我播一下5月5号的王者荣耀竞技赛的比赛情况",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月5号",
+            "name": "王者荣耀竞技赛"
+        }
+    },
+    "NLU05180": {
+        "text": "3月21日直播的绝地求生籽岷的新游戏第十五集给我重播一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "3月21日",
+            "name": "绝地求生籽岷的新游戏第十五集"
+        }
+    },
+    "NLU05187": {
+        "text": "能不能放推理类型的小说让我烧脑一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "推理类型的小说"
+        }
+    },
+    "NLU05196": {
+        "text": "我想看王者荣耀国服娜可露露的直播",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀国服娜可露露的直播"
+        }
+    },
+    "NLU05214": {
+        "text": "超级迷你战士的相关视频给我按顺序播放",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "超级迷你战士"
+        }
+    },
+    "NLU05218": {
+        "text": "B站上的动物圈的问号脸的相关视频快点给我播放",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "动物圈的问号脸"
+        }
+    },
+    "NLU05223": {
+        "text": "我侄女想看百变小樱",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "百变小樱"
+        }
+    },
+    "NLU05228": {
+        "text": "龚俊参加快乐大本营的那期帮我找出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "龚俊参加快乐大本营的那期"
+        }
+    },
+    "NLU05280": {
+        "text": "我最喜欢的中国动漫是刺客伍六七精彩剪辑麻烦打开吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "刺客伍六七精彩剪辑"
+        }
+    },
+    "NLU05288": {
+        "text": "2021年邓紫棋唱歌的视频找一个出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "2021年邓紫棋唱歌的视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU05313": {
+        "text": "我想看动漫魔道祖师给我播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "魔道祖师"
+        }
+    },
+    "NLU05316": {
+        "text": "5月25日下午两点的掘金战开拓者的NBA给我再放一遍",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月25日",
+            "name": "掘金战开拓者的NBA",
+            "datetime_time": "下午两点"
+        }
+    },
+    "NLU05317": {
+        "text": "给我放一下经典国漫黑白警长",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "黑白警长"
+        }
+    },
+    "NLU05324": {
+        "text": "好想看湖南足球比赛直播",
+        "intent": "Video-Play",
+        "slots": {
+            "region": "湖南",
+            "name": "足球比赛直播"
+        }
+    },
+    "NLU05327": {
+        "text": "我想看玄幻动漫万界独尊",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "万界独尊"
+        }
+    },
+    "NLU05346": {
+        "text": "播放功夫熊猫幕后纪录片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "功夫熊猫幕后纪录片"
+        }
+    },
+    "NLU05355": {
+        "text": "播放日本动漫中华小当家",
+        "intent": "Video-Play",
+        "slots": {
+            "region": "日本",
+            "name": "中华小当家"
+        }
+    },
+    "NLU05364": {
+        "text": "请帮我播放4月10日王者荣耀竞技比赛的情况",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "4月10日",
+            "name": "王者荣耀竞技比赛"
+        }
+    },
+    "NLU05380": {
+        "text": "找出来佟丽娅跳舞的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "佟丽娅跳舞的视频"
+        }
+    },
+    "NLU05390": {
+        "text": "播放动漫幽灵公主",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "幽灵公主"
+        }
+    },
+    "NLU05401": {
+        "text": "我要看连载的2021年最新的国漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU05406": {
+        "text": "3月号的王者荣耀竞技赛再给我播一遍",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "3月号",
+            "name": "王者荣耀竞技赛"
+        }
+    },
+    "NLU05415": {
+        "text": "找出来周震南跳舞的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "周震南跳舞的视频"
+        }
+    },
+    "NLU05417": {
+        "text": "能帮我找到六小龄童拍摄西游记的现场视频吗",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "六小龄童拍摄西游记的现场视频"
+        }
+    },
+    "NLU05440": {
+        "text": "查找电影怦然心动的幕后故事",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "怦然心动的幕后故事"
+        }
+    },
+    "NLU05457": {
+        "text": "播放2018年等风来这个纪录片",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2018年",
+            "name": "等风来"
+        }
+    },
+    "NLU05470": {
+        "text": "找一下吴奇隆电视剧的幕后花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "吴奇隆电视剧的幕后花絮"
+        }
+    },
+    "NLU05480": {
+        "text": "我想看虞书欣参加青春有你2初舞台的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "虞书欣参加青春有你2初舞台的视频"
+        }
+    },
+    "NLU05511": {
+        "text": "我想看前天张大仙直播的鲁班教学",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "前天",
+            "name": "张大仙直播的鲁班教学"
+        }
+    },
+    "NLU05522": {
+        "text": "打开爱奇艺找动漫片画江湖之不良人配音演员其他视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "画江湖之不良人配音演员其他视频"
+        }
+    },
+    "NLU05534": {
+        "text": "还能找到2014年陈晓和陈妍希携手高调唱你我的视频吗",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "陈晓和陈妍希携手高调唱你我的视频",
+            "datetime_date": "2014年"
+        }
+    },
+    "NLU05537": {
+        "text": "找出来迪丽热巴跳舞的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "迪丽热巴跳舞的视频"
+        }
+    },
+    "NLU05538": {
+        "text": "4月9日那天是不是播放了边路蒙恬被花木兰打哭的游戏视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "4月9日",
+            "name": "边路蒙恬被花木兰打哭的游戏视频"
+        }
+    },
+    "NLU05567": {
+        "text": "找有关关晓彤的综艺",
+        "intent": "Video-Play",
+        "slots": {}
+    },
+    "NLU05602": {
+        "text": "5月11日在澳大利亚人们为考拉接种预防衣原体感染疫苗的新闻视频给我播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月11日",
+            "name": "人们为考拉接种预防衣原体感染疫苗的新闻视频",
+            "region": "澳大利亚"
+        }
+    },
+    "NLU05605": {
+        "text": "把邓超结婚的视频找出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "邓超结婚的视频"
+        }
+    },
+    "NLU05629": {
+        "text": "给我放一个周星驰的电影的幕后花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "周星驰的电影的幕后花絮"
+        }
+    },
+    "NLU05641": {
+        "text": "那个中国电视剧司藤的花絮播放一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "中国电视剧司藤的花絮",
+            "region": "中国"
+        }
+    },
+    "NLU05644": {
+        "text": "日本动漫NANA给我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "NANA",
+            "region": "日本"
+        }
+    },
+    "NLU05655": {
+        "text": "了不起的卢旺达这部国外纪录片只有一集吗我想看啊",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "了不起的卢旺达"
+        }
+    },
+    "NLU05670": {
+        "text": "王一博跳街舞的视频找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王一博跳街舞的视频"
+        }
+    },
+    "NLU05684": {
+        "text": "推荐一部BBC制作的评分最好的纪录片来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "BBC制作的评分最好的纪录片"
+        }
+    },
+    "NLU05689": {
+        "text": "播放NBA全明星赛",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "NBA全明星赛"
+        }
+    },
+    "NLU05695": {
+        "text": "放一个刘谦表演的魔术来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "刘谦表演的魔术"
+        }
+    },
+    "NLU05697": {
+        "text": "给我播放2019邓超主持的奔跑吧兄弟",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2019",
+            "name": "邓超主持的奔跑吧兄弟"
+        }
+    },
+    "NLU05701": {
+        "text": "把上周六置顶的纪录片国家宝藏播放出来",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "上周六",
+            "name": "国家宝藏"
+        }
+    },
+    "NLU05704": {
+        "text": "找一个今天最新投稿的鬼畜调教视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "最新投稿的鬼畜调教视频",
+            "datetime_date": "今天"
+        }
+    },
+    "NLU05713": {
+        "text": "红米 Note 10 Pro的开箱视频找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "红米 Note 10 Pro的开箱视频"
+        }
+    },
+    "NLU05718": {
+        "text": "我想看2019年在香港举行的世界女排联赛中国女排对日本女排的那场比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "世界女排联赛中国女排对日本女排的那场比赛视频",
+            "region": "香港",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU05719": {
+        "text": "我想看2020年谍战电视剧使徒行者3主演cut",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "使徒行者3主演cut",
+            "datetime_time": "2020年"
+        }
+    },
+    "NLU05729": {
+        "text": "找出5.29日3点播出的动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5.29日",
+            "datetime_time": "3点"
+        }
+    },
+    "NLU05737": {
+        "text": "宋雨琦参加偶像运动会的艺术体操比赛视频快点帮我找找我很想看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "宋雨琦参加偶像运动会的艺术体操比赛视频"
+        }
+    },
+    "NLU05750": {
+        "text": "看周深唱的大鱼海棠",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "大鱼海棠"
+        }
+    },
+    "NLU05753": {
+        "text": "鹿晗在创造营2020年跳主题曲的视频还能找到吗",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2020年",
+            "name": "鹿晗在创造营2020年跳主题曲的视频"
+        }
+    },
+    "NLU05760": {
+        "text": "陈伟霆最新电视剧的幕后花絮播来看看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "陈伟霆最新电视剧的幕后花絮"
+        }
+    },
+    "NLU05782": {
+        "text": "帮我找下故宫100这部记录片看下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "故宫100"
+        }
+    },
+    "NLU05787": {
+        "text": "给我找一下羽毛球的教学视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "羽毛球的教学视频"
+        }
+    },
+    "NLU05792": {
+        "text": "我想看26日早上七点多的吴孟超遗体告别仪式的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "26日",
+            "name": "吴孟超遗体告别仪式的视频",
+            "datetime_time": "早上七点多"
+        }
+    },
+    "NLU05801": {
+        "text": "立刻找出来Redmibook Pro 14 锐龙版的测评视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "Redmibook Pro 14 锐龙版的测评视频"
+        }
+    },
+    "NLU05804": {
+        "text": "找下5月22号更新的小玲玩具的相关视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "小玲玩具",
+            "datetime_date": "5月22号"
+        }
+    },
+    "NLU05805": {
+        "text": "给我放一下英国纪录片蓝色星球",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "蓝色星球",
+            "region": "英国"
+        }
+    },
+    "NLU05825": {
+        "text": "给我找一下中国电视剧棋魂的拍戏花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "棋魂的拍戏花絮",
+            "region": "中国"
+        }
+    },
+    "NLU05827": {
+        "text": "3月29日用石头物资吃鸡的那个视频我想要看",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "3月29日",
+            "name": "用石头物资吃鸡的那个视频"
+        }
+    },
+    "NLU05836": {
+        "text": "重新播放蒙面唱将猜猜猜2",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "蒙面唱将猜猜猜2"
+        }
+    },
+    "NLU05840": {
+        "text": "给我放一个美国流行音乐排行第一的mv",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "美国流行音乐排行第一的mv",
+            "region": "美国"
+        }
+    },
+    "NLU05868": {
+        "text": "吴昕参加的我家那闺女2帮我播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "吴昕参加的我家那闺女2"
+        }
+    },
+    "NLU05874": {
+        "text": "放一下日本动漫片航海王的三分钟精彩视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "航海王的三分钟精彩视频",
+            "region": "日本"
+        }
+    },
+    "NLU05900": {
+        "text": "能否给我来一个2019年1月2日的兰陵王辅助骚扰教学的游戏视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2019年1月2日",
+            "name": "兰陵王辅助骚扰教学的游戏视频"
+        }
+    },
+    "NLU05931": {
+        "text": "看一下动漫天空之城",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "天空之城"
+        }
+    },
+    "NLU05945": {
+        "text": "黄渤的电影幕后花絮有么，放来看看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "黄渤的电影幕后花絮"
+        }
+    },
+    "NLU05949": {
+        "text": "播放日本动漫片航海王第500集中间的片段",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "航海王第500集中间的片段",
+            "region": "日本"
+        }
+    },
+    "NLU05967": {
+        "text": "上周五有更新神武天尊吗我想看剪辑版的",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "上周五",
+            "name": "神武天尊"
+        }
+    },
+    "NLU05976": {
+        "text": "2019年都市爱情电视剧亲爱的，热爱的花絮播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "亲爱的，热爱的花絮",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU05983": {
+        "text": "我要看纪录片走进毛泽东",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "走进毛泽东"
+        }
+    },
+    "NLU05988": {
+        "text": "我想找下2011年发生的洛阳性奴案的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "洛阳性奴案的视频",
+            "region": "洛阳",
+            "datetime_date": "2011年"
+        }
+    },
+    "NLU05996": {
+        "text": "播放王者荣耀的解说视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀的解说视频"
+        }
+    },
+    "NLU06001": {
+        "text": "我想看希林娜依高在创造营2020唱的喜欢你的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "希林娜依高在创造营2020唱的喜欢你的视频"
+        }
+    },
+    "NLU06010": {
+        "text": "英雄联盟的比赛视频给我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "英雄联盟的比赛视频"
+        }
+    },
+    "NLU06045": {
+        "text": "可不可以帮我找下2020年陈卓璇在创造营2020成团夜的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2020年",
+            "name": "陈卓璇在创造营2020成团夜的视频"
+        }
+    },
+    "NLU06088": {
+        "text": "前天的游戏讲解视频话320抽88个皮肤给我找一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "前天",
+            "name": "前天的游戏讲解视频话320抽88个皮肤"
+        }
+    },
+    "NLU06095": {
+        "text": "帮我在爱奇艺里找下BTV档案这部纪录片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "BTV档案"
+        }
+    },
+    "NLU06099": {
+        "text": "深圳DYG比赛的视频帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "深圳DYG比赛的视频",
+            "region": "深圳"
+        }
+    },
+    "NLU06101": {
+        "text": "查找动漫开心超人",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "开心超人"
+        }
+    },
+    "NLU06103": {
+        "text": "查找动漫犬夜叉",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "犬夜叉"
+        }
+    },
+    "NLU06105": {
+        "text": "找几个姚明的NBA比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "姚明的NBA比赛视频"
+        }
+    },
+    "NLU06112": {
+        "text": "找一找动漫天空之城",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "天空之城"
+        }
+    },
+    "NLU06125": {
+        "text": "我想看2021年乐高游戏的解说视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "乐高游戏的解说视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU06126": {
+        "text": "王俊凯参演的综艺恰好是少年给我播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王俊凯参演的综艺恰好是少年"
+        }
+    },
+    "NLU06137": {
+        "text": "国产动漫全职法师帮我找出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "全职法师",
+            "region": "国产"
+        }
+    },
+    "NLU06140": {
+        "text": "给我播今天下午三点的女子单打乒乓日比赛",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "女子单打乒乓日比赛",
+            "datetime_time": "下午三点"
+        }
+    },
+    "NLU06148": {
+        "text": "给我找那英2019年天津演唱会的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2019年",
+            "name": "那英2019年天津演唱会的视频"
+        }
+    },
+    "NLU06155": {
+        "text": "日本动漫元气少女缘结神第二季给我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "元气少女缘结神",
+            "region": "日本"
+        }
+    },
+    "NLU06164": {
+        "text": "放一下张韶涵在2021年春晚上唱歌的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "张韶涵在2021年春晚上唱歌的视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU06171": {
+        "text": "播一下晚上20点更新的月光变奏曲精简花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "月光变奏曲精简花絮",
+            "datetime_time": "20点"
+        }
+    },
+    "NLU06196": {
+        "text": "放动漫哈尔的移动城堡",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "哈尔的移动城堡"
+        }
+    },
+    "NLU06205": {
+        "text": "放一下杨幂2020电视剧的幕后花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "杨幂2020电视剧的幕后花絮"
+        }
+    },
+    "NLU06206": {
+        "text": "刘亦菲的相关视频找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "刘亦菲的相关视频"
+        }
+    },
+    "NLU06241": {
+        "text": "王一博的歌曲MV帮我搜索一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王一博的歌曲MV"
+        }
+    },
+    "NLU06243": {
+        "text": "我想看撒贝宁明星大侦探里的搞笑视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "撒贝宁明星大侦探里的搞笑视频"
+        }
+    },
+    "NLU06246": {
+        "text": "播放一下国创动漫灵笼",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "灵笼"
+        }
+    },
+    "NLU06252": {
+        "text": "我想看2016年出的动漫片大虞海棠",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "大虞海棠",
+            "datetime_date": "2016年"
+        }
+    },
+    "NLU06254": {
+        "text": "看5月24日晚上九点的王者荣耀游戏解说",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月24日",
+            "name": "王者荣耀游戏解说",
+            "datetime_time": "晚上九点"
+        }
+    },
+    "NLU06259": {
+        "text": "找一下杰克逊的经典摇滚音乐现场表演片段",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "杰克逊的经典摇滚音乐现场表演片段"
+        }
+    },
+    "NLU06271": {
+        "text": "5月25日发布的英首相约翰逊明年7月结婚的新闻视频再给我放下",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月25日",
+            "name": "英首相约翰逊明年7月结婚的新闻视频",
+            "region": "英"
+        }
+    },
+    "NLU06276": {
+        "text": "我想看今天发生的新郎新娘婚车上吵架的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "新郎新娘婚车上吵架的视频"
+        }
+    },
+    "NLU06280": {
+        "text": "找2020年12月20日英雄联盟比赛的视频来看",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2020年12月20日",
+            "name": "英雄联盟比赛的视频"
+        }
+    },
+    "NLU06284": {
+        "text": "2021年全国女子体操锦标赛前三名的精彩片段视频给我回放一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "全国女子体操锦标赛前三名的精彩片段视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU06292": {
+        "text": "还能找到5月15日何必解说的只用一轮积分获得MV P的9游戏视频吗",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月15日",
+            "name": "何必解说的只用一轮积分获得MV P的9游戏视频"
+        }
+    },
+    "NLU06301": {
+        "text": "莫文蔚的歌曲MV帮我搜索一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "莫文蔚的歌曲MV"
+        }
+    },
+    "NLU06325": {
+        "text": "5月21日播放的哥斯拉模式发现C4的这个游戏视频给我打开下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月21日",
+            "name": "哥斯拉模式发现C4的这个游戏视频"
+        }
+    },
+    "NLU06338": {
+        "text": "薛之谦的歌曲MV帮我搜索一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "薛之谦的歌曲MV"
+        }
+    },
+    "NLU06345": {
+        "text": "我想看2020年单依纯在中国好声音唱的寻找失联的爱的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2020年",
+            "name": "单依纯在中国好声音唱的寻找失联的爱的视频"
+        }
+    },
+    "NLU06349": {
+        "text": "放2019年邓超主持的奔跑吧兄弟",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "邓超主持的奔跑吧兄弟",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU06355": {
+        "text": "找出来鹿晗跳舞的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "鹿晗跳舞的视频"
+        }
+    },
+    "NLU06379": {
+        "text": "我想看陈伟霆演古剑奇谭的个人花絮视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "陈伟霆演古剑奇谭的个人花絮视频"
+        }
+    },
+    "NLU06382": {
+        "text": "放一个周星驰导演的电影的幕后花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "周星驰导演的电影的幕后花絮"
+        }
+    },
+    "NLU06390": {
+        "text": "小米MIX FOLD的开箱视频找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "小米MIX FOLD的开箱视频"
+        }
+    },
+    "NLU06400": {
+        "text": "播放纪录片舌尖上的中国第三集",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "舌尖上的中国第三集"
+        }
+    },
+    "NLU06412": {
+        "text": "我要看1986年的动漫超级肥皂就一集给我循环播放",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "超级肥皂",
+            "datetime_date": "1986年"
+        }
+    },
+    "NLU06422": {
+        "text": "给我放一个明道的偶像剧幕后花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "明道的偶像剧幕后花絮"
+        }
+    },
+    "NLU06427": {
+        "text": "请帮我转5月27号凌晨三点的欧冠决赛现场",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月27号",
+            "name": "欧冠决赛",
+            "datetime_time": "凌晨三点"
+        }
+    },
+    "NLU06463": {
+        "text": "2019年1月20日的越南点球大战淘汰约旦给我回访一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2019年1月20日",
+            "name": "越南点球大战淘汰约旦"
+        }
+    },
+    "NLU06464": {
+        "text": "5月24日十点多报道地球每年“吃土”5000多吨这个新闻视频再给我放下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月24日",
+            "name": "地球每年“吃土”5000多吨这个新闻视频",
+            "datetime_time": "十点"
+        }
+    },
+    "NLU06472": {
+        "text": "王者荣耀2021年春季赛季前赛的视频帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀2021年春季赛季前赛",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU06491": {
+        "text": "纪录片电竞进化论帮我查询一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "电竞进化论"
+        }
+    },
+    "NLU06501": {
+        "text": "放韩红2020年巡回演唱会唱歌的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "韩红2020年巡回演唱会唱歌的视频",
+            "datetime_date": "2020年"
+        }
+    },
+    "NLU06525": {
+        "text": "我想看3月22日讲解的黄忠连续带走鲁班亚瑟的游戏视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "3月22日",
+            "name": "3月22日讲解的黄忠连续带走鲁班亚瑟的游戏视频"
+        }
+    },
+    "NLU06542": {
+        "text": "荣耀发财快报5月22日那一期给我再回放下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月22日",
+            "name": "荣耀发财快报"
+        }
+    },
+    "NLU06566": {
+        "text": "吴昕参加的乘风破浪的姐姐帮我播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "吴昕参加的乘风破浪的姐姐"
+        }
+    },
+    "NLU06571": {
+        "text": "给我搜索一部二战纪录片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "二战纪录片"
+        }
+    },
+    "NLU06572": {
+        "text": "有没有赵丽颖唱小幸运的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "赵丽颖唱小幸运的视频"
+        }
+    },
+    "NLU06574": {
+        "text": "日本动漫咒术回战帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "咒术回战",
+            "region": "日本"
+        }
+    },
+    "NLU06585": {
+        "text": "美国好看的动漫精彩解说有么",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "美国好看的动漫精彩解说",
+            "region": "美国"
+        }
+    },
+    "NLU06586": {
+        "text": "那个中国电视剧号手就位的花絮播放一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "号手就位的花絮",
+            "region": "中国"
+        }
+    },
+    "NLU06615": {
+        "text": "5月17日用敌人的抢吃鸡的游戏视频再给我放一遍",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月17日",
+            "name": "用敌人的抢吃鸡的游戏视频"
+        }
+    },
+    "NLU06623": {
+        "text": "随便播一个2021年晚上18点更新的动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2021年",
+            "datetime_time": "18点"
+        }
+    },
+    "NLU06627": {
+        "text": "播放一下国创动漫山河剑心",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "山河剑心",
+            "region": "国创"
+        }
+    },
+    "NLU06646": {
+        "text": "快点找出来电视剧铠甲勇士第一集的花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "铠甲勇士第一集的花絮"
+        }
+    },
+    "NLU06651": {
+        "text": "综艺节目脱口秀大会第3季给我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "脱口秀大会"
+        }
+    },
+    "NLU06655": {
+        "text": "请给我播放2016年美国电视剧副总统第五季拍摄花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "副总统第五季拍摄花絮",
+            "datetime_time": "2016年",
+            "region": "美国"
+        }
+    },
+    "NLU06672": {
+        "text": "我想看王者荣耀解说的回放",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀解说"
+        }
+    },
+    "NLU06673": {
+        "text": "找几个科比以前的金典篮球比赛视频来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "金典篮球比赛视频"
+        }
+    },
+    "NLU06675": {
+        "text": "播放一个鬼王酒吞童子CG视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "鬼王酒吞童子CG视频"
+        }
+    },
+    "NLU06706": {
+        "text": "给我放一下今天有关女排的新闻",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "女排的新闻"
+        }
+    },
+    "NLU06710": {
+        "text": "播放一下山河岁月那个记录片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "山河岁月"
+        }
+    },
+    "NLU06711": {
+        "text": "天美暗改司空震这个王者容易得游戏视频是在哪个月播放的",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "天美暗改司空震这个王者容易得游戏视频"
+        }
+    },
+    "NLU06720": {
+        "text": "2021年隔壁老樊唱歌的视频找一个出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "2021年隔壁老樊唱歌的视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU06737": {
+        "text": "我想要看朗朗在德国音乐会上的独奏",
+        "intent": "Video-Play",
+        "slots": {
+            "region": "德国",
+            "name": "朗朗在德国音乐会上的独奏"
+        }
+    },
+    "NLU06769": {
+        "text": "播放一个赤影妖刀姬CG视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "赤影妖刀姬CG视频"
+        }
+    },
+    "NLU06771": {
+        "text": "播放动漫哈尔的移动城堡",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "哈尔的移动城堡"
+        }
+    },
+    "NLU06774": {
+        "text": "吉克隽逸参加的乘风破浪的姐姐2帮我播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "吉克隽逸参加的乘风破浪的姐姐2"
+        }
+    },
+    "NLU06780": {
+        "text": "给我转播下午4点开始的王者荣耀竞技赛的现场",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀竞技赛的现场",
+            "datetime_time": "下午4点"
+        }
+    },
+    "NLU06782": {
+        "text": "韩国电视剧W两个世界花絮帮我找一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "W两个世界花絮",
+            "region": "韩国"
+        }
+    },
+    "NLU06786": {
+        "text": "请给我转播4月19日的王者荣耀竞技赛",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "4月19日",
+            "name": "王者荣耀竞技赛"
+        }
+    },
+    "NLU06796": {
+        "text": "请给我播放3月20号王者荣耀的比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "3月20号",
+            "name": "王者荣耀的比赛视频"
+        }
+    },
+    "NLU06806": {
+        "text": "播放一个QQ飞车的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "QQ飞车的视频"
+        }
+    },
+    "NLU06811": {
+        "text": "给找个玄幻类的国漫看",
+        "intent": "Video-Play",
+        "slots": {}
+    },
+    "NLU06812": {
+        "text": "给我搜索一部十年抗战记录片",
+        "intent": "Video-Play",
+        "slots": {}
+    },
+    "NLU06821": {
+        "text": "看下第三届王者荣耀全国大赛的直播回放吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "第三届王者荣耀全国大赛的直播回放"
+        }
+    },
+    "NLU06844": {
+        "text": "有科幻国漫吧给随便放一个",
+        "intent": "Video-Play",
+        "slots": {}
+    },
+    "NLU06856": {
+        "text": "现在我哥想听李白的诗词合集",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "李白的诗词合集"
+        }
+    },
+    "NLU06859": {
+        "text": "我想看5月11日的杀害意大利警察的两名美国游客被判终身监禁的报道视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月11日",
+            "name": "杀害意大利警察的两名美国游客被判终身监禁的报道视频",
+            "region": "意大利"
+        }
+    },
+    "NLU06863": {
+        "text": "回放刘涛11月7号在跨界歌王的演唱视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "11月7号",
+            "name": "刘涛11月7号在跨界歌王的演唱视频"
+        }
+    },
+    "NLU06872": {
+        "text": "去年4月11日播放的华晨宇演唱强迫症的视频还能找到吗",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "去年4月11日",
+            "name": "华晨宇演唱强迫症的视频"
+        }
+    },
+    "NLU06903": {
+        "text": "我不是药神的纪录片帮我播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "我不是药神"
+        }
+    },
+    "NLU06930": {
+        "text": "还能不能找到民谣教父鲍勃迪伦在1992年开的演唱会的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "鲍勃迪伦在1992年开的演唱会的视频",
+            "datetime_date": "1992年"
+        }
+    },
+    "NLU06935": {
+        "text": "播放介绍日本人文风情的纪录片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "日本人文风情的纪录片",
+            "region": "日本"
+        }
+    },
+    "NLU06947": {
+        "text": "给我接着放万圣街的第23集我想看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "万圣街"
+        }
+    },
+    "NLU06956": {
+        "text": "最新的跑男给我播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "最新的跑男"
+        }
+    },
+    "NLU06970": {
+        "text": "放一下5月22日晚上9点的英雄联盟2021季中冠军赛的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月22日",
+            "name": "英雄联盟2021季中冠军赛的视频",
+            "datetime_time": "晚上9点"
+        }
+    },
+    "NLU06977": {
+        "text": "4月15号英雄联盟比赛的视频在重放一遍",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "4月15号",
+            "name": "英雄联盟比赛的视频"
+        }
+    },
+    "NLU07006": {
+        "text": "纪录片体内怪物第八季帮我查询一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "体内怪物"
+        }
+    },
+    "NLU07026": {
+        "text": "我想看中国刘翔的生涯纪录片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "中国刘翔的生涯纪录片",
+            "region": "中国"
+        }
+    },
+    "NLU07030": {
+        "text": "帮我找找看王者荣耀里面芈月技能教学视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀里面芈月技能教学视频"
+        }
+    },
+    "NLU07032": {
+        "text": "播一下晚上18点更新的一不小心捡到爱的拍摄花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "一不小心捡到爱的拍摄花絮",
+            "datetime_time": "18点"
+        }
+    },
+    "NLU07033": {
+        "text": "给我找一下莎拉布莱曼1992年在巴塞罗那奥运会上与何塞·卡雷拉斯演唱的《永远的朋友》的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "莎拉布莱曼1992年在巴塞罗那奥运会上与何塞·卡雷拉斯演唱的《永远的朋友》的视频",
+            "region": "巴塞罗那",
+            "datetime_date": "1992年"
+        }
+    },
+    "NLU07058": {
+        "text": "查找动漫成龙历险记",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "成龙历险记"
+        }
+    },
+    "NLU07062": {
+        "text": "我想了解宇宙，帮我回放4月1日播放的宇宙大奥秘吧",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "4月1日",
+            "name": "宇宙大奥秘"
+        }
+    },
+    "NLU07065": {
+        "text": "综艺节目我是特优声帮我查询一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "我是特优声"
+        }
+    },
+    "NLU07074": {
+        "text": "快点找出来电视剧神探狄仁杰中元芳的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "神探狄仁杰中元芳的视频"
+        }
+    },
+    "NLU07086": {
+        "text": "播放一个金明民主演的电视剧介绍视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "金明民主演的电视剧介绍视频"
+        }
+    },
+    "NLU07090": {
+        "text": "找一下日本动漫刀剑神域",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "刀剑神域",
+            "region": "日本"
+        }
+    },
+    "NLU07093": {
+        "text": "播放欧美动漫灰姑娘",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "灰姑娘",
+            "region": "欧美"
+        }
+    },
+    "NLU07095": {
+        "text": "帮我播放王者荣耀国服韩信带飞的直播回放吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀国服韩信带飞的直播回放"
+        }
+    },
+    "NLU07129": {
+        "text": "百分之百兔伤蒙犽我想看这个游戏视频给我播放下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "百分之百兔伤蒙犽"
+        }
+    },
+    "NLU07136": {
+        "text": "放一下2020年冯绍峰在春晚上演出的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2020年",
+            "name": "冯绍峰在春晚上演出的视频"
+        }
+    },
+    "NLU07148": {
+        "text": "给我来一个今年我的世界的游戏解说视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "我的世界的游戏解说视频",
+            "datetime_date": "今年"
+        }
+    },
+    "NLU07178": {
+        "text": "快点找出来电视剧水浒传相关的拍摄花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "水浒传相关的拍摄花絮"
+        }
+    },
+    "NLU07180": {
+        "text": "想看英雄联盟比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "英雄联盟比赛视频"
+        }
+    },
+    "NLU07196": {
+        "text": "2019年都市电视剧少年派花絮播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "少年派花絮",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU07205": {
+        "text": "我要23号下午三点的绝地求生游戏讲解",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "23号",
+            "name": "绝地求生游戏讲解",
+            "datetime_time": "下午三点"
+        }
+    },
+    "NLU07209": {
+        "text": "用腾讯视频放一下4月16号的综艺节目王牌对王牌",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "4月16号",
+            "name": "王牌对王牌"
+        }
+    },
+    "NLU07210": {
+        "text": "播一个晚上10点更新的国产动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_time": "10点",
+            "region": "国产"
+        }
+    },
+    "NLU07220": {
+        "text": "放今天的王者荣耀解说视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "王者荣耀解说视频"
+        }
+    },
+    "NLU07223": {
+        "text": "我要看杨紫在2021年东方卫视跨年演唱会上的演唱视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2021年",
+            "name": "杨紫在2021年东方卫视跨年演唱会上的演唱视频"
+        }
+    },
+    "NLU07227": {
+        "text": "那个中国电视剧山河令的花絮播放一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "中国电视剧山河令的花絮",
+            "region": "中国"
+        }
+    },
+    "NLU07235": {
+        "text": "想吃湖北的家常菜，有视频教学吗",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "湖北的家常菜"
+        }
+    },
+    "NLU07250": {
+        "text": "播放一个张娜拉主演的电视剧介绍视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "张娜拉主演的电视剧介绍视频"
+        }
+    },
+    "NLU07254": {
+        "text": "帮我播放一下王者荣耀的KPL经典赛事回顾",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀的KPL经典赛事回顾"
+        }
+    },
+    "NLU07266": {
+        "text": "放今天早上刚播出的斗破苍穹第三集",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "斗破苍穹",
+            "datetime_time": "早上"
+        }
+    },
+    "NLU07278": {
+        "text": "查找电影你好，李焕英中沈腾cut",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "你好，李焕英中沈腾cut"
+        }
+    },
+    "NLU07288": {
+        "text": "苹果12promax的开箱视频找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "苹果12promax的开箱视频"
+        }
+    },
+    "NLU07301": {
+        "text": "西安WE比赛的视频帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "西安WE比赛的视频",
+            "region": "西安"
+        }
+    },
+    "NLU07302": {
+        "text": "帮我找下王者荣耀K甲职业联赛吧，我很想看呀",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀K甲职业联赛"
+        }
+    },
+    "NLU07316": {
+        "text": "我想看前年1月11日韩信四连超凡打爆人机的游戏视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "前年1月11日",
+            "name": "韩信四连超凡打爆人机的游戏视频"
+        }
+    },
+    "NLU07321": {
+        "text": "我想看5月21日深圳赛格大厦晃动的新闻报道",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月21日",
+            "name": "深圳赛格大厦晃动的新闻报道",
+            "region": "深圳"
+        }
+    },
+    "NLU07329": {
+        "text": "看2020年王者荣耀职业联赛秋季赛总决赛的比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀职业联赛秋季赛总决赛的比赛视频",
+            "datetime_date": "2020年"
+        }
+    },
+    "NLU07331": {
+        "text": "放一个王一博最新电视剧的幕后花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王一博最新电视剧的幕后花絮"
+        }
+    },
+    "NLU07333": {
+        "text": "播放林俊杰唱歌的视频来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "林俊杰唱歌的视频"
+        }
+    },
+    "NLU07342": {
+        "text": "今天的网球比赛视频回放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "网球比赛视频"
+        }
+    },
+    "NLU07344": {
+        "text": "我需要看曾可妮在苏州走秀的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "region": "苏州",
+            "name": "曾可妮在苏州走秀的视频"
+        }
+    },
+    "NLU07349": {
+        "text": "找个哔哩哔哩上的教程演示类视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "教程演示类视频"
+        }
+    },
+    "NLU07360": {
+        "text": "请给我播放2019年美国电视剧真探的拍摄花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "真探的拍摄花絮",
+            "datetime_time": "2019年",
+            "region": "美国"
+        }
+    },
+    "NLU07373": {
+        "text": "给我放爱奇艺的纪录片狮虎王来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "狮虎王"
+        }
+    },
+    "NLU07377": {
+        "text": "我想看一下有关袁隆平的新闻",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "袁隆平的新闻"
+        }
+    },
+    "NLU07378": {
+        "text": "给我播放中国综艺《怦然心动2》第一集",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "怦然心动2",
+            "region": "中国"
+        }
+    },
+    "NLU07391": {
+        "text": "王者荣耀最新解说放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀最新解说"
+        }
+    },
+    "NLU07406": {
+        "text": "找几个中国古典音乐mv播放",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "中国古典音乐mv",
+            "region": "中国"
+        }
+    },
+    "NLU07407": {
+        "text": "给我找姚明的经典NBA比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "姚明的经典NBA比赛视频"
+        }
+    },
+    "NLU07412": {
+        "text": "我想找单依纯清唱隐形的翅膀的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "单依纯清唱隐形的翅膀的视频"
+        }
+    },
+    "NLU07425": {
+        "text": "在7月27日播放的开着斯特拉吃鸡的游戏视频我想再看一遍",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "7月27日",
+            "name": "开着斯特拉吃鸡的游戏视频"
+        }
+    },
+    "NLU07433": {
+        "text": "给我播放玉米姐姐酱在去年10月29日播放的讲解贪吃蛇大作战的吃一顿管三年的节奏的游戏视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "去年10月29日",
+            "name": "贪吃蛇大作战的吃一顿管三年的节奏的游戏视频"
+        }
+    },
+    "NLU07434": {
+        "text": "我想看张大仙玩王者荣耀关羽的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "张大仙玩王者荣耀关羽的视频"
+        }
+    },
+    "NLU07436": {
+        "text": "给我回放一下今年很火的一个小女孩边打乒乓球边哭的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "一个小女孩边打乒乓球边哭的视频",
+            "datetime_date": "今年"
+        }
+    },
+    "NLU07448": {
+        "text": "我弟弟晚上六点想看动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_time": "晚上六点"
+        }
+    },
+    "NLU07454": {
+        "text": "我要看绝地求生全球总决赛2021年的比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2021年",
+            "name": "绝地求生全球总决赛2021年的比赛视频"
+        }
+    },
+    "NLU07457": {
+        "text": "我想看2019年曲棍球比赛的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "曲棍球比赛的视频",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU07470": {
+        "text": "我要看谢娜主持的综艺",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "谢娜主持的综艺"
+        }
+    },
+    "NLU07471": {
+        "text": "我要看韩国动漫片逗比僵尸精彩剪辑",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "逗比僵尸精彩剪辑",
+            "region": "韩国"
+        }
+    },
+    "NLU07478": {
+        "text": "我一会儿看一档音乐类的节目越战越勇",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "越战越勇"
+        }
+    },
+    "NLU07498": {
+        "text": "帮忙找下2018年7月3日火箭少女101演唱的卡路里",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2018年7月3日",
+            "name": "火箭少女101演唱的卡路里"
+        }
+    },
+    "NLU07521": {
+        "text": "回放昨天上午十点的名为中国的纪录片",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "昨天",
+            "datetime_time": "上午十点",
+            "name": "中国"
+        }
+    },
+    "NLU07526": {
+        "text": "播放一下国创动漫一念永恒",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "一念永恒",
+            "region": "国创"
+        }
+    },
+    "NLU07552": {
+        "text": "我想看2020年B站的自制纪录片小小少年",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2020年",
+            "name": "B站的自制纪录片小小少年"
+        }
+    },
+    "NLU07553": {
+        "text": "放一个黄宗泽的TVB电视幕后花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "黄宗泽的TVB电视幕后花絮"
+        }
+    },
+    "NLU07560": {
+        "text": "找一下每周日，11点更新的国产动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "每周日",
+            "datetime_time": "11点",
+            "region": "国产"
+        }
+    },
+    "NLU07561": {
+        "text": "找一下日本动漫工作细胞第二季",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "工作细胞",
+            "region": "日本"
+        }
+    },
+    "NLU07577": {
+        "text": "开始看高中物理教学视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "高中物理教学视频"
+        }
+    },
+    "NLU07579": {
+        "text": "按顺序播放完美世界的前八集我想看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "完美世界"
+        }
+    },
+    "NLU07583": {
+        "text": "我得看王牌对王牌",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王牌对王牌"
+        }
+    },
+    "NLU07591": {
+        "text": "随便播一个2021年晚上00点更新的动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2021年",
+            "datetime_time": "00点"
+        }
+    },
+    "NLU07596": {
+        "text": "那个韩国电视剧女神降临的花絮播放一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "韩国电视剧女神降临的花絮",
+            "region": "韩国"
+        }
+    },
+    "NLU07602": {
+        "text": "放一下今天的关于全球新冠疫情的新闻",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "全球新冠疫情的新闻"
+        }
+    },
+    "NLU07604": {
+        "text": "我想要看宋小宝在2017年辽宁春晚演的烤串",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "宋小宝在2017年辽宁春晚演的烤串",
+            "region": "辽宁",
+            "datetime_date": "2017年"
+        }
+    },
+    "NLU07607": {
+        "text": "看会儿王牌对王牌",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王牌对王牌"
+        }
+    },
+    "NLU07616": {
+        "text": "国产动漫秦时明月帮我找出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "秦时明月",
+            "region": "国产"
+        }
+    },
+    "NLU07617": {
+        "text": "放一下4月20日刺激战场的比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "4月20日",
+            "name": "刺激战场的比赛视频"
+        }
+    },
+    "NLU07662": {
+        "text": "2021年的冒险类动漫斗破苍穹播放",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "斗破苍穹",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU07666": {
+        "text": "我想看虞书欣去年在成团夜的清唱视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "虞书欣去年在成团夜的清唱视频",
+            "datetime_date": "去年"
+        }
+    },
+    "NLU07682": {
+        "text": "锦鲤配过音的动漫帮我找一部出来",
+        "intent": "Video-Play",
+        "slots": {}
+    },
+    "NLU07684": {
+        "text": "转播一下今天的女子双打网球比赛",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "今天的女子双打网球比赛"
+        }
+    },
+    "NLU07694": {
+        "text": "叶一茜淘宝直播帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "叶一茜淘宝直播"
+        }
+    },
+    "NLU07701": {
+        "text": "我想看张碧晨在我是歌手演唱的凉凉的音乐视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "张碧晨在我是歌手演唱的凉凉的音乐视频"
+        }
+    },
+    "NLU07702": {
+        "text": "霍建华电视剧的幕后花絮有么，放一个",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "霍建华电视剧的幕后花絮"
+        }
+    },
+    "NLU07706": {
+        "text": "2月15号王者荣耀比赛视频放来看看",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2月15号",
+            "name": "王者荣耀比赛视频"
+        }
+    },
+    "NLU07736": {
+        "text": "可不可以给我播放2021年世界杯选拔赛女子十米跳台半决赛的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "世界杯选拔赛女子十米跳台半决赛的视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU07739": {
+        "text": "宋茜参加的王牌对王牌的相关视频帮我找出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "宋茜参加的王牌对王牌"
+        }
+    },
+    "NLU07757": {
+        "text": "日本动漫赤发白雪姬给我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "赤发白雪姬",
+            "region": "日本"
+        }
+    },
+    "NLU07767": {
+        "text": "我想要看2015年上映的美国纪录片赌场大揭秘",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "赌场大揭秘",
+            "region": "美国",
+            "datetime_date": "2015年"
+        }
+    },
+    "NLU07774": {
+        "text": "我要看李易峰在2021年春晚上唱歌的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "李易峰在2021年春晚上唱歌的视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU07777": {
+        "text": "打开爱奇艺我要看今天的重庆早间新闻",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "重庆早间新闻"
+        }
+    },
+    "NLU07782": {
+        "text": "给我播放2014年上映的非洲巨型杀手吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "非洲巨型杀手",
+            "datetime_date": "2014年"
+        }
+    },
+    "NLU07785": {
+        "text": "4月14日新闻神奇的植物精油是怎样提取的还能找到其视频吗",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "4月14日",
+            "name": "4月14日新闻神奇的植物精油是怎样提取的"
+        }
+    },
+    "NLU07796": {
+        "text": "想看张柏芝的电影幕后花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "张柏芝的电影幕后花絮"
+        }
+    },
+    "NLU07803": {
+        "text": "播放一个王者荣耀的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀"
+        }
+    },
+    "NLU07805": {
+        "text": "昨天英国播报的消失的图书馆”重见天日 勃朗特姐妹的珍贵手稿将被拍卖的新闻视频给我重放下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "昨天",
+            "name": "播报的消失的图书馆”重见天日 勃朗特姐妹的珍贵手稿将被拍卖的新闻视频",
+            "region": "英国"
+        }
+    },
+    "NLU07810": {
+        "text": "看一下赵薇演的还珠格格的幕后花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "赵薇演的还珠格格的幕后花絮"
+        }
+    },
+    "NLU07813": {
+        "text": "我想看张一山演柒个我的现场花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "张一山演柒个我的现场花絮"
+        }
+    },
+    "NLU07815": {
+        "text": "冒险类的给我放盗墓笔记秦岭神树吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "盗墓笔记秦岭神树"
+        }
+    },
+    "NLU07830": {
+        "text": "我想看2021年谍战电视剧绝密使命拍摄故事",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "绝密使命拍摄故事",
+            "datetime_time": "2021年"
+        }
+    },
+    "NLU07834": {
+        "text": "很想看日本的电视剧排行视频随便播一个给我",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "电视剧排行视频",
+            "region": "日本"
+        }
+    },
+    "NLU07839": {
+        "text": "3月13日李信被猴子打的见到就跑的游戏视频再给我俺放下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "3月13日",
+            "name": "李信被猴子打的见到就跑的游戏视频"
+        }
+    },
+    "NLU07852": {
+        "text": "5月19日海军救出177名海上遇险人员这个新闻视频给我找一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月19日",
+            "name": "海军救出177名海上遇险人员这个新闻视频"
+        }
+    },
+    "NLU07864": {
+        "text": "冒险类国漫卡徒的预告片放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "卡徒的预告片"
+        }
+    },
+    "NLU07888": {
+        "text": "找一下日本动漫四月是你的谎言",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "四月是你的谎言",
+            "region": "日本"
+        }
+    },
+    "NLU07893": {
+        "text": "我想看宋丹丹参与的综艺五十公里桃花坞",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "宋丹丹参与的综艺五十公里桃花坞"
+        }
+    },
+    "NLU07894": {
+        "text": "我想看邓紫棋2012年3月在日本、台湾和香港举办巡回演唱会的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "邓紫棋2012年3月在日本、台湾和香港举办巡回演唱会的视频",
+            "region": "日本、台湾和香港",
+            "datetime_date": "2012年3月"
+        }
+    },
+    "NLU07904": {
+        "text": "给我播一下5月21日英雄联盟2021季中冠军赛半决赛的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月21日",
+            "name": "英雄联盟2021季中冠军赛半决赛的视频"
+        }
+    },
+    "NLU07913": {
+        "text": "能给我播放一下5月20日的一个叫和平精英新增奥特曼系列的游戏解说视频吗",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月20日",
+            "name": "和平精英新增奥特曼系列的游戏解说视频"
+        }
+    },
+    "NLU07917": {
+        "text": "可不可以帮我播放4月29日的这里是北京小胡同里的大人物",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "4月29日",
+            "name": "这里是北京小胡同里的大人物"
+        }
+    },
+    "NLU07924": {
+        "text": "播放谭松韵电视剧的幕后花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "谭松韵电视剧的幕后花絮"
+        }
+    },
+    "NLU07927": {
+        "text": "给我播放初中物理教学视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "初中物理教学视频"
+        }
+    },
+    "NLU07939": {
+        "text": "杨紫参加的向往的生活帮我播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "杨紫参加的向往的生活"
+        }
+    },
+    "NLU07942": {
+        "text": "回放一下5月23日晚上9点英雄联盟2021季中冠军赛的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月23日",
+            "name": "英雄联盟2021季中冠军赛的视频",
+            "datetime_time": "晚上9点"
+        }
+    },
+    "NLU07943": {
+        "text": "给我找下麦当娜在香港举行演唱会的视频吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "麦当娜在香港举行演唱会的视频",
+            "region": "香港"
+        }
+    },
+    "NLU07947": {
+        "text": "给我找一个5月20号的英雄三国的比赛讲解播来看",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月20号",
+            "name": "英雄三国的比赛讲解"
+        }
+    },
+    "NLU07967": {
+        "text": "生化危机游戏的视频播一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "生化危机游戏的视频"
+        }
+    },
+    "NLU07969": {
+        "text": "回放一下5月24号梅西的比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月24号",
+            "name": "梅西的比赛视频"
+        }
+    },
+    "NLU07971": {
+        "text": "放纪录片舌尖上的中国第三集",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "舌尖上的中国第三集"
+        }
+    },
+    "NLU07991": {
+        "text": "给我搜索在武汉纪录片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "在武汉"
+        }
+    },
+    "NLU08009": {
+        "text": "小米11x Pro的开箱视频找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "小米11x Pro的开箱视频"
+        }
+    },
+    "NLU08012": {
+        "text": "帮我播放韩红在2021年春晚上唱歌的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "韩红在2021年春晚上唱歌的视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU08052": {
+        "text": "叶璇的古装电视剧幕后花絮放来看看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "叶璇的古装电视剧幕后花絮"
+        }
+    },
+    "NLU08056": {
+        "text": "播放一下国创动漫灵珑",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "灵珑"
+        }
+    },
+    "NLU08059": {
+        "text": "日本动漫萤火之森给我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "萤火之森",
+            "region": "日本"
+        }
+    },
+    "NLU08078": {
+        "text": "播放2017年上映的电视剧三生三世十里桃花主题曲的音乐MV吧",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2017年",
+            "name": "三生三世十里桃花主题曲的音乐MV"
+        }
+    },
+    "NLU08081": {
+        "text": "请帮我转播4月10日的英雄联盟竞技赛的现场",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "4月10日",
+            "name": "英雄联盟竞技赛"
+        }
+    },
+    "NLU08083": {
+        "text": "帮我找下生命缘生命的礼物第三季这个有关生物的纪录片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": [
+                "生命缘生命的礼物",
+                "生物的纪录片"
+            ]
+        }
+    },
+    "NLU08094": {
+        "text": "昨天有播放讲述动物的纪录片么，播来看看",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "昨天",
+            "name": "动物的纪录片"
+        }
+    },
+    "NLU08124": {
+        "text": "播放欧美动漫成龙历险记第三集",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "成龙历险记",
+            "region": "欧美"
+        }
+    },
+    "NLU08136": {
+        "text": "我想看动漫一人之下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "一人之下"
+        }
+    },
+    "NLU08141": {
+        "text": "我想找到蔡卓宜唱氧气女孩的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "蔡卓宜唱氧气女孩的视频"
+        }
+    },
+    "NLU08143": {
+        "text": "2015年四川幼儿体操比赛视频还能找到吗",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "幼儿体操比赛视频",
+            "region": "四川",
+            "datetime_date": "2015年"
+        }
+    },
+    "NLU08149": {
+        "text": "找一下每周三，12点更新的国产动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "每周三",
+            "datetime_time": "12点",
+            "region": "国产"
+        }
+    },
+    "NLU08154": {
+        "text": "找一下日本动漫夏目友人帐第五季",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "夏目友人帐",
+            "region": "日本"
+        }
+    },
+    "NLU08156": {
+        "text": "香港明星钟汉良的最新电视剧幕后花絮给我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "香港明星钟汉良的最新电视剧幕后花絮",
+            "region": "香港"
+        }
+    },
+    "NLU08161": {
+        "text": "看一下讲述日本美食的纪录片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "日本美食的纪录片",
+            "region": "日本"
+        }
+    },
+    "NLU08165": {
+        "text": "查找电影少年的你拍摄花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "少年的你拍摄花絮"
+        }
+    },
+    "NLU08180": {
+        "text": "快点找出来电视剧回家的诱惑宣传片",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "回家的诱惑宣传片"
+        }
+    },
+    "NLU08181": {
+        "text": "随便播一个2021年晚上21点30更新的动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2021年",
+            "datetime_time": "21点30"
+        }
+    },
+    "NLU08198": {
+        "text": "2021年蔡依林唱歌的视频找一个出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "2021年蔡依林唱歌的视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU08232": {
+        "text": "去年最火的美国亲情动漫电影主人公花絮有么",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "去年",
+            "name": "亲情动漫电影主人公花絮",
+            "region": "美国"
+        }
+    },
+    "NLU08245": {
+        "text": "这里是西藏今天会有吗播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "这里是西藏"
+        }
+    },
+    "NLU08254": {
+        "text": "给我播放青春有你2的一公比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "青春有你2的一公比赛视频"
+        }
+    },
+    "NLU08255": {
+        "text": "2021年在中国播出的刘老根第四部的幕后故事帮我播放吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "刘老根第四部的幕后故事",
+            "datetime_date": "2021年",
+            "region": "中国"
+        }
+    },
+    "NLU08264": {
+        "text": "唐山大地震的纪录片有么，放来姥姥",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "唐山大地震的纪录片"
+        }
+    },
+    "NLU08269": {
+        "text": "帮我找一下前天发生的甘肃马拉松事故的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "前天",
+            "name": "甘肃马拉松事故的视频"
+        }
+    },
+    "NLU08277": {
+        "text": "给我放一下邓紫棋2014年厦门演唱会的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "邓紫棋2014年厦门演唱会的视频",
+            "datetime_date": "2014年"
+        }
+    },
+    "NLU08286": {
+        "text": "我想看去年创造营导师的舞台视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "去年",
+            "name": "创造营导师的舞台视频"
+        }
+    },
+    "NLU08297": {
+        "text": "有没有关于海洋的纪录片，那就帮我播放世上最老的海吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "世上最老的海"
+        }
+    },
+    "NLU08298": {
+        "text": "我想看the9去年成团夜的唱跳视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "the9去年成团夜的唱跳视频",
+            "datetime_date": "去年"
+        }
+    },
+    "NLU08301": {
+        "text": "纪录片你好AI帮我查询一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "你好AI"
+        }
+    },
+    "NLU08307": {
+        "text": "美食纪录片人生一串第二季给我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "人生一串"
+        }
+    },
+    "NLU08334": {
+        "text": "龚俊参加极限挑战的那期帮我找出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "龚俊参加极限挑战的那期"
+        }
+    },
+    "NLU08345": {
+        "text": "今年有没有比较全的我的世界的游戏讲解视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "我的世界的游戏讲解视频",
+            "datetime_date": "今年"
+        }
+    },
+    "NLU08350": {
+        "text": "找一下每周三，10点更新的国产动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "每周三",
+            "datetime_time": "10点",
+            "region": "国产"
+        }
+    },
+    "NLU08357": {
+        "text": "我想看美国电视剧老友记的花絮能找的到吗",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "美国电视剧老友记的花絮",
+            "region": "美国"
+        }
+    },
+    "NLU08358": {
+        "text": "纪录片top gear帮我查询一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "top gear"
+        }
+    },
+    "NLU08366": {
+        "text": "我要看动漫没头脑和不高兴是1962年的那个",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "没头脑和不高兴",
+            "datetime_date": "1962年"
+        }
+    },
+    "NLU08375": {
+        "text": "张萌参加的乘风破浪的姐姐帮我播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "张萌参加的乘风破浪的姐姐"
+        }
+    },
+    "NLU08377": {
+        "text": "美食纪录片全食记给我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "全食记"
+        }
+    },
+    "NLU08391": {
+        "text": "我要看我的偶像迈克尔杰克逊2001年在美国举办的庆祝30周年演唱会的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "迈克尔杰克逊2001年在美国举办的庆祝30周年演唱会的视频",
+            "region": "美国",
+            "datetime_date": "2001年"
+        }
+    },
+    "NLU08393": {
+        "text": "迪丽热巴参加跑男的视频播放一下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "迪丽热巴参加跑男的视频"
+        }
+    },
+    "NLU08411": {
+        "text": "找一詹姆斯的MBA比赛视频来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "詹姆斯的MBA比赛视频"
+        }
+    },
+    "NLU08412": {
+        "text": "给我放秦岚2019年在央视春晚唱歌的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "秦岚2019年在央视春晚唱歌的视频",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU08413": {
+        "text": "播放欧美动漫蜘蛛侠",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "蜘蛛侠",
+            "region": "欧美"
+        }
+    },
+    "NLU08414": {
+        "text": "2021年爱情电视剧司藤的花絮播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "司藤的花絮",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU08418": {
+        "text": "给我找一个讲述动物的美国纪录片来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "讲述动物的美国纪录片",
+            "region": "美国"
+        }
+    },
+    "NLU08423": {
+        "text": "找2020的春晚戏曲演唱视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "春晚戏曲演唱视频",
+            "datetime_date": "2020"
+        }
+    },
+    "NLU08428": {
+        "text": "2021年在中国播出的陈情令的相关花絮帮我播放吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "陈情令",
+            "datetime_date": "2021年",
+            "region": "中国"
+        }
+    },
+    "NLU08436": {
+        "text": "孙悟空17比1项羽被打蒙这个4月09日播放的视频还能找到不",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "4月09日",
+            "name": "孙悟空17比1项羽被打蒙"
+        }
+    },
+    "NLU08463": {
+        "text": "放5月25日晚上8点德约战莫兰的网球比赛",
+        "intent": "Video-Play",
+        "slots": {
+            "name": [
+                "5月25日",
+                "德约战莫兰的网球比赛"
+            ],
+            "datetime_time": "晚上8点"
+        }
+    },
+    "NLU08470": {
+        "text": "查找鹿晗的娱乐新闻",
+        "intent": "Video-Play",
+        "slots": {}
+    },
+    "NLU08476": {
+        "text": "那个泰国电视剧双生花第二集剧情介绍帮我播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "双生花第二集剧情介绍",
+            "region": "泰国"
+        }
+    },
+    "NLU08498": {
+        "text": "最近美国有没得重大的军事新闻啊，放来看看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "重大的军事新闻",
+            "region": "美国"
+        }
+    },
+    "NLU08503": {
+        "text": "B站上的up主变形记的相关视频快点给我播放",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "up主变形记"
+        }
+    },
+    "NLU08504": {
+        "text": "能不能给我播放一下大象秘密的生活",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "大象秘密的生活"
+        }
+    },
+    "NLU08506": {
+        "text": "回放5月15日美国MBA比赛的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月15日",
+            "name": "美国MBA比赛的视频",
+            "region": "美国"
+        }
+    },
+    "NLU08507": {
+        "text": "我想回放2019年英雄联盟全球总决赛的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2019年",
+            "name": "英雄联盟全球总决赛的视频"
+        }
+    },
+    "NLU08513": {
+        "text": "2018年古装爱情电视剧扶摇播的花絮放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "扶摇播的花絮",
+            "datetime_date": "2018年"
+        }
+    },
+    "NLU08531": {
+        "text": "播放杨幂的花边新闻",
+        "intent": "Video-Play",
+        "slots": {}
+    },
+    "NLU08532": {
+        "text": "找一下每周五，18点更新的国产动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "每周五",
+            "datetime_time": "18点",
+            "region": "国产"
+        }
+    },
+    "NLU08537": {
+        "text": "我想看日本动漫",
+        "intent": "Video-Play",
+        "slots": {
+            "region": "日本",
+            "name": "日本动漫"
+        }
+    },
+    "NLU08541": {
+        "text": "找一下日本动漫紫罗兰永恒花园",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "紫罗兰永恒花园",
+            "region": "日本"
+        }
+    },
+    "NLU08551": {
+        "text": "B站上的有点心机又如何的相关视频快点给我播放",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "有点心机又如何"
+        }
+    },
+    "NLU08555": {
+        "text": "我想看于文文2019年在湖南卫视跨年演唱会的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "2019年",
+            "name": "于文文2019年在湖南卫视跨年演唱会的视频"
+        }
+    },
+    "NLU08557": {
+        "text": "我想看周深去年的演唱会合辑视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "周深去年的演唱会合辑视频",
+            "datetime_date": "去年"
+        }
+    },
+    "NLU08562": {
+        "text": "看莫文蔚2019年演唱会唱歌的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "莫文蔚2019年演唱会唱歌的视频",
+            "datetime_date": "2019年"
+        }
+    },
+    "NLU08566": {
+        "text": "给我播放2018年上映的鸟瞰世界第一季吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "鸟瞰世界第一季",
+            "datetime_date": "2018年"
+        }
+    },
+    "NLU08572": {
+        "text": "梅艳芳最后一场演唱会唱歌的视频放来看看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "梅艳芳最后一场演唱会唱歌的视频"
+        }
+    },
+    "NLU08581": {
+        "text": "播放NBA篮球比赛",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "NBA篮球比赛"
+        }
+    },
+    "NLU08586": {
+        "text": "韩国综艺节目我们结婚了帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "我们结婚了",
+            "region": "韩国"
+        }
+    },
+    "NLU08593": {
+        "text": "播放荒野求生纪录片，周二上线的",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "周二",
+            "name": "荒野求生"
+        }
+    },
+    "NLU08596": {
+        "text": "上海今天有没有虎牙直播呢",
+        "intent": "Video-Play",
+        "slots": {
+            "region": "上海",
+            "datetime_date": "今天",
+            "name": "虎牙直播"
+        }
+    },
+    "NLU08599": {
+        "text": "播放一下国创动漫武庚纪",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "武庚纪",
+            "region": "国创"
+        }
+    },
+    "NLU08612": {
+        "text": "岳云鹏的单口相声帮我找一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "岳云鹏的单口相声"
+        }
+    },
+    "NLU08644": {
+        "text": "2016年的国家大地理给我播放下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "国家大地理",
+            "datetime_date": "2016年"
+        }
+    },
+    "NLU08651": {
+        "text": "给放一下2021年的国漫流星幻剑",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "流星幻剑",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU08652": {
+        "text": "看看谢娜主持的综艺",
+        "intent": "Video-Play",
+        "slots": {}
+    },
+    "NLU08658": {
+        "text": "我需要看一下英文版的诗歌短视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "英文版的诗歌短视频"
+        }
+    },
+    "NLU08670": {
+        "text": "今天我想看美国的彼得兔的第2季",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "彼得兔的第2季",
+            "region": "美国",
+            "datetime_date": "今天"
+        }
+    },
+    "NLU08673": {
+        "text": "郎朗的轻音乐钢琴曲视频合集播放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "郎朗的轻音乐钢琴曲视频合集"
+        }
+    },
+    "NLU08702": {
+        "text": "播放体面MV",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "体面MV"
+        }
+    },
+    "NLU08705": {
+        "text": "查找国产动漫狐妖小红娘",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "狐妖小红娘",
+            "region": "国产"
+        }
+    },
+    "NLU08714": {
+        "text": "放5月15号和平精英游戏直播的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月15号",
+            "name": "和平精英游戏直播的视频"
+        }
+    },
+    "NLU08721": {
+        "text": "有没有王者荣耀巅峰赛连胜教学，给我找找相关视频吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "王者荣耀巅峰赛连胜教学"
+        }
+    },
+    "NLU08722": {
+        "text": "我想要重温2020年谢娜和肖战在央视春晚演的喜欢你喜欢我",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "谢娜和肖战在央视春晚演的喜欢你喜欢我",
+            "datetime_date": "2020年"
+        }
+    },
+    "NLU08731": {
+        "text": "我想看5月13日在意大利发生的一女子惨遭误种4剂辉瑞新冠疫苗的新闻播报视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月13日",
+            "name": "发生的一女子惨遭误种4剂辉瑞新冠疫苗的新闻播报视频",
+            "region": "意大利"
+        }
+    },
+    "NLU08733": {
+        "text": "随便放一个刘诗诗的电视剧的幕后花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "刘诗诗的电视剧的幕后花絮"
+        }
+    },
+    "NLU08734": {
+        "text": "B站上的欢天喜地好哥们的相关视频快点给我播放",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "欢天喜地好哥们"
+        }
+    },
+    "NLU08755": {
+        "text": "给我找一部讲述历史文化的英国纪录片来看",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "历史文化的英国纪录片",
+            "region": "英国"
+        }
+    },
+    "NLU08769": {
+        "text": "放一下周杰伦在2021年春晚上唱歌的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "周杰伦在2021年春晚上唱歌的视频"
+        }
+    },
+    "NLU08773": {
+        "text": "看看刘德华演唱会唱歌的视频吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "刘德华演唱会唱歌的视频"
+        }
+    },
+    "NLU08779": {
+        "text": "找一下日本动漫五等分的新娘",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "五等分的新娘",
+            "region": "日本"
+        }
+    },
+    "NLU08790": {
+        "text": "死亡空间游戏的视频播一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "死亡空间"
+        }
+    },
+    "NLU08795": {
+        "text": "给我转一下今天晚上7点的吃鸡游戏直播现场",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "吃鸡游戏直播现场",
+            "datetime_time": "晚上7点"
+        }
+    },
+    "NLU08800": {
+        "text": "2021年王一博唱歌的视频找一个出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "2021年王一博唱歌的视频",
+            "datetime_date": "2021年"
+        }
+    },
+    "NLU08801": {
+        "text": "给我回放4月20魔兽争霸竞技赛的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "4月20",
+            "name": "魔兽争霸竞技赛的视频"
+        }
+    },
+    "NLU08809": {
+        "text": "找几个林丹的羽毛球比赛视频来看一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "林丹的羽毛球比赛视频"
+        }
+    },
+    "NLU08811": {
+        "text": "昨天下午2点有王者荣耀竞技赛吗，播来看看",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "昨天",
+            "name": "王者荣耀竞技赛",
+            "datetime_time": "下午2点"
+        }
+    },
+    "NLU08812": {
+        "text": "给我放周家宏在春晚上魔术表演的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "周家宏在春晚上魔术表演的视频"
+        }
+    },
+    "NLU08818": {
+        "text": "再看一遍湖南足球比赛",
+        "intent": "Video-Play",
+        "slots": {
+            "region": "湖南",
+            "name": "湖南足球比赛"
+        }
+    },
+    "NLU08820": {
+        "text": "播放一下朗朗演奏钢琴曲的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "朗朗演奏钢琴曲的视频"
+        }
+    },
+    "NLU08835": {
+        "text": "给我放一个英国爵士音乐的MV吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "英国爵士音乐的MV",
+            "region": "英国"
+        }
+    },
+    "NLU08839": {
+        "text": "找一下周笔畅在超级女声里唱歌的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "周笔畅在超级女声里唱歌的视频"
+        }
+    },
+    "NLU08844": {
+        "text": "我要看美国纪录片主厨的餐桌",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "主厨的餐桌",
+            "region": "美国"
+        }
+    },
+    "NLU08847": {
+        "text": "给我搜索一部历史记录片",
+        "intent": "Video-Play",
+        "slots": {}
+    },
+    "NLU08850": {
+        "text": "11月10日播放的挑战只用地宫武器吃鸡的视频还能给我回放吗",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "11月10日",
+            "name": "挑战只用地宫武器吃鸡的视频"
+        }
+    },
+    "NLU08871": {
+        "text": "宋茜参加的创造营2020的视频帮我找出来",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "宋茜参加的创造营2020"
+        }
+    },
+    "NLU08880": {
+        "text": "立刻找出来华为平板 M6的测评视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "华为平板 M6的测评视频"
+        }
+    },
+    "NLU08889": {
+        "text": "我需要看刘雯在北京走秀的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "region": "北京",
+            "name": "刘雯在北京走秀的视频"
+        }
+    },
+    "NLU08891": {
+        "text": "我想看一下5月20号关于新冠疫情方面的新闻",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "5月20号",
+            "name": "新冠疫情方面的新闻"
+        }
+    },
+    "NLU08906": {
+        "text": "我想看看今天有什么体育比赛",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "体育比赛"
+        }
+    },
+    "NLU08910": {
+        "text": "请给我播放2020年美国电视剧西部世界第三季讲解视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "西部世界第三季讲解视频",
+            "datetime_time": "2020年",
+            "region": "美国"
+        }
+    },
+    "NLU08923": {
+        "text": "帮我找一个做西红柿炒鸡蛋的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "做西红柿炒鸡蛋的视频"
+        }
+    },
+    "NLU08924": {
+        "text": "极限挑战放一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "极限挑战"
+        }
+    },
+    "NLU08932": {
+        "text": "查找国产动漫一人之下第一季",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "一人之下",
+            "region": "国产"
+        }
+    },
+    "NLU08935": {
+        "text": "很想看泰国的电影预告片随便播一个给我",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "电影预告片",
+            "region": "泰国"
+        }
+    },
+    "NLU08956": {
+        "text": "我想看英国的纪录片荒野求生第一季",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "荒野求生第一季",
+            "region": "英国"
+        }
+    },
+    "NLU08981": {
+        "text": "郭晶晶的跳水运动比赛视频播来看一下",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "郭晶晶的跳水运动比赛视频"
+        }
+    },
+    "NLU09008": {
+        "text": "回放上周五刺激战场竞技赛的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "周五",
+            "name": "刺激战场竞技赛的视频"
+        }
+    },
+    "NLU09023": {
+        "text": "请给我播放2017年美国电视剧女超人第三季的花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "女超人第三季的花絮",
+            "datetime_time": "2017年",
+            "region": "美国"
+        }
+    },
+    "NLU09025": {
+        "text": "能不能给我打开金刚模式上线的游戏解说视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "金刚模式上线的游戏解说视频"
+        }
+    },
+    "NLU09031": {
+        "text": "我想看2008年马琳波尔的乒乓球比赛视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "马琳波尔的乒乓球比赛视频",
+            "datetime_date": "2008年"
+        }
+    },
+    "NLU09043": {
+        "text": "播放今天的王者荣耀的解说视频",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "今天",
+            "name": "王者荣耀的解说视频"
+        }
+    },
+    "NLU09045": {
+        "text": "凝视深渊这部纪录片是英国的吗给我播放吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "凝视深渊",
+            "region": "英国"
+        }
+    },
+    "NLU09049": {
+        "text": "今天在韩国报道的抑郁逼进青少年这个新闻视频再给我回放下吧",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "抑郁逼进青少年",
+            "region": "韩国",
+            "datetime_date": "今天"
+        }
+    },
+    "NLU09059": {
+        "text": "放几条陈奕迅2020演唱会唱歌的视频",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "陈奕迅2020演唱会唱歌的视频"
+        }
+    },
+    "NLU09061": {
+        "text": "我想看U21青年男子篮球锦标赛9月16日的八一富邦VS新疆广汇那一部分",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "9月16日",
+            "name": [
+                "U21青年男子篮球锦标赛",
+                "八一富邦VS新疆广汇"
+            ]
+        }
+    },
+    "NLU09062": {
+        "text": "播放一下国创动漫狐妖小红娘",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "狐妖小红娘",
+            "region": "国创"
+        }
+    },
+    "NLU09075": {
+        "text": "打开爱奇艺回放昨天的斗罗大陆花絮",
+        "intent": "Video-Play",
+        "slots": {
+            "datetime_date": "昨天",
+            "name": "斗罗大陆花絮"
+        }
+    },
+    "NLU09077": {
+        "text": "请给我播放2019年美国电视剧硅谷第六季的幕后故事",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "硅谷第六季的幕后故事",
+            "datetime_time": "2019年",
+            "region": "美国"
+        }
+    },
+    "NLU09092": {
+        "text": "打开腾讯视频我要看邓伦参加的极限挑战第七季",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "极限挑战第七季"
+        }
+    },
+    "NLU09094": {
+        "text": "帮我找那场鲁班七号把百万主播打傻的直播",
+        "intent": "Video-Play",
+        "slots": {
+            "name": "鲁班七号把百万主播打傻的直播"
+        }
+    }
+}

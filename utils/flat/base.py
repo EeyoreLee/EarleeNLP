@@ -13,8 +13,9 @@ from models.flat_bert import StaticEmbedding, get_bigrams
 
 
 # @cache_results(_cache_fp='cache/weiboNER_uni+bi_new', _refresh=False)
-def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_token=True,
-                   char_min_freq=1,bigram_min_freq=1,only_train_min_freq=0,char_word_dropout=0.01, test_path=None, **kwargs):
+def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_token=True, train_path=None, dev_path=None,
+            char_min_freq=1,bigram_min_freq=1,only_train_min_freq=0,char_word_dropout=0.01, test_path=None, \
+            logger=None, with_placeholder=None, **kwargs):
 
     loader = ConllLoader(['chars','target'])
 
@@ -22,9 +23,13 @@ def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_t
     # dev_path = os.path.join(path, 'weiboNER_2nd_conll.dev_deseg')
     # test_path = os.path.join(path, 'weiboNER_2nd_conll.test_deseg')
 
-    train_path = '/ai/223/person/lichunyu/datasets/dataf/seq_label/seq_label.train'
-    dev_path = '/ai/223/person/lichunyu/datasets/dataf/seq_label/seq_label.test'
+    if train_path is None:
+        train_path = '/ai/223/person/lichunyu/datasets/dataf/seq_label/seq_label.train'
+    if dev_path is None:
+        dev_path = '/ai/223/person/lichunyu/datasets/dataf/seq_label/seq_label.test'
+
     # train_path = '/ai/223/person/lichunyu/datasets/dataf/seq_label/seq_label_all_all.train'
+    # dev_path = '/ai/223/person/lichunyu/datasets/dataf/seq_label/seq_label_test_a_labeled.train'
 
     # train_path = '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.seq'
     # dev_path = '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.seq'
@@ -32,10 +37,13 @@ def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_t
     if test_path is None:
         test_path = '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.seq'
 
+    placeholder_path = '/root/all_train.test'
+
     paths = {}
     paths['train'] = train_path
     paths['dev'] = dev_path
     paths['test'] = test_path
+    paths['placeholder'] = placeholder_path
 
     datasets = {}
 
@@ -44,7 +52,7 @@ def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_t
         datasets[k] = bundle.datasets['train']
 
     for k,v in datasets.items():
-        print('{}:{}'.format(k,len(v)))
+        logger.info('{}:{}'.format(k,len(v)))
     # print(*list(datasets.keys()))
     vocabs = {}
     char_vocab = Vocabulary()
@@ -58,9 +66,12 @@ def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_t
 
 
     # char_vocab.from_dataset(datasets['train'],field_name='chars',no_create_entry_dataset=[datasets['dev'],datasets['test']])
-    char_vocab.from_dataset(datasets['train'],field_name='chars',no_create_entry_dataset=[datasets['dev']])
+    if with_placeholder is True:
+        char_vocab.from_dataset(datasets['train'],field_name='chars',no_create_entry_dataset=[datasets['dev'], datasets['placeholder']])
+    else:
+        char_vocab.from_dataset(datasets['train'],field_name='chars',no_create_entry_dataset=[datasets['dev']])
     label_vocab.from_dataset(datasets['train'],field_name='target')
-    print('label_vocab:{}\n{}'.format(len(label_vocab),label_vocab.idx2word))
+    logger.info('label_vocab:{}\n{}'.format(len(label_vocab),label_vocab.idx2word))
 
     for k,v in datasets.items():
         # v.set_pad_val('target',-100)
@@ -70,7 +81,10 @@ def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_t
     vocabs['label'] = label_vocab
 
     # bigram_vocab.from_dataset(datasets['train'],field_name='bigrams',no_create_entry_dataset=[datasets['dev'],datasets['test']])
-    bigram_vocab.from_dataset(datasets['train'],field_name='bigrams',no_create_entry_dataset=[datasets['dev']])
+    if with_placeholder is True:
+        bigram_vocab.from_dataset(datasets['train'],field_name='bigrams',no_create_entry_dataset=[datasets['dev'], datasets['placeholder']])
+    else:
+        bigram_vocab.from_dataset(datasets['train'],field_name='bigrams',no_create_entry_dataset=[datasets['dev']])
     if index_token:
         char_vocab.index_dataset(*list(datasets.values()), field_name='chars', new_field_name='chars')
         bigram_vocab.index_dataset(*list(datasets.values()),field_name='bigrams',new_field_name='bigrams')

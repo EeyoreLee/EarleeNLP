@@ -1,0 +1,8357 @@
+{
+    "NLU00003": {
+        "text": "给看一下墓王之王嘛",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "墓王之王"
+        }
+    },
+    "NLU00007": {
+        "text": "找一个2004年的推理剧给我看一会呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "推理",
+            "age": "2004年"
+        }
+    },
+    "NLU00011": {
+        "text": "你能播放一下曹盾导演的古装悬疑剧呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "曹盾",
+            "tag": "古装悬疑"
+        }
+    },
+    "NLU00026": {
+        "text": "能随机给我来一个赵丽颖2020年上的剧吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "赵丽颖",
+            "age": "2020年",
+            "play_setting": "随机"
+        }
+    },
+    "NLU00036": {
+        "text": "能把家庭剧小欢喜给我播放一下吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "小欢喜",
+            "tag": "家庭"
+        }
+    },
+    "NLU00038": {
+        "text": "杨延东2021年上线的剧播放来看看呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "杨延东",
+            "age": "2021年"
+        }
+    },
+    "NLU00039": {
+        "text": "播放美国推理电影蜘蛛侠",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "美国",
+            "tag": "推理",
+            "name": "蜘蛛侠"
+        }
+    },
+    "NLU00057": {
+        "text": "给我来一个美国的漫威系列电影钢铁侠1吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "钢铁侠1",
+            "region": "美国",
+            "tag": "漫威"
+        }
+    },
+    "NLU00059": {
+        "text": "吴宇森有个美国电影风语者口碑不错，我要看看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "吴宇森",
+            "region": "美国",
+            "name": "风语者"
+        }
+    },
+    "NLU00071": {
+        "text": "斗罗大陆放第13集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "斗罗大陆",
+            "play_setting": "第13集"
+        }
+    },
+    "NLU00084": {
+        "text": "我想看阳光之下的第12集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "阳光之下",
+            "play_setting": "第12集"
+        }
+    },
+    "NLU00098": {
+        "text": "播放一个韩剧窥探吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "窥探",
+            "region": "韩国"
+        }
+    },
+    "NLU00107": {
+        "text": "给我打开胡歌演的伪装者的第二十一集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "胡歌",
+            "name": "伪装者",
+            "play_setting": "第二十一集"
+        }
+    },
+    "NLU00111": {
+        "text": "电视剧，杨幂主演的亲爱的翻译官",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "杨幂",
+            "name": "亲爱的翻译官"
+        }
+    },
+    "NLU00113": {
+        "text": "1点5倍速播安以轩和胡冰卿演的独孤天下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "独孤天下",
+            "artist": [
+                "安以轩",
+                "胡冰卿"
+            ],
+            "play_setting": "1点5倍"
+        }
+    },
+    "NLU00125": {
+        "text": "可以播放一部10年代出版的海蒂和爷爷吗？",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "10年代",
+            "name": "海蒂和爷爷"
+        }
+    },
+    "NLU00127": {
+        "text": "给我找一个美剧偶像剧播放一下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "偶像",
+            "region": "美国"
+        }
+    },
+    "NLU00138": {
+        "text": "打开搜狐视频我想看在桃花盛开的地方",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "在桃花盛开的地方"
+        }
+    },
+    "NLU00143": {
+        "text": "能给我看那个玄幻剧迷离档案吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "迷离档案",
+            "tag": "玄幻"
+        }
+    },
+    "NLU00147": {
+        "text": "顶楼播放一下四集可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "顶楼",
+            "play_setting": "四集"
+        }
+    },
+    "NLU00150": {
+        "text": "我是特种兵这个战争片立刻放给我",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "我是特种兵",
+            "tag": "战争"
+        }
+    },
+    "NLU00155": {
+        "text": "2014年的大话西游之仙履奇缘可以播放下给我不",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "大话西游之仙履奇缘",
+            "age": "2014年"
+        }
+    },
+    "NLU00167": {
+        "text": "柳云龙演的胜算立刻播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "胜算",
+            "artist": "柳云龙"
+        }
+    },
+    "NLU00198": {
+        "text": "播放美国电影冰雪奇缘",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "美国",
+            "name": "冰雪奇缘"
+        }
+    },
+    "NLU00211": {
+        "text": "我要看大陆片我的姐姐这个电影",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "大陆",
+            "name": "我的姐姐"
+        }
+    },
+    "NLU00213": {
+        "text": "是不是能播放一个剧情片奇妙的命运呀",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "奇妙的命运",
+            "tag": "剧情"
+        }
+    },
+    "NLU00216": {
+        "text": "能继续播放美国那个电视剧吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "play_setting": "继续",
+            "region": "美国"
+        }
+    },
+    "NLU00234": {
+        "text": "现在还是想继续看下一站幸福呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "下一站幸福",
+            "play_setting": "继续"
+        }
+    },
+    "NLU00248": {
+        "text": "能播放一下有范冰冰出演的电视剧秦始皇么",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "范冰冰",
+            "name": "秦始皇"
+        }
+    },
+    "NLU00254": {
+        "text": "去年台湾有个都市片，奇幻题材的帮我播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "去年",
+            "region": "台湾",
+            "tag": [
+                "都市",
+                "奇幻"
+            ]
+        }
+    },
+    "NLU00263": {
+        "text": "港片新喜剧之王播放一下可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "新喜剧之王",
+            "region": "香港"
+        }
+    },
+    "NLU00274": {
+        "text": "能不能播放一个1999年拍的电视剧啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "1999年"
+        }
+    },
+    "NLU00281": {
+        "text": "给我放乱世佳人这一部爱情类电影。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "乱世佳人",
+            "tag": "爱情"
+        }
+    },
+    "NLU00287": {
+        "text": "我想看高伟宁、吉小龙执导的我怕来不及",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "我怕来不及",
+            "artist": [
+                "高伟宁",
+                "吉小龙"
+            ]
+        }
+    },
+    "NLU00293": {
+        "text": "找到美国的科幻大片给我看一个可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "科幻",
+            "region": "美国"
+        }
+    },
+    "NLU00301": {
+        "text": "嗯呐朱莉主演的电视剧朱莉快逃播放给我看看可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "朱莉",
+            "name": "朱莉快逃"
+        }
+    },
+    "NLU00304": {
+        "text": "来一个战争片雪豹给我吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "雪豹",
+            "tag": "战争"
+        }
+    },
+    "NLU00313": {
+        "text": "现在只能看美国的吸血鬼日记",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "吸血鬼日记",
+            "region": "美国"
+        }
+    },
+    "NLU00315": {
+        "text": "给我继播一下我前面看的言情剧呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "言情",
+            "play_setting": "继播"
+        }
+    },
+    "NLU00324": {
+        "text": "我想立刻观看一个日本的喜剧，古代的",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": [
+                "喜剧",
+                "古代"
+            ],
+            "region": "日本"
+        }
+    },
+    "NLU00331": {
+        "text": "可以在搜狐上播放娘道吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "娘道"
+        }
+    },
+    "NLU00342": {
+        "text": "甄子丹刘德华演的追龙现在给我放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "追龙",
+            "artist": [
+                "刘德华",
+                "甄子丹"
+            ]
+        }
+    },
+    "NLU00345": {
+        "text": "给我播放一个韩国2021年的电视剧可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "韩国",
+            "age": "2021年"
+        }
+    },
+    "NLU00353": {
+        "text": "我要看大陆片横空出世这个电影",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "大陆",
+            "name": "横空出世"
+        }
+    },
+    "NLU00373": {
+        "text": "继续看一会宫斗剧如懿传可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "如懿传",
+            "tag": "宫斗",
+            "play_setting": "继续"
+        }
+    },
+    "NLU00380": {
+        "text": "能不能播放一个李易峰的古装剧看看，除了古剑之外",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "李易峰",
+            "tag": "古装"
+        }
+    },
+    "NLU00385": {
+        "text": "我需要你播放犯罪电视剧毛骗第一部",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "毛骗第一部",
+            "tag": "犯罪"
+        }
+    },
+    "NLU00394": {
+        "text": "可以播放郑凯演的密查吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "密查",
+            "artist": "郑凯"
+        }
+    },
+    "NLU00398": {
+        "text": "动作片李冰冰主演的风声",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "李冰冰",
+            "name": "风声",
+            "tag": "动作"
+        }
+    },
+    "NLU00412": {
+        "text": "韩国2015年上的电影魔女给我播放一下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "魔女",
+            "region": "韩国",
+            "age": "2015年"
+        }
+    },
+    "NLU00431": {
+        "text": "我想连着上次看的那个迪丽热巴的那个剧看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "迪丽热巴"
+        }
+    },
+    "NLU00443": {
+        "text": "看快进播放的三十集风暴舞",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "play_setting": [
+                "三十集",
+                "快进"
+            ],
+            "name": "风暴舞"
+        }
+    },
+    "NLU00448": {
+        "text": "请播放由张子枫主演的电影我的姐姐。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "张子枫",
+            "name": "我的姐姐"
+        }
+    },
+    "NLU00450": {
+        "text": "继续播放琉璃第10集之后的剧集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "琉璃",
+            "play_setting": "继续"
+        }
+    },
+    "NLU00465": {
+        "text": "立刻播放一下武藤兰的日本电视剧呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "武藤兰",
+            "region": "日本"
+        }
+    },
+    "NLU00471": {
+        "text": "恶魔在身边台湾偶像剧1点25倍速播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "恶魔在身边",
+            "tag": "偶像",
+            "region": "台湾",
+            "play_setting": "1点25倍"
+        }
+    },
+    "NLU00488": {
+        "text": "是不是能帮我播放台湾艺人林心如的戏",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "林心如",
+            "region": "台湾"
+        }
+    },
+    "NLU00500": {
+        "text": "来一个美国电影变形金刚1",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "变形金刚1",
+            "age": "美国"
+        }
+    },
+    "NLU00514": {
+        "text": "帮我播放班长殿下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "班长殿下"
+        }
+    },
+    "NLU00531": {
+        "text": "大陆的有关鸦片战争的电影能播放一个么",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "鸦片战争",
+            "region": "大陆"
+        }
+    },
+    "NLU00539": {
+        "text": "请继续播放美国权力的游戏的第二季",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "play_setting": "继续",
+            "region": "美国",
+            "name": "权力的游戏的第二季"
+        }
+    },
+    "NLU00549": {
+        "text": "播放青春抛物线的大结局",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "青春抛物线",
+            "play_setting": "大结局"
+        }
+    },
+    "NLU00568": {
+        "text": "我想看赵薇90年代的剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "赵薇",
+            "age": "90年代"
+        }
+    },
+    "NLU00579": {
+        "text": "睡觉之前我要看2006年英国喜剧电影女王",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "2006年",
+            "region": "英国",
+            "tag": "喜剧",
+            "name": "女王"
+        }
+    },
+    "NLU00580": {
+        "text": "我想继续看一个盗墓片帮我找个类似于怒晴湘西的",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": [
+                "盗墓",
+                "怒晴湘西"
+            ],
+            "play_setting": "继续"
+        }
+    },
+    "NLU00584": {
+        "text": "我现在就要看赵露思演的古装剧的第30集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "赵露思",
+            "tag": "古装",
+            "play_setting": "第30集"
+        }
+    },
+    "NLU00585": {
+        "text": "历史类的电影随机来一个90年代的吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "历史",
+            "age": "90年代",
+            "play_setting": "随机"
+        }
+    },
+    "NLU00598": {
+        "text": "李一桐出演的电视剧堆积来一个吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "李一桐",
+            "name": "堆积"
+        }
+    },
+    "NLU00615": {
+        "text": "播放不完美的她",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "不完美的她"
+        }
+    },
+    "NLU00624": {
+        "text": "我想看泰国的偶像剧呢青春一点的",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": [
+                "偶像",
+                "青春"
+            ],
+            "region": "泰国"
+        }
+    },
+    "NLU00632": {
+        "text": "90年代美国的科幻片儿有吗，看一个",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "科幻",
+            "region": "美国",
+            "age": "90年代"
+        }
+    },
+    "NLU00644": {
+        "text": "偶像剧幸福触手可及最后一集播放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "幸福触手可及",
+            "tag": "偶像",
+            "play_setting": "最后一集"
+        }
+    },
+    "NLU00646": {
+        "text": "你可以帮我播放一下啊摇篮吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "啊摇篮"
+        }
+    },
+    "NLU00650": {
+        "text": "我想看一个有点剧情的韩国偶像剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": [
+                "有点剧情",
+                "偶像"
+            ],
+            "region": "韩国"
+        }
+    },
+    "NLU00655": {
+        "text": "帮我播放花繁叶茂",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "花繁叶茂"
+        }
+    },
+    "NLU00671": {
+        "text": "我要看一会战争片我是特种兵",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "我是特种兵",
+            "tag": "战争"
+        }
+    },
+    "NLU00695": {
+        "text": "宫心计我想看是古装剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "宫心计",
+            "tag": "古装"
+        }
+    },
+    "NLU00721": {
+        "text": "特别搞笑的那个剧叫男媒婆放给我乐呵乐呵",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "男媒婆",
+            "tag": "搞笑"
+        }
+    },
+    "NLU00744": {
+        "text": "看一部2020年韩国最火的爱情剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "2020年",
+            "region": "韩国",
+            "tag": "爱情"
+        }
+    },
+    "NLU00745": {
+        "text": "播放任素汐主演的驴得水",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "任素汐",
+            "name": "驴得水"
+        }
+    },
+    "NLU00752": {
+        "text": "是不是能把连续剧继续播一下呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "play_setting": "继续"
+        }
+    },
+    "NLU00755": {
+        "text": "美国的纪实剧情片可以来一个给我看吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "纪实",
+            "region": "美国"
+        }
+    },
+    "NLU00808": {
+        "text": "李现和李一桐演的剑王朝给我放下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "剑王朝",
+            "artist": [
+                "李现",
+                "李一桐"
+            ]
+        }
+    },
+    "NLU00812": {
+        "text": "能找一个范迪塞尔导演的美剧看看么",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "范迪塞尔",
+            "region": "美国"
+        }
+    },
+    "NLU00817": {
+        "text": "2014年周星驰导演上线的电影播放一个呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "周星驰",
+            "age": "2014年"
+        }
+    },
+    "NLU00820": {
+        "text": "播放2018年以后的言情剧看看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "言情",
+            "age": "2018年以后"
+        }
+    },
+    "NLU00824": {
+        "text": "帮我找快把我哥带走的第23集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "快把我哥带走",
+            "play_setting": "第23集"
+        }
+    },
+    "NLU00835": {
+        "text": "播放末代皇帝这部传记类的电影。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "末代皇帝",
+            "tag": "传记"
+        }
+    },
+    "NLU00836": {
+        "text": "杨幂去年的剧能播放一个吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "杨幂",
+            "age": "去年"
+        }
+    },
+    "NLU00838": {
+        "text": "布衣天子的第三集继续播放吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "布衣天子",
+            "play_setting": [
+                "第三集",
+                "继续"
+            ]
+        }
+    },
+    "NLU00841": {
+        "text": "请播放当幸福来敲门这部传记类电影。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "当幸福来敲门",
+            "tag": "传记"
+        }
+    },
+    "NLU00850": {
+        "text": "找到金色索玛花播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "金色索玛花"
+        }
+    },
+    "NLU00861": {
+        "text": "给我放一下90年代美国电影肖申克的救赎",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "90年代",
+            "region": "美国",
+            "name": "肖申克的救赎"
+        }
+    },
+    "NLU00862": {
+        "text": "你能帮我播一下杨新宇和王之导演的这个世界不看脸吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "这个世界不看脸",
+            "artist": [
+                "杨新宇",
+                "王之"
+            ]
+        }
+    },
+    "NLU00867": {
+        "text": "我想看前面看的清宫剧如懿传的第三集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "如懿传",
+            "tag": "清宫",
+            "play_setting": "第三集"
+        }
+    },
+    "NLU00902": {
+        "text": "我现在就要看美国演员安妮海瑟薇的剧呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "安妮海瑟薇",
+            "region": "美国"
+        }
+    },
+    "NLU00904": {
+        "text": "播放林依晨和张彬彬参演的小女花不弃",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "小女花不弃",
+            "artist": [
+                "林依晨",
+                "张彬彬"
+            ]
+        }
+    },
+    "NLU00905": {
+        "text": "从第一集开始播放如懿传吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "如懿传",
+            "play_setting": "第一集"
+        }
+    },
+    "NLU00907": {
+        "text": "继续播放来那个言情剧吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "言情",
+            "play_setting": "继续"
+        }
+    },
+    "NLU00908": {
+        "text": "毒液2继续给我播放可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "毒液2",
+            "play_setting": "继续"
+        }
+    },
+    "NLU00922": {
+        "text": "刺杀小说家能播吗，好像是奇幻电影",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "奇幻",
+            "name": "刺杀小说家"
+        }
+    },
+    "NLU00927": {
+        "text": "你能继续给我播放西游记这个电视剧吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "西游记",
+            "play_setting": "继续"
+        }
+    },
+    "NLU00949": {
+        "text": "能帮我播一下大陆的悬疑剧御赐小仵作吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "御赐小仵作",
+            "tag": "悬疑",
+            "region": "大陆"
+        }
+    },
+    "NLU00964": {
+        "text": "可不可以继续播一下陪你一起长大啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "陪你一起长大",
+            "play_setting": "继续"
+        }
+    },
+    "NLU00983": {
+        "text": "是否可以来继续顶楼上次看到的地方啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "顶楼",
+            "play_setting": "继续"
+        }
+    },
+    "NLU00992": {
+        "text": "播放张译和刘浩存主演的悬崖之上",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": [
+                "张译",
+                "刘浩存"
+            ],
+            "name": "悬崖之上"
+        }
+    },
+    "NLU01010": {
+        "text": "孙茜演的枫叶红了1点75倍速播",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "枫叶红了",
+            "artist": "孙茜",
+            "play_setting": "1点75倍"
+        }
+    },
+    "NLU01039": {
+        "text": "青春剧你好旧时光我想看它",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "你好旧时光",
+            "tag": "青春"
+        }
+    },
+    "NLU01042": {
+        "text": "迪丽热巴的那个剧能连着上次看到的地方播放吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "迪丽热巴"
+        }
+    },
+    "NLU01046": {
+        "text": "杨紫的古代偶像剧现在给我播放一个行不行呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "杨紫",
+            "tag": "古代偶像"
+        }
+    },
+    "NLU01060": {
+        "text": "1点5倍速播给我看公主小妹台湾偶像剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "公主小妹",
+            "tag": "偶像",
+            "region": "台湾",
+            "play_setting": "1点5倍"
+        }
+    },
+    "NLU01063": {
+        "text": "给我按顺序播放喜剧爱情公寓",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "爱情公寓",
+            "tag": "喜剧",
+            "play_setting": "顺序"
+        }
+    },
+    "NLU01071": {
+        "text": "我要续播完美的他。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "play_setting": "续播",
+            "name": "完美的他"
+        }
+    },
+    "NLU01072": {
+        "text": "播放古董局中局",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "古董局中局"
+        }
+    },
+    "NLU01084": {
+        "text": "我想看一个中国演员的古力娜扎的电视剧看一会",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "古力娜扎",
+            "region": "中国"
+        }
+    },
+    "NLU01085": {
+        "text": "林心如的古装剧随便来一个播放吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "林心如",
+            "tag": "古装"
+        }
+    },
+    "NLU01097": {
+        "text": "陈建斌和李一桐主演的2020年播出的电视剧爱我就别想太多播放一下可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": [
+                "陈建斌",
+                "李一桐"
+            ],
+            "name": "爱我就别想太多",
+            "age": "2020年"
+        }
+    },
+    "NLU01099": {
+        "text": "找一个2009年左右的剧情剧给我看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "剧情",
+            "age": "2009年左右"
+        }
+    },
+    "NLU01100": {
+        "text": "你可以给我播放一下2019年的电影飞驰人生吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "飞驰人生",
+            "age": "2019年"
+        }
+    },
+    "NLU01108": {
+        "text": "我想你给我播放日本的Re:从零开始的异世界生活",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "从零开始的异世界生活",
+            "region": "日本"
+        }
+    },
+    "NLU01119": {
+        "text": "长歌行这部电视剧49集麻烦在九点二十分播放。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "长歌行",
+            "play_setting": "49集"
+        }
+    },
+    "NLU01121": {
+        "text": "2002年的武侠片少年黄飞鸿找出了我要重温",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "少年黄飞鸿",
+            "tag": "武侠",
+            "age": "2002年"
+        }
+    },
+    "NLU01122": {
+        "text": "我需要你给我播放一下中国的古时候神话剧呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "古时候神话剧",
+            "region": "中国"
+        }
+    },
+    "NLU01124": {
+        "text": "能播放一个台湾艺人杨丞琳的戏吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "杨丞琳",
+            "region": "台湾"
+        }
+    },
+    "NLU01137": {
+        "text": "给放一下第20集法定丈夫",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "法定丈夫",
+            "play_setting": "第20集"
+        }
+    },
+    "NLU01141": {
+        "text": "闫学晶主演的刘家媳妇现在接着放吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "刘家媳妇",
+            "artist": "闫学晶"
+        }
+    },
+    "NLU01144": {
+        "text": "郑凯演的我想看好久不见",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "好久不见",
+            "artist": "郑凯"
+        }
+    },
+    "NLU01145": {
+        "text": "我想继续看一会禁忌女孩可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "禁忌女孩",
+            "play_setting": "继续"
+        }
+    },
+    "NLU01146": {
+        "text": "麻烦帮我找燃烧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "燃烧"
+        }
+    },
+    "NLU01159": {
+        "text": "自动播放台湾偶像剧想见你",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "台湾",
+            "tag": "偶像",
+            "name": "想见你"
+        }
+    },
+    "NLU01176": {
+        "text": "神话剧风云播按1点25倍速放给我",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "风云",
+            "tag": "神话",
+            "play_setting": "1点25倍"
+        }
+    },
+    "NLU01191": {
+        "text": "给我播放佘诗曼主演的使徒行者",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "使徒行者",
+            "artist": "佘诗曼"
+        }
+    },
+    "NLU01203": {
+        "text": "立刻找到18年上的影放给我看看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "影",
+            "age": "18年"
+        }
+    },
+    "NLU01204": {
+        "text": "2018年的喜剧西红柿首富可以帮我播放看看吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "西红柿首富",
+            "tag": "喜剧",
+            "age": "2018年"
+        }
+    },
+    "NLU01210": {
+        "text": "能不能来一个16年的周星驰电影美人鱼啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "周星驰",
+            "name": "美人鱼",
+            "age": "16年"
+        }
+    },
+    "NLU01246": {
+        "text": "你能找一个范迪塞尔拍摄的美剧给我看吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "范迪塞尔",
+            "region": "美国"
+        }
+    },
+    "NLU01252": {
+        "text": "国家的孩子请播放第三集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "国家的孩子",
+            "play_setting": "第三集"
+        }
+    },
+    "NLU01259": {
+        "text": "我现在就想看历史题材的张艺谋导演的电影悬崖之上",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "张艺谋",
+            "name": "悬崖之上",
+            "tag": "历史"
+        }
+    },
+    "NLU01265": {
+        "text": "给我播放韩剧宋仲基主演的太阳的后裔。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "韩国",
+            "artist": "宋仲基",
+            "name": "太阳的后裔"
+        }
+    },
+    "NLU01296": {
+        "text": "今年杨紫拍的电视剧上线的随便播放个吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "杨紫",
+            "age": "今年"
+        }
+    },
+    "NLU01304": {
+        "text": "硅谷第二季的第三十集现在可以播放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "硅谷第二季",
+            "play_setting": "第三十集"
+        }
+    },
+    "NLU01306": {
+        "text": "请赐我一双翅膀的大结局",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "请赐我一双翅膀",
+            "play_setting": "大结局"
+        }
+    },
+    "NLU01311": {
+        "text": "沈腾主演的西红柿首富给我搜一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "沈腾",
+            "name": "西红柿首富"
+        }
+    },
+    "NLU01326": {
+        "text": "找到陈数主演的和平饭店播放起来",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "陈数",
+            "name": "和平饭店"
+        }
+    },
+    "NLU01332": {
+        "text": "我想继续看迪丽热巴的那个剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "迪丽热巴",
+            "play_setting": "继续"
+        }
+    },
+    "NLU01335": {
+        "text": "请播放两集下一站是幸福。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "play_setting": "两集",
+            "name": "下一站是幸福"
+        }
+    },
+    "NLU01336": {
+        "text": "李一桐近几年的剧随机播放一个吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "李一桐",
+            "age": "近几年",
+            "play_setting": "随机"
+        }
+    },
+    "NLU01372": {
+        "text": "继续播放陪你一起长大",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "陪你一起长大",
+            "play_setting": "继续"
+        }
+    },
+    "NLU01374": {
+        "text": "帮我播放鹿晗演的择天记",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "择天记",
+            "artist": "鹿晗"
+        }
+    },
+    "NLU01375": {
+        "text": "帮我续播一下如懿传可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "如懿传",
+            "play_setting": "续播"
+        }
+    },
+    "NLU01382": {
+        "text": "我想看香港导演周星驰拍的电影呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "周星驰",
+            "region": "香港"
+        }
+    },
+    "NLU01388": {
+        "text": "播放美国电影独立日",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "美国",
+            "name": "独立日"
+        }
+    },
+    "NLU01399": {
+        "text": "杨紫秦俊杰演的龙珠传奇找到并播放一下哈",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "龙珠传奇",
+            "artist": [
+                "杨紫",
+                "秦俊杰"
+            ]
+        }
+    },
+    "NLU01402": {
+        "text": "找个90年代台湾的偶像剧看看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "90年代",
+            "region": "台湾",
+            "tag": "偶像"
+        }
+    },
+    "NLU01411": {
+        "text": "能给我播放一个2012年的日本电影吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "日本",
+            "age": "2012年"
+        }
+    },
+    "NLU01412": {
+        "text": "韩国偶像剧能随机播放一个吗，最好是太阳的后裔那种",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": [
+                "偶像",
+                "太阳的后裔"
+            ],
+            "play_setting": "随机",
+            "region": "韩国"
+        }
+    },
+    "NLU01414": {
+        "text": "请播放由张国荣和王祖贤主演的电影倩女幽魂。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": [
+                "张国荣",
+                "王祖贤"
+            ],
+            "name": "倩女幽魂"
+        }
+    },
+    "NLU01418": {
+        "text": "00年代的大陆喜剧片播放给我",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "大陆",
+            "tag": "喜剧",
+            "age": "00年代"
+        }
+    },
+    "NLU01419": {
+        "text": "人生如若初相见可以播放吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "人生如若初相见"
+        }
+    },
+    "NLU01440": {
+        "text": "能看没有秘密的你吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "没有秘密的你"
+        }
+    },
+    "NLU01454": {
+        "text": "能继续播放铁齿铜牙纪晓岚2吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "铁齿铜牙纪晓岚2",
+            "play_setting": "继续"
+        }
+    },
+    "NLU01466": {
+        "text": "韩国2009年上线的言情剧播放一个，讲古代宫廷的",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": [
+                "言情",
+                "古代宫廷"
+            ],
+            "region": "韩国",
+            "age": "2009年"
+        }
+    },
+    "NLU01477": {
+        "text": "给我续播上次看的温暖的抱抱",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "play_setting": "续播",
+            "name": "温暖的抱抱"
+        }
+    },
+    "NLU01505": {
+        "text": "播放一个2021年的推理剧可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "推理",
+            "age": "2021年"
+        }
+    },
+    "NLU01548": {
+        "text": "除了漫威系列，美国科幻大片立刻找一个给我看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "科幻",
+            "region": "美国"
+        }
+    },
+    "NLU01555": {
+        "text": "重播25集经典西游记",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "play_setting": [
+                "重播",
+                "25集"
+            ],
+            "name": "西游记"
+        }
+    },
+    "NLU01561": {
+        "text": "播幸福敲了两次门",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "幸福敲了两次门"
+        }
+    },
+    "NLU01564": {
+        "text": "我想播放姜文导演的让子弹飞。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "姜文",
+            "name": "让子弹飞"
+        }
+    },
+    "NLU01579": {
+        "text": "韩东君演的那个无心法师现在接着播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "无心法师",
+            "artist": "韩东君"
+        }
+    },
+    "NLU01582": {
+        "text": "有没有香港周星驰导演的电影给我看一部啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "周星驰",
+            "region": "香港"
+        }
+    },
+    "NLU01587": {
+        "text": "日本艺人石原里美的片子给我看一个吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "石原里美",
+            "region": "日本"
+        }
+    },
+    "NLU01600": {
+        "text": "我想看一个2009年后播出的爱情剧可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "爱情",
+            "age": "2009年后"
+        }
+    },
+    "NLU01613": {
+        "text": "麻烦帮我播一下鲜花盛开的山村",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "鲜花盛开的山村"
+        }
+    },
+    "NLU01644": {
+        "text": "快点帮我找一个古装剧武则天传奇",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "武则天传奇",
+            "tag": "古装"
+        }
+    },
+    "NLU01652": {
+        "text": "下一站别离啊赶紧接着往后放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "下一站别离",
+            "play_setting": "接着"
+        }
+    },
+    "NLU01665": {
+        "text": "我们要看大江大河",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "大江大河"
+        }
+    },
+    "NLU01668": {
+        "text": "我马上就要看张译演的电视剧重生",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "张译",
+            "name": "重生"
+        }
+    },
+    "NLU01673": {
+        "text": "找一下陪你长大的第30集播一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "陪你长大",
+            "play_setting": "第30集"
+        }
+    },
+    "NLU01687": {
+        "text": "想观看蝴蝶效应这部科幻电影。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "蝴蝶效应",
+            "tag": "科幻"
+        }
+    },
+    "NLU01688": {
+        "text": "请给我放一部徐庆东导演的警察题材的电视连续剧重案六组",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "徐庆东",
+            "tag": "警察",
+            "name": "重案六组"
+        }
+    },
+    "NLU01701": {
+        "text": "最新的科幻片生化危机放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "科幻",
+            "name": "生化危机"
+        }
+    },
+    "NLU01708": {
+        "text": "我想看一下陈赫今年参演的电影",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "陈赫",
+            "age": "今年"
+        }
+    },
+    "NLU01709": {
+        "text": "帮我播放一下暴风眼的第39集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "暴风眼",
+            "play_setting": "第39集"
+        }
+    },
+    "NLU01717": {
+        "text": "2020年电视剧蓝皮书计划第二季播放一下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "蓝皮书计划第二季",
+            "age": "2020年"
+        }
+    },
+    "NLU01733": {
+        "text": "随机来一个偶像剧播放第一集呢像微微一笑那种",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": [
+                "偶像",
+                "微微一笑"
+            ],
+            "play_setting": [
+                "第一集",
+                "随机"
+            ]
+        }
+    },
+    "NLU01754": {
+        "text": "马上帮我播放韩剧哦我的鬼神大人",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "哦我的鬼神大人",
+            "region": "韩剧"
+        }
+    },
+    "NLU01770": {
+        "text": "找一下沈腾演的夏洛特烦恼",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "夏洛特烦恼",
+            "artist": "沈腾"
+        }
+    },
+    "NLU01803": {
+        "text": "继续给我来大发不动产",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "大发不动产",
+            "play_setting": "继续"
+        }
+    },
+    "NLU01829": {
+        "text": "能继续给我看毒液2吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "毒液2",
+            "play_setting": "继续"
+        }
+    },
+    "NLU01871": {
+        "text": "能把偶像剧狐狸的夏天1播放给我吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "狐狸的夏天1",
+            "tag": "偶像"
+        }
+    },
+    "NLU01874": {
+        "text": "立刻播90年代的战争剧地道战",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "地道战",
+            "tag": "战争",
+            "age": "90年代"
+        }
+    },
+    "NLU01888": {
+        "text": "我想看偶像剧啦按顺序给我放半是蜜糖半是伤",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "半是蜜糖半是伤",
+            "tag": "偶像"
+        }
+    },
+    "NLU01899": {
+        "text": "孙俪演的那年花开月正圆给我找一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "那年花开月正圆",
+            "artist": "孙俪"
+        }
+    },
+    "NLU01902": {
+        "text": "就是赵丽颖演的那个知否知否应是绿肥红瘦那个电视剧播放一下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "赵丽颖",
+            "name": "知否知否应是绿肥红瘦"
+        }
+    },
+    "NLU01906": {
+        "text": "浮世双娇传我想看大结局",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "浮世双娇传",
+            "play_setting": "大结局"
+        }
+    },
+    "NLU01907": {
+        "text": "理想照耀中国播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "理想照耀中国"
+        }
+    },
+    "NLU01915": {
+        "text": "我想你给我播放一下2021年的电视剧长歌行呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "长歌行",
+            "age": "2021年"
+        }
+    },
+    "NLU01917": {
+        "text": "能不能继续播放一下铁齿铜牙纪晓岚",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "铁齿铜牙纪晓岚",
+            "play_setting": "继续"
+        }
+    },
+    "NLU01926": {
+        "text": "禁忌女孩可以继续播放吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "禁忌女孩",
+            "play_setting": "继续"
+        }
+    },
+    "NLU01929": {
+        "text": "播放2016年的以父之名",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "以父之名",
+            "age": "2016年"
+        }
+    },
+    "NLU01938": {
+        "text": "现在开始播放中国大陆沈腾出演的喜剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "沈腾",
+            "tag": "喜剧",
+            "region": "大陆"
+        }
+    },
+    "NLU01942": {
+        "text": "播放爱情电影，我在时间尽头等你",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "爱情",
+            "name": "我在时间尽头等你"
+        }
+    },
+    "NLU01968": {
+        "text": "找历史剧里面的封神榜给我看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "封神榜",
+            "tag": "历史"
+        }
+    },
+    "NLU01977": {
+        "text": "李小江的能帮我播一下少女大人吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "少女大人",
+            "artist": "李小江"
+        }
+    },
+    "NLU01978": {
+        "text": "能不能继续播放一下迪丽热巴的古装剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "迪丽热巴",
+            "tag": "古装",
+            "play_setting": "继续"
+        }
+    },
+    "NLU01981": {
+        "text": "许光汉主演的青春电影，想见你给我搜一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "许光汉",
+            "name": "想见你",
+            "tag": "青春"
+        }
+    },
+    "NLU01994": {
+        "text": "播放明天我们好好过",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "明天我们好好过"
+        }
+    },
+    "NLU02015": {
+        "text": "现在播放一路上有你",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "一路上有你"
+        }
+    },
+    "NLU02028": {
+        "text": "找一个日本的天空之城给我播放一下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "天空之城",
+            "region": "日本"
+        }
+    },
+    "NLU02040": {
+        "text": "我想看日本的情书，你播放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "情书",
+            "region": "日本"
+        }
+    },
+    "NLU02051": {
+        "text": "麻烦帮我播放金庸武侠剧神雕英雄传",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "神雕英雄传",
+            "tag": "金庸武侠"
+        }
+    },
+    "NLU02054": {
+        "text": "神探狄仁杰的第36集请从上次停止的地方开始播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "神探狄仁杰",
+            "play_setting": "第36集"
+        }
+    },
+    "NLU02064": {
+        "text": "天气之子这个日本片子播放一下可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "天气之子",
+            "region": "日本"
+        }
+    },
+    "NLU02070": {
+        "text": "播放一个周星驰拍的那个香港的电影吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "周星驰",
+            "region": "香港"
+        }
+    },
+    "NLU02071": {
+        "text": "超级想重温一遍2017年的速度与激情7呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "2017年",
+            "name": "速度与激情7"
+        }
+    },
+    "NLU02077": {
+        "text": "听说刘敏涛的生活家好看，播放第一集看一看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "刘敏涛",
+            "name": "生活家",
+            "play_setting": "第一集"
+        }
+    },
+    "NLU02082": {
+        "text": "我想放00年代的电影忠犬八公的故事。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "00年代",
+            "name": "忠犬八公的故事"
+        }
+    },
+    "NLU02084": {
+        "text": "我要看一个90年代的恐怖片呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "恐怖",
+            "age": "90年代"
+        }
+    },
+    "NLU02090": {
+        "text": "马上找陈晓景甜主演的一场遇见爱情的旅行",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "一场遇见爱情的旅行",
+            "artist": [
+                "陈晓",
+                "景甜"
+            ]
+        }
+    },
+    "NLU02100": {
+        "text": "播放御赐小仵作的第三集可以不可以呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "御赐小仵作",
+            "play_setting": "第三集"
+        }
+    },
+    "NLU02107": {
+        "text": "邓伦和马思纯演的那个加油你是最棒的播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "加油你是最棒的",
+            "artist": [
+                "邓伦",
+                "马思纯"
+            ]
+        }
+    },
+    "NLU02110": {
+        "text": "超凡蜘蛛侠1美国电影给我播放下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "超凡蜘蛛侠1",
+            "region": "美国"
+        }
+    },
+    "NLU02123": {
+        "text": "2000年的神话剧就播春光灿烂猪八戒",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "春光灿烂猪八戒",
+            "tag": "神话",
+            "age": "2000年"
+        }
+    },
+    "NLU02128": {
+        "text": "找泰国偶像剧爱在日落之前按顺序看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "爱在日落之前",
+            "tag": "偶像",
+            "region": "泰国",
+            "play_setting": "顺序"
+        }
+    },
+    "NLU02133": {
+        "text": "放一下00年代出品的电影无间道。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "00年代",
+            "name": "无间道"
+        }
+    },
+    "NLU02139": {
+        "text": "请按列表播放最好的我们",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "最好的我们"
+        }
+    },
+    "NLU02152": {
+        "text": "是不是能来一个美国人吴彦祖的剧啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "吴彦祖",
+            "region": "美国"
+        }
+    },
+    "NLU02159": {
+        "text": "悬疑片美国电影末日之战",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "美国",
+            "name": "末日之战",
+            "tag": "悬疑"
+        }
+    },
+    "NLU02168": {
+        "text": "我需要继续观看下一站幸福行不行",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "下一站幸福",
+            "play_setting": "继续"
+        }
+    },
+    "NLU02206": {
+        "text": "播放九十年代的泰坦尼克号，这到现在还很经典",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "九十年代",
+            "name": "泰坦尼克号"
+        }
+    },
+    "NLU02265": {
+        "text": "请播放第24集周一围演的焕脸",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "焕脸",
+            "artist": "周一围",
+            "play_setting": "第24集"
+        }
+    },
+    "NLU02284": {
+        "text": "举起手来这部喜剧片很好看，我现在要看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "举起手来",
+            "tag": "喜剧"
+        }
+    },
+    "NLU02294": {
+        "text": "找蒋欣演的遇见幸福",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "遇见幸福",
+            "artist": "蒋欣"
+        }
+    },
+    "NLU02299": {
+        "text": "能给我播放一个2020年比较火的古装剧吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "古装",
+            "age": "2020年"
+        }
+    },
+    "NLU02300": {
+        "text": "聂远和吴谨言演的幸福还会来敲门播放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "幸福还会来敲门",
+            "artist": [
+                "聂远",
+                "吴谨言"
+            ]
+        }
+    },
+    "NLU02301": {
+        "text": "帮我播放完美的她",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "完美的她"
+        }
+    },
+    "NLU02307": {
+        "text": "范冰冰参演的美国大片给我来一个",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "范冰冰",
+            "region": "美国"
+        }
+    },
+    "NLU02312": {
+        "text": "李一桐的电视剧这几年上线的可以播放一部给我看看吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "李一桐"
+        }
+    },
+    "NLU02322": {
+        "text": "我想你继续播放一下五月的青春",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "五月的青春",
+            "play_setting": "继续"
+        }
+    },
+    "NLU02334": {
+        "text": "找其他王一博主演的古装剧播放可以吗，除了有匪",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "王一博",
+            "tag": "古装"
+        }
+    },
+    "NLU02343": {
+        "text": "来给我继续播放下布衣天子吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "布衣天子",
+            "play_setting": "继续"
+        }
+    },
+    "NLU02344": {
+        "text": "2019年肖战的剧是不是可以给我播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "肖战",
+            "age": "2019年"
+        }
+    },
+    "NLU02347": {
+        "text": "我要写个观后感，请替我找个60年代战争题材电影",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "60年代",
+            "tag": "战争"
+        }
+    },
+    "NLU02350": {
+        "text": "有没有今年上新的美国动作类电影播放一下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "动作",
+            "region": "美国",
+            "age": "今年"
+        }
+    },
+    "NLU02361": {
+        "text": "王艳梅演的水中花请播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "水中花",
+            "artist": "王艳梅"
+        }
+    },
+    "NLU02366": {
+        "text": "我想看一会港片新喜剧之王呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "新喜剧之王",
+            "region": "香港"
+        }
+    },
+    "NLU02379": {
+        "text": "90年代的那个恐怖片继续给我播放吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "恐怖",
+            "age": "90年代",
+            "play_setting": "继续"
+        }
+    },
+    "NLU02395": {
+        "text": "我要看一个2018年的电影影呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "影",
+            "age": "2018年"
+        }
+    },
+    "NLU02397": {
+        "text": "能不能把风声这个推理剧给我放出来",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "风声",
+            "tag": "推理"
+        }
+    },
+    "NLU02411": {
+        "text": "能给我一个轻松的爱情剧看看吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": [
+                "轻松",
+                "爱情"
+            ]
+        }
+    },
+    "NLU02421": {
+        "text": "播放2007年的偶像剧奋斗1点25倍速",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "奋斗",
+            "tag": "偶像",
+            "age": "2007年",
+            "play_setting": "1点25倍"
+        }
+    },
+    "NLU02425": {
+        "text": "麻烦打开乐视播放面具背后",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "面具背后"
+        }
+    },
+    "NLU02429": {
+        "text": "我现在要看乌鸦小姐与蜥蜴先生 ",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "乌鸦小姐与蜥蜴先生"
+        }
+    },
+    "NLU02437": {
+        "text": "我要看一遍倩女幽魂，要张国荣版的哦",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "倩女幽魂",
+            "artist": "张国荣"
+        }
+    },
+    "NLU02448": {
+        "text": "立刻就想看美国的2020年的电影",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "美国",
+            "age": "2020年"
+        }
+    },
+    "NLU02472": {
+        "text": "播放香港喜剧我爱钟无艳",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "我爱钟无艳",
+            "tag": "喜剧",
+            "region": "香港"
+        }
+    },
+    "NLU02473": {
+        "text": "是不是能给我播放一个台湾女演员林志玲的电视剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "林志玲",
+            "region": "台湾"
+        }
+    },
+    "NLU02478": {
+        "text": "播放这就是生活刘恺威陈都灵演的",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "这就是生活",
+            "artist": [
+                "刘恺威",
+                "陈都灵"
+            ]
+        }
+    },
+    "NLU02479": {
+        "text": "我想看芒果TV的正是青春璀璨时",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "正是青春璀璨时"
+        }
+    },
+    "NLU02481": {
+        "text": "日本电影昼颜播放给我看看可以不",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "昼颜",
+            "region": "日本"
+        }
+    },
+    "NLU02493": {
+        "text": "帮我播放那片花那片海",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "那片花那片海"
+        }
+    },
+    "NLU02504": {
+        "text": "泰剧禁忌女孩可以播放一下不",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "禁忌女孩",
+            "region": "泰国"
+        }
+    },
+    "NLU02507": {
+        "text": "在二十分钟之后播放80年代首次在意大利上映的末代皇帝。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "80年代",
+            "name": "末代皇帝",
+            "region": "意大利"
+        }
+    },
+    "NLU02536": {
+        "text": "我要看成龙主演的动作片十二生肖。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "成龙",
+            "tag": "动作",
+            "name": "十二生肖"
+        }
+    },
+    "NLU02538": {
+        "text": "麻烦播放由梁朝伟和张曼玉主演的电影花样年华。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": [
+                "梁朝伟",
+                "张曼玉"
+            ],
+            "name": "花样年华"
+        }
+    },
+    "NLU02540": {
+        "text": "孙俪主演的都市职场剧安家第五集我想看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "孙俪",
+            "tag": "都市职场",
+            "name": "安家",
+            "play_setting": "第五集"
+        }
+    },
+    "NLU02545": {
+        "text": "有个日本推理片嫌疑人X的献身我想看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "嫌疑人X的献身",
+            "tag": "推理",
+            "region": "日本"
+        }
+    },
+    "NLU02581": {
+        "text": "喜剧西红柿首富是不是可以播放一下呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "西红柿首富",
+            "tag": "喜剧"
+        }
+    },
+    "NLU02593": {
+        "text": "我想看陈情令大结局帮我播放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "陈情令",
+            "play_setting": "大结局"
+        }
+    },
+    "NLU02621": {
+        "text": "能续播吴磊那个电视剧吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "吴磊",
+            "play_setting": "续播"
+        }
+    },
+    "NLU02630": {
+        "text": "我想看一个喜剧电影夏洛特烦恼呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "夏洛特烦恼",
+            "tag": "喜剧"
+        }
+    },
+    "NLU02634": {
+        "text": "放还有诗和远方的第二季不是第一季",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "还有诗和远方",
+            "play_setting": "第二季"
+        }
+    },
+    "NLU02648": {
+        "text": "就想看看孙俪演的甄嬛传",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "孙俪",
+            "name": "甄嬛传"
+        }
+    },
+    "NLU02666": {
+        "text": "雷佳音和陈数演的那个和平饭店我想看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "和平饭店",
+            "artist": [
+                "雷佳音",
+                "陈数"
+            ]
+        }
+    },
+    "NLU02672": {
+        "text": "徐克导演都有什么动作电影，按评分来播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "徐克",
+            "tag": "动作"
+        }
+    },
+    "NLU02674": {
+        "text": "播放苏晓彤主演的大宋少年志",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "苏晓彤",
+            "name": "大宋少年志"
+        }
+    },
+    "NLU02677": {
+        "text": "找一部岳云鹏参演的电影看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "岳云鹏"
+        }
+    },
+    "NLU02691": {
+        "text": "我想看一会韩剧，那个朴信惠出演的可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "朴信惠",
+            "region": "韩国"
+        }
+    },
+    "NLU02700": {
+        "text": "看一下蓝盈盈主演的精英律师怎么样。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "精英律师",
+            "artist": "蓝盈盈"
+        }
+    },
+    "NLU02701": {
+        "text": "帮我播放战争片地道战",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "地道战",
+            "tag": "战争"
+        }
+    },
+    "NLU02708": {
+        "text": "播放古代神话的片妈祖，大陆版本的",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "妈祖",
+            "tag": "古代神话",
+            "region": "大陆"
+        }
+    },
+    "NLU02714": {
+        "text": "推理剧续播一下可以不",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "推理",
+            "play_setting": "续播"
+        }
+    },
+    "NLU02728": {
+        "text": "给我看一个盗墓片盗墓笔记的第一集吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "盗墓笔记",
+            "tag": "盗墓",
+            "play_setting": "第一集"
+        }
+    },
+    "NLU02735": {
+        "text": "让那个台湾的偶像剧继续播放一下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "偶像",
+            "play_setting": "继续",
+            "region": "台湾"
+        }
+    },
+    "NLU02741": {
+        "text": "张雪迎和李治廷演的白发播放按时间",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "白发",
+            "artist": [
+                "张雪迎",
+                "李治廷"
+            ]
+        }
+    },
+    "NLU02752": {
+        "text": "继续播放一下去年上线的那个美国科幻片",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "科幻",
+            "play_setting": "继续",
+            "region": "美国",
+            "age": "去年"
+        }
+    },
+    "NLU02759": {
+        "text": "找一个盗墓片的最后一集给我看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "盗墓",
+            "play_setting": "最后一集"
+        }
+    },
+    "NLU02762": {
+        "text": "贾玲的你好李焕英已经出了，赶紧播放给我",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "贾玲",
+            "name": "你好李焕英"
+        }
+    },
+    "NLU02771": {
+        "text": "是不是可以继续播放清宫的剧甄嬛传呀",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "甄嬛传",
+            "tag": "清宫",
+            "play_setting": "继续"
+        }
+    },
+    "NLU02780": {
+        "text": "是不是能给我播放一个王刚演得历史剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "王刚",
+            "tag": "历史"
+        }
+    },
+    "NLU02784": {
+        "text": "开开芒果TV上黄景瑜迪丽热巴主演的幸福触手可及给我放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "幸福触手可及",
+            "artist": [
+                "黄景瑜",
+                "迪丽热巴"
+            ]
+        }
+    },
+    "NLU02787": {
+        "text": "放一个80年代香港的恐怖片",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "80年代",
+            "region": "香港",
+            "tag": "恐怖"
+        }
+    },
+    "NLU02792": {
+        "text": "播一下因法之名",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "因法之名"
+        }
+    },
+    "NLU02812": {
+        "text": "那帮我播一下大宋宫词哈",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "大宋宫词"
+        }
+    },
+    "NLU02827": {
+        "text": "秋瓷炫演出的韩剧给我播放一个",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "秋瓷炫",
+            "region": "韩国"
+        }
+    },
+    "NLU02832": {
+        "text": "近五年冯小刚导演的电影找一个播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "冯小刚",
+            "age": "近五年"
+        }
+    },
+    "NLU02833": {
+        "text": "运动后我想观看一下由王家卫导演的电影春光乍泄。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "王家卫",
+            "name": "春光乍泄"
+        }
+    },
+    "NLU02842": {
+        "text": "范迪塞尔导演的美剧可以来一个看看不",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "范迪塞尔",
+            "region": "美国"
+        }
+    },
+    "NLU02849": {
+        "text": "麻烦帮我接着上次播放一下暗恋橘生淮南",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "暗恋橘生淮南",
+            "play_setting": "接着"
+        }
+    },
+    "NLU02852": {
+        "text": "放一个2006年的古装剧可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "古装",
+            "age": "2006年"
+        }
+    },
+    "NLU02860": {
+        "text": "我想要看暖暖请多指教给我找一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "暖暖请多指教"
+        }
+    },
+    "NLU02892": {
+        "text": "2倍速放黄轩杨颖演的创业时代",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "创业时代",
+            "artist": [
+                "黄轩",
+                "杨颖"
+            ],
+            "play_setting": "2倍"
+        }
+    },
+    "NLU02907": {
+        "text": "播放刘德华主演的人潮汹涌",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "刘德华",
+            "name": "人潮汹涌"
+        }
+    },
+    "NLU02908": {
+        "text": "给我播放讲宫廷的剧皓镧传",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "皓镧传",
+            "tag": "宫廷"
+        }
+    },
+    "NLU02913": {
+        "text": "继续播放我们不能是朋友第15集之后的剧集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "我们不能是朋友",
+            "play_setting": "继续"
+        }
+    },
+    "NLU02918": {
+        "text": "我现在要看张若昀主演的庆余年，第十集吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "张若昀",
+            "name": "庆余年",
+            "play_setting": "第十集"
+        }
+    },
+    "NLU02934": {
+        "text": "继续放远方的家",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "远方的家"
+        }
+    },
+    "NLU02935": {
+        "text": "可以继续播放颖儿出演的电视剧吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "颖儿",
+            "play_setting": "继续"
+        }
+    },
+    "NLU02965": {
+        "text": "我想看彭昱畅出演的沐浴之王",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "彭昱畅",
+            "name": "沐浴之王"
+        }
+    },
+    "NLU02967": {
+        "text": "现在想看看徐峥导演的囧妈",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "徐峥",
+            "name": "囧妈"
+        }
+    },
+    "NLU02978": {
+        "text": "随机播放一部80年代的战争片",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "80年代",
+            "tag": "战争",
+            "play_setting": "随机"
+        }
+    },
+    "NLU02992": {
+        "text": "播放郭德纲出演的喜剧电影",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "郭德纲",
+            "tag": "喜剧"
+        }
+    },
+    "NLU03014": {
+        "text": "立刻放一个新加坡今年上线的电影",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "新加坡",
+            "age": "今年"
+        }
+    },
+    "NLU03034": {
+        "text": "能帮我播放小幸福吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "小幸福"
+        }
+    },
+    "NLU03037": {
+        "text": "换我的时代你的时代看看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "我的时代你的时代"
+        }
+    },
+    "NLU03049": {
+        "text": "是否可以播放90年代李若彤的剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "李若彤",
+            "age": "90年代"
+        }
+    },
+    "NLU03054": {
+        "text": "请播1985的喜剧济公",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "济公",
+            "tag": "喜剧",
+            "age": "1985"
+        }
+    },
+    "NLU03062": {
+        "text": "可以帮我播放一下第五空间吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "第五空间"
+        }
+    },
+    "NLU03067": {
+        "text": "我们一致同意观看英国的神探夏洛克",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "英国",
+            "name": "神探夏洛克"
+        }
+    },
+    "NLU03073": {
+        "text": "是不是能来一个迪丽热巴演的爱情剧呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "迪丽热巴",
+            "tag": "爱情"
+        }
+    },
+    "NLU03079": {
+        "text": "柯南剧场版日本的播放下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "柯南剧场版",
+            "region": "日本"
+        }
+    },
+    "NLU03082": {
+        "text": "嗨，换一个美国好莱坞动作大片变形金刚",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "美国",
+            "tag": "动作",
+            "name": "变形金刚"
+        }
+    },
+    "NLU03090": {
+        "text": "播放陈伟祥导演关晓彤主演的我就是这般女子",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "我就是这般女子",
+            "artist": [
+                "陈伟祥",
+                "关晓彤"
+            ]
+        }
+    },
+    "NLU03093": {
+        "text": "你能不能立刻给我播放有迪丽热巴出演的电视剧呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "迪丽热巴"
+        }
+    },
+    "NLU03106": {
+        "text": "帮我播放大唐荣耀",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "大唐荣耀"
+        }
+    },
+    "NLU03126": {
+        "text": "播放电影，张子枫主演的唐山大地震",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "张子枫",
+            "name": "唐山大地震"
+        }
+    },
+    "NLU03147": {
+        "text": "你能播放玄幻类型的电视剧香蜜吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "香蜜",
+            "tag": "玄幻"
+        }
+    },
+    "NLU03154": {
+        "text": "2019年出的电影流浪地球播放一下呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "流浪地球",
+            "age": "2019年"
+        }
+    },
+    "NLU03155": {
+        "text": "动作电影就看美国的碟中谍咯",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "动作",
+            "region": "美国",
+            "name": "碟中谍"
+        }
+    },
+    "NLU03161": {
+        "text": "换一个我曾经记得那男孩",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "我曾经记得那男孩"
+        }
+    },
+    "NLU03165": {
+        "text": "有没有三年前的古装片给我看一个呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "古装",
+            "age": "三年前"
+        }
+    },
+    "NLU03166": {
+        "text": "为我找到大陆奇幻题材的晴雅集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "大陆",
+            "tag": "奇幻",
+            "name": "晴雅集"
+        }
+    },
+    "NLU03174": {
+        "text": "我想继续观看完美的他的第二十一集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "play_setting": [
+                "继续",
+                "二十一集"
+            ],
+            "name": "完美的他"
+        }
+    },
+    "NLU03187": {
+        "text": "我需要看一部美国电影盗梦空间呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "盗梦空间",
+            "region": "美国"
+        }
+    },
+    "NLU03193": {
+        "text": "是不是能看其他日本的恐怖电影啊，贞子已经看过了",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "恐怖",
+            "region": "日本"
+        }
+    },
+    "NLU03199": {
+        "text": "来一个如懿传的第三集可以不可以",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "如懿传",
+            "play_setting": "第三集"
+        }
+    },
+    "NLU03204": {
+        "text": "海王这个电影是不是能继续给我播放下呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "海王",
+            "play_setting": "继续"
+        }
+    },
+    "NLU03213": {
+        "text": "播放大秦赋",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "大秦赋"
+        }
+    },
+    "NLU03224": {
+        "text": "悬疑片嘛播放万里追踪",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "万里追踪",
+            "tag": "悬疑"
+        }
+    },
+    "NLU03229": {
+        "text": "台湾美女林志玲的剧给我播放吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "林志玲",
+            "region": "台湾"
+        }
+    },
+    "NLU03235": {
+        "text": "我想看今年到今天为止播放量最高的古装剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "古装",
+            "play_setting": "播放量最高",
+            "age": "今年"
+        }
+    },
+    "NLU03239": {
+        "text": "有没有颖儿今年上的电视剧给我看一个",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "颖儿",
+            "age": "今年"
+        }
+    },
+    "NLU03253": {
+        "text": "找部赵丽颖霍建华演的奇幻片花千骨看看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "花千骨",
+            "tag": "奇幻",
+            "artist": [
+                "赵丽颖",
+                "霍建华"
+            ]
+        }
+    },
+    "NLU03256": {
+        "text": "找到并且播放何炅和黄磊参加过的向往的生活",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "向往的生活",
+            "artist": [
+                "何炅",
+                "黄磊"
+            ]
+        }
+    },
+    "NLU03258": {
+        "text": "我需要看杨延东2021年演出的剧呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "杨延东",
+            "age": "2021年"
+        }
+    },
+    "NLU03268": {
+        "text": "贺岁的话那就请给我播放西游降魔篇",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "西游降魔篇"
+        }
+    },
+    "NLU03277": {
+        "text": "李晨和张译演的好家伙播放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "好家伙",
+            "artist": [
+                "李晨",
+                "张译"
+            ]
+        }
+    },
+    "NLU03278": {
+        "text": "郭敬明导演、杨幂主演的电影帮我找一个播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": [
+                "郭敬明",
+                "杨幂"
+            ]
+        }
+    },
+    "NLU03280": {
+        "text": "中国演员肖战的剧给我来一个",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "肖战",
+            "region": "中国"
+        }
+    },
+    "NLU03282": {
+        "text": "沈腾主演的飞驰人生等一下播出来",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "沈腾",
+            "name": "飞驰人生"
+        }
+    },
+    "NLU03292": {
+        "text": "大陆热播剧蒋欣主演的小舍得放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "大陆",
+            "artist": "蒋欣",
+            "name": "小舍得"
+        }
+    },
+    "NLU03306": {
+        "text": "那个彩虹的重力我要看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "彩虹的重力"
+        }
+    },
+    "NLU03314": {
+        "text": "关晓彤和吴磊演的什刹海马上给我放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "什刹海",
+            "artist": [
+                "关晓彤",
+                "吴磊"
+            ]
+        }
+    },
+    "NLU03317": {
+        "text": "我想你现在给我播一个新加坡的2020年上的喜剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "喜剧",
+            "region": "新加坡",
+            "age": "2020年"
+        }
+    },
+    "NLU03332": {
+        "text": "我想播放陈赫出演的唐人街探案",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "陈赫",
+            "name": "唐人街探案"
+        }
+    },
+    "NLU03336": {
+        "text": "中国的演员肖战的古装剧来一个看看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "肖战",
+            "tag": "古装",
+            "region": "中国"
+        }
+    },
+    "NLU03339": {
+        "text": "青春电影，许光汉主演的你的婚礼",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "许光汉",
+            "name": "你的婚礼",
+            "tag": "青春"
+        }
+    },
+    "NLU03351": {
+        "text": "来一个日本动漫名侦探柯南呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "名侦探柯南",
+            "region": "日本"
+        }
+    },
+    "NLU03369": {
+        "text": "有90年代范冰冰出演的中国电影吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "范冰冰",
+            "region": "中国",
+            "age": "90年代"
+        }
+    },
+    "NLU03370": {
+        "text": "我能继续看一下三生三世枕上书吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "三生三世枕上书",
+            "play_setting": "继续"
+        }
+    },
+    "NLU03371": {
+        "text": "麻烦帮我播唐嫣主演的燕云台",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "燕云台",
+            "artist": "唐嫣"
+        }
+    },
+    "NLU03384": {
+        "text": "马上要看2016年英国家庭题材电影海蒂和爷爷",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "2016年",
+            "region": "英国",
+            "tag": "家庭",
+            "name": "海蒂和爷爷"
+        }
+    },
+    "NLU03386": {
+        "text": "不是综艺是电视剧非诚勿扰",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "非诚勿扰"
+        }
+    },
+    "NLU03407": {
+        "text": "播放由周润发主演的电影英雄本色。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "周润发",
+            "name": "英雄本色"
+        }
+    },
+    "NLU03411": {
+        "text": "播放刘浩存出演的送你一朵小红花",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "刘浩存",
+            "name": "送你一朵小红花"
+        }
+    },
+    "NLU03421": {
+        "text": "立刻把吴磊演的沙海给我播放一下行不行",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "吴磊",
+            "name": "沙海"
+        }
+    },
+    "NLU03428": {
+        "text": "我不是药神这个2018年上的电影给我播放一下可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "我不是药神",
+            "age": "2018年"
+        }
+    },
+    "NLU03432": {
+        "text": "我想看甄嬛传的第三集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "甄嬛传",
+            "play_setting": "第三集"
+        }
+    },
+    "NLU03438": {
+        "text": "马天宇郑爽演的流淌的美好时光给我放啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "流淌的美好时光",
+            "artist": [
+                "马天宇",
+                "郑爽"
+            ]
+        }
+    },
+    "NLU03444": {
+        "text": "我就想看香港拍的动作片",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "香港",
+            "tag": "动作"
+        }
+    },
+    "NLU03446": {
+        "text": "我需要你帮我播放一个比较恐怖的电影",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "恐怖"
+        }
+    },
+    "NLU03459": {
+        "text": "2020年播出的终极笔记可以播放第五集不",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "终极笔记",
+            "play_setting": "第五集",
+            "age": "2020年"
+        }
+    },
+    "NLU03472": {
+        "text": "张国荣的港片色情男女播放吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "张国荣",
+            "name": "色情男女",
+            "region": "香港"
+        }
+    },
+    "NLU03478": {
+        "text": "胡歌的仙侠剧可以来一个播放一下吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "胡歌",
+            "tag": "仙侠"
+        }
+    },
+    "NLU03494": {
+        "text": "现在想看60年代的推理剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "60年代",
+            "tag": "推理"
+        }
+    },
+    "NLU03503": {
+        "text": "我想看2018年的偶像剧看看呢，类似三生三世那种剧就行",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": [
+                "偶像",
+                "三生三世"
+            ],
+            "age": "2018年"
+        }
+    },
+    "NLU03511": {
+        "text": "搜一下戚薇演的你好安怡",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "你好安怡",
+            "artist": "戚薇"
+        }
+    },
+    "NLU03526": {
+        "text": "放白眉大侠",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "白眉大侠"
+        }
+    },
+    "NLU03529": {
+        "text": "我想看一个比较轻松快乐的美剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "比较轻松快乐",
+            "region": "美国"
+        }
+    },
+    "NLU03533": {
+        "text": "三生三世枕上书第二十集给我播放一下呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "三生三世枕上书",
+            "play_setting": "第二十集"
+        }
+    },
+    "NLU03535": {
+        "text": "是不是现在能立刻给我播放一下迪丽热巴新剧的第一集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "迪丽热巴",
+            "play_setting": "第一集"
+        }
+    },
+    "NLU03555": {
+        "text": "能不能继续播放我上次看的如懿传呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "如懿传",
+            "play_setting": "继续"
+        }
+    },
+    "NLU03560": {
+        "text": "帮我播放一部现代的偶像剧良辰美景好时光",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "良辰美景好时光",
+            "tag": [
+                "现代",
+                "偶像"
+            ]
+        }
+    },
+    "NLU03562": {
+        "text": "独步天下播放一下接上回啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "独步天下",
+            "play_setting": "接上回"
+        }
+    },
+    "NLU03567": {
+        "text": "播放大陆片外交风云，这个剧把六十年代的外交历史形象的演绎出来了",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "大陆",
+            "name": "外交风云",
+            "age": "六十年代"
+        }
+    },
+    "NLU03572": {
+        "text": "能不能把杨幂的暴风眼播放出来",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "杨幂",
+            "name": "暴风眼"
+        }
+    },
+    "NLU03573": {
+        "text": "就播黄晓明主演的神雕侠侣",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "黄晓明",
+            "name": "神雕侠侣"
+        }
+    },
+    "NLU03576": {
+        "text": "1点5倍速播放一下唐国强演的东方",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "东方",
+            "artist": "唐国强",
+            "play_setting": "1点5倍"
+        }
+    },
+    "NLU03591": {
+        "text": "有没有日本恐怖片，找一个播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "恐怖",
+            "region": "日本"
+        }
+    },
+    "NLU03595": {
+        "text": "我需要看一部唐嫣的仙剑三呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "唐嫣",
+            "name": "仙剑三"
+        }
+    },
+    "NLU03599": {
+        "text": "我想知道七十年代左右的沈腾主演的喜剧都有哪些",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "七十年代左右",
+            "artist": "沈腾",
+            "tag": "喜剧"
+        }
+    },
+    "NLU03604": {
+        "text": "蒋雯丽演的正阳门下小女人我要看马上放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "正阳门下小女人"
+        }
+    },
+    "NLU03646": {
+        "text": "我能不能来一部去年的偶像剧呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "偶像",
+            "age": "去年"
+        }
+    },
+    "NLU03655": {
+        "text": "能播放一个喜剧吗，就武林外传吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "武林外传",
+            "tag": "喜剧"
+        }
+    },
+    "NLU03656": {
+        "text": "周迅出演的风声给我找一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "风声",
+            "artist": "周迅"
+        }
+    },
+    "NLU03658": {
+        "text": "我想看一个今年上线的刘涛演的电视剧呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "刘涛",
+            "age": "今年"
+        }
+    },
+    "NLU03702": {
+        "text": "随便找一个玄幻剧播放最后一集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "玄幻",
+            "play_setting": "最后一集"
+        }
+    },
+    "NLU03729": {
+        "text": "给我继续来播放一下海王吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "海王",
+            "play_setting": "继续"
+        }
+    },
+    "NLU03734": {
+        "text": "马伊琍演的旗袍美探给我搜下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "旗袍美探",
+            "artist": "马伊琍"
+        }
+    },
+    "NLU03742": {
+        "text": "是不是能播放黄晓明的仙侠剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "黄晓明",
+            "tag": "仙侠"
+        }
+    },
+    "NLU03747": {
+        "text": "找一个赵尧珂2021年新上线的电视剧看看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "赵尧珂",
+            "age": "2021年"
+        }
+    },
+    "NLU03767": {
+        "text": "张艺兴主演的老九门我想看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "张艺兴",
+            "name": "老九门"
+        }
+    },
+    "NLU03769": {
+        "text": "麻烦播放一下央视网的经山历海",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "经山历海"
+        }
+    },
+    "NLU03778": {
+        "text": "看抬头有星光的第35集继续给我播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "抬头有星光",
+            "play_setting": "第35集"
+        }
+    },
+    "NLU03783": {
+        "text": "请播放怀旧电视剧武林外传",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "武林外传"
+        }
+    },
+    "NLU03789": {
+        "text": "你好，立即为我续播长歌行",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "play_setting": "续播",
+            "name": "长歌行"
+        }
+    },
+    "NLU03790": {
+        "text": "播放推理片摩天大楼",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "推理",
+            "name": "摩天大楼"
+        }
+    },
+    "NLU03795": {
+        "text": "继续看美国那个90年代的电影",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "美国",
+            "age": "90年代",
+            "play_setting": "继续"
+        }
+    },
+    "NLU03797": {
+        "text": "李易峰唐嫣杨洋版本的盗墓笔记帮我2倍速播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "盗墓笔记",
+            "artist": [
+                "李易峰",
+                "唐嫣",
+                "杨洋"
+            ],
+            "play_setting": "2倍"
+        }
+    },
+    "NLU03799": {
+        "text": "能看一个去年的鬼片电影吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "鬼片",
+            "age": "去年"
+        }
+    },
+    "NLU03835": {
+        "text": "我想你给我来一部去年大火的电视剧隐秘的角落",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "隐秘的角落",
+            "age": "去年"
+        }
+    },
+    "NLU03837": {
+        "text": "能不能给我放一下长歌行的第32集呀",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "长歌行",
+            "play_setting": "第32集"
+        }
+    },
+    "NLU03846": {
+        "text": "大陆拍的哪吒重生给我放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "大陆",
+            "name": "哪吒重生"
+        }
+    },
+    "NLU03870": {
+        "text": "贾玲今年上映的电影给我播放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "贾玲",
+            "age": "今年"
+        }
+    },
+    "NLU03889": {
+        "text": "能找一个赵薇90年代的剧播放吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "赵薇",
+            "age": "90年代"
+        }
+    },
+    "NLU03924": {
+        "text": "我想看76版的西游记可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "西游记",
+            "age": "76版"
+        }
+    },
+    "NLU03927": {
+        "text": "我想看18年上的电影无名之辈",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "无名之辈",
+            "age": "18年"
+        }
+    },
+    "NLU03941": {
+        "text": "新龙门客栈这部由张曼玉和林青霞主演的电影请在周一傍晚六点播出。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "新龙门客栈",
+            "artist": [
+                "张曼玉",
+                "林青霞"
+            ]
+        }
+    },
+    "NLU03972": {
+        "text": "今年的贾玲的电影你好李焕英现在给我播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "贾玲",
+            "name": "你好李焕英",
+            "age": "今年"
+        }
+    },
+    "NLU03976": {
+        "text": "点播李安21世纪初拍的美国影片断背山",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "李安",
+            "age": "21世纪初",
+            "region": "美国",
+            "name": "断背山"
+        }
+    },
+    "NLU03984": {
+        "text": "给我播放一个英国的历史片可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "历史",
+            "region": "英国"
+        }
+    },
+    "NLU03989": {
+        "text": "给我播一个喜剧电影羞羞的铁拳吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "羞羞的铁拳",
+            "tag": "喜剧"
+        }
+    },
+    "NLU03998": {
+        "text": "2020年上映的拆弹专家播给我",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "拆弹专家",
+            "age": "2020年"
+        }
+    },
+    "NLU04003": {
+        "text": "看会儿大唐女法医",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "大唐女法医"
+        }
+    },
+    "NLU04004": {
+        "text": "请播放号手就位这部李璐和张寒冰导演的电视剧。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "号手就位",
+            "artist": [
+                "李璐",
+                "张寒冰"
+            ]
+        }
+    },
+    "NLU04012": {
+        "text": "你能找一个内地拍的神话剧看会吗古代的特效好点的",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": [
+                "神话",
+                "古代",
+                "特效好点"
+            ],
+            "region": "大陆"
+        }
+    },
+    "NLU04013": {
+        "text": "找因为爱情有幸福并播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "因为爱情有幸福"
+        }
+    },
+    "NLU04025": {
+        "text": "赶快给我播放曾国祥的少年的你",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "曾国祥",
+            "name": "少年的你"
+        }
+    },
+    "NLU04030": {
+        "text": "杨幂的推理剧可以给我看一个吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "杨幂",
+            "tag": "推理"
+        }
+    },
+    "NLU04031": {
+        "text": "播放娄艺潇主演的爱情公寓第二集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "娄艺潇",
+            "name": "爱情公寓",
+            "play_setting": "第二集"
+        }
+    },
+    "NLU04039": {
+        "text": "我想看一会李敏镐拍的韩国的电视剧呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "李敏镐",
+            "region": "韩国"
+        }
+    },
+    "NLU04067": {
+        "text": "有没有日本的灾难片给我看一个呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "灾难",
+            "region": "日本"
+        }
+    },
+    "NLU04070": {
+        "text": "冯绍峰和赵丽颖主演的电视剧知否知否应是绿肥红瘦播放给我看看呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": [
+                "冯绍峰",
+                "赵丽颖"
+            ],
+            "name": "知否知否应是绿肥红瘦"
+        }
+    },
+    "NLU04075": {
+        "text": "pp视频上给播放一下星火云雾街",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "星火云雾街"
+        }
+    },
+    "NLU04093": {
+        "text": "想看动作片五号特工组，就是于震主演的。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "于震",
+            "name": "五号特工组",
+            "tag": "动作"
+        }
+    },
+    "NLU04094": {
+        "text": "放张国荣主演的霸王别姬看看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "张国荣",
+            "name": "霸王别姬"
+        }
+    },
+    "NLU04099": {
+        "text": "麻烦播放一下爱的多米诺",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "爱的多米诺"
+        }
+    },
+    "NLU04122": {
+        "text": "播放昨天的看过的美国恐怖片",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "美国",
+            "tag": "恐怖"
+        }
+    },
+    "NLU04128": {
+        "text": "印度的电影也不错，来那个摔跤吧爸爸。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "印度",
+            "name": "摔跤吧爸爸"
+        }
+    },
+    "NLU04168": {
+        "text": "2倍速播放台湾爱情剧转角遇到爱",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "台湾",
+            "tag": "爱情",
+            "name": "转角遇到爱",
+            "play_setting": "2倍"
+        }
+    },
+    "NLU04172": {
+        "text": "看一个周星驰的喜剧片吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "周星驰",
+            "tag": "喜剧"
+        }
+    },
+    "NLU04182": {
+        "text": "速度与激情这部出版于美国的动作犯罪类电影。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "速度与激情",
+            "region": "美国",
+            "tag": "动作犯罪"
+        }
+    },
+    "NLU04199": {
+        "text": "来一个迪丽热巴的偶像剧看吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "迪丽热巴",
+            "tag": "偶像"
+        }
+    },
+    "NLU04215": {
+        "text": "是否能把美国电影海王继续播放呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "海王",
+            "play_setting": "继续",
+            "region": "美国"
+        }
+    },
+    "NLU04246": {
+        "text": "能把战争片来不及说爱你播放给我看吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "来不及说爱你",
+            "tag": "战争"
+        }
+    },
+    "NLU04277": {
+        "text": "我想你给我播放一下下一站幸福呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "下一站幸福"
+        }
+    },
+    "NLU04280": {
+        "text": "中国今年最火的那个喜剧现在播放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "喜剧",
+            "region": "中国",
+            "age": "今年"
+        }
+    },
+    "NLU04281": {
+        "text": "唐嫣罗晋演的归来去播放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "归来去",
+            "artist": [
+                "唐嫣",
+                "罗晋"
+            ]
+        }
+    },
+    "NLU04288": {
+        "text": "播放美国情景喜剧小谢尔顿",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "小谢尔顿",
+            "tag": "情景喜剧",
+            "region": "美国"
+        }
+    },
+    "NLU04291": {
+        "text": "继续播放李雪健演的希望的大地第30集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "希望的大地",
+            "artist": "李雪健",
+            "play_setting": "第30集"
+        }
+    },
+    "NLU04292": {
+        "text": "是否可以来一个中国的喜剧给我看两眼",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "喜剧",
+            "region": "中国"
+        }
+    },
+    "NLU04329": {
+        "text": "帮我继续播放一下电影追龙的第三集吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "play_setting": [
+                "继续",
+                "第三集"
+            ],
+            "name": "追龙"
+        }
+    },
+    "NLU04341": {
+        "text": "我要看喜剧西红柿首富。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "西红柿首富",
+            "tag": "喜剧"
+        }
+    },
+    "NLU04349": {
+        "text": "你能播放一下三生三世十里桃花杨幂演的那个吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "杨幂",
+            "name": "三生三世十里桃花"
+        }
+    },
+    "NLU04356": {
+        "text": "来一个讲侦探推理的剧去年的看看吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "侦探推理",
+            "age": "去年"
+        }
+    },
+    "NLU04363": {
+        "text": "能不能继续播一下古天乐的那个电影",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "古天乐",
+            "play_setting": "继续"
+        }
+    },
+    "NLU04370": {
+        "text": "杨幂出演的玄幻剧播放第20集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "杨幂",
+            "tag": "玄幻",
+            "play_setting": "第20集"
+        }
+    },
+    "NLU04371": {
+        "text": "孔笙导演的剧请播放生死线",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "生死线",
+            "artist": "孔笙"
+        }
+    },
+    "NLU04375": {
+        "text": "播放爱情的开关",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "爱情的开关"
+        }
+    },
+    "NLU04379": {
+        "text": "是否能找一个推理片播放二十集啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "推理",
+            "play_setting": "二十集"
+        }
+    },
+    "NLU04398": {
+        "text": "我就最爱看古装剧陈情令，播放一下吧。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "古装",
+            "name": "陈情令"
+        }
+    },
+    "NLU04409": {
+        "text": "能不能播放一个2000年之后的喜剧电影啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "喜剧",
+            "age": "2000年之后"
+        }
+    },
+    "NLU04422": {
+        "text": "立刻播放一个韩国艺人李敏镐的电视剧吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "李敏镐",
+            "region": "韩国"
+        }
+    },
+    "NLU04424": {
+        "text": "十分钟后自动播放刘德华的拆弹专家2",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "play_setting": "自动播放",
+            "artist": "刘德华",
+            "name": "拆弹专家2"
+        }
+    },
+    "NLU04443": {
+        "text": "播放日本电影贞子。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "日本",
+            "name": "贞子"
+        }
+    },
+    "NLU04464": {
+        "text": "给我找一部韩国2006年的电视剧看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "韩国",
+            "age": "2006年"
+        }
+    },
+    "NLU04474": {
+        "text": "给我播放90年代出版的电影沉默的羔羊。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "90年代",
+            "name": "沉默的羔羊"
+        }
+    },
+    "NLU04493": {
+        "text": "麻雀播放一下吧，就是李易峰主演的那个剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "李易峰",
+            "name": "麻雀"
+        }
+    },
+    "NLU04496": {
+        "text": "放一部由德国出版的电影窃听风暴。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "德国",
+            "name": "窃听风暴"
+        }
+    },
+    "NLU04527": {
+        "text": "潘粤明主演的喜剧可以播放一个不或者那个盗墓的也挺好的",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "潘粤明",
+            "tag": [
+                "喜剧",
+                "盗墓"
+            ]
+        }
+    },
+    "NLU04533": {
+        "text": "找一下偶像剧不良笑花看看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "不良笑花",
+            "tag": "偶像"
+        }
+    },
+    "NLU04535": {
+        "text": "继续播放一下如懿传吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "如懿传",
+            "play_setting": "继续"
+        }
+    },
+    "NLU04536": {
+        "text": "给我找一个80年代的战争片",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "战争",
+            "age": "80年代"
+        }
+    },
+    "NLU04541": {
+        "text": "我想的是我们看动作片速度与激情9",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "动作",
+            "name": "速度与激情9"
+        }
+    },
+    "NLU04583": {
+        "text": "我准备看刑侦类电视剧重案六组",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "刑侦",
+            "name": "重案六组"
+        }
+    },
+    "NLU04596": {
+        "text": "刘德华出演的电影，人潮汹涌给我找出来",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "刘德华",
+            "name": "人潮汹涌"
+        }
+    },
+    "NLU04599": {
+        "text": "有三年前上线的战争片给我播放一下吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "战争",
+            "age": "三年前"
+        }
+    },
+    "NLU04605": {
+        "text": "帮我2倍速播放孙红雷演的带着爸爸去留学",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "带着爸爸去留学",
+            "artist": "孙红雷",
+            "play_setting": "2倍"
+        }
+    },
+    "NLU04626": {
+        "text": "美剧2009年上线的播放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "美国",
+            "age": "2009年"
+        }
+    },
+    "NLU04632": {
+        "text": "能把上次那个历史剧给我继续播放吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "历史",
+            "play_setting": "继续"
+        }
+    },
+    "NLU04636": {
+        "text": "立刻给我播放一下美国人范迪塞尔拍摄的电视剧吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "人范迪塞尔",
+            "region": "美国"
+        }
+    },
+    "NLU04639": {
+        "text": "我想看看杨幂主演的刺杀小说家。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "杨幂",
+            "name": "刺杀小说家"
+        }
+    },
+    "NLU04644": {
+        "text": "可以播放一下日头日头照着我吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "日头日头照着我"
+        }
+    },
+    "NLU04651": {
+        "text": "能不能播一下2021年新上线的美国电视剧啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "2021年",
+            "region": "美国"
+        }
+    },
+    "NLU04667": {
+        "text": "能找一个中国演员王刚的电视剧看看吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "王刚",
+            "region": "中国"
+        }
+    },
+    "NLU04670": {
+        "text": "我正在看的推理剧能继续前面的播放一下吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "推理",
+            "play_setting": "继续"
+        }
+    },
+    "NLU04671": {
+        "text": "能不能来一个迪丽热巴主演的烈火如歌看看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "迪丽热巴",
+            "name": "烈火如歌"
+        }
+    },
+    "NLU04674": {
+        "text": "美国艺人刘亦菲的仙侠剧来一个",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "刘亦菲",
+            "tag": "仙侠",
+            "region": "美国"
+        }
+    },
+    "NLU04689": {
+        "text": "是不是能播放一下有赵丽颖出演的红楼梦啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "赵丽颖",
+            "name": "红楼梦"
+        }
+    },
+    "NLU04720": {
+        "text": "赵露思这两年上的电视剧随机来一个吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "赵露思",
+            "age": "两年",
+            "play_setting": "随机"
+        }
+    },
+    "NLU04726": {
+        "text": "让我看陈小艺演的姥姥的饺子馆",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "姥姥的饺子馆",
+            "artist": "陈小艺"
+        }
+    },
+    "NLU04737": {
+        "text": "我需要你给我播放一个迪丽热巴拍的古装剧呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "迪丽热巴",
+            "tag": "古装"
+        }
+    },
+    "NLU04744": {
+        "text": "你可以给我播放一下日本片你的名字给我吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "你的名字",
+            "region": "日本"
+        }
+    },
+    "NLU04746": {
+        "text": "关晓彤主演的张艺谋导演的影麻烦在十分钟之后播放。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": [
+                "关晓彤",
+                "张艺谋"
+            ],
+            "name": "影"
+        }
+    },
+    "NLU04759": {
+        "text": "美片指环王2播放一下给我看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "指环王2",
+            "region": "美国"
+        }
+    },
+    "NLU04760": {
+        "text": "日本2016年前的电影能播放一个吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "日本",
+            "age": "2016年前"
+        }
+    },
+    "NLU04763": {
+        "text": "来一个推理电视剧锦衣之下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "锦衣之下",
+            "tag": "推理"
+        }
+    },
+    "NLU04765": {
+        "text": "能找一个清宫剧播放第一集吗，还珠格格类似的",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": [
+                "清宫",
+                "还珠格格"
+            ],
+            "play_setting": "第一集"
+        }
+    },
+    "NLU04777": {
+        "text": "能给我放金晨主演的隐秘而伟大吗。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "金晨",
+            "name": "隐秘而伟大"
+        }
+    },
+    "NLU04780": {
+        "text": "张子枫演的我的姐姐请播放是殷若昕导的",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "我的姐姐",
+            "artist": [
+                "张子枫",
+                "殷若昕"
+            ]
+        }
+    },
+    "NLU04782": {
+        "text": "需要你帮我找到一个任敏主演的古装剧进行播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "任敏",
+            "tag": "古装"
+        }
+    },
+    "NLU04789": {
+        "text": "我马上就想看张译演的悬崖之上",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "张译",
+            "name": "悬崖之上"
+        }
+    },
+    "NLU04793": {
+        "text": "美国片星际穿越给我播放一下可以不",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "星际穿越",
+            "region": "美国"
+        }
+    },
+    "NLU04804": {
+        "text": "可以播放陆毅郭采洁演的亲爱的味道吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "亲爱的味道",
+            "artist": [
+                "陆毅",
+                "郭采洁"
+            ]
+        }
+    },
+    "NLU04808": {
+        "text": "第29集特殊争夺麻烦播放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "特殊争夺",
+            "play_setting": "第29集"
+        }
+    },
+    "NLU04836": {
+        "text": "陈凯歌导演的妖猫传播放出来",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "陈凯歌",
+            "name": "妖猫传"
+        }
+    },
+    "NLU04860": {
+        "text": "我要看李易峰演的号手就位。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "李易峰",
+            "name": "号手就位"
+        }
+    },
+    "NLU04882": {
+        "text": "赵露思演的古装剧现在就播放第21集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "赵露思",
+            "tag": "古装",
+            "play_setting": "第21集"
+        }
+    },
+    "NLU04896": {
+        "text": "美国去年上线的电影随便给我来一个看呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "美国",
+            "age": "去年"
+        }
+    },
+    "NLU04900": {
+        "text": "我想看一会朱茵出演的电视剧呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "朱茵"
+        }
+    },
+    "NLU04902": {
+        "text": "能看一个前年上线的言情剧看一会吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "言情",
+            "age": "前年"
+        }
+    },
+    "NLU04909": {
+        "text": "放一部90年代的台湾剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "90年代",
+            "region": "台湾"
+        }
+    },
+    "NLU04926": {
+        "text": "我要看日本电影千与千寻。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "日本",
+            "name": "千与千寻"
+        }
+    },
+    "NLU04935": {
+        "text": "续播宫斗剧甄嬛传。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "宫斗",
+            "name": "甄嬛传",
+            "play_setting": "续播"
+        }
+    },
+    "NLU04946": {
+        "text": "我需要你找一个陈坤表演的古装电影给我看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "陈坤",
+            "tag": "古装"
+        }
+    },
+    "NLU04954": {
+        "text": "能把今年刚播出的剧陪你一起长大播放吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "陪你一起长大",
+            "age": "今年"
+        }
+    },
+    "NLU04961": {
+        "text": "我想看2021年迪丽热巴和吴磊演出的剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": [
+                "迪丽热巴",
+                "吴磊"
+            ],
+            "age": "2021年"
+        }
+    },
+    "NLU04968": {
+        "text": "请播放一下妖出长安可以吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "妖出长安"
+        }
+    },
+    "NLU04970": {
+        "text": "能找一个近期的古装偶像剧看一会吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "古装偶像"
+        }
+    },
+    "NLU04977": {
+        "text": "帮我找一下九十年代的都市生活类型的电视剧吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "九十年代",
+            "tag": "都市生活"
+        }
+    },
+    "NLU04978": {
+        "text": "我想要看爱上你治愈我",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "爱上你治愈我"
+        }
+    },
+    "NLU04990": {
+        "text": "台湾的爱情喜剧播放给我看一会呗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "爱情喜剧",
+            "region": "台湾"
+        }
+    },
+    "NLU04992": {
+        "text": "帮我播一下最新一集的雁归西窗月",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "雁归西窗月",
+            "play_setting": "最新一集"
+        }
+    },
+    "NLU05003": {
+        "text": "给我找一个去年出来的古装剧看看吧，还想看类似有匪那种",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": [
+                "古装",
+                "有匪"
+            ],
+            "age": "去年"
+        }
+    },
+    "NLU05005": {
+        "text": "是不是可以现在就播放李易峰的古剑奇谭",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "李易峰",
+            "name": "古剑奇谭"
+        }
+    },
+    "NLU05011": {
+        "text": "麻烦找70年代的古装最好是爱情的片",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": [
+                "古装",
+                "爱情"
+            ],
+            "age": "70年代"
+        }
+    },
+    "NLU05016": {
+        "text": "来个罗志祥徐熙媛演的台湾偶像剧转角遇到爱看一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "转角遇到爱",
+            "tag": "偶像",
+            "artist": [
+                "罗志祥",
+                "徐熙媛"
+            ],
+            "region": "台湾"
+        }
+    },
+    "NLU05017": {
+        "text": "能不能来一个香港演员周星驰的电影播放啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "周星驰",
+            "region": "香港"
+        }
+    },
+    "NLU05023": {
+        "text": "有没有有关宫斗斗争的电视剧大陆的给我看一个",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "宫斗斗争",
+            "region": "大陆"
+        }
+    },
+    "NLU05024": {
+        "text": "楼健2021年执导的电视剧可以播放一个吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "楼健",
+            "age": "2021年"
+        }
+    },
+    "NLU05030": {
+        "text": "麻烦帮我播放时空来电",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "时空来电"
+        }
+    },
+    "NLU05032": {
+        "text": "有没有日本的动作片播放一个呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "动作",
+            "region": "日本"
+        }
+    },
+    "NLU05042": {
+        "text": "美国今年新上的推理电视剧来一个吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "推理",
+            "region": "美国",
+            "age": "今年"
+        }
+    },
+    "NLU05043": {
+        "text": "罗晋唐嫣演的宫廷剧锦绣未央快放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "锦绣未央",
+            "tag": "宫廷",
+            "artist": [
+                "唐嫣",
+                "罗晋"
+            ]
+        }
+    },
+    "NLU05046": {
+        "text": "你能给我播放一下韩剧W两个世界吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "两个世界",
+            "region": "韩国"
+        }
+    },
+    "NLU05049": {
+        "text": "播放清宫剧甄嬛传的二十集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "甄嬛传",
+            "tag": "清宫",
+            "play_setting": "二十集"
+        }
+    },
+    "NLU05054": {
+        "text": "能找一下美国电影速度与激情5吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "美国",
+            "name": "速度与激情5"
+        }
+    },
+    "NLU05059": {
+        "text": "姚晨演的都挺好1点5倍速放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "都挺好",
+            "artist": "姚晨",
+            "play_setting": "1点5倍"
+        }
+    },
+    "NLU05062": {
+        "text": "陈思成导演的今年上线的电影播放一个可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "陈思成",
+            "age": "今年"
+        }
+    },
+    "NLU05067": {
+        "text": "孙俪的后宫剧来一个吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "孙俪",
+            "tag": "后宫"
+        }
+    },
+    "NLU05079": {
+        "text": "陈凯歌21世纪初拍摄的霸王别姬放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "陈凯歌",
+            "age": "21世纪初",
+            "name": "霸王别姬"
+        }
+    },
+    "NLU05081": {
+        "text": "我想看陈坤演的待神令",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "陈坤",
+            "name": "待神令"
+        }
+    },
+    "NLU05086": {
+        "text": "台湾爱情片我想看一部80年代的",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "爱情",
+            "age": "80年代",
+            "region": "台湾"
+        }
+    },
+    "NLU05096": {
+        "text": "能找到美国的好莱坞科幻片播放吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "科幻",
+            "region": "美国"
+        }
+    },
+    "NLU05121": {
+        "text": "我想看大陆卧底谍战的剧秋蝉",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "秋蝉",
+            "tag": "卧底谍战",
+            "region": "大陆"
+        }
+    },
+    "NLU05135": {
+        "text": "能找一个陈思诚去年拍摄的电影给我看吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "陈思诚",
+            "age": "去年"
+        }
+    },
+    "NLU05157": {
+        "text": "你有英国喜剧吗？给我看一个",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "喜剧",
+            "region": "英国"
+        }
+    },
+    "NLU05171": {
+        "text": "播放彭冠英主演的因为爱情有奇迹",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "彭冠英",
+            "name": "因为爱情有奇迹"
+        }
+    },
+    "NLU05191": {
+        "text": "播放新白娘子传奇是爱情神话片",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "新白娘子传奇",
+            "tag": "爱情神话"
+        }
+    },
+    "NLU05201": {
+        "text": "播放陈坤主演的历史题材的，建党伟业",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "陈坤",
+            "name": "建党伟业",
+            "tag": "历史"
+        }
+    },
+    "NLU05203": {
+        "text": "我现在要看林和平导的远方的山楂树",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "远方的山楂树",
+            "artist": "林和平"
+        }
+    },
+    "NLU05208": {
+        "text": "推理剧继续给我播放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "推理",
+            "play_setting": "继续"
+        }
+    },
+    "NLU05209": {
+        "text": "动漫版的惹不起的殿下大人继续播放啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "惹不起的殿下大人"
+        }
+    },
+    "NLU05211": {
+        "text": "帮我续播正在看的范冰冰的那个电视剧可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "范冰冰",
+            "play_setting": "续播"
+        }
+    },
+    "NLU05221": {
+        "text": "给我找一个泰国版的公主罗曼史看看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "公主罗曼史",
+            "region": "泰国"
+        }
+    },
+    "NLU05224": {
+        "text": "是不是能找一个偶像剧播放第一集啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "偶像",
+            "play_setting": "第一集"
+        }
+    },
+    "NLU05241": {
+        "text": "帮我找一个70年代的恐怖片",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "恐怖",
+            "age": "70年代"
+        }
+    },
+    "NLU05242": {
+        "text": "给我放一下美国最火的速度与激情",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "美国",
+            "name": "速度与激情"
+        }
+    },
+    "NLU05251": {
+        "text": "想要看泰国的言情剧铁石心肠",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "铁石心肠",
+            "tag": "言情",
+            "region": "泰国"
+        }
+    },
+    "NLU05262": {
+        "text": "青春作品马思纯出演的左耳给我放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "左耳",
+            "artist": "马思纯",
+            "tag": "青春"
+        }
+    },
+    "NLU05263": {
+        "text": "我需要一个美国的玄幻片给我吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "玄幻",
+            "region": "美国"
+        }
+    },
+    "NLU05264": {
+        "text": "可不可以播放一下读心探案",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "读心探案"
+        }
+    },
+    "NLU05273": {
+        "text": "我想看长安诺在腾讯上",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "长安诺"
+        }
+    },
+    "NLU05282": {
+        "text": "90年代那个偶像剧可以继续播吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "偶像",
+            "play_setting": "继续",
+            "age": "90年代"
+        }
+    },
+    "NLU05287": {
+        "text": "可以播放一下肖战的那个剧的第一集吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "肖战",
+            "play_setting": "第一集"
+        }
+    },
+    "NLU05292": {
+        "text": "能不能找一个韩国的明星朴信惠演出的剧看看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "朴信惠",
+            "region": "韩国"
+        }
+    },
+    "NLU05300": {
+        "text": "帮我把家庭剧以家人之名播放可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "以家人之名",
+            "tag": "家庭"
+        }
+    },
+    "NLU05310": {
+        "text": "给我找张韶涵参加的天赐的声音",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "天赐的声音",
+            "artist": "张韶涵"
+        }
+    },
+    "NLU05326": {
+        "text": "90年代的古装剧来播放一个呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "古装",
+            "age": "90年代"
+        }
+    },
+    "NLU05328": {
+        "text": "朱亚文演的那个正阳门下请播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "正阳门下",
+            "artist": "朱亚文"
+        }
+    },
+    "NLU05349": {
+        "text": "播放奥黛丽赫本50年代主演的电影罗马假日",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "罗马假日",
+            "age": "50年代",
+            "artist": "奥黛丽赫本"
+        }
+    },
+    "NLU05350": {
+        "text": "台湾出的情景喜剧片可以看一个吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "情景喜剧",
+            "region": "台湾"
+        }
+    },
+    "NLU05358": {
+        "text": "找一个颖儿出演的电视剧播放最后一集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "颖儿",
+            "play_setting": "最后一集"
+        }
+    },
+    "NLU05361": {
+        "text": "能播出一下由范冰冰和佟大为主演的电影苹果吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": [
+                "范冰冰",
+                "佟大为"
+            ],
+            "name": "苹果"
+        }
+    },
+    "NLU05363": {
+        "text": "播放90年代出版的喜剧电影喜剧之王。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "90年代",
+            "name": "喜剧之王",
+            "tag": "喜剧"
+        }
+    },
+    "NLU05368": {
+        "text": "香港那边的吸血鬼题材恐怖片来一个看看吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": [
+                "吸血鬼",
+                "恐怖"
+            ],
+            "region": "香港"
+        }
+    },
+    "NLU05411": {
+        "text": "我需要看一个悬疑片神探狄仁杰",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "神探狄仁杰",
+            "tag": "悬疑"
+        }
+    },
+    "NLU05413": {
+        "text": "来连着上次的顶楼播放可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "顶楼"
+        }
+    },
+    "NLU05421": {
+        "text": "看一下周星驰19年导演的新喜剧之王播放一下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "周星驰",
+            "name": "新喜剧之王",
+            "age": "19年"
+        }
+    },
+    "NLU05422": {
+        "text": "是不是立刻能帮我续播一下吴磊出演的电视剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "吴磊",
+            "play_setting": "续播"
+        }
+    },
+    "NLU05453": {
+        "text": "韩剧顶楼可以播放出来吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "顶楼",
+            "region": "韩国"
+        }
+    },
+    "NLU05454": {
+        "text": "之前追的偶像剧继续播放吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "偶像",
+            "play_setting": "继续"
+        }
+    },
+    "NLU05476": {
+        "text": "徐璐主演的风声给我1点75倍速播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "风声",
+            "artist": "徐璐",
+            "play_setting": "1点75倍"
+        }
+    },
+    "NLU05483": {
+        "text": "有没有英国今年上映的剧情片看，或者战争片也行",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": [
+                "剧情",
+                "战争"
+            ],
+            "region": "英国",
+            "age": "今年"
+        }
+    },
+    "NLU05499": {
+        "text": "要看猎手帮我放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "猎手"
+        }
+    },
+    "NLU05530": {
+        "text": "我现在想看一个大陆的清宫剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "清宫",
+            "region": "大陆"
+        }
+    },
+    "NLU05543": {
+        "text": "找一个90年代后期的战争片给我看一会可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "战争",
+            "age": "90年代后期"
+        }
+    },
+    "NLU05546": {
+        "text": "古偶萌妻食神麻烦播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "萌妻食神",
+            "tag": "古偶"
+        }
+    },
+    "NLU05560": {
+        "text": "可以帮我放一下王凯演的清平乐的第二十六集吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "王凯",
+            "name": "清平乐",
+            "play_setting": "第二十六集"
+        }
+    },
+    "NLU05591": {
+        "text": "来一个今年新上的推理犯罪片",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "推理犯罪",
+            "age": "今年"
+        }
+    },
+    "NLU05600": {
+        "text": "续播一下电视凤求凰吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "凤求凰",
+            "play_setting": "续播"
+        }
+    },
+    "NLU05614": {
+        "text": "我好想看冯小刚的老炮儿",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "冯小刚",
+            "name": "老炮儿"
+        }
+    },
+    "NLU05615": {
+        "text": "今天想一整天看杨幂的仙剑奇侠传",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "杨幂",
+            "name": "仙剑奇侠传"
+        }
+    },
+    "NLU05620": {
+        "text": "最好的时代太切题了赶紧播放给我们看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "最好的时代"
+        }
+    },
+    "NLU05626": {
+        "text": "请帮我播放国民老公",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "国民老公"
+        }
+    },
+    "NLU05631": {
+        "text": "帮我找潘长江演的双喜盈门",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "双喜盈门",
+            "artist": "潘长江"
+        }
+    },
+    "NLU05634": {
+        "text": "章若楠出演的如果声音不记得，我现在想看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "章若楠",
+            "name": "如果声音不记得"
+        }
+    },
+    "NLU05648": {
+        "text": "给我播一下有翡大结局",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "有翡",
+            "play_setting": "大结局"
+        }
+    },
+    "NLU05656": {
+        "text": "帮我找一个美国片破产姐妹",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "破产姐妹",
+            "region": "美国"
+        }
+    },
+    "NLU05661": {
+        "text": "潘越导演的喜剧有一个能播放吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "潘越",
+            "tag": "喜剧"
+        }
+    },
+    "NLU05662": {
+        "text": "日本妻夫木聪的剧给我播放吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "妻夫木聪",
+            "region": "日本"
+        }
+    },
+    "NLU05665": {
+        "text": "去年的电视剧清平乐现在播放一下第一集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "清平乐",
+            "play_setting": "第一集",
+            "age": "去年"
+        }
+    },
+    "NLU05672": {
+        "text": "我需要看一个大陆演员李一桐的电视剧呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "李一桐",
+            "region": "大陆"
+        }
+    },
+    "NLU05685": {
+        "text": "我想观看陈凯歌导演的霸王别姬。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "陈凯歌",
+            "name": "霸王别姬"
+        }
+    },
+    "NLU05696": {
+        "text": "是否可以播放2018年的电影动物世界给我看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "动物世界",
+            "age": "2018年"
+        }
+    },
+    "NLU05708": {
+        "text": "赵薇的古装剧可以来一个看吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "赵薇",
+            "tag": "古装"
+        }
+    },
+    "NLU05717": {
+        "text": "19年的话那请播放反骗天下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "反骗天下",
+            "age": "19年"
+        }
+    },
+    "NLU05724": {
+        "text": "想看沈腾主演的喜剧电影",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "沈腾",
+            "tag": "喜剧"
+        }
+    },
+    "NLU05730": {
+        "text": "找一部00年之后的谍战片",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "谍战",
+            "age": "00年之后"
+        }
+    },
+    "NLU05735": {
+        "text": "麻烦找乡村爱情",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "乡村爱情"
+        }
+    },
+    "NLU05736": {
+        "text": "给我来甄嬛传的第三季行不行呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "甄嬛传",
+            "play_setting": "第三季"
+        }
+    },
+    "NLU05741": {
+        "text": "播放一个大陆的喜剧可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "喜剧",
+            "region": "大陆"
+        }
+    },
+    "NLU05743": {
+        "text": "播给我佟丽娅出演的唐人街探案吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "佟丽娅",
+            "name": "唐人街探案"
+        }
+    },
+    "NLU05745": {
+        "text": "1点25倍速播放胡军和孙红雷演的背叛",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "背叛",
+            "artist": [
+                "胡军",
+                "孙红雷"
+            ],
+            "play_setting": "1点25倍"
+        }
+    },
+    "NLU05747": {
+        "text": "帮我找90年代的古龙小说改编武侠剧绝代双骄",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "绝代双骄",
+            "tag": "武侠",
+            "age": "90年代"
+        }
+    },
+    "NLU05755": {
+        "text": "迪丽热巴的长歌行第一集播放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "迪丽热巴",
+            "name": "长歌行",
+            "play_setting": "第一集"
+        }
+    },
+    "NLU05764": {
+        "text": "能不能随机来一个迪丽热巴的偶像剧呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "迪丽热巴",
+            "tag": "偶像",
+            "play_setting": "随机"
+        }
+    },
+    "NLU05768": {
+        "text": "给我看一个偶像剧流星花园吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "流星花园",
+            "tag": "偶像"
+        }
+    },
+    "NLU05774": {
+        "text": "我想看一会生活大爆炸第二集呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "生活大爆炸",
+            "play_setting": "第二集"
+        }
+    },
+    "NLU05784": {
+        "text": "美国的科幻大片来一个吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "科幻",
+            "region": "美国"
+        }
+    },
+    "NLU05793": {
+        "text": "美国片速度与激情播放一下呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "速度与激情",
+            "region": "美国"
+        }
+    },
+    "NLU05803": {
+        "text": "吴亦凡主演的美人鱼说很不错，现在播放吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "吴亦凡",
+            "name": "美人鱼"
+        }
+    },
+    "NLU05813": {
+        "text": "帮我播一下守护解放西最终季最后一集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "守护解放西",
+            "play_setting": "最终季最后一集"
+        }
+    },
+    "NLU05823": {
+        "text": "我想看一会古力娜扎演的古装剧呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "古力娜扎",
+            "tag": "古装"
+        }
+    },
+    "NLU05837": {
+        "text": "你能找一个宋丹丹的喜剧播放一会不",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "宋丹丹",
+            "tag": "喜剧"
+        }
+    },
+    "NLU05839": {
+        "text": "我想看70年代的玄幻片呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "玄幻",
+            "age": "70年代"
+        }
+    },
+    "NLU05852": {
+        "text": "麻烦播放李易峰主演的电影动物世界。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "李易峰",
+            "name": "动物世界"
+        }
+    },
+    "NLU05856": {
+        "text": "毒液1继续给我看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "毒液1",
+            "play_setting": "继续"
+        }
+    },
+    "NLU05859": {
+        "text": "帮我播一下清宫剧甄嬛传第二十集吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "甄嬛传",
+            "tag": "清宫",
+            "play_setting": "第二十集"
+        }
+    },
+    "NLU05866": {
+        "text": "我就要看佘诗曼主演的法证先锋",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "佘诗曼",
+            "name": "法证先锋"
+        }
+    },
+    "NLU05873": {
+        "text": "2018年上的电影动物世界播放给我看呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "动物世界",
+            "age": "2018年"
+        }
+    },
+    "NLU05885": {
+        "text": "18年的电影唐人街探案2来播放吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "唐人街探案2",
+            "age": "18年"
+        }
+    },
+    "NLU05912": {
+        "text": "张艺谋近十年导演的电影播放一个吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "张艺谋",
+            "age": "近十年"
+        }
+    },
+    "NLU05913": {
+        "text": "续播致我们单纯的小美好",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "play_setting": "续播",
+            "name": "致我们单纯的小美好"
+        }
+    },
+    "NLU05914": {
+        "text": "还是沈严导演的那我想看马伊琍袁泉演的我的前半生",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "我的前半生",
+            "artist": [
+                "袁泉",
+                "马伊琍",
+                "沈严"
+            ]
+        }
+    },
+    "NLU05922": {
+        "text": "飞驰人生的电影继续给我播放一下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "飞驰人生",
+            "play_setting": "继续"
+        }
+    },
+    "NLU05926": {
+        "text": "帮我播放永远恋爱真美",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "永远恋爱真美"
+        }
+    },
+    "NLU05943": {
+        "text": "能把喜剧飞驰人生播放一下不",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "飞驰人生",
+            "tag": "喜剧"
+        }
+    },
+    "NLU05947": {
+        "text": "请帮我设置续播真人版的名侦探柯南",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "play_setting": "续播",
+            "name": "名侦探柯南"
+        }
+    },
+    "NLU05951": {
+        "text": "我想要看青春无季第5集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "青春无季",
+            "play_setting": "第5集"
+        }
+    },
+    "NLU05954": {
+        "text": "王宝强演的那个士兵突击给我放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "士兵突击",
+            "artist": "王宝强"
+        }
+    },
+    "NLU05955": {
+        "text": "播放爱情剧我可能不会爱你",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "爱情",
+            "name": "我可能不会爱你"
+        }
+    },
+    "NLU05958": {
+        "text": "请给我找军人题材的剧吧有个韩国爱情片太阳的后裔",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "太阳的后裔",
+            "tag": [
+                "军人",
+                "爱情"
+            ],
+            "region": "韩国"
+        }
+    },
+    "NLU05960": {
+        "text": "想要看春暖花又开",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "春暖花又开"
+        }
+    },
+    "NLU05974": {
+        "text": "小鱼儿与花无缺就范冰冰那个播出一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "范冰冰",
+            "name": "小鱼儿与花无缺"
+        }
+    },
+    "NLU05979": {
+        "text": "马上放香港喜剧侠女闯天关",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "侠女闯天关",
+            "tag": "喜剧",
+            "region": "香港"
+        }
+    },
+    "NLU05981": {
+        "text": "21世纪黄晓明拍的剧随便来一个播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "黄晓明",
+            "age": "21世纪"
+        }
+    },
+    "NLU05987": {
+        "text": "看个喜剧电影吧，夏洛特烦恼。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "喜剧",
+            "name": "夏洛特烦恼"
+        }
+    },
+    "NLU05995": {
+        "text": "关晓彤出演的电视剧我就是这般女子播放一下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "关晓彤",
+            "name": "我就是这般女子"
+        }
+    },
+    "NLU05998": {
+        "text": "今年马丽演的那个电视剧播放一下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "马丽",
+            "age": "今年"
+        }
+    },
+    "NLU06003": {
+        "text": "来个电影吧，汤唯主演的电影黄金时代。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "汤唯",
+            "name": "黄金时代"
+        }
+    },
+    "NLU06006": {
+        "text": "一千零一夜这个剧给我连着上次看到的地方播放吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "一千零一夜"
+        }
+    },
+    "NLU06009": {
+        "text": "你是不是能把斗破苍穹这个玄幻剧全集给我播放呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "斗破苍穹",
+            "tag": "玄幻",
+            "play_setting": "全集"
+        }
+    },
+    "NLU06021": {
+        "text": "秦俊杰的天衣无缝麻烦放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "天衣无缝",
+            "artist": "秦俊杰"
+        }
+    },
+    "NLU06022": {
+        "text": "陈坤和赵薇周迅主演的电影可以播放吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": [
+                "陈坤",
+                "赵薇",
+                "周迅"
+            ]
+        }
+    },
+    "NLU06030": {
+        "text": "90年代中国大陆的电视剧找一个看吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "大陆",
+            "age": "90年代"
+        }
+    },
+    "NLU06048": {
+        "text": "我想继续看那个林心如演的电视剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "林心如",
+            "play_setting": "继续"
+        }
+    },
+    "NLU06054": {
+        "text": "现在放一下2019年以后美国的动作片",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "2019年以后",
+            "region": "美国",
+            "tag": "动作"
+        }
+    },
+    "NLU06066": {
+        "text": "我要看血族帮我播一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "血族"
+        }
+    },
+    "NLU06068": {
+        "text": "有没有泰国的喜剧播放呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "喜剧",
+            "region": "泰国"
+        }
+    },
+    "NLU06076": {
+        "text": "香港90年代的恐怖片来一个可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "恐怖",
+            "region": "香港",
+            "age": "90年代"
+        }
+    },
+    "NLU06100": {
+        "text": "给我找抗战片黑狐看看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "黑狐",
+            "tag": "抗战"
+        }
+    },
+    "NLU06134": {
+        "text": "郭京飞演的我是余欢水给我放 ",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "我是余欢水",
+            "artist": "郭京飞"
+        }
+    },
+    "NLU06141": {
+        "text": "只为那一刻与你相见从第3集开始按顺序播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "只为那一刻与你相见",
+            "play_setting": "第3集"
+        }
+    },
+    "NLU06143": {
+        "text": "言情剧乌鸦小姐与蜥蜴先生播放给我吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "乌鸦小姐与蜥蜴先生",
+            "tag": "言情"
+        }
+    },
+    "NLU06144": {
+        "text": "要看马丽作为女主角的喜剧电影呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "马丽",
+            "tag": "喜剧"
+        }
+    },
+    "NLU06150": {
+        "text": "能不能来一个喜剧甲方乙方",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "甲方乙方",
+            "tag": "喜剧"
+        }
+    },
+    "NLU06154": {
+        "text": "能不能来一个美国的科幻战争片",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "科幻战争",
+            "region": "美国"
+        }
+    },
+    "NLU06162": {
+        "text": "我想看一个林心如演的电视剧的第一集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "林心如",
+            "play_setting": "第一集"
+        }
+    },
+    "NLU06173": {
+        "text": "我能不能继续看甄嬛传啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "甄嬛传",
+            "play_setting": "继续"
+        }
+    },
+    "NLU06175": {
+        "text": "大陆近几年的偶像剧来一个看看呢，太狗血那种就算了",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "偶像",
+            "region": "大陆"
+        }
+    },
+    "NLU06197": {
+        "text": "继续播放西游记这个玄幻剧吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "西游记",
+            "tag": "玄幻",
+            "play_setting": "继续"
+        }
+    },
+    "NLU06209": {
+        "text": "是不是能把武林外传这个喜剧播放一下呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "武林外传",
+            "tag": "喜剧"
+        }
+    },
+    "NLU06220": {
+        "text": "播放一下白狐的人生",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "白狐的人生"
+        }
+    },
+    "NLU06222": {
+        "text": "播放张译演的鸡毛飞上天",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "鸡毛飞上天",
+            "artist": "张译"
+        }
+    },
+    "NLU06228": {
+        "text": "帮我播放一个都不能少的大结局",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "一个都不能少",
+            "play_setting": "大结局"
+        }
+    },
+    "NLU06235": {
+        "text": "播放一下陪你一起长大的第29集行不",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "陪你一起长大",
+            "play_setting": "第29集"
+        }
+    },
+    "NLU06270": {
+        "text": "是不是能来一个大陆的历史剧不要偶像剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "历史",
+            "region": "大陆"
+        }
+    },
+    "NLU06278": {
+        "text": "给我打开台湾的爱情剧我可能不会爱你",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "台湾",
+            "tag": "爱情",
+            "name": "我可能不会爱你"
+        }
+    },
+    "NLU06285": {
+        "text": "能来一个香港电影甜蜜蜜吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "甜蜜蜜",
+            "region": "香港"
+        }
+    },
+    "NLU06287": {
+        "text": "找一个吓人的日本恐怖电影看吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "恐怖",
+            "region": "日本"
+        }
+    },
+    "NLU06289": {
+        "text": "想看美国爱情片怦然心动",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "美国",
+            "tag": "爱情",
+            "name": "怦然心动"
+        }
+    },
+    "NLU06295": {
+        "text": "是否能够给我播放一个娄艺潇主演的爱情公寓呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "娄艺潇",
+            "name": "爱情公寓"
+        }
+    },
+    "NLU06297": {
+        "text": "2021年评分最高的推理电影选几个",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "2021年",
+            "tag": "推理"
+        }
+    },
+    "NLU06300": {
+        "text": "找到并且播放王茜演的月是故乡明",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "月是故乡明",
+            "artist": "王茜"
+        }
+    },
+    "NLU06305": {
+        "text": "李若彤出演的仙侠剧随即来一部播放一下可以不",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "李若彤",
+            "tag": "仙侠"
+        }
+    },
+    "NLU06315": {
+        "text": "古天乐主演的香港电影反贪风暴播放一下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "古天乐",
+            "name": "反贪风暴",
+            "region": "香港"
+        }
+    },
+    "NLU06323": {
+        "text": "1点25倍速放给我风筝是悬疑片那个",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "风筝",
+            "tag": "悬疑",
+            "play_setting": "1点25倍"
+        }
+    },
+    "NLU06341": {
+        "text": "历史题材，周润发主演的电影孔子",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "周润发",
+            "name": "孔子",
+            "tag": "历史"
+        }
+    },
+    "NLU06359": {
+        "text": "是不是能给我来一个推理电视剧无证之罪",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "无证之罪",
+            "tag": "推理"
+        }
+    },
+    "NLU06367": {
+        "text": "能找一个2008年的古装偶像看看不",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "古装偶像",
+            "age": "2008年"
+        }
+    },
+    "NLU06372": {
+        "text": "90年代之后战争片随机播放一个吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "战争",
+            "age": "90年代之后",
+            "play_setting": "随机"
+        }
+    },
+    "NLU06377": {
+        "text": "我需要一个偶像剧去年的看一看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "偶像",
+            "age": "去年"
+        }
+    },
+    "NLU06387": {
+        "text": "找出拾光里的我们让我回忆一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "拾光里的我们"
+        }
+    },
+    "NLU06416": {
+        "text": "找我找一下吴磊演的旋风少女播放一下呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "吴磊",
+            "name": "旋风少女"
+        }
+    },
+    "NLU06421": {
+        "text": "内地剧一起同过窗带有人生哲理，让我感受一下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "大陆",
+            "name": "一起同过窗"
+        }
+    },
+    "NLU06432": {
+        "text": "把李易峰版的盗墓笔记调出来看一会儿",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "李易峰",
+            "name": "盗墓笔记"
+        }
+    },
+    "NLU06443": {
+        "text": "美国片啊那我要看废柴联盟",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "废柴联盟",
+            "region": "美国"
+        }
+    },
+    "NLU06449": {
+        "text": "我马上就得看赵薇主演的湖南卫视的还珠格格",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "赵薇",
+            "name": "还珠格格"
+        }
+    },
+    "NLU06452": {
+        "text": "播放一个清宫剧孙俪的可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "孙俪",
+            "tag": "清宫"
+        }
+    },
+    "NLU06479": {
+        "text": "帮我找的最新上映的喜剧片吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "喜剧"
+        }
+    },
+    "NLU06489": {
+        "text": "我现在可以马上播放任素汐的驴得水",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "任素汐",
+            "name": "驴得水"
+        }
+    },
+    "NLU06496": {
+        "text": "曹盾导演的历史剧来一个吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "曹盾",
+            "tag": "历史"
+        }
+    },
+    "NLU06506": {
+        "text": "给我看一个关晓彤的二十不惑嗯可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "关晓彤",
+            "name": "二十不惑"
+        }
+    },
+    "NLU06507": {
+        "text": "播放郑爽演的青春斗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "青春斗"
+        }
+    },
+    "NLU06530": {
+        "text": "我想你找一个2020年的新加坡剧播放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "新加坡",
+            "age": "2020年"
+        }
+    },
+    "NLU06543": {
+        "text": "播一下激情的岁月",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "激情的岁月"
+        }
+    },
+    "NLU06553": {
+        "text": "放战天狼不是战狼赶紧放战天狼",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "战天狼"
+        }
+    },
+    "NLU06560": {
+        "text": "帮我放一个泰国的家庭伦理剧吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "家庭",
+            "region": "泰国"
+        }
+    },
+    "NLU06562": {
+        "text": "我要看一个俄罗斯今年上线的电影",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "俄罗斯",
+            "age": "今年"
+        }
+    },
+    "NLU06563": {
+        "text": "播放一个泰国版的宫",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "宫",
+            "region": "泰国"
+        }
+    },
+    "NLU06568": {
+        "text": "想看拜托了班长的大结局帮我播放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "拜托了班长",
+            "play_setting": "大结局"
+        }
+    },
+    "NLU06583": {
+        "text": "给我播放美国出版的电影黑客帝国。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "美国",
+            "name": "黑客帝国"
+        }
+    },
+    "NLU06587": {
+        "text": "悬疑的电影去年上线的播放一个可以不",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "悬疑",
+            "age": "去年"
+        }
+    },
+    "NLU06604": {
+        "text": "续播一下范冰冰演的那个电视剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "范冰冰",
+            "play_setting": "续播"
+        }
+    },
+    "NLU06621": {
+        "text": "我想看18年上线的动作类电影呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "动作",
+            "age": "18年"
+        }
+    },
+    "NLU06622": {
+        "text": "给我播放窥探的第十集可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "窥探",
+            "play_setting": "第十集"
+        }
+    },
+    "NLU06639": {
+        "text": "帮我找一个60年代的恐怖悬疑片",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "恐怖悬疑",
+            "age": "60年代"
+        }
+    },
+    "NLU06644": {
+        "text": "我需要看一个贺军翔主演的台湾偶像剧呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "贺军翔",
+            "tag": "偶像",
+            "region": "台湾"
+        }
+    },
+    "NLU06659": {
+        "text": "我想要看张翰和赵丽颖演的杉杉来了",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "杉杉来了",
+            "artist": [
+                "张翰",
+                "赵丽颖"
+            ]
+        }
+    },
+    "NLU06665": {
+        "text": "播放独孤皇后",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "独孤皇后"
+        }
+    },
+    "NLU06670": {
+        "text": "再续播三集爱情公寓第三季。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "爱情公寓第三季",
+            "play_setting": "续播三集"
+        }
+    },
+    "NLU06680": {
+        "text": "观看美国电影绿皮书。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "美国",
+            "name": "绿皮书"
+        }
+    },
+    "NLU06686": {
+        "text": "台湾林心如的电视剧给我播放一个行吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "林心如",
+            "region": "台湾"
+        }
+    },
+    "NLU06692": {
+        "text": "你能把迪丽热巴主演的三生三世枕上书播放给我看么",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "迪丽热巴",
+            "name": "三生三世枕上书"
+        }
+    },
+    "NLU06719": {
+        "text": "能来一部范冰冰版的武媚娘传奇吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "范冰冰",
+            "name": "武媚娘传奇"
+        }
+    },
+    "NLU06740": {
+        "text": "给我看一个台湾演员何润东的电影吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "何润东",
+            "region": "台湾"
+        }
+    },
+    "NLU06758": {
+        "text": "打开张艺谋2021年新拍的悬崖之上",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "张艺谋",
+            "age": "2021年",
+            "name": "悬崖之上"
+        }
+    },
+    "NLU06762": {
+        "text": "请播放姜文导演的阳光灿烂的日子。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "姜文",
+            "name": "阳光灿烂的日子"
+        }
+    },
+    "NLU06765": {
+        "text": "美国的贾斯汀汀布莱克出演的电影我想看一部",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "贾斯汀汀布莱克",
+            "region": "美国"
+        }
+    },
+    "NLU06775": {
+        "text": "请给我播放警花与警犬",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "警花与警犬"
+        }
+    },
+    "NLU06803": {
+        "text": "我想看已经完结的夜天子",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "夜天子"
+        }
+    },
+    "NLU06808": {
+        "text": "找一下你是我的奇迹并且播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "你是我的奇迹"
+        }
+    },
+    "NLU06823": {
+        "text": "来个将夜看看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "将夜"
+        }
+    },
+    "NLU06829": {
+        "text": "能帮我播一下破产姐妹吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "破产姐妹"
+        }
+    },
+    "NLU06839": {
+        "text": "好想看周星驰演的功夫",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "周星驰",
+            "name": "功夫"
+        }
+    },
+    "NLU06846": {
+        "text": "找部中流击水看看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "中流击水"
+        }
+    },
+    "NLU06848": {
+        "text": "如懿传继续播放一下行不行呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "如懿传",
+            "play_setting": "继续"
+        }
+    },
+    "NLU06851": {
+        "text": "找章子怡出演的一代宗师并播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "一代宗师",
+            "artist": "章子怡"
+        }
+    },
+    "NLU06858": {
+        "text": "给我播放一个大陆拍摄的看了就想谈恋爱的剧呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "看了就想谈恋爱",
+            "region": "大陆"
+        }
+    },
+    "NLU06876": {
+        "text": "五年前唐嫣的剧随便来一个",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "唐嫣",
+            "age": "五年前"
+        }
+    },
+    "NLU06877": {
+        "text": "在腾讯上播放时间倒数遇见你",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "时间倒数遇见你"
+        }
+    },
+    "NLU06879": {
+        "text": "现在就播英国电影爱丽丝梦游仙境。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "英国",
+            "name": "爱丽丝梦游仙境"
+        }
+    },
+    "NLU06890": {
+        "text": "大陆武侠剧封神英雄榜1点5倍速播给我看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "封神英雄榜",
+            "tag": "武侠",
+            "region": "大陆",
+            "play_setting": "1点5倍速"
+        }
+    },
+    "NLU06901": {
+        "text": "播放暗影要1点5倍的",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "暗影",
+            "play_setting": "1点5倍"
+        }
+    },
+    "NLU06904": {
+        "text": "历史题材影片张艺谋拍的悬崖之上播一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "张艺谋",
+            "name": "悬崖之上",
+            "tag": "历史"
+        }
+    },
+    "NLU06905": {
+        "text": "赵露思演的那个我喜欢你给我在腾讯上放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "我喜欢你",
+            "artist": "赵露思"
+        }
+    },
+    "NLU06936": {
+        "text": "播放新剧在一起，这是陈数雷佳音等群星主演挺感人的",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "在一起",
+            "artist": [
+                "陈数",
+                "雷佳音"
+            ]
+        }
+    },
+    "NLU06937": {
+        "text": "播放历史片建军大业。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "历史",
+            "name": "建军大业"
+        }
+    },
+    "NLU06938": {
+        "text": "播放我可能不会爱你的大结局",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "我可能不会爱你",
+            "play_setting": "大结局"
+        }
+    },
+    "NLU06954": {
+        "text": "我想看马丽出演的喜剧电影呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "马丽",
+            "tag": "喜剧"
+        }
+    },
+    "NLU06965": {
+        "text": "有没有长歌行看啊要迪丽热巴演的那个",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "长歌行",
+            "artist": "迪丽热巴"
+        }
+    },
+    "NLU06972": {
+        "text": "谋局有么有给我播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "谋局"
+        }
+    },
+    "NLU06985": {
+        "text": "麻烦播一下北国英雄",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "北国英雄"
+        }
+    },
+    "NLU06990": {
+        "text": "想看由李少红导演的四十不惑",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "李少红",
+            "name": "四十不惑"
+        }
+    },
+    "NLU07007": {
+        "text": "开始播美国的喜剧片老友记",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "美国",
+            "tag": "喜剧",
+            "name": "老友记"
+        }
+    },
+    "NLU07009": {
+        "text": "泰国的战争片可以来一个吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "战争",
+            "region": "泰国"
+        }
+    },
+    "NLU07037": {
+        "text": "是否可以来一个吴刚参演的犯罪电影啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "吴刚",
+            "name": "犯罪"
+        }
+    },
+    "NLU07041": {
+        "text": "我想看喜剧夏洛特烦恼可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "夏洛特烦恼",
+            "tag": "喜剧"
+        }
+    },
+    "NLU07051": {
+        "text": "2009年大陆上线的家庭伦理剧播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "家庭伦理",
+            "region": "大陆",
+            "age": "2009年"
+        }
+    },
+    "NLU07054": {
+        "text": "看刘昊然演的九州缥缈录",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "九州缥缈录",
+            "artist": "刘昊然"
+        }
+    },
+    "NLU07059": {
+        "text": "我要看下一站幸福的第十集呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "下一站幸福",
+            "play_setting": "第十集"
+        }
+    },
+    "NLU07060": {
+        "text": "要看宋威龙和林允演的彼岸花1点25倍速播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "彼岸花",
+            "artist": [
+                "宋威龙",
+                "林允"
+            ],
+            "play_setting": "1点25倍"
+        }
+    },
+    "NLU07066": {
+        "text": "你是不是可以帮我播放一下青云志这个电视剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "青云志"
+        }
+    },
+    "NLU07070": {
+        "text": "推理剧的那个锦衣之下能播放吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "锦衣之下",
+            "tag": "推理"
+        }
+    },
+    "NLU07092": {
+        "text": "能来一个安妮海瑟薇的美剧看看吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "安妮海瑟薇",
+            "region": "美国"
+        }
+    },
+    "NLU07098": {
+        "text": "从乐视上放港囧我想看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "港囧"
+        }
+    },
+    "NLU07104": {
+        "text": "今年日本比较火的推理类电影播放一个吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "推理",
+            "region": "日本",
+            "age": "今年"
+        }
+    },
+    "NLU07108": {
+        "text": "张根硕的韩剧可以找一个看不",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "张根硕",
+            "region": "韩国"
+        }
+    },
+    "NLU07114": {
+        "text": "请播放最新更新的几集美好生活",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "美好生活"
+        }
+    },
+    "NLU07144": {
+        "text": "张艺谋导演的电影随便找一个播放出来",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "张艺谋"
+        }
+    },
+    "NLU07146": {
+        "text": "一整天在家看刘亦菲主演的神雕侠侣",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "神雕侠侣",
+            "artist": "刘亦菲"
+        }
+    },
+    "NLU07149": {
+        "text": "胡歌在九十年代之后演的琅琊榜搜一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "胡歌",
+            "age": "九十年代之后",
+            "name": "琅琊榜"
+        }
+    },
+    "NLU07166": {
+        "text": "我想看一下电视剧会有天使替我爱你，有范冰冰的那个",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "范冰冰",
+            "name": "会有天使替我爱你"
+        }
+    },
+    "NLU07168": {
+        "text": "隐秘的角落这个推理电视剧播放一下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "隐秘的角落",
+            "tag": "推理"
+        }
+    },
+    "NLU07194": {
+        "text": "是不是可以帮我找一部郭敬明的电影播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "郭敬明"
+        }
+    },
+    "NLU07213": {
+        "text": "给俺放一下美国出版的电影大黄蜂。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "美国",
+            "name": "大黄蜂"
+        }
+    },
+    "NLU07228": {
+        "text": "能不能继续播放肖战的那个古装剧呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "肖战",
+            "tag": "古装",
+            "play_setting": "继续"
+        }
+    },
+    "NLU07238": {
+        "text": "随机播放观影单里的青春文艺片",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "play_setting": "随机",
+            "tag": "青春文艺"
+        }
+    },
+    "NLU07241": {
+        "text": "想看前两年沈严导演拍摄天盛长歌三十集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "沈严",
+            "name": "天盛长歌",
+            "play_setting": "三十集"
+        }
+    },
+    "NLU07251": {
+        "text": "现在要看那个狼烟遍地的大结局",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "狼烟遍地",
+            "play_setting": "大结局"
+        }
+    },
+    "NLU07273": {
+        "text": "需要看一个韩国的偶像剧缓解一下情绪",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "偶像",
+            "region": "韩国"
+        }
+    },
+    "NLU07275": {
+        "text": "想看九州天空城",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "九州天空城"
+        }
+    },
+    "NLU07279": {
+        "text": "我想看一会玄幻剧三生三世十里桃花呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "三生三世十里桃花",
+            "tag": "玄幻"
+        }
+    },
+    "NLU07292": {
+        "text": "帮我播放陪你漫步这个世界的第40集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "陪你漫步这个世界",
+            "play_setting": "第40集"
+        }
+    },
+    "NLU07295": {
+        "text": "播一个去年国庆档的喜剧类影片呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "喜剧",
+            "age": "去年"
+        }
+    },
+    "NLU07304": {
+        "text": "迪丽热巴的古装剧可以来一部看看啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "迪丽热巴",
+            "tag": "古装"
+        }
+    },
+    "NLU07314": {
+        "text": "你能给我找一个日本的爱情片给我看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "爱情",
+            "region": "日本"
+        }
+    },
+    "NLU07315": {
+        "text": "陈宝国和秦海璐演的老酒馆现在接着帮我放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "老酒馆",
+            "artist": [
+                "陈宝国",
+                "秦海璐"
+            ]
+        }
+    },
+    "NLU07326": {
+        "text": "能不能来一个剧情片流金岁月呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "流金岁月",
+            "tag": "剧情"
+        }
+    },
+    "NLU07345": {
+        "text": "来一个盗墓片的第一集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "盗墓",
+            "play_setting": "第一集"
+        }
+    },
+    "NLU07346": {
+        "text": "好无聊啊，随便给我推荐放个70年代的武侠片",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "70年代",
+            "tag": "武侠"
+        }
+    },
+    "NLU07352": {
+        "text": "我需要看一个韩国的爱情片呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "爱情",
+            "region": "韩国"
+        }
+    },
+    "NLU07382": {
+        "text": "大陆的龙岭迷窟麻烦帮我播一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "龙岭迷窟",
+            "region": "大陆"
+        }
+    },
+    "NLU07390": {
+        "text": "放90年代出版的电影小鞋子。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "90年代",
+            "name": "小鞋子"
+        }
+    },
+    "NLU07394": {
+        "text": "找给我个谍战片夜幕下的哈尔滨吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "夜幕下的哈尔滨",
+            "tag": "谍战"
+        }
+    },
+    "NLU07398": {
+        "text": "朱茵演的古装电影随机来一个看一会吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "朱茵",
+            "tag": "古装",
+            "play_setting": "随机"
+        }
+    },
+    "NLU07401": {
+        "text": "随便找一个肖战出演的电视剧播放第一集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "肖战",
+            "play_setting": "第一集"
+        }
+    },
+    "NLU07437": {
+        "text": "达摩祖师范冰冰的那个播出一下给我看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "范冰冰",
+            "name": "达摩祖师"
+        }
+    },
+    "NLU07438": {
+        "text": "是不是能播放一个大陆的剧情片给我看啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "剧情",
+            "region": "大陆"
+        }
+    },
+    "NLU07442": {
+        "text": "我需要来一部2008年的古装剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "古装",
+            "age": "2008年"
+        }
+    },
+    "NLU07446": {
+        "text": "古力娜扎的古装剧继续给我播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "古力娜扎",
+            "tag": "古装",
+            "play_setting": "继续"
+        }
+    },
+    "NLU07452": {
+        "text": "续播陈赫主演的爱情公寓13集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "play_setting": "续播",
+            "artist": "陈赫",
+            "name": "爱情公寓"
+        }
+    },
+    "NLU07458": {
+        "text": "我想要看靳东江疏影演的恋爱先生",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "恋爱先生",
+            "artist": [
+                "靳东",
+                "江疏影"
+            ]
+        }
+    },
+    "NLU07474": {
+        "text": "随机给我播一个惊悚剧情的电影可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "惊悚剧情",
+            "play_setting": "随机"
+        }
+    },
+    "NLU07475": {
+        "text": "沈腾和贾玲出演的喜剧有么，播放一个呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": [
+                "沈腾",
+                "贾玲"
+            ],
+            "tag": "喜剧"
+        }
+    },
+    "NLU07483": {
+        "text": "继续播放如梦令第50集之后的剧集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "如梦令",
+            "play_setting": "继续"
+        }
+    },
+    "NLU07484": {
+        "text": "有没李易峰演的隐秘而伟大",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "隐秘而伟大",
+            "artist": "李易峰"
+        }
+    },
+    "NLU07495": {
+        "text": "美国电影道格里曼导演的史密斯夫妇播放给我吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "道格里曼",
+            "name": "史密斯夫妇",
+            "region": "美国"
+        }
+    },
+    "NLU07504": {
+        "text": "播放杨洋主演的微微一笑很倾城。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "杨洋",
+            "name": "微微一笑很倾城"
+        }
+    },
+    "NLU07514": {
+        "text": "请放00年代出版的放牛班的春天。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "00年代",
+            "name": "放牛班的春天"
+        }
+    },
+    "NLU07522": {
+        "text": "迪丽热巴的现代剧是不是能播放一个呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "迪丽热巴",
+            "tag": "现代"
+        }
+    },
+    "NLU07532": {
+        "text": "能帮我播一下电视剧绝地反击吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "绝地反击"
+        }
+    },
+    "NLU07559": {
+        "text": "你能找一个日本今年上线的电影给我看看吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "日本",
+            "age": "今年"
+        }
+    },
+    "NLU07565": {
+        "text": "想看张佳宁演的电视剧就亲爱的设计师吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "亲爱的设计师",
+            "artist": "张佳宁"
+        }
+    },
+    "NLU07571": {
+        "text": "2021年电影你的婚礼给我播放一下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "你的婚礼",
+            "age": "2021年"
+        }
+    },
+    "NLU07575": {
+        "text": "给我找一个大陆悬疑片看看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "悬疑",
+            "region": "大陆"
+        }
+    },
+    "NLU07586": {
+        "text": "我需要看一会日本的武藤兰的电视剧呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "武藤兰",
+            "region": "日本"
+        }
+    },
+    "NLU07588": {
+        "text": "继续播放一下杨幂的古装剧可以不",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "杨幂",
+            "tag": "古装",
+            "play_setting": "继续"
+        }
+    },
+    "NLU07590": {
+        "text": "想看贾玲拍的电影你好李焕英。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "贾玲",
+            "name": "你好李焕英"
+        }
+    },
+    "NLU07599": {
+        "text": "找个言情片给我播放最后一集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "言情",
+            "play_setting": "最后一集"
+        }
+    },
+    "NLU07610": {
+        "text": "播放一个中国香港的溏心风暴看看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "溏心风暴",
+            "region": "香港"
+        }
+    },
+    "NLU07627": {
+        "text": "有没有沈腾今年播出的喜剧播放一下呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "沈腾",
+            "tag": "喜剧",
+            "age": "今年"
+        }
+    },
+    "NLU07646": {
+        "text": "点播恐怖剧集初代吸血鬼第十二集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "恐怖",
+            "name": "初代吸血鬼",
+            "play_setting": "第十二集"
+        }
+    },
+    "NLU07663": {
+        "text": "看一会龚俊的山河令可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "龚俊",
+            "name": "山河令"
+        }
+    },
+    "NLU07664": {
+        "text": "帮我找的最新上映的恐怖片吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "恐怖"
+        }
+    },
+    "NLU07675": {
+        "text": "沈腾的喜剧电影可以播放一下吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "沈腾",
+            "tag": "喜剧"
+        }
+    },
+    "NLU07683": {
+        "text": "是不是能找一个2018年的美剧看一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "美国",
+            "age": "2018年"
+        }
+    },
+    "NLU07690": {
+        "text": "我现在就想看一个今年的俄罗斯动作片",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "动作",
+            "region": "俄罗斯",
+            "age": "今年"
+        }
+    },
+    "NLU07697": {
+        "text": "需要你立刻播放幸福触手可及给我看看呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "幸福触手可及"
+        }
+    },
+    "NLU07700": {
+        "text": "找一部情感生活剧就给我播放最美的安排",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "最美的安排"
+        }
+    },
+    "NLU07705": {
+        "text": "我想看窥探的第一集呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "窥探",
+            "play_setting": "第一集"
+        }
+    },
+    "NLU07712": {
+        "text": "播放吴磊秦昊演的沙海",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "沙海",
+            "artist": [
+                "吴磊",
+                "秦昊"
+            ]
+        }
+    },
+    "NLU07718": {
+        "text": "帮我播放破案的剧较凌云壮志包青天",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "凌云壮志包青天",
+            "tag": "破案"
+        }
+    },
+    "NLU07719": {
+        "text": "来一个日本的悬疑类电视剧吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "悬疑",
+            "region": "日本"
+        }
+    },
+    "NLU07724": {
+        "text": "海派甜心为我放一下哦，那个台湾言情喜剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "海派甜心",
+            "region": "台湾",
+            "tag": "言情喜剧"
+        }
+    },
+    "NLU07745": {
+        "text": "给我继续观看红楼梦可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "红楼梦",
+            "play_setting": "继续"
+        }
+    },
+    "NLU07753": {
+        "text": "我想看清平乐帮我播放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "清平乐"
+        }
+    },
+    "NLU07773": {
+        "text": "胡歌演的仙剑奇侠传现在就播出给我",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "胡歌",
+            "name": "仙剑奇侠传"
+        }
+    },
+    "NLU07776": {
+        "text": "快点找一个中国台湾的我们不能是朋友看看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "我们不能是朋友",
+            "region": "台湾"
+        }
+    },
+    "NLU07781": {
+        "text": "有宫廷剧乾隆王朝看吧赶紧播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "乾隆王朝",
+            "tag": "宫廷"
+        }
+    },
+    "NLU07788": {
+        "text": "播放钟汉良马天宇孙怡演的凉生我们可不可以不忧伤",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "凉生我们可不可以不忧伤",
+            "artist": [
+                "钟汉良",
+                "马天宇",
+                "孙怡"
+            ]
+        }
+    },
+    "NLU07791": {
+        "text": "玄幻剧秘密花园是不是能给我播放呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "秘密花园",
+            "tag": "玄幻"
+        }
+    },
+    "NLU07804": {
+        "text": "帮我按顺序播放一下台湾言情剧媳妇的眼泪",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "媳妇的眼泪",
+            "tag": "言情",
+            "region": "台湾",
+            "play_setting": "顺序"
+        }
+    },
+    "NLU07819": {
+        "text": "最热明星谭松韵，我看看她主演的最好的我们。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "谭松韵",
+            "name": "最好的我们"
+        }
+    },
+    "NLU07821": {
+        "text": "播放管虎导演的八佰",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "管虎",
+            "name": "八佰"
+        }
+    },
+    "NLU07828": {
+        "text": "接上次播放大浪淘沙第15集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "大浪淘沙",
+            "play_setting": [
+                "第15集",
+                "接上次"
+            ]
+        }
+    },
+    "NLU07843": {
+        "text": "播放靳东演的精英律师",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "精英律师",
+            "artist": "靳东"
+        }
+    },
+    "NLU07847": {
+        "text": "沈腾出演的2019年上线的电影给我播放一个吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "沈腾",
+            "age": "2019年"
+        }
+    },
+    "NLU07854": {
+        "text": "现在接着前面看的古装剧继续播放吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "古装",
+            "play_setting": "继续"
+        }
+    },
+    "NLU07857": {
+        "text": "我想继续看一会毒液2",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "毒液2",
+            "play_setting": "继续"
+        }
+    },
+    "NLU07860": {
+        "text": "帮我找一下九十年代的都市生活类型的电视剧吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "九十年代",
+            "tag": "都市生活"
+        }
+    },
+    "NLU07866": {
+        "text": "王子文演的第二次也很美1点5倍速播放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "第二次也很美",
+            "artist": "王子文",
+            "play_setting": "1点5倍"
+        }
+    },
+    "NLU07883": {
+        "text": "我想继续看宫斗剧甄嬛传呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "甄嬛传",
+            "tag": "宫斗",
+            "play_setting": "继续"
+        }
+    },
+    "NLU07900": {
+        "text": "开始观看周润发演的传记片孔子",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "周润发",
+            "tag": "传记",
+            "name": "孔子"
+        }
+    },
+    "NLU07903": {
+        "text": "张国立的那个剧连续播放一下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "张国立",
+            "play_setting": "连续"
+        }
+    },
+    "NLU07908": {
+        "text": "陈伟霆演的南方有乔木不收费呢吧赶紧放给我看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "南方有乔木",
+            "artist": "陈伟霆"
+        }
+    },
+    "NLU07915": {
+        "text": "看一个今年新出的玄幻片可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "玄幻",
+            "age": "今年"
+        }
+    },
+    "NLU07931": {
+        "text": "播放誓盟的第10集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "誓盟",
+            "play_setting": "第10集"
+        }
+    },
+    "NLU07952": {
+        "text": "播放共产党员刘少奇",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "共产党员刘少奇"
+        }
+    },
+    "NLU07955": {
+        "text": "播放评分最高的90年代爱情片",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "90年代",
+            "tag": "爱情"
+        }
+    },
+    "NLU07964": {
+        "text": "帮我播放满满喜欢你可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "满满喜欢你"
+        }
+    },
+    "NLU07968": {
+        "text": "冯小刚出演的电影继续放映一下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "冯小刚",
+            "play_setting": "继续"
+        }
+    },
+    "NLU07972": {
+        "text": "由张子枫主演的唐人街探案快找出来",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "张子枫",
+            "name": "唐人街探案"
+        }
+    },
+    "NLU07978": {
+        "text": "恐怖片吧就找找怒晴湘西找找吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "怒晴湘西"
+        }
+    },
+    "NLU07986": {
+        "text": "五月的青春可以播放第十集吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "五月的青春",
+            "play_setting": "第十集"
+        }
+    },
+    "NLU07992": {
+        "text": "需要看一个美国的灾难片呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "灾难",
+            "region": "美国"
+        }
+    },
+    "NLU07995": {
+        "text": "来一个玄幻题材的三生三世枕上书吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "三生三世枕上书",
+            "tag": "玄幻"
+        }
+    },
+    "NLU07997": {
+        "text": "听说九十年代的阿飞正传很好看，播放一下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "九十年代",
+            "name": "阿飞正传"
+        }
+    },
+    "NLU08003": {
+        "text": "可以来继续来播放抗日战争片地道战吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "地道战",
+            "tag": "抗日战争",
+            "play_setting": "继续"
+        }
+    },
+    "NLU08004": {
+        "text": "帮我接上回放一下凤归四时歌",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "凤归四时歌",
+            "play_setting": "接上回"
+        }
+    },
+    "NLU08018": {
+        "text": "快点帮我播放养父的花样年华",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "养父的花样年华"
+        }
+    },
+    "NLU08020": {
+        "text": "古力娜扎演的爱情片可以播放不",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "古力娜扎",
+            "tag": "爱情"
+        }
+    },
+    "NLU08022": {
+        "text": "是不是能继续播放美国的毒液2啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "毒液2",
+            "play_setting": "继续",
+            "region": "美国"
+        }
+    },
+    "NLU08027": {
+        "text": "是不是可以播放一下去年的谈莎莎主演的悬疑片你是她",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "谈莎莎",
+            "name": "你是她",
+            "tag": "悬疑",
+            "age": "去年"
+        }
+    },
+    "NLU08040": {
+        "text": "由陈飞宇主演的天醒之路给我搜一下。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "陈飞宇",
+            "name": "天醒之路"
+        }
+    },
+    "NLU08045": {
+        "text": "快点给我播放搞笑的电影呆头呆脑",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "呆头呆脑",
+            "tag": "搞笑"
+        }
+    },
+    "NLU08048": {
+        "text": "我想你播放一下玄幻剧遇龙可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "遇龙",
+            "tag": "玄幻"
+        }
+    },
+    "NLU08065": {
+        "text": "找我们在梦开始的地方并且播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "我们在梦开始的地方"
+        }
+    },
+    "NLU08072": {
+        "text": "是不是能现在就播放一下90年代的战争片呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "战争",
+            "age": "90年代"
+        }
+    },
+    "NLU08089": {
+        "text": "我想看吴磊的长歌行可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "吴磊",
+            "name": "长歌行"
+        }
+    },
+    "NLU08100": {
+        "text": "灵域啊赶快给我放啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "灵域"
+        }
+    },
+    "NLU08101": {
+        "text": "找个70年代的武侠剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "武侠",
+            "age": "70年代"
+        }
+    },
+    "NLU08116": {
+        "text": "我现在只想看香港拍的洗冤录了",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "香港",
+            "name": "洗冤录"
+        }
+    },
+    "NLU08122": {
+        "text": "能让我看长歌行的第20集吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "长歌行",
+            "play_setting": "第20集"
+        }
+    },
+    "NLU08126": {
+        "text": "能给我播放一个18年上线的动作类电影么",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "动作",
+            "age": "18年"
+        }
+    },
+    "NLU08129": {
+        "text": "可以来一个周星驰拍的香港那边的电影吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "周星驰",
+            "region": "香港"
+        }
+    },
+    "NLU08139": {
+        "text": "麻烦接着放在远方",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "在远方"
+        }
+    },
+    "NLU08146": {
+        "text": "给我找抗日的片吧我的兄弟叫顺溜",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "我的兄弟叫顺溜",
+            "tag": "抗日"
+        }
+    },
+    "NLU08153": {
+        "text": "播放张艺谋导演的电影活着。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "张艺谋",
+            "name": "活着"
+        }
+    },
+    "NLU08158": {
+        "text": "李易峰出演的抗日战争片来一个吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "李易峰",
+            "tag": "抗日战争"
+        }
+    },
+    "NLU08159": {
+        "text": "能播放一个古天乐主演的反贪风暴吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "古天乐",
+            "name": "反贪风暴"
+        }
+    },
+    "NLU08169": {
+        "text": "能播放有范冰冰出演的青年包青天吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "范冰冰",
+            "name": "青年包青天"
+        }
+    },
+    "NLU08171": {
+        "text": "能把唐嫣和迪丽热巴演出的克拉恋人播出一下吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": [
+                "唐嫣",
+                "迪丽热巴"
+            ],
+            "name": "克拉恋人"
+        }
+    },
+    "NLU08175": {
+        "text": "冯小刚导演的剧情类电影播放一个吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "冯小刚",
+            "tag": "剧情"
+        }
+    },
+    "NLU08191": {
+        "text": "是姜潮和李溪芮演的我站在桥上看风景电视剧不是诗播放赶紧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "我站在桥上看风景",
+            "artist": [
+                "姜潮",
+                "李溪芮"
+            ]
+        }
+    },
+    "NLU08192": {
+        "text": "玄幻剧三生三世枕上书能不能继续播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "三生三世枕上书",
+            "tag": "玄幻",
+            "play_setting": "继续"
+        }
+    },
+    "NLU08193": {
+        "text": "播放赵薇演的电视剧还珠格格一的第一集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "赵薇",
+            "name": "还珠格格一",
+            "play_setting": "第一集"
+        }
+    },
+    "NLU08199": {
+        "text": "播放一个泰国的偶像剧可以吗有关校园生活的更好",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": [
+                "偶像",
+                "校园生活"
+            ],
+            "region": "泰国"
+        }
+    },
+    "NLU08202": {
+        "text": "是不是可以继续来剧情片给我看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "剧情",
+            "play_setting": "继续"
+        }
+    },
+    "NLU08207": {
+        "text": "你是不是能给我找一下今年播放量最高的古装剧进行放映",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "古装",
+            "age": "今年"
+        }
+    },
+    "NLU08208": {
+        "text": "我要看大陆的古装剧红楼梦",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "红楼梦",
+            "tag": "古装",
+            "region": "大陆"
+        }
+    },
+    "NLU08210": {
+        "text": "大陆宫廷剧2003年的少年康熙播放下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "少年康熙",
+            "tag": "宫廷",
+            "age": "2003年",
+            "region": "大陆"
+        }
+    },
+    "NLU08212": {
+        "text": "我一定要看孙俪主演的玉观音",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "孙俪",
+            "name": "玉观音"
+        }
+    },
+    "NLU08214": {
+        "text": "播放廖凡主演的电视剧沉默的真相",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "廖凡",
+            "name": "沉默的真相"
+        }
+    },
+    "NLU08217": {
+        "text": "我需要一个法国的悬疑推理剧呢不要爱情有关的",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": [
+                "悬疑",
+                "推理"
+            ],
+            "region": "法国"
+        }
+    },
+    "NLU08231": {
+        "text": "帮我继续播放一下迪丽热巴的那个长歌行吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "迪丽热巴",
+            "name": "长歌行",
+            "play_setting": "继续"
+        }
+    },
+    "NLU08242": {
+        "text": "第27集太行之脊么能帮我播一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "太行之脊",
+            "play_setting": "第27集"
+        }
+    },
+    "NLU08252": {
+        "text": "陈坤主演的画皮很好看，现在播",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "陈坤",
+            "name": "画皮"
+        }
+    },
+    "NLU08266": {
+        "text": "帮我播放林永健演的情景喜剧桃花运",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "桃花运",
+            "tag": "情景喜剧",
+            "artist": "林永健"
+        }
+    },
+    "NLU08267": {
+        "text": "能继续播放一下电影夏洛特烦恼吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "夏洛特烦恼",
+            "play_setting": "继续"
+        }
+    },
+    "NLU08268": {
+        "text": "我要接着上次看遍地书香",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "遍地书香",
+            "play_setting": "接着"
+        }
+    },
+    "NLU08279": {
+        "text": "徐璐主演的那个良辰美景好时光给我放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "良辰美景好时光",
+            "artist": "徐璐"
+        }
+    },
+    "NLU08280": {
+        "text": "给我立刻播放一个中国的仙侠剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "仙侠",
+            "region": "中国"
+        }
+    },
+    "NLU08306": {
+        "text": "范冰冰的电视剧武媚娘传奇播放给我看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "范冰冰",
+            "name": "武媚娘传奇"
+        }
+    },
+    "NLU08323": {
+        "text": "是不是能来一个杨幂主演的扶摇啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "杨幂",
+            "name": "扶摇"
+        }
+    },
+    "NLU08329": {
+        "text": "我需要看一会武磊演的穿越火线呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "武磊",
+            "name": "穿越火线"
+        }
+    },
+    "NLU08337": {
+        "text": "请放一部韩国的恐怖片",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "韩国",
+            "tag": "恐怖"
+        }
+    },
+    "NLU08351": {
+        "text": "播一下90年代出品的霸王别姬。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "90年代",
+            "name": "霸王别姬"
+        }
+    },
+    "NLU08356": {
+        "text": "给我播放佟丽娅和佟大为主演的爱的厘米",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "爱的厘米",
+            "artist": [
+                "佟丽娅",
+                "佟大为"
+            ]
+        }
+    },
+    "NLU08362": {
+        "text": "帮我播一下山河令的最新一集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "山河令",
+            "play_setting": "最新一集"
+        }
+    },
+    "NLU08370": {
+        "text": "恐怖电影梦幻岛放给我看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "恐怖",
+            "name": "梦幻岛"
+        }
+    },
+    "NLU08378": {
+        "text": "播放科幻片来自星星的你",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "来自星星的你",
+            "tag": "科幻"
+        }
+    },
+    "NLU08383": {
+        "text": "我要看悬疑剧盗墓笔记。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "悬疑",
+            "name": "盗墓笔记"
+        }
+    },
+    "NLU08410": {
+        "text": "找一下肖战演出的古装剧的第一集播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "肖战",
+            "tag": "古装",
+            "play_setting": "第一集"
+        }
+    },
+    "NLU08415": {
+        "text": "日本的喜剧可以给我安排播放一个吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "喜剧",
+            "region": "日本"
+        }
+    },
+    "NLU08417": {
+        "text": "我想看美剧悬疑片了就后裔",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "后裔",
+            "tag": "悬疑",
+            "region": "美国"
+        }
+    },
+    "NLU08430": {
+        "text": "我需要看一个战争片箭在弦上",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "箭在弦上",
+            "tag": "战争"
+        }
+    },
+    "NLU08439": {
+        "text": "楚门的世界这部美国电影播放下。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "楚门的世界",
+            "region": "美国"
+        }
+    },
+    "NLU08443": {
+        "text": "是不是可以给我看一个美国的科幻片啊，DC系列出品的",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": [
+                "科幻",
+                "DC"
+            ],
+            "region": "美国"
+        }
+    },
+    "NLU08445": {
+        "text": "是否能找一个金莎的古装剧播放出来啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "金莎",
+            "tag": "古装"
+        }
+    },
+    "NLU08468": {
+        "text": "沈腾出演的喜剧可以播放一下吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "沈腾",
+            "tag": "喜剧"
+        }
+    },
+    "NLU08474": {
+        "text": "幸福院播放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "幸福院"
+        }
+    },
+    "NLU08488": {
+        "text": "播放由贾玲导演并主演你好李焕英。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "贾玲",
+            "name": "你好李焕英"
+        }
+    },
+    "NLU08492": {
+        "text": "快点帮我播放韩剧请回答1988",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "请回答1988",
+            "region": "韩国"
+        }
+    },
+    "NLU08500": {
+        "text": "帮我播放刘嘉玲演过的情深缘起",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "情深缘起",
+            "artist": "刘嘉玲"
+        }
+    },
+    "NLU08515": {
+        "text": "是不是能来一个喜剧类型的2021年上线的电影呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "喜剧",
+            "age": "2021年"
+        }
+    },
+    "NLU08516": {
+        "text": "战争片薛平贵与王宝钗播放给我看看呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "薛平贵与王宝钗",
+            "tag": "战争"
+        }
+    },
+    "NLU08528": {
+        "text": "90年代的香港电影给我来一个看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "香港",
+            "age": "90年代"
+        }
+    },
+    "NLU08540": {
+        "text": "我想要看张翰和张钧甯演的温暖的弦",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "温暖的弦",
+            "artist": [
+                "张翰",
+                "张钧甯"
+            ]
+        }
+    },
+    "NLU08575": {
+        "text": "继续放一下铁齿铜牙纪晓岚第一季吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "铁齿铜牙纪晓岚",
+            "play_setting": [
+                "继续",
+                "第一季"
+            ]
+        }
+    },
+    "NLU08578": {
+        "text": "美国90年代的电影继续播放一下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "play_setting": "继续",
+            "region": "美国",
+            "age": "90年代"
+        }
+    },
+    "NLU08579": {
+        "text": "你好李焕英有了吧赶紧播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "你好李焕英"
+        }
+    },
+    "NLU08591": {
+        "text": "赵丽颖主演的电视剧花千骨，第二集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "赵丽颖",
+            "name": "花千骨",
+            "play_setting": "第二集"
+        }
+    },
+    "NLU08609": {
+        "text": "请帮我在腾讯视频找到邓超演的电影乘风破浪",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "邓超",
+            "name": "乘风破浪"
+        }
+    },
+    "NLU08617": {
+        "text": "播放沈腾的喜剧片夏洛特烦恼",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "沈腾",
+            "tag": "喜剧",
+            "name": "夏洛特烦恼"
+        }
+    },
+    "NLU08618": {
+        "text": "麻烦帮我接着放原来你是这样的顾先生",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "原来你是这样的顾先生"
+        }
+    },
+    "NLU08627": {
+        "text": "马丽主演的喜剧来一个可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "马丽",
+            "tag": "喜剧"
+        }
+    },
+    "NLU08629": {
+        "text": "13年出的电影西游降魔篇播放一下可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "西游降魔篇",
+            "age": "13年"
+        }
+    },
+    "NLU08649": {
+        "text": "现在能帮我找一下张艺谋导演的长城不",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "张艺谋",
+            "name": "长城"
+        }
+    },
+    "NLU08654": {
+        "text": "除了三生三世之外，还有其他杨幂的偶像剧能放一下吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "杨幂",
+            "tag": "偶像"
+        }
+    },
+    "NLU08657": {
+        "text": "刘涛主演的电视剧陪你一起长大继续播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "刘涛",
+            "name": "陪你一起长大",
+            "play_setting": "继续"
+        }
+    },
+    "NLU08663": {
+        "text": "给我看一个美国有点吓人的恐怖片吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "恐怖",
+            "region": "美国"
+        }
+    },
+    "NLU08694": {
+        "text": "现在就续播一下迪丽热巴演出的那个现代剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "迪丽热巴",
+            "tag": "现代",
+            "play_setting": "续播"
+        }
+    },
+    "NLU08701": {
+        "text": "能不能找一个迪丽热巴今年上线的电视剧看看啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "迪丽热巴",
+            "age": "今年"
+        }
+    },
+    "NLU08703": {
+        "text": "播放爱奇艺出品的猎毒人",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "猎毒人",
+            "artist": "爱奇艺"
+        }
+    },
+    "NLU08720": {
+        "text": "播放法国出版的电影钢琴家。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "法国",
+            "name": "钢琴家"
+        }
+    },
+    "NLU08745": {
+        "text": "我需要看一个90年代的伦理剧看看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "伦理",
+            "age": "90年代"
+        }
+    },
+    "NLU08760": {
+        "text": "有日本比较恐怖的电视剧看一看吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "恐怖",
+            "region": "日本"
+        }
+    },
+    "NLU08763": {
+        "text": "我要看迪丽热巴出演的古装剧的第二集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "迪丽热巴",
+            "tag": "古装",
+            "play_setting": "第二集"
+        }
+    },
+    "NLU08777": {
+        "text": "你能给我继续瞅瞅那个剧情片吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "剧情",
+            "play_setting": "继续"
+        }
+    },
+    "NLU08782": {
+        "text": "播放一下杨幂主演的仙剑奇侠传三",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "杨幂",
+            "name": "仙剑奇侠传三"
+        }
+    },
+    "NLU08788": {
+        "text": "换个台湾往事看一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "台湾往事"
+        }
+    },
+    "NLU08794": {
+        "text": "美国今年上的比较搞笑的电影播放",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "比较搞笑",
+            "region": "美国",
+            "age": "今年"
+        }
+    },
+    "NLU08796": {
+        "text": "来一个比较搞笑的沈腾主演的喜剧电影可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "沈腾",
+            "tag": "喜剧"
+        }
+    },
+    "NLU08804": {
+        "text": "来一个家庭剧陪你一起长大看看吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "陪你一起长大",
+            "tag": "家庭"
+        }
+    },
+    "NLU08805": {
+        "text": "神雕侠侣好多版本我想看刘亦菲黄晓明演的那个",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "神雕侠侣",
+            "artist": [
+                "刘亦菲",
+                "黄晓明"
+            ]
+        }
+    },
+    "NLU08821": {
+        "text": "我要看权利的游戏帮我放一下",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "权利的游戏"
+        }
+    },
+    "NLU08822": {
+        "text": "麻烦帮我播放河山",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "河山"
+        }
+    },
+    "NLU08848": {
+        "text": "你能给我播放一个香港的电影原谅他77次吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "原谅他77次",
+            "region": "香港"
+        }
+    },
+    "NLU08849": {
+        "text": "我想看一个战争片的第十集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "战争",
+            "play_setting": "第十集"
+        }
+    },
+    "NLU08857": {
+        "text": "蓝军出击我想看接着看",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "蓝军出击"
+        }
+    },
+    "NLU08862": {
+        "text": "麻烦帮我播放一下魔道祖师",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "魔道祖师"
+        }
+    },
+    "NLU08865": {
+        "text": "日本今年上线的动作片儿有吗？播放一个",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "动作",
+            "region": "日本",
+            "age": "今年"
+        }
+    },
+    "NLU08868": {
+        "text": "麻烦帮我播放宋佳佟大为蒋欣演的小舍得",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "小舍得",
+            "artist": [
+                "宋佳",
+                "佟大为",
+                "蒋欣"
+            ]
+        }
+    },
+    "NLU08869": {
+        "text": "找一个日本武藤兰的剧给我瞧瞧可以么",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "武藤兰",
+            "region": "日本"
+        }
+    },
+    "NLU08897": {
+        "text": "请按更新时间播放聂远宋轶的心灵法医",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "心灵法医",
+            "artist": [
+                "聂远",
+                "宋轶"
+            ]
+        }
+    },
+    "NLU08911": {
+        "text": "能帮我播放一部2021年的喜剧吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "2021年",
+            "tag": "喜剧"
+        }
+    },
+    "NLU08927": {
+        "text": "一千零一夜电视剧播放，就是迪丽热巴和邓伦主演的那个剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": [
+                "迪丽热巴",
+                "邓伦"
+            ],
+            "name": "一千零一夜"
+        }
+    },
+    "NLU08945": {
+        "text": "帮我播一下黄轩的山海情的大结局",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "山海情",
+            "artist": "黄轩",
+            "play_setting": "大结局"
+        }
+    },
+    "NLU08947": {
+        "text": "开开电视看看去年吴京自导自演的战狼",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "age": "去年",
+            "artist": "吴京",
+            "name": "战狼"
+        }
+    },
+    "NLU08949": {
+        "text": "法国的战争片可以来一个不",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "战争",
+            "region": "法国"
+        }
+    },
+    "NLU08957": {
+        "text": "赶快看一下台湾爱情影片菠萝蜜",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "region": "台湾",
+            "name": "菠萝蜜",
+            "tag": "爱情"
+        }
+    },
+    "NLU08966": {
+        "text": "我想继续看杨幂的剧呢灵异题材的",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "杨幂",
+            "play_setting": "继续",
+            "tag": "灵异"
+        }
+    },
+    "NLU08971": {
+        "text": "你能给我看一会2020年上的喜剧电影吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "喜剧",
+            "age": "2020年"
+        }
+    },
+    "NLU08973": {
+        "text": "你能继续给我播放一下战争片麻雀吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "麻雀",
+            "tag": "战争",
+            "play_setting": "继续"
+        }
+    },
+    "NLU08982": {
+        "text": "播放爱情进化论",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "爱情进化论"
+        }
+    },
+    "NLU08983": {
+        "text": "找一个韩国那边演员李敏镐的电视剧看看可以吗",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "李敏镐",
+            "region": "韩国"
+        }
+    },
+    "NLU08994": {
+        "text": "我需要看一个新加坡的爱情偶像剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "爱情偶像",
+            "region": "新加坡"
+        }
+    },
+    "NLU09000": {
+        "text": "我现在就需要播龚俊演的青春偶像剧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "龚俊",
+            "tag": "青春偶像"
+        }
+    },
+    "NLU09016": {
+        "text": "1点75倍速放刘佩琦主演的谷文昌",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "谷文昌",
+            "artist": "刘佩琦",
+            "play_setting": "1点75倍"
+        }
+    },
+    "NLU09018": {
+        "text": "张铁林的古装剧随便看一个吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "张铁林",
+            "tag": "古装"
+        }
+    },
+    "NLU09019": {
+        "text": "看爱情剧恶魔少爷别吻我",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "tag": "爱情",
+            "name": "恶魔少爷别吻我"
+        }
+    },
+    "NLU09027": {
+        "text": "给我播放李安导演的少年派的奇幻漂流电影吧。",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "少年派的奇幻漂流",
+            "artist": "李安"
+        }
+    },
+    "NLU09058": {
+        "text": "帮我播一下科幻剧酋长的男人最后一集",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "酋长的男人",
+            "tag": "科幻",
+            "play_setting": "最后一集"
+        }
+    },
+    "NLU09071": {
+        "text": "2020年悬疑电视剧你是她拨打一下吧",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "你是她",
+            "tag": "悬疑",
+            "age": "2020年"
+        }
+    },
+    "NLU09079": {
+        "text": "鬼吹灯系列想看2016年靳东的精绝古城",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": [
+                "鬼吹灯",
+                "精绝古城"
+            ],
+            "age": "2016年",
+            "artist": "靳东"
+        }
+    },
+    "NLU09082": {
+        "text": "能不能播放韩剧太阳的后裔给我看啊",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "name": "太阳的后裔",
+            "region": "韩国"
+        }
+    },
+    "NLU09084": {
+        "text": "我们要看张艺谋拍的谍战片悬崖之上",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "张艺谋",
+            "tag": "谍战",
+            "name": "悬崖之上"
+        }
+    },
+    "NLU09093": {
+        "text": "我想看一个范冰冰90年代拍的电视剧呢",
+        "intent": "FilmTele-Play",
+        "slots": {
+            "artist": "范冰冰",
+            "age": "90年代"
+        }
+    }
+}

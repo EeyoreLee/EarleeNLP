@@ -18,6 +18,7 @@ class CustomizeArguments:
     log_file_path: str = field(default='logs/log'+date_now()+'.log')
 
 
+    cus_cuda_visible_devices: str = field(default='0')
 
     update_every: int = field(default=1)
 
@@ -201,9 +202,17 @@ class CustomizeArguments:
 
     label_name: str = field(default='label')
 
+    train_path: str = field(default=None)
+
+    dev_path: str = field(default=None)
+
+    task: str = field(default='')
+
 
 
 @dataclass
-class Task:
+class TaskArguments:
 
     task: str = field(default='classification', metadata={"help": "classification | chinese_ner | english_ner | mrc_ner"})
+
+    cus_cuda_visible_devices: str = field(default='0')

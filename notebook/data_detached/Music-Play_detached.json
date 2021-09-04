@@ -1,0 +1,7843 @@
+{
+    "NLU00002": {
+        "text": "随便播放一首专辑阁楼里的佛里的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "阁楼",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00010": {
+        "text": "单曲循环一首催眠的歌吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU00016": {
+        "text": "播放钢琴曲命运交响曲",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "命运交响曲",
+            "instrument": "钢琴"
+        }
+    },
+    "NLU00028": {
+        "text": "我要听治愈系的日语歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "日语"
+        }
+    },
+    "NLU00029": {
+        "text": "我一定要单曲循环赵雷的我们的时光这首流行",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "artist": "赵雷",
+            "song": "我们的时光"
+        }
+    },
+    "NLU00052": {
+        "text": "播放一首适合开心时候听的歌曲呢",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU00055": {
+        "text": "我想听顽童的辣台妹能播放一下不",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "顽童",
+            "song": "辣台妹"
+        }
+    },
+    "NLU00064": {
+        "text": "2011年最浪漫的歌来一首呗",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2011年"
+        }
+    },
+    "NLU00067": {
+        "text": "来放一个德语歌曲给我吧",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "德语"
+        }
+    },
+    "NLU00089": {
+        "text": "播放日语歌泪的物语",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "泪的物语",
+            "language": "日语"
+        }
+    },
+    "NLU00090": {
+        "text": "请给我来一首吴亦凡的英文歌July。",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "吴亦凡",
+            "language": "英语",
+            "song": "July"
+        }
+    },
+    "NLU00099": {
+        "text": "循环播放张哲瀚的环绕吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "环绕",
+            "artist": "张哲瀚",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU00124": {
+        "text": "请播放带戏曲唱腔的专辑赤伶，李玉刚版的",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "赤伶",
+            "artist": "李玉刚"
+        }
+    },
+    "NLU00154": {
+        "text": "一定循环播放我们的时光这首流行",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "song": "我们的时光"
+        }
+    },
+    "NLU00158": {
+        "text": "呼吸之野里的歌曲随便来一首播放一下吧",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "呼吸之野",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00159": {
+        "text": "法语歌曲可以随机来一首不",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "法语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00161": {
+        "text": "可以随机给我来一曲山河令电视剧里面的歌呢",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "山河令",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00184": {
+        "text": "90年代比较搞笑的歌曲来一些听听",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "90年代"
+        }
+    },
+    "NLU00192": {
+        "text": "放一首扬琴版的梁祝",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "梁祝",
+            "instrument": "扬琴"
+        }
+    },
+    "NLU00203": {
+        "text": "给我找一首蔡琴的歌听听",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "蔡琴",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00206": {
+        "text": "我想播放张信哲的下一个永远中的白月光",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张信哲",
+            "song": "白月光",
+            "album": "下一个永远"
+        }
+    },
+    "NLU00242": {
+        "text": "想听最好的都给你了，要余佳运给我唱",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "余佳运",
+            "song": "最好的都给你"
+        }
+    },
+    "NLU00246": {
+        "text": "能给我来一个2021年的古典音乐不呢",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2021年"
+        }
+    },
+    "NLU00247": {
+        "text": "想听英文专辑了，就第stay with you吧，林俊杰的",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "林俊杰",
+            "language": "英语",
+            "album": "stay with you"
+        }
+    },
+    "NLU00257": {
+        "text": "完美降落播放，法老他们合唱的",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "法老",
+            "song": "完美降落"
+        }
+    },
+    "NLU00265": {
+        "text": "随机播放一首纯音乐。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00286": {
+        "text": "请按随机播放一首张杰的中文歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "artist": "张杰",
+            "language": "华语"
+        }
+    },
+    "NLU00297": {
+        "text": "播一首运动风格的中文歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "华语"
+        }
+    },
+    "NLU00323": {
+        "text": "初爱里面的歌可以随机唱一首吗",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "初爱里面",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00354": {
+        "text": "林俊杰的专辑乐行者随机播放吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "林俊杰",
+            "album": "乐行者",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00369": {
+        "text": "治愈系的钢琴曲能随便来个听吗",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00382": {
+        "text": "顺序播放李健的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "李健",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU00383": {
+        "text": "1999年发行的歌都播放一遍呢",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "1999年"
+        }
+    },
+    "NLU00384": {
+        "text": "随机来一首欢快一点的浪漫情歌吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00386": {
+        "text": "来一首差一步里的歌儿",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "差一步",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00397": {
+        "text": "播放一首应景儿的《回到拉萨》，我要郑钧的",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "郑钧",
+            "song": "回到拉萨"
+        }
+    },
+    "NLU00400": {
+        "text": "银临、河图的专辑蚍蜉渡海播放",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": ["银临", "河图"],
+            "album": "蚍蜉渡海"
+        }
+    },
+    "NLU00405": {
+        "text": "我想听金莎唱的爱的魔法这首流行音乐",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "金莎",
+            "song": "爱的魔法"
+        }
+    },
+    "NLU00409": {
+        "text": "我需要你来一首许嵩的认错呢",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "认错",
+            "artist": "许嵩"
+        }
+    },
+    "NLU00440": {
+        "text": "我要陈小熊的歌儿 济南济南吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "陈小熊",
+            "song": "济南济南"
+        }
+    },
+    "NLU00441": {
+        "text": "请播放吴涤清版的《梅兰梅兰我爱你》",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "吴涤清",
+            "song": "梅兰梅兰我爱你"
+        }
+    },
+    "NLU00459": {
+        "text": "放一首萨克斯演奏的古典音乐",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "萨克斯"
+        }
+    },
+    "NLU00461": {
+        "text": "我想听英文的情歌呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语"
+        }
+    },
+    "NLU00470": {
+        "text": "顺序播放周杰伦的专辑七里香里面的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "顺序播放",
+            "artist": "周杰伦",
+            "album": "七里香"
+        }
+    },
+    "NLU00472": {
+        "text": "这一生关于你的风景，我要听隔壁老樊唱的",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "隔壁老樊",
+            "song": "这一生关于你的风景"
+        }
+    },
+    "NLU00477": {
+        "text": "我想你给我播放一首表达爱意的钢琴曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴"
+        }
+    },
+    "NLU00485": {
+        "text": "单曲循环一下名侦探柯南里面的主题曲吧",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "名侦探柯南",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU00487": {
+        "text": "黄安90年代的歌随机来一首可以吗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "黄安",
+            "play_mode": "随机播放",
+            "age": "90年代"
+        }
+    },
+    "NLU00507": {
+        "text": "二胡弹奏的人气高的歌曲来一首呢",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "二胡"
+        }
+    },
+    "NLU00509": {
+        "text": "有没有比较热血的动漫配乐给我来一首吧",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU00510": {
+        "text": "按顺序播放专辑Wuha里的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "Wuha",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU00517": {
+        "text": "2000年左右的歌曲给我随机来一首",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "左右",
+            "play_mode": "随机播放",
+            "age": "2000年"
+        }
+    },
+    "NLU00520": {
+        "text": "播放齐秦的大约在冬季",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "大约在冬季",
+            "artist": "齐秦"
+        }
+    },
+    "NLU00530": {
+        "text": "你能给我放范丞丞的快乐很简单吗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "范丞丞",
+            "song": "快乐很简单"
+        }
+    },
+    "NLU00533": {
+        "text": "是不是能单曲循环一下你不知道的事",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "你不知道的事",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU00541": {
+        "text": "放一下BEYOND的经典光辉岁月",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "BEYOND",
+            "song": "光辉岁月"
+        }
+    },
+    "NLU00550": {
+        "text": "随机来一首2011年的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "age": "2011年"
+        }
+    },
+    "NLU00553": {
+        "text": "听一下张国荣光荣岁月里面的歌吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张国荣",
+            "album": "光荣岁月"
+        }
+    },
+    "NLU00554": {
+        "text": "还是想循环播放流行风格的专辑",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU00555": {
+        "text": "放一首rap，放十全九美",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "十全九美"
+        }
+    },
+    "NLU00574": {
+        "text": "随机播放一首李冠森的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "李冠森",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00591": {
+        "text": "立刻播放萧忆情的拜无忧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "萧忆情",
+            "song": "拜无忧"
+        }
+    },
+    "NLU00611": {
+        "text": "来一首2009年王力宏的曲子吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "王力宏",
+            "age": "2009年"
+        }
+    },
+    "NLU00616": {
+        "text": "把悲伤留给自己单曲循环播放",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "把悲伤留给自己",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU00620": {
+        "text": "帮我找蔡徐坤的情人",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "情人",
+            "artist": "蔡徐坤"
+        }
+    },
+    "NLU00627": {
+        "text": "播一下第二街区这张专辑里的第一首循环放",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "第二街区",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU00628": {
+        "text": "给我听Bieber的justice",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "Bieber",
+            "song": "justice",
+            "language": "英语"
+        }
+    },
+    "NLU00642": {
+        "text": "来毛不易像我这样的人",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "像我这样的人",
+            "artist": "毛不易"
+        }
+    },
+    "NLU00647": {
+        "text": "我要听周深和王子一起唱的资深庸才",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "资深庸才",
+            "artist": [
+                "周深",
+                "王子"
+            ]
+        }
+    },
+    "NLU00649": {
+        "text": "日本歌手米津玄师的日语歌随机来一首呗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "米津玄师",
+            "language": "日语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00657": {
+        "text": "2007年王力宏的我们的歌播放一下吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "我们的歌",
+            "artist": "王力宏",
+            "age": "2007年"
+        }
+    },
+    "NLU00661": {
+        "text": "想听古筝了，来一首铁马吟听听",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "铁马吟",
+            "instrument": "古筝"
+        }
+    },
+    "NLU00664": {
+        "text": "天韵霍尊里的歌曲现在随机来一首呢",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "天韵霍尊",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00672": {
+        "text": "你可以播放一下凤凰传奇的快乐的音乐吗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "凤凰传奇"
+        }
+    },
+    "NLU00676": {
+        "text": "播放屠洪刚的专辑风云2里面的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "屠洪刚",
+            "album": "风云2"
+        }
+    },
+    "NLU00683": {
+        "text": "有中国娃娃的恭喜恭喜就放一下",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "中国娃娃",
+            "song": "恭喜恭喜"
+        }
+    },
+    "NLU00691": {
+        "text": "随机播放韩红的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "韩红",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00697": {
+        "text": "单曲循环一个钢琴曲可以吗",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU00715": {
+        "text": "老歌手刀郎的歌来几首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "刀郎"
+        }
+    },
+    "NLU00716": {
+        "text": "给我唱一个开心的阿拉伯语歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "阿拉伯语"
+        }
+    },
+    "NLU00722": {
+        "text": "播放hold on，Bieber唱的啊",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "Bieber",
+            "song": "hold on",
+            "language": "英语"
+        }
+    },
+    "NLU00725": {
+        "text": "我想听任同祥的唢呐曲到春来",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "任同祥",
+            "song": "到春来",
+            "instrument": "唢呐"
+        }
+    },
+    "NLU00747": {
+        "text": "随机播放一首暗杠里的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "暗杠",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00750": {
+        "text": "韩语歌随机来一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "韩语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00751": {
+        "text": "俄语歌有没有比较治愈的放一个",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "俄语"
+        }
+    },
+    "NLU00757": {
+        "text": "我现在就想听一下郎朗的钢琴曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "郎朗",
+            "instrument": "钢琴"
+        }
+    },
+    "NLU00774": {
+        "text": "能不能听一下继续张国荣这张专辑里的歌曲，随机来一首就行",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "继续张国荣",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00779": {
+        "text": "来一首90年代的英文歌呗",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "age": "90年代"
+        }
+    },
+    "NLU00787": {
+        "text": "播放笙演奏的冬猎",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "冬猎",
+            "instrument": "笙"
+        }
+    },
+    "NLU00794": {
+        "text": "周杰伦的叶惠美可以顺序播放吗",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "叶惠美",
+            "artist": "周杰伦",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU00797": {
+        "text": "播放林依晨的流行歌非你莫属",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "林依晨",
+            "song": "非你莫属"
+        }
+    },
+    "NLU00799": {
+        "text": "呼吸之野里面的假摔单曲循环一下吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "假摔",
+            "album": "呼吸之野",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU00810": {
+        "text": "我想你给我播放胡彦斌的专辑太歌里的歌呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "胡彦斌",
+            "album": "太歌"
+        }
+    },
+    "NLU00823": {
+        "text": "唱一首英文流行歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语"
+        }
+    },
+    "NLU00842": {
+        "text": "王菲和陈奕迅的合唱歌曲传奇播放一下",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "传奇",
+            "artist": [
+                "王菲",
+                "陈奕迅"
+            ]
+        }
+    },
+    "NLU00845": {
+        "text": "给我把凤凰传奇的歌顺序播放吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "凤凰传奇",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU00848": {
+        "text": "最近比较火的孤影单曲循环吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "孤影",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU00853": {
+        "text": "请随机播放一首钢琴曲。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "instrument": "钢琴"
+        }
+    },
+    "NLU00864": {
+        "text": "有没有什么听了就想笑的的德语歌",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "德语"
+        }
+    },
+    "NLU00875": {
+        "text": "有没有新的适合表白氛围的歌曲播放一下啊",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU00877": {
+        "text": "陈鸿宇的步履不停里面的歌曲随机来一首呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "陈鸿宇",
+            "album": "步履不停",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00881": {
+        "text": "我想要一首很治愈的德语歌听",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "德语"
+        }
+    },
+    "NLU00886": {
+        "text": "你可以找一下2020年最人气的歌曲给我播放吗",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2020年"
+        }
+    },
+    "NLU00892": {
+        "text": "来一首钢琴弹唱的勇气",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴",
+            "song": "勇气"
+        }
+    },
+    "NLU00897": {
+        "text": "随机来一首张国荣的歌曲可以吗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张国荣",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00903": {
+        "text": "隔壁老樊的我曾放到按照顺序播放",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "隔壁老樊",
+            "song": "我曾",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU00915": {
+        "text": "下周就要歌唱比赛了，我要单曲循环唱支山歌给党听。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "song": "唱支山歌给党听"
+        }
+    },
+    "NLU00934": {
+        "text": "我还想继续听民谣南方姑娘",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "南方姑娘"
+        }
+    },
+    "NLU00938": {
+        "text": "我要学韩语，随便放一首",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "韩语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00941": {
+        "text": "随机播放陈一发专辑童话镇里的歌儿",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "陈一发",
+            "album": "童话镇",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00942": {
+        "text": "随机来一首2013年发行的英语歌",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "play_mode": "随机播放",
+            "age": "2013年"
+        }
+    },
+    "NLU00947": {
+        "text": "随机来一首陈旭的歌曲可以吗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "陈旭",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU00948": {
+        "text": "我想听一首陈泓宇步履不停里面的歌曲啊",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "陈泓宇",
+            "album": "步履不停"
+        }
+    },
+    "NLU00954": {
+        "text": "现在想听80年代的英文歌",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "80年代",
+            "language": "英语"
+        }
+    },
+    "NLU00956": {
+        "text": "你有搞笑的英文歌给我播放吗",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语"
+        }
+    },
+    "NLU00967": {
+        "text": "2021年新发行的爵士歌曲随机来一个呢",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "age": "2021年"
+        }
+    },
+    "NLU00968": {
+        "text": "来一首八十年代潘美辰的《我想有个家》听听",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "潘美辰",
+            "song": "我想有个家",
+            "age": "八十年代"
+        }
+    },
+    "NLU00972": {
+        "text": "给我随机播放一首70年代的英文歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "age": "70年代",
+            "language": "英语"
+        }
+    },
+    "NLU00973": {
+        "text": "有什么歌曲是葫芦丝创作的，按顺序播放我想听一听咯",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "葫芦丝",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU00975": {
+        "text": "是不是可以来一首90年代的英文歌给我呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "age": "90年代"
+        }
+    },
+    "NLU00979": {
+        "text": "网络歌曲开业大吉播放",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "开业大吉"
+        }
+    },
+    "NLU00981": {
+        "text": "周杰伦的2011年的歌曲播放一下可以吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周杰伦",
+            "age": "2011年"
+        }
+    },
+    "NLU00994": {
+        "text": "播放轻音乐琵琶语",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "琵琶语"
+        }
+    },
+    "NLU00998": {
+        "text": "我要听赵雷的成都。",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "赵雷",
+            "song": "成都"
+        }
+    },
+    "NLU01003": {
+        "text": "单曲播放霄磊的叹郁孤",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "霄磊",
+            "song": "叹郁孤",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU01007": {
+        "text": "由低苦艾乐队演唱的兰州兰州快帮我播一下",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "低苦艾乐队",
+            "song": "兰州兰州"
+        }
+    },
+    "NLU01026": {
+        "text": "随机来一首薛之谦的歌曲吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "薛之谦",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU01043": {
+        "text": "kiss me baby这个英文歌是流行音乐中很火的一曲",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "kiss me baby",
+            "language": "英语"
+        }
+    },
+    "NLU01074": {
+        "text": "你能找一个90年代的欢快歌曲给我听听不",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "90年代"
+        }
+    },
+    "NLU01082": {
+        "text": "你能不能帮我播放一个德语歌曲啊",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "德语"
+        }
+    },
+    "NLU01087": {
+        "text": "一直给我循环甜蜜蜜可以吗",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "甜蜜蜜",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU01092": {
+        "text": "唱一首80年代的古典歌曲给我听听",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "80年代"
+        }
+    },
+    "NLU01125": {
+        "text": "给我放张雨生的大海",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张雨生",
+            "song": "大海"
+        }
+    },
+    "NLU01126": {
+        "text": "忽然想到琵琶弹的十面埋伏，立即播放",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "琵琶",
+            "song": "十面埋伏"
+        }
+    },
+    "NLU01135": {
+        "text": "我让你给我放一首90年代德语歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "德语",
+            "age": "90年代"
+        }
+    },
+    "NLU01148": {
+        "text": "来一首黄丽玲的她说",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "黄丽玲",
+            "song": "她说"
+        }
+    },
+    "NLU01157": {
+        "text": "洗澡的时候给我来一首李荣浩的年少有为。",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "李荣浩",
+            "song": "年少有为"
+        }
+    },
+    "NLU01160": {
+        "text": "找一首王梓作曲的五十年代的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "王梓",
+            "age": "五十年代"
+        }
+    },
+    "NLU01163": {
+        "text": "按照顺序播放一下鸽子里的所有歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "鸽子",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU01166": {
+        "text": "可以给我顺序播放一下林俊杰的乐行者吗",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "乐行者",
+            "artist": "林俊杰",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU01177": {
+        "text": "我想要听俄语的民谣乐曲",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "俄语"
+        }
+    },
+    "NLU01185": {
+        "text": "播放摇滚啊，假行僧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "假行僧"
+        }
+    },
+    "NLU01190": {
+        "text": "找一首颜人中的歌儿听",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "颜人中",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU01195": {
+        "text": "钢琴曲有适合睡觉听的吗，来一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴"
+        }
+    },
+    "NLU01205": {
+        "text": "顺序播放邓紫棋倒数专辑",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "顺序播放",
+            "artist": "邓紫棋",
+            "album": "倒数"
+        }
+    },
+    "NLU01218": {
+        "text": "放一首周杰伦的晴天",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周杰伦",
+            "song": "晴天"
+        }
+    },
+    "NLU01222": {
+        "text": "今天适合听有多少爱可以重来，来摇滚版的吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "有多少爱可以重来"
+        }
+    },
+    "NLU01227": {
+        "text": "来一首兴奋的纯音乐给我欣赏一下呢",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU01236": {
+        "text": "随便放一首那英或者田震的歌儿",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": ["那英", "田震"]
+        }
+    },
+    "NLU01240": {
+        "text": "把周杰伦的告白气球播放一下",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "告白气球",
+            "artist": "周杰伦"
+        }
+    },
+    "NLU01255": {
+        "text": "我要听民谣曾经的你",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "曾经的你"
+        }
+    },
+    "NLU01270": {
+        "text": "你帮我找一首当前最火的电视剧的主题曲听听",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU01274": {
+        "text": "我想要听一首热血一点的法语歌呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "法语"
+        }
+    },
+    "NLU01285": {
+        "text": "想听洞箫演奏的我是不是你最疼爱的人",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "我是不是你最疼爱的人",
+            "instrument": "洞箫"
+        }
+    },
+    "NLU01288": {
+        "text": "邓紫棋翻唱的手心的蔷薇打开听会儿",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "邓紫棋",
+            "song": "手心的蔷薇"
+        }
+    },
+    "NLU01328": {
+        "text": "随机听一首许嵩前些年写的歌吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "许嵩",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU01333": {
+        "text": "现在听周深的起风了比较有感觉",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周深",
+            "song": "起风了"
+        }
+    },
+    "NLU01344": {
+        "text": "sold out播放，hawk nelson的英文摇滚",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "hawk nelson",
+            "song": "sold out",
+            "language": "英语"
+        }
+    },
+    "NLU01350": {
+        "text": "我想听贝多芬的古典钢琴曲",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "贝多芬",
+            "instrument": "钢琴"
+        }
+    },
+    "NLU01371": {
+        "text": "21世纪最火的歌立刻给我播放呢",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "21世纪"
+        }
+    },
+    "NLU01378": {
+        "text": "我想听一下郎朗的钢琴曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "郎朗",
+            "instrument": "钢琴",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU01379": {
+        "text": "陈奕迅演唱会唱的歌给我随机来一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "陈奕迅",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU01387": {
+        "text": "今年都有什么好听的古典乐播放几首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "今年"
+        }
+    },
+    "NLU01397": {
+        "text": "我要听英文版的我的梦。",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "song": "我的梦"
+        }
+    },
+    "NLU01404": {
+        "text": "近期有没有火爆的歌曲，随机来一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU01416": {
+        "text": "我想听张国荣的音乐呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张国荣"
+        }
+    },
+    "NLU01420": {
+        "text": "播放Beyond的海阔天空。",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "Beyond",
+            "song": "海阔天空"
+        }
+    },
+    "NLU01433": {
+        "text": "我想听80年代的中文歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "80年代",
+            "language": "华语"
+        }
+    },
+    "NLU01450": {
+        "text": "顺序播放许嵩的歌曲吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "许嵩",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU01474": {
+        "text": "可以给我听一个今年新发的古典乐么",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "今年"
+        }
+    },
+    "NLU01480": {
+        "text": "2019年的搞笑歌曲随便来一首听听",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "age": "2019年"
+        }
+    },
+    "NLU01489": {
+        "text": "我想要听朝九晚五里的歌，按顺序播放就行",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "朝九晚五",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU01501": {
+        "text": "我命令你单曲循环不加糖",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "不加糖",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU01502": {
+        "text": "能播放一下过去现在时这个专辑里面的歌吗",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "过去现在时",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU01514": {
+        "text": "我还是成龙这个专辑里的歌随机来一首听听呢",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "我还是成龙",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU01515": {
+        "text": "穿过你的黑发的我的手放一下，要罗大佑版的",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "罗大佑",
+            "song": "穿过你的黑发的我的手"
+        }
+    },
+    "NLU01521": {
+        "text": "帮我来一首2021年的专辑步履不停里面的歌曲吧",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "步履不停",
+            "age": "2021年"
+        }
+    },
+    "NLU01526": {
+        "text": "顺序播放合唱专辑Génération Goldman里的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "法语",
+            "album": "Génération Goldman",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU01527": {
+        "text": "现在来一首2021年的专辑步履不停内的歌呢",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "步履不停",
+            "age": "2021年"
+        }
+    },
+    "NLU01528": {
+        "text": "随机播放一首爵士曲。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU01536": {
+        "text": "可不可以放一些与南山南类似的民谣呢",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "南山南"
+        }
+    },
+    "NLU01544": {
+        "text": "能把薛之谦的歌全部顺序播放一遍吗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "薛之谦",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU01546": {
+        "text": "美国新出的英文歌曲可以来一首不呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语"
+        }
+    },
+    "NLU01547": {
+        "text": "日语唱的爵士乐来一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "日语",
+            "instrument": "爵士乐"
+        }
+    },
+    "NLU01553": {
+        "text": "播放说唱歌曲慢热",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "慢热"
+        }
+    },
+    "NLU01593": {
+        "text": "单曲循环Hey Jude这首民谣",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "song": "Hey Jude"
+        }
+    },
+    "NLU01603": {
+        "text": "是不是可以来一首张国荣的粤语歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张国荣",
+            "language": "粤语"
+        }
+    },
+    "NLU01615": {
+        "text": "唱一首歌给我吧，要听英文版的情歌呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语"
+        }
+    },
+    "NLU01637": {
+        "text": "你能给我唱一个2011年的爵士乐吗",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2011年"
+        }
+    },
+    "NLU01638": {
+        "text": "给我找一首浪漫的德语歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "德语"
+        }
+    },
+    "NLU01653": {
+        "text": "随机来一首运动时候听的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU01693": {
+        "text": "我要听日不落的钢琴曲。",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "日不落",
+            "instrument": "钢琴"
+        }
+    },
+    "NLU01706": {
+        "text": "王一博的无感在哪里可以听啊快帮我播放一下",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "王一博",
+            "song": "无感"
+        }
+    },
+    "NLU01726": {
+        "text": "请播放网络歌曲请不要在秋天失恋",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "请不要在秋天失恋"
+        }
+    },
+    "NLU01748": {
+        "text": "做胎教的音乐播放手舞足蹈",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "手舞足蹈"
+        }
+    },
+    "NLU01760": {
+        "text": "麻烦给我单曲循环张艺兴的会好的。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "artist": "张艺兴",
+            "song": "会好的"
+        }
+    },
+    "NLU01761": {
+        "text": "你现在就给我放一下真爱里面的歌，随便一个就行",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "真爱里面",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU01768": {
+        "text": "周杰伦唱的不能说的秘密能不能单曲循环播放呀",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "不能说的秘密",
+            "artist": "周杰伦",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU01791": {
+        "text": "你能立刻找一首搞笑的英文歌给我听吗",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语"
+        }
+    },
+    "NLU01807": {
+        "text": "你可以把邓紫棋的泡沫放给我听不",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "泡沫",
+            "artist": "邓紫棋"
+        }
+    },
+    "NLU01815": {
+        "text": "我正在循环播放星辰大海",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "song": "星辰大海"
+        }
+    },
+    "NLU01820": {
+        "text": "是不是可以随机来首薛之谦的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "薛之谦",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU01821": {
+        "text": "单曲循环菠萝菠萝蜜",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "song": "菠萝菠萝蜜"
+        }
+    },
+    "NLU01831": {
+        "text": "胡彦斌的大一号里的歌曲随机来一首",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "胡彦斌",
+            "album": "大一号",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU01832": {
+        "text": "你给我随机唱一首邓紫棋的歌吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "邓紫棋",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU01835": {
+        "text": "90后都听什么流行歌曲，给我随机播放一个啊",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU01841": {
+        "text": "单曲循环薛之谦的像风一样",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "薛之谦",
+            "song": "像风一样",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU01856": {
+        "text": "2021年黄安传灯里的歌曲随机来一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "黄安",
+            "album": "传灯",
+            "play_mode": "随机播放",
+            "age": "2021年"
+        }
+    },
+    "NLU01870": {
+        "text": "循环播放大鹏的都选C",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "大鹏",
+            "song": "都选C",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU01875": {
+        "text": "帮我随机来一首林俊杰2011年的歌吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "林俊杰",
+            "play_mode": "随机播放",
+            "age": "2011年"
+        }
+    },
+    "NLU01887": {
+        "text": "能来一首黄安专辑里面的女儿吗",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "女儿",
+            "artist": "黄安"
+        }
+    },
+    "NLU01890": {
+        "text": "钢琴曲莫扎特的来一首呗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "莫扎特",
+            "instrument": "钢琴",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU01903": {
+        "text": "我要听赵雷的鼓楼",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "赵雷",
+            "song": "鼓楼"
+        }
+    },
+    "NLU01904": {
+        "text": "2020年快手最人气的歌曲唱一下呢",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2020年"
+        }
+    },
+    "NLU01909": {
+        "text": "二胡弹奏的曲子有没有人气比较高的来一首",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "二胡"
+        }
+    },
+    "NLU01924": {
+        "text": "你能播放一些2020年比较浪漫的歌曲吗",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2020年"
+        }
+    },
+    "NLU01941": {
+        "text": "请播放摇滚歌曲再谈记忆",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "再谈记忆"
+        }
+    },
+    "NLU01946": {
+        "text": "放一首葫芦丝吹出来的古典乐",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "葫芦丝"
+        }
+    },
+    "NLU01950": {
+        "text": "随机来几首纯音乐吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU01960": {
+        "text": "你能唱一首90年代的经典歌曲给我么",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "90年代"
+        }
+    },
+    "NLU01964": {
+        "text": "放点儿轻音乐，故乡的原风景吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "故乡的原风景"
+        }
+    },
+    "NLU01973": {
+        "text": "顺序播放薛之谦专辑尘",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "薛之谦",
+            "album": "尘",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU01986": {
+        "text": "华晨宇的专辑新世界现在能听吗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "华晨宇",
+            "song": "新世界"
+        }
+    },
+    "NLU01987": {
+        "text": "去年有没有搞笑的歌唱一下给我",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "去年"
+        }
+    },
+    "NLU02009": {
+        "text": "听一下李云迪弹奏的钢琴曲吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "李云迪",
+            "instrument": "钢琴"
+        }
+    },
+    "NLU02016": {
+        "text": "找一下黄安的《新鸳鸯蝴蝶梦》播放",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "黄安",
+            "song": "新鸳鸯蝴蝶梦"
+        }
+    },
+    "NLU02027": {
+        "text": "播放一下华晨宇的烟火里的尘埃吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "烟火里的尘埃",
+            "artist": "华晨宇"
+        }
+    },
+    "NLU02032": {
+        "text": "华晨宇唱过的歌随机来一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "华晨宇",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU02035": {
+        "text": "我需要你给我来一首好听的90年代经典德语歌呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "德语",
+            "age": "90年代"
+        }
+    },
+    "NLU02039": {
+        "text": "能不能随机来一首古筝弹奏的歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "古筝",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU02050": {
+        "text": "随便来一首寻宝游戏里面的歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "寻宝游戏",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU02057": {
+        "text": "我还想听韩红的青藏高原这种经典歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "韩红",
+            "song": "青藏高原"
+        }
+    },
+    "NLU02075": {
+        "text": "请播放2021年发行的专辑我们的主打歌2",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "我们的主打歌2",
+            "age": "2021年"
+        }
+    },
+    "NLU02076": {
+        "text": "播放王一博的新专辑无感",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "王一博",
+            "album": "无感"
+        }
+    },
+    "NLU02080": {
+        "text": "顺序播放姐姐、孤独的人是可耻的、蚂蚁三首歌",
+        "intent": "Music-Play",
+        "slots": {
+            "song": ["姐姐", "孤独的人是可耻的", "蚂蚁"],
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU02083": {
+        "text": "立即播放孙燕姿的克卜勒",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "孙燕姿",
+            "album": "克卜勒"
+        }
+    },
+    "NLU02114": {
+        "text": "单曲循环一首可可托海的牧羊人",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "牧羊人",
+            "artist": "可可托海",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU02121": {
+        "text": "随机来一首盖世英雄里的歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "盖世英雄",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU02131": {
+        "text": "给我顺序播放一下林俊杰专辑的因你而在",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "林俊杰",
+            "album": "因你而在",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU02132": {
+        "text": "开始播放孙语赛的专辑不仅仅是喜欢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "孙语赛",
+            "album": "不仅仅是喜欢"
+        }
+    },
+    "NLU02137": {
+        "text": "Private Corner里面的歌曲随机来一首啊",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "Private Corner",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU02138": {
+        "text": "麻烦放一下一场游戏一场梦，要王杰唱的那个",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "王杰",
+            "song": "一场游戏一场梦"
+        }
+    },
+    "NLU02140": {
+        "text": "放一下九十年代的《再回首》听听",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "再回首",
+            "age": "九十年代"
+        }
+    },
+    "NLU02146": {
+        "text": "播放腾格尔天堂的现场版",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "腾格尔",
+            "song": "天堂"
+        }
+    },
+    "NLU02166": {
+        "text": "找一首花粥的经典听",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "花粥",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU02174": {
+        "text": "2007年出来的电视剧的片头曲来一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2007年"
+        }
+    },
+    "NLU02178": {
+        "text": "来个听了让人想哭的英文歌吧",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语"
+        }
+    },
+    "NLU02194": {
+        "text": "好想听张国荣的沉默是金",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张国荣",
+            "song": "沉默是金"
+        }
+    },
+    "NLU02202": {
+        "text": "播放汪峰的广安广安",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "汪峰",
+            "song": "广安广安"
+        }
+    },
+    "NLU02203": {
+        "text": "今年点击率最高的英文歌曲唱一下呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "age": "今年"
+        }
+    },
+    "NLU02204": {
+        "text": "我现在比较喜欢听英文摇滚类的音乐，快帮我播放吧",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语"
+        }
+    },
+    "NLU02217": {
+        "text": "我需要一直随机播放薛之谦的歌呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "薛之谦",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU02221": {
+        "text": "给我听一会归一里的歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "归一"
+        }
+    },
+    "NLU02225": {
+        "text": "爵士歌曲能随机一首给我吗",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU02262": {
+        "text": "你给我听一首有点年代感的古典歌曲",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU02272": {
+        "text": "听听赵英俊的送你一朵小红花",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "赵英俊",
+            "song": "送你一朵小红花"
+        }
+    },
+    "NLU02274": {
+        "text": "快帮我播放周杰伦的稻香",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周杰伦",
+            "song": "稻香"
+        }
+    },
+    "NLU02275": {
+        "text": "我要听一首薛之谦的认真的雪可以吗",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "认真的雪",
+            "artist": "薛之谦"
+        }
+    },
+    "NLU02288": {
+        "text": "我一直单曲循环赵雷的民谣成都",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "artist": "赵雷",
+            "song": "成都"
+        }
+    },
+    "NLU02302": {
+        "text": "想听《只要你过得比我好》了，要钟镇涛版",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "钟镇涛",
+            "song": "只要你过得比我好"
+        }
+    },
+    "NLU02325": {
+        "text": "来一首00年代的韩文歌",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "00年代",
+            "language": "韩语"
+        }
+    },
+    "NLU02341": {
+        "text": "给我播放一首抖音歌曲可以吗",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU02349": {
+        "text": "现在把周杰伦的歌都给我顺序播放一下吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周杰伦",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU02353": {
+        "text": "可可托海的牧羊人可以给我单曲循环吗",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "牧羊人",
+            "artist": "可可托海",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU02360": {
+        "text": "我想你给我播放几首金莎的二零零几年的歌呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "金莎",
+            "age": "二零零几年"
+        }
+    },
+    "NLU02368": {
+        "text": "播放高丽霞的歌儿一壶老酒",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "高丽霞",
+            "song": "一壶老酒"
+        }
+    },
+    "NLU02374": {
+        "text": "2000年有没有治愈的英文歌听",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "age": "2000年"
+        }
+    },
+    "NLU02377": {
+        "text": "放一首张叶蕾专辑还是分开里的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张叶蕾",
+            "album": "还是分开",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU02390": {
+        "text": "帮我随机来一首黄安传灯里的歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "黄安",
+            "album": "传灯",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU02400": {
+        "text": "现在我很绝望，请给我单曲循环凉凉。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "song": "凉凉"
+        }
+    },
+    "NLU02404": {
+        "text": "哆啦A梦的主题曲日语版播放一下啊",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "哆啦A梦",
+            "language": "日语"
+        }
+    },
+    "NLU02412": {
+        "text": "放一下蔡依林的爱情三十六计啊",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "爱情三十六计",
+            "artist": "蔡依林"
+        }
+    },
+    "NLU02415": {
+        "text": "我就要循环播放月亮代表我的心。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "song": "月亮代表我的心"
+        }
+    },
+    "NLU02439": {
+        "text": "播放李健的中文歌曲异乡人",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "李健",
+            "language": "华语",
+            "song": "异乡人"
+        }
+    },
+    "NLU02446": {
+        "text": "莫文蔚2013年的歌来一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "莫文蔚",
+            "play_mode": "随机播放",
+            "age": "2013年"
+        }
+    },
+    "NLU02460": {
+        "text": "金莎和林俊杰合唱的歌曲随机来一首",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": [
+                "金莎",
+                "林俊杰"
+            ],
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU02461": {
+        "text": "我想听英文版的追光者。",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "song": "追光者"
+        }
+    },
+    "NLU02477": {
+        "text": "凤凰传奇的歌曲能不能顺序播放呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "凤凰传奇",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU02485": {
+        "text": "属于REVISIT的同道中人立刻播放一下吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "同道中人",
+            "album": "REVISIT"
+        }
+    },
+    "NLU02494": {
+        "text": "随机来一首玩乐里的歌吧",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "玩乐",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU02500": {
+        "text": "快帮我播放一下江湖流啊要反复唱",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "江湖流",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU02512": {
+        "text": "放一下八十年代张国荣唱的《风再起时》",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张国荣",
+            "song": "风再起时",
+            "age": "八十年代"
+        }
+    },
+    "NLU02517": {
+        "text": "能把林俊杰这些年唱的歌都播放一遍吗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "林俊杰"
+        }
+    },
+    "NLU02531": {
+        "text": "三旬内的歌曲可以随机来一个不",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "三旬",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU02542": {
+        "text": "苏打绿的小情歌是不是能播放呢",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "小情歌",
+            "artist": "苏打绿"
+        }
+    },
+    "NLU02558": {
+        "text": "我要听张杰的跨国山海",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "跨国山海",
+            "artist": "张杰"
+        }
+    },
+    "NLU02559": {
+        "text": "唱个抖音的歌可以不",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU02560": {
+        "text": "你能给我来一首火辣劲爆的舞曲吗",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU02580": {
+        "text": "来一首邓丽君的歌儿听听",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "邓丽君",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU02582": {
+        "text": "单曲循环周兴哲的怎么了。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "artist": "周兴哲",
+            "song": "怎么了"
+        }
+    },
+    "NLU02583": {
+        "text": "2020年抖音火的歌曲顺序播放下吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "顺序播放",
+            "age": "2020年"
+        }
+    },
+    "NLU02588": {
+        "text": "按顺序播放逃跑计划专辑世界里的所有歌曲。",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "世界里",
+            "artist": "逃跑计划",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU02591": {
+        "text": "单曲循环夜半小夜曲伴我入眠吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "夜半小夜曲",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU02598": {
+        "text": "周深版的达拉崩吧给我播放一下",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周深",
+            "song": "达拉崩吧"
+        }
+    },
+    "NLU02603": {
+        "text": "随机来一首舞曲给我可以不",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU02610": {
+        "text": "来播放一首梅艳芳的歌儿",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "梅艳芳",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU02611": {
+        "text": "汪苏泷专辑大娱乐家随机播放吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "汪苏泷",
+            "album": "大娱乐家",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU02635": {
+        "text": "古筝版本的高山流水立刻播放呢",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "高山流水",
+            "instrument": "古筝"
+        }
+    },
+    "NLU02638": {
+        "text": "我想听吻别的英文版本呢",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "吻别",
+            "language": "英语"
+        }
+    },
+    "NLU02641": {
+        "text": "帮我播放琵琶古曲春江花月夜",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "春江花月夜",
+            "instrument": "琵琶"
+        }
+    },
+    "NLU02644": {
+        "text": "我想听李健的向往",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "李健",
+            "song": "向往"
+        }
+    },
+    "NLU02647": {
+        "text": "薛之谦去年发行的新歌曲给我播放一个吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "薛之谦",
+            "age": "去年"
+        }
+    },
+    "NLU02657": {
+        "text": "请播放王一博的青春恰时来",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "王一博",
+            "song": "青春恰时来"
+        }
+    },
+    "NLU02659": {
+        "text": "顺序播放归一里的歌曲可以吗",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "归一",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU02675": {
+        "text": "把去年的比较火的歌播放一下吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "age": "去年"
+        }
+    },
+    "NLU02695": {
+        "text": "能不能单曲给我放一下月亮之上",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "月亮之上",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU02715": {
+        "text": "今年最治愈的歌曲来一首呗",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "今年"
+        }
+    },
+    "NLU02722": {
+        "text": "我想听pig小优版本的画舫烟中浅",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "pig小优",
+            "song": "画舫烟中浅"
+        }
+    },
+    "NLU02724": {
+        "text": "周杰伦叶惠美专辑里的歌顺序播放一下吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周杰伦",
+            "album": "叶惠美",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU02744": {
+        "text": "听一下经典老歌最浪漫的事",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "最浪漫的事"
+        }
+    },
+    "NLU02760": {
+        "text": "微博热搜上的万能青年旅店他们的冀西南林路专辑现在我想听",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "万能青年旅店",
+            "album": "冀西南林路"
+        }
+    },
+    "NLU02763": {
+        "text": "想听陈奕迅的浮夸粤语版啊",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "陈奕迅",
+            "song": "浮夸",
+            "language": "粤语"
+        }
+    },
+    "NLU02767": {
+        "text": "黑龙的盗心贼循环播放",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "黑龙",
+            "song": "盗心贼",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU02769": {
+        "text": "盗将行循环播放，要花粥、马玉阳版的",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": ["花粥", "马玉阳"],
+            "song": "盗将行",
+            "play_mode": "循环播放"
+        }
+    },
+    "NLU02795": {
+        "text": "给我放个李玲玉的美人吟",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "李玲玉",
+            "song": "美人吟"
+        }
+    },
+    "NLU02799": {
+        "text": "听后能让人安静下来的钢琴曲来一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU02810": {
+        "text": "给我随机来一首90年代的老歌吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "age": "90年代"
+        }
+    },
+    "NLU02817": {
+        "text": "钢琴曲来一首欢乐情绪的吧",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴"
+        }
+    },
+    "NLU02819": {
+        "text": "我想听古风歌曲我的一个道姑朋友",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "我的一个道姑朋友"
+        }
+    },
+    "NLU02820": {
+        "text": "我想听听歌手许嵩的浪",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "浪",
+            "artist": "许嵩"
+        }
+    },
+    "NLU02830": {
+        "text": "你能把难忘今宵给我一直循环唱一下么",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "难忘今宵",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU02834": {
+        "text": "张学友的粤语专辑里面的歌随机来一首呗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张学友",
+            "language": "粤语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU02835": {
+        "text": "1999年的歌给我按顺序播放一下吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "顺序播放",
+            "age": "1999年"
+        }
+    },
+    "NLU02836": {
+        "text": "播放周深的大鱼",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周深",
+            "song": "大鱼"
+        }
+    },
+    "NLU02867": {
+        "text": "你能把卡农给我单曲循环吗",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "卡农",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU02870": {
+        "text": "需要你来一首周传雄给山河令唱的插曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周传雄",
+            "album": "山河令"
+        }
+    },
+    "NLU02877": {
+        "text": "随便放一首郭兰英老师的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "郭兰英",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU02902": {
+        "text": "能不能给我来一首关于爱情的悲伤音乐啊",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU02914": {
+        "text": "放一下小虎队的《青苹果乐园》",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "小虎队",
+            "song": "青苹果乐园"
+        }
+    },
+    "NLU02917": {
+        "text": "2000年周杰伦的歌来首呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周杰伦",
+            "age": "2000年"
+        }
+    },
+    "NLU02926": {
+        "text": "我想听任贤齐的春天花会开",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "任贤齐",
+            "song": "春天花会开"
+        }
+    },
+    "NLU02927": {
+        "text": "搜一下70年代的古典音乐",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "70年代"
+        }
+    },
+    "NLU02928": {
+        "text": "可不可以给我来一首周杰伦的告白气球听听",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "告白气球",
+            "artist": "周杰伦"
+        }
+    },
+    "NLU02941": {
+        "text": "播放我爱北京天安门，七十年代的",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "我爱北京天安门",
+            "age": "七十年代"
+        }
+    },
+    "NLU02943": {
+        "text": "我们可以随机播放凤凰传奇的歌吗",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "artist": "凤凰传奇"
+        }
+    },
+    "NLU02947": {
+        "text": "播一下用二胡演奏的上个世纪的武侠纯音乐",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "二胡",
+            "age": "上个世纪"
+        }
+    },
+    "NLU02949": {
+        "text": "21世纪前的古典歌曲可以来一首不",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "21世纪"
+        }
+    },
+    "NLU02962": {
+        "text": "我需要听几首今年抖音比较热的神曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "今年"
+        }
+    },
+    "NLU02970": {
+        "text": "放个民谣歌曲，比如陈粒的历历万乡",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "陈粒",
+            "song": "历历万乡"
+        }
+    },
+    "NLU02983": {
+        "text": "是不是可以随便来一首邓紫棋的歌曲啊",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "邓紫棋",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU02989": {
+        "text": "我要听水手现场版",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "水手"
+        }
+    },
+    "NLU03000": {
+        "text": "锦鲤抄，我要听银临 云泣他俩唱的",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": ["银临", "云泣"],
+            "song": "锦鲤抄"
+        }
+    },
+    "NLU03005": {
+        "text": "来一首丝竹行街听听",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "行街",
+            "instrument": "丝竹"
+        }
+    },
+    "NLU03009": {
+        "text": "随机播放一首上过春晚的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03041": {
+        "text": "给我放陈立农唱的宝贝。",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "陈立农",
+            "song": "宝贝"
+        }
+    },
+    "NLU03072": {
+        "text": "我想单曲循环赵雷的成都",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "artist": "赵雷",
+            "song": "成都"
+        }
+    },
+    "NLU03078": {
+        "text": "我想听一首上个世纪的钢琴曲",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴",
+            "age": "上个世纪"
+        }
+    },
+    "NLU03081": {
+        "text": "播放20年的专辑我们很好",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "20年",
+            "album": "我们很好"
+        }
+    },
+    "NLU03084": {
+        "text": "三生三世十里桃花里张碧晨和杨宗纬唱的歌播放一次吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": [
+                "张碧晨",
+                "杨宗纬"
+            ],
+            "album": "三生三世十里桃花"
+        }
+    },
+    "NLU03094": {
+        "text": "要你播张国荣的专辑REVISIT呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张国荣",
+            "album": "REVISIT"
+        }
+    },
+    "NLU03102": {
+        "text": "单曲循环我们不一样",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "我们不一样",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU03105": {
+        "text": "说唱歌曲空壳播放",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "空壳"
+        }
+    },
+    "NLU03110": {
+        "text": "播放吴亦凡的July",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "吴亦凡",
+            "song": "July"
+        }
+    },
+    "NLU03118": {
+        "text": "难过，想听再见吧我最爱的你里的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "再见吧我最爱的你",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03128": {
+        "text": "给我听林忆莲的《爱上一个不回家的人》",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "林忆莲",
+            "song": "爱上一个不回家的人"
+        }
+    },
+    "NLU03129": {
+        "text": "英文演奏的萨克斯有没有推荐的",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "instrument": "萨克斯"
+        }
+    },
+    "NLU03133": {
+        "text": "我想播放林启得的大田俊生仔",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "林启得",
+            "song": "大田俊生仔"
+        }
+    },
+    "NLU03136": {
+        "text": "播放赵雷的民谣南方姑娘。",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "赵雷",
+            "song": "南方姑娘"
+        }
+    },
+    "NLU03137": {
+        "text": "我得听点儿励志歌儿，播放怒放的生命",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "怒放的生命"
+        }
+    },
+    "NLU03145": {
+        "text": "沈文裕的钢琴曲可以播放不",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "沈文裕",
+            "instrument": "钢琴",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03150": {
+        "text": "你能给我播放一个欢快的韩语歌吗",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "韩语"
+        }
+    },
+    "NLU03186": {
+        "text": "放个比较轻松的90年代的网络歌曲吧",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "90年代"
+        }
+    },
+    "NLU03191": {
+        "text": "我需要一首华晨宇的烟火里的尘埃",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "烟火里的尘埃",
+            "artist": "华晨宇"
+        }
+    },
+    "NLU03200": {
+        "text": "立即播放葛东琪的定义",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "葛东琪",
+            "song": "定义"
+        }
+    },
+    "NLU03203": {
+        "text": "放一首50年代的令人激情燃烧的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "50年代"
+        }
+    },
+    "NLU03207": {
+        "text": "能不能唱一首民谣四块五给我呢",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "四块五"
+        }
+    },
+    "NLU03214": {
+        "text": "来几首王力宏欢快的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "王力宏"
+        }
+    },
+    "NLU03226": {
+        "text": "立刻播放薛之谦的专辑天外来物",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "薛之谦",
+            "album": "天外来物"
+        }
+    },
+    "NLU03228": {
+        "text": "播放摇滚歌神崔健的一无所有",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "崔健",
+            "song": "一无所有"
+        }
+    },
+    "NLU03238": {
+        "text": "顺序播放专辑你一定要幸福里的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "你一定要幸福",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU03247": {
+        "text": "上次听过的小提琴演奏的西班牙语歌放一下",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "小提琴",
+            "language": "西班牙语"
+        }
+    },
+    "NLU03248": {
+        "text": "二胡曲子二泉映月来放一下吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "二泉映月",
+            "instrument": "二胡"
+        }
+    },
+    "NLU03265": {
+        "text": "随机能来一首民谣不",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03272": {
+        "text": "请随机播放专辑墨镜里的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "墨镜",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03288": {
+        "text": "我已经开始听海洋之息这首钢琴曲了",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "海洋之息",
+            "instrument": "钢琴"
+        }
+    },
+    "NLU03294": {
+        "text": "我要听东宫里的插曲爱殇",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "爱殇"
+        }
+    },
+    "NLU03297": {
+        "text": "我想随机播放一首许魏洲唱的歌。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "artist": "许魏洲"
+        }
+    },
+    "NLU03299": {
+        "text": "给我找一下古筝伴奏版的卷珠帘停一会",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "卷珠帘",
+            "instrument": "古筝"
+        }
+    },
+    "NLU03302": {
+        "text": "单曲循环speak low",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "speak low",
+            "language": "英语",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU03309": {
+        "text": "随便播放一首专辑环绕里的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "环绕",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03313": {
+        "text": "我要听一首2020年的英文歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "age": "2020年"
+        }
+    },
+    "NLU03320": {
+        "text": "你能不能给我播放一下薛之谦的丑八怪呢",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "丑八怪",
+            "artist": "薛之谦"
+        }
+    },
+    "NLU03337": {
+        "text": "赶紧给我随机来一首周杰伦的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周杰伦",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03341": {
+        "text": "2014年的胡彦斌当爱已成往事播放一下吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "当爱已成往事",
+            "artist": "胡彦斌",
+            "age": "2014年"
+        }
+    },
+    "NLU03342": {
+        "text": "播放一会仙剑三的主题曲给我听听吧",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "仙剑三"
+        }
+    },
+    "NLU03349": {
+        "text": "播放九十年代的涛声依旧，不要翻唱的",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "涛声依旧",
+            "age": "九十年代"
+        }
+    },
+    "NLU03353": {
+        "text": "我要听一首林俊杰2014年发行的歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "林俊杰",
+            "age": "2014年"
+        }
+    },
+    "NLU03354": {
+        "text": "是不是能给我来一首12年的歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "12年"
+        }
+    },
+    "NLU03355": {
+        "text": "播放一首欧美新歌",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU03361": {
+        "text": "请播放一首刘欢老师的歌，那首都行",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "刘欢",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03365": {
+        "text": "随机来首睡前听的应景的歌曲吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03379": {
+        "text": "胡彦斌的太歌专辑全部播放一下",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "胡彦斌",
+            "album": "太歌"
+        }
+    },
+    "NLU03385": {
+        "text": "我想听奈何里面的歌，随机一首就行",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "奈何",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03388": {
+        "text": "是不是能帮我找一个今年新发的古典乐",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "今年"
+        }
+    },
+    "NLU03403": {
+        "text": "去年抖音最火的神曲随机一首听吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "age": "去年"
+        }
+    },
+    "NLU03412": {
+        "text": "随便放一首2019年春晚的人气歌",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2019年",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03424": {
+        "text": "准备播放赵英俊的送你一朵小红花",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "赵英俊",
+            "song": "送你一朵小红花"
+        }
+    },
+    "NLU03437": {
+        "text": "我想随机听一下REVISIT里的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "REVISIT",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03453": {
+        "text": "打开用电吉他演奏的海阔天空，要纯音乐版的那个哦",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "电吉他",
+            "song": "海阔天空"
+        }
+    },
+    "NLU03474": {
+        "text": "接下来我要听张哲瀚的光",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张哲瀚",
+            "song": "光"
+        }
+    },
+    "NLU03480": {
+        "text": "Famille的Génération Goldman单曲循环",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "Famille",
+            "song": "Génération Goldman",
+            "language": "法语",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU03484": {
+        "text": "请播放何文彪演唱的太阳岛上",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "何文彪",
+            "song": "太阳岛上"
+        }
+    },
+    "NLU03492": {
+        "text": "七十年代边疆的泉水清又纯播放",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "边疆的泉水清又纯",
+            "age": "七十年代"
+        }
+    },
+    "NLU03500": {
+        "text": "夏之旅能不能单曲循环下去呢",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "夏之旅",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU03516": {
+        "text": "把周深的大鱼帮我单曲循环好吗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周深",
+            "song": "大鱼",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU03522": {
+        "text": "我想听一首近期出的钢琴曲",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴"
+        }
+    },
+    "NLU03534": {
+        "text": "播放吹打乐丰收锣鼓庆祝一下",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "丰收锣鼓"
+        }
+    },
+    "NLU03538": {
+        "text": "关于三国的歌曲随机来一个吧",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "三国",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03547": {
+        "text": "调个60年代的藏语歌曲吧",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "60年代",
+            "language": "藏语"
+        }
+    },
+    "NLU03556": {
+        "text": "薛之谦的专辑里的歌随机放一个可以吗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "薛之谦",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03558": {
+        "text": "陈奕迅一首歌一个故事里面的歌曲随机来一首",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "陈奕迅",
+            "album": "一首歌一个故事",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03563": {
+        "text": "张学友90年代专辑真爱里面的歌曲随机来一个听吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张学友",
+            "album": "真爱里面",
+            "play_mode": "随机播放",
+            "age": "90年代"
+        }
+    },
+    "NLU03565": {
+        "text": "单曲循环播放潘玮柏的反转地球",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "潘玮柏",
+            "song": "反转地球",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU03580": {
+        "text": "我想听一个2011年的英文歌",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "age": "2011年"
+        }
+    },
+    "NLU03602": {
+        "text": "随机播放一首00年代的英文歌。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "age": "00年代",
+            "language": "英语"
+        }
+    },
+    "NLU03609": {
+        "text": "轻柔曲调的老歌随机来一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03610": {
+        "text": "张娜拉的韩语歌随机来一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张娜拉",
+            "language": "韩语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03612": {
+        "text": "放一首想去海边让我高兴一下来回放",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "想去海边",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU03619": {
+        "text": "来一首吉他弹唱的歌吧",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "吉他"
+        }
+    },
+    "NLU03628": {
+        "text": "长歌行里面萨顶顶唱的那首歌播放一下呗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "萨顶顶",
+            "album": "长歌行"
+        }
+    },
+    "NLU03643": {
+        "text": "能不能直接来一首2000年的浪漫情歌",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2000年"
+        }
+    },
+    "NLU03645": {
+        "text": "你可以唱一个西班牙语歌曲给我听一下",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "西班牙语"
+        }
+    },
+    "NLU03648": {
+        "text": "随机来首2009年的英文歌吧",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "play_mode": "随机播放",
+            "age": "2009年"
+        }
+    },
+    "NLU03666": {
+        "text": "给我找到凉凉的钢琴版播放",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "凉凉",
+            "instrument": "钢琴"
+        }
+    },
+    "NLU03668": {
+        "text": "郑容和的和.唱 STAY IN TOUCH里面的歌随机来一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "郑容和",
+            "album": "和.唱 STAY IN TOUCH",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03677": {
+        "text": "播放任同祥吹奏的李二嫂改嫁",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "任同祥",
+            "song": "李二嫂改嫁"
+        }
+    },
+    "NLU03680": {
+        "text": "我想听刘德华唱的忘情水",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "忘情水",
+            "artist": "刘德华"
+        }
+    },
+    "NLU03682": {
+        "text": "阿拉伯语言的歌曲随机来一首可以不",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "阿拉伯语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03706": {
+        "text": "像风一样可以单曲循环不",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "像风一样",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU03712": {
+        "text": "我想要听腐草为萤里的歌，挨着个儿播放就行",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "腐草为萤",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU03731": {
+        "text": "单曲循环修炼爱情",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "song": "修炼爱情"
+        }
+    },
+    "NLU03739": {
+        "text": "唱一首欢快的日语歌曲吧",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "日语"
+        }
+    },
+    "NLU03750": {
+        "text": "我要听广场舞神曲荷塘月色",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "荷塘月色"
+        }
+    },
+    "NLU03760": {
+        "text": "法语歌立刻随机来一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "法语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03761": {
+        "text": "能不能单曲循环凤凰传奇的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "凤凰传奇",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU03791": {
+        "text": "难得想听一首古琴创作的音乐，在歌单里顺序播放",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "古琴",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU03820": {
+        "text": "REVISIT里面的歌曲随机来一首吧，张国荣的",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张国荣",
+            "album": "REVISIT",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03823": {
+        "text": "我想听肖战的余年帮我播放一下",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "肖战",
+            "song": "余年"
+        }
+    },
+    "NLU03829": {
+        "text": "我要单曲循环我最喜欢的一首英文歌Let it go。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "language": "英语",
+            "song": "Let it go"
+        }
+    },
+    "NLU03836": {
+        "text": "你随便找一首许嵩的前期的歌给我听听吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "许嵩",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03861": {
+        "text": "听赵英俊的送你一朵小红花",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "赵英俊",
+            "song": "送你一朵小红花"
+        }
+    },
+    "NLU03875": {
+        "text": "随机播放畅销榜单里的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03895": {
+        "text": "单曲循环相亲相爱一家人",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "song": "相亲相爱一家人"
+        }
+    },
+    "NLU03900": {
+        "text": "有点像听90年代的古典歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "90年代"
+        }
+    },
+    "NLU03914": {
+        "text": "真的特别想听韩语的不得不爱",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "韩语",
+            "song": "不得不爱"
+        }
+    },
+    "NLU03916": {
+        "text": "帮我放一首听了就想笑的日语歌给我听好吗",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "日语"
+        }
+    },
+    "NLU03932": {
+        "text": "周杰伦新出的专辑听下呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周杰伦"
+        }
+    },
+    "NLU03961": {
+        "text": "能不能随便来一首贝多芬的钢琴曲给我啊",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "贝多芬",
+            "instrument": "钢琴",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03962": {
+        "text": "播放笛子名曲春耕时节",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "春耕时节",
+            "instrument": "笛子"
+        }
+    },
+    "NLU03966": {
+        "text": "随机来一首上世纪的钢琴曲吧",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴",
+            "play_mode": "随机播放",
+            "age": "上世纪"
+        }
+    },
+    "NLU03979": {
+        "text": "有没有花粥的新歌啊",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "花粥",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03982": {
+        "text": "随便来一首中国新说唱里的歌儿",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU03990": {
+        "text": "孤独这首歌可以单曲循环一下啊",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "孤独",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU03991": {
+        "text": "请播放马思唯的崂山道士。",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "崂山道士",
+            "artist": "马思唯"
+        }
+    },
+    "NLU04002": {
+        "text": "我要听萨顶顶唱的万物生。",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "萨顶顶",
+            "song": "万物生"
+        }
+    },
+    "NLU04005": {
+        "text": "能给我找一首2020年发行的欢快歌曲播放么",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2020年"
+        }
+    },
+    "NLU04006": {
+        "text": "帮我选一首归一里的歌曲听听",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "归一"
+        }
+    },
+    "NLU04022": {
+        "text": "我需要你来一首2021年最火爆的古典音乐给我听呢",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2021年"
+        }
+    },
+    "NLU04026": {
+        "text": "随便放一个郑绪兰的歌儿",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "郑绪兰",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04032": {
+        "text": "唱几首贾斯汀比伯的英文歌吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "贾斯汀比伯",
+            "language": "英语"
+        }
+    },
+    "NLU04040": {
+        "text": "放一首周深的大鱼听一听",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周深",
+            "song": "大鱼"
+        }
+    },
+    "NLU04041": {
+        "text": "你是不是能播放一首比较小清新的歌曲呀",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04043": {
+        "text": "我想听张信哲的过火",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张信哲",
+            "song": "过火"
+        }
+    },
+    "NLU04051": {
+        "text": "郎朗人气最高的曲子你可以播放一下不",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "郎朗"
+        }
+    },
+    "NLU04064": {
+        "text": "有俄语古典音乐给我听听吗",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "俄语"
+        }
+    },
+    "NLU04068": {
+        "text": "顺序播放往后余生、小半",
+        "intent": "Music-Play",
+        "slots": {
+            "song": ["余生", "小半"],
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU04071": {
+        "text": "我想你随机给我来一首俄语歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "俄语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04095": {
+        "text": "能播放一下胡彦斌的专辑太歌里的歌吗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "胡彦斌",
+            "album": "太歌"
+        }
+    },
+    "NLU04103": {
+        "text": "可以播放2008年的比较治愈的主题曲吗",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2008年"
+        }
+    },
+    "NLU04117": {
+        "text": "在跳舞的时候想随机播放三小时的韩文歌。",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "韩语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04127": {
+        "text": "2020年的电视金曲随机来几首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "age": "2020年"
+        }
+    },
+    "NLU04136": {
+        "text": "帮我找一首2011年发行的德语歌播放可以不",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "德语",
+            "age": "2011年"
+        }
+    },
+    "NLU04140": {
+        "text": "2021到今天最高收听的歌曲唱一下",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2021"
+        }
+    },
+    "NLU04141": {
+        "text": "我准备十分钟之后听张信哲的过火",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张信哲",
+            "song": "过火"
+        }
+    },
+    "NLU04149": {
+        "text": "我想感受一下周杰伦的晴天有多好听",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周杰伦",
+            "song": "晴天"
+        }
+    },
+    "NLU04155": {
+        "text": "单曲循环一下钢琴曲卡农吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "卡农",
+            "instrument": "钢琴",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU04156": {
+        "text": "播放专辑独里的海底",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "海底",
+            "album": "独"
+        }
+    },
+    "NLU04157": {
+        "text": "放一首贝多芬17世纪创作的曲子给我可以吗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "贝多芬",
+            "age": "17世纪"
+        }
+    },
+    "NLU04164": {
+        "text": "放一下迪克牛仔的经典有多少爱可以重来",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "迪克牛仔",
+            "song": "有多少爱可以重来"
+        }
+    },
+    "NLU04169": {
+        "text": "有没有古风类的歌曲随机来一首",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04170": {
+        "text": "我需要停一会古筝弹奏的十面埋伏呢",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "十面埋伏",
+            "instrument": "古筝"
+        }
+    },
+    "NLU04175": {
+        "text": "庞龙的两只蝴蝶给我来听听可以吗",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "两只蝴蝶",
+            "artist": "庞龙"
+        }
+    },
+    "NLU04184": {
+        "text": "听一首钢琴曲，李云迪的吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "李云迪",
+            "instrument": "钢琴",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04189": {
+        "text": "播放歌曲消愁毛不易的",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "毛不易",
+            "song": "消愁"
+        }
+    },
+    "NLU04197": {
+        "text": "放邓紫棋的手心的蔷薇可以吗",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "手心的蔷薇",
+            "artist": "邓紫棋"
+        }
+    },
+    "NLU04204": {
+        "text": "名侦探柯南的日语主题曲播放",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "名侦探柯南",
+            "language": "日语"
+        }
+    },
+    "NLU04208": {
+        "text": "随机播放一个2000年的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "age": "2000年"
+        }
+    },
+    "NLU04213": {
+        "text": "许嵩的寻宝游戏里面的歌曲播放呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "许嵩",
+            "album": "寻宝游戏"
+        }
+    },
+    "NLU04228": {
+        "text": "2000年出的英语歌唱一首呗",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "age": "2000年"
+        }
+    },
+    "NLU04230": {
+        "text": "2019年超治愈的歌曲有没有呢",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2019年"
+        }
+    },
+    "NLU04244": {
+        "text": "播放群星合唱的祝福你",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "祝福你"
+        }
+    },
+    "NLU04245": {
+        "text": "我要唱高音王妃萧敬腾的哟",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "萧敬腾",
+            "song": "王妃"
+        }
+    },
+    "NLU04250": {
+        "text": "影视金曲随机来一首",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04253": {
+        "text": "播放王菲的因为爱情",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "王菲",
+            "song": "因为爱情"
+        }
+    },
+    "NLU04282": {
+        "text": "请单曲循环七里香",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "song": "七里香"
+        }
+    },
+    "NLU04289": {
+        "text": "我想听徐佳莹的失落沙洲",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "徐佳莹",
+            "song": "失落沙洲"
+        }
+    },
+    "NLU04290": {
+        "text": "放一首欧阳娜娜拉的大提琴曲。",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "欧阳娜娜",
+            "instrument": "大提琴"
+        }
+    },
+    "NLU04293": {
+        "text": "放一首古典音乐柴可夫斯基的天鹅湖吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "柴可夫斯基",
+            "song": "天鹅湖"
+        }
+    },
+    "NLU04294": {
+        "text": "随便来一首巴乌演奏的音乐",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "巴乌",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04295": {
+        "text": "能不能播放一下今年最火爆的抖音歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "age": "今年"
+        }
+    },
+    "NLU04296": {
+        "text": "找一首西南地区的民谣听",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04302": {
+        "text": "我要听一下许嵩出道后的专辑呼吸之野",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "许嵩",
+            "album": "呼吸之野"
+        }
+    },
+    "NLU04321": {
+        "text": "我要听归，播放rap版",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "归"
+        }
+    },
+    "NLU04333": {
+        "text": "想听2017年的专辑人生路",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2017年",
+            "album": "人生路"
+        }
+    },
+    "NLU04338": {
+        "text": "麻烦单曲循环但愿人长久",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "但愿人长久",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU04340": {
+        "text": "能来一首周杰伦最高点击量的歌曲吗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周杰伦"
+        }
+    },
+    "NLU04351": {
+        "text": "随机播放一首90年代的韩文歌。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "age": "90年代",
+            "language": "韩语"
+        }
+    },
+    "NLU04352": {
+        "text": "顺序播放郑智化的《堕落天使》、《蕾丝花边》",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "郑智化",
+            "song": ["堕落天使", "蕾丝花边"],
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU04373": {
+        "text": "我听的就是黄霄云的星辰大海",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "黄霄云",
+            "song": "星辰大海"
+        }
+    },
+    "NLU04385": {
+        "text": "播放费翔的故乡的云",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "费翔",
+            "song": "故乡的云"
+        }
+    },
+    "NLU04387": {
+        "text": "麻烦让我听一下2021年最新的歌曲可以吗",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2021年"
+        }
+    },
+    "NLU04405": {
+        "text": "我必须听我们的时光这首流行歌",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "我们的时光"
+        }
+    },
+    "NLU04425": {
+        "text": "我想循环播放林俊杰的小酒窝。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "artist": "林俊杰",
+            "song": "小酒窝"
+        }
+    },
+    "NLU04435": {
+        "text": "我需要一首治愈系的英文歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04447": {
+        "text": "挨着放最美情缘里的歌儿",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "最美情缘",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU04479": {
+        "text": "我准备听献给爱丽丝这首钢琴曲",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "献给爱丽丝",
+            "instrument": "钢琴"
+        }
+    },
+    "NLU04494": {
+        "text": "能不能来一首比较悲怆的钢琴曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴"
+        }
+    },
+    "NLU04502": {
+        "text": "随便放一首今年元宵晚会上的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04528": {
+        "text": "播放陶笛演奏的女儿情。",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "陶笛",
+            "song": "女儿情"
+        }
+    },
+    "NLU04531": {
+        "text": "我想听王力宏2010年出的歌呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "王力宏",
+            "age": "2010年"
+        }
+    },
+    "NLU04542": {
+        "text": "来一首打击乐听听",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04543": {
+        "text": "陈奕迅富士山下单曲循环",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "富士山下",
+            "artist": "陈奕迅",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU04545": {
+        "text": "演员给我单曲循环一下吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "演员",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU04565": {
+        "text": "玩乐里的曲子随机一首播放呢",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "玩乐",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04571": {
+        "text": "薛之谦丑八怪单曲循环给我听吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "丑八怪",
+            "artist": "薛之谦",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU04580": {
+        "text": "播放张学友1922年专辑真情流露里的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张学友",
+            "album": "真情流露",
+            "age": "1922年"
+        }
+    },
+    "NLU04590": {
+        "text": "阿拉伯语的歌曲随机来一首可以吗",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "阿拉伯语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04603": {
+        "text": "给我随机放一首望里的歌儿",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "望里",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04618": {
+        "text": "播放还珠格格主题曲雨蝶",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "雨蝶"
+        }
+    },
+    "NLU04629": {
+        "text": "挨着个儿播放专辑生而为人里的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "生而为人",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU04638": {
+        "text": "麻烦播放大欢演唱的三生石下",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "大欢",
+            "song": "三生石下"
+        }
+    },
+    "NLU04663": {
+        "text": "随机来一首德语歌吧",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "德语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04687": {
+        "text": "给我随机放一首钢琴曲",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04693": {
+        "text": "请帮我播放肖战的光点",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "肖战",
+            "song": "光点"
+        }
+    },
+    "NLU04695": {
+        "text": "播放一下小魂的专辑关山酒",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "小魂",
+            "album": "关山酒"
+        }
+    },
+    "NLU04700": {
+        "text": "法语比较浪漫的歌曲是不是能来一首啊",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "法语"
+        }
+    },
+    "NLU04719": {
+        "text": "你可以播放一下专辑初爱里的歌曲吗",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "初爱"
+        }
+    },
+    "NLU04722": {
+        "text": "随机播放毛不易专辑小王里的中文歌。",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "毛不易",
+            "album": "小王",
+            "language": "华语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04727": {
+        "text": "何日君再来邓丽君唱的播放",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "邓丽君",
+            "song": "何日君再来"
+        }
+    },
+    "NLU04731": {
+        "text": "随机播放抖音比较火的古风歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04732": {
+        "text": "周杰伦最新的歌曲来一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周杰伦"
+        }
+    },
+    "NLU04754": {
+        "text": "有欢快的德语歌曲吗，来首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "德语"
+        }
+    },
+    "NLU04761": {
+        "text": "能不能把去年最治愈的歌曲单曲循环一下呢",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "age": "去年"
+        }
+    },
+    "NLU04776": {
+        "text": "跨国山海开始单曲循环",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "跨国山海",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU04786": {
+        "text": "有抖音歌曲吗，随机来一个吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04802": {
+        "text": "可以播放一下90年代的古典音乐给我听吗",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "90年代"
+        }
+    },
+    "NLU04809": {
+        "text": "找到晏景晟的瑶族舞曲",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "晏景晟",
+            "song": "瑶族舞曲"
+        }
+    },
+    "NLU04810": {
+        "text": "周杰伦的2006年的歌曲播放一下吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周杰伦",
+            "play_mode": "随机播放",
+            "age": "2006年"
+        }
+    },
+    "NLU04811": {
+        "text": "天外来物里面的迟迟给我播放",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "迟迟",
+            "album": "天外来物"
+        }
+    },
+    "NLU04814": {
+        "text": "卢炎的流浪随机播放里面的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "卢炎",
+            "album": "流浪",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04818": {
+        "text": "想听越南语的歌 随便放一首啊",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "越南语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04864": {
+        "text": "播放英文版的我和你吻别",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "song": "我和你吻别"
+        }
+    },
+    "NLU04869": {
+        "text": "唱一首90年代的法语情歌吧",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "法语",
+            "age": "90年代"
+        }
+    },
+    "NLU04895": {
+        "text": "给我放一下林俊杰爱不会绝迹",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "林俊杰",
+            "song": "爱不会绝迹"
+        }
+    },
+    "NLU04899": {
+        "text": "放一首宝宝的亲亲猪猪宝贝",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "亲亲猪猪宝贝"
+        }
+    },
+    "NLU04934": {
+        "text": "播放英文歌曲more than this",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "more than this",
+            "language": "英语"
+        }
+    },
+    "NLU04938": {
+        "text": "帮我放凤凰传奇的荷塘月色。",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "凤凰传奇",
+            "song": "荷塘月色"
+        }
+    },
+    "NLU04943": {
+        "text": "让我听听励志哥儿咸鱼",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "咸鱼"
+        }
+    },
+    "NLU04944": {
+        "text": "1986年的粤语专辑遥远的她Amour播放吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "Amour",
+            "album": "遥远的她",
+            "language": "粤语",
+            "age": "1986年"
+        }
+    },
+    "NLU04962": {
+        "text": "是不是能随机来一首莫文蔚的歌呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "莫文蔚",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04976": {
+        "text": "继续播放昨天听的披头士的乡村音乐",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "披头士"
+        }
+    },
+    "NLU04984": {
+        "text": "接下来呢我要听宿羽阳的暗恋是一个人的事",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "宿羽阳",
+            "song": "暗恋是一个人的事"
+        }
+    },
+    "NLU04991": {
+        "text": "听后能让人快乐的歌曲随机来一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04994": {
+        "text": "适合运动时候听的钢琴曲放一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU04996": {
+        "text": "随机播放一首小提琴曲。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "instrument": "小提琴"
+        }
+    },
+    "NLU04998": {
+        "text": "放一首摇滚浪子回头拯救我",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "浪子回头"
+        }
+    },
+    "NLU05018": {
+        "text": "龚琳娜的摇滚歌曲忐忑唱一曲",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "忐忑",
+            "artist": "龚琳娜"
+        }
+    },
+    "NLU05020": {
+        "text": "能随机放一首葫芦丝歌曲吗",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "葫芦丝",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05021": {
+        "text": "按顺序播放专辑侧脸里的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "侧脸",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU05027": {
+        "text": "我要听邓丽君唱的夜上海。",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "夜上海",
+            "artist": "邓丽君"
+        }
+    },
+    "NLU05033": {
+        "text": "有没有悲伤的古典音乐啊，听一首呢",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU05050": {
+        "text": "莫扎特的钢琴曲能不能来一首啊",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "莫扎特",
+            "instrument": "钢琴"
+        }
+    },
+    "NLU05053": {
+        "text": "随机播放一首手风琴演奏的意大利语歌",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "instrument": "手风琴",
+            "language": "意大利语"
+        }
+    },
+    "NLU05070": {
+        "text": "播放中国国乐团演奏的丝竹音乐欢乐歌",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "中国国乐团",
+            "song": "欢乐歌",
+            "instrument": "丝竹"
+        }
+    },
+    "NLU05085": {
+        "text": "我想要听发布于2009年欢快的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2009年"
+        }
+    },
+    "NLU05126": {
+        "text": "我要听漫动作里面的歌，随机播放就可以",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "漫动作",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05131": {
+        "text": "我想听一个2015年的电视剧金曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2015年"
+        }
+    },
+    "NLU05168": {
+        "text": "单曲循环大鱼的钢琴版",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "大鱼",
+            "instrument": "钢琴",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU05177": {
+        "text": "给我播放王赫野的大风吹",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "王赫野",
+            "song": "大风吹"
+        }
+    },
+    "NLU05181": {
+        "text": "我要听盖世英雄专辑里面的歌曲呢，随机来一首呗",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "盖世英雄",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05234": {
+        "text": "MC Solaar唱的Non Merci播放一下",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "MC Solaar",
+            "song": "Non Merci",
+            "language": "法语"
+        }
+    },
+    "NLU05243": {
+        "text": "催眠一点的钢琴曲来一首呢",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴"
+        }
+    },
+    "NLU05246": {
+        "text": "肯定句里面的歌曲随机来一首呢",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "肯定句",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05253": {
+        "text": "单曲循环张碧晨的不要忘记我爱你",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "artist": "张碧晨",
+            "song": "不要忘记我爱你"
+        }
+    },
+    "NLU05260": {
+        "text": "找一下孙燕姿的逆光",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "孙燕姿",
+            "album": "逆光"
+        }
+    },
+    "NLU05265": {
+        "text": "放一下李谷一老师的难忘今宵",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "李谷一",
+            "song": "难忘今宵"
+        }
+    },
+    "NLU05267": {
+        "text": "古筝弹奏的歌曲可以随机来一首吗",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "古筝",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05272": {
+        "text": "你能给我来一首上世纪的人气古筝曲吗",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "古筝",
+            "age": "上世纪"
+        }
+    },
+    "NLU05277": {
+        "text": "听一首高明骏的《我独自在风雨中》",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "高明骏",
+            "song": "我独自在风雨中"
+        }
+    },
+    "NLU05291": {
+        "text": "播一个德语歌给我可以不",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "德语"
+        }
+    },
+    "NLU05293": {
+        "text": "顺序播放周润发的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "顺序播放",
+            "artist": "周润发"
+        }
+    },
+    "NLU05298": {
+        "text": "是不是能播放杨宗纬和张碧晨的凉凉啊",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "凉凉",
+            "artist": [
+                "杨宗纬",
+                "张碧晨"
+            ]
+        }
+    },
+    "NLU05304": {
+        "text": "找一首专辑生如夏花里的歌播放",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "生如夏花",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05305": {
+        "text": "我要听乔玲儿的深情败给时间",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "乔玲儿",
+            "song": "深情败给时间"
+        }
+    },
+    "NLU05306": {
+        "text": "近5年的英语歌给我顺序播放一下吧",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "play_mode": "顺序播放",
+            "age": "近5年"
+        }
+    },
+    "NLU05340": {
+        "text": "经典的英文歌曲来一首",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语"
+        }
+    },
+    "NLU05343": {
+        "text": "放一首周杰伦告白气球听听",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周杰伦",
+            "song": "告白气球"
+        }
+    },
+    "NLU05345": {
+        "text": "广西那边的经典歌可以随机放一首不",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05351": {
+        "text": "有氛围的浪漫歌给我唱一首可以吗",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU05371": {
+        "text": "我要跳舞了播放舞曲干就完了",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "干就完了"
+        }
+    },
+    "NLU05385": {
+        "text": "我想听一会胡彦斌2014年发的歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "胡彦斌",
+            "age": "2014年"
+        }
+    },
+    "NLU05386": {
+        "text": "挨着个古代中国风专辑第三十八年夏里的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "第三十八年夏里的歌曲"
+        }
+    },
+    "NLU05389": {
+        "text": "我需要听一下过去现在时里面所有的歌，顺序播放一下吧",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "过去现在时",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU05396": {
+        "text": "随机播放一首2014年的俄语歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "俄语",
+            "play_mode": "随机播放",
+            "age": "2014年"
+        }
+    },
+    "NLU05405": {
+        "text": "给我单曲循环张远的嘉宾。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "artist": "张远",
+            "song": "嘉宾"
+        }
+    },
+    "NLU05420": {
+        "text": "我想听能让人平静下来的钢琴演奏曲",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴",
+            "song": "钢琴演奏曲"
+        }
+    },
+    "NLU05427": {
+        "text": "你是不是能播放一下与荒野里面的金黄色呢",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "金黄色",
+            "album": "与荒野"
+        }
+    },
+    "NLU05442": {
+        "text": "立刻播放曾轶可的可能的夜晚",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "曾轶可",
+            "song": "可能的夜晚"
+        }
+    },
+    "NLU05448": {
+        "text": "就放一首林俊杰的就是我吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "就是我吧",
+            "artist": "林俊杰"
+        }
+    },
+    "NLU05452": {
+        "text": "欢快的英文歌可以播放一个吗",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语"
+        }
+    },
+    "NLU05482": {
+        "text": "随机来一首古风音乐可以吗",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05488": {
+        "text": "小孩这首歌可以一直循环下去吗",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "小孩",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU05504": {
+        "text": "现在听摇滚版本的日不落",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "日不落"
+        }
+    },
+    "NLU05518": {
+        "text": "2014年发行的民谣歌曲来一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2014年"
+        }
+    },
+    "NLU05524": {
+        "text": "草原骑兵播放，笙演奏的那首",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "草原骑兵",
+            "instrument": "笙"
+        }
+    },
+    "NLU05526": {
+        "text": "给我随机找一首许嵩的歌播放",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "许嵩",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05527": {
+        "text": "马上给我播放日语版踏山河",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "踏山河",
+            "language": "日语"
+        }
+    },
+    "NLU05547": {
+        "text": "给我播放一首巴乌名曲月亮街",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "月亮街",
+            "instrument": "巴乌"
+        }
+    },
+    "NLU05553": {
+        "text": "我想听首最新的摇滚乐呢",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU05564": {
+        "text": "随机播放一首80年代的爵士乐。",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "80年代",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05579": {
+        "text": "来首笛子独奏过雪山草地",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "过雪山草地",
+            "instrument": "笛子"
+        }
+    },
+    "NLU05617": {
+        "text": "随便播放一首专辑我的麦克风里的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "我的麦克风",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05618": {
+        "text": "现在我的心情适合听轻快的爵士乐",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU05645": {
+        "text": "李宗盛的飘洋过海来看你这歌可以单曲循环播放",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "李宗盛",
+            "song": "飘洋过海来看你",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU05646": {
+        "text": "比较兴奋的舞曲有吗，来一个听听不",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU05654": {
+        "text": "顺序播放张雨生的专辑听你听我",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "顺序播放",
+            "artist": "张雨生",
+            "album": "听你听我"
+        }
+    },
+    "NLU05658": {
+        "text": "随机播放一首85年的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "85年",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05664": {
+        "text": "我需要随机听一首钢琴曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05669": {
+        "text": "那些抖音歌曲随机放一个吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05683": {
+        "text": "单曲循环一个小时大梦想家",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "song": "大梦想家"
+        }
+    },
+    "NLU05687": {
+        "text": "随机一首校园歌曲给我听呗",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05688": {
+        "text": "你给我随机放一个三旬里的歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "三旬里",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05716": {
+        "text": "给我立刻播放2020年快手最火爆的歌曲啊",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2020年"
+        }
+    },
+    "NLU05723": {
+        "text": "随机播放一个搞笑的纯音乐给我吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05727": {
+        "text": "能把今年凤凰传奇唱的海底给我听听吗",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "海底",
+            "artist": "凤凰传奇",
+            "age": "今年"
+        }
+    },
+    "NLU05731": {
+        "text": "高山流水这首古筝曲可以播放不",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "高山流水",
+            "instrument": "古筝"
+        }
+    },
+    "NLU05734": {
+        "text": "来单曲循环一首卡农可以吗",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "卡农",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU05748": {
+        "text": "古典音乐里最高点击率的来一首呢",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU05762": {
+        "text": "我要听绅士里面的演员呢",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "演员",
+            "album": "绅士"
+        }
+    },
+    "NLU05771": {
+        "text": "2020年有那些治愈系的歌曲，播放一首",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2020年"
+        }
+    },
+    "NLU05790": {
+        "text": "找一首藏语歌听",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "藏语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05794": {
+        "text": "单曲循环张韶涵的欧若拉",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "artist": "张韶涵",
+            "song": "欧若拉"
+        }
+    },
+    "NLU05819": {
+        "text": "能唱一个去年的歌给我听吗",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "去年"
+        }
+    },
+    "NLU05838": {
+        "text": "唱一首去年快手最火的歌给我吧",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "去年"
+        }
+    },
+    "NLU05845": {
+        "text": "播放瞎子阿炳的二胡二泉映月听听",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "阿炳",
+            "song": "二泉映月",
+            "instrument": "二胡"
+        }
+    },
+    "NLU05870": {
+        "text": "今年抖音最人气的音乐来一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "今年"
+        }
+    },
+    "NLU05878": {
+        "text": "放一个很开心的法语歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "法语"
+        }
+    },
+    "NLU05895": {
+        "text": "其实莫扎特的小夜曲听着非常享受",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "莫扎特",
+            "song": "小夜曲"
+        }
+    },
+    "NLU05898": {
+        "text": "快点儿给我放戴荃的悟空啊我要听",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "戴荃",
+            "song": "悟空"
+        }
+    },
+    "NLU05899": {
+        "text": "今年最新的歌曲循环播放一下可否",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "age": "今年"
+        }
+    },
+    "NLU05906": {
+        "text": "有浪漫温馨的法语歌曲吗",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "法语"
+        }
+    },
+    "NLU05921": {
+        "text": "播放黄土高坡，要田震唱的",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "田震",
+            "song": "黄土高坡"
+        }
+    },
+    "NLU05923": {
+        "text": "播放杜聪的巴乌曲苗语花香",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "杜聪",
+            "song": "苗语花香",
+            "instrument": "巴乌"
+        }
+    },
+    "NLU05925": {
+        "text": "我需要你随机来一首阿拉伯语言的歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "阿拉伯语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05930": {
+        "text": "你能给我播放一下比较悲伤的英语歌不",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语"
+        }
+    },
+    "NLU05938": {
+        "text": "找一首KTV唛榜里的歌听",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05942": {
+        "text": "找一首七十年代的歌儿播放",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "七十年代",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05965": {
+        "text": "有没有比较伤感的歌曲随机来一首啊",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05975": {
+        "text": "放苏打绿的我好想你",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "苏打绿",
+            "song": "我好想你"
+        }
+    },
+    "NLU05982": {
+        "text": "找一首专辑死不回头里的歌播放",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "死不回头里",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU05984": {
+        "text": "找一首2011年的英文情歌播放呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "age": "2011年"
+        }
+    },
+    "NLU06000": {
+        "text": "能把吻别的英文版给我听一下吗",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "吻别",
+            "language": "英语"
+        }
+    },
+    "NLU06020": {
+        "text": "放一首励志的水手拯救我吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "水手"
+        }
+    },
+    "NLU06023": {
+        "text": "下一首播放张雨生的大海",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张雨生",
+            "song": "大海"
+        }
+    },
+    "NLU06025": {
+        "text": "来一首适合看书的时候听的纯音乐",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU06057": {
+        "text": "我想听70年代的纯音乐",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "70年代"
+        }
+    },
+    "NLU06073": {
+        "text": "给我放一首九十年代的《过把瘾》",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "过把瘾",
+            "age": "九十年代"
+        }
+    },
+    "NLU06074": {
+        "text": "随机播放Private Corner里面的歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "Private Corner",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU06104": {
+        "text": "能播放一个2017年的歌曲吧",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2017年"
+        }
+    },
+    "NLU06119": {
+        "text": "你能给我找一个2020年比较火的爵士乐听吗",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2020年"
+        }
+    },
+    "NLU06127": {
+        "text": "单曲循环刘若英的后来。",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "后来",
+            "artist": "刘若英",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU06129": {
+        "text": "我想听专辑鸽子里面的任意一首歌",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "鸽子",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU06158": {
+        "text": "麻烦继续听那首蛮治愈的永不失联的爱",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "永不失联的爱"
+        }
+    },
+    "NLU06161": {
+        "text": "我想听遇龙的主题曲遇萤",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "遇萤"
+        }
+    },
+    "NLU06170": {
+        "text": "我想要一首凤凰传奇的2015年的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "凤凰传奇",
+            "age": "2015年"
+        }
+    },
+    "NLU06212": {
+        "text": "适合运动听的歌随机播放一个吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU06224": {
+        "text": "单曲循环俄文歌喀秋莎。",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "俄语",
+            "play_mode": "单曲循环",
+            "song": "喀秋莎"
+        }
+    },
+    "NLU06231": {
+        "text": "给我找一下范晓萱的《健康歌》",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "范晓萱",
+            "song": "健康歌"
+        }
+    },
+    "NLU06237": {
+        "text": "你能给我来一首治愈的古典音乐吗",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU06242": {
+        "text": "有好听的吉他弹唱吗，帮我随机播放",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "吉他",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU06245": {
+        "text": "我想听青藏高原了，韩红版本的",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "韩红",
+            "song": "青藏高原"
+        }
+    },
+    "NLU06251": {
+        "text": "能来几首治愈系的2021年新歌吗",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2021年"
+        }
+    },
+    "NLU06260": {
+        "text": "我要听周深的无所畏惧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周深",
+            "album": "无所畏惧"
+        }
+    },
+    "NLU06261": {
+        "text": "2021年最火的西班牙语歌曲来一首呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "西班牙语",
+            "age": "2021年"
+        }
+    },
+    "NLU06265": {
+        "text": "循环播放徐梓淳的嫌晚。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "artist": "徐梓淳",
+            "song": "嫌晚"
+        }
+    },
+    "NLU06273": {
+        "text": "能给我放一首凤凰传奇唱的最炫民族风吗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "凤凰传奇",
+            "song": "最炫民族风"
+        }
+    },
+    "NLU06302": {
+        "text": "点一首邓丽君的月亮代表我的心",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "邓丽君",
+            "song": "月亮代表我的心"
+        }
+    },
+    "NLU06303": {
+        "text": "放那英的春暖花开",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "那英",
+            "song": "春暖花开"
+        }
+    },
+    "NLU06313": {
+        "text": "给我单曲循环贾斯汀比伯的baby",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "artist": "贾斯汀比伯",
+            "song": "baby"
+        }
+    },
+    "NLU06314": {
+        "text": "我现在想听一首欢快的日语歌",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "日语"
+        }
+    },
+    "NLU06340": {
+        "text": "麻烦播放大海航行靠舵手，要合唱的",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "大海航行靠舵手"
+        }
+    },
+    "NLU06344": {
+        "text": "是不是能给我随机来一首凤凰传奇的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "凤凰传奇",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU06354": {
+        "text": "找一首怀旧歌曲听",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU06356": {
+        "text": "你是不是能给我来一首搞笑的日语歌呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "日语"
+        }
+    },
+    "NLU06363": {
+        "text": "能不能随机给我点播一个黄龄的歌曲啊",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "黄龄",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU06365": {
+        "text": "单曲循环播放李健的抚仙湖。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "artist": "李健",
+            "song": "抚仙湖"
+        }
+    },
+    "NLU06371": {
+        "text": "有90年代的经典歌曲来一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "90年代"
+        }
+    },
+    "NLU06374": {
+        "text": "林俊杰的修炼爱情很火，现在放一下",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "林俊杰",
+            "song": "修炼爱情"
+        }
+    },
+    "NLU06376": {
+        "text": "我想听一听薛之谦最火的歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "薛之谦"
+        }
+    },
+    "NLU06385": {
+        "text": "播放《潇洒走一回》，叶倩文唱的啊",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "叶倩文",
+            "song": "潇洒走一回"
+        }
+    },
+    "NLU06406": {
+        "text": "今天上午一直放刘德华的恭喜发财",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "刘德华",
+            "song": "恭喜发财"
+        }
+    },
+    "NLU06423": {
+        "text": "能营造浪漫氛围的歌曲可以随机播放一首不",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU06436": {
+        "text": "运动时候听的音乐随机播放吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU06439": {
+        "text": "我有点想听哥哥的歌呢，随机一首就可以",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "哥哥",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU06441": {
+        "text": "找一首TFboys的宠爱听一听",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "TFboys",
+            "song": "宠爱"
+        }
+    },
+    "NLU06442": {
+        "text": "播放出山，花粥、王胜男合唱的啊",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": ["花粥", "王胜男"],
+            "song": "出山"
+        }
+    },
+    "NLU06448": {
+        "text": "是不是能随机放一首古典乐啊",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU06459": {
+        "text": "伤感的英文歌曲可以来一首吗",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU06470": {
+        "text": "我需要一首90年代的舞曲听一会",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "90年代"
+        }
+    },
+    "NLU06471": {
+        "text": "麻烦播放一首专辑英雄本色里的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "英雄本色",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU06485": {
+        "text": "顺序播放林海的钢琴曲吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "林海",
+            "instrument": "钢琴",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU06504": {
+        "text": "播一下张国荣的一切随风这张专辑",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张国荣",
+            "album": "一切随风"
+        }
+    },
+    "NLU06510": {
+        "text": "阿冗的专辑与我无关播放",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "阿冗",
+            "album": "与我无关"
+        }
+    },
+    "NLU06519": {
+        "text": "我要听那英的烟嗓山不转水转",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "那英",
+            "song": "山不转水转"
+        }
+    },
+    "NLU06537": {
+        "text": "播放阿宝的民歌走西口",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "阿宝",
+            "song": "走西口"
+        }
+    },
+    "NLU06540": {
+        "text": "你给我播放一首80年代的古典音乐可以吗",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "80年代"
+        }
+    },
+    "NLU06545": {
+        "text": "我能随机听一首莫文蔚的歌曲不",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "莫文蔚",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU06588": {
+        "text": "播放古琴曲梅花三弄",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "梅花三弄",
+            "instrument": "古琴"
+        }
+    },
+    "NLU06594": {
+        "text": "2019年陈鸿宇的专辑三旬里的歌曲随机来一个啊",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "陈鸿宇",
+            "album": "三旬里",
+            "play_mode": "随机播放",
+            "age": "2019年"
+        }
+    },
+    "NLU06600": {
+        "text": "播放埙演奏的走西口",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "走西口",
+            "instrument": "埙"
+        }
+    },
+    "NLU06611": {
+        "text": "我想听90年代的治愈老歌",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "90年代"
+        }
+    },
+    "NLU06624": {
+        "text": "播放李克勤唱的红日",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "李克勤",
+            "song": "红日"
+        }
+    },
+    "NLU06629": {
+        "text": "立刻播放童安格的《其实你不懂我的心》",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "童安格",
+            "song": "其实你不懂我的心"
+        }
+    },
+    "NLU06634": {
+        "text": "我要听一下王菲与那英合唱的相约九八",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": ["王菲", "那英"],
+            "song": "相约九八"
+        }
+    },
+    "NLU06643": {
+        "text": "我想听魏晨的花开那年",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "魏晨",
+            "song": "花开那年"
+        }
+    },
+    "NLU06649": {
+        "text": "能不能给我单曲循环一下张学友的吻别呢",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "吻别",
+            "artist": "张学友",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU06663": {
+        "text": "随机播放2019未LIVE巡回演唱会上海站LIVE专辑内的歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "未LIVE巡回演唱会上海站LIVE",
+            "play_mode": "随机播放",
+            "age": "2019"
+        }
+    },
+    "NLU06691": {
+        "text": "时不知归内的歌随机一首给我听听就可以",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "时不知归内",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU06698": {
+        "text": "能来一首21世纪的英语歌曲不",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "age": "21世纪"
+        }
+    },
+    "NLU06707": {
+        "text": "莫文蔚的歌是否可以随机播放一个",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "莫文蔚",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU06743": {
+        "text": "致爱丽丝这首钢琴曲能不能单曲循环给我",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "致爱丽丝",
+            "instrument": "钢琴",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU06760": {
+        "text": "我要听二胡名曲不屈的苏武",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "不屈的苏武",
+            "instrument": "二胡"
+        }
+    },
+    "NLU06776": {
+        "text": "随机给我来一首二胡曲子可以不",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "二胡",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU06781": {
+        "text": "开始播放可可托海的牧羊人，王琪的",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "王琪",
+            "song": "可可托海的牧羊人"
+        }
+    },
+    "NLU06793": {
+        "text": "是不是能随机播放一下周杰伦的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周杰伦",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU06794": {
+        "text": "播放张卫的机器铃砍菜刀",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张卫",
+            "song": "机器铃砍菜刀"
+        }
+    },
+    "NLU06800": {
+        "text": "我想听一下柯南的日语版主题曲",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "柯南",
+            "language": "日语"
+        }
+    },
+    "NLU06807": {
+        "text": "放一首我心旋律的歌儿，中国早晨五点钟就行",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "我心旋律",
+            "song": "中国早晨五点钟"
+        }
+    },
+    "NLU06814": {
+        "text": "韩文歌曲郑容和唱的可以播放一下",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "韩语",
+            "artist": "郑容和"
+        }
+    },
+    "NLU06818": {
+        "text": "单曲循环一首英文歌吧",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU06825": {
+        "text": "女儿情古筝曲放一下呢",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "女儿情",
+            "instrument": "古筝"
+        }
+    },
+    "NLU06833": {
+        "text": "我想听陈亦洺唱的何以歌",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "陈亦洺",
+            "song": "何以歌"
+        }
+    },
+    "NLU06835": {
+        "text": "张远唱的嘉宾播放一下",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张远",
+            "song": "嘉宾"
+        }
+    },
+    "NLU06838": {
+        "text": "帮我播放吾恩演唱的煮酒听雨",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "吾恩",
+            "song": "煮酒听雨"
+        }
+    },
+    "NLU06840": {
+        "text": "播放周笔畅的岁月神偷",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "岁月神偷",
+            "artist": "周笔畅"
+        }
+    },
+    "NLU06855": {
+        "text": "不完美人生指南里的歌可以随机来一首不",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "不完美人生指南",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU06862": {
+        "text": "找一首专辑我对天空说里的歌播放",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "我对天空说",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU06869": {
+        "text": "2019年的火爆爵士乐随机播一个吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "age": "2019年"
+        }
+    },
+    "NLU06878": {
+        "text": "能给我放一个15年的陈小春的专辑里的歌吗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "陈小春",
+            "age": "15年"
+        }
+    },
+    "NLU06885": {
+        "text": "能播放2011年的林俊杰的歌不",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "林俊杰",
+            "age": "2011年"
+        }
+    },
+    "NLU06887": {
+        "text": "有没有好听的新歌，随便放一首",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU06896": {
+        "text": "按列表循环一下李荣浩的歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "李荣浩",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU06910": {
+        "text": "山鬼给我循环播放，WINKY诗的",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "WINKY诗",
+            "song": "山鬼",
+            "play_mode": "循环播放"
+        }
+    },
+    "NLU06918": {
+        "text": "我想听古代中国风歌儿狐言，河图、洛天依唱的",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": ["河图", "洛天依"],
+            "song": "狐言"
+        }
+    },
+    "NLU06919": {
+        "text": "能不能立刻播放一下张学友的真爱内的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张学友",
+            "album": "真爱内"
+        }
+    },
+    "NLU06921": {
+        "text": "需要你播放一首比较适合睡觉的日语歌呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "日语"
+        }
+    },
+    "NLU06925": {
+        "text": "90年代邓丽君的歌来一首",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "邓丽君",
+            "age": "90年代"
+        }
+    },
+    "NLU06940": {
+        "text": "还是听听我们的时光这首民谣歌吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "我们的时光"
+        }
+    },
+    "NLU06948": {
+        "text": "林俊杰的100天可以顺序播放一下不",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "林俊杰",
+            "album": "100天",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU06952": {
+        "text": "给我来一首龚琳娜的忐忑。",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "龚琳娜",
+            "song": "忐忑"
+        }
+    },
+    "NLU06953": {
+        "text": "我需要你唱一首比较搞笑的流行音乐",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU06968": {
+        "text": "听巴赫旧约，汪苏泷版本的",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "巴赫旧约",
+            "artist": "汪苏泷"
+        }
+    },
+    "NLU06973": {
+        "text": "《你走你的路》循环播放，陈淑桦的",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "陈淑桦",
+            "song": "你走你的路",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU06978": {
+        "text": "放一首丝竹名曲三六欣赏一下",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "三六",
+            "instrument": "丝竹"
+        }
+    },
+    "NLU06979": {
+        "text": "循环播放小鬼出的单曲。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "artist": "小鬼"
+        }
+    },
+    "NLU06987": {
+        "text": "你可以立刻播放REVISIT里面的歌曲给我么",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "REVISIT"
+        }
+    },
+    "NLU07000": {
+        "text": "听一首90年代的日文歌",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "日语",
+            "age": "90年代"
+        }
+    },
+    "NLU07010": {
+        "text": "2021年抖音最火爆的歌曲来一首",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2021年"
+        }
+    },
+    "NLU07018": {
+        "text": "我打算听首邓丽君的月亮代表我的心这首歌",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "邓丽君",
+            "song": "月亮代表我的心"
+        }
+    },
+    "NLU07024": {
+        "text": "随机播放邓紫棋专辑倒数中的一首歌",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "artist": "邓紫棋",
+            "album": "倒数"
+        }
+    },
+    "NLU07029": {
+        "text": "能来一首经典的法语歌曲么",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "法语"
+        }
+    },
+    "NLU07034": {
+        "text": "睡觉前我希望听几首古风音乐，要顺序播放哦",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU07043": {
+        "text": "我就爱听我们的时光这首流行歌",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "我们的时光"
+        }
+    },
+    "NLU07068": {
+        "text": "放一首金足印象循环着放",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "金足印象",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU07083": {
+        "text": "来首摇滚吧，零点乐队的爱不爱我",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "零点乐队",
+            "song": "爱不爱我"
+        }
+    },
+    "NLU07088": {
+        "text": "许嵩唱过的治愈系歌曲给我播放一下",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "许嵩"
+        }
+    },
+    "NLU07100": {
+        "text": "点开最近凤凰传奇新出的瞄着你就是爱",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "瞄着你就是爱",
+            "artist": "凤凰传奇"
+        }
+    },
+    "NLU07101": {
+        "text": "我要听甜蜜爱情的钢琴曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "甜蜜爱情",
+            "instrument": "钢琴"
+        }
+    },
+    "NLU07103": {
+        "text": "钢琴弹奏的歌曲可以随机来一首吗",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU07109": {
+        "text": "播放2014年的专辑王者丑生",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2014年",
+            "album": "王者丑生"
+        }
+    },
+    "NLU07115": {
+        "text": "随机来影视金曲就行",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU07122": {
+        "text": "播放徐佳莹的国语专辑心里学",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "徐佳莹",
+            "album": "心里学"
+        }
+    },
+    "NLU07157": {
+        "text": "随便给我来一首毛不易的歌曲吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "毛不易",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU07162": {
+        "text": "放一首大提琴演奏的喜欢你",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "大提琴",
+            "song": "喜欢你"
+        }
+    },
+    "NLU07177": {
+        "text": "郑仁的韩语歌曲给我按顺序播放一下呗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "郑仁",
+            "language": "韩语",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU07179": {
+        "text": "顺序播放一下陈奕迅的伤感歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "顺序播放",
+            "artist": "陈奕迅"
+        }
+    },
+    "NLU07187": {
+        "text": "我要一直单曲循环烟火里的尘埃呢",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "烟火里的尘埃",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU07192": {
+        "text": "单曲循环2016年的歌曲不为谁而作的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "不为谁而作的歌",
+            "play_mode": "单曲循环",
+            "age": "2016年"
+        }
+    },
+    "NLU07216": {
+        "text": "陈雅森的下辈子不一定还能遇见你帮我播放一下",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "陈雅森",
+            "song": "下辈子不一定还能遇见你"
+        }
+    },
+    "NLU07221": {
+        "text": "薛之谦的演员可以单曲循环给我听吗",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "演员",
+            "artist": "薛之谦",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU07225": {
+        "text": "找一版合唱的我是一个兵听",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "我是一个兵"
+        }
+    },
+    "NLU07240": {
+        "text": "随机播放一首马思唯的说唱歌曲。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "artist": "马思唯"
+        }
+    },
+    "NLU07260": {
+        "text": "立刻播放一下18世纪贝多芬的创作",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "贝多芬",
+            "age": "18世纪"
+        }
+    },
+    "NLU07264": {
+        "text": "播放西瓜JUN的长生诀快点儿",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "西瓜JUN",
+            "song": "长生诀"
+        }
+    },
+    "NLU07285": {
+        "text": "随机播放一首许嵩的歌曲吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "许嵩",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU07298": {
+        "text": "放一下中国广播民族乐团的埙曲秋风词",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "中国广播民族乐团",
+            "song": "秋风词",
+            "instrument": "埙"
+        }
+    },
+    "NLU07303": {
+        "text": "2009年有欢快的歌吗，播放一首呢",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2009年"
+        }
+    },
+    "NLU07319": {
+        "text": "2008年的经典歌曲随机来一首呢",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "age": "2008年"
+        }
+    },
+    "NLU07340": {
+        "text": "想听理想三旬了，要沈以诚的",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "沈以诚",
+            "song": "理想三旬"
+        }
+    },
+    "NLU07341": {
+        "text": "立刻播放程响的长街万象",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "程响",
+            "song": "长街万象"
+        }
+    },
+    "NLU07359": {
+        "text": "张洪量《你知道我在等你吗》播放",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张洪量",
+            "song": "你知道我在等你吗"
+        }
+    },
+    "NLU07367": {
+        "text": "有什么用架子鼓创作的爵士乐呢",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "架子鼓"
+        }
+    },
+    "NLU07396": {
+        "text": "播放扬琴演奏的节日的天山",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "节日的天山",
+            "instrument": "扬琴"
+        }
+    },
+    "NLU07408": {
+        "text": "来一首古筝的梁山伯与祝英台听",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "梁山伯与祝英台",
+            "instrument": "古筝"
+        }
+    },
+    "NLU07414": {
+        "text": "想了想还是听两棵树这首流行歌吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "两棵树"
+        }
+    },
+    "NLU07422": {
+        "text": "我得听首民谣，七月上吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "七月上"
+        }
+    },
+    "NLU07431": {
+        "text": "随机播放一首轻音乐。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU07443": {
+        "text": "给我听听房东的猫的云烟成雨",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "房东的猫",
+            "song": "云烟成雨"
+        }
+    },
+    "NLU07444": {
+        "text": "循环放亲密爱人",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "亲密爱人",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU07449": {
+        "text": "我要听一下搞笑的英文歌",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语"
+        }
+    },
+    "NLU07450": {
+        "text": "你找一个微微一笑很倾城的主题曲单曲循环吧",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "微微一笑很倾城",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU07456": {
+        "text": "随便给我放一首薛之谦的歌吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "薛之谦"
+        }
+    },
+    "NLU07466": {
+        "text": "我想听陈百强的《一生何求》，快点儿播放",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "陈百强",
+            "song": "一生何求"
+        }
+    },
+    "NLU07482": {
+        "text": "给我放蔡依林的爱情三十六计",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "爱情三十六计",
+            "artist": "蔡依林"
+        }
+    },
+    "NLU07488": {
+        "text": "来一首比较安静的钢琴曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU07500": {
+        "text": "放Sexion d'Assaut的Wati By Night给我听",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "Sexion d'Assaut",
+            "song": "Wati By Night",
+            "language": "法语"
+        }
+    },
+    "NLU07506": {
+        "text": "张国荣的专辑请播放",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张国荣"
+        }
+    },
+    "NLU07508": {
+        "text": "来首钢琴曲听听，就英雄交响曲吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "英雄交响曲",
+            "instrument": "钢琴"
+        }
+    },
+    "NLU07510": {
+        "text": "快放一首李圣杰的经典痴心绝对",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "李圣杰",
+            "song": "痴心绝对"
+        }
+    },
+    "NLU07517": {
+        "text": "立刻来一曲薛之谦最高人气的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "薛之谦"
+        }
+    },
+    "NLU07523": {
+        "text": "放一首70年代的爵士乐。",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "70年代"
+        }
+    },
+    "NLU07538": {
+        "text": "顺序播放一下肯定句里的歌曲吧",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "肯定句",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU07542": {
+        "text": "星野源的日语歌随机来一首行不行",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "星野源",
+            "language": "日语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU07558": {
+        "text": "给我找一个陈小春2015年的专辑播放一下呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "陈小春",
+            "age": "2015年"
+        }
+    },
+    "NLU07563": {
+        "text": "我想听一下莫扎特的钢琴曲",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "莫扎特",
+            "instrument": "钢琴"
+        }
+    },
+    "NLU07566": {
+        "text": "能不能来一首悲伤情绪的歌曲呢",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU07593": {
+        "text": "我想听一首古筝弹奏的21世纪的曲子呢",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "古筝",
+            "age": "21世纪"
+        }
+    },
+    "NLU07600": {
+        "text": "播放玻璃心，八十年代风格的",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "玻璃心",
+            "age": "八十年代"
+        }
+    },
+    "NLU07605": {
+        "text": "请帮我播放80年代的日文歌",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "日语",
+            "age": "80年代"
+        }
+    },
+    "NLU07608": {
+        "text": "是不是能立刻播放一下原色专辑里的被遗忘的",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "被遗忘的",
+            "album": "原色"
+        }
+    },
+    "NLU07612": {
+        "text": "能顺序播放一下1999年出的歌吗",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "顺序播放",
+            "age": "1999年"
+        }
+    },
+    "NLU07626": {
+        "text": "你能给我找到一首二胡弹的曲子并单曲循环么",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "二胡",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU07628": {
+        "text": "播放一下地藏经",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "地藏经"
+        }
+    },
+    "NLU07629": {
+        "text": "能不能来首今年比较搞笑的歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "今年"
+        }
+    },
+    "NLU07634": {
+        "text": "给我来一首阿拉伯语的爵士乐吧",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "阿拉伯语"
+        }
+    },
+    "NLU07639": {
+        "text": "随机播放一首成龙的歌曲可以吗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "成龙",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU07641": {
+        "text": "循环播放程响的四季予你",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "四季予你",
+            "artist": "程响",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU07642": {
+        "text": "是否可以随机播放莱芙里的歌呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "莱芙里",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU07650": {
+        "text": "我要听程琳的《酒干倘卖无》",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "程琳",
+            "song": "酒干倘卖无"
+        }
+    },
+    "NLU07652": {
+        "text": "我想听英文版的爵士音乐",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语"
+        }
+    },
+    "NLU07657": {
+        "text": "随即来一首听后让人开心的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU07665": {
+        "text": "莫扎特人气最高的钢琴曲来一首呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "莫扎特",
+            "instrument": "钢琴"
+        }
+    },
+    "NLU07688": {
+        "text": "帮我播放90年代的摇滚音乐",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "90年代"
+        }
+    },
+    "NLU07703": {
+        "text": "挨个儿播放专辑绝不会放过里的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "绝不会放过",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU07713": {
+        "text": "我能听一首传灯里的歌曲吗",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "传灯"
+        }
+    },
+    "NLU07717": {
+        "text": "是不是能把比莉·艾利什的英文歌随便来一个呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "比莉·艾利什",
+            "language": "英语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU07744": {
+        "text": "请循环播放钢琴曲梦中的婚礼",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "instrument": "钢琴",
+            "song": "梦中的婚礼"
+        }
+    },
+    "NLU07754": {
+        "text": "播放草原歌曲敖包相会",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "敖包相会"
+        }
+    },
+    "NLU07760": {
+        "text": "来单曲循环一首许嵩的千古",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "千古",
+            "artist": "许嵩",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU07792": {
+        "text": "随机播放80年代陈奕迅的中文歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "age": "80年代",
+            "artist": "陈奕迅",
+            "language": "华语"
+        }
+    },
+    "NLU07794": {
+        "text": "是不是可以按照鸽子专辑的列表播放一下里面的歌呢",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "鸽子",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU07842": {
+        "text": "我想听邓丽君的又见炊烟。",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "邓丽君",
+            "song": "又见炊烟"
+        }
+    },
+    "NLU07867": {
+        "text": "听说民谣听书很好听帮我放一下吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "听书"
+        }
+    },
+    "NLU07872": {
+        "text": "我想随机听一首2011年林俊杰出的歌呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "林俊杰",
+            "play_mode": "随机播放",
+            "age": "2011年"
+        }
+    },
+    "NLU07879": {
+        "text": "有没有比较好听的英文摇滚乐可以播放一下",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语"
+        }
+    },
+    "NLU07887": {
+        "text": "随机播放侬本多情专辑里的歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "侬本多情",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU07889": {
+        "text": "鸽子专辑里面的回忆沙漠立刻播放下吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "回忆沙漠",
+            "album": "鸽子"
+        }
+    },
+    "NLU07896": {
+        "text": "单曲循环一首适合雨天听的纯音乐",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU07899": {
+        "text": "顺序播放蔡依林专辑特务J里面的歌曲。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "顺序播放",
+            "artist": "蔡依林",
+            "album": "特务J"
+        }
+    },
+    "NLU07921": {
+        "text": "来首民谣听",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU07923": {
+        "text": "循环播放周杰伦的恋爱神曲",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "artist": "周杰伦"
+        }
+    },
+    "NLU07933": {
+        "text": "给我单曲循环新疆好",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "新疆好",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU07937": {
+        "text": "我要听小鬼的唱跳歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "小鬼"
+        }
+    },
+    "NLU07949": {
+        "text": "胡彦斌覅忒好内的歌帮我播放呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "胡彦斌",
+            "album": "覅忒好"
+        }
+    },
+    "NLU07954": {
+        "text": "你能不能帮我放一下当下最流行的摇滚",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU07959": {
+        "text": "帮我随机播放一下李荣浩的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "artist": "李荣浩"
+        }
+    },
+    "NLU07960": {
+        "text": "能播放一首1999年的经典音乐给我听吗",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "1999年"
+        }
+    },
+    "NLU07961": {
+        "text": "90年代的古筝曲播放一下呢",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "古筝",
+            "age": "90年代"
+        }
+    },
+    "NLU07965": {
+        "text": "寻宝游戏里的如约而至立刻播放出来",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "如约而至",
+            "album": "寻宝游戏"
+        }
+    },
+    "NLU07966": {
+        "text": "我要听王洁实的九九艳阳天",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "王洁实",
+            "song": "九九艳阳天"
+        }
+    },
+    "NLU07976": {
+        "text": "随机来一首仙侠类电视剧的主题曲吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU07979": {
+        "text": "我的一九九七播放，要合唱版",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "我的一九九七"
+        }
+    },
+    "NLU07985": {
+        "text": "播一首钢琴弹奏的轻音乐",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴"
+        }
+    },
+    "NLU07994": {
+        "text": "放一下七十年代的路边的野花不要采来听",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "路边的野花不要采",
+            "age": "七十年代"
+        }
+    },
+    "NLU08002": {
+        "text": "你唱汪苏泷莱芙里面的歌吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "汪苏泷",
+            "album": "莱芙",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU08005": {
+        "text": "最近凤凰传奇翻唱的海底真的听治愈的，放出来听听",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "凤凰传奇",
+            "song": "海底"
+        }
+    },
+    "NLU08024": {
+        "text": "俄语歌曲随机来一个给我听行不",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "俄语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU08026": {
+        "text": "播放佛教的心是莲花开",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "心是莲花开"
+        }
+    },
+    "NLU08032": {
+        "text": "唱一首2021年凤凰传奇唱的海底",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "海底",
+            "artist": "凤凰传奇",
+            "age": "2021年"
+        }
+    },
+    "NLU08046": {
+        "text": "是不是能给我来一首日本歌手唱的日语歌啊",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "日语"
+        }
+    },
+    "NLU08070": {
+        "text": "有没有英语版本的吻别给我听",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "吻别",
+            "language": "英语"
+        }
+    },
+    "NLU08077": {
+        "text": "替我随机播放不良少年专辑里歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "album": "不良少年"
+        }
+    },
+    "NLU08080": {
+        "text": "放唐人要2016年五音JW翻唱的",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "五音JW",
+            "song": "唐人",
+            "age": "2016年"
+        }
+    },
+    "NLU08086": {
+        "text": "播放陈粒的走马",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "走马",
+            "artist": "陈粒"
+        }
+    },
+    "NLU08093": {
+        "text": "1984年的大地恩情立刻放一下给我听呢",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "大地恩情",
+            "age": "1984年"
+        }
+    },
+    "NLU08113": {
+        "text": "古风歌曲今年新出的来首听听呢",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "今年"
+        }
+    },
+    "NLU08118": {
+        "text": "抖音最火的歌曲来一首",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU08125": {
+        "text": "是不是能播放一首2000年的经典音乐呢",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2000年"
+        }
+    },
+    "NLU08164": {
+        "text": "醒着做梦里面的歌曲不错播放一下啊",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "不错",
+            "album": "醒着做梦"
+        }
+    },
+    "NLU08168": {
+        "text": "来一首日语歌曲神的随波逐流",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "神的随波逐流",
+            "language": "日语"
+        }
+    },
+    "NLU08170": {
+        "text": "我需要听几首90年代的影视金曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "90年代"
+        }
+    },
+    "NLU08178": {
+        "text": "随机播放一首治愈系的日文歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "language": "日语"
+        }
+    },
+    "NLU08184": {
+        "text": "归一里的歌可以顺序播放给我听吗",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "归一里",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU08187": {
+        "text": "帮我播放张韶涵的隐形的翅膀",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张韶涵",
+            "song": "隐形的翅膀"
+        }
+    },
+    "NLU08188": {
+        "text": "随机来首钢琴曲可以吗",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU08195": {
+        "text": "再来一首刘惜君的我很快乐",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "刘惜君",
+            "song": "我很快乐"
+        }
+    },
+    "NLU08229": {
+        "text": "唱一首搞笑的歌给我听可以吗",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU08239": {
+        "text": "立刻放一下许嵩的专辑寻宝游戏呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "许嵩",
+            "album": "寻宝游戏"
+        }
+    },
+    "NLU08240": {
+        "text": "播放杨宗纬的一个专辑越过山丘",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "杨宗纬",
+            "album": "越过山丘"
+        }
+    },
+    "NLU08249": {
+        "text": "许嵩唱的比较快乐的歌来一首",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "许嵩"
+        }
+    },
+    "NLU08262": {
+        "text": "你可以播放一首90年代的法语歌曲给我听吗",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "法语",
+            "age": "90年代"
+        }
+    },
+    "NLU08271": {
+        "text": "我要播放李玉刚的新贵妃醉酒",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "李玉刚",
+            "song": "新贵妃醉酒"
+        }
+    },
+    "NLU08275": {
+        "text": "能随机来一首奈何里的歌曲不",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "奈何",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU08295": {
+        "text": "能给我找几首贝多芬在17世纪创作的钢琴曲听听吗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "贝多芬",
+            "instrument": "钢琴",
+            "age": "17世纪"
+        }
+    },
+    "NLU08312": {
+        "text": "随机来一首贾斯汀比伯的英语歌曲可以吗",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "贾斯汀比伯",
+            "language": "英语",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU08313": {
+        "text": "初爱里的忘了我立刻放出来呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "忘了我",
+            "album": "初爱里"
+        }
+    },
+    "NLU08316": {
+        "text": "我要听帅哥任贤齐的心太软",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "任贤齐",
+            "song": "心太软"
+        }
+    },
+    "NLU08319": {
+        "text": "可以给我听一首2020年抖音最火爆的歌曲吗",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2020年"
+        }
+    },
+    "NLU08320": {
+        "text": "吻别这首歌一直循环下去吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "吻别",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU08325": {
+        "text": "我们爱过就好可以单曲循环不",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "我们爱过就好",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU08328": {
+        "text": "有听了比较兴奋的舞曲吗",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU08335": {
+        "text": "给我单曲循环罗大佑的童年",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "罗大佑",
+            "song": "童年",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU08339": {
+        "text": "吻别的英文版本可以给我播放一下不",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "吻别",
+            "language": "英语"
+        }
+    },
+    "NLU08344": {
+        "text": "搜索七月上的民谣版本出来",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "七月上"
+        }
+    },
+    "NLU08364": {
+        "text": "我打算十分钟之后听孙燕姿的遇见",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "孙燕姿",
+            "song": "遇见"
+        }
+    },
+    "NLU08388": {
+        "text": "我想听2020年的电视剧主题曲",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2020年"
+        }
+    },
+    "NLU08401": {
+        "text": "心中的日月里面的星座立刻播放一下吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "星座",
+            "album": "心中的日月"
+        }
+    },
+    "NLU08407": {
+        "text": "能不能把李荣浩的麻雀单曲循环下去呢",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "麻雀",
+            "artist": "李荣浩",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU08416": {
+        "text": "随机给我来一首让人热血澎湃的歌曲吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU08420": {
+        "text": "播放段兴华的我害怕鬼",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "段兴华",
+            "song": "我害怕鬼"
+        }
+    },
+    "NLU08424": {
+        "text": "莫扎特的钢琴曲随机放一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "莫扎特",
+            "instrument": "钢琴",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU08434": {
+        "text": "播放一首五十年代的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "五十年代",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU08435": {
+        "text": "能帮我把肯定句里的歌曲按顺序全部播放一下不",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "肯定句",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU08447": {
+        "text": "是否可以随机来一首华晨宇的歌啊",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "华晨宇",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU08450": {
+        "text": "2020年抖音最火的歌曲播放一下吧",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2020年"
+        }
+    },
+    "NLU08457": {
+        "text": "放一首专辑公子向北走里的歌听听",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "公子向北走",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU08459": {
+        "text": "睡觉时候适合听的纯音乐可以播放么",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU08464": {
+        "text": "有没有西班牙语的爵士音乐可以单曲循环的",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "西班牙语",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU08465": {
+        "text": "给我单曲循环李荣浩的麻雀",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "李荣浩",
+            "song": "麻雀",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU08466": {
+        "text": "唱一首英文老歌吧",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语"
+        }
+    },
+    "NLU08472": {
+        "text": "把寻宝游戏里面的如约而至立刻播放一下吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "如约而至",
+            "album": "寻宝游戏"
+        }
+    },
+    "NLU08473": {
+        "text": "能不能给我来一首日语歌曲给我",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "日语"
+        }
+    },
+    "NLU08489": {
+        "text": "我想随机听一首二胡弹得曲子",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "二胡",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU08496": {
+        "text": "能不能随机播放几首萧亚轩和蔡依林的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "artist": [
+                "萧亚轩",
+                "蔡依林"
+            ]
+        }
+    },
+    "NLU08514": {
+        "text": "我要单曲循环邓丽君的甜蜜蜜",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "artist": "邓丽君",
+            "song": "甜蜜蜜"
+        }
+    },
+    "NLU08518": {
+        "text": "赶紧唱一首2011年出的韩语歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "韩语",
+            "age": "2011年"
+        }
+    },
+    "NLU08534": {
+        "text": "去年刚发行的钢琴曲随机来一首吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放",
+            "age": "去年"
+        }
+    },
+    "NLU08535": {
+        "text": "很想听邓丽君的甜蜜蜜",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "邓丽君",
+            "song": "甜蜜蜜"
+        }
+    },
+    "NLU08544": {
+        "text": "张国荣专辑REVISIT里的歌曲随机播放吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "张国荣",
+            "album": "REVISIT",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU08552": {
+        "text": "请在晚上单曲循环播放英文歌曲Let it go",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "song": "Let it go",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU08565": {
+        "text": "你立刻找到纯钢琴版本的南山南给我听听呗",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "南山南",
+            "instrument": "钢琴"
+        }
+    },
+    "NLU08569": {
+        "text": "单曲循环一下抖音去年最火爆的歌",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "age": "去年"
+        }
+    },
+    "NLU08587": {
+        "text": "随便播放一首专辑空心里的歌曲",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "空心",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU08607": {
+        "text": "给我放几个搞笑一点的近期出来的音乐吧",
+        "intent": "Music-Play",
+        "slots": {}
+    },
+    "NLU08610": {
+        "text": "随即来一首适合睡觉的钢琴曲吧",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴"
+        }
+    },
+    "NLU08626": {
+        "text": "单曲循环一下凤凰传奇的自由飞翔",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "artist": "凤凰传奇",
+            "song": "自由飞翔"
+        }
+    },
+    "NLU08637": {
+        "text": "我需要你来一首2020年的抖音神曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2020年"
+        }
+    },
+    "NLU08640": {
+        "text": "我想听你给我随机来一首民谣呢",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU08643": {
+        "text": "随机播放一首90年代的轻音乐",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "90年代",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU08660": {
+        "text": "是不是可以顺序播放一下周传雄时不知归内的歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周传雄",
+            "album": "时不知归内",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU08662": {
+        "text": "印子月谈何容易立刻播放给我",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "谈何容易",
+            "artist": "印子月"
+        }
+    },
+    "NLU08665": {
+        "text": "播放一首好笑一点的英语歌可以吗",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语"
+        }
+    },
+    "NLU08686": {
+        "text": "帮我播放一下李克勤的红日",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "李克勤",
+            "song": "红日"
+        }
+    },
+    "NLU08687": {
+        "text": "麻雀这首歌单曲循环呢",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "麻雀",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU08695": {
+        "text": "你能不能随机来一首古筝弹奏的歌曲啊",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "古筝",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU08698": {
+        "text": "能不能把萨顶顶在长歌行电视剧里面唱的歌放出来啊",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "萨顶顶",
+            "album": "长歌行"
+        }
+    },
+    "NLU08706": {
+        "text": "能不能随机播放一下古典音乐啊",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU08710": {
+        "text": "汪苏泷比较悲伤的歌曲来一个吧",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "汪苏泷",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU08744": {
+        "text": "随机来一首古典歌曲吧",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU08751": {
+        "text": "我要听黄诗扶、B2ER合唱的杨花落尽子规啼播放",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": ["黄诗扶", "B2ER"],
+            "song": "杨花落尽子规啼"
+        }
+    },
+    "NLU08752": {
+        "text": "麻烦播放流行歌曲琴伤",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "琴伤"
+        }
+    },
+    "NLU08767": {
+        "text": "播放一首80年代的古典音乐",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "80年代"
+        }
+    },
+    "NLU08776": {
+        "text": "找李荣浩的年少有为",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "李荣浩",
+            "song": "年少有为"
+        }
+    },
+    "NLU08802": {
+        "text": "我需要一首能让我睡觉的钢琴曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "钢琴"
+        }
+    },
+    "NLU08806": {
+        "text": "想听封刀不为峥嵘了，要漆柚唱的那版",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "漆柚",
+            "song": "封刀不为峥嵘"
+        }
+    },
+    "NLU08807": {
+        "text": "想听怀旧歌曲克拉玛依之歌",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "克拉玛依之歌"
+        }
+    },
+    "NLU08823": {
+        "text": "单曲循环李荣浩的李白",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "artist": "李荣浩",
+            "song": "李白"
+        }
+    },
+    "NLU08833": {
+        "text": "给我循环播放蔡徐坤的新歌情人",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "artist": "蔡徐坤",
+            "song": "情人"
+        }
+    },
+    "NLU08845": {
+        "text": "请单曲循环播放一整天傅如乔的微微。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "artist": "傅如乔",
+            "song": "微微"
+        }
+    },
+    "NLU08853": {
+        "text": "你可以给我顺序播放寻宝游戏里面的歌不",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "寻宝游戏",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU08858": {
+        "text": "我想听薛之谦的我好像在哪见过你，这是他的初学者专辑里面的一首",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "薛之谦",
+            "song": "我好像在哪见过你",
+            "album": "初学者"
+        }
+    },
+    "NLU08863": {
+        "text": "单曲循环一首古筝曲子行吗",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "古筝",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU08866": {
+        "text": "是不是能找一首2016年出的歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "2016年"
+        }
+    },
+    "NLU08888": {
+        "text": "来一首任然的落海",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "任然",
+            "song": "落海"
+        }
+    },
+    "NLU08896": {
+        "text": "来一首乡村音乐，就失眠城市吧",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "失眠城市"
+        }
+    },
+    "NLU08908": {
+        "text": "基督教的remember放一下",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "remember"
+        }
+    },
+    "NLU08916": {
+        "text": "我想要再听一遍于文文的体面",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "于文文",
+            "song": "体面"
+        }
+    },
+    "NLU08928": {
+        "text": "想听音乐了，就听70年代的英文歌曲昨日重现吧",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "70年代",
+            "language": "英语",
+            "song": "昨日重现"
+        }
+    },
+    "NLU08936": {
+        "text": "能唱一首西班牙语歌给我不",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "西班牙语"
+        }
+    },
+    "NLU08940": {
+        "text": "给我循环播放李宗盛的《生命中的精灵》",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "李宗盛",
+            "song": "生命中的精灵"
+        }
+    },
+    "NLU08944": {
+        "text": "我需要听一首1999年发行的英文歌曲呢",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "英语",
+            "age": "1999年"
+        }
+    },
+    "NLU08951": {
+        "text": "近期比较火的纯音乐随机来一首",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU08975": {
+        "text": "可以点播一首今年最火爆的抖音歌曲么",
+        "intent": "Music-Play",
+        "slots": {
+            "language": "法语",
+            "age": "今年"
+        }
+    },
+    "NLU08980": {
+        "text": "宋捷演唱的民谣我会想起你播放",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "宋捷",
+            "song": "我会想起你"
+        }
+    },
+    "NLU08985": {
+        "text": "张学友1984年的大地恩情播放呢",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "大地恩情",
+            "artist": "张学友",
+            "age": "1984年"
+        }
+    },
+    "NLU08992": {
+        "text": "随便播放一首马头琴演奏的音乐",
+        "intent": "Music-Play",
+        "slots": {
+            "instrument": "马头琴",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU08997": {
+        "text": "落霜循环播放，尘AH的",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "尘AH",
+            "song": "落霜",
+            "play_mode": "单曲循环"
+        }
+    },
+    "NLU09020": {
+        "text": "我要单曲循环喜欢你。",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "单曲循环",
+            "song": "喜欢你"
+        }
+    },
+    "NLU09030": {
+        "text": "帮我播放卓依婷的明天会更好",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "卓依婷",
+            "song": "明天会更好"
+        }
+    },
+    "NLU09033": {
+        "text": "我想听一下林俊杰的美人鱼",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "林俊杰",
+            "song": "美人鱼"
+        }
+    },
+    "NLU09038": {
+        "text": "今天适合听这是我一生中最勇敢的瞬间摇滚的那个",
+        "intent": "Music-Play",
+        "slots": {
+            "song": "这是我一生中最勇敢的瞬间"
+        }
+    },
+    "NLU09051": {
+        "text": "我喜欢听山河令里面的歌曲呢，随机来一曲听",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "山河令",
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU09052": {
+        "text": "30年代专辑秋水伊人有个老歌我问你，马上播放",
+        "intent": "Music-Play",
+        "slots": {
+            "age": "30年代",
+            "album": "秋水伊人",
+            "song": "我问你"
+        }
+    },
+    "NLU09053": {
+        "text": "我想顺序播放10首范世錡专辑假装里的歌。",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "范世錡",
+            "album": "假装",
+            "play_mode": "顺序播放"
+        }
+    },
+    "NLU09060": {
+        "text": "我想随机听一下抖音神曲",
+        "intent": "Music-Play",
+        "slots": {
+            "play_mode": "随机播放"
+        }
+    },
+    "NLU09065": {
+        "text": "想听老狼唱的同桌的你了，放一下",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "老狼",
+            "song": "同桌的你"
+        }
+    },
+    "NLU09066": {
+        "text": "能帮我播放一首覅忒好里的歌曲不",
+        "intent": "Music-Play",
+        "slots": {
+            "album": "覅忒好"
+        }
+    },
+    "NLU09078": {
+        "text": "快点播放一下王易阳的专辑说好分手不会哭",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "王易阳",
+            "album": "说好分手不会哭"
+        }
+    },
+    "NLU09081": {
+        "text": "播放专辑庸人自扰，王理文的",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "王理文",
+            "album": "庸人自扰"
+        }
+    },
+    "NLU09095": {
+        "text": "播放周深的英文歌",
+        "intent": "Music-Play",
+        "slots": {
+            "artist": "周深",
+            "language": "英语"
+        }
+    }
+}

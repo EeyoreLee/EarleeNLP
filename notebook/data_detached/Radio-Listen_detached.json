@@ -1,0 +1,7794 @@
+{
+    "NLU00012": {
+        "text": "河南新闻广播找一下啊是新闻台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "河南新闻广播"
+        }
+    },
+    "NLU00013": {
+        "text": "交通类的武汉交通广播电台来一个吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "武汉交通广播电台"
+        }
+    },
+    "NLU00014": {
+        "text": "播放香港电台的王菲的经典音乐",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "香港电台"
+        }
+    },
+    "NLU00019": {
+        "text": "播放中央电台里的都市之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央电台",
+            "name": "都市之声"
+        }
+    },
+    "NLU00034": {
+        "text": "音乐老友记拨给我是山西音乐广播的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "音乐老友记",
+            "channel": "山西音乐广播"
+        }
+    },
+    "NLU00041": {
+        "text": "把盛志耘主持的神州之声播放一下呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "盛志耘",
+            "name": "神州之声"
+        }
+    },
+    "NLU00060": {
+        "text": "找陈博嘉洋轮流主播的活在成都",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "活在成都",
+            "artist": [
+                "陈博",
+                "嘉洋"
+            ]
+        }
+    },
+    "NLU00065": {
+        "text": "经济类的广州人民广播电台经济环保广播可以收听给我吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "经济环保广播",
+            "channel": "广州人民广播电台"
+        }
+    },
+    "NLU00069": {
+        "text": "我想听开浩御书房的春秋大义",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "开浩",
+            "name": "春秋大义"
+        }
+    },
+    "NLU00078": {
+        "text": "在中央人民广播里面找千里共良宵",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播",
+            "name": "千里共良宵"
+        }
+    },
+    "NLU00086": {
+        "text": "夏天崔雪峰的投投是道找过去听听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "投投是道",
+            "artist": [
+                "夏天",
+                "崔雪峰"
+            ]
+        }
+    },
+    "NLU00088": {
+        "text": "高莉主持的经济之声收听一下可以吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "高莉",
+            "name": "经济之声"
+        }
+    },
+    "NLU00095": {
+        "text": "找岁月留声机就主播是凡华的那个",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "岁月留声机",
+            "artist": "凡华"
+        }
+    },
+    "NLU00096": {
+        "text": "我要听维语广播的名人堂",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "名人堂",
+            "channel": "维语广播"
+        }
+    },
+    "NLU00103": {
+        "text": "放一个频率是九七点四的先听为快",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "先听为快",
+            "frequency": "九七点四"
+        }
+    },
+    "NLU00114": {
+        "text": "重庆之声里安琪的周末快乐听着太快乐了，现在我要听这个快乐",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "重庆之声",
+            "artist": "安琪",
+            "name": "周末快乐"
+        }
+    },
+    "NLU00121": {
+        "text": "能继续收听汕头人民广播电台音乐台吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "汕头人民广播电台音乐台"
+        }
+    },
+    "NLU00122": {
+        "text": "深圳文艺电台第二台继续给我收听一下吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "深圳文艺电台第二台"
+        }
+    },
+    "NLU00123": {
+        "text": "收听频率是一零三点三的徐州人民广播电台文艺台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "徐州人民广播电台文艺台",
+            "frequency": "一零三点三"
+        }
+    },
+    "NLU00132": {
+        "text": "我要听频率是一零五点六的助眠电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "助眠电台",
+            "frequency": "一零五点六"
+        }
+    },
+    "NLU00134": {
+        "text": "给我放一下文艺类的徐州人民广播电台文艺台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "徐州人民广播电台文艺台"
+        }
+    },
+    "NLU00141": {
+        "text": "有石鑫的节目吧就听会儿I的能量馆吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "I的能量馆",
+            "artist": "石鑫"
+        }
+    },
+    "NLU00144": {
+        "text": "给我找北京体育广播的东奥加速版在FM102点5",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京体育广播",
+            "frequency": "FM102点5"
+        }
+    },
+    "NLU00145": {
+        "text": "频率是一零零点五的花都人民广播电台收听一下吧给我",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": [
+                "一零零点五",
+                "花都人民广播电台"
+            ]
+        }
+    },
+    "NLU00146": {
+        "text": "播电台节目孙芳主持的雨天",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "孙芳",
+            "name": "雨天"
+        }
+    },
+    "NLU00153": {
+        "text": "请接着给我续放海洋的下雨天电台节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "海洋",
+            "name": "下雨天"
+        }
+    },
+    "NLU00191": {
+        "text": "请给我调出幺零零点七的江都人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "江都人民广播电台",
+            "frequency": "幺零零点七"
+        }
+    },
+    "NLU00200": {
+        "text": "我想听郭伟主持的FM103.9",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "郭伟",
+            "frequency": "FM103.9"
+        }
+    },
+    "NLU00205": {
+        "text": "频率是一零一点零的广东卫星可以继续收听吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "广东卫星",
+            "frequency": "一零一点零"
+        }
+    },
+    "NLU00218": {
+        "text": "能不能来一个频率是九九点一的山东文艺广播电台呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "山东文艺广播电台",
+            "frequency": "九九点一"
+        }
+    },
+    "NLU00219": {
+        "text": "帮我搜索一些音乐电台",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU00220": {
+        "text": "收听文艺类的山东文艺广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "山东文艺广播电台"
+        }
+    },
+    "NLU00224": {
+        "text": "我想收听频率是九三点四的晚安电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "晚安电台",
+            "frequency": "九三点四"
+        }
+    },
+    "NLU00228": {
+        "text": "能收到的日语电台给我随便拨一个",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU00231": {
+        "text": "开始播放北京音乐广播的英文歌",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京音乐广播"
+        }
+    },
+    "NLU00251": {
+        "text": "FM969东营生活广播节目给我放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "东营生活广播",
+            "frequency": "FM969"
+        }
+    },
+    "NLU00259": {
+        "text": "找到内蒙古草原之声的故事会听听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "故事会",
+            "channel": "内蒙古草原之声"
+        }
+    },
+    "NLU00277": {
+        "text": "叶纯的城市声音帮我播放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "城市声音",
+            "artist": "叶纯"
+        }
+    },
+    "NLU00288": {
+        "text": "夜晚听老谭的老谭讲故事很不错，在杭州新闻广播播放",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "老谭",
+            "name": "老谭讲故事",
+            "channel": "杭州新闻广播"
+        }
+    },
+    "NLU00291": {
+        "text": "给我找到陕西戏曲广播按时间顺序播放里面的花鼓戏节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "陕西戏曲广播"
+        }
+    },
+    "NLU00294": {
+        "text": "听一下英文歌,给我找FM88点7",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM88点7"
+        }
+    },
+    "NLU00298": {
+        "text": "赶快帮我播放江苏新闻广播的电台节目高爽说法",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "高爽说法",
+            "channel": "江苏新闻广播"
+        }
+    },
+    "NLU00308": {
+        "text": "我要听北京交通广播的1039交通服务热线",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "交通服务热线",
+            "channel": "北京交通广播",
+            "frequency": "1039"
+        }
+    },
+    "NLU00316": {
+        "text": "播放一下频率是一零五点六的扬中人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "扬中人民广播电台",
+            "frequency": "一零五点六"
+        }
+    },
+    "NLU00328": {
+        "text": "为我外公播放阿朗演播中国乡村之声的乡村夜话",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "阿朗",
+            "channel": "中国乡村之声",
+            "name": "乡村夜话"
+        }
+    },
+    "NLU00332": {
+        "text": "我想听音乐之声广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "音乐之声"
+        }
+    },
+    "NLU00335": {
+        "text": "请重听频率是一零五点三的盐城人民经济台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "盐城人民经济台",
+            "frequency": "一零五点三"
+        }
+    },
+    "NLU00337": {
+        "text": "我要看经济类的经济之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "经济之声"
+        }
+    },
+    "NLU00338": {
+        "text": "FM92.4海上戏剧麻烦帮我找一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "海上戏剧",
+            "frequency": "FM92.4"
+        }
+    },
+    "NLU00362": {
+        "text": "请播放中央人民广播电台的经济之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播电台",
+            "name": "经济之声"
+        }
+    },
+    "NLU00378": {
+        "text": "准时收听大铭的快乐早点到",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "大铭",
+            "name": "快乐早点到"
+        }
+    },
+    "NLU00399": {
+        "text": "FM103点7的中国之声调那里去",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中国之声",
+            "frequency": "FM103点7"
+        }
+    },
+    "NLU00403": {
+        "text": "给我播一下100.8的电台节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "100.8"
+        }
+    },
+    "NLU00411": {
+        "text": "我要听97.6北京人名广播电台音乐台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京人名广播电台音乐台",
+            "frequency": "97.6"
+        }
+    },
+    "NLU00417": {
+        "text": "听一个林溪主持的毛泽东的故事",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "林溪",
+            "name": "毛泽东的故事"
+        }
+    },
+    "NLU00433": {
+        "text": "音乐类的魅力103来听听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "魅力103"
+        }
+    },
+    "NLU00435": {
+        "text": "中华之声播放，就是白强主持的那个",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "白强",
+            "name": "中华之声"
+        }
+    },
+    "NLU00458": {
+        "text": "是不是可以播放一下今年爱上男声FM呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "爱上男声FM"
+        }
+    },
+    "NLU00476": {
+        "text": "收听频率是八九点零的襄樊交通音乐台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "襄樊交通音乐台",
+            "frequency": "八九点零"
+        }
+    },
+    "NLU00504": {
+        "text": "放一个姚兰主持的温暖的家",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "姚兰",
+            "name": "温暖的家"
+        }
+    },
+    "NLU00523": {
+        "text": "遂溪人民广播电台给我连着上次听到的地方收听吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "遂溪人民广播电台"
+        }
+    },
+    "NLU00528": {
+        "text": "享受蜻蜓fm电台里的歌曲",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "蜻蜓fm电台"
+        }
+    },
+    "NLU00545": {
+        "text": "收听频率是一零七点八的励志电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "励志电台",
+            "frequency": "一零七点八"
+        }
+    },
+    "NLU00569": {
+        "text": "现在给我循环收听赵鹏的交通新闻",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "赵鹏",
+            "name": "交通新闻"
+        }
+    },
+    "NLU00587": {
+        "text": "播放王子主持的FM98点5",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM98点5",
+            "artist": "王子"
+        }
+    },
+    "NLU00602": {
+        "text": "找到FM102点6的四川电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "四川电台",
+            "frequency": "FM102点6"
+        }
+    },
+    "NLU00605": {
+        "text": "调到FM106点1的四川新闻广播找个一兰主播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "四川新闻广播",
+            "frequency": "FM106点1",
+            "artist": "一兰"
+        }
+    },
+    "NLU00608": {
+        "text": "按时间顺序播放陕西交通广播的节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "陕西交通广播"
+        }
+    },
+    "NLU00619": {
+        "text": "新闻台的重庆之声帮我找一找",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "重庆之声"
+        }
+    },
+    "NLU00621": {
+        "text": "看看张楠主持的音乐之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "张楠",
+            "name": "音乐之声"
+        }
+    },
+    "NLU00622": {
+        "text": "电台节目放一个雨亭主持的记号",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "雨亭",
+            "name": "记号"
+        }
+    },
+    "NLU00629": {
+        "text": "接着上次的好口才都不仅靠训练而来",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "好口才都不仅靠训练而来"
+        }
+    },
+    "NLU00630": {
+        "text": "马上给我放一个徐凯的路况信息",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "徐凯"
+        }
+    },
+    "NLU00631": {
+        "text": "可以继续收听一下刘沙主持的今日路况速报吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "刘沙",
+            "name": "今日路况速报"
+        }
+    },
+    "NLU00634": {
+        "text": "即刻收听FM102.5的体育广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM102.5",
+            "channel": "体育广播"
+        }
+    },
+    "NLU00637": {
+        "text": "放言研的好用分享",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "言研",
+            "name": "好用分享"
+        }
+    },
+    "NLU00640": {
+        "text": "找到梦田8点到9点的音乐甜甜圈",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "音乐甜甜圈",
+            "artist": "梦田"
+        }
+    },
+    "NLU00669": {
+        "text": "把赵征主持的AM747电台里阅读时光节目打开",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "AM747",
+            "name": "阅读时光",
+            "artist": "赵征"
+        }
+    },
+    "NLU00679": {
+        "text": "2021年的小黄瓜电台播放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "小黄瓜电台"
+        }
+    },
+    "NLU00685": {
+        "text": "我想听一个频率是九九点八的广州电台风云962呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "风云962",
+            "channel": "广州电台",
+            "frequency": "九九点八"
+        }
+    },
+    "NLU00690": {
+        "text": "收听频率是八七点六的开心茶馆",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "开心茶馆",
+            "frequency": "八七点六"
+        }
+    },
+    "NLU00692": {
+        "text": "给我收听一个频率是一零五点三的襄樊文艺台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "襄樊文艺台",
+            "frequency": "一零五点三"
+        }
+    },
+    "NLU00698": {
+        "text": "帮我拨一下张楠主持的1039新闻早报",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "1039新闻早报",
+            "artist": "张楠"
+        }
+    },
+    "NLU00699": {
+        "text": "我一会儿准备就要听中央广播电台的新闻联播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央广播电台"
+        }
+    },
+    "NLU00701": {
+        "text": "播放王玲主持的音乐飞扬",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "音乐飞扬",
+            "artist": "王玲"
+        }
+    },
+    "NLU00720": {
+        "text": "我想你给我放寅子主持的音乐之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "寅子",
+            "name": "音乐之声"
+        }
+    },
+    "NLU00743": {
+        "text": "请调到FM91.8的湖南交通广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM91.8",
+            "channel": "湖南交通广播电台"
+        }
+    },
+    "NLU00746": {
+        "text": "拨到FM97龙光爱家频道听一帮到底",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "一帮到底",
+            "channel": "龙光爱家频道",
+            "frequency": "FM97"
+        }
+    },
+    "NLU00753": {
+        "text": "调到蓝天I的畅通密语",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "I的畅通密语",
+            "artist": "蓝天"
+        }
+    },
+    "NLU00754": {
+        "text": "野史下酒就恶霸波那个播出一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "野史下酒就恶霸波"
+        }
+    },
+    "NLU00758": {
+        "text": "收听江苏交通网的联通新势力男生宿舍",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "联通新势力男生宿舍",
+            "channel": "江苏交通网"
+        }
+    },
+    "NLU00783": {
+        "text": "来继续收听频率是九零点零的南澳电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "南澳电台",
+            "frequency": "九零点零"
+        }
+    },
+    "NLU00798": {
+        "text": "频率是九三点二的荆州电台新闻频道可以收听一下吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "荆州电台新闻频道",
+            "frequency": "九三点二"
+        }
+    },
+    "NLU00804": {
+        "text": "放音乐类的襄樊交通音乐台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "襄樊交通音乐台"
+        }
+    },
+    "NLU00822": {
+        "text": "河南交通广播里的世界正当午是王晓主播的快搜索一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "河南交通广播",
+            "name": "世界正当午",
+            "artist": "王晓"
+        }
+    },
+    "NLU00826": {
+        "text": "立即播放情感疗愈节目解忧电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "解忧电台"
+        }
+    },
+    "NLU00827": {
+        "text": "能不能来一个音乐电台节目给我呢",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU00833": {
+        "text": "播放安徽广播电台张雷主持的幸福不晚点",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "幸福不晚点",
+            "channel": "安徽广播电台",
+            "artist": "张雷"
+        }
+    },
+    "NLU00837": {
+        "text": "听个刘晓的节目就畅听交广线吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "畅听交广线",
+            "artist": "刘晓"
+        }
+    },
+    "NLU00843": {
+        "text": "麻烦找到陕西戏曲广播按时间顺序播放里面的花鼓戏节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "陕西戏曲广播"
+        }
+    },
+    "NLU00844": {
+        "text": "频率是九八点一的东方明珠移动电视MMTV收听一下吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "东方明珠移动电视MMTV",
+            "frequency": "九八点一"
+        }
+    },
+    "NLU00865": {
+        "text": "我想要听广州音乐之声给我调到102点7去",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "广州音乐之声",
+            "frequency": "102点7"
+        }
+    },
+    "NLU00869": {
+        "text": "我想收一下天津广播的音乐不打烊这个广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "天津广播",
+            "name": "音乐不打烊"
+        }
+    },
+    "NLU00878": {
+        "text": "我要听一会儿陈呈的I的星空秀在FM95点5",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "I的星空秀",
+            "frequency": "FM95点5",
+            "artist": "陈呈"
+        }
+    },
+    "NLU00880": {
+        "text": "现在放一下王林的电台节目独家记忆",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "王林",
+            "name": "独家记忆"
+        }
+    },
+    "NLU00882": {
+        "text": "频率是九九点六的中央人民广播电台第二套节目给我收听一下吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播电台第二套节目",
+            "frequency": "九九点六"
+        }
+    },
+    "NLU00895": {
+        "text": "FM104点3走进博洋快帮我放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM104点3"
+        }
+    },
+    "NLU00900": {
+        "text": "放一个频率是九七点五的江苏文艺广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "江苏文艺广播电台",
+            "frequency": "九七点五"
+        }
+    },
+    "NLU00910": {
+        "text": "循环收听挥霍的爱上男声FM",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "挥霍",
+            "name": "爱上男声FM"
+        }
+    },
+    "NLU00919": {
+        "text": "给我转到中央人民广播电台的音乐之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播电台",
+            "name": "音乐之声"
+        }
+    },
+    "NLU00933": {
+        "text": "给我找夏天和大军在FM101点7主持的早安四川",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "安四川",
+            "frequency": "FM101点7",
+            "artist": [
+                "夏天",
+                "大军"
+            ]
+        }
+    },
+    "NLU00943": {
+        "text": "不要停中央广播电台里的音乐",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央广播电台"
+        }
+    },
+    "NLU00950": {
+        "text": "是否可以收听经济类的辽宁经济给我听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "辽宁经济"
+        }
+    },
+    "NLU00951": {
+        "text": "收听频率是八八点七的清远人民广播电台可以不可以呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "清远人民广播电台",
+            "frequency": "八八点七"
+        }
+    },
+    "NLU00955": {
+        "text": "我要听广播调到FM98点1的四川电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "四川电台",
+            "frequency": "FM98点1"
+        }
+    },
+    "NLU01000": {
+        "text": "我需要收听频率是一零三点九的欢乐正前方",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "欢乐正前方",
+            "frequency": "一零三点九"
+        }
+    },
+    "NLU01018": {
+        "text": "请放元铁主持的远距离会谈",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "元铁",
+            "name": "远距离会谈"
+        }
+    },
+    "NLU01019": {
+        "text": "快给我听一下刘江主持的婚姻介绍所",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "刘江",
+            "name": "婚姻介绍所"
+        }
+    },
+    "NLU01030": {
+        "text": "我想你继续收听深圳人民广播电台第一台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "深圳人民广播电台第一台"
+        }
+    },
+    "NLU01031": {
+        "text": "安徽人民广播在95点5帮我拨一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "安徽人民广播",
+            "frequency": "95点5"
+        }
+    },
+    "NLU01034": {
+        "text": "我想知道下午六点钟恩平人民广播电台在播放什么",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "钟恩平",
+            "channel": "人民广播电台"
+        }
+    },
+    "NLU01051": {
+        "text": "收听一下经济类的湖北娱乐电台经济台可以吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "湖北娱乐电台经济台"
+        }
+    },
+    "NLU01058": {
+        "text": "给我调到幺零三点零的音乐频道",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "幺零三点零"
+        }
+    },
+    "NLU01070": {
+        "text": "循环放一下郑晶主持的晶晶讲话",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "郑晶",
+            "name": "晶晶讲话"
+        }
+    },
+    "NLU01078": {
+        "text": "调大连体育广播就FM105点7听微醺生活",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "微醺生活",
+            "channel": "大连体育广播",
+            "frequency": "FM105点7"
+        }
+    },
+    "NLU01086": {
+        "text": "我想听一会频率是八八点六浠水电台经济生活频道呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "浠水电台经济生活频道",
+            "frequency": "八八点六"
+        }
+    },
+    "NLU01133": {
+        "text": "回放中午杭州之声李琪播的光影恋歌",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "杭州之声",
+            "artist": "李琪",
+            "name": "光影恋歌"
+        }
+    },
+    "NLU01134": {
+        "text": "小莫主持的南风窗电台现在播放下呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "小莫",
+            "name": "南风窗电台"
+        }
+    },
+    "NLU01140": {
+        "text": "我先听中央人民广播电台的音乐之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播电台",
+            "name": "音乐之声"
+        }
+    },
+    "NLU01169": {
+        "text": "来一个星阑的风茶馆播一下吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "星阑",
+            "name": "风茶馆"
+        }
+    },
+    "NLU01172": {
+        "text": "你能把财经类的第一财经广播频率给我听听吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "第一财经广播"
+        }
+    },
+    "NLU01174": {
+        "text": "听中国国际广播电台在FMF88点2",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中国国际广播电台",
+            "frequency": "FMF88点2"
+        }
+    },
+    "NLU01197": {
+        "text": "能不能收听康辉主播的新闻电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "康辉",
+            "channel": "新闻电台"
+        }
+    },
+    "NLU01214": {
+        "text": "让我听一下CNR老年之声的长篇联播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "长篇联播",
+            "channel": "CNR老年之声"
+        }
+    },
+    "NLU01216": {
+        "text": "帮我放一下98点7福建人民广播电台交通音乐台的节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "福建人民广播电台",
+            "frequency": "98点7"
+        }
+    },
+    "NLU01219": {
+        "text": "电台主持李凝主持的电台节目帮我播放一下",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU01220": {
+        "text": "为了四级考试，现在我要听FM92.3的北京外语广播学习",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM92.3",
+            "channel": "北京外语广播"
+        }
+    },
+    "NLU01223": {
+        "text": "我需要听一个频率是九五点一的珠海人民广播电台第一台呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "珠海人民广播电台第一台",
+            "frequency": "九五点一"
+        }
+    },
+    "NLU01239": {
+        "text": "到喜马拉雅电台再收听一下郭德纲的相声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "喜马拉雅电台",
+            "artist": "郭德纲"
+        }
+    },
+    "NLU01247": {
+        "text": "是不是可以播放会交通类的羊城交通广播电台呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "羊城交通广播电台"
+        }
+    },
+    "NLU01266": {
+        "text": "给我收听频率是九九点零的中央电台中国之声（第一套）呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "中国之声（第一套）",
+            "channel": "中央电台",
+            "frequency": "九九点零"
+        }
+    },
+    "NLU01268": {
+        "text": "重复收听陈亮主持的旅行者的故事",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "陈亮",
+            "name": "旅行者的故事"
+        }
+    },
+    "NLU01269": {
+        "text": "重新放一下频率是八九点一的翻唱电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "翻唱电台",
+            "frequency": "八九点一"
+        }
+    },
+    "NLU01273": {
+        "text": "听晓彤的I畅游生活",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "I畅游生活",
+            "artist": "晓彤"
+        }
+    },
+    "NLU01279": {
+        "text": "请调到FM90.7频率的音乐",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM90.7"
+        }
+    },
+    "NLU01283": {
+        "text": "我一定要收听FM107太原交通广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM107",
+            "channel": "太原交通广播"
+        }
+    },
+    "NLU01290": {
+        "text": "给我拨那个蜻蜓FM的科学有故事听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "科学有故事听",
+            "channel": "蜻蜓FM"
+        }
+    },
+    "NLU01293": {
+        "text": "这个时段正放英文歌的电台找一个",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU01299": {
+        "text": "我想听一会张青主持的中华之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "张青",
+            "name": "中华之声"
+        }
+    },
+    "NLU01300": {
+        "text": "帮我拨一下蚌埠人民广播电台新闻台在107点9",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "蚌埠人民广播电台",
+            "frequency": "107点9"
+        }
+    },
+    "NLU01301": {
+        "text": "帮我我随机找一个新闻电台啊",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU01309": {
+        "text": "给我听一个开浩御书房的反脆弱",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "开浩",
+            "name": "御书房的反脆弱"
+        }
+    },
+    "NLU01312": {
+        "text": "我需要一个音乐类的云梦交通音乐台听一会呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "云梦交通音乐台"
+        }
+    },
+    "NLU01319": {
+        "text": "这个林贺和梁洪主播的汽车天下听这不错，帮我搜一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": [
+                "林贺",
+                "梁洪"
+            ],
+            "name": "汽车天下"
+        }
+    },
+    "NLU01320": {
+        "text": "我要听谷枫和菲菲主持的FM93浙江交通之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "浙江交通之声",
+            "frequency": "FM93",
+            "artist": ["谷枫", "菲菲"]
+        }
+    },
+    "NLU01324": {
+        "text": "我要听97点6北京人名广播电台音乐台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京人名广播电台音乐台",
+            "frequency": "97点6"
+        }
+    },
+    "NLU01331": {
+        "text": "我想听一会交通类的羊城交通广播电台呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "羊城交通广播电台"
+        }
+    },
+    "NLU01339": {
+        "text": "现在请收听胡翼主持的胡翼讲话",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "胡翼",
+            "name": "胡翼讲话"
+        }
+    },
+    "NLU01347": {
+        "text": "找一个在放轻音乐的音乐电台来",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU01348": {
+        "text": "FM88点4丰城电台的节目帮我放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "丰城电台",
+            "frequency": "FM88点4"
+        }
+    },
+    "NLU01353": {
+        "text": "收听经济类的重庆经济电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "重庆经济电台"
+        }
+    },
+    "NLU01354": {
+        "text": "请帮我播放一下FM1058梅州交通广播电台的节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "梅州交通广播电台",
+            "frequency": "FM1058"
+        }
+    },
+    "NLU01358": {
+        "text": "吴浪主持的下班万岁请帮我播放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "下班万岁",
+            "artist": "吴浪"
+        }
+    },
+    "NLU01364": {
+        "text": "我现在就要听中央广播电台的新闻联播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央广播电台"
+        }
+    },
+    "NLU01369": {
+        "text": "找一找竹影的有声戏",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "有声戏",
+            "artist": "竹影"
+        }
+    },
+    "NLU01384": {
+        "text": "哪个生活电台在教做饭找给我",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU01401": {
+        "text": "频率是九三点八的安陆电台随机收听一个吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "安陆电台",
+            "frequency": "九三点八"
+        }
+    },
+    "NLU01421": {
+        "text": "循环收听频率是八七点六的话说天下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "话说天下",
+            "frequency": "八七点六"
+        }
+    },
+    "NLU01428": {
+        "text": "收听一个张杰的话说天下广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "张杰",
+            "name": "话说天下"
+        }
+    },
+    "NLU01436": {
+        "text": "音乐类的广东人民广播电台音乐台播放给我听听吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "广东人民广播电台"
+        }
+    },
+    "NLU01439": {
+        "text": "想听FM103.9",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM103.9"
+        }
+    },
+    "NLU01441": {
+        "text": "接着拨拨到FM105点8那儿听摩登1058",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "摩登1058",
+            "frequency": "FM105点8"
+        }
+    },
+    "NLU01459": {
+        "text": "我要听一个频率是九一点五的中国国际广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中国国际广播电台",
+            "frequency": "九一点五"
+        }
+    },
+    "NLU01465": {
+        "text": "看看九二点九的香港电台第一台在播放什么",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "香港电台第一台",
+            "frequency": "九二点九"
+        }
+    },
+    "NLU01470": {
+        "text": "给我来一个频率是一零一点九的十堰音乐交通台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "十堰音乐交通台",
+            "frequency": "一零一点九"
+        }
+    },
+    "NLU01479": {
+        "text": "来连着上次青音主持的中国之声收听行不行",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "青音",
+            "name": "中国之声"
+        }
+    },
+    "NLU01507": {
+        "text": "请调到武军的1039交通服务热线",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "武军",
+            "channel": "交通服务热线",
+            "frequency": "1039"
+        }
+    },
+    "NLU01518": {
+        "text": "按顺序播放苏州曲艺广播里面的越剧类节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "苏州曲艺广播"
+        }
+    },
+    "NLU01524": {
+        "text": "拨去周六的梦幻至尊金榜轮就是几个主持人流主持的那个",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "梦幻至尊金榜轮"
+        }
+    },
+    "NLU01531": {
+        "text": "收听频率是一零四点七的山东生活频道",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "山东生活频道",
+            "frequency": "一零四点七"
+        }
+    },
+    "NLU01543": {
+        "text": "找个正放英语歌的音乐电台听",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU01550": {
+        "text": "你能给我收听频率是八七点六的北京人民广播文艺台吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京人民广播文艺台",
+            "frequency": "八七点六"
+        }
+    },
+    "NLU01560": {
+        "text": "放一个频率是一零四点零的无锡人民广播电台经济台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "无锡人民广播电台经济台",
+            "frequency": "一零四点零"
+        }
+    },
+    "NLU01563": {
+        "text": "想看听婉莹主持的中国之声电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "婉莹",
+            "name": "中国之声"
+        }
+    },
+    "NLU01565": {
+        "text": "听轩萱的生命启示录在FM106点1",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "生命启示录",
+            "frequency": "FM106点1",
+            "artist": "轩萱"
+        }
+    },
+    "NLU01570": {
+        "text": "经济类的中央人民广播电台二台经济之声收听给我吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "经济之声",
+            "channel": "中央人民广播电台二台"
+        }
+    },
+    "NLU01581": {
+        "text": "上海交通广播电台里的都市夜归人现在可以听，这是叶扬的节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "上海交通广播电台",
+            "name": "都市夜归人",
+            "artist": "叶扬"
+        }
+    },
+    "NLU01588": {
+        "text": "现在就打开FM106.7的华语音乐排行榜",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM106.7"
+        }
+    },
+    "NLU01594": {
+        "text": "子系的节目亲子时光在文艺台调那儿去",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "亲子时光",
+            "artist": "子系"
+        }
+    },
+    "NLU01597": {
+        "text": "听上海人民广播电台拨过去FM93点4",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "上海人民广播电台",
+            "frequency": "FM93点4"
+        }
+    },
+    "NLU01598": {
+        "text": "能给我来一个频率是九七点九的山东人民广播电台经济频道",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "山东人民广播电台经济频道",
+            "frequency": "九七点九"
+        }
+    },
+    "NLU01604": {
+        "text": "现在可以听艺海说宝吧调北京文艺广播去",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "艺海说宝",
+            "channel": "北京文艺广播"
+        }
+    },
+    "NLU01617": {
+        "text": "来一个经济类的浠水电台经济生活频道可以吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "浠水电台经济生活频道"
+        }
+    },
+    "NLU01621": {
+        "text": "找到夜里11点开始的相约在路上",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "相约在路上"
+        }
+    },
+    "NLU01629": {
+        "text": "收听中央广播电台的千里共良宵",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央广播电台",
+            "name": "千里共良宵"
+        }
+    },
+    "NLU01632": {
+        "text": "快给我听一下北京文艺广播的话说天下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "话说天下",
+            "channel": "北京文艺广播"
+        }
+    },
+    "NLU01636": {
+        "text": "请帮我调到幺零零点六零频率的北京广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "幺零零点六零",
+            "channel": "北京广播电台"
+        }
+    },
+    "NLU01648": {
+        "text": "找快乐11点就石鑫的主播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "快乐11点",
+            "artist": "石鑫"
+        }
+    },
+    "NLU01654": {
+        "text": "是不是能给我收听一个频率是九五点四的湖北人民广播电台新闻台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "湖北人民广播电台新闻台",
+            "frequency": "九五点四"
+        }
+    },
+    "NLU01658": {
+        "text": "988A的主打歌那个节目听它",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "988A的主打歌"
+        }
+    },
+    "NLU01662": {
+        "text": "能不能把辽宁交通这个交通电台给我放出来",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "辽宁交通"
+        }
+    },
+    "NLU01679": {
+        "text": "给我来一个交通类的大连交通可以吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "大连交通"
+        }
+    },
+    "NLU01680": {
+        "text": "给我调回到中央人民广播电台的音乐之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播电台",
+            "name": "音乐之声"
+        }
+    },
+    "NLU01690": {
+        "text": "今天看韩力主持的北京音乐广播爱得更久点",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "韩力",
+            "channel": "北京音乐广播",
+            "name": "爱得更久点"
+        }
+    },
+    "NLU01694": {
+        "text": "我想收听FM87.6的文艺广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM87.6",
+            "channel": "文艺广播"
+        }
+    },
+    "NLU01696": {
+        "text": "快给我调回到中国之声的午间新闻",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "中国之声"
+        }
+    },
+    "NLU01707": {
+        "text": "播放中央人民广播电台的神州之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播电台",
+            "name": "神州之声"
+        }
+    },
+    "NLU01711": {
+        "text": "给我收听一下文艺类的黄冈电台文艺台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "黄冈电台文艺台"
+        }
+    },
+    "NLU01719": {
+        "text": "放一下频率是一零零点八的常熟人民广播电台海虞之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "海虞之声",
+            "channel": "常熟人民广播电台",
+            "frequency": "一零零点八"
+        }
+    },
+    "NLU01720": {
+        "text": "再听一遍中国之声里面的新闻",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "中国之声"
+        }
+    },
+    "NLU01727": {
+        "text": "给我找去FM89点4的四川电台经济频率",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "四川电台经济频率",
+            "frequency": "FM89点4"
+        }
+    },
+    "NLU01737": {
+        "text": "FM97点4正放纯音乐呢吧拨过去",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM97点4"
+        }
+    },
+    "NLU01740": {
+        "text": "我一会儿要看频率是FM96.6的经济之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM96.6",
+            "name": "经济之声"
+        }
+    },
+    "NLU01747": {
+        "text": "我们现在想收听频率是一零三点九的行走天下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "行走天下",
+            "channel": "一零三点九"
+        }
+    },
+    "NLU01752": {
+        "text": "请续放竹子的竹子电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "竹子",
+            "channel": "竹子电台"
+        }
+    },
+    "NLU01756": {
+        "text": "你能收听一下交通类的武汉人民广播电台交通台呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "武汉人民广播电台交通台"
+        }
+    },
+    "NLU01757": {
+        "text": "请帮我播放FM89点6的电台节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM89点6"
+        }
+    },
+    "NLU01765": {
+        "text": "调到节目邓泽宇的歌曲分享",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "邓泽宇",
+            "name": "歌曲分享"
+        }
+    },
+    "NLU01776": {
+        "text": "调到幺零零点六零频率的北京广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "幺零零点六零",
+            "channel": "北京广播电台"
+        }
+    },
+    "NLU01780": {
+        "text": "给我放一下频率是一零三点九的交通新闻",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "交通新闻",
+            "frequency": "一零三点九"
+        }
+    },
+    "NLU01782": {
+        "text": "帮我调子桐的话说天下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "子桐",
+            "name": "话说天下"
+        }
+    },
+    "NLU01784": {
+        "text": "收听北京新闻广播的北京新闻",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "北京新闻",
+            "channel": "北京新闻广播"
+        }
+    },
+    "NLU01796": {
+        "text": "都市792频率89点9帮我放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "都市792",
+            "frequency": "89点9"
+        }
+    },
+    "NLU01799": {
+        "text": "请给拨到大事一锡话胡锡进电台的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "大事一锡话",
+            "channel": "胡锡进电台"
+        }
+    },
+    "NLU01809": {
+        "text": "明天准时收听湖北广播电台的新闻",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "湖北广播电台"
+        }
+    },
+    "NLU01813": {
+        "text": "我要听频率是九七点九的山东人民广播电台经济频道",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "山东人民广播电台经济频道",
+            "frequency": "九七点九"
+        }
+    },
+    "NLU01833": {
+        "text": "给我找到北京外语广播听一下英语广播剧场",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "英语广播剧场",
+            "channel": "北京外语广播"
+        }
+    },
+    "NLU01839": {
+        "text": "去听一听中央人民广播电台的神州之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播电台",
+            "name": "神州之声"
+        }
+    },
+    "NLU01881": {
+        "text": "调FM104点5旅游之声听听1045family",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "1045family",
+            "channel": "旅游之声",
+            "frequency": "FM104点5"
+        }
+    },
+    "NLU01885": {
+        "text": "我就要听中国之声的新闻",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "中国之声"
+        }
+    },
+    "NLU01893": {
+        "text": "放频率是八九点六的如东人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "如东人民广播电台",
+            "frequency": "八九点六"
+        }
+    },
+    "NLU01931": {
+        "text": "给我收听素人广播，桃子主持的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "桃子",
+            "channel": "素人广播"
+        }
+    },
+    "NLU01933": {
+        "text": "来一个频率是九二点五的中央人民广播电台三台音乐之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "音乐之声",
+            "channel": "中央人民广播电台三台",
+            "frequency": "九二点五"
+        }
+    },
+    "NLU01936": {
+        "text": "是否可以来继续频率九八点三的新会人民广播电台上次听到的地方啊",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "新会人民广播电台",
+            "frequency": "九八点三"
+        }
+    },
+    "NLU01949": {
+        "text": "帮我调到吕鲁波的小说连播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "吕鲁波",
+            "name": "小说连播"
+        }
+    },
+    "NLU01957": {
+        "text": "给我放一个广播方达的新闻天天谈",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "方达",
+            "name": "新闻天天谈"
+        }
+    },
+    "NLU01959": {
+        "text": "帮我播放杨凌之声的节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "杨凌之声"
+        }
+    },
+    "NLU01972": {
+        "text": "我要听CNR音乐之声现在播的音乐LIVE",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "音乐LIVE",
+            "channel": "CNR音乐之声"
+        }
+    },
+    "NLU01995": {
+        "text": "接着前面听的感情类的真爱频道",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "真爱频道"
+        }
+    },
+    "NLU02001": {
+        "text": "调到陈燕的燕子解说节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "陈燕",
+            "name": "燕子解说"
+        }
+    },
+    "NLU02004": {
+        "text": "立即播放91点4成都交通广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "成都交通广播",
+            "frequency": "91点4"
+        }
+    },
+    "NLU02010": {
+        "text": "来给我继续收听下频率是一零五点九的高要人民广播电台吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "高要人民广播电台",
+            "frequency": "一零五点九"
+        }
+    },
+    "NLU02020": {
+        "text": "没想到我现在收听的正是FM91.5的美好生活电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM91.5",
+            "channel": "美好生活"
+        }
+    },
+    "NLU02021": {
+        "text": "帮我找到李明依下午1点主持的那个节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "李明依"
+        }
+    },
+    "NLU02025": {
+        "text": "频率是九七点八的大连海事大学给我收听一下可以吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "大连海事大学",
+            "frequency": "九七点八"
+        }
+    },
+    "NLU02088": {
+        "text": "给调CNR香港之声去听那个音乐达人汇",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "音乐达人汇",
+            "channel": "CNR香港之声"
+        }
+    },
+    "NLU02089": {
+        "text": "FM95点5的四川电台岷江音乐台找过去哈",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "四川电台岷江音乐台",
+            "frequency": "FM95点5"
+        }
+    },
+    "NLU02112": {
+        "text": "想听一个齐莺主持的每日音乐广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "齐莺",
+            "name": "每日音乐广播"
+        }
+    },
+    "NLU02113": {
+        "text": "给我调出马路主持的银河台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "马路",
+            "channel": "银河台"
+        }
+    },
+    "NLU02120": {
+        "text": "105点7大连体育可以帮我播放吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "大连体育",
+            "frequency": "105点7"
+        }
+    },
+    "NLU02122": {
+        "text": "是不是能给我听一个频率是九零点六的肇庆人民广播电台第二台啊",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "肇庆人民广播电台第二台",
+            "frequency": "九零点六"
+        }
+    },
+    "NLU02147": {
+        "text": "频率是九八点零的中央人民广播电台二台经济之声收听一下呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "经济之声",
+            "channel": "中央人民广播电台二台",
+            "frequency": "九八点零"
+        }
+    },
+    "NLU02188": {
+        "text": "等一会播放西安广播电视台中历史型的节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "西安广播电视台"
+        }
+    },
+    "NLU02193": {
+        "text": "资讯非常道那个广播节目拨过去",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "资讯非常道"
+        }
+    },
+    "NLU02195": {
+        "text": "麻烦帮我看一下潮安人民广播电台在播放什么",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "潮安人民广播电台"
+        }
+    },
+    "NLU02199": {
+        "text": "晓楠主持的都市之声现在就播出给我",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "晓楠",
+            "name": "都市之声"
+        }
+    },
+    "NLU02208": {
+        "text": "调到FM94点7听那个经典947",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "经典947",
+            "frequency": "FM94点7"
+        }
+    },
+    "NLU02211": {
+        "text": "找一下中央人民广播的华夏之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播",
+            "name": "华夏之声"
+        }
+    },
+    "NLU02223": {
+        "text": "给我找到林林主持的城市乐",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "城市乐",
+            "artist": "林林"
+        }
+    },
+    "NLU02230": {
+        "text": "放一下频率是八八点五的江宁电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "江宁电台",
+            "frequency": "八八点五"
+        }
+    },
+    "NLU02233": {
+        "text": "放一下经济类的南京经济电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "南京经济电台"
+        }
+    },
+    "NLU02252": {
+        "text": "马上调到中国之声调频是FM106.1",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "中国之声",
+            "frequency": "FM106.1"
+        }
+    },
+    "NLU02256": {
+        "text": "想听广州音乐之声了给调到FM102点7",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "广州音乐之声",
+            "frequency": "FM102点7"
+        }
+    },
+    "NLU02258": {
+        "text": "播放上海戏曲广播中的戏曲",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "上海戏曲广播"
+        }
+    },
+    "NLU02268": {
+        "text": "帮我找到中国戏剧广播里的秦腔节目按节目列表顺序播放",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中国戏剧广播"
+        }
+    },
+    "NLU02271": {
+        "text": "换个台就四川生活旅游都市广播在FM97点0",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "四川生活旅游都市广播",
+            "frequency": "FM97点0"
+        }
+    },
+    "NLU02286": {
+        "text": "我想听开浩御书房",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "开浩",
+            "name": "御书房"
+        }
+    },
+    "NLU02295": {
+        "text": "新闻台的重庆之声给我找一找啊",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "重庆之声"
+        }
+    },
+    "NLU02304": {
+        "text": "快点儿调到中国之声去我要听千里共良宵",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "千里共良宵",
+            "channel": "中国之声"
+        }
+    },
+    "NLU02310": {
+        "text": "广西音乐那个是FM950拨到那儿去",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "广西音乐",
+            "frequency": "FM950"
+        }
+    },
+    "NLU02317": {
+        "text": "找到王磊的在济南经济广播的节目按时间顺序播放",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "济南经济广播",
+            "artist": "王磊"
+        }
+    },
+    "NLU02319": {
+        "text": "柳欣主持的中华之声可以播放给我听听不",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "柳欣",
+            "name": "中华之声"
+        }
+    },
+    "NLU02323": {
+        "text": "循环收听音乐类的南京人民广播电台音乐台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "南京人民广播电台音乐台"
+        }
+    },
+    "NLU02324": {
+        "text": "请循环收听张亮主持的办法总比困难多",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "张亮",
+            "name": "办法总比困难多"
+        }
+    },
+    "NLU02328": {
+        "text": "能播放一下唐嫣和钟汉良的何以笙箫默吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": [
+                "唐嫣",
+                "钟汉良"
+            ],
+            "name": "何以笙箫默"
+        }
+    },
+    "NLU02329": {
+        "text": "我想听频率是九四点八的苏州音乐广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "苏州音乐广播电台",
+            "frequency": "九四点八"
+        }
+    },
+    "NLU02345": {
+        "text": "请循环收听主持人是海亮的心相印",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "海亮",
+            "name": "心相印"
+        }
+    },
+    "NLU02358": {
+        "text": "音乐类的动感101收听吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "动感101"
+        }
+    },
+    "NLU02365": {
+        "text": "播放104.2蚌埠经济广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "蚌埠经济广播电台",
+            "frequency": "104.2"
+        }
+    },
+    "NLU02376": {
+        "text": "给我放中国之声的千里共良宵",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "千里共良宵",
+            "channel": "中国之声"
+        }
+    },
+    "NLU02391": {
+        "text": "收听中央广播电台的经济之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央广播电台",
+            "name": "经济之声"
+        }
+    },
+    "NLU02399": {
+        "text": "需要你收一个频率是一零七点六的黄冈电台文艺台呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "黄冈电台文艺台",
+            "frequency": "一零七点六"
+        }
+    },
+    "NLU02407": {
+        "text": "到时间听FM103.7的全城热恋了",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM103.7",
+            "name": "全城热恋"
+        }
+    },
+    "NLU02418": {
+        "text": "来个新闻的找FM91点4的广东电台新闻台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "广东电台新闻台",
+            "frequency": "FM91点4"
+        }
+    },
+    "NLU02433": {
+        "text": "即刻帮我把台调到蜻蜓fm的歌",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "蜻蜓fm"
+        }
+    },
+    "NLU02445": {
+        "text": "我想听交通类的羊城交通广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "羊城交通广播电台"
+        }
+    },
+    "NLU02467": {
+        "text": "107点8音乐之声给我播放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "音乐之声",
+            "frequency": "107点8"
+        }
+    },
+    "NLU02489": {
+        "text": "你可以给我收听一下频率是八九点三的中央电台第三套吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "中央电台第三套",
+            "frequency": "八九点三"
+        }
+    },
+    "NLU02497": {
+        "text": "北京人民广播电台交通台是FM103点9吧听听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京人民广播电台交通台",
+            "frequency": "FM103点9"
+        }
+    },
+    "NLU02502": {
+        "text": "高飞主播的路长情更长在重庆交通广播里，现在调台吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "高飞",
+            "name": "路长情更长",
+            "channel": "重庆交通广播"
+        }
+    },
+    "NLU02511": {
+        "text": "收听新闻类的黄冈电台新闻台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "黄冈电台新闻台"
+        }
+    },
+    "NLU02513": {
+        "text": "石家庄电台的吃喝玩乐搜城记这个节目很有趣，我想听一听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "石家庄电台",
+            "name": "吃喝玩乐搜城记"
+        }
+    },
+    "NLU02515": {
+        "text": "可不可以继听一下频率是九五点四的从化人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "从化人民广播电台",
+            "frequency": "九五点四"
+        }
+    },
+    "NLU02519": {
+        "text": "孔刘等待的20时给我放一下吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "孔刘等待的20时"
+        }
+    },
+    "NLU02522": {
+        "text": "我想你给我找到阿杰主持的都市之声给我播放一下呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "阿杰",
+            "name": "都市之声"
+        }
+    },
+    "NLU02529": {
+        "text": "现在请收听朱朱的服装搭配",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "朱朱",
+            "name": "服装搭配"
+        }
+    },
+    "NLU02535": {
+        "text": "播一下小草主持的众有期待",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "小草",
+            "name": "众有期待"
+        }
+    },
+    "NLU02544": {
+        "text": "调到重庆经济广播，我想听经济类的广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "重庆经济广播"
+        }
+    },
+    "NLU02550": {
+        "text": "我想听一个音乐电台魅力103呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "魅力103"
+        }
+    },
+    "NLU02553": {
+        "text": "播放一下保定新闻广播的相伴到黎明",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "相伴到黎明",
+            "channel": "保定新闻广播"
+        }
+    },
+    "NLU02568": {
+        "text": "是否可以来一个频率是一零一点二的黄石新闻台啊",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "黄石新闻台",
+            "frequency": "一零一点二"
+        }
+    },
+    "NLU02571": {
+        "text": "我想听频率是一零二点零的张家港人民广播电台调频音乐台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "张家港人民广播电台调频音乐台",
+            "frequency": "一零二点零"
+        }
+    },
+    "NLU02576": {
+        "text": "电台主持易辛主持的健康有道帮我放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "健康有道",
+            "artist": "易辛"
+        }
+    },
+    "NLU02577": {
+        "text": "我想听一下频率是九三点零的young电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "young电台",
+            "frequency": "九三点零"
+        }
+    },
+    "NLU02616": {
+        "text": "给我找个正放韩文歌曲的音乐电台听",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU02633": {
+        "text": "调到车载电台我想听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "车载电台"
+        }
+    },
+    "NLU02639": {
+        "text": "收听朱卫东的创业道路电台节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "朱卫东",
+            "name": "创业道路"
+        }
+    },
+    "NLU02651": {
+        "text": "放一个频率是九六点七的解压电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "解压电台",
+            "frequency": "九六点七"
+        }
+    },
+    "NLU02653": {
+        "text": "现在给我放一下痛苦与热爱",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "痛苦与热爱"
+        }
+    },
+    "NLU02663": {
+        "text": "调到FM93点7听汪玲的新闻早高峰",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "新闻早高峰",
+            "frequency": "FM93点7",
+            "artist": "汪玲"
+        }
+    },
+    "NLU02667": {
+        "text": "频率是九六点二的随州电台收听一个呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "随州电台",
+            "frequency": "九六点二"
+        }
+    },
+    "NLU02689": {
+        "text": "帮我找个正放韩文歌曲的音乐电台听听",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU02696": {
+        "text": "找到安徽戏曲广播的京剧类节目播放",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "安徽戏曲广播"
+        }
+    },
+    "NLU02705": {
+        "text": "给我听频率是九八点五的扬州人民广播电台新闻台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "扬州人民广播电台新闻台",
+            "frequency": "九八点五"
+        }
+    },
+    "NLU02709": {
+        "text": "交通类的天津人民广播电台交通台现在给我收听一个吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "天津人民广播电台交通台"
+        }
+    },
+    "NLU02713": {
+        "text": "给我放一下保定交通广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "保定交通广播"
+        }
+    },
+    "NLU02725": {
+        "text": "调到马甜的全球流行音乐金榜就周五的那个",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "全球流行音乐金榜",
+            "artist": "马甜"
+        }
+    },
+    "NLU02726": {
+        "text": "能播出一下由章莹莹主持的音乐之声吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "章莹莹",
+            "name": "音乐之声"
+        }
+    },
+    "NLU02736": {
+        "text": "你能现在就收听下频率是一零二点九的中央人民广播电台一台中国之声吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "中国之声",
+            "channel": "中央人民广播电台一台",
+            "frequency": "一零二点九"
+        }
+    },
+    "NLU02739": {
+        "text": "播一下频率是八七点六的空中笑林",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "空中笑林",
+            "frequency": "八七点六"
+        }
+    },
+    "NLU02747": {
+        "text": "1039新闻早报帮我拨一下张楠主持的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "1039新闻早报",
+            "artist": "张楠"
+        }
+    },
+    "NLU02750": {
+        "text": "我要听欧美音乐电台的weekend morning show是双语台的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "weekend morning show",
+            "channel": "欧美音乐电台"
+        }
+    },
+    "NLU02770": {
+        "text": "听活力MUSI客在北京青年广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "活力MUSI客",
+            "channel": "北京青年广播"
+        }
+    },
+    "NLU02773": {
+        "text": "找杨金的爱车会",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "的爱车会",
+            "artist": "杨金"
+        }
+    },
+    "NLU02789": {
+        "text": "找双语台北京外语广播听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京外语广播"
+        }
+    },
+    "NLU02801": {
+        "text": "把福建新闻广播找出来新闻台的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "福建新闻广播"
+        }
+    },
+    "NLU02806": {
+        "text": "我很快就要收听FM99.6的音乐资讯",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM99.6",
+            "channel": "音乐资讯"
+        }
+    },
+    "NLU02808": {
+        "text": "是否可以收听一下频率是八九点六的武汉交通广播电台给我听啊",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "武汉交通广播电台",
+            "frequency": "八九点六"
+        }
+    },
+    "NLU02821": {
+        "text": "能不能调到一个叶痕的我所理解的生活给我呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "叶痕",
+            "name": "我所理解的生活"
+        }
+    },
+    "NLU02825": {
+        "text": "西双版纳民族语广播在FM90点6听那个傣语文艺广场",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "傣语文艺广场",
+            "channel": "西双版纳民族语广播",
+            "frequency": "FM90点6"
+        }
+    },
+    "NLU02829": {
+        "text": "娱乐类的娱乐电台节目随便找个我想收听一下",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU02839": {
+        "text": "北京交通广播1039都市调查组快帮我播一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "1039都市调查组",
+            "channel": "北京交通广播"
+        }
+    },
+    "NLU02840": {
+        "text": "给我调到调频93的西安人民广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "西安人民广播",
+            "frequency": "调频93"
+        }
+    },
+    "NLU02883": {
+        "text": "播放韩力主持的北京音乐广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "韩力",
+            "channel": "北京音乐广播"
+        }
+    },
+    "NLU02885": {
+        "text": "播放一下FM95点8的电台节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM95点8"
+        }
+    },
+    "NLU02889": {
+        "text": "播放幺零零点六的海门人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "海门人民广播电台",
+            "frequency": "幺零零点六"
+        }
+    },
+    "NLU02894": {
+        "text": "快点儿找到FM96点2的宝山区人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "宝山区人民广播电台",
+            "frequency": "FM96点2"
+        }
+    },
+    "NLU02899": {
+        "text": "收听频率是九七点九的山东人民广播电台经济台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "山东人民广播电台经济台",
+            "frequency": "九七点九"
+        }
+    },
+    "NLU02900": {
+        "text": "音乐类的山东人民广播电台音乐之声收听一下行不",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "音乐之声",
+            "channel": "山东人民广播电台"
+        }
+    },
+    "NLU02932": {
+        "text": "调到经济类的经济之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "经济之声"
+        }
+    },
+    "NLU02933": {
+        "text": "想听中央电台里的音乐曲目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央电台"
+        }
+    },
+    "NLU02944": {
+        "text": "快放一个潘九阳的路况信息帮我调下频道找一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "潘九阳"
+        }
+    },
+    "NLU02946": {
+        "text": "转到中央人民广播电台的华夏之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播电台",
+            "name": "华夏之声"
+        }
+    },
+    "NLU02953": {
+        "text": "喜马拉雅的吴晓波频道给我放一段儿",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "吴晓波频道",
+            "channel": "喜马拉雅"
+        }
+    },
+    "NLU02954": {
+        "text": "我想听中央人民广播电台李佳主持的四季童话",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "李佳",
+            "name": "四季童话",
+            "channel": "中央人民广播电台"
+        }
+    },
+    "NLU02969": {
+        "text": "找蜀风车语是马可跟何州主持的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "蜀风车语",
+            "artist": [
+                "马可",
+                "何州"
+            ]
+        }
+    },
+    "NLU02972": {
+        "text": "调到中央人民广播电台的神州之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播电台",
+            "name": "神州之声"
+        }
+    },
+    "NLU02976": {
+        "text": "你是不是能把交通类的羊城交通广播电台给我播放呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "羊城交通广播电台"
+        }
+    },
+    "NLU02996": {
+        "text": "我需要你给我收听一下频率是九零点零的辽宁资讯",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "辽宁资讯",
+            "frequency": "九零点零"
+        }
+    },
+    "NLU02999": {
+        "text": "麻烦帮我放一下958音乐联播榜",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "958音乐联播榜"
+        }
+    },
+    "NLU03001": {
+        "text": "我想现在就听中国之声的新闻联播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "中国之声"
+        }
+    },
+    "NLU03007": {
+        "text": "给我找一下FM97点2上海戏剧曲艺广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "上海戏剧曲艺广播",
+            "frequency": "FM97点2"
+        }
+    },
+    "NLU03011": {
+        "text": "找FM104点5黑龙江生活广播的私家故事秀",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "私家故事秀",
+            "channel": "黑龙江生活广播",
+            "frequency": "FM104点5"
+        }
+    },
+    "NLU03020": {
+        "text": "放一个频率是八八点二的昆山人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "昆山人民广播电台",
+            "frequency": "八八点二"
+        }
+    },
+    "NLU03032": {
+        "text": "我要听经济类的山东人民广播电台经济频道",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "山东人民广播电台经济频道"
+        }
+    },
+    "NLU03035": {
+        "text": "给我来一个经济类的中央电台经济之声吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "经济之声",
+            "channel": "中央电台"
+        }
+    },
+    "NLU03036": {
+        "text": "文艺类的湖北人民广播电台文艺台来一个可以吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "湖北人民广播电台文艺台"
+        }
+    },
+    "NLU03050": {
+        "text": "播放河南信息广播电台的音乐频道，把频率调频到FM96.7",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "河南信息广播电台",
+            "frequency": "FM96.7"
+        }
+    },
+    "NLU03060": {
+        "text": "频率是一零三点八的湖北娱乐电台文艺台播放一下可以不",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "湖北娱乐电台文艺台",
+            "frequency": "一零三点八"
+        }
+    },
+    "NLU03065": {
+        "text": "给我收听李鹏飞主持的马克思主义哲学",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "李鹏飞",
+            "name": "马克思主义哲学"
+        }
+    },
+    "NLU03066": {
+        "text": "播一个放英文歌的电台",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU03077": {
+        "text": "我要收听FM87点6的北京文艺广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京文艺广播",
+            "frequency": "FM87点6"
+        }
+    },
+    "NLU03092": {
+        "text": "打开杨曦主持的经济之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "杨曦",
+            "name": "经济之声"
+        }
+    },
+    "NLU03095": {
+        "text": "来一部关晓彤出演的电视剧好先生呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "关晓彤",
+            "name": "好先生"
+        }
+    },
+    "NLU03101": {
+        "text": "有FM900吧就听河南人民台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "河南人民台",
+            "frequency": "FM900"
+        }
+    },
+    "NLU03108": {
+        "text": "调到福州广播二台 频率是八九点三",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "福州广播二台",
+            "frequency": "八九点三"
+        }
+    },
+    "NLU03113": {
+        "text": "频率是九六点六的湖北人民广播电台健康之声来一个听一会吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "健康之声",
+            "channel": "湖北人民广播电台",
+            "frequency": "九六点六"
+        }
+    },
+    "NLU03121": {
+        "text": "来一个文艺类的镇江文艺广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "镇江文艺广播电台"
+        }
+    },
+    "NLU03123": {
+        "text": "舍志鹏主持的每日音乐广播可以播放一下吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "舍志鹏",
+            "name": "每日音乐广播"
+        }
+    },
+    "NLU03144": {
+        "text": "我估计一会儿就要开始播放FM106.1的中国之声了",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM106.1",
+            "name": "中国之声"
+        }
+    },
+    "NLU03149": {
+        "text": "帮我播放一下李季主持的电台节目音乐high一点",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "音乐high一点",
+            "artist": "李季"
+        }
+    },
+    "NLU03151": {
+        "text": "是否可以给我调到王晓主持的咨询热线",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "王晓",
+            "name": "咨询热线"
+        }
+    },
+    "NLU03156": {
+        "text": "你能给我收听一下音乐类的广州人民广播电台风云962吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "风云962",
+            "channel": "广州人民广播电台"
+        }
+    },
+    "NLU03176": {
+        "text": "请收听一下频率是九五点九的联邦电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "联邦电台",
+            "frequency": "九五点九"
+        }
+    },
+    "NLU03178": {
+        "text": "收听一零二点零的大厂人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": [
+                "一零二点零",
+                "大厂人民广播电台"
+            ]
+        }
+    },
+    "NLU03183": {
+        "text": "放频率是一零六点九的火鸡电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "火鸡电台",
+            "frequency": "一零六点九"
+        }
+    },
+    "NLU03185": {
+        "text": "找杨毅做主持的那个电台就叫杨毅电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "杨毅电台",
+            "artist": "杨毅"
+        }
+    },
+    "NLU03206": {
+        "text": "帮我找到晚上8点的城市星光大道",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "城市星光大道"
+        }
+    },
+    "NLU03217": {
+        "text": "接着上次孙洪涛的股票分析收听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "孙洪涛",
+            "name": "股票分析"
+        }
+    },
+    "NLU03237": {
+        "text": "城市之音四川台FM102点6周一到周五6点到7点赵青城市小太阳",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM102点6"
+        }
+    },
+    "NLU03252": {
+        "text": "调到FM96.5，要王佳主持的阳光地带",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM96.5",
+            "name": "阳光地带",
+            "artist": "王佳"
+        }
+    },
+    "NLU03254": {
+        "text": "能调到有李静主持的都市之声吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "李静",
+            "name": "都市之声"
+        }
+    },
+    "NLU03264": {
+        "text": "交通类的重庆交通电台播放一下吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "重庆交通电台"
+        }
+    },
+    "NLU03269": {
+        "text": "收听频率是一零一点一的联通新势力男生宿舍",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "联通新势力男生宿舍",
+            "frequency": "一零一点一"
+        }
+    },
+    "NLU03271": {
+        "text": "现在给我放康乐的每日资讯电台节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "康乐",
+            "name": "每日资讯"
+        }
+    },
+    "NLU03279": {
+        "text": "我要听胡凡主持的凡事想开点",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "胡凡",
+            "name": "凡事想开点"
+        }
+    },
+    "NLU03285": {
+        "text": "我能继续收听一下频率是一零七点三的呼吸决定电台吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "呼吸决定电台",
+            "frequency": "一零七点三"
+        }
+    },
+    "NLU03289": {
+        "text": "现在给我放傅淳的向往的生活",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "傅淳",
+            "name": "向往的生活"
+        }
+    },
+    "NLU03293": {
+        "text": "给小朋友放肖玉主持的多喜欢你",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "肖玉",
+            "name": "多喜欢你"
+        }
+    },
+    "NLU03321": {
+        "text": "播放王冠主持的经济之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "王冠",
+            "name": "经济之声"
+        }
+    },
+    "NLU03327": {
+        "text": "我需要听频率是一零一点四的天津人民广播电台经济台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "天津人民广播电台经济台",
+            "frequency": "一零一点四"
+        }
+    },
+    "NLU03344": {
+        "text": "958交广书吧快给我帮放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "958交广书吧"
+        }
+    },
+    "NLU03356": {
+        "text": "想听怀旧音乐广播老猫主持的音乐节目哈",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "怀旧音乐广播",
+            "artist": "老猫"
+        }
+    },
+    "NLU03360": {
+        "text": "播放动听968电台的快乐一周",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "快乐一周",
+            "channel": "动听968电台"
+        }
+    },
+    "NLU03383": {
+        "text": "我想继续听一会频率是一零零点二的江门电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "江门电台",
+            "frequency": "一零零点二"
+        }
+    },
+    "NLU03387": {
+        "text": "麻烦帮我找个正放昆曲的曲艺电台听",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU03390": {
+        "text": "能给我收听一个频率是九七点七的第一财经广播频率吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "第一财经广播",
+            "frequency": "九七点七"
+        }
+    },
+    "NLU03391": {
+        "text": "我要听频率是九七点五的情感电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "情感电台",
+            "frequency": "九七点五"
+        }
+    },
+    "NLU03413": {
+        "text": "调出FM93.4上海新闻广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM93.4",
+            "channel": "上海新闻广播"
+        }
+    },
+    "NLU03426": {
+        "text": "能不能来一个频率是九四点六的佛山人民广播电台真爱频道",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "佛山人民广播电台真爱频道",
+            "frequency": "九四点六"
+        }
+    },
+    "NLU03430": {
+        "text": "我已经连续播放四川广播电台的新闻联播了",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "四川广播电台"
+        }
+    },
+    "NLU03431": {
+        "text": "我想听经济类的常州经济广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "常州经济广播电台"
+        }
+    },
+    "NLU03434": {
+        "text": "我要听音乐类的宜昌交通音乐台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "宜昌交通音乐台"
+        }
+    },
+    "NLU03436": {
+        "text": "循环收听一下新闻类的盐城人民新闻台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "盐城人民新闻台"
+        }
+    },
+    "NLU03443": {
+        "text": "循环收听江扬主持的身边的声音",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "江扬",
+            "name": "身边的声音"
+        }
+    },
+    "NLU03461": {
+        "text": "我想听频率是一零一点八的武汉人民广播电台文艺台呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": [
+                "一零一点八",
+                "武汉人民广播电台文艺台"
+            ]
+        }
+    },
+    "NLU03462": {
+        "text": "帮我调到湖南广播电台，我要听新闻",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "湖南广播电台"
+        }
+    },
+    "NLU03476": {
+        "text": "加祺的好友运动营找一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "好友运动营",
+            "artist": "加祺"
+        }
+    },
+    "NLU03477": {
+        "text": "我要听朱来生的交通新闻调一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "朱来生",
+            "name": "交通新闻"
+        }
+    },
+    "NLU03479": {
+        "text": "找西藏康巴话广播是方言台听今日关注",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "今日关注",
+            "channel": "西藏康巴话广播"
+        }
+    },
+    "NLU03486": {
+        "text": "调到周六日的城市最摇摆",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "城市最摇摆"
+        }
+    },
+    "NLU03487": {
+        "text": "循环听一下经济类的财政电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "财政电台"
+        }
+    },
+    "NLU03489": {
+        "text": "调到江苏财经广播电台，我要听新闻",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "江苏财经广播电台"
+        }
+    },
+    "NLU03499": {
+        "text": "听周六城市越洋疯就潘纳主持的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "城市越洋疯",
+            "artist": "潘纳"
+        }
+    },
+    "NLU03505": {
+        "text": "我想听城市随身听张舒主持的快点儿12点就结束了",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "城市随身听",
+            "artist": "张舒"
+        }
+    },
+    "NLU03512": {
+        "text": "丁适的新节目新闻深处听听怎么样",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "丁适",
+            "name": "新闻深处"
+        }
+    },
+    "NLU03527": {
+        "text": "经济类的天津人民广播电台经济台现在收听一下吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "天津人民广播电台经济台"
+        }
+    },
+    "NLU03537": {
+        "text": "来收听一下频率是八八点七的中国国际广播电台吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中国国际广播电台",
+            "frequency": "八八点七"
+        }
+    },
+    "NLU03541": {
+        "text": "我需要听一个频率是一零零点六的宜昌经济台呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "宜昌经济台",
+            "frequency": "一零零点六"
+        }
+    },
+    "NLU03545": {
+        "text": "现在请给我放从威的电台节目挪威森林",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "从威",
+            "name": "挪威森林"
+        }
+    },
+    "NLU03548": {
+        "text": "听听无锡都市生活广播的名医零距离在FM88点1",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "名医零距离",
+            "channel": "无锡都市生活广播",
+            "frequency": "FM88点1"
+        }
+    },
+    "NLU03549": {
+        "text": "请帮我找个正放五典坡的曲艺电台听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "五典坡"
+        }
+    },
+    "NLU03559": {
+        "text": "播放中央人民广播电台的华夏之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播电台",
+            "name": "华夏之声"
+        }
+    },
+    "NLU03564": {
+        "text": "FM96点4如歌的岁月请帮我播放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "如歌的岁月",
+            "frequency": "FM96点4"
+        }
+    },
+    "NLU03569": {
+        "text": "循环收听频率是九三点九的山东人民电台经济频道",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "山东人民电台经济频道",
+            "frequency": "九三点九"
+        }
+    },
+    "NLU03574": {
+        "text": "成都电台文化休闲频道在FM94点6呢给调过去",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "成都电台文化休闲频道",
+            "frequency": "FM94点6"
+        }
+    },
+    "NLU03585": {
+        "text": "请循环收听频率是八七点六的评书连播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "评书连播",
+            "frequency": "八七点六"
+        }
+    },
+    "NLU03588": {
+        "text": "点播陕西都市广播的新闻陕西新闻",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "陕西都市广播",
+            "name": "陕西新闻"
+        }
+    },
+    "NLU03597": {
+        "text": "南平人民广播电台93点9的节目帮我播放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "南平人民广播电台",
+            "frequency": "93点9"
+        }
+    },
+    "NLU03613": {
+        "text": "找一下中央广播电台的经济之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央广播电台",
+            "name": "经济之声"
+        }
+    },
+    "NLU03640": {
+        "text": "想了一下还是听浙江人民电台的新闻快报",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "浙江人民电台",
+            "name": "新闻快报"
+        }
+    },
+    "NLU03647": {
+        "text": "你是不能收听一下频率是一零五点零的表白墙电台啊",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "表白墙电台",
+            "frequency": "一零五点零"
+        }
+    },
+    "NLU03672": {
+        "text": "你能给我收听一下频率是一零五点七的大连体育吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "大连体育",
+            "frequency": "一零五点七"
+        }
+    },
+    "NLU03694": {
+        "text": "给我放一下频率是一零二点六的翻译电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "翻译电台",
+            "frequency": "一零二点六"
+        }
+    },
+    "NLU03701": {
+        "text": "频率是九六点二的宝山电台收听给我听听吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "宝山电台",
+            "frequency": "九六点二"
+        }
+    },
+    "NLU03715": {
+        "text": "我想你继续收听晓月主持的经济之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "晓月",
+            "name": "经济之声"
+        }
+    },
+    "NLU03720": {
+        "text": "FM92点4海上戏剧麻烦帮我找一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "海上戏剧",
+            "frequency": "FM92点4"
+        }
+    },
+    "NLU03721": {
+        "text": "我需要收听玉蕾主持的蕾丝飘纯木",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "玉蕾",
+            "name": "蕾丝飘纯木"
+        }
+    },
+    "NLU03735": {
+        "text": "给我把福建新闻广播找出来新闻台的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "福建新闻广播"
+        }
+    },
+    "NLU03746": {
+        "text": "循环收听经济类的苏州经济台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "苏州经济台"
+        }
+    },
+    "NLU03752": {
+        "text": "请收听频率是八九点七的江苏人民广播电台音乐台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "江苏人民广播电台音乐台",
+            "frequency": "八九点七"
+        }
+    },
+    "NLU03768": {
+        "text": "小月杨宇的新闻盘点是7点到8点吧调过去",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "新闻盘点",
+            "artist": [
+                "小月",
+                "杨宇"
+            ]
+        }
+    },
+    "NLU03776": {
+        "text": "频率是九八点四的人民电台给我收听一下呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "人民电台",
+            "frequency": "九八点四"
+        }
+    },
+    "NLU03788": {
+        "text": "收音乐类的天津人民广播电台音乐台给我听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "天津人民广播电台音乐台"
+        }
+    },
+    "NLU03798": {
+        "text": "频率是一零六点八的天津人民广播电台交通台给我收听下吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "天津人民广播电台交通台",
+            "frequency": "一零六点八"
+        }
+    },
+    "NLU03811": {
+        "text": "放河北音乐广播的雕刻时光",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "雕刻时光",
+            "channel": "河北音乐广播"
+        }
+    },
+    "NLU03813": {
+        "text": "教育类的广东人民广播电台教育之声收听一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "教育之声",
+            "channel": "广东人民广播电台"
+        }
+    },
+    "NLU03821": {
+        "text": "我想听北京广播电台王珂的迷幻之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京广播电台",
+            "artist": "王珂",
+            "name": "迷幻之声"
+        }
+    },
+    "NLU03827": {
+        "text": "现在请收听中国之声，方明主持的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "方明",
+            "name": "中国之声"
+        }
+    },
+    "NLU03849": {
+        "text": "放安欣主持的孤独常伴",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "安欣",
+            "name": "孤独常伴"
+        }
+    },
+    "NLU03865": {
+        "text": "新闻类的孝感电台新闻台能收听吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "孝感电台新闻台"
+        }
+    },
+    "NLU03866": {
+        "text": "搜到咸阳人民广播电台胡仙播的胖哥谝车",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "咸阳人民广播电台",
+            "name": "胖哥谝车",
+            "artist": "胡仙"
+        }
+    },
+    "NLU03867": {
+        "text": "继续放闻天的老年的生活",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "闻天",
+            "name": "老年的生活"
+        }
+    },
+    "NLU03874": {
+        "text": "听新闻吧，打开中国之声频道的新闻联播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中国之声",
+            "name": "新闻联播"
+        }
+    },
+    "NLU03891": {
+        "text": "调到广播之声看看现在播什么",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "广播之声"
+        }
+    },
+    "NLU03913": {
+        "text": "FM94点0的五星体育广播拨过去听听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "五星体育广播",
+            "frequency": "FM94点0"
+        }
+    },
+    "NLU03935": {
+        "text": "能帮我播放音乐之声吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "音乐之声"
+        }
+    },
+    "NLU03948": {
+        "text": "收听频率是一零五点二的常州经济广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "常州经济广播电台",
+            "frequency": "一零五点二"
+        }
+    },
+    "NLU03949": {
+        "text": "给我放一下梓君主持的水晶盒故事",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "梓君",
+            "name": "水晶盒故事"
+        }
+    },
+    "NLU03953": {
+        "text": "换到FM87.6我要听北京人民广播电台文艺台的广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM87.6",
+            "channel": "北京人民广播电台文艺台"
+        }
+    },
+    "NLU03965": {
+        "text": "调到吴勇的交通新闻",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "吴勇",
+            "name": "交通新闻"
+        }
+    },
+    "NLU03967": {
+        "text": "给我调到浙江人民电台的新闻快报",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": [
+                "浙江人民电台",
+                "新闻快报"
+            ]
+        }
+    },
+    "NLU04009": {
+        "text": "给我找到新闻台的重庆之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "重庆之声"
+        }
+    },
+    "NLU04010": {
+        "text": "请循环收听郭静的多远都要在一起",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "郭静",
+            "name": "多远都要在一起"
+        }
+    },
+    "NLU04019": {
+        "text": "收听频率是一零一点一的山东人民广播电台交通音乐之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "交通音乐之声",
+            "channel": "山东人民广播电台",
+            "frequency": "一零一点一"
+        }
+    },
+    "NLU04029": {
+        "text": "戏剧类的海上戏剧给我收听一下可以吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "海上戏剧"
+        }
+    },
+    "NLU04037": {
+        "text": "99点1大连财经可以给我播放吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "大连财经",
+            "frequency": "99点1"
+        }
+    },
+    "NLU04054": {
+        "text": "继续收听新闻类的黄石新闻台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "黄石新闻台"
+        }
+    },
+    "NLU04076": {
+        "text": "收听频率是九三点一的城市信息电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "城市信息电台",
+            "frequency": "九三点一"
+        }
+    },
+    "NLU04077": {
+        "text": "由董轩主播的好家居在石家庄电台播出，我要听这个",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "董轩",
+            "name": "好家居",
+            "channel": "石家庄电台"
+        }
+    },
+    "NLU04089": {
+        "text": "重庆新闻广播里的周末故事会很有意思，快帮我调一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "重庆新闻广播",
+            "name": "周末故事会"
+        }
+    },
+    "NLU04112": {
+        "text": "延边朝鲜语广播听这个方言台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "延边朝鲜语广播"
+        }
+    },
+    "NLU04113": {
+        "text": "能给我播出一下张洁主持的都市之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "张洁",
+            "name": "都市之声"
+        }
+    },
+    "NLU04131": {
+        "text": "给我调到102点7我想要听广州音乐之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "广州音乐之声",
+            "frequency": "102点7"
+        }
+    },
+    "NLU04134": {
+        "text": "我想收听石家庄新闻广播的交警热线，这是童谣主播的节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "石家庄新闻广播",
+            "name": "交警热线",
+            "artist": "童谣"
+        }
+    },
+    "NLU04139": {
+        "text": "给我继续收一下姚科主持的中国之声行不行啊",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "姚科",
+            "name": "中国之声"
+        }
+    },
+    "NLU04143": {
+        "text": "蚌埠经济广播电台在104点2给我拨一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "蚌埠经济广播电台",
+            "frequency": "104点2"
+        }
+    },
+    "NLU04150": {
+        "text": "放一下虾米电台里的戏剧歌曲",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "虾米电台"
+        }
+    },
+    "NLU04160": {
+        "text": "有没有经济类的新闻电台节目",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU04181": {
+        "text": "给调到FM105点2我要听江伟麟主持的节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM105点2",
+            "artist": "江伟麟"
+        }
+    },
+    "NLU04207": {
+        "text": "能播放一个交通类电台吗，就北京人民广播电台交通台吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京人民广播电台交通台"
+        }
+    },
+    "NLU04210": {
+        "text": "好想听张涛主持的小喇叭",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "张涛",
+            "name": "小喇叭"
+        }
+    },
+    "NLU04229": {
+        "text": "我需要听一个新闻类的湖北人民广播电台新闻台呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "湖北人民广播电台新闻台"
+        }
+    },
+    "NLU04242": {
+        "text": "我不管我就要听中央广播的文艺之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央广播",
+            "name": "文艺之声"
+        }
+    },
+    "NLU04255": {
+        "text": "我确定我现在收听的就是FM93.4的电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM93.4"
+        }
+    },
+    "NLU04264": {
+        "text": "是不是可以现在就播放丽红的都市之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "丽红",
+            "name": "都市之声"
+        }
+    },
+    "NLU04266": {
+        "text": "石家庄交通广播的946动感晚高峰调过去",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "946动感晚高峰",
+            "channel": "石家庄交通广播"
+        }
+    },
+    "NLU04270": {
+        "text": "我得听科学类的科学龙门阵那样的找来听听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "科学龙门阵"
+        }
+    },
+    "NLU04299": {
+        "text": "请给我调出八八点五的江宁人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "江宁人民广播电台",
+            "frequency": "八八点五"
+        }
+    },
+    "NLU04300": {
+        "text": "现在请收听乌日图主持的有意思的事",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "乌日图",
+            "name": "有意思的事"
+        }
+    },
+    "NLU04301": {
+        "text": "上海交通广播电台叶子主持的节目给我播一下呗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "上海交通广播电台",
+            "artist": "叶子"
+        }
+    },
+    "NLU04337": {
+        "text": "给我调出李竹主持的银河台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "李竹",
+            "channel": "银河台"
+        }
+    },
+    "NLU04381": {
+        "text": "请给放一个孙阳主持的校园生活",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "孙阳",
+            "name": "校园生活"
+        }
+    },
+    "NLU04393": {
+        "text": "开启湖南潇湘之声，听湖南新闻联播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "湖南潇湘之声",
+            "name": "湖南新闻联播"
+        }
+    },
+    "NLU04397": {
+        "text": "帮我搜上海五星体育广播中活到100岁，这是一凝主播的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "上海五星体育广播",
+            "name": "活到100岁",
+            "artist": "一凝"
+        }
+    },
+    "NLU04414": {
+        "text": "请现在给我续放珊珊的老年之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "珊珊",
+            "name": "老年之声"
+        }
+    },
+    "NLU04417": {
+        "text": "我想你给我收听经济类的重庆经济电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "重庆经济电台"
+        }
+    },
+    "NLU04427": {
+        "text": "听听宁静主持的都市之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "宁静",
+            "name": "都市之声"
+        }
+    },
+    "NLU04430": {
+        "text": "教育类的广东人民广播电台教育之声是不是能给我播放呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "教育之声",
+            "channel": "广东人民广播电台"
+        }
+    },
+    "NLU04452": {
+        "text": "你能把2020年的小黄瓜电台放一下么",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "小黄瓜电台"
+        }
+    },
+    "NLU04457": {
+        "text": "频率是一零五点九的宜昌交通音乐台可以收听下吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "宜昌交通音乐台",
+            "frequency": "一零五点九"
+        }
+    },
+    "NLU04460": {
+        "text": "是不是能继续收听频率是一零零点一的乐昌电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "乐昌电台",
+            "frequency": "一零零点一"
+        }
+    },
+    "NLU04461": {
+        "text": "辽宁电台的主持人王玲主持的节目帮我放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "辽宁电台",
+            "artist": "王玲"
+        }
+    },
+    "NLU04478": {
+        "text": "看一下宇飞主持的中国之声在放什么",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "宇飞",
+            "name": "中国之声"
+        }
+    },
+    "NLU04497": {
+        "text": "循环收听华夏之声，小班主持的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "小班",
+            "name": "华夏之声"
+        }
+    },
+    "NLU04498": {
+        "text": "成都经典946正在播放的乐在946快帮我播放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "乐在946",
+            "channel": "成都经典946"
+        }
+    },
+    "NLU04501": {
+        "text": "我想听北京电台的早安音乐秀",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "早安音乐秀",
+            "channel": "北京电台"
+        }
+    },
+    "NLU04509": {
+        "text": "给我继续来收听顺德人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "顺德人民广播电台"
+        }
+    },
+    "NLU04512": {
+        "text": "帮我找刘旭晚8点到9点的城市娱乐报",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "城市娱乐报",
+            "artist": "刘旭"
+        }
+    },
+    "NLU04546": {
+        "text": "你能把经济类的扬州人民广播电台经济台给我收听一下吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "扬州人民广播电台经济台"
+        }
+    },
+    "NLU04552": {
+        "text": "继续播陈健光的平凡的故事",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "陈健光",
+            "name": "平凡的故事"
+        }
+    },
+    "NLU04554": {
+        "text": "中国之声的新闻进行时马上帮我播放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "新闻进行时",
+            "channel": "中国之声"
+        }
+    },
+    "NLU04570": {
+        "text": "能把教育类的广东人民广播电台教育之声帮我调出来吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "教育之声",
+            "channel": "广东人民广播电台"
+        }
+    },
+    "NLU04623": {
+        "text": "我想听黄倩主持的华夏之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "黄倩",
+            "name": "华夏之声"
+        }
+    },
+    "NLU04627": {
+        "text": "我想听大林的著名情感节目今晚我是你的DJ",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "今晚我是你的DJ",
+            "artist": "大林"
+        }
+    },
+    "NLU04659": {
+        "text": "珠江经济广播电台流行1057是不是能继续给我收听下呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "流行1057",
+            "channel": "珠江经济广播电台"
+        }
+    },
+    "NLU04662": {
+        "text": "我需要听一个频率是九三点一的城市信息广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "城市信息广播电台",
+            "frequency": "九三点一"
+        }
+    },
+    "NLU04672": {
+        "text": "马上就要收听FM94.8的色彩调频",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM94.8",
+            "channel": "色彩调频"
+        }
+    },
+    "NLU04676": {
+        "text": "我要听音乐类的张家港人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "张家港人民广播电台"
+        }
+    },
+    "NLU04682": {
+        "text": "继续听邹字平的午夜影院",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "邹字平",
+            "name": "午夜影院"
+        }
+    },
+    "NLU04697": {
+        "text": "驻马店交通广播城市歌行者快帮我播放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "城市歌行者",
+            "channel": "驻马店交通广播"
+        }
+    },
+    "NLU04703": {
+        "text": "来一个频率是九三点四的山东人民广播电台综合频道吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "山东人民广播电台综合频道",
+            "frequency": "九三点四"
+        }
+    },
+    "NLU04708": {
+        "text": "想要听听广播了给调102点7去听音乐之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "音乐之声",
+            "frequency": "102点7"
+        }
+    },
+    "NLU04712": {
+        "text": "上海交通台就在FM105点7拨过去哈",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "上海交通台",
+            "frequency": "FM105点7"
+        }
+    },
+    "NLU04741": {
+        "text": "放一个频率是九四点三的仪征电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "仪征电台",
+            "frequency": "九四点三"
+        }
+    },
+    "NLU04745": {
+        "text": "我想听一会但茹主持的音乐之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "但茹",
+            "name": "音乐之声"
+        }
+    },
+    "NLU04747": {
+        "text": "拨到FM107点7的文体广播听听好友运动营",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "好友运动营",
+            "channel": "文体广播",
+            "frequency": "FM107点7"
+        }
+    },
+    "NLU04750": {
+        "text": "我想听一会频率是九六点二的宝山电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "宝山电台",
+            "frequency": "九六点二"
+        }
+    },
+    "NLU04757": {
+        "text": "钱琳琳主持的中华之声播放给我听听呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "钱琳琳",
+            "name": "中华之声"
+        }
+    },
+    "NLU04762": {
+        "text": "FM100点8鄂尔多斯文体交通广播交广有话说帮我播放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "鄂尔多斯文体交通广播",
+            "frequency": "FM100点8"
+        }
+    },
+    "NLU04767": {
+        "text": "继续收听晓婷主持的今日路况速报",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "晓婷",
+            "name": "今日路况速报"
+        }
+    },
+    "NLU04772": {
+        "text": "重复收听北京音乐广播的古典也流行",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "古典也流行",
+            "channel": "北京音乐广播"
+        }
+    },
+    "NLU04790": {
+        "text": "频率调换到FM104.1打开河南交通广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": [
+                "FM104.1",
+                "河南交通广播"
+            ]
+        }
+    },
+    "NLU04794": {
+        "text": "放一个牛力的广播行走天下来听一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "牛力",
+            "name": "行走天下"
+        }
+    },
+    "NLU04815": {
+        "text": "调到任杰的杰哥讲故事",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "任杰",
+            "name": "杰哥讲故事"
+        }
+    },
+    "NLU04822": {
+        "text": "我想听主持人方舟的中国之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "方舟",
+            "name": "中国之声"
+        }
+    },
+    "NLU04830": {
+        "text": "频率是一零六点一的第一套节目综合频道可以收听一下吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "第一套节目综合频道",
+            "frequency": "一零六点一"
+        }
+    },
+    "NLU04844": {
+        "text": "请调到FM97.2的上海戏曲广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM97.2",
+            "channel": "上海戏曲广播"
+        }
+    },
+    "NLU04848": {
+        "text": "立即收听申远演播的环球旅行家",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "环球旅行家",
+            "artist": "申远"
+        }
+    },
+    "NLU04874": {
+        "text": "小黄瓜电台可以播放给我吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "小黄瓜"
+        }
+    },
+    "NLU04876": {
+        "text": "帮我调到中央人民广播电台的神州之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播电台",
+            "name": "神州之声"
+        }
+    },
+    "NLU04881": {
+        "text": "继续收听频率是九三点九的潮州人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "潮州人民广播电台",
+            "frequency": "九三点九"
+        }
+    },
+    "NLU04904": {
+        "text": "戏剧类电台海上戏剧可以播放一下吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "海上戏剧",
+            "channel": "戏剧类电台"
+        }
+    },
+    "NLU04905": {
+        "text": "麻烦你帮我按到浙江人民电台的新闻快报",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "浙江人民电台",
+            "name": "新闻快报"
+        }
+    },
+    "NLU04911": {
+        "text": "我要听袁博的非常太好听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "非常太好听",
+            "artist": "袁博"
+        }
+    },
+    "NLU04915": {
+        "text": "北京新闻广播刘佳主持的电台节目帮我放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京新闻广播"
+        }
+    },
+    "NLU04921": {
+        "text": "快点儿给我找FM97点2我要听上海戏剧曲艺广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "上海戏剧曲艺广播",
+            "frequency": "FM97点2"
+        }
+    },
+    "NLU04925": {
+        "text": "按时间顺序给我播陕西戏曲广播的花鼓戏节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "陕西戏曲广播"
+        }
+    },
+    "NLU04932": {
+        "text": "帮我调到肖露的经营之道",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "肖露",
+            "name": "经营之道"
+        }
+    },
+    "NLU04937": {
+        "text": "放一个文艺类的江苏文艺电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "江苏文艺电台"
+        }
+    },
+    "NLU04947": {
+        "text": "我要听FM103.9交通广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "交通广播",
+            "frequency": "FM103.9"
+        }
+    },
+    "NLU04952": {
+        "text": "我要听刘旭佳的大话清朝",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "刘旭佳",
+            "name": "大话清朝"
+        }
+    },
+    "NLU04955": {
+        "text": "频率是一零五点七的上海电台交通频率收听一下可以吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "上海电台",
+            "frequency": "一零五点七"
+        }
+    },
+    "NLU04959": {
+        "text": "叶子主持过的上海交通广播节目帮我放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "上海交通广播",
+            "artist": "叶子"
+        }
+    },
+    "NLU04972": {
+        "text": "给我放一下沈阳新闻广播养生堂",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "养生堂",
+            "channel": "沈阳新闻广播"
+        }
+    },
+    "NLU04986": {
+        "text": "给我收听频率是一零四点三的南京经济广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "南京经济广播电台",
+            "frequency": "一零四点三"
+        }
+    },
+    "NLU04993": {
+        "text": "收听一下文艺类的山东文艺广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "山东文艺广播电台"
+        }
+    },
+    "NLU05000": {
+        "text": "有FM107点2吧我要听上海故事台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "上海故事台",
+            "frequency": "FM107点2"
+        }
+    },
+    "NLU05007": {
+        "text": "有康妤的I的享乐汇吧听会儿",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "I的享乐汇",
+            "artist": "康妤"
+        }
+    },
+    "NLU05010": {
+        "text": "我想听郑州电台的怀旧好声音",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "怀旧好声音",
+            "channel": "郑州电台"
+        }
+    },
+    "NLU05014": {
+        "text": "循环收听频率是九九点六的沉默电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "沉默电台",
+            "frequency": "九九点六"
+        }
+    },
+    "NLU05019": {
+        "text": "在虾米电台里播放甜蜜蜜",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "虾米电台"
+        }
+    },
+    "NLU05034": {
+        "text": "频率是八八点二的中国国际广播电台来收听吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中国国际广播电台",
+            "frequency": "八八点二"
+        }
+    },
+    "NLU05037": {
+        "text": "现在就可以听中央广播电台的文艺之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央广播电台",
+            "name": "文艺之声"
+        }
+    },
+    "NLU05039": {
+        "text": "播放FM87.6广安文艺广播的开心茶馆",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM87.6",
+            "channel": "广安文艺广播",
+            "name": "开心茶馆"
+        }
+    },
+    "NLU05044": {
+        "text": "音乐快速路帮我放一下呗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "音乐快速路"
+        }
+    },
+    "NLU05058": {
+        "text": "请帮我找到陕西戏曲广播按时间顺序播放里面的花鼓戏节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "陕西戏曲广播"
+        }
+    },
+    "NLU05088": {
+        "text": "让我听会儿全城当打是江伟麟主持的电台节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "全城当打",
+            "artist": "江伟麟"
+        }
+    },
+    "NLU05091": {
+        "text": "收听一个频率是九八点三的王巨星电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "王巨星电台",
+            "frequency": "九八点三"
+        }
+    },
+    "NLU05095": {
+        "text": "宇飞主持的中国之声继续收听一下可以吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "宇飞",
+            "name": "中国之声"
+        }
+    },
+    "NLU05097": {
+        "text": "找个于谦的电台就那个人间好玩电台吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "人间好玩电台吧",
+            "artist": "于谦"
+        }
+    },
+    "NLU05105": {
+        "text": "现在是7点给找旅游早班车",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "旅游早班车"
+        }
+    },
+    "NLU05107": {
+        "text": "放一个音乐类的山东人民广播电台交通音乐之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "交通音乐之声",
+            "channel": "山东人民广播电台"
+        }
+    },
+    "NLU05108": {
+        "text": "调回到体育广播，在FM102.5哦",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM102.5",
+            "channel": "体育广播"
+        }
+    },
+    "NLU05124": {
+        "text": "你可以给我收一个音乐类的经典947给我听吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "经典947"
+        }
+    },
+    "NLU05142": {
+        "text": "江伟麟和陈嘉慧主持的车麟时代我要听这个",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "车麟时代",
+            "artist": ["江伟麟", "陈嘉慧"]
+        }
+    },
+    "NLU05149": {
+        "text": "给我调到李沛聪7点开始的聪明学堂听那个",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "李沛聪"
+        }
+    },
+    "NLU05153": {
+        "text": "我要听夏南的音乐特权下午4点的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "音乐特权",
+            "artist": "夏南"
+        }
+    },
+    "NLU05164": {
+        "text": "我想听陕西秦腔广播的这里是西安",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "这里是西安",
+            "channel": "陕西秦腔广播"
+        }
+    },
+    "NLU05166": {
+        "text": "收听经济类的徐州人民广播电台经济台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "徐州人民广播电台经济台"
+        }
+    },
+    "NLU05189": {
+        "text": "帮我放任杰主持的文艺之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "任杰",
+            "name": "文艺之声"
+        }
+    },
+    "NLU05197": {
+        "text": "调到CNR民族之声，我要听哈语节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "哈语节目",
+            "channel": "CNR民族之声"
+        }
+    },
+    "NLU05205": {
+        "text": "随机播放一个笑话电台主持的娱乐节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "笑话电台"
+        }
+    },
+    "NLU05206": {
+        "text": "我现在要听庞莹主持的四季花城节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "庞莹",
+            "name": "四季花城"
+        }
+    },
+    "NLU05213": {
+        "text": "请找到下午1点博亚和张楠的城市好男好女",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "城市好男好女",
+            "artist": [
+                "博亚",
+                "张楠"
+            ]
+        }
+    },
+    "NLU05216": {
+        "text": "播放豆瓣FM里的两只老虎歌曲",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "豆瓣FM"
+        }
+    },
+    "NLU05219": {
+        "text": "我现在要听北京音乐广播的先听为快",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "先听为快",
+            "channel": "北京音乐广播"
+        }
+    },
+    "NLU05225": {
+        "text": "放一个张达讯主持的失眠夜谈",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "张达讯",
+            "name": "失眠夜谈"
+        }
+    },
+    "NLU05230": {
+        "text": "看看九八点四的香港电台第二台在播放什么",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "香港电台第二台",
+            "frequency": "九八点四"
+        }
+    },
+    "NLU05275": {
+        "text": "中央人民广播电台的节目帮我放一下呗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播电台"
+        }
+    },
+    "NLU05279": {
+        "text": "替我播放一下荆州音乐广播1068音乐加点糖",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "1068音乐",
+            "channel": "荆州音乐广播"
+        }
+    },
+    "NLU05290": {
+        "text": "放王磊主持的凌晨一点",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "王磊",
+            "name": "凌晨一点"
+        }
+    },
+    "NLU05301": {
+        "text": "找到93点3五河人民广播电台并播放",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "五河人民广播电台",
+            "frequency": "93点3"
+        }
+    },
+    "NLU05302": {
+        "text": "放一会儿蜻蜓FM的科学有故事听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "科学有故事",
+            "channel": "蜻蜓FM"
+        }
+    },
+    "NLU05303": {
+        "text": "给我来频率是九八点五的佛山人民广播电台千色频道行不行呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "佛山人民广播电台千色频道",
+            "frequency": "九八点五"
+        }
+    },
+    "NLU05314": {
+        "text": "FM99点6中国交通广播欢乐大冲关帮我播放",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "欢乐大冲关",
+            "channel": "中国交通广播",
+            "frequency": "FM99点6"
+        }
+    },
+    "NLU05352": {
+        "text": "能收听一个频率是一零零点九的松江电台吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "松江电台",
+            "frequency": "一零零点九"
+        }
+    },
+    "NLU05360": {
+        "text": "中国乡村之声是在转播新闻联播吧调过去",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "新闻联播",
+            "channel": "中国乡村之声"
+        }
+    },
+    "NLU05367": {
+        "text": "立马就收听FM103.9的交通广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM103.9",
+            "channel": "交通广播"
+        }
+    },
+    "NLU05414": {
+        "text": "调到南京人民广播电台看看在播什么",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "南京人民广播电台"
+        }
+    },
+    "NLU05461": {
+        "text": "收听频率是九三点六的栖霞人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "栖霞人民广播电台",
+            "frequency": "九三点六"
+        }
+    },
+    "NLU05474": {
+        "text": "我想听频率是一零五点六的恩平电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "恩平电台",
+            "frequency": "一零五点六"
+        }
+    },
+    "NLU05479": {
+        "text": "调到FM94听中华武魂",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "中华武魂",
+            "frequency": "FM94"
+        }
+    },
+    "NLU05481": {
+        "text": "我要听FM105点1的金山区人民台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "金山区人民台",
+            "frequency": "FM105点1"
+        }
+    },
+    "NLU05487": {
+        "text": "听中央人民广播电台的华夏之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播电台",
+            "name": "华夏之声"
+        }
+    },
+    "NLU05490": {
+        "text": "天津广播中的经典音乐网的广播可以放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "天津广播",
+            "name": "经典音乐网"
+        }
+    },
+    "NLU05493": {
+        "text": "频率是八七点八的天津人民广播电台娱乐频率收听一下可以吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "天津人民广播电台",
+            "frequency": "八七点八"
+        }
+    },
+    "NLU05495": {
+        "text": "收听经济类的江苏经济电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "江苏经济电台"
+        }
+    },
+    "NLU05502": {
+        "text": "Vivian是我最喜欢的主持人，收听她的酷炫音乐会",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "酷炫音乐会",
+            "artist": "Vivian"
+        }
+    },
+    "NLU05505": {
+        "text": "我要听温暖治愈系的电台节目深夜暖男",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "深夜暖男"
+        }
+    },
+    "NLU05507": {
+        "text": "麻烦找个曲艺电台正放二堂舍子的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "二堂舍子"
+        }
+    },
+    "NLU05508": {
+        "text": "调到新闻频道CNR长篇联播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "CNR长篇联播",
+            "channel": "新闻频道"
+        }
+    },
+    "NLU05541": {
+        "text": "我要听叶咏梅支持的戏曲鉴赏节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "叶咏梅",
+            "name": "戏曲鉴赏"
+        }
+    },
+    "NLU05557": {
+        "text": "你可以立刻收听王强主持的经济之声吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "王强",
+            "name": "经济之声"
+        }
+    },
+    "NLU05565": {
+        "text": "欣怡的音乐黑眼圈听着很舒适，在上海广播电台里可以找到",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "欣怡",
+            "name": "音乐黑眼圈",
+            "channel": "上海广播电台"
+        }
+    },
+    "NLU05580": {
+        "text": "帮我调到王为的1039交通服务热线",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "王为",
+            "name": "交通服务热线",
+            "frequency": "1039"
+        }
+    },
+    "NLU05592": {
+        "text": "收听频率是一零七点三的十堰新闻台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "十堰新闻台",
+            "frequency": "一零七点三"
+        }
+    },
+    "NLU05596": {
+        "text": "我让你给我放浙江之声的人文大讲堂",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "人文大讲堂",
+            "channel": "浙江之声"
+        }
+    },
+    "NLU05598": {
+        "text": "给我放一下毛强主持的恋爱小妙招",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "毛强",
+            "name": "恋爱小妙招"
+        }
+    },
+    "NLU05601": {
+        "text": "收听主持人是薇薇的今夜无眠",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "薇薇",
+            "name": "今夜无眠"
+        }
+    },
+    "NLU05608": {
+        "text": "拨去朝朝早精神好陈嘉慧主持的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "朝朝早精神好",
+            "artist": "陈嘉慧"
+        }
+    },
+    "NLU05613": {
+        "text": "浙江之声方雨主播的请调出来",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "浙江之声",
+            "artist": "方雨"
+        }
+    },
+    "NLU05622": {
+        "text": "请给我调到有卢迪主持的电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "卢迪"
+        }
+    },
+    "NLU05630": {
+        "text": "北京广播电台的节目帮我播放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京广播电台"
+        }
+    },
+    "NLU05637": {
+        "text": "接着上次继续收听文燕的嘻哈包袱",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "文燕",
+            "name": "嘻哈包袱"
+        }
+    },
+    "NLU05642": {
+        "text": "播放中央人民广播中国之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播",
+            "name": "中国之声"
+        }
+    },
+    "NLU05671": {
+        "text": "快点儿给我调到保定人民广播我要听刘聪的节目呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "保定人民广播",
+            "artist": "刘聪"
+        }
+    },
+    "NLU05690": {
+        "text": "给我收听文艺类的山东文艺广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "山东文艺广播电台"
+        }
+    },
+    "NLU05691": {
+        "text": "来收听频率是一零一点五的重庆经济电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "重庆经济电台",
+            "frequency": "一零一点五"
+        }
+    },
+    "NLU05700": {
+        "text": "放频率是九三点九的江浦广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "江浦广播电台",
+            "frequency": "九三点九"
+        }
+    },
+    "NLU05725": {
+        "text": "日语类的电台随便给我找一个",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU05732": {
+        "text": "重复收听文艺类的山东人民广播电台文艺台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "山东人民广播电台文艺台"
+        }
+    },
+    "NLU05749": {
+        "text": "替我播放德阳人民广播电台的直播节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "德阳人民广播电台"
+        }
+    },
+    "NLU05775": {
+        "text": "能播放一下芃扬主持的情感咨询热线",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "芃扬",
+            "name": "情感咨询热线"
+        }
+    },
+    "NLU05780": {
+        "text": "能不能把付明月的神州之声播放出来",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "付明月",
+            "name": "神州之声"
+        }
+    },
+    "NLU05788": {
+        "text": "播放中央人民广播电台的第一套节目综合频道",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": [
+                "中央人民广播电台",
+                "第一套节目综合频道"
+            ]
+        }
+    },
+    "NLU05800": {
+        "text": "music corner快帮我放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "music corner"
+        }
+    },
+    "NLU05807": {
+        "text": "找一下中央人民广播电台的华夏之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播电台",
+            "name": "华夏之声"
+        }
+    },
+    "NLU05812": {
+        "text": "听一下张昊主持的拥抱故事",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "张昊",
+            "name": "拥抱故事"
+        }
+    },
+    "NLU05817": {
+        "text": "FM94点0上海五星体育广播帮我放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "上海五星体育广播",
+            "frequency": "FM94点0"
+        }
+    },
+    "NLU05826": {
+        "text": "快帮我播放浙江之声一天零一夜",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "一天零一夜",
+            "channel": "浙江之声"
+        }
+    },
+    "NLU05828": {
+        "text": "给我收听马黎主持的今日路况速报",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "马黎",
+            "name": "今日路况速报"
+        }
+    },
+    "NLU05830": {
+        "text": "听个新闻电台随机放一个就行",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU05831": {
+        "text": "电台节目三号坏男孩请帮我播放播放",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "三号坏男孩"
+        }
+    },
+    "NLU05855": {
+        "text": "收听频率是九七点二的溧阳人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "溧阳人民广播电台",
+            "frequency": "九七点二"
+        }
+    },
+    "NLU05862": {
+        "text": "放一下音乐类的苏州音乐台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "苏州音乐台"
+        }
+    },
+    "NLU05876": {
+        "text": "频率是一零三点七的魅力103那个收听给我吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "魅力103",
+            "frequency": "一零三点七"
+        }
+    },
+    "NLU05886": {
+        "text": "我在听中央广播的文艺之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央广播",
+            "name": "文艺之声"
+        }
+    },
+    "NLU05890": {
+        "text": "收听频率是一零三点八的山东文艺广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "山东文艺广播电台",
+            "frequency": "一零三点八"
+        }
+    },
+    "NLU05892": {
+        "text": "新闻类电台990新闻频率播放可以吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "990"
+        }
+    },
+    "NLU05901": {
+        "text": "调到12点开始的周日精彩巨星",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "周日精彩巨星"
+        }
+    },
+    "NLU05904": {
+        "text": "王政主播的理财有道在河南交通广播里，现在调台吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "王政",
+            "name": "理财有道",
+            "channel": "河南交通广播"
+        }
+    },
+    "NLU05911": {
+        "text": "让我听听尼珍在民族之声的新闻节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "尼珍",
+            "channel": "民族之声"
+        }
+    },
+    "NLU05918": {
+        "text": "我需要你帮我播放一个经济类新闻电台",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU05927": {
+        "text": "收听频率是九六点一的治愈电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "治愈电台",
+            "frequency": "九六点一"
+        }
+    },
+    "NLU05928": {
+        "text": "运动处方是小柏的主播调去体育台听听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "运动处方",
+            "artist": "小柏"
+        }
+    },
+    "NLU05932": {
+        "text": "我想听一下频率是一零七点四的小塘电台呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "小塘电台",
+            "frequency": "一零七点四"
+        }
+    },
+    "NLU05937": {
+        "text": "是不是能继续收听频率是一零六点一的茂名人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "茂名人民广播电台",
+            "frequency": "一零六点一"
+        }
+    },
+    "NLU05941": {
+        "text": "频率是一零六点一的广州人民广播电台经济环保广播可以收听一下不",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "经济环保广播",
+            "channel": "广州人民广播电台",
+            "frequency": "一零六点一"
+        }
+    },
+    "NLU05957": {
+        "text": "丁伟杰的杰出体育中午12点开始快调到体育台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "杰出体育",
+            "artist": "丁伟杰"
+        }
+    },
+    "NLU05978": {
+        "text": "循环收听频率是九八点二的山东人民广播电台经济台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "山东人民广播电台经济台",
+            "frequency": "九八点二"
+        }
+    },
+    "NLU05986": {
+        "text": "7点了找都市夜归人听听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "都市夜归人"
+        }
+    },
+    "NLU05989": {
+        "text": "新闻台的福建新闻广播找出来",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "福建新闻广播"
+        }
+    },
+    "NLU05999": {
+        "text": "周日有海洋的文艺之声吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "海洋",
+            "name": "文艺之声"
+        }
+    },
+    "NLU06002": {
+        "text": "要听蚌埠经济广播给我拨一下104点2",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "蚌埠经济广播",
+            "frequency": "104点2"
+        }
+    },
+    "NLU06004": {
+        "text": "午休时就听慧楠的长三角先锋派吧，了解了解时事",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "慧楠",
+            "name": "长三角先锋派"
+        }
+    },
+    "NLU06012": {
+        "text": "张楠主持的音乐之声给我播出一下呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "张楠",
+            "name": "音乐之声"
+        }
+    },
+    "NLU06037": {
+        "text": "我现在要听子君主持的疯子和傻子",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "子君",
+            "name": "疯子和傻子"
+        }
+    },
+    "NLU06083": {
+        "text": "来一个频率是八七点九的中国国际广播电台轻松调频",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "轻松调频",
+            "channel": "中国国际广播电台",
+            "frequency": "八七点九"
+        }
+    },
+    "NLU06110": {
+        "text": "播放保定城市服务广播乐动RADIO正在播放的节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "乐动RADIO",
+            "channel": "保定城市服务广播"
+        }
+    },
+    "NLU06118": {
+        "text": "中央人民广播电台在FM101点8吧调过去啊",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播电台",
+            "frequency": "FM101点8"
+        }
+    },
+    "NLU06123": {
+        "text": "交通类的羊城交通广播电台可以播放吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "羊城交通广播电台"
+        }
+    },
+    "NLU06145": {
+        "text": "我要收听中央人民广播电台的中国高速公路交通广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播电台",
+            "name": "中国高速公路交通广播"
+        }
+    },
+    "NLU06146": {
+        "text": "亲，思思的健康天天帮节目，在石家庄新闻广播播出，放这个",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "思思",
+            "name": "健康天天帮",
+            "channel": "石家庄新闻广播"
+        }
+    },
+    "NLU06184": {
+        "text": "能不能给我来一个频率是九五点五的重庆交通电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "重庆交通电台",
+            "frequency": "九五点五"
+        }
+    },
+    "NLU06185": {
+        "text": "现在帮我转到北京财经电台的新闻",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京财经电台"
+        }
+    },
+    "NLU06188": {
+        "text": "按时间顺序播放王磊在济南经济广播的节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "济南经济广播",
+            "artist": "王磊"
+        }
+    },
+    "NLU06203": {
+        "text": "收听音乐类的孝感电台交通音乐台一个行不行哇",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "孝感电台交通音乐台"
+        }
+    },
+    "NLU06214": {
+        "text": "我听周日晚7点的城市大人物",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "城市大人物"
+        }
+    },
+    "NLU06225": {
+        "text": "拨到FM97点4的北京人民广播电台音乐台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京人民广播电台音乐台",
+            "frequency": "FM97点4"
+        }
+    },
+    "NLU06229": {
+        "text": "你必须给我调回到中央广播电台的文艺之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央广播电台",
+            "name": "文艺之声"
+        }
+    },
+    "NLU06247": {
+        "text": "都市792频率89.9帮我放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "都市792",
+            "frequency": "89.9"
+        }
+    },
+    "NLU06257": {
+        "text": "频率是一零二点七的广州人民广播电台金曲广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "广州人民广播电台金曲广播",
+            "frequency": "一零二点七"
+        }
+    },
+    "NLU06258": {
+        "text": "循环收听中国之声，王莹主持的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "王莹",
+            "name": "中国之声"
+        }
+    },
+    "NLU06263": {
+        "text": "我现在要听罗泽中主持的岁月静好",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "罗泽中",
+            "name": "岁月静好"
+        }
+    },
+    "NLU06274": {
+        "text": "是否能把频率是九四点八的梅州电台继续听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "梅州电台",
+            "frequency": "九四点八"
+        }
+    },
+    "NLU06277": {
+        "text": "我一会儿就要听中央广播的文艺之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央广播",
+            "name": "文艺之声"
+        }
+    },
+    "NLU06298": {
+        "text": "我需要听一会郝迪主持的都市之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "郝迪",
+            "name": "都市之声"
+        }
+    },
+    "NLU06304": {
+        "text": "放频率是一零四点四的山东人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "山东人民广播电台",
+            "frequency": "一零四点四"
+        }
+    },
+    "NLU06307": {
+        "text": "你给我播放一下新闻类的990新闻频率呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "990"
+        }
+    },
+    "NLU06312": {
+        "text": "给我调去大林在FM93点7主持的大林评论",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "大林评论",
+            "frequency": "FM93点7",
+            "artist": "大林"
+        }
+    },
+    "NLU06329": {
+        "text": "帮我找一个音乐台CNR音乐之声吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "CNR音乐之声"
+        }
+    },
+    "NLU06348": {
+        "text": "是否能把教育类的广东人民广播电台教育之声播放出来",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "教育之声",
+            "channel": "广东人民广播电台"
+        }
+    },
+    "NLU06350": {
+        "text": "有下午5点一品天下吧找去听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "一品天下"
+        }
+    },
+    "NLU06352": {
+        "text": "能把张东主持的音乐之声给我播放么",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "张东",
+            "name": "音乐之声"
+        }
+    },
+    "NLU06353": {
+        "text": "帮我找到王月的岷江排行榜",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "岷江排行榜",
+            "artist": "王月"
+        }
+    },
+    "NLU06370": {
+        "text": "请重复收听频率是一零七点三的市民热线",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "市民热线",
+            "frequency": "一零七点三"
+        }
+    },
+    "NLU06386": {
+        "text": "播放南京地区频率为八九点七的CityFM音乐广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "八九点七",
+            "channel": "CityFM"
+        }
+    },
+    "NLU06388": {
+        "text": "帮我放一下律动下午茶",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "律动下午茶"
+        }
+    },
+    "NLU06389": {
+        "text": "找苏州曲艺广播按顺序播放里面的越剧节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "苏州曲艺广播"
+        }
+    },
+    "NLU06396": {
+        "text": "给我放才涛的先听为快帮我调下频道找一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "才涛"
+        }
+    },
+    "NLU06402": {
+        "text": "放一个麻宁的交通新闻",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "麻宁",
+            "name": "交通新闻"
+        }
+    },
+    "NLU06413": {
+        "text": "给我找到FM96点6的中央人民广播电台 ",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播电台 ",
+            "frequency": "FM96点6"
+        }
+    },
+    "NLU06418": {
+        "text": "教育类的广东人民广播电台教育之声可以播放一下吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "教育之声",
+            "channel": "广东人民广播电台"
+        }
+    },
+    "NLU06420": {
+        "text": "我想听FM103.9新闻晚知道",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM103.9",
+            "name": "新闻晚知道"
+        }
+    },
+    "NLU06444": {
+        "text": "我收听的就是FM87.6的文艺广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM87.6",
+            "channel": "文艺广播"
+        }
+    },
+    "NLU06453": {
+        "text": "频率是一零七点七的中央电台音乐之声可以收听下给我不",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "音乐之声",
+            "channel": "中央电台",
+            "frequency": "一零七点七"
+        }
+    },
+    "NLU06456": {
+        "text": "我需要听一个音乐类的湖北人民广播电台交通音乐台可以吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "湖北人民广播电台交通音乐台"
+        }
+    },
+    "NLU06466": {
+        "text": "听FM97四川旅游生活广播6点的音乐旅途要经典篇",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "音乐旅途",
+            "channel": "四川旅游生活广播",
+            "frequency": "FM97"
+        }
+    },
+    "NLU06469": {
+        "text": "你能播放一下神州之声付明月主持的那个吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "付明月",
+            "name": "神州之声"
+        }
+    },
+    "NLU06474": {
+        "text": "播放河北交通广播快乐晚点名",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "快乐晚点名",
+            "channel": "河北交通广播"
+        }
+    },
+    "NLU06480": {
+        "text": "循环收听陈颖镭的实用技巧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "颖镭",
+            "name": "实用技巧"
+        }
+    },
+    "NLU06481": {
+        "text": "听一下中央广播电台的经济之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央广播电台",
+            "name": "经济之声"
+        }
+    },
+    "NLU06484": {
+        "text": "放余玉婷的思念是一种病来听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "余玉婷",
+            "name": "思念是一种病"
+        }
+    },
+    "NLU06486": {
+        "text": "麻烦帮我找下陕西戏曲广播按时间顺序播放里面的花鼓戏节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "陕西戏曲广播"
+        }
+    },
+    "NLU06509": {
+        "text": "请帮我找到中国戏剧广播里的秦腔节目按节目列表顺序列表播放",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中国戏剧广播"
+        }
+    },
+    "NLU06512": {
+        "text": "调到林贺的1039交通服务热线",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "林贺",
+            "channel": "交通服务热线",
+            "frequency": "1039"
+        }
+    },
+    "NLU06528": {
+        "text": "请循环收听费磊主持的分类讲话电台节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "费磊",
+            "name": "分类讲话"
+        }
+    },
+    "NLU06546": {
+        "text": "我要听教育类的广东人民广播电台教育之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "教育之声",
+            "channel": "广东人民广播电台"
+        }
+    },
+    "NLU06550": {
+        "text": "想听嘉雯7点半的全新动力",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "全新动力",
+            "artist": "嘉雯"
+        }
+    },
+    "NLU06558": {
+        "text": "能不能继续收听我上次听的频率一零四点七的我要现在电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "我要现在电台",
+            "frequency": "一零四点七"
+        }
+    },
+    "NLU06564": {
+        "text": "收听频率是一零六点六的济南人民频道",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "济南人民频道",
+            "frequency": "一零六点六"
+        }
+    },
+    "NLU06569": {
+        "text": "我想听电台节目Music40",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "Music40"
+        }
+    },
+    "NLU06570": {
+        "text": "给我调到幺零二点七的丹徒人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "丹徒人民广播电台",
+            "frequency": "幺零二点七"
+        }
+    },
+    "NLU06575": {
+        "text": "收听九筆的爱上男声FM",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "九筆",
+            "name": "爱上男声FM"
+        }
+    },
+    "NLU06577": {
+        "text": "我准备一会儿就听中央广播电台的文艺之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央广播电台",
+            "name": "文艺之声"
+        }
+    },
+    "NLU06580": {
+        "text": "放李竹的小苏电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "李竹",
+            "channel": "小苏电台"
+        }
+    },
+    "NLU06589": {
+        "text": "收听一个频率是一零七点六的广东人民广播电台教育之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "教育之声",
+            "channel": "广东人民广播电台",
+            "frequency": "一零七点六"
+        }
+    },
+    "NLU06597": {
+        "text": "帮我放频率是八八点九的商业电台第一台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "商业电台第一台",
+            "frequency": "八八点九"
+        }
+    },
+    "NLU06599": {
+        "text": "今晚想听广西交通广播电台的交通新闻",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "广西交通广播电台"
+        }
+    },
+    "NLU06601": {
+        "text": "给我收听频率是一零一点七的番愚电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "番愚电台",
+            "frequency": "一零一点七"
+        }
+    },
+    "NLU06602": {
+        "text": "频率是八九点九的都市792收听一下呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "都市792",
+            "frequency": "八九点九"
+        }
+    },
+    "NLU06605": {
+        "text": "拨到FM93点7铁锟的重点关注",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "重点关注",
+            "frequency": "FM93点7",
+            "artist": "铁锟"
+        }
+    },
+    "NLU06637": {
+        "text": "我想听教育类的广东人民广播电台教育之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "教育之声",
+            "channel": "广东人民广播电台"
+        }
+    },
+    "NLU06654": {
+        "text": "音乐加点儿糖那个就是FM950听那个",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "音乐加点儿糖",
+            "frequency": "FM950"
+        }
+    },
+    "NLU06661": {
+        "text": "FM87点6调到北京人民广播电台文艺台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京人民广播电台",
+            "frequency": "FM87点6"
+        }
+    },
+    "NLU06669": {
+        "text": "给我放一下经典947",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "经典947"
+        }
+    },
+    "NLU06671": {
+        "text": "调到尼珍主持的民族之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "尼珍",
+            "name": "民族之声"
+        }
+    },
+    "NLU06674": {
+        "text": "最近有什么新电影，调到小楚和野营的节目爱电影了解一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": [
+                "小楚",
+                "野营"
+            ],
+            "name": "爱电影"
+        }
+    },
+    "NLU06677": {
+        "text": "我们现在想收听安然主持的婚姻保卫战",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "安然",
+            "name": "婚姻保卫战"
+        }
+    },
+    "NLU06682": {
+        "text": "我需要你收听一个经济类的宜昌经济台呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "宜昌经济台"
+        }
+    },
+    "NLU06687": {
+        "text": "现在你帮我调到常州交通广播的新闻快点知道",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "常州交通广播",
+            "name": "新闻快点知道"
+        }
+    },
+    "NLU06694": {
+        "text": "收听频率是一零一点八的北京不眠夜",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "北京不眠夜",
+            "frequency": "一零一点八"
+        }
+    },
+    "NLU06708": {
+        "text": "给我听一个开浩御书房的中国文学史",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "开浩",
+            "name": "中国文学史"
+        }
+    },
+    "NLU06713": {
+        "text": "找一个音乐电台要正放英语歌儿的那种",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU06716": {
+        "text": "频率是一零一点八的黄冈电台新闻台来一个收听呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "黄冈电台新闻台",
+            "frequency": "一零一点八"
+        }
+    },
+    "NLU06723": {
+        "text": "在FM91点0呢郑州人民交通台调过去",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "郑州人民交通台",
+            "frequency": "FM91点0"
+        }
+    },
+    "NLU06725": {
+        "text": "循环放一下黄倩主持的华夏之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "黄倩",
+            "name": "华夏之声"
+        }
+    },
+    "NLU06726": {
+        "text": "我要听安琪车主CD",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "车主CD",
+            "artist": "安琪"
+        }
+    },
+    "NLU06734": {
+        "text": "收听电台节目星阑的风茶馆",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "星阑",
+            "name": "风茶馆"
+        }
+    },
+    "NLU06742": {
+        "text": "收听电台节目千基百佬汇",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "千基百佬汇"
+        }
+    },
+    "NLU06744": {
+        "text": "帮我播放频率107点8的音乐之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "音乐之声",
+            "frequency": "107点8"
+        }
+    },
+    "NLU06745": {
+        "text": "给我来一个曹云金的话说天下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "曹云金",
+            "name": "话说天下"
+        }
+    },
+    "NLU06757": {
+        "text": "听一会儿FM106.6小霍主持的综艺对对碰",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM106.6",
+            "artist": "小霍",
+            "name": "综艺对对碰"
+        }
+    },
+    "NLU06777": {
+        "text": "江城曲艺之声快帮我播放",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "江城曲艺之声"
+        }
+    },
+    "NLU06783": {
+        "text": "听个新闻电台随便找一个就行",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU06809": {
+        "text": "我要听北京音乐广播的中国歌曲排行榜",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "中国歌曲排行榜",
+            "channel": "北京音乐广播"
+        }
+    },
+    "NLU06815": {
+        "text": "即刻调到色彩调频FM94.8",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM94.8",
+            "channel": "色彩调频"
+        }
+    },
+    "NLU06834": {
+        "text": "给我调到FM101点7的四川电台交通广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "四川电台交通广播",
+            "frequency": "FM101点7"
+        }
+    },
+    "NLU06841": {
+        "text": "我要听刘聪的节目快点儿给我调到保定人民广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "保定人民广播",
+            "artist": "刘聪"
+        }
+    },
+    "NLU06842": {
+        "text": "羊城乐安居是羊城交通的吧拨过去听听看",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "羊城乐安居",
+            "channel": "羊城交通"
+        }
+    },
+    "NLU06849": {
+        "text": "随便给我拨一个日语的电台",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU06852": {
+        "text": "叶婷婷主持的温州私家车音乐广播给我放一下吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "温州私家车音乐广播",
+            "artist": "叶婷婷"
+        }
+    },
+    "NLU06873": {
+        "text": "给我找个在放日语歌的音乐电台",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU06884": {
+        "text": "找个正放昆曲的曲艺电台听",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU06898": {
+        "text": "拨去城市大玩家就周一到周四中午11点的那个",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "城市大玩家"
+        }
+    },
+    "NLU06946": {
+        "text": "听晚8点的旅友俱乐部",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "旅友俱乐部"
+        }
+    },
+    "NLU06960": {
+        "text": "给我来一个音乐类的湖北人民广播电台交通音乐台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "交通音乐台",
+            "channel": "湖北人民广播电台"
+        }
+    },
+    "NLU06964": {
+        "text": "有没有音乐类的楚天广播音乐台来一个啊",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "楚天广播音乐台"
+        }
+    },
+    "NLU06966": {
+        "text": "给我拨一下人民广播电台王建立主持的节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "人民广播电台",
+            "artist": "王建立"
+        }
+    },
+    "NLU06981": {
+        "text": "调频至二十点零三，我要听娱乐星天地",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "娱乐星天地",
+            "frequency": "二十点零三"
+        }
+    },
+    "NLU06993": {
+        "text": "我马上就想听FM94.8的节目，是色彩调频电台哦",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM94.8",
+            "channel": "色彩调频"
+        }
+    },
+    "NLU06998": {
+        "text": "我还是要听中央广播电台的文艺之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央广播电台",
+            "name": "文艺之声"
+        }
+    },
+    "NLU07017": {
+        "text": "重听文艺类的无锡人民广播电台文艺台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "无锡人民广播电台文艺台"
+        }
+    },
+    "NLU07019": {
+        "text": "给我找悠悠和添天主播的读书音乐我要听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "读书音乐",
+            "artist": [
+                "悠悠",
+                "添天"
+            ]
+        }
+    },
+    "NLU07025": {
+        "text": "请给我收听高阳的文艺之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "高阳",
+            "name": "文艺之声"
+        }
+    },
+    "NLU07046": {
+        "text": "再拨拨到云南音乐广播听听好听在九点",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "好听在九点",
+            "channel": "云南音乐广播"
+        }
+    },
+    "NLU07057": {
+        "text": "调到杨斌主持的好一个夜FM105点2的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "好一个夜",
+            "frequency": "FM105点2",
+            "artist": "杨斌"
+        }
+    },
+    "NLU07077": {
+        "text": "听一个北京爱家广播的毛毛狗的故事口袋",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "毛毛狗的故事口袋",
+            "channel": "北京爱家广播"
+        }
+    },
+    "NLU07078": {
+        "text": "我还在收听的节目是FM103.9的电台，交通广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM103.9",
+            "channel": "交通广播"
+        }
+    },
+    "NLU07082": {
+        "text": "我要听频率是九零点二的连云港经济广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "连云港经济广播电台",
+            "frequency": "九零点二"
+        }
+    },
+    "NLU07107": {
+        "text": "北京故事广播给我放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京故事广播"
+        }
+    },
+    "NLU07119": {
+        "text": "今天听音乐之声电台更新的歌曲",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "音乐之声"
+        }
+    },
+    "NLU07120": {
+        "text": "赶紧拨到邢台爱尚986正播乐听986假日版呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "乐听986假日版",
+            "channel": "邢台爱尚986"
+        }
+    },
+    "NLU07130": {
+        "text": "我想听福建人民新闻广播电台，这个频率是FM89.5",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "福建人民新闻广播电台",
+            "frequency": "FM89.5"
+        }
+    },
+    "NLU07134": {
+        "text": "你能收听一下频率是一零六点七的大连音乐吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "大连音乐",
+            "frequency": "一零六点七"
+        }
+    },
+    "NLU07137": {
+        "text": "听吴雪兰主持的吴观大局",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "吴观大局",
+            "artist": "吴雪兰"
+        }
+    },
+    "NLU07142": {
+        "text": "请立即播放三好坏男孩",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "三好坏男孩"
+        }
+    },
+    "NLU07150": {
+        "text": "找到荣磊和悠悠的磊磊热线",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "磊磊热线",
+            "artist": [
+                "荣磊",
+                "悠悠"
+            ]
+        }
+    },
+    "NLU07155": {
+        "text": "听生活台吧找太原老年之声的健康之家",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "健康之家",
+            "channel": "太原老年之声"
+        }
+    },
+    "NLU07158": {
+        "text": "是不是能继续前面的频率九七点八的河源人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "河源人民广播电台",
+            "frequency": "九七点八"
+        }
+    },
+    "NLU07161": {
+        "text": "等会能把常州人民广播电台调过来吗，这个频率是FM90.0",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "常州人民广播电台",
+            "frequency": "FM90.0"
+        }
+    },
+    "NLU07175": {
+        "text": "重新播放今天北京人民广播电台的新闻",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京人民广播电台"
+        }
+    },
+    "NLU07183": {
+        "text": "我要听老妖主持的素人广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "老妖",
+            "name": "素人广播"
+        }
+    },
+    "NLU07189": {
+        "text": "找蜻蜓FM放一会儿科学有故事",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "科学有故事",
+            "channel": "蜻蜓FM"
+        }
+    },
+    "NLU07203": {
+        "text": "104点2蚌埠经济广播电台的节目快帮我放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "蚌埠经济广播电台",
+            "frequency": "104点2"
+        }
+    },
+    "NLU07207": {
+        "text": "是不是能来一个林万成主持的神州之声啊",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "林万成",
+            "name": "神州之声"
+        }
+    },
+    "NLU07208": {
+        "text": "播放喜马拉雅电台的歌曲",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "喜马拉雅电台"
+        }
+    },
+    "NLU07231": {
+        "text": "郑晶姐姐主持的中国之声帮我放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "中国之声",
+            "artist": "郑晶"
+        }
+    },
+    "NLU07233": {
+        "text": "西马讲书这个电台，就楚悦主持的那个播放一下给我吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "楚悦",
+            "name": "西马讲书"
+        }
+    },
+    "NLU07234": {
+        "text": "爱上男声FM可以播放出来吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "爱上男声FM"
+        }
+    },
+    "NLU07239": {
+        "text": "我要听频率是九零点三的英语电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "英语电台",
+            "frequency": "九零点三"
+        }
+    },
+    "NLU07244": {
+        "text": "音乐类的广州人民广播电台金曲广播收听一下吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "金曲广播",
+            "channel": "广州人民广播电台"
+        }
+    },
+    "NLU07257": {
+        "text": "搜索一下南京新闻广播的大城小爱这个电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "南京新闻广播",
+            "name": "大城小爱"
+        }
+    },
+    "NLU07261": {
+        "text": "频率是八九点三的湛江人民电台可以给我听一个吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "湛江人民电台",
+            "frequency": "八九点三"
+        }
+    },
+    "NLU07262": {
+        "text": "能把频率是一零零点一的山东人民广播电台经济频道播放给我看吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "山东人民广播电台",
+            "frequency": "一零零点一"
+        }
+    },
+    "NLU07265": {
+        "text": "我想听一个频率是九三点一的大连都市",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "大连都市",
+            "frequency": "九三点一"
+        }
+    },
+    "NLU07274": {
+        "text": "今年的音乐类电台节目随机来一个可以吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "音乐类电台"
+        }
+    },
+    "NLU07291": {
+        "text": "听会儿FM88点1的河南人民台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "河南人民台",
+            "frequency": "FM88点1"
+        }
+    },
+    "NLU07299": {
+        "text": "请放晓华主持的芳华绝代",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "晓华",
+            "name": "芳华绝代"
+        }
+    },
+    "NLU07309": {
+        "text": "赶快给我转到中央广播电台的新闻联播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央广播电台"
+        }
+    },
+    "NLU07312": {
+        "text": "87点7孝感电台交通音乐台帮我放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "孝感电台交通音乐台",
+            "frequency": "87点7"
+        }
+    },
+    "NLU07318": {
+        "text": "是不是能连着上次听的汕头人民广播电台经济台频率是一零二点五",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "汕头人民广播电台",
+            "frequency": "一零二点五"
+        }
+    },
+    "NLU07323": {
+        "text": "音乐类的大连音乐收听给我听呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "大连音乐"
+        }
+    },
+    "NLU07338": {
+        "text": "闻天主持的文艺之声是几点开始",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "闻天",
+            "name": "文艺之声"
+        }
+    },
+    "NLU07350": {
+        "text": "找到FM88点7的中国国际广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中国国际广播电台",
+            "frequency": "FM88点7"
+        }
+    },
+    "NLU07354": {
+        "text": "收听石澈主持的经济之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "石澈",
+            "name": "经济之声"
+        }
+    },
+    "NLU07376": {
+        "text": "麻烦拨到海南音乐广播听欢乐车厢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "欢乐车厢",
+            "channel": "海南音乐广播"
+        }
+    },
+    "NLU07392": {
+        "text": "FM100.7里有什么有意思的新闻听一听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM100.7"
+        }
+    },
+    "NLU07404": {
+        "text": "我想听我爱琼剧在海南民生广播就是FM92点2",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "我爱琼剧",
+            "channel": "海南民生广播",
+            "frequency": "FM92点2"
+        }
+    },
+    "NLU07416": {
+        "text": "我想听频率是九六点六的雨花人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "雨花人民广播电台",
+            "frequency": "九六点六"
+        }
+    },
+    "NLU07424": {
+        "text": "来一个频率是九六点七的中山人民广播电台听听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中山人民广播电台",
+            "frequency": "九六点七"
+        }
+    },
+    "NLU07428": {
+        "text": "给我找一下FM97.2上海戏剧曲艺广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "上海戏剧曲艺广播",
+            "frequency": "FM97.2"
+        }
+    },
+    "NLU07459": {
+        "text": "能来黎春主持的西马讲书吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "黎春",
+            "name": "西马讲书"
+        }
+    },
+    "NLU07461": {
+        "text": "频率是九九点零的天津人民广播电台音乐台给我收听一下可以不",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "天津人民广播电台音乐台",
+            "frequency": "九九点零"
+        }
+    },
+    "NLU07467": {
+        "text": "辽宁电台王玲主持的节目帮我放一下吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "辽宁电台",
+            "artist": "王玲"
+        }
+    },
+    "NLU07476": {
+        "text": "收听黄河的交通新闻调一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "黄河",
+            "name": "交通新闻"
+        }
+    },
+    "NLU07485": {
+        "text": "听听余泳欣主持的念念旧就那个电台节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "念念旧",
+            "artist": "余泳欣"
+        }
+    },
+    "NLU07489": {
+        "text": "北京文艺广播的小说连播来一个",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京文艺广播"
+        }
+    },
+    "NLU07491": {
+        "text": "麻烦找个正放越剧的曲艺电台听",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU07503": {
+        "text": "我想你给我听听频率是九六点二的广州人民广播电台风云962",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "风云962",
+            "channel": "广州人民广播电台",
+            "frequency": "九六点二"
+        }
+    },
+    "NLU07509": {
+        "text": "调到宋孔文主持的北京广播电视台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "宋孔文",
+            "channel": "北京广播电视台"
+        }
+    },
+    "NLU07512": {
+        "text": "调到1004快乐不空挡是秦皇岛交通广播的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "1004快乐不空挡",
+            "channel": "秦皇岛交通广播"
+        }
+    },
+    "NLU07515": {
+        "text": "我要听程一电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "程一电台"
+        }
+    },
+    "NLU07519": {
+        "text": "成都电台新闻广播能听吧就调到FM99点8吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "成都电台新闻广播",
+            "frequency": "FM99点8"
+        }
+    },
+    "NLU07525": {
+        "text": "放北京交通广播的路况信息",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "路况信息",
+            "channel": "北京交通广播"
+        }
+    },
+    "NLU07527": {
+        "text": "收听北京都市之声的北京不眠夜",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "北京不眠夜",
+            "channel": "北京都市之声"
+        }
+    },
+    "NLU07528": {
+        "text": "音乐就听经典音乐广播里的哦",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "经典音乐广播"
+        }
+    },
+    "NLU07529": {
+        "text": "放一下爱上男声FM，viva主持的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "viva",
+            "name": "爱上男声FM"
+        }
+    },
+    "NLU07537": {
+        "text": "我需要听一个文艺类的武汉人民广播电台文艺台呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "武汉人民广播电台文艺台"
+        }
+    },
+    "NLU07548": {
+        "text": "给大人的睡前童话帮我放一下这个节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "给大人的睡前童话"
+        }
+    },
+    "NLU07555": {
+        "text": "听一听中国之声的新闻",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "中国之声"
+        }
+    },
+    "NLU07568": {
+        "text": "能把安然主持的经济之声继续收听吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "安然",
+            "name": "经济之声"
+        }
+    },
+    "NLU07569": {
+        "text": "播放FM92点1频率的天天现世报",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "天天现世报",
+            "frequency": "FM92点1"
+        }
+    },
+    "NLU07572": {
+        "text": "给我放一下北京新闻广播的新闻热线",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "新闻热线",
+            "channel": "北京新闻广播"
+        }
+    },
+    "NLU07601": {
+        "text": "找到FM88点9听郑州人民城市台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "郑州人民城市台",
+            "frequency": "FM88点9"
+        }
+    },
+    "NLU07603": {
+        "text": "频率是一零零点九的四会电台听一个吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "四会电台",
+            "frequency": "一零零点九"
+        }
+    },
+    "NLU07619": {
+        "text": "现在是晚上10点我要听人在职场",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "人在职场"
+        }
+    },
+    "NLU07624": {
+        "text": "我想听8点开始的城市点COM是马甜的主播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "城市点COM",
+            "artist": "马甜"
+        }
+    },
+    "NLU07630": {
+        "text": "中央人民广播电台的神州夜航快帮我放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "神州夜航",
+            "channel": "中央人民广播电台"
+        }
+    },
+    "NLU07631": {
+        "text": "调频到郭威的原创歌曲分享",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "郭威",
+            "name": "原创歌曲分享"
+        }
+    },
+    "NLU07672": {
+        "text": "中央交通广播的节目随便播一个，要凡珂主持的哦",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央交通广播",
+            "artist": "凡珂"
+        }
+    },
+    "NLU07676": {
+        "text": "频率是一零一点五的睡不醒电台可以收听吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "睡不醒电台",
+            "frequency": "一零一点五"
+        }
+    },
+    "NLU07678": {
+        "text": "保定交通广播1048车友会帮我播放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "1048车友会",
+            "channel": "保定交通广播"
+        }
+    },
+    "NLU07680": {
+        "text": "大吉利车队拨过去是电台节目啊路灵灵主持的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "大吉利车队",
+            "artist": "路灵灵"
+        }
+    },
+    "NLU07687": {
+        "text": "上海电台文艺频率开心调频帮我播一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "开心调频",
+            "channel": "上海电台文艺频率"
+        }
+    },
+    "NLU07689": {
+        "text": "我想你给我播放一下最新的小黄瓜电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "小黄瓜"
+        }
+    },
+    "NLU07740": {
+        "text": "帮我放一下肇庆市广播电台FM94点9旅游之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "旅游之声",
+            "channel": "肇庆市广播电台",
+            "frequency": "FM94点9"
+        }
+    },
+    "NLU07743": {
+        "text": "给我播一个音乐电台经典947吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "经典947"
+        }
+    },
+    "NLU07746": {
+        "text": "我要听成都电台下午2点的周末就是乐在FM94点6",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "周末就是乐",
+            "channel": "成都电台",
+            "frequency": "FM94点6"
+        }
+    },
+    "NLU07748": {
+        "text": "放一段儿吴晓波频道是喜马拉雅的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "吴晓波频道",
+            "channel": "喜马拉雅"
+        }
+    },
+    "NLU07752": {
+        "text": "放一个文艺类的襄樊文艺台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "襄樊文艺台"
+        }
+    },
+    "NLU07756": {
+        "text": "现在请收听北京文艺广播的评书联播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "评书联播",
+            "channel": "北京文艺广播"
+        }
+    },
+    "NLU07765": {
+        "text": "收听主持人是月明的音乐排行榜",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "月明",
+            "name": "音乐排行榜"
+        }
+    },
+    "NLU07772": {
+        "text": "你能给我收听一个交通类的上海电台交通频率吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "上海电台"
+        }
+    },
+    "NLU07780": {
+        "text": "收听北京交通广播的一路畅通",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "一路畅通",
+            "channel": "北京交通广播"
+        }
+    },
+    "NLU07783": {
+        "text": "我想继续听一会频率是九二点八的广东卫星广播可以吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "广东卫星广播",
+            "frequency": "九二点八"
+        }
+    },
+    "NLU07787": {
+        "text": "请收听音乐类的黄石交通音乐台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "黄石交通音乐台"
+        }
+    },
+    "NLU07798": {
+        "text": "我想听频率是九二点八的山东文艺广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "山东文艺广播电台",
+            "frequency": "九二点八"
+        }
+    },
+    "NLU07808": {
+        "text": "给我放一个频率是九七点三的睡不着电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "睡不着电台",
+            "frequency": "九七点三"
+        }
+    },
+    "NLU07844": {
+        "text": "立刻打开中央人民广播电台老年之声海洋主持的节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播电台老年之声",
+            "artist": "海洋"
+        }
+    },
+    "NLU07865": {
+        "text": "听一下重庆之声的身边说法",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "身边说法",
+            "channel": "重庆之声"
+        }
+    },
+    "NLU07869": {
+        "text": "李梓萌主持的电台节目帮我放一个吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "李梓萌"
+        }
+    },
+    "NLU07876": {
+        "text": "我要听庄丽主持的城市之光",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "庄丽",
+            "name": "城市之光"
+        }
+    },
+    "NLU07878": {
+        "text": "把福建新闻广播给我找出来新闻台的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "福建新闻广播"
+        }
+    },
+    "NLU07880": {
+        "text": "大医生来了这个节目是袁方主播，搜一下河南新闻广播里有没有",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "大医生来了",
+            "artist": "袁方",
+            "channel": "河南新闻广播"
+        }
+    },
+    "NLU07916": {
+        "text": "方鉴的上海，你早！适合现在听，可以在上海交通广播里找",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "方鉴",
+            "name": "上海，你早！",
+            "channel": "上海交通广播"
+        }
+    },
+    "NLU07918": {
+        "text": "放频率是一零三点五的若素电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "若素电台",
+            "frequency": "一零三点五"
+        }
+    },
+    "NLU07935": {
+        "text": "找到石家庄音乐广播让我听音乐控in car",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "音乐控in car",
+            "channel": "石家庄音乐广播"
+        }
+    },
+    "NLU07938": {
+        "text": "找一下上海戏剧曲艺广播的昆曲节目播放",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "上海戏剧曲艺广播"
+        }
+    },
+    "NLU07944": {
+        "text": "华夏之声电台找到贾雯演播的节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "华夏之声电台",
+            "artist": "贾雯"
+        }
+    },
+    "NLU07945": {
+        "text": "麻烦帮我找个曲艺电台正放游西湖的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "游西湖"
+        }
+    },
+    "NLU07953": {
+        "text": "查到有齐莺在中华之声近期的新节目就放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "齐莺",
+            "channel": "中华之声"
+        }
+    },
+    "NLU07956": {
+        "text": "听听小娅跟杨洋的乐活达人",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "乐活达人",
+            "artist": [
+                "小娅",
+                "杨洋"
+            ]
+        }
+    },
+    "NLU07974": {
+        "text": "来一个文艺类的北京人民广播电台文艺台吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京人民广播电台文艺台"
+        }
+    },
+    "NLU07983": {
+        "text": "帮我把石家庄新闻广播中的经济新干线重播一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "石家庄新闻广播",
+            "name": "经济新干线"
+        }
+    },
+    "NLU07990": {
+        "text": "给拨到清晨音乐台我要听music伴你行",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "music伴你行",
+            "channel": "清晨音乐台"
+        }
+    },
+    "NLU08001": {
+        "text": "我想要听星阑的风茶馆电台节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "星阑",
+            "name": "风茶馆"
+        }
+    },
+    "NLU08031": {
+        "text": "听那个FM99点6的中央人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中央人民广播电台",
+            "frequency": "FM99点6"
+        }
+    },
+    "NLU08041": {
+        "text": "今儿周日听音乐万花筒周末版就在上海动感101",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "音乐万花筒周末版",
+            "channel": "上海动感101"
+        }
+    },
+    "NLU08042": {
+        "text": "调到巴州电台蒙古语广播的心灵有约",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "心灵有约",
+            "channel": "巴州电台蒙古语广播"
+        }
+    },
+    "NLU08057": {
+        "text": "我想听音乐电台音乐之声可以吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "音乐之声"
+        }
+    },
+    "NLU08058": {
+        "text": "能给我播放一下动感101这个音乐电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "动感101"
+        }
+    },
+    "NLU08067": {
+        "text": "南京体育广播的天天足球丁喆主持的听这个",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "天天足球",
+            "channel": "南京体育广播",
+            "artist": "丁喆"
+        }
+    },
+    "NLU08074": {
+        "text": "周六有海阳的文艺之声吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "海阳",
+            "name": "文艺之声"
+        }
+    },
+    "NLU08084": {
+        "text": "立马给我调回至FM106.1的中国之声频道",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM106.1",
+            "name": "中国之声"
+        }
+    },
+    "NLU08109": {
+        "text": "找到城市音乐精灵就周六日下午2点的那个",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "城市音乐精灵"
+        }
+    },
+    "NLU08119": {
+        "text": "我想听毛强主持的华夏之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "毛强",
+            "name": "华夏之声"
+        }
+    },
+    "NLU08123": {
+        "text": "科学有故事是网络电台的吧拨那个给我",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "科学有故事"
+        }
+    },
+    "NLU08128": {
+        "text": "是不是可以收听交通类的重庆交通电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "重庆交通电台"
+        }
+    },
+    "NLU08135": {
+        "text": "我想听鱼歌主持的未来星主播调到FM95点7",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "未来星主播",
+            "frequency": "FM95点7",
+            "artist": "鱼歌"
+        }
+    },
+    "NLU08138": {
+        "text": "调到客家天地听听在CNR神州之声呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "客家天地",
+            "channel": "CNR神州之声"
+        }
+    },
+    "NLU08144": {
+        "text": "颜涛主持的都市之声给我播放一下可以吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "颜涛",
+            "name": "都市之声"
+        }
+    },
+    "NLU08145": {
+        "text": "教育类的广东人民广播电台教育之声播放给我吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "教育之声",
+            "channel": "广东人民广播电台"
+        }
+    },
+    "NLU08194": {
+        "text": "大连音乐这个音乐电台播放一下吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "大连音乐"
+        }
+    },
+    "NLU08196": {
+        "text": "能不能来一个维杨主持的中华之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "维杨",
+            "name": "中华之声"
+        }
+    },
+    "NLU08197": {
+        "text": "频率是九二点九的肇庆人民广播电台第一台是不是能收听一个呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "庆人民广播电台第一台",
+            "frequency": "九二点九"
+        }
+    },
+    "NLU08200": {
+        "text": "马上播放FM90点3都市110",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "都市110",
+            "frequency": "FM90点3"
+        }
+    },
+    "NLU08205": {
+        "text": "FM98点6的968全球资讯赶紧帮我播一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "968全球资讯",
+            "frequency": "FM98点6"
+        }
+    },
+    "NLU08225": {
+        "text": "每天中午准时播放上海戏剧曲艺广播电台中的越沪艺苑",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "上海戏剧曲艺广播电台",
+            "name": "越沪艺苑"
+        }
+    },
+    "NLU08227": {
+        "text": "是不是能继续来收听卢迪主持的经济之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "卢迪",
+            "name": "经济之声"
+        }
+    },
+    "NLU08237": {
+        "text": "请帮我放一下吴俊圻主持的今夜地三鲜",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "今夜地三鲜",
+            "artist": "吴俊圻"
+        }
+    },
+    "NLU08248": {
+        "text": "搜一搜大湾区之声电台有什么音乐",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "大湾区之声"
+        }
+    },
+    "NLU08250": {
+        "text": "到7点了快调到北京故事广播我接着听娱乐档案",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "娱乐档案",
+            "channel": "北京故事广播"
+        }
+    },
+    "NLU08259": {
+        "text": "我想听世说新语",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "世说新语"
+        }
+    },
+    "NLU08272": {
+        "text": "想听一下英文歌 找FM88点7",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM88点7"
+        }
+    },
+    "NLU08276": {
+        "text": "音乐电台要正放摇滚的",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU08288": {
+        "text": "打开FM88.7收听近期的新音乐",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM88.7"
+        }
+    },
+    "NLU08289": {
+        "text": "你可以播放一个音乐类的湖北人民广播电台交通音乐台吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "湖北人民广播电台交通音乐台"
+        }
+    },
+    "NLU08293": {
+        "text": "是不是能来一个频率是九零点九的襄樊新闻台啊",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "襄樊新闻台",
+            "frequency": "九零点九"
+        }
+    },
+    "NLU08315": {
+        "text": "找下午6点的畅游970",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "畅游970"
+        }
+    },
+    "NLU08326": {
+        "text": "4点了我要听G速车世界",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "G速车世界"
+        }
+    },
+    "NLU08327": {
+        "text": "王元的我爱听音乐在上海交通广播中，听一下这个",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "王元",
+            "name": "我爱听音乐",
+            "channel": "上海交通广播"
+        }
+    },
+    "NLU08332": {
+        "text": "听保定新闻广播的新闻路路通",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "新闻路路通",
+            "channel": "保定新闻广播"
+        }
+    },
+    "NLU08352": {
+        "text": "我需要听叶痕的我所理解的生活呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "叶痕",
+            "name": "我所理解的生活"
+        }
+    },
+    "NLU08365": {
+        "text": "6点了调到秦皇岛体育音乐广播去",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "秦皇岛体育音乐广播"
+        }
+    },
+    "NLU08369": {
+        "text": "请给我放一下广播王璐的城市零距离",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "王璐",
+            "name": "城市零距离"
+        }
+    },
+    "NLU08381": {
+        "text": "给我调到咨询热线，就是刘杨主持的那个",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "刘杨",
+            "name": "咨询热线"
+        }
+    },
+    "NLU08433": {
+        "text": "我想听一个经济类的扬州人民广播电台经济台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "扬州人民广播电台经济台"
+        }
+    },
+    "NLU08437": {
+        "text": "调到全国汽车音乐榜主持是陈嘉慧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "全国汽车音乐榜",
+            "artist": "陈嘉慧"
+        }
+    },
+    "NLU08449": {
+        "text": "调到北京新闻广播 频率是十零点三",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京新闻广播",
+            "frequency": "十零点三"
+        }
+    },
+    "NLU08454": {
+        "text": "频率是九九点零的楚天广播电台卫星广播收听一个可以吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "楚天广播电台卫星广播",
+            "frequency": "九九点零"
+        }
+    },
+    "NLU08460": {
+        "text": "我要听广州音乐之声调到FM102点7",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "广州音乐之声",
+            "frequency": "FM102点7"
+        }
+    },
+    "NLU08475": {
+        "text": "是不是能把北京人民广播电台交通台这个交通类电台播放一下呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京人民广播电台交通台"
+        }
+    },
+    "NLU08480": {
+        "text": "请收听千卉的惠子电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "千卉",
+            "channel": "惠子电台"
+        }
+    },
+    "NLU08482": {
+        "text": "听会儿刘晓的大军第一时间",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "大军第一时间",
+            "artist": "刘晓"
+        }
+    },
+    "NLU08497": {
+        "text": "哈尔滨交通广播FM92点5的节目快帮我放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "哈尔滨交通广播",
+            "frequency": "FM92点5"
+        }
+    },
+    "NLU08505": {
+        "text": "请收听频率是一零三点九的1039交通服务热线",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "交通服务热线",
+            "frequency": [
+                "一零三点九",
+                "1039"
+            ]
+        }
+    },
+    "NLU08512": {
+        "text": "可以给我收听一个财经类大连财经吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "大连财经"
+        }
+    },
+    "NLU08529": {
+        "text": "频率是八七点五丰辽宁经济给我收听一下可以吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "丰辽宁经济",
+            "frequency": "八七点五"
+        }
+    },
+    "NLU08549": {
+        "text": "放一下向菲主持的神州夜航",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "神州夜航",
+            "artist": "向菲"
+        }
+    },
+    "NLU08559": {
+        "text": "能把频道收到沈阳新闻广播李娜的沈阳趣事吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "沈阳新闻广播",
+            "artist": "李娜",
+            "name": "沈阳趣事"
+        }
+    },
+    "NLU08568": {
+        "text": "来一个频率是九六点八的重庆新闻广播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "重庆新闻广播",
+            "frequency": "九六点八"
+        }
+    },
+    "NLU08620": {
+        "text": "请收听北京城市服务管理广播的市民热线",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "市民热线",
+            "channel": "北京城市服务管理广播"
+        }
+    },
+    "NLU08624": {
+        "text": "栋威正在演播豫广新闻，马上听一下喔",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "栋威",
+            "channel": "豫广新闻"
+        }
+    },
+    "NLU08630": {
+        "text": "给我找到12点的快乐随行",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "快乐随行"
+        }
+    },
+    "NLU08647": {
+        "text": "来一个新闻类的990新闻频率",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "990"
+        }
+    },
+    "NLU08650": {
+        "text": "我想听中国之声的千里共良宵节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "中国之声",
+            "name": "千里共良宵"
+        }
+    },
+    "NLU08653": {
+        "text": "跳到上海戏剧广播中的越剧大观园",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "上海戏剧广播"
+        }
+    },
+    "NLU08671": {
+        "text": "给我放一下鲁伟的装修那些事",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "鲁伟",
+            "name": "装修那些事"
+        }
+    },
+    "NLU08685": {
+        "text": "我要听一会频率是一零三点八的山东文艺广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "山东文艺广播电台",
+            "frequency": "一零三点八"
+        }
+    },
+    "NLU08689": {
+        "text": "播放董斌主持的情感咨询热线",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "董斌",
+            "name": "情感咨询热线"
+        }
+    },
+    "NLU08699": {
+        "text": "想听四川广播电台的新闻联播",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "四川广播电台"
+        }
+    },
+    "NLU08716": {
+        "text": "我想听音乐类的十堰音乐交通台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "十堰音乐交通台"
+        }
+    },
+    "NLU08724": {
+        "text": "收听一下交通类的济南人民广播电台交通台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "济南人民广播电台交通台"
+        }
+    },
+    "NLU08727": {
+        "text": "我们现在想收听于芳主持的遥远的你",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "于芳",
+            "name": "遥远的你"
+        }
+    },
+    "NLU08746": {
+        "text": "是否能够给我播放一个薛冰主持的南风窗电台呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "薛冰",
+            "name": "南风窗电台"
+        }
+    },
+    "NLU08753": {
+        "text": "我想你给我收听一下频率是九六点一的惠东电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "惠东电台",
+            "frequency": "九六点一"
+        }
+    },
+    "NLU08757": {
+        "text": "给我收听音乐类的济南人民广播电台交通音乐台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "济南人民广播电台交通音乐台"
+        }
+    },
+    "NLU08764": {
+        "text": "请帮我播放一下河南新闻广播的新闻故事会",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "新闻故事会",
+            "channel": "河南新闻广播"
+        }
+    },
+    "NLU08775": {
+        "text": "放一个频率是九二点三的溧水人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "溧水人民广播电台",
+            "frequency": "九二点三"
+        }
+    },
+    "NLU08783": {
+        "text": "我想你给我播放一下2021年的爱上男声FM呢",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "爱上男声FM"
+        }
+    },
+    "NLU08791": {
+        "text": "蜻蜓FM的科学有故事给我放一会儿",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "科学有故事",
+            "channel": "蜻蜓FM"
+        }
+    },
+    "NLU08797": {
+        "text": "FM94点5北京新闻广播的节目帮我放一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "北京新闻广播",
+            "frequency": "FM94点5"
+        }
+    },
+    "NLU08803": {
+        "text": "请调到FM94点0我要听那个四川电台经济频率",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "四川电台经济频率",
+            "frequency": "FM94点0"
+        }
+    },
+    "NLU08843": {
+        "text": "张东主持的西马讲书播放出来",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "张东",
+            "name": "西马讲书"
+        }
+    },
+    "NLU08852": {
+        "text": "能不能来一个音乐电台魅力103",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "魅力103"
+        }
+    },
+    "NLU08855": {
+        "text": "播到FM88点7我想听那儿的英文歌",
+        "intent": "Radio-Listen",
+        "slots": {
+            "frequency": "FM88点7"
+        }
+    },
+    "NLU08856": {
+        "text": "放一个经济类的连云港经济广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "连云港经济广播电台"
+        }
+    },
+    "NLU08861": {
+        "text": "我想听一个频率是一零三点六的广东人民广播电台城市之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "城市之声",
+            "channel": "广东人民广播电台",
+            "frequency": "一零三点六"
+        }
+    },
+    "NLU08875": {
+        "text": "调到南京经济广播，我要听财经类的新闻节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "南京经济广播"
+        }
+    },
+    "NLU08892": {
+        "text": "我想知道青山香港电台第五台在播放什么",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "青山香港电台第五台"
+        }
+    },
+    "NLU08898": {
+        "text": "找阅读之声频道听一下作家文库",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "作家文库",
+            "channel": "阅读之声"
+        }
+    },
+    "NLU08902": {
+        "text": "频率是九九点三的广东人民广播电台音乐台给我听听可以不",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "广东人民广播电台音乐台",
+            "frequency": "九九点三"
+        }
+    },
+    "NLU08904": {
+        "text": "陈嘉慧主持的电台节目车麟时代给我播放",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "车麟时代",
+            "artist": "陈嘉慧"
+        }
+    },
+    "NLU08913": {
+        "text": "马上播放瑄瑄主持的海洋瑄瑄车友会",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "海洋瑄瑄车友会",
+            "artist": "瑄瑄"
+        }
+    },
+    "NLU08914": {
+        "text": "我想听交通类的重庆交通电台，你收听一下",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "重庆交通电台"
+        }
+    },
+    "NLU08915": {
+        "text": "找到阿痣电台主持的随便一个情感节目",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "阿痣电台"
+        }
+    },
+    "NLU08934": {
+        "text": "浙江之声的财经朋友圈给我放一下呗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "财经朋友圈",
+            "channel": "浙江之声"
+        }
+    },
+    "NLU08937": {
+        "text": "收听一下体育类的大连体育电台节目吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "大连体育"
+        }
+    },
+    "NLU08941": {
+        "text": "东方电台音乐频率经典947给我放一下吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "经典947",
+            "channel": "东方电台音乐频率"
+        }
+    },
+    "NLU08943": {
+        "text": "找个现在放英文歌儿的电台",
+        "intent": "Radio-Listen",
+        "slots": {}
+    },
+    "NLU08946": {
+        "text": "播放959年代音乐怀旧好声音",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "959年代音乐怀旧好声音"
+        }
+    },
+    "NLU08948": {
+        "text": "我想听FM101.8的都市之声",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "都市之声",
+            "frequency": "FM101.8"
+        }
+    },
+    "NLU08963": {
+        "text": "立刻找到 频率是九零点零的第三套节目文艺调频给我听听",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "第三套节目文艺",
+            "frequency": "九零点零"
+        }
+    },
+    "NLU08969": {
+        "text": "预约广安青年广播电台的节目青年说",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "广安青年广播电台",
+            "name": "青年说"
+        }
+    },
+    "NLU08984": {
+        "text": "给我找到FM88点7的崇明区人民广播电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "崇明区人民广播电台",
+            "frequency": "FM88点7"
+        }
+    },
+    "NLU09003": {
+        "text": "我想听开浩御书房的疯狂的投资",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "开浩",
+            "name": "疯狂的投资"
+        }
+    },
+    "NLU09017": {
+        "text": "请找到中国之声播放千里共良宵",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "千里共良宵",
+            "channel": "中国之声"
+        }
+    },
+    "NLU09026": {
+        "text": "收听频率是九七点四的古典也流行",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "古典也流行",
+            "frequency": "九七点四"
+        }
+    },
+    "NLU09036": {
+        "text": "频率是九一点一的天津人民广播电台生活台收听一下吧",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "天津人民广播电台",
+            "frequency": "九一点一"
+        }
+    },
+    "NLU09041": {
+        "text": "拨到春叔电台主持的那个频道",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "春叔电台"
+        }
+    },
+    "NLU09042": {
+        "text": "请给我续听春天的春天电台",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "春天",
+            "channel": "春天电台"
+        }
+    },
+    "NLU09044": {
+        "text": "能给我把2021年的爱上男声FM放一下啊",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "爱上男声FM"
+        }
+    },
+    "NLU09048": {
+        "text": "要粤语电台就听南粤之声吧那好像是粤语的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "南粤之声"
+        }
+    },
+    "NLU09064": {
+        "text": "听上海戏剧曲艺广播唱戏曲",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "上海戏剧曲艺广播"
+        }
+    },
+    "NLU09069": {
+        "text": "你能把杜月媚主持的中华之声播放出来吗",
+        "intent": "Radio-Listen",
+        "slots": {
+            "artist": "杜月媚",
+            "name": "中华之声"
+        }
+    },
+    "NLU09072": {
+        "text": "找生活台听山西健康之声的健康达人",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "健康达人",
+            "channel": "山西健康之声"
+        }
+    },
+    "NLU09090": {
+        "text": "音乐电台帮我找一个重庆音乐广播就可以",
+        "intent": "Radio-Listen",
+        "slots": {
+            "channel": "重庆音乐广播"
+        }
+    },
+    "NLU09091": {
+        "text": "找个曲艺电台正放三滴血的",
+        "intent": "Radio-Listen",
+        "slots": {
+            "name": "三滴血"
+        }
+    }
+}

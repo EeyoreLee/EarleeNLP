@@ -10,3 +10,4 @@ competition/
 logs/
 cache/
 need_to_defined*
+notebook/*.json

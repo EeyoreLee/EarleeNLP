@@ -146,8 +146,10 @@ SUB_CLS_LABEL = [
 NER_CORRESPONDENCE = {
     'Travel-Query': ['datetime_date', 'departure', 'datetime_time', 'destination'],
     'Music-Play': ['instrument', 'artist', 'age', 'album', 'song'],
-    'FilmTele-Play': ['name', 'artist', 'play_setting', 'age', 'region', 'tag'],
-    'Video-Play': ['name', 'region', 'datetime_time', 'datetime_date'],
+    # 'FilmTele-Play': ['name', 'artist', 'play_setting', 'age', 'region', 'tag'],
+    'FilmTele-Play': ['name', 'artist', 'play_setting', 'age', 'tag'],
+    # 'Video-Play': ['name', 'region', 'datetime_time', 'datetime_date'],
+    'Video-Play': ['name', 'datetime_time', 'datetime_date'],
     'Radio-Listen': ['name', 'frequency', 'artist', 'channel'],
     'HomeAppliance-Control': ['appliance', 'details'],
     'Weather-Query': ['datetime_date', 'datetime_time', 'city'],
@@ -343,13 +345,18 @@ class NlpGoGo(object):
     def __init__(self, cls_model_path, cls_config_path, ner_model_path, ood_model_path, ood_bert_model_path=None, \
                 ood_roberta_model_path=None, query_type_model_path=None, command_model_path=None, ood_bert_6000_model_path=None, \
                 ood_roberta_6000_model_path=None, ood_fake_roberta_6000_model_path=None, ood_fake_roberta_2700_model_path=None, \
-                ood_macbert_model_path=None, device='cuda', max_length=150, policy:dict=None, ood_config_path=None, cls_ext_model_path=None):
+                ood_macbert_model_path=None, device='cuda', max_length=150, policy:dict=None, ood_config_path=None, cls_ext_model_path=None, \
+                flat_alarm_update_model_path=None, flat_all_model_path=None,device_map=None):
         """
         policy = {
                 'cls_model': 'bert',
                 'only_cls': False,
                     }
         """
+        # ner flat detached model path
+        self.device_map = device_map
+        self.flat_alarm_update_model_path = flat_alarm_update_model_path
+
         self.yangjie_rich_pretrain_word_path = '/root/pretrain-models/flat/ctb.50d.vec'
         self.yangjie_rich_pretrain_char_and_word_path = '/root/pretrain-models/flat/yangjie_word_char_mix.txt'
         self.device = device
@@ -389,6 +396,7 @@ class NlpGoGo(object):
         self.command_model = torch.load(command_model_path, map_location=torch.device(device))
 
     def is_ood(self, text) -> bool:
+        # return False
         if self.policy['ood_model'] == 'ensemble':
             vote = defaultdict(float)
             input_ids = []
@@ -665,6 +673,7 @@ class NlpGoGo(object):
             return True
 
     def classify(self, text):
+        # return INTENT[10]
         id2label = {idx: label for idx, label in enumerate(INTENT)}
         if self.policy['cls_model'] == 'bert':
             input_ids = []
@@ -1611,8 +1620,22 @@ class NlpGoGo(object):
         id2query_type = {v: k for k, v in COMMAND2IDX.items()}
         return id2query_type[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
 
+    def flat_ner_all(self, intent='all', real_text_list=None):
+        if intent == 'all':
+            return self._flat_ner_all(self.ner_model, real_text_list, with_placeholder=False)
+        intent2model = {
+            'Alarm-Update': self.flat_alarm_update_model_path,
+        }
+        inent2train_path = {
+            'Alarm-Update': "/ai/223/person/lichunyu/datasets/dataf/seq_label/Alarm-Update_detached.train"
+        }
+        intent2dev_path = {
+            "Alarm-Update": "/ai/223/person/lichunyu/datasets/dataf/seq_label/Alarm-Update_detached.test"
+        }
+        model = torch.load(intent2model[intent], map_location=torch.device(self.device_map[intent]))
+        return self._flat_ner_all(model, real_text_list, train_path=inent2train_path[intent], dev_path=intent2dev_path[intent])
 
-    def flat_ner_all(self, real_text_list):
+    def _flat_ner_all(self, _model, real_text_list, train_path=None, dev_path=None, with_placeholder=True):
         slots_list = []
 
 
@@ -1622,6 +1645,7 @@ class NlpGoGo(object):
             '/root/pretrain-models/flat/gigaword_chn.all.a2b.bi.ite50.vec',
             _refresh=True,
             index_token=False,
+            with_placeholder=with_placeholder
             # test_path=tmp_test_path,
         )
 
@@ -1641,7 +1665,8 @@ class NlpGoGo(object):
                                                                     word_char_mix_embedding_path=self.yangjie_rich_pretrain_char_and_word_path,
                                                                     number_normalized=0,
                                                                     lattice_min_freq=1,
-                                                                    only_train_min_freq=True
+                                                                    only_train_min_freq=True,
+                                                                    with_placeholder=with_placeholder
                                                                     )
 
         def collate_func(batch_dict):
@@ -1674,7 +1699,7 @@ class NlpGoGo(object):
             collate_fn=collate_func
         )
 
-        self.ner_model.eval()
+        _model.eval()
         for step, (batch, real_text) in enumerate(zip(dev_dataloader, real_text_list)):
             #TODO BERT embedding 前20 epoch 冻结
             # chars = batch[0].cuda()
@@ -1710,7 +1735,7 @@ class NlpGoGo(object):
         return slots_list
 
 
-    def go(self, data_path, output_path):
+    def go(self, data_path, output_path, with_text:bool=False, full_slot:bool=False):
         res = defaultdict(dict)
         test_data = json.load(open(data_path, 'r'))
         if self.policy['ner'] == 'flat':
@@ -1719,6 +1744,20 @@ class NlpGoGo(object):
                 text = text_dict['text']
                 flat_text_list.append(text)
             slots_list_all = self.flat_ner_all(flat_text_list)
+            slots_list_by_alarm_update = self.flat_ner_all(intent='Alarm-Update', real_text_list=flat_text_list)
+            slots_candidate = {
+                'Music-Play': slots_list_all,
+                'HomeAppliance-Control': slots_list_all,
+                'Travel-Query': slots_list_all,
+                'Calendar-Query': slots_list_all,
+                'FilmTele-Play': slots_list_all,
+                'Weather-Query': slots_list_all,
+                'Video-Play': slots_list_all,
+                'Alarm-Update': slots_list_by_alarm_update,
+                'TVProgram-Play': slots_list_all,
+                'Audio-Play': slots_list_all,
+                'Radio-Listen': slots_list_all
+            }
         for n_idx, (idx, text_dict) in tqdm(enumerate(test_data.items())):
             text = text_dict['text']
             ood = self.is_ood(text)
@@ -1735,7 +1774,7 @@ class NlpGoGo(object):
                 continue
             if self.policy['ner'] == 'flat':
                 # slots = self.flat_ner(text, intent)
-                slots = slots_list_all[n_idx]
+                slots = slots_candidate[intent][n_idx]
                 slots = clean_slot_by_intent(slots, intent, post=False)
             else:
                 slots = self.ner(text, intent)
@@ -1780,7 +1819,21 @@ class NlpGoGo(object):
 
             slots = slot_hash(slots)
 
+            if with_text is True:
+                res[idx]['text'] = text
+
+            if full_slot is True:
+                for co_slot in NER_CORRESPONDENCE[intent]:
+                    if co_slot not in slots:
+                        slots[co_slot] = ''
+
             res[idx]['slots'] = slots
+            if slots == {} and intent == 'Calendar-Query':
+                res[idx]['intent'] = 'Other'
+
+            if 'name' in slots and isinstance(slots['name'], list):
+                if ''.join(slots['name']) in text:
+                    slots['name'] = ''.join(slots['name'])
 
         with open(output_path, 'w') as f:
             res_jsoned = json.dumps(res, ensure_ascii=False, indent=4)
@@ -1932,7 +1985,11 @@ def clean_slot_by_intent(slots_dict, intent, post=False):
     return res
 
 
-def  normalization(text, letter='#'):
+def post_process(intent, slots):
+    pass
+
+
+def normalization(text, letter='@'):
     candidate_num_list = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     candidate_letter_list = [
         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
@@ -1975,6 +2032,9 @@ if __name__ == '__main__':
             'ner': 'flat',
             'ood_model': 'ensemble'
         },
+        device_map = {
+            'Alarm-Update': 'cuda:1'
+        },
         # query_type_model_path='/ai/223/person/lichunyu/models/df/query_type/bert-2021-07-29-02-27-35-f1_97.pth',
         query_type_model_path='/ai/223/person/lichunyu/models/df/query_type/bert-2021-07-29-07-48-11-f1_96.pth',
         # command_model_path='/ai/223/person/lichunyu/models/df/command/bert-2021-07-29-02-34-54-f1_97.pth'
@@ -1984,6 +2044,9 @@ if __name__ == '__main__':
 
     _ = nlpgogo.go(
         data_path='/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.json',
-        # data_path='/root/EarleeNLP/data/datafountain/train.json',
+        # data_path='/root/train.json',  # Music-Play
         output_path='/ai/223/person/lichunyu/datasets/dataf/output/output.json'
+        # output_path='/ai/223/person/lichunyu/datasets/dataf/output/Radio-Listen.json',
+        # with_text=True,
+        # full_slot=True 
     )

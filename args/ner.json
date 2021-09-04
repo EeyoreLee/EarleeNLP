@@ -9,7 +9,7 @@
     "per_device_train_batch_size": 32,
     "per_device_eval_batch_size": 32,
     "remove_unused_columns": false,
-    "model_name_or_path": "/root/pretrain-models/hfl-chinese-roberta-wwm-ext-large",
+    "model_name_or_path": "/ai/223/person/lichunyu/pretrain-models/shannonAI-ChineseBERT-large",
     "num_labels": 81,
     "pickle_data_path": "/ai/223/person/lichunyu/datasets/dataf/seq_label/seq_label_8927.pkl",
     "device": "cuda",

@@ -237,7 +237,7 @@ def main(json_path=''):
     total_bt = time.time()
 
     optimizer = AdamW(model.parameters(),
-                  lr = 5e-5,
+                  lr = 1e-6,
                   eps = 1e-6
                 )
 
