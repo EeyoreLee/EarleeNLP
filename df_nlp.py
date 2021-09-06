@@ -8,8 +8,9 @@ import json
 from collections import defaultdict
 import os
 import numpy as np
+import time
 
-
+import torch.multiprocessing
 from transformers import (
     BertTokenizer,
     RobertaTokenizerFast
@@ -27,7 +28,7 @@ from metircs.functional.f1_score import ner_extract
 from run.run_ner import LABEL2IDX
 
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '1,2,3,4,5,6,7'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3,4,5,6,7'
 
 
 COMMAND2IDX = {'查询状态': 0,
@@ -109,27 +110,8 @@ QUERY_MAP = {
 }
 
 
-# QUERY_MAP = {
-#     'name': '用以识别某一个体或群体(人和事物)的专属名词',
-#     'datetime_date': '发生某一事情的确定的日子或时期',
-#     'departure': '出发的地方',
-#     'instrument': '用来演奏的乐器',
-#     'datetime_time': '物质的永恒运动、变化的持续性、顺序性的表现',
-#     'destination': '想要达到的地方',
-#     'appliance': '工作时所需用的器具',
-#     'notes': '听课、听报告、读书时所做的记录',
-#     'details': '所完成的具体的事或行动',
-#     'play_setting': '播放的方式',
-#     'artist': '杂技、戏曲、民间歌舞、曲艺演员',
-#     'city': '人口集中，居民以非农业人口为主，工商业比较发达的地区',
-#     'frequency': '每个对象出现的次数与总次数的比值',
-#     'channel': '电视台或电视网络',
-#     'age': '具体的年份日期',
-#     'album': '歌曲集合或专辑',
-#     'tag': '具有相同特征的事物所形成的类别',
-#     'song': '用来歌唱的音乐或歌曲',
-#     'region': '某一范围的地方'
-# }
+I2L_ALARM_UPDATE = {0: '<pad>', 1: '<unk>', 2: 'O', 3: 'I-Alarm-Update-notes', 4: 'I-Alarm-Update-datetime_time',\
+     5: 'I-Alarm-Update-datetime_date', 6: 'B-Alarm-Update-datetime_date', 7: 'B-Alarm-Update-datetime_time', 8: 'B-Alarm-Update-notes'}
 
 
 SUB_CLS_LABEL = [
@@ -370,7 +352,7 @@ class NlpGoGo(object):
         if policy['only_cls'] is False:
             if self.policy['ner'] == 'flat':
                 # self.ner_model = torch.load('/ai/223/person/lichunyu/models/df/ner/flat-2021-08-26-06-15-37-f1_92.pth', map_location=torch.device('cuda'))
-                self.ner_model = torch.load('/ai/223/person/lichunyu/models/df/ner/flat-2021-08-30-22-03-15-f1_92.pth', map_location=torch.device('cuda'))
+                self.ner_model = torch.load(flat_all_model_path, map_location=torch.device('cuda'))
             else:
                 m = torch.load(ner_model_path, map_location=torch.device(device))
                 self.ner_model = m
@@ -1620,9 +1602,13 @@ class NlpGoGo(object):
         id2query_type = {v: k for k, v in COMMAND2IDX.items()}
         return id2query_type[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
 
-    def flat_ner_all(self, intent='all', real_text_list=None):
+    def flat_ner_all(self, real_text_list=None, intent='all', manager=None):
         if intent == 'all':
-            return self._flat_ner_all(self.ner_model, real_text_list, with_placeholder=False)
+            res = self._flat_ner_all(self.ner_model, real_text_list, with_placeholder=False, idx2label=IDX2LABEL)
+            manager[intent] = res
+            print('wanche1')
+            return 0
+            # return self._flat_ner_all(self.ner_model, real_text_list, with_placeholder=False, idx2label=IDX2LABEL)
         intent2model = {
             'Alarm-Update': self.flat_alarm_update_model_path,
         }
@@ -1632,10 +1618,16 @@ class NlpGoGo(object):
         intent2dev_path = {
             "Alarm-Update": "/ai/223/person/lichunyu/datasets/dataf/seq_label/Alarm-Update_detached.test"
         }
-        model = torch.load(intent2model[intent], map_location=torch.device(self.device_map[intent]))
-        return self._flat_ner_all(model, real_text_list, train_path=inent2train_path[intent], dev_path=intent2dev_path[intent])
+        model = torch.load(intent2model[intent], map_location=self.device_map[intent])
+        res = self._flat_ner_all(model, real_text_list, train_path=inent2train_path[intent], dev_path=intent2dev_path[intent], \
+                _device=self.device_map[intent], idx2label=I2L_ALARM_UPDATE)
+        manager[intent] = res
+        print('wanche')
+        return 0
+        # return self._flat_ner_all(model, real_text_list, train_path=inent2train_path[intent], dev_path=intent2dev_path[intent], \
+        #         _device=self.device_map[intent], idx2label=I2L_ALARM_UPDATE)
 
-    def _flat_ner_all(self, _model, real_text_list, train_path=None, dev_path=None, with_placeholder=True):
+    def _flat_ner_all(self, _model, real_text_list, train_path=None, dev_path=None, idx2label=None, with_placeholder=True, _device='cuda'):
         slots_list = []
 
 
@@ -1645,7 +1637,9 @@ class NlpGoGo(object):
             '/root/pretrain-models/flat/gigaword_chn.all.a2b.bi.ite50.vec',
             _refresh=True,
             index_token=False,
-            with_placeholder=with_placeholder
+            with_placeholder=with_placeholder,
+            train_path=train_path,
+            dev_path=dev_path
             # test_path=tmp_test_path,
         )
 
@@ -1703,15 +1697,15 @@ class NlpGoGo(object):
         for step, (batch, real_text) in enumerate(zip(dev_dataloader, real_text_list)):
             #TODO BERT embedding 前20 epoch 冻结
             # chars = batch[0].cuda()
-            target = batch[1].cuda()
-            bigrams = batch[2].cuda()
-            seq_len = batch[3].cuda()
-            lex_num = batch[4].cuda()
+            target = batch[1].to(_device)
+            bigrams = batch[2].to(_device)
+            seq_len = batch[3].to(_device)
+            lex_num = batch[4].to(_device)
             # lex_s = batch[5].cuda()
             # lex_e = batch[6].cuda()
-            lattice = batch[7].cuda()
-            pos_s = batch[8].cuda()
-            pos_e = batch[9].cuda()
+            lattice = batch[7].to(_device)
+            pos_s = batch[8].to(_device)
+            pos_e = batch[9].to(_device)
             raw_chars = batch[10]
             # text_list = [''.join(i) for i in raw_chars]
             # real_text = real_text.replace(' ', '')
@@ -1720,7 +1714,7 @@ class NlpGoGo(object):
 
             with torch.no_grad():
 
-                output = self.ner_model(
+                output = _model(
                     lattice,
                     bigrams,
                     seq_len,
@@ -1730,12 +1724,13 @@ class NlpGoGo(object):
                     target
                 )
             pred = output['pred']
-            res = ner_extract(pred, seq_len, text_list, idx2label=IDX2LABEL, offsets=offsets)
+            res = ner_extract(pred, seq_len, text_list, idx2label=idx2label, offsets=offsets)
             slots_list.append(flat_slot_clean(res))
         return slots_list
 
 
     def go(self, data_path, output_path, with_text:bool=False, full_slot:bool=False):
+        bt = time.time()
         res = defaultdict(dict)
         test_data = json.load(open(data_path, 'r'))
         if self.policy['ner'] == 'flat':
@@ -1743,8 +1738,20 @@ class NlpGoGo(object):
             for idx, text_dict in test_data.items():
                 text = text_dict['text']
                 flat_text_list.append(text)
-            slots_list_all = self.flat_ner_all(flat_text_list)
-            slots_list_by_alarm_update = self.flat_ner_all(intent='Alarm-Update', real_text_list=flat_text_list)
+            torch.multiprocessing.set_start_method('spawn')
+            manager = torch.multiprocessing.Manager()
+            manager = manager.dict()
+            p_slots_alarm_update = torch.multiprocessing.Process(target=self.flat_ner_all, args=(flat_text_list, 'Alarm-Update', manager))
+            p_slots_all = torch.multiprocessing.Process(target=self.flat_ner_all, args=(flat_text_list, 'all', manager))
+            jobs = [p_slots_alarm_update, p_slots_all]
+            for p in jobs:
+                p.start()
+
+            for p in jobs:
+                p.join()
+
+            slots_list_by_alarm_update = manager['Alarm-Update']
+            slots_list_all = manager['all']
             slots_candidate = {
                 'Music-Play': slots_list_all,
                 'HomeAppliance-Control': slots_list_all,
@@ -1838,7 +1845,7 @@ class NlpGoGo(object):
         with open(output_path, 'w') as f:
             res_jsoned = json.dumps(res, ensure_ascii=False, indent=4)
             f.write(res_jsoned)
-
+        print('total cost {}s'.format(time.time()-bt))
         return output_path
 
 
@@ -2039,7 +2046,9 @@ if __name__ == '__main__':
         query_type_model_path='/ai/223/person/lichunyu/models/df/query_type/bert-2021-07-29-07-48-11-f1_96.pth',
         # command_model_path='/ai/223/person/lichunyu/models/df/command/bert-2021-07-29-02-34-54-f1_97.pth'
         command_model_path='/ai/223/person/lichunyu/models/df/command/bert-2021-07-29-07-43-15-f1_97.pth',
-        ood_config_path='/root/pretrain-models/hfl-chinese-roberta-wwm-ext-large'
+        ood_config_path='/root/pretrain-models/hfl-chinese-roberta-wwm-ext-large',
+        flat_all_model_path='/ai/223/person/lichunyu/models/df/ner/flat-2021-08-30-22-03-15-f1_92.pth',
+        flat_alarm_update_model_path='/ai/223/person/lichunyu/models/df/ner/flat-2021-09-04-13-24-04-f1_97.pth'
     )
 
     _ = nlpgogo.go(

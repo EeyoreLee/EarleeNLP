@@ -15,7 +15,7 @@ from models.flat_bert import StaticEmbedding, get_bigrams
 # @cache_results(_cache_fp='cache/weiboNER_uni+bi_new', _refresh=False)
 def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_token=True, train_path=None, dev_path=None,
             char_min_freq=1,bigram_min_freq=1,only_train_min_freq=0,char_word_dropout=0.01, test_path=None, \
-            logger=None, with_placeholder=None, **kwargs):
+            logger=None, with_placeholder=True, **kwargs):
 
     loader = ConllLoader(['chars','target'])
 
@@ -52,7 +52,10 @@ def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_t
         datasets[k] = bundle.datasets['train']
 
     for k,v in datasets.items():
-        logger.info('{}:{}'.format(k,len(v)))
+        if logger is not None:
+            logger.info('{}:{}'.format(k,len(v)))
+        else:
+            print('{}:{}'.format(k,len(v)))
     # print(*list(datasets.keys()))
     vocabs = {}
     char_vocab = Vocabulary()
@@ -71,7 +74,8 @@ def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_t
     else:
         char_vocab.from_dataset(datasets['train'],field_name='chars',no_create_entry_dataset=[datasets['dev']])
     label_vocab.from_dataset(datasets['train'],field_name='target')
-    logger.info('label_vocab:{}\n{}'.format(len(label_vocab),label_vocab.idx2word))
+    if logger is not None:
+        logger.info('label_vocab:{}\n{}'.format(len(label_vocab),label_vocab.idx2word))
 
     for k,v in datasets.items():
         # v.set_pad_val('target',-100)
