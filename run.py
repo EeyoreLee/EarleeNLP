@@ -27,6 +27,8 @@ def run(json_path=None):
     task = task_args.task
     if task == 'chinese_ner':
         run_chinese_ner(json_path)
+    elif task == 'classification':
+        run_classification(json_path)
 
 
 
@@ -34,5 +36,6 @@ def run(json_path=None):
 
 if __name__ == '__main__':
     # run_ner('/root/EarleeNLP/args/ner.json')
-    run('/root/EarleeNLP/args/df_alarm_update_ner.json')
+    # run('/root/EarleeNLP/args/df_alarm_update_ner.json')
     # run_classification('/root/EarleeNLP/args/df_intent_all_aug.json')
+    run()

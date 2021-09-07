@@ -177,6 +177,8 @@ def main(json_path):
         only_train_min_freq=custom_args.only_train_min_freq,
         train_path=custom_args.train_path,
         dev_path=custom_args.dev_path,
+        test_path=custom_args.test_path,
+        placeholder_path=custom_args.placeholder_path,
         logger=logger
     )
 

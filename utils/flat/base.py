@@ -15,7 +15,7 @@ from models.flat_bert import StaticEmbedding, get_bigrams
 # @cache_results(_cache_fp='cache/weiboNER_uni+bi_new', _refresh=False)
 def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_token=True, train_path=None, dev_path=None,
             char_min_freq=1,bigram_min_freq=1,only_train_min_freq=0,char_word_dropout=0.01, test_path=None, \
-            logger=None, with_placeholder=True, **kwargs):
+            logger=None, with_placeholder=True, placeholder_path=None, **kwargs):
 
     loader = ConllLoader(['chars','target'])
 
@@ -37,7 +37,8 @@ def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_t
     if test_path is None:
         test_path = '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.seq'
 
-    placeholder_path = '/root/all_train.test'
+    if placeholder_path is None:
+        placeholder_path = '/root/all_train.test'
 
     paths = {}
     paths['train'] = train_path

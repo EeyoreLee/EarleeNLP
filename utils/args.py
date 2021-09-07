@@ -206,6 +206,10 @@ class CustomizeArguments:
 
     dev_path: str = field(default=None)
 
+    test_path: str = field(default=None)
+
+    placeholder_path: str = field(default=None)
+
     task: str = field(default='')
 
 
