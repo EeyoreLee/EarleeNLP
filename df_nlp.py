@@ -367,7 +367,6 @@ class NlpGoGo(object):
             self.classification_vote[hfl_bert_2700_large_intent] += 1
             self.classification_vote[macbert_6000_intent] += 1
             self.classification_vote[hfl_bert_6000_intent] += 1
-
             # vote = sorted(vote.items(), key=lambda x: x[-1])
             # if vote[-1][0] != INTENT[-1]:
             #     return False
@@ -1257,10 +1256,45 @@ class NlpGoGo(object):
                 continue
             if self.policy['ner'] == 'flat':
                 slots = slots_candidate[intent][n_idx]
-                for sk in ['datetime_date', 'datetime_time']:
-                    if sk in slots:
-                        del slots[sk]
-                slots.update(slots_list_date_and_time[n_idx])
+                if intent not in ['Calendar-Query']:
+                    date_all, time_all = '', ''
+                    if 'datetime_date' in slots:
+                        date_all = slots.pop('datetime_date')
+                    if 'datetime_time' in slots:
+                        time_all = slots.pop('datetime_time')
+                    slots_detached_date_and_time = slots_list_date_and_time[n_idx]
+
+                    # date and time ensemble
+                    if 'datetime_date' in slots_detached_date_and_time:
+                        if isinstance(slots_detached_date_and_time['datetime_date'], list):
+                            tmp = []
+                            for i in slots_detached_date_and_time['datetime_date']:
+                                if len(i) != 1:
+                                    tmp.append(i)
+                            slots_detached_date_and_time['datetime_date'] = list(set(tmp)) if len(list(set(tmp))) > 1 else list(set(tmp))[0]
+                        if isinstance(slots_detached_date_and_time['datetime_date'], str):
+                            if len(slots_detached_date_and_time['datetime_date']) == 1:
+                                if len(date_all) not in [0, 1]:
+                                    slots_detached_date_and_time['datetime_date'] = date_all
+                                else:
+                                    del slots_detached_date_and_time['datetime_date']
+
+                    if 'datetime_time' in slots_detached_date_and_time:
+                        if isinstance(slots_detached_date_and_time['datetime_time'], list):
+                            tmp = []
+                            for i in slots_detached_date_and_time['datetime_time']:
+                                if len(i) != 1:
+                                    tmp.append(i)
+                            slots_detached_date_and_time['datetime_time'] = list(set(tmp)) if len(list(set(tmp))) > 1 else list(set(tmp))[0]
+                        if isinstance(slots_detached_date_and_time['datetime_time'], str):
+                            if len(slots_detached_date_and_time['datetime_time']) == 1:
+                                if len(time_all) not in [0, 1]:
+                                    slots_detached_date_and_time['datetime_time'] = time_all
+                                else:
+                                    del slots_detached_date_and_time['datetime_time']
+
+
+                    slots.update(slots_list_date_and_time[n_idx])
                 slots = clean_slot_by_intent(slots, intent, post=False)
                 if intent == 'Alarm-Update':
                     if 'notes' in slots:
