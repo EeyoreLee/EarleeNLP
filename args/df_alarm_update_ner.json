@@ -7,8 +7,8 @@
     "optim": "adam",
     "bert_lr_rate": 0.05,
     "embed_lr_rate": 1,
-    "train_path": "/ai/223/person/lichunyu/datasets/dataf/seq_label/Alarm-Update_detached.train",
-    "dev_path": "/ai/223/person/lichunyu/datasets/dataf/seq_label/Alarm-Update_detached.test",
+    "train_path": "/ai/223/person/lichunyu/datasets/dataf/seq_label/Alarm-Update_detached_clean.train",
+    "dev_path": "/ai/223/person/lichunyu/datasets/dataf/seq_label/Alarm-Update_detached_clean.test",
     "task": "chinese_ner",
     "cus_cuda_visible_devices": "1"
 }
