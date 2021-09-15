@@ -24,3 +24,19 @@ w_list = load_yangjie_rich_pretrain_word_list(
 )
 with open()
 pass
+
+
+a = [[1,2,3,4]]
+
+a = [[1], [2], ]
+
+
+
+
+
+def a():
+    yield 1
+
+
+A = a()
+next(A)

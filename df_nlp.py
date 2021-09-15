@@ -327,7 +327,12 @@ class NlpGoGo(object):
         if policy['only_cls'] is False:
             if self.policy['ner'] == 'flat':
                 # self.ner_model = torch.load('/ai/223/person/lichunyu/models/df/ner/flat-2021-08-26-06-15-37-f1_92.pth', map_location=torch.device('cuda'))
-                self.ner_model = torch.load(flat_all_model_path, map_location=self.flat_device_map['all'])
+                # self.ner_model = torch.load(flat_all_model_path, map_location=self.flat_device_map['all'])
+                self.ner_model = [
+                    torch.load(flat_all_model_path, map_location=self.flat_device_map['all']),
+                    torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-13-17-37-50-f1_90.pth', map_location=self.flat_device_map['all']),
+                    torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-13-17-18-01-f1_89.pth', map_location=self.flat_device_map['all']),
+                ]
             else:
                 m = torch.load(ner_model_path, map_location=torch.device(device))
                 self.ner_model = m
@@ -1069,10 +1074,26 @@ class NlpGoGo(object):
 
     def flat_ner_all(self, real_text_list=None, intent='all', manager=None):
         if intent == 'all':
-            _all_test_path = '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter'
-            _all_placeholder_path = '/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter'
-            _train_path = '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.train'
-            _dev_path = '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.test'
+            _all_test_path = [
+                '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter',
+                '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter',
+                '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter'
+            ]
+            _all_placeholder_path = [
+                '/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter',
+                '/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter',
+                '/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter'
+            ]
+            _train_path = [
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.train',
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.train',
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.train'
+            ]
+            _dev_path = [
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.test',
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.test',
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.test'
+            ]
             # res = self._flat_ner_all(self.ner_model, real_text_list, with_placeholder=False, idx2label=IDX2LABEL, _device=self.flat_device_map[intent])
             res = self._flat_ner_all(self.ner_model, real_text_list, train_path=_train_path, dev_path=_dev_path, \
                 _device=self.flat_device_map[intent], idx2label=IDX2LABEL, placeholder_path=_all_placeholder_path, \
@@ -1130,100 +1151,133 @@ class NlpGoGo(object):
     def _flat_ner_all(self, _model, real_text_list, train_path=None, dev_path=None, idx2label=None, with_placeholder=True, _device='cuda', \
                         placeholder_path=None, test_path=None):
         slots_list = []
+        ensemble = False
+
+        if isinstance(_model, list):
+            ensemble = True
 
 
-        datasets, vocabs, embeddings = load_ner(
-            '/root/hub/golden-horse/data',
-            '/root/pretrain-models/flat/gigaword_chn.all.a2b.uni.ite50.vec',
-            '/root/pretrain-models/flat/gigaword_chn.all.a2b.bi.ite50.vec',
-            _refresh=True,
-            index_token=False,
-            with_placeholder=with_placeholder,
-            train_path=train_path,
-            dev_path=dev_path,
-            test_path=test_path,
-            placeholder_path=placeholder_path
-        )
+        def create_dataloader(_train_path, _dev_path, _test_path, _placeholder_path, _with_placeholder=False):
+            datasets, vocabs, embeddings = load_ner(
+                '/root/hub/golden-horse/data',
+                '/root/pretrain-models/flat/gigaword_chn.all.a2b.uni.ite50.vec',
+                '/root/pretrain-models/flat/gigaword_chn.all.a2b.bi.ite50.vec',
+                _refresh=True,
+                index_token=False,
+                with_placeholder=_with_placeholder,
+                train_path=_train_path,
+                dev_path=_dev_path,
+                test_path=_test_path,
+                placeholder_path=_placeholder_path
+            )
 
-        w_list = load_yangjie_rich_pretrain_word_list(self.yangjie_rich_pretrain_word_path,
-                                                    _refresh=True,
-                                                    _cache_fp='cache/{}'.format('yj'))
-
-
-        datasets, vocabs, embeddings = equip_chinese_ner_with_lexicon(datasets,
-                                                                    vocabs,
-                                                                    embeddings,
-                                                                    w_list,
-                                                                    self.yangjie_rich_pretrain_word_path,
-                                                                    _refresh=True,
-                                                                    only_lexicon_in_train=False,
-                                                                    word_char_mix_embedding_path=self.yangjie_rich_pretrain_char_and_word_path,
-                                                                    number_normalized=0,
-                                                                    lattice_min_freq=1,
-                                                                    only_train_min_freq=True,
-                                                                    with_placeholder=with_placeholder
-                                                                    )
-
-        def collate_func(batch_dict):
-            batch_len = len(batch_dict)
-            max_seq_length = max([dic['seq_len'] for dic in batch_dict])
-            chars = pad_sequence([i['chars'] for i in batch_dict], batch_first=True)
-            target = pad_sequence([i['target'] for i in batch_dict], batch_first=True)
-            bigrams = pad_sequence([i['bigrams'] for i in batch_dict], batch_first=True)
-            seq_len = torch.tensor([i['seq_len'] for i in batch_dict])
-            lex_num = torch.tensor([i['lex_num'] for i in batch_dict])
-            lex_s = pad_sequence([i['lex_s'] for i in batch_dict], batch_first=True)
-            lex_e = pad_sequence([i['lex_e'] for i in batch_dict], batch_first=True)
-            lattice = pad_sequence([i['lattice'] for i in batch_dict], batch_first=True)
-            pos_s = pad_sequence([i['pos_s'] for i in batch_dict], batch_first=True)
-            pos_e = pad_sequence([i['pos_e'] for i in batch_dict], batch_first=True)
-            raw_chars = [i['raw_chars'] for i in batch_dict]
-            return [chars, target, bigrams, seq_len, lex_num, lex_s, lex_e, lattice, pos_s, pos_e, raw_chars]
-
-        for k, v in datasets.items():
-            v.set_input('lattice','bigrams','target', 'seq_len')
-            v.set_input('lex_num','pos_s','pos_e')
-            v.set_target('target', 'seq_len')
-            v.set_pad_val('lattice',vocabs['lattice'].padding_idx)
+            w_list = load_yangjie_rich_pretrain_word_list(self.yangjie_rich_pretrain_word_path,
+                                                        _refresh=True,
+                                                        _cache_fp='cache/{}'.format('yj'))
 
 
-        dev_ds = NERDataset(datasets['test'])
-        dev_dataloader = DataLoader(
-            dev_ds,
-            batch_size=1,
-            collate_fn=collate_func
-        )
+            datasets, vocabs, embeddings = equip_chinese_ner_with_lexicon(datasets,
+                                                                        vocabs,
+                                                                        embeddings,
+                                                                        w_list,
+                                                                        self.yangjie_rich_pretrain_word_path,
+                                                                        _refresh=True,
+                                                                        only_lexicon_in_train=False,
+                                                                        word_char_mix_embedding_path=self.yangjie_rich_pretrain_char_and_word_path,
+                                                                        number_normalized=0,
+                                                                        lattice_min_freq=1,
+                                                                        only_train_min_freq=True,
+                                                                        with_placeholder=_with_placeholder
+                                                                        )
 
-        _model.eval()
-        for step, (batch, real_text) in enumerate(zip(dev_dataloader, real_text_list)):
+            def collate_func(batch_dict):
+                batch_len = len(batch_dict)
+                max_seq_length = max([dic['seq_len'] for dic in batch_dict])
+                chars = pad_sequence([i['chars'] for i in batch_dict], batch_first=True)
+                target = pad_sequence([i['target'] for i in batch_dict], batch_first=True)
+                bigrams = pad_sequence([i['bigrams'] for i in batch_dict], batch_first=True)
+                seq_len = torch.tensor([i['seq_len'] for i in batch_dict])
+                lex_num = torch.tensor([i['lex_num'] for i in batch_dict])
+                lex_s = pad_sequence([i['lex_s'] for i in batch_dict], batch_first=True)
+                lex_e = pad_sequence([i['lex_e'] for i in batch_dict], batch_first=True)
+                lattice = pad_sequence([i['lattice'] for i in batch_dict], batch_first=True)
+                pos_s = pad_sequence([i['pos_s'] for i in batch_dict], batch_first=True)
+                pos_e = pad_sequence([i['pos_e'] for i in batch_dict], batch_first=True)
+                raw_chars = [i['raw_chars'] for i in batch_dict]
+                return [chars, target, bigrams, seq_len, lex_num, lex_s, lex_e, lattice, pos_s, pos_e, raw_chars]
+
+            for k, v in datasets.items():
+                v.set_input('lattice','bigrams','target', 'seq_len')
+                v.set_input('lex_num','pos_s','pos_e')
+                v.set_target('target', 'seq_len')
+                v.set_pad_val('lattice',vocabs['lattice'].padding_idx)
+
+
+            dev_ds = NERDataset(datasets['test'])
+            dev_dataloader = DataLoader(
+                dev_ds,
+                batch_size=1,
+                collate_fn=collate_func
+            )
+            return dev_dataloader
+
+        dataloader = []
+
+        if ensemble is True:
+            for idx in range(len(_model)):
+                if isinstance(with_placeholder, bool):
+                    with_placeholder = [with_placeholder] * len(_model)
+                dataloader_item = create_dataloader(train_path[idx], dev_path[idx], test_path[idx], placeholder_path[idx], with_placeholder[idx])
+                dataloader.append(dataloader_item)
+        else:
+            dataloader_item = create_dataloader(train_path, dev_path, test_path, placeholder_path, with_placeholder)
+            dataloader.append(dataloader_item)
+
+        if not isinstance(_model, list):
+            _model = [_model]
+
+        for m in _model:
+            m.eval()
+
+        dataloader = [list(_) for _ in dataloader]
+
+        for step in range(len(dataloader[0])):
             #TODO BERT embedding 前20 epoch 冻结
-            # chars = batch[0].cuda()
-            target = batch[1].to(_device)
-            bigrams = batch[2].to(_device)
-            seq_len = batch[3].to(_device)
-            lex_num = batch[4].to(_device)
-            lattice = batch[7].to(_device)
-            pos_s = batch[8].to(_device)
-            pos_e = batch[9].to(_device)
-            _, offsets = text_rm_space(real_text)
-            text_list = [real_text]
 
-            with torch.no_grad():
+            trans_m, mask, logits = [], [], []
 
-                output = _model(
-                    lattice,
-                    bigrams,
-                    seq_len,
-                    lex_num,
-                    pos_s,
-                    pos_e,
-                    target
-                )
-            # pred = output['pred']
-            trans_m = output['trans_m']
-            mask = output['mask']
-            logits = output['logits']
-            pred_ensemble = viterbi_ensemble_decode(logits=[logits, logits], mask=[mask, mask], trans_m=[trans_m, trans_m])
+            for idx in range(len(_model)):
+                batch = dataloader[idx][step]
+                real_text = real_text_list[step]
+                target = batch[1].to(_device)
+                bigrams = batch[2].to(_device)
+                seq_len = batch[3].to(_device)
+                lex_num = batch[4].to(_device)
+                lattice = batch[7].to(_device)
+                pos_s = batch[8].to(_device)
+                pos_e = batch[9].to(_device)
+                _, offsets = text_rm_space(real_text)
+                text_list = [real_text]
+
+                with torch.no_grad():
+
+                    output = _model[idx](
+                        lattice,
+                        bigrams,
+                        seq_len,
+                        lex_num,
+                        pos_s,
+                        pos_e,
+                        target
+                    )
+                # pred = output['pred']
+                _trans_m = output['trans_m']
+                _mask = output['mask']
+                _logits = output['logits']
+                trans_m.append(_trans_m)
+                mask.append(_mask)
+                logits.append(_logits)
+            pred_ensemble, score = viterbi_ensemble_decode(logits=logits, mask=mask, trans_m=trans_m)
             res = ner_extract(pred_ensemble, seq_len, text_list, idx2label=idx2label, offsets=offsets)
             slots_list.append(flat_slot_clean(res))
         return slots_list
@@ -1239,7 +1293,7 @@ class NlpGoGo(object):
                 text = text_dict['text']
                 flat_text_list.append(text)
             
-            _ = self.flat_ner_all(flat_text_list, 'date_and_time')
+            # _ = self.flat_ner_all(flat_text_list, 'all')
             torch.multiprocessing.set_start_method('spawn')
             manager = torch.multiprocessing.Manager()
             manager = manager.dict()
