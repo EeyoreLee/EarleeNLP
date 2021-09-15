@@ -5,12 +5,12 @@
     "deploy": true,
     "seed": 42,
     "optim": "adam",
-    "bert_lr_rate": 0.05,
+    "bert_lr_rate": 0.06,
     "embed_lr_rate": 1,
-    "train_path": "/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_detached_clean.train",
-    "dev_path": "/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_detached_cleana.test",
+    "train_path": "/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query_detached.train",
+    "dev_path": "/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query_detached.test",
     "test_path": "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter",
     "placeholder_path": "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
     "task": "chinese_ner",
-    "cus_cuda_visible_devices": "2"
+    "cus_cuda_visible_devices": "6"
 }

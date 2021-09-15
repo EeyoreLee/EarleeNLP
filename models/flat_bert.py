@@ -1528,12 +1528,12 @@ class Lattice_Transformer_SeqLabel(nn.Module):
 
 
         encoded = encoded[:,:max_seq_len,:]
-        pred = self.output(encoded)
+        logits = self.output(encoded)
 
         mask = seq_len_to_mask(seq_len).bool()
 
 
-        loss = self.crf(pred, target, mask).mean(dim=0)
+        loss = self.crf(logits, target, mask).mean(dim=0)
         if self.training:
             return {'loss': loss}
 
@@ -1549,13 +1549,16 @@ class Lattice_Transformer_SeqLabel(nn.Module):
         # return {'loss': loss}
         # else:
 
-        pred, path = self.crf.viterbi_decode(pred, mask)
+        pred, path = self.crf.viterbi_decode(logits, mask)
         result = {'pred': pred}
         if self.self_supervised:
             chars_pred = self.output_self_supervised(encoded)
             result['chars_pred'] = chars_pred
 
+        result['trans_m'] = self.crf.trans_m.data
         result['loss'] = loss
+        result['logits'] = logits
+        result['mask'] = mask
         return result
 
 

@@ -1,0 +1,713 @@
+{
+    "NLU00176": {
+        "text": "给我找个雨果的小说来放",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "雨果"
+        }
+    },
+    "NLU00189": {
+        "text": "现在请播放宇尘的悬疑小说无罪谋杀",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "宇尘",
+            "name": "无罪谋杀",
+            "tag": "悬疑"
+        }
+    },
+    "NLU00207": {
+        "text": "广播剧默读的预告帮我播放",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "默读"
+        }
+    },
+    "NLU00363": {
+        "text": "讲一下打火匣的故事英文版的",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "打火匣",
+            "language": "英语"
+        }
+    },
+    "NLU00713": {
+        "text": "恋爱题材的有声小说随便播一个吧",
+        "intent": "Audio-Play",
+        "slots": {
+            "tag": "恋爱"
+        }
+    },
+    "NLU00784": {
+        "text": "我要听刺猬汉斯的故事",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "刺猬汉斯"
+        }
+    },
+    "NLU00840": {
+        "text": "恐怖小说接着放七根凶简这部的第四章",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "七根凶简",
+            "tag": "恐怖",
+            "play_setting": "第四章"
+        }
+    },
+    "NLU00971": {
+        "text": "我要循环播放张籍的秋思",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "张籍",
+            "name": "秋思",
+            "play_setting": "循环"
+        }
+    },
+    "NLU01642": {
+        "text": "姜广涛配音的广播剧随便给我播放一个",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "姜广涛"
+        }
+    },
+    "NLU01689": {
+        "text": "播放一下岳云鹏的单口相声听",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "岳云鹏"
+        }
+    },
+    "NLU01867": {
+        "text": "请给我循环播小猪变形记这个故事",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "小猪变形记",
+            "play_setting": "循环"
+        }
+    },
+    "NLU01918": {
+        "text": "白眉大侠放给我听一下吧",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "白眉大侠"
+        }
+    },
+    "NLU02338": {
+        "text": "随便播放一个有声小说",
+        "intent": "Audio-Play",
+        "slots": {}
+    },
+    "NLU02369": {
+        "text": "播放童话故事谁是最幸运的英文版的",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "谁是最幸运的",
+            "language": "英语",
+            "tag": "童话"
+        }
+    },
+    "NLU02566": {
+        "text": "我想听2001年赵本山的小品拐卖",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "赵本山",
+            "name": "拐卖"
+        }
+    },
+    "NLU02572": {
+        "text": "播放爱情类型的广播剧听听吧",
+        "intent": "Audio-Play",
+        "slots": {
+            "tag": "爱情"
+        }
+    },
+    "NLU02733": {
+        "text": "网游的广播剧随便播放一个",
+        "intent": "Audio-Play",
+        "slots": {
+            "tag": "网游"
+        }
+    },
+    "NLU02761": {
+        "text": "我想听诗经里的风雨",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "风雨"
+        }
+    },
+    "NLU03018": {
+        "text": "开始循环放一下春日忆李白这首诗吧",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "春日忆李白",
+            "play_setting": "循环"
+        }
+    },
+    "NLU03283": {
+        "text": "现在开始循环播一下茅屋为秋风所破歌这首诗",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "茅屋为秋风所破歌",
+            "play_setting": "循环"
+        }
+    },
+    "NLU03473": {
+        "text": "给我找出来刘兰芳讲的杨家将全传听听",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "杨家将全传",
+            "artist": "刘兰芳"
+        }
+    },
+    "NLU03550": {
+        "text": "放一下一本不说话的书这个故事吧",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "一本不说话的书"
+        }
+    },
+    "NLU03960": {
+        "text": "我要听小说俄语版的威尼斯商人",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "威尼斯商人",
+            "language": "俄语"
+        }
+    },
+    "NLU04200": {
+        "text": "放一下假话国历险记这个故事的俄语版",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "假话国历险记",
+            "language": "俄语"
+        }
+    },
+    "NLU04237": {
+        "text": "给我来一段郭德纲于谦的相声就是有钱听听看",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": [
+                "郭德纲",
+                "于谦"
+            ],
+            "name": "就是有钱"
+        }
+    },
+    "NLU04369": {
+        "text": "马上给我放白居易的咏怀",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "白居易",
+            "name": "咏怀"
+        }
+    },
+    "NLU04408": {
+        "text": "放一个亡羊补牢寓言给小朋友听",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "亡羊补牢"
+        }
+    },
+    "NLU04684": {
+        "text": "播一首王安石的梅花",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "王安石",
+            "name": "梅花"
+        }
+    },
+    "NLU05055": {
+        "text": "请现在给我续播伊迪丝.华顿的小说纯真年代的第五章",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "伊迪丝.华顿",
+            "name": "纯真年代",
+            "play_setting": [
+                "第五章",
+                "续播"
+            ]
+        }
+    },
+    "NLU05084": {
+        "text": "播一个姜广涛配音的刑侦广播剧",
+        "intent": "Audio-Play",
+        "slots": {
+            "tag": "刑侦",
+            "artist": "姜广涛"
+        }
+    },
+    "NLU05186": {
+        "text": "播放小品心愿听听看",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "心愿"
+        }
+    },
+    "NLU05379": {
+        "text": "播放一个潘长江的春晚小品来听",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "潘长江"
+        }
+    },
+    "NLU05659": {
+        "text": "散步时候听循环播一下宋小宝的小品吃放",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "宋小宝",
+            "name": "吃放",
+            "play_setting": "循环"
+        }
+    },
+    "NLU06085": {
+        "text": "播放甄嬛传的有声小说",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "甄嬛传"
+        }
+    },
+    "NLU06111": {
+        "text": "循环的播放陆游的诗词",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "陆游",
+            "play_setting": "循环"
+        }
+    },
+    "NLU06147": {
+        "text": "马上给我讲一个农夫和蛇的寓言",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "农夫和蛇"
+        }
+    },
+    "NLU06306": {
+        "text": "给放歌舞升平这个相声来听一下",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "歌舞升平"
+        }
+    },
+    "NLU06321": {
+        "text": "广播剧破云的预告帮我播放",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "破云"
+        }
+    },
+    "NLU06398": {
+        "text": "给我讲讲潘多拉这个故事",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "潘多拉"
+        }
+    },
+    "NLU06764": {
+        "text": "放一下村上春树的长篇小说挪威的森林",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "村上春树",
+            "name": "挪威的森林"
+        }
+    },
+    "NLU07055": {
+        "text": "继续播放玄幻小说轮回的第二章",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "轮回",
+            "tag": "玄幻",
+            "play_setting": "继续"
+        }
+    },
+    "NLU07229": {
+        "text": "播放一下百家讲坛等会听",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "百家讲坛"
+        }
+    },
+    "NLU07632": {
+        "text": "播放一下张云雷杨九郎的对口相声",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": [
+                "张云雷",
+                "杨九郎"
+            ]
+        }
+    },
+    "NLU07668": {
+        "text": "现在给我播变色龙的第三章来听",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "变色龙",
+            "play_setting": "第三章"
+        }
+    },
+    "NLU07762": {
+        "text": "苏尚卿配音的广播剧帮我找找",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "苏尚卿"
+        }
+    },
+    "NLU07919": {
+        "text": "放一个狼和小羊的故事给小朋友听吧",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "狼和小羊"
+        }
+    },
+    "NLU08167": {
+        "text": "给我放一下张爱玲的小说倾城之恋",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "张爱玲",
+            "name": "倾城之恋"
+        }
+    },
+    "NLU08278": {
+        "text": "刘兰芳讲的彭公案播放一下",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "彭公案",
+            "artist": "刘兰芳"
+        }
+    },
+    "NLU08929": {
+        "text": "给我播放法国长篇小说悲惨世界的日文版",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "悲惨世界",
+            "language": "日语"
+        }
+    },
+    "NLU09046": {
+        "text": "想听奥斯丁的傲慢与偏见英文版",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "奥斯丁",
+            "name": "傲慢与偏见",
+            "language": "英语"
+        }
+    },
+    "CUSAP0": {
+        "text": "小朋友要背江南逢李龟年，请循环播放这首诗吧",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "江南逢李龟年",
+            "play_setting": "循环"
+        }
+    },
+    "CUSAP1": {
+        "text": "有什么催眠的声音能放吗，我要睡觉",
+        "intent": "Audio-Play",
+        "slots": {
+            "tag": "催眠",
+        }
+    },
+    "CUSAP2": {
+        "text": "我想听单田芳评三侠五义",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "三侠五义",
+            "artist": "单田芳",
+        }
+    },
+    "CUSAP3": {
+        "text": "小岳岳的享岳十年我现在就要听",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "享岳十年",
+            "artist": "小岳岳",
+        }
+    },
+    "CUSAP5": {
+        "text": "有点怀念姜宝林先生的单口相声随便放个听听",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "姜宝林"
+        }
+    },
+    "CUSAP6": {
+        "text": "给我放一下80后脱口秀听听吧",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "80后脱口秀",
+        }
+    },
+    "CUSAP9": {
+        "text": "日语的灵异故事来一个降降温",
+        "intent": "Audio-Play",
+        "slots": {
+            "tag": "灵异",
+            "language": "日语",
+        }
+    },
+    "CUSAP10": {
+        "text": "续播刑警803蓝村怪案",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "刑警803蓝村怪案",
+            "play_setting": "续播"
+        }
+    },
+    "CUSAP11": {
+        "text": "现在想要听那个文倩的闲谈鹿鼎记",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "闲谈鹿鼎记",
+            "artist": "文倩",
+        }
+    },
+    "CUSAP12": {
+        "text": "宝宝要听小月讲得睡前故事睡觉，给他放放吧",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "小月"
+        }
+    },
+    "CUSAP13": {
+        "text": "我们听个小卷毛历险记好不好呀",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "小卷毛历险记"
+        }
+    },
+    "CUSAP14": {
+        "text": "昨天狐狸和乌鸦的儿童故事还没听完，今天继续讲吧",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "狐狸和乌鸦"
+        }
+    },
+    "CUSAP15": {
+        "text": "循环一千零一夜经典儿歌",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "一千零一夜经典儿歌",
+            "play_setting": "循环"
+        }
+    },
+    "NCUSAP15": {
+        "text": "继续一千零一夜经典儿歌",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "一千零一夜经典儿歌",
+            "play_setting": "继续"
+        }
+    },
+    "CUSAP16": {
+        "text": "到了学习英语的时间了，接着放英文小天才吧",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "英文小天才",
+            "language": "英语",
+            "play_setting": "接着"
+        }
+    },
+    "CUSAP17": {
+        "text": "张国立的古人有意思挺有意思的，再听听",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "古人有意思",
+            "artist": "张国立",
+        }
+    },
+    "CUSAP18": {
+        "text": "放之前那个解密黄埔军校",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "解密黄埔军校",
+        }
+    },
+    "CUSAP19": {
+        "text": "听一下王更新的明朝那些事儿",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "明朝那些事儿",
+            "artist": "王更新",
+        }
+    },
+    "CUSAP20": {
+        "text": "仙剑奇侠传官方出广播剧了！我要听我要听",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "仙剑奇侠传",
+        }
+    },
+    "CUSAP21": {
+        "text": "那个悬疑版疯狂的石头是啥呀，好像还是郭涛，听一下",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "疯狂的石头",
+            "artist": "郭涛",
+            "tag": "悬疑",
+        }
+    },
+    "CUSAP22": {
+        "text": "回放一下摸金天师的声展",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "摸金天师",
+        }
+    },
+    "CUSAP23": {
+        "text": "放放看那个小学生推荐读物狐狸爸爸总有办法",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "狐狸爸爸总有办法"
+        }
+    },
+    "CUSAP24": {
+        "text": "现在气氛正好适合放民间鬼故事",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "民间鬼故事",
+        }
+    },
+    "CUSAP25": {
+        "text": "白夜剧场出品的高智商犯罪现在开始放吧",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "高智商犯罪"
+        }
+    },
+    "BCUSAP0": {
+        "text": "听说鬼吹灯新广播剧出声展了快放来听听",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "鬼吹灯",
+        }
+    },
+    "BCUSAP1": {
+        "text": "给这个要睡觉的娃讲个格林童话吧",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "格林童话",
+        }
+    },
+    "BCUSAP2": {
+        "text": "找找看李白有没有配过穿越类广播剧",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "李白",
+            "tag": "穿越",
+        }
+    },
+    "BCUSAP3": {
+        "text": "有日文版的都市向有声书吗我想练练听力",
+        "intent": "Audio-Play",
+        "slots": {
+            "tag": "都市向",
+            "language": "日文",
+        }
+    },
+    "BCUSAP4": {
+        "text": "昨晚没听完的当喵星人会说话了现在接着听",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "当喵星人会说话了",
+            "play_setting": "接着"
+        }
+    },
+    "BCUSAP5": {
+        "text": "闲来无事播个侯宝林先生的相声听听",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "侯宝林",
+        }
+    },
+    "BCUSAP6": {
+        "text": "奇幻冒险的广播剧随机放一个吧",
+        "intent": "Audio-Play",
+        "slots": {
+            "tag": "奇幻冒险",
+        }
+    },
+    "BCUSAP7": {
+        "text": "播一个深夜书屋从第十集开始",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "深夜书屋",
+            "play_setting": "第十集"
+        }
+    },
+    "BCUSAP8": {
+        "text": "易中天的品三国好像很有名，放放看",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "品三国",
+            "artist": "易中天",
+        }
+    },
+    "BCUSAP10": {
+        "text": "我现在想听之前听过的那个广播剧我在南疆那些年",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "我在南疆那些年",
+        }
+    },
+    "BCUSAP11": {
+        "text": "随便找个云鹤追配的有声小说来播",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "云鹤追",
+        }
+    },
+    "BCUSAP12": {
+        "text": "有没有西班牙语的睡前小故事能听",
+        "intent": "Audio-Play",
+        "slots": {
+            "tag": "睡前小故事",
+            "language": "西班牙语",
+        }
+    },
+    "BCUSAP13": {
+        "text": "帮我继续放武侠小说天龙八部第一季第五集",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "天龙八部",
+            "tag": "武侠",
+            "play_setting": "继续"
+        }
+    },
+    "BCUSAP14": {
+        "text": "播放李雪琴的脱口秀来开心开心",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "李雪琴",
+            "tag": "脱口秀",
+        }
+    },
+    "BCUSAP16": {
+        "text": "放放看那个三体",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "三体",
+        }
+    },
+    "BCUSAP17": {
+        "text": "有东野圭吾的白夜行能听的吧",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "白夜行",
+            "artist": "东野圭吾",
+        }
+    },
+    "BCUSAP18": {
+        "text": "循环播放一下日语版小红帽的故事",
+        "intent": "Audio-Play",
+        "slots": {
+            "name": "小红帽",
+            "language": "日语",
+            "play_setting": "循环"
+        }
+    },
+    "BCUSAP19": {
+        "text": "郭德纲的相声很火吧放来我听",
+        "intent": "Audio-Play",
+        "slots": {
+            "artist": "郭德纲",
+        }
+    }
+}
