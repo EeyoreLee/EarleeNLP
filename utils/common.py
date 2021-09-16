@@ -135,7 +135,7 @@ def get_piece_randint(start, end, n):
     return res
 
 
-def viterbi_ensemble_decode(logits, mask, unpad=False, include_start_end_trans=False, start_scores=None, end_scores=None, trans_m=None, _constrain=None, device='cuda:0', ensemble_method='sum'):
+def viterbi_ensemble_decode(logits, mask, unpad=False, include_start_end_trans=False, start_scores=None, end_scores=None, trans_m=None, _constrain=None, device='cuda:7', ensemble_method='sum'):
     """给定一个特征矩阵以及转移分数矩阵，计算出最佳的路径以及对应的分数
 
     :param torch.FloatTensor logits: batch_size x max_len x num_tags，特征矩阵。

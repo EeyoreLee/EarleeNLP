@@ -332,6 +332,9 @@ class NlpGoGo(object):
                     torch.load(flat_all_model_path, map_location=self.flat_device_map['all']),
                     torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-13-17-37-50-f1_90.pth', map_location=self.flat_device_map['all']),
                     torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-13-17-18-01-f1_89.pth', map_location=self.flat_device_map['all']),
+                    torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-13-16-48-04-f1_90.pth', map_location=self.flat_device_map['all']),
+                    # torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-13-16-08-47-f1_89.pth', map_location='cuda:2'),
+                    # torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-13-16-48-04-f1_90.pth', map_location=self.flat_device_map['all']),
                 ]
             else:
                 m = torch.load(ner_model_path, map_location=torch.device(device))
@@ -1077,58 +1080,98 @@ class NlpGoGo(object):
             _all_test_path = [
                 '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter',
                 '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter',
-                '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter'
+                '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter',
+                '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter',
             ]
             _all_placeholder_path = [
                 '/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter',
                 '/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter',
-                '/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter'
+                '/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter',
+                '/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter',
             ]
             _train_path = [
                 '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.train',
                 '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.train',
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.train'
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.train',
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.train',
             ]
             _dev_path = [
                 '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.test',
                 '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.test',
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.test'
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.test',
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.test',
             ]
             # res = self._flat_ner_all(self.ner_model, real_text_list, with_placeholder=False, idx2label=IDX2LABEL, _device=self.flat_device_map[intent])
             res = self._flat_ner_all(self.ner_model, real_text_list, train_path=_train_path, dev_path=_dev_path, \
-                _device=self.flat_device_map[intent], idx2label=IDX2LABEL, placeholder_path=_all_placeholder_path, \
+                _device=['cuda:1', 'cuda:1', 'cuda:1', 'cuda:1'], idx2label=IDX2LABEL, placeholder_path=_all_placeholder_path, \
                 test_path=_all_test_path)
             if manager is not None:
                 manager[intent] = res
             return res
             # return self._flat_ner_all(self.ner_model, real_text_list, with_placeholder=False, idx2label=IDX2LABEL)
         intent2model = {
-            'Alarm-Update': self.flat_alarm_update_model_path,
-            'FilmTele-Play': self.flat_filmtele_play_model_path,
-            'date_and_time': '/ai/223/person/lichunyu/models/df/best/flat-2021-09-08-11-24-01-f1_97.pth',
-            'Calendar-Query': '/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-14-15-35-34-f1_97.pth'
+            'Alarm-Update': [
+                torch.load('/ai/223/person/lichunyu/models/df/ner/flat-2021-09-10-15-03-03-f1_97.pth', map_location=self.flat_device_map[intent]),
+                ],
+            # 'FilmTele-Play': torch.load(self.flat_filmtele_play_model_path, map_location=self.flat_device_map[intent]),
+            'date_and_time': torch.load('/ai/223/person/lichunyu/models/df/best/flat-2021-09-08-11-24-01-f1_97.pth', map_location=self.flat_device_map[intent]),
+                # torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-16-14-59-07-f1_98.pth', map_location=self.flat_device_map[intent]),
+                # torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-16-14-54-40-f1_98.pth', map_location=self.flat_device_map[intent]),
+                # torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-16-15-25-29-f1_98.pth', map_location=self.flat_device_map[intent]),
+                # ],
+            'Calendar-Query': torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-14-15-35-34-f1_97.pth', map_location=self.flat_device_map[intent])
         }
         inent2train_path = {
-            'Alarm-Update': "/ai/223/person/lichunyu/datasets/dataf/seq_label/Alarm-Update_detached_clean.train",
+            'Alarm-Update': [
+                "/ai/223/person/lichunyu/datasets/dataf/seq_label/Alarm-Update_detached_clean.train",
+                ],
             'FilmTele-Play': "/ai/223/person/lichunyu/datasets/dataf/seq_label/FilmTele-Play_detached.train",
             'Calendar-Query': '/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query_detached.train',
-            'date_and_time': '/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_clean_detached.train'
+            # 'date_and_time': '/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_clean_detached.train'
+            # 'date_and_time': [
+            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_detached_clean.train',
+            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_detached_clean.train',
+            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_detached_clean.train',
+            # ],
+            'date_and_time': '/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_clean_detached.train',
         }
         intent2dev_path = {
-            "Alarm-Update": "/ai/223/person/lichunyu/datasets/dataf/seq_label/Alarm-Update_detached_clean.test",
+            "Alarm-Update": [
+                "/ai/223/person/lichunyu/datasets/dataf/seq_label/Alarm-Update_detached_clean.test",
+                ],
             'FilmTele-Play': "/ai/223/person/lichunyu/datasets/dataf/seq_label/FilmTele-Play_detached.test",
-            'date_and_time': "/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_clean_detached.test",
+            'date_and_time': '/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_clean_detached.test',
+            # 'date_and_time': [
+            #     "/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_detached_clean.test",
+            #     "/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_detached_clean.test",
+            #     "/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_detached_clean.test",
+            #     # "/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_clean_detached.test",
+            #     ],
             'Calendar-Query': "/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query_detached.test"
         }
         intent2test_path = {
             'date_and_time': "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter",
-            'Alarm-Update': "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter",
+            # 'date_and_time': [
+            #     "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter",
+            #     "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter",
+            #     "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter",
+            #     ],
+            'Alarm-Update': [
+                "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter",
+                ],
             'FilmTele-Play': None,
             'Calendar-Query': "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter"
         }
         intent2placeholder_path = {
-            'date_and_time': "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
-            'Alarm-Update': "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
+             'date_and_time': "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
+            # 'date_and_time': [
+            #     "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
+            #     # "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
+            #     # "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
+            #     ],
+            'Alarm-Update': [
+                "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
+                ],
             'FilmTele-Play': None,
             'Calendar-Query': "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter"
         }
@@ -1138,8 +1181,7 @@ class NlpGoGo(object):
             'date_and_time': I2L_DATE_AND_TIME,
             'Calendar-Query': I2L_CALENDAR_QUERY,
         }
-        model = torch.load(intent2model[intent], map_location=self.flat_device_map[intent])
-        res = self._flat_ner_all(model, real_text_list, train_path=inent2train_path[intent], dev_path=intent2dev_path[intent], \
+        res = self._flat_ner_all(intent2model[intent], real_text_list, train_path=inent2train_path[intent], dev_path=intent2dev_path[intent], \
                 _device=self.flat_device_map[intent], idx2label=idx2label_map[intent], placeholder_path=intent2placeholder_path[intent], \
                 test_path=intent2test_path[intent])
         if manager is not None:
@@ -1156,6 +1198,11 @@ class NlpGoGo(object):
         if isinstance(_model, list):
             ensemble = True
 
+        if not isinstance(_model, list):
+            _model = [_model]
+
+        if not isinstance(_device, list):
+            _device = [_device] * len(_model)
 
         def create_dataloader(_train_path, _dev_path, _test_path, _placeholder_path, _with_placeholder=False):
             datasets, vocabs, embeddings = load_ner(
@@ -1233,9 +1280,6 @@ class NlpGoGo(object):
             dataloader_item = create_dataloader(train_path, dev_path, test_path, placeholder_path, with_placeholder)
             dataloader.append(dataloader_item)
 
-        if not isinstance(_model, list):
-            _model = [_model]
-
         for m in _model:
             m.eval()
 
@@ -1249,13 +1293,13 @@ class NlpGoGo(object):
             for idx in range(len(_model)):
                 batch = dataloader[idx][step]
                 real_text = real_text_list[step]
-                target = batch[1].to(_device)
-                bigrams = batch[2].to(_device)
-                seq_len = batch[3].to(_device)
-                lex_num = batch[4].to(_device)
-                lattice = batch[7].to(_device)
-                pos_s = batch[8].to(_device)
-                pos_e = batch[9].to(_device)
+                target = batch[1].to(_device[idx])
+                bigrams = batch[2].to(_device[idx])
+                seq_len = batch[3].to(_device[idx])
+                lex_num = batch[4].to(_device[idx])
+                lattice = batch[7].to(_device[idx])
+                pos_s = batch[8].to(_device[idx])
+                pos_e = batch[9].to(_device[idx])
                 _, offsets = text_rm_space(real_text)
                 text_list = [real_text]
 
@@ -1298,11 +1342,9 @@ class NlpGoGo(object):
             manager = torch.multiprocessing.Manager()
             manager = manager.dict()
             p_slots_alarm_update = torch.multiprocessing.Process(target=self.flat_ner_all, args=(flat_text_list, 'Alarm-Update', manager))
-            # p_slots_filmtele_play = torch.multiprocessing.Process(target=self.flat_ner_all, args=(flat_text_list, 'FilmTele-Play', manager))
             p_slots_date_and_time = torch.multiprocessing.Process(target=self.flat_ner_all, args=(flat_text_list, 'date_and_time', manager))
             p_slots_all = torch.multiprocessing.Process(target=self.flat_ner_all, args=(flat_text_list, 'all', manager))
             p_slots_calendar_query = torch.multiprocessing.Process(target=self.flat_ner_all, args=(flat_text_list, 'Calendar-Query', manager))
-            # jobs = [p_slots_alarm_update, p_slots_all, p_slots_filmtele_play, p_slots_date_and_time]
             jobs = [p_slots_alarm_update, p_slots_all, p_slots_date_and_time, p_slots_calendar_query]
             for p in jobs:
                 p.start()
@@ -1446,6 +1488,12 @@ class NlpGoGo(object):
                     slots['region'] = region
 
             slots = slot_hash(slots)
+            time_patch_slot = weather_time_patch(text)
+            if time_patch_slot['datetime_time']:
+                if intent == 'Weather-Query':
+                    slots = slot_add(slots, time_patch_slot)
+                else:
+                    slots = slot_delete(slots, time_patch_slot)
 
             if with_text is True:
                 res[idx]['text'] = text
@@ -1580,6 +1628,73 @@ class NlpGoGo(object):
             return flat_slot_clean(res, intent=intent, with_intent=True)
 
 
+def slot_add(slot_origin, slot_new):
+    for k, v in slot_new.items():
+        if k not in slot_origin:
+            slot_origin[k] = v
+        else:
+            if isinstance(slot_origin[k], str):
+                slot_origin[k] = [slot_origin[k]]
+            if isinstance(slot_new[k], list):
+                slot_origin[k].extend(slot_new[k])
+            else:
+                slot_origin[k].append(slot_new[k])
+            slot_origin[k] = list(set(slot_origin[k]))
+            if len(slot_origin[k]) == 1:
+                slot_origin[k] = slot_origin[k][0]
+    return slot_origin
+
+
+def slot_delete(slot_origin, slot_new):
+    for k, v in slot_new.items():
+        if k in slot_origin:
+            if isinstance(slot_new[k], str):
+                slot_new[k] = [slot_new[k]]
+            for i in slot_new[k]:
+                if k not in slot_origin:
+                    break
+                if isinstance(slot_origin[k], str):
+                    if slot_origin[k] == i:
+                        del slot_origin[k]
+                else:
+                    if i in slot_origin[k]:
+                        slot_origin[k].remove(i)
+
+            if k in slot_origin and isinstance(slot_origin[k], list):
+                slot_origin[k] = list(set(slot_origin[k]))
+                if len(slot_origin[k]) == 1:
+                    slot_origin[k] = slot_origin[k][0]
+                elif len(slot_origin[k]) == 0:
+                    del slot_origin[k]
+
+    return slot_origin
+
+
+def weather_time_patch(text):
+    db = [
+        ['一会儿', '一会'],
+        '现在'
+    ]
+    res = {
+        'datetime_time': []
+    }
+    for d in db:
+        if isinstance(d, list):
+            for i in d:
+                if i in text:
+                    res['datetime_time'].append(i)
+                    break
+        else:
+            if d in text:
+                res['datetime_time'].append(d)
+
+    if len(res['datetime_time']) == 0:
+        return {'datetime_time': ''}
+    if len(res['datetime_time']) == 1:
+        return {'datetime_time': res['datetime_time'][0]}
+    return res
+
+
 def slot_hash(slot):
     if 'type' in slot and 'index' in slot:
         if slot['type'] == '雨' and slot['index'] == '降水量':
@@ -1669,10 +1784,10 @@ if __name__ == '__main__':
         },
         flat_device_map = {
             'all': 'cuda:1',
-            'Alarm-Update': 'cuda:1',
+            'Alarm-Update': 'cuda:6',
             'FilmTele-Play': 'cuda:1',
-            'date_and_time': 'cuda:1',
-            'Calendar-Query': 'cuda:3'
+            'date_and_time': 'cuda:2',
+            'Calendar-Query': 'cuda:4'
         },
         ood_device_map = {
             'bert': 'cuda:0'
@@ -1687,7 +1802,12 @@ if __name__ == '__main__':
         ood_config_path='/root/pretrain-models/hfl-chinese-roberta-wwm-ext-large',
         # flat_all_model_path='/ai/223/person/lichunyu/models/df/best/flat-2021-08-30-22-03-15-f1_92.pth',
         flat_all_model_path='/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-13-19-37-25-f1_91.pth',
-        flat_alarm_update_model_path='/ai/223/person/lichunyu/models/df/ner/flat-2021-09-10-15-03-03-f1_97.pth',
+        flat_alarm_update_model_path=[
+            '/ai/223/person/lichunyu/models/df/ner/flat-2021-09-10-15-03-03-f1_97.pth',
+            '/ai/223/person/lichunyu/models/df/ner/flat-2021-09-10-14-41-33-f1_95.pth',
+            '/ai/223/person/lichunyu/models/df/ner/flat-2021-09-10-14-53-13-f1_95.pth',
+            '/ai/223/person/lichunyu/models/df/ner/flat-2021-09-10-14-38-33-f1_95.pth',
+        ],
         flat_filmtele_play_model_path='/ai/223/person/lichunyu/models/df/best/flat-2021-09-06-15-16-14-f1_94.pth'
     )
 
