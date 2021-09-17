@@ -7,9 +7,10 @@
 import json
 from collections import defaultdict
 import os
-import numpy as np
+import re
 import time
 
+import numpy as np
 import torch.multiprocessing
 from transformers import (
     BertTokenizer,
@@ -557,8 +558,6 @@ class NlpGoGo(object):
         return res
 
     def music_play_play_mode(self, text):
-    #     if '循环播放' in text:
-    #         return '循环播放'
         cls_2 = [
             '顺序播放',
             '挨着',
@@ -568,17 +567,9 @@ class NlpGoGo(object):
             if i in text:
                 return '顺序播放'
         cls_0 = [
-            '播放一下',
             '随机',
             '随便',
-            # '来一首',
-            # '找一首',
-            # '放一首',
-            # '听一下',
-            # '听一首',
             '任意',
-            # '来首',
-            # '来一个'
         ]
         for i in cls_0:
             if i in text:
@@ -644,9 +635,12 @@ class NlpGoGo(object):
         for i in cls_5:
             if i in text:
                 return '降水量'
+        p = re.compile('(级.{0,7}风|风力)')
+        g = p.search(text)
+        if g:
+            return '风力'
         cls_0 = [
             '穿',
-            # '多加衣物'
             '衣物'
         ]
         for i in cls_0:
@@ -989,6 +983,10 @@ class NlpGoGo(object):
             return '暴雪'
         if '台风' in text:
             return '台风'
+        p = re.compile('(级.{0,7}风|风力)')
+        g = p.search(text)
+        if g:
+            return ''
         if '风' in text:
             cls_4 = [
                 '风向',
@@ -1495,6 +1493,8 @@ class NlpGoGo(object):
                 else:
                     slots = slot_delete(slots, time_patch_slot)
 
+            slots = slot_delete(slots, {'datetime_time': ['一会儿', '一会']})
+
             if with_text is True:
                 res[idx]['text'] = text
 
@@ -1672,7 +1672,7 @@ def slot_delete(slot_origin, slot_new):
 
 def weather_time_patch(text):
     db = [
-        ['一会儿', '一会'],
+        # ['一会儿', '一会'],
         '现在'
     ]
     res = {

@@ -1,5 +1,6 @@
 {
     "author": "earlee",
+    "description": "DF比赛 槽位date和time单独模型",
     "weight_decay": 0.1,
     "output_dir": "/ai/223/person/lichunyu/models/df/ner_detached",
     "deploy": true,

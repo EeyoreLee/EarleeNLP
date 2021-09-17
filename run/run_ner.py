@@ -200,6 +200,11 @@ def main(json_path=''):
         + f"distributed training: {bool(training_args.local_rank != -1)}, 16-bits training: {training_args.fp16}"
     )
 
+    logger.info('Description: {}'.format(custom_args.description))
+    if json_path:
+        logger.info('json file path is : {}'.format(json_path))
+        logger.info('json file args are: \n'+open(json_path, 'r').read())
+
     set_seed(training_args.seed)
 
     config = BertConfig.from_pretrained(

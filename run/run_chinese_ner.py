@@ -5,6 +5,7 @@
 '''
 
 from dataclasses import dataclass, field
+import json
 import logging
 import os
 import time
@@ -116,13 +117,12 @@ def main(json_path):
     if json_path:
         custom_args, training_args = parser.parse_json_file(json_file=json_path)
     elif len(sys.argv) == 2 and sys.argv[1].endswith(".json"):
-        custom_args, training_args = parser.parse_json_file(json_file=os.path.abspath(sys.argv[1]))
+        json_path = os.path.abspath(sys.argv[1])
+        custom_args, training_args = parser.parse_json_file(json_file=json_path)
     else:
         custom_args, training_args = parser.parse_args_into_dataclasses()
 
-    # os.environ['CUDA_VISIBLE_DEVICES'] = custom_args.cus_cuda_visible_devices
 
-    # _add_file_handler(logging, custom_args.log_file_path)
     _logger = FastNLPLogger(__name__)
     _logger.add_file(custom_args.log_file_path)
 
@@ -140,6 +140,11 @@ def main(json_path):
     )
 
     set_seed(training_args.seed)
+
+    logger.info('Description: {}'.format(custom_args.description))
+    if json_path:
+        logger.info('json file path is : {}'.format(json_path))
+        logger.info('json file args are: \n'+open(json_path, 'r').read())
 
     over_all_dropout = -1
 
@@ -526,9 +531,11 @@ def main(json_path):
         logger.info('eval loss: ' + str(total_eval_loss / len(dev_dataloader)))
         if custom_args.deploy is True:
             logger.info('>>>>>>>>>>>> saving the model <<<<<<<<<<<<<<')
+            logger.info('model named: {}'.format(current_ckpt))
             torch.save(model, current_ckpt)
         else:
             logger.info('>>>>>>>>>>>> saving the state_dict of model <<<<<<<<<<<<<')
+            logger.info('state_dict named: {}'.format(current_ckpt))
             torch.save(model.state_dict(), current_ckpt)
 
         logger.info('\n')
