@@ -192,7 +192,7 @@ def viterbi_ensemble_decode(logits, mask, unpad=False, include_start_end_trans=F
     if include_start_end_trans:
         vscore += transitions[:n_tags, n_tags + 1].view(1, -1)
 
-    # backtrace
+    # backpointer
     batch_idx = torch.arange(batch_size, dtype=torch.long, device=logits.device)
     seq_idx = torch.arange(seq_len, dtype=torch.long, device=logits.device)
     lens = (mask.long().sum(0) - 1)

@@ -635,10 +635,6 @@ class NlpGoGo(object):
         for i in cls_5:
             if i in text:
                 return '降水量'
-        p = re.compile('(级.{0,7}风|风力)')
-        g = p.search(text)
-        if g:
-            return '风力'
         cls_0 = [
             '穿',
             '衣物'
@@ -687,6 +683,7 @@ class NlpGoGo(object):
         return ''
 
     def region_extract(self, text):
+        result = []  # (region, sub_text, index)
         cls_0 = [
             '美国',
             '美剧',
@@ -694,263 +691,309 @@ class NlpGoGo(object):
         ]
         for i in cls_0:
             if i in text:
-                return '美国'
+                index = text.index(i)
+                result.append(('美国', i, index))
         cls_1 = [
             '日本'
         ]
         for i in cls_1:
             if i in text:
-                return '日本'
+                index = text.index(i)
+                result.append(('日本', i, index))
         cls_2 = [
             '国产'
         ]
         for i in cls_2:
             if i in text:
-                return '国产'
+                index = text.index(i)
+                result.append(('国产', i, index))
         cls_3 = [
             '香港',
             '港片'
         ]
         for i in cls_3:
             if i in text:
-                return '香港'
+                index = text.index(i)
+                result.append(('香港', i, index))
         cls_4 = [
             '法国'
         ]
         for i in cls_4:
             if i in text:
-                return '法国'
+                index = text.index(i)
+                result.append(('法国', i, index))
         cls_5 = [
             '韩国',
             '韩剧'
         ]
         for i in cls_5:
             if i in text:
-                return '韩国'
+                index = text.index(i)
+                result.append(('韩国', i, index))
         cls_6 = [
             '伦敦'
         ]
         for i in cls_6:
             if i in text:
-                return '伦敦'
+                index = text.index(i)
+                result.append(('伦敦', i, index))
         cls_7 = [
             '欧美'
         ]
         for i in cls_7:
             if i in text:
-                return '欧美'
+                index = text.index(i)
+                result.append(('欧美', i, index))
         cls_8 = [
             '大陆',
             '内地'
         ]
         for i in cls_8:
             if i in text:
-                return '大陆'
+                index = text.index(i)
+                result.append(('大陆', i, index))
         cls_9 = [
             '台湾'
         ]
         for i in cls_9:
             if i in text:
-                return '台湾'
+                index = text.index(i)
+                result.append(('台湾', i, index))
         cls_10 = [
             '上海'
         ]
         for i in cls_10:
             if i in text:
-                return '上海'
+                index = text.index(i)
+                result.append(('上海', i, index))
         cls_11 = [
             '中国'
         ]
         for i in cls_11:
             if i in text:
-                return '中国'
+                index = text.index(i)
+                result.append(('中国', i, index))
         cls_12 = [
             '英国'
         ]
         for i in cls_12:
             if i in text:
-                return '英国'
+                index = text.index(i)
+                result.append(('英国', i, index))
         cls_13 = [
             '泰国',
             '泰剧'
         ]
         for i in cls_13:
             if i in text:
-                return '泰国'
+                index = text.index(i)
+                result.append(('泰国', i, index))
         cls_14 = [
             '四川'
         ]
         for i in cls_14:
             if i in text:
-                return '四川'
+                index = text.index(i)
+                result.append(('四川', i, index))
         cls_15 = [
             '国创'
         ]
         for i in cls_15:
             if i in text:
-                return '国创'
+                index = text.index(i)
+                result.append(('国创', i, index))
         cls_16 = [
             '北京'
         ]
         for i in cls_16:
             if i in text:
-                return '北京'
+                index = text.index(i)
+                result.append(('北京', i, index))
         cls_17 = [
             '安徽'
         ]
         for i in cls_17:
             if i in text:
-                return '安徽'
+                index = text.index(i)
+                result.append(('安徽', i, index))
         cls_18 = [
             '欧洲'
         ]
         for i in cls_18:
             if i in text:
-                return '欧洲'
+                index = text.index(i)
+                result.append(('欧洲', i, index))
         cls_19 = [
             '重庆'
         ]
         for i in cls_19:
             if i in text:
-                return '重庆'
+                index = text.index(i)
+                result.append(('重庆', i, index))
         cls_20 = [
             '巴西'
         ]
         for i in cls_20:
             if i in text:
-                return '巴西'
+                index = text.index(i)
+                result.append(('巴西', i, index))
         cls_21 = [
             '温哥华'
         ]
         for i in cls_21:
             if i in text:
-                return '温哥华'
+                index = text.index(i)
+                result.append(('温哥华', i, index))
         cls_22 = [
             '南京'
         ]
         for i in cls_22:
             if i in text:
-                return '南京'
+                index = text.index(i)
+                result.append(('南京', i, index))
         cls_23 = [
             '伊朗'
         ]
         for i in cls_23:
             if i in text:
-                return '伊朗'
+                index = text.index(i)
+                result.append(('伊朗', i, index))
         cls_24 = [
             '越南'
         ]
         for i in cls_24:
             if i in text:
-                return '越南'
+                index = text.index(i)
+                result.append(('越南', i, index))
         cls_25 = [
             '意大利'
         ]
         for i in cls_25:
             if i in text:
-                return '意大利'
+                index = text.index(i)
+                result.append(('意大利', i, index))
         cls_26 = [
             '武汉'
         ]
         for i in cls_26:
             if i in text:
-                return '武汉'
+                index = text.index(i)
+                result.append(('武汉', i, index))
         cls_27 = [
             '新加坡'
         ]
         for i in cls_27:
             if i in text:
-                return '新加坡'
+                index = text.index(i)
+                result.append(('新加坡', i, index))
         cls_28 = [
             '浙江'
         ]
         for i in cls_28:
             if i in text:
-                return '浙江'
+                index = text.index(i)
+                result.append(('浙江', i, index))
         cls_29 = [
             '俄罗斯'
         ]
         for i in cls_29:
             if i in text:
-                return '俄罗斯'
+                index = text.index(i)
+                result.append(('俄罗斯', i, index))
         cls_30 = [
             '雅典'
         ]
         for i in cls_30:
             if i in text:
-                return '雅典'
+                index = text.index(i)
+                result.append(('雅典', i, index))
         cls_31 = [
             '印度'
         ]
         for i in cls_31:
             if i in text:
-                return '印度'
+                index = text.index(i)
+                result.append(('印度', i, index))
         cls_32 = [
             '德国'
         ]
         for i in cls_32:
             if i in text:
-                return '德国'
+                index = text.index(i)
+                result.append(('德国', i, index))
         cls_33 = [
             '湖南'
         ]
         for i in cls_33:
             if i in text:
-                return '湖南'
+                index = text.index(i)
+                result.append(('湖南', i, index))
         cls_34 = [
             '澳大利亚'
         ]
         for i in cls_34:
             if i in text:
-                return '澳大利亚'
+                index = text.index(i)
+                result.append(('澳大利亚', i, index))
         cls_35 = [
             '洛阳'
         ]
         for i in cls_35:
             if i in text:
-                return '洛阳'
+                index = text.index(i)
+                result.append(('洛阳', i, index))
         cls_36 = [
             '深圳'
         ]
         for i in cls_36:
             if i in text:
-                return '深圳'
+                index = text.index(i)
+                result.append(('深圳', i, index))
         cls_37 = [
             '意大利'
         ]
         for i in cls_37:
             if i in text:
-                return '意大利'
+                index = text.index(i)
+                result.append(('意大利', i, index))
         cls_38 = [
             '巴塞罗那'
         ]
         for i in cls_38:
             if i in text:
-                return '巴塞罗那'
+                index = text.index(i)
+                result.append(('巴塞罗那', i, index))
         cls_39 = [
             '西安'
         ]
         for i in cls_39:
             if i in text:
-                return '西安'
+                index = text.index(i)
+                result.append(('西安', i, index))
         cls_40 = [
             '苏州'
         ]
         for i in cls_40:
             if i in text:
-                return '苏州'
+                index = text.index(i)
+                result.append(('苏州', i, index))
         cls_41 = [
             '辽宁'
         ]
         for i in cls_41:
             if i in text:
-                return '辽宁'
+                index = text.index(i)
+                result.append(('辽宁', i, index))
         cls_42 = [
             '海口'
         ]
         for i in cls_42:
             if i in text:
-                return '海口'
+                index = text.index(i)
+                result.append(('海口', i, index))
+        if result:
+            result = sorted(result, key=lambda x: x[-1])
+            return result[0][0]
         return ''
 
 
@@ -983,10 +1026,6 @@ class NlpGoGo(object):
             return '暴雪'
         if '台风' in text:
             return '台风'
-        p = re.compile('(级.{0,7}风|风力)')
-        g = p.search(text)
-        if g:
-            return ''
         if '风' in text:
             cls_4 = [
                 '风向',

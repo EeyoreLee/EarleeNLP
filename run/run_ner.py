@@ -233,7 +233,7 @@ def main(json_path=''):
         max_length=custom_args.max_length,
     )
 
-    metric_seqeval = load_metric('seqeval')
+    # metric_seqeval = load_metric('seqeval')
 
     device = training_args.device if torch.cuda.is_available() else 'cpu'
 
