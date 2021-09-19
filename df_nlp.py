@@ -173,92 +173,6 @@ IDX2LABEL = {0: '<pad>', 1: '<unk>', 2: 'O', 3: 'I-name', 4: 'I-channel', 5: 'I-
 I2L_CALENDAR_QUERY = {0: '<pad>', 1: '<unk>', 2: 'O', 3: 'I-datetime_date', 4: 'B-datetime_date'}
 
 
-IDX2LABEL_ORIGIN = {
-    0: '<pad>', 
-    1: '<unk>', 
-    2: 'O', 
-    3: 'I-Video-Play-name', 
-    4: 'I-Radio-Listen-channel', 
-    5: 'I-Calendar-Query-datetime_date', 
-    6: 'I-Alarm-Update-notes', 
-    7: 'I-FilmTele-Play-name', 
-    8: 'I-Alarm-Update-datetime_time', 
-    9: 'I-Radio-Listen-name', 
-    10: 'I-Alarm-Update-datetime_date', 
-    11: 'I-HomeAppliance-Control-appliance', 
-    12: 'I-Travel-Query-destination', 
-    13: 'I-HomeAppliance-Control-details', 
-    14: 'I-Radio-Listen-frequency', 
-    15: 'I-Music-Play-song', 
-    16: 'I-Weather-Query-datetime_date', 
-    17: 'B-Calendar-Query-datetime_date', 
-    18: 'I-Weather-Query-city', 
-    19: 'B-HomeAppliance-Control-appliance', 
-    20: 'B-Travel-Query-destination', 
-    21: 'I-Video-Play-datetime_date', 
-    22: 'I-Music-Play-artist', 
-    23: 'B-Alarm-Update-datetime_date', 
-    24: 'B-Weather-Query-city', 
-    25: 'B-Video-Play-name', 
-    26: 'B-Weather-Query-datetime_date', 
-    27: 'B-Alarm-Update-datetime_time', 
-    28: 'I-FilmTele-Play-artist', 
-    29: 'B-Alarm-Update-notes', 
-    30: 'B-HomeAppliance-Control-details', 
-    31: 'B-FilmTele-Play-name', 
-    32: 'B-Radio-Listen-channel', 
-    33: 'I-Music-Play-age', 
-    34: 'I-FilmTele-Play-age', 
-    35: 'B-Radio-Listen-name', 
-    36: 'I-FilmTele-Play-tag', 
-    37: 'I-Music-Play-album', 
-    38: 'B-Music-Play-artist', 
-    39: 'B-FilmTele-Play-artist', 
-    40: 'I-Travel-Query-departure', 
-    41: 'B-Music-Play-song', 
-    42: 'I-FilmTele-Play-play_setting', 
-    43: 'I-Travel-Query-datetime_date', 
-    44: 'B-Travel-Query-departure', 
-    45: 'I-Radio-Listen-artist', 
-    46: 'B-FilmTele-Play-tag', 
-    47: 'I-Travel-Query-datetime_time', 
-    48: 'B-Radio-Listen-frequency', 
-    49: 'B-Radio-Listen-artist', 
-    50: 'I-Video-Play-datetime_time', 
-    51: 'B-Video-Play-datetime_date', 
-    52: 'B-Travel-Query-datetime_date', 
-    53: 'I-FilmTele-Play-region', 
-    54: 'B-FilmTele-Play-region', 
-    55: 'B-FilmTele-Play-play_setting', 
-    56: 'I-TVProgram-Play-name', 
-    57: 'B-FilmTele-Play-age', 
-    58: 'B-Travel-Query-datetime_time', 
-    59: 'B-Music-Play-age', 
-    60: 'B-Music-Play-album', 
-    61: 'I-Video-Play-region', 
-    62: 'B-Video-Play-region', 
-    63: 'I-Music-Play-instrument', 
-    64: 'I-Weather-Query-datetime_time', 
-    65: 'I-TVProgram-Play-channel', 
-    66: 'B-Music-Play-instrument', 
-    67: 'I-Audio-Play-name', 
-    68: 'B-Video-Play-datetime_time', 
-    69: 'B-Weather-Query-datetime_time', 
-    70: 'B-TVProgram-Play-name', 
-    71: 'I-TVProgram-Play-datetime_date', 
-    72: 'I-Audio-Play-artist', 
-    73: 'B-Audio-Play-name', 
-    74: 'I-TVProgram-Play-datetime_time', 
-    75: 'B-TVProgram-Play-channel', 
-    76: 'B-TVProgram-Play-datetime_date', 
-    77: 'B-Audio-Play-artist', 
-    78: 'B-TVProgram-Play-datetime_time', 
-    79: 'I-Audio-Play-play_setting', 
-    80: 'B-Audio-Play-play_setting', 
-    81: 'B-Audio-Play-tag', 
-    82: 'I-Audio-Play-tag'
-}
-
 I2L_FILMTELE_PLAY = {0: '<pad>', 1: '<unk>', 2: 'O', 3: 'I-FilmTele-Play-name', 4: 'I-FilmTele-Play-artist', 5: 'B-FilmTele-Play-name',
             6: 'I-FilmTele-Play-age', 7: 'I-FilmTele-Play-tag', 8: 'B-FilmTele-Play-artist', 9: 'B-FilmTele-Play-tag', 
             10: 'I-FilmTele-Play-play_setting', 11: 'B-FilmTele-Play-play_setting', 12: 'B-FilmTele-Play-age'}
@@ -1156,14 +1070,23 @@ class NlpGoGo(object):
                 # torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-16-14-54-40-f1_98.pth', map_location=self.flat_device_map[intent]),
                 # torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-16-15-25-29-f1_98.pth', map_location=self.flat_device_map[intent]),
                 # ],
-            'Calendar-Query': torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-14-15-35-34-f1_97.pth', map_location=self.flat_device_map[intent])
+            'Calendar-Query': [
+                torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-19-12-48-41-f1_95.pth', map_location=self.flat_device_map[intent]),
+                torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-19-13-10-00-f1_95.pth', map_location=self.flat_device_map[intent]),
+                torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-19-13-04-26-f1_95.pth', map_location=self.flat_device_map[intent]),
+                ]
         }
         inent2train_path = {
             'Alarm-Update': [
                 "/ai/223/person/lichunyu/datasets/dataf/seq_label/Alarm-Update_detached_clean.train",
                 ],
             'FilmTele-Play': "/ai/223/person/lichunyu/datasets/dataf/seq_label/FilmTele-Play_detached.train",
-            'Calendar-Query': '/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query_detached.train',
+            # 'Calendar-Query': '/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query_detached.train',
+            'Calendar-Query': [
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query-872.train',
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query-872.train',
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query-872.train',
+            ],
             # 'date_and_time': '/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_clean_detached.train'
             # 'date_and_time': [
             #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_detached_clean.train',
@@ -1184,7 +1107,12 @@ class NlpGoGo(object):
             #     "/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_detached_clean.test",
             #     # "/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_clean_detached.test",
             #     ],
-            'Calendar-Query': "/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query_detached.test"
+            # 'Calendar-Query': "/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query_detached.test"
+            'Calendar-Query': [
+                "/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query-872.test",
+                "/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query-872.test",
+                "/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query-872.test",
+            ]
         }
         intent2test_path = {
             'date_and_time': "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter",
@@ -1197,7 +1125,11 @@ class NlpGoGo(object):
                 "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter",
                 ],
             'FilmTele-Play': None,
-            'Calendar-Query': "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter"
+            'Calendar-Query': [
+                "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter",
+                "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter",
+                "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter",
+                ]
         }
         intent2placeholder_path = {
              'date_and_time': "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
@@ -1210,7 +1142,11 @@ class NlpGoGo(object):
                 "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
                 ],
             'FilmTele-Play': None,
-            'Calendar-Query': "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter"
+            'Calendar-Query': [
+                "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
+                "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
+                "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
+            ]
         }
         idx2label_map = {
             'Alarm-Update': I2L_ALARM_UPDATE,
@@ -1826,7 +1762,7 @@ if __name__ == '__main__':
             'Alarm-Update': 'cuda:6',
             'FilmTele-Play': 'cuda:1',
             'date_and_time': 'cuda:2',
-            'Calendar-Query': 'cuda:4'
+            'Calendar-Query': 'cuda:3'
         },
         ood_device_map = {
             'bert': 'cuda:0'

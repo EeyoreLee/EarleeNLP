@@ -7,10 +7,10 @@
     "optim": "adam",
     "bert_lr_rate": 0.06,
     "embed_lr_rate": 1,
-    "train_path": "/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query.train",
-    "dev_path": "/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query.test",
+    "train_path": "/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query-8_2.train",
+    "dev_path": "/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query-8_2.test",
     "test_path": "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter",
     "placeholder_path": "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
     "task": "chinese_ner",
-    "cus_cuda_visible_devices": "6"
+    "cus_cuda_visible_devices": "4"
 }

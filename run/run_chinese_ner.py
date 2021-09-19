@@ -459,6 +459,13 @@ def main(json_path):
         logger.info('======================epoch {}/{}=============================='.format(epoch_n, epoch))
 
         model.train()
+        for n, p in model.named_parameters():
+            if 'bert_embedding' in n:
+                if epoch_n >= 10:
+                    p.requires_grad = True
+                else:
+                    p.requires_grad = False
+
         total_train_loss = 0
         for step, batch in enumerate(train_dataloader):
             #TODO BERT embedding 前20 epoch 冻结
