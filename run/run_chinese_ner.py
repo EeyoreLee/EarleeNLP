@@ -184,7 +184,9 @@ def main(json_path):
         dev_path=custom_args.dev_path,
         test_path=custom_args.test_path,
         placeholder_path=custom_args.placeholder_path,
-        logger=logger
+        logger=logger,
+        with_test_a=custom_args.with_test_a,
+        label_word2idx=custom_args.label_word2idx
     )
 
 
@@ -224,7 +226,8 @@ def main(json_path):
                                                                 word_char_mix_embedding_path=yangjie_rich_pretrain_char_and_word_path,
                                                                 number_normalized=custom_args.number_normalized,
                                                                 lattice_min_freq=custom_args.lattice_min_freq,
-                                                                only_train_min_freq=custom_args.only_train_min_freq)
+                                                                only_train_min_freq=custom_args.only_train_min_freq,
+                                                                with_test_a=custom_args.with_test_a)
 
 
     avg_seq_len = 0
@@ -400,7 +403,7 @@ def main(json_path):
         train_ds,
         batch_size=16,
         collate_fn=collate_func,
-        # shuffle=True
+        shuffle=True
     )
 
 

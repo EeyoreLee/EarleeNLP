@@ -212,6 +212,9 @@ class CustomizeArguments:
 
     task: str = field(default='')
 
+    with_test_a: bool = field(default=False)
+
+    label_word2idx: dict = field(default=None)
 
 
 @dataclass

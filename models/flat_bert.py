@@ -1980,7 +1980,7 @@ def get_peking_time():
 # @cache_results(_cache_fp='need_to_defined_fp',_refresh=True)
 def equip_chinese_ner_with_lexicon(datasets, vocabs, embeddings, w_list,word_embedding_path=None, \
                 only_lexicon_in_train=False, word_char_mix_embedding_path=None, number_normalized=False, \
-                lattice_min_freq=1, only_train_min_freq=0, with_placeholder=True, **kwargs):
+                lattice_min_freq=1, only_train_min_freq=0, with_placeholder=True, with_test_a=False, **kwargs):
     def normalize_char(inp):
         result = []
         for c in inp:
@@ -2110,8 +2110,11 @@ def equip_chinese_ner_with_lexicon(datasets, vocabs, embeddings, w_list,word_emb
 
     lattice_vocab = Vocabulary()
     # lattice_vocab.from_dataset(datasets['train'],field_name='lattice',no_create_entry_dataset=[datasets['dev']])
-    if with_placeholder is True:
+    if with_placeholder is True and with_test_a is False:
         lattice_vocab.from_dataset(datasets['train'],field_name='lattice',no_create_entry_dataset=[datasets['dev'], datasets['placeholder']])
+    elif with_placeholder is True and with_test_a is True:
+        lattice_vocab.from_dataset(datasets['train'],field_name='lattice',no_create_entry_dataset=[datasets['dev'], datasets['placeholder'], datasets['test_a']])
+        print('dataset create with test_a')
     else:
         lattice_vocab.from_dataset(datasets['train'],field_name='lattice',no_create_entry_dataset=[datasets['dev']])
     # lattice_vocab.from_dataset(datasets['train'],field_name='lattice',

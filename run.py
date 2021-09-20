@@ -36,6 +36,6 @@ def run(json_path=None):
 
 if __name__ == '__main__':
     # run('/root/EarleeNLP/args/df_all_train_aug_3.json')
-    # run('/root/EarleeNLP/args/df_alarm_update_ner.json')
+    # run('/root/EarleeNLP/args/df_alarm_update_ner_aug5.json')
     # run_classification('/root/EarleeNLP/args/df_intent_all_aug.json')
     run()

@@ -4,7 +4,7 @@
     "output_dir": "/ai/223/person/lichunyu/models/df/ner_detached",
     "deploy": true,
     "seed": 42,
-    "optim": "adam",
+    "optim": "sgd",
     "bert_lr_rate": 0.05,
     "embed_lr_rate": 1,
     "train_path": "/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.train",

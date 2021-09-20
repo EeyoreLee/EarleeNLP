@@ -15,7 +15,8 @@ from models.flat_bert import StaticEmbedding, get_bigrams
 # @cache_results(_cache_fp='cache/weiboNER_uni+bi_new', _refresh=False)
 def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_token=True, train_path=None, dev_path=None,
             char_min_freq=1,bigram_min_freq=1,only_train_min_freq=0,char_word_dropout=0.01, test_path=None, \
-            logger=None, with_placeholder=True, placeholder_path=None, **kwargs):
+            logger=None, with_placeholder=True, placeholder_path=None, with_test_a=False, test_a_path=None, label_word2idx=None, \
+            **kwargs):
 
     loader = ConllLoader(['chars','target'])
 
@@ -40,11 +41,15 @@ def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_t
     if placeholder_path is None:
         placeholder_path = '/root/all_train.test'
 
+    if test_a_path is None:
+        test_a_path = '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.seq'
+
     paths = {}
     paths['train'] = train_path
     paths['dev'] = dev_path
     paths['test'] = test_path
     paths['placeholder'] = placeholder_path
+    paths['test_a'] = test_a_path
 
     datasets = {}
 
@@ -70,11 +75,15 @@ def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_t
 
 
     # char_vocab.from_dataset(datasets['train'],field_name='chars',no_create_entry_dataset=[datasets['dev'],datasets['test']])
-    if with_placeholder is True:
+    if with_placeholder is True and with_test_a is False:
         char_vocab.from_dataset(datasets['train'],field_name='chars',no_create_entry_dataset=[datasets['dev'], datasets['placeholder']])
+    elif with_placeholder is True and with_test_a is True:
+        char_vocab.from_dataset(datasets['train'],field_name='chars',no_create_entry_dataset=[datasets['dev'], datasets['placeholder'], datasets['test_a']])
     else:
         char_vocab.from_dataset(datasets['train'],field_name='chars',no_create_entry_dataset=[datasets['dev']])
     label_vocab.from_dataset(datasets['train'],field_name='target')
+    if label_word2idx is not None:
+        label_vocab.word2idx = label_word2idx
     if logger is not None:
         logger.info('label_vocab:{}\n{}'.format(len(label_vocab),label_vocab.idx2word))
 
@@ -86,8 +95,11 @@ def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_t
     vocabs['label'] = label_vocab
 
     # bigram_vocab.from_dataset(datasets['train'],field_name='bigrams',no_create_entry_dataset=[datasets['dev'],datasets['test']])
-    if with_placeholder is True:
+    if with_placeholder is True and with_test_a is False:
         bigram_vocab.from_dataset(datasets['train'],field_name='bigrams',no_create_entry_dataset=[datasets['dev'], datasets['placeholder']])
+    elif with_placeholder is True and with_test_a is True:
+        bigram_vocab.from_dataset(datasets['train'],field_name='bigrams',no_create_entry_dataset=[datasets['dev'], datasets['placeholder'], datasets['test_a']])
+        print('dataset create with test_a')
     else:
         bigram_vocab.from_dataset(datasets['train'],field_name='bigrams',no_create_entry_dataset=[datasets['dev']])
     if index_token:

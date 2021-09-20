@@ -169,6 +169,8 @@ REGION_MAP = {
 
 IDX2LABEL = {0: '<pad>', 1: '<unk>', 2: 'O', 3: 'I-name', 4: 'I-channel', 5: 'I-notes', 6: 'B-name', 7: 'I-artist', 8: 'I-appliance', 9: 'I-destination', 10: 'I-details', 11: 'I-frequency', 12: 'I-song', 13: 'B-artist', 14: 'I-age', 15: 'I-city', 16: 'B-appliance', 17: 'B-destination', 18: 'B-city', 19: 'B-notes', 20: 'B-details', 21: 'B-channel', 22: 'I-tag', 23: 'I-album', 24: 'I-play_setting', 25: 'I-departure', 26: 'B-song', 27: 'B-tag', 28: 'B-departure', 29: 'B-age', 30: 'B-frequency', 31: 'B-play_setting', 32: 'B-album', 33: 'I-instrument', 34: 'B-instrument'}
 
+IDX2LABEL_AUG = {0: '<pad>', 1: '<unk>', 2: 'O', 3: 'I-name', 4: 'I-channel', 5: 'I-notes', 6: 'B-name', 7: 'I-artist', 8: 'I-appliance', 9: 'I-destination', 10: 'I-details', 11: 'I-song', 12: 'I-frequency', 13: 'B-artist', 14: 'I-age', 15: 'B-appliance', 16: 'I-city', 17: 'B-destination', 18: 'B-city', 19: 'B-notes', 20: 'B-details', 21: 'B-channel', 22: 'I-album', 23: 'I-tag', 24: 'I-departure', 25: 'B-song', 26: 'I-play_setting', 27: 'B-tag', 28: 'B-departure', 29: 'B-age', 30: 'B-frequency', 31: 'B-play_setting', 32: 'B-album', 33: 'I-instrument', 34: 'B-instrument'}
+
 
 I2L_CALENDAR_QUERY = {0: '<pad>', 1: '<unk>', 2: 'O', 3: 'I-datetime_date', 4: 'B-datetime_date'}
 
@@ -241,15 +243,18 @@ class NlpGoGo(object):
 
         if policy['only_cls'] is False:
             if self.policy['ner'] == 'flat':
-                # self.ner_model = torch.load('/ai/223/person/lichunyu/models/df/ner/flat-2021-08-26-06-15-37-f1_92.pth', map_location=torch.device('cuda'))
-                # self.ner_model = torch.load(flat_all_model_path, map_location=self.flat_device_map['all'])
+                # self.ner_model = [
+                #     torch.load(flat_all_model_path, map_location=self.flat_device_map['all']),
+                #     torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-13-17-37-50-f1_90.pth', map_location=self.flat_device_map['all']),
+                #     torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-13-17-18-01-f1_89.pth', map_location=self.flat_device_map['all']),
+                #     torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-13-16-48-04-f1_90.pth', map_location=self.flat_device_map['all']),
+                # ]
                 self.ner_model = [
-                    torch.load(flat_all_model_path, map_location=self.flat_device_map['all']),
-                    torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-13-17-37-50-f1_90.pth', map_location=self.flat_device_map['all']),
-                    torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-13-17-18-01-f1_89.pth', map_location=self.flat_device_map['all']),
-                    torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-13-16-48-04-f1_90.pth', map_location=self.flat_device_map['all']),
-                    # torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-13-16-08-47-f1_89.pth', map_location='cuda:2'),
-                    # torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-13-16-48-04-f1_90.pth', map_location=self.flat_device_map['all']),
+                    torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-19-05-33-49-f1_92.pth', map_location=self.flat_device_map['all']),
+                    torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-19-02-40-51-f1_92.pth', map_location=self.flat_device_map['all']),
+                    torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-18-21-57-56-f1_91.pth', map_location=self.flat_device_map['all']),
+                    torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-19-00-04-28-f1_91.pth', map_location=self.flat_device_map['all']),
+                    torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-19-03-41-11-f1_91.pth', map_location='cuda:6'),
                 ]
             else:
                 m = torch.load(ner_model_path, map_location=torch.device(device))
@@ -1033,29 +1038,45 @@ class NlpGoGo(object):
                 '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter',
                 '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter',
                 '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter',
+                '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter',
             ]
             _all_placeholder_path = [
                 '/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter',
                 '/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter',
                 '/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter',
                 '/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter',
+                '/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter',
             ]
+            # _train_path = [
+            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.train',
+            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.train',
+            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.train',
+            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.train',
+            # ]
+            # _dev_path = [
+            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.test',
+            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.test',
+            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.test',
+            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.test',
+            # ]
             _train_path = [
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.train',
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.train',
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.train',
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.train',
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.train',
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.train',
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.train',
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.train',
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.train',
             ]
             _dev_path = [
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.test',
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.test',
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.test',
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.test',
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.test',
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.test',
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.test',
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.test',
+                '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.test',
             ]
             # res = self._flat_ner_all(self.ner_model, real_text_list, with_placeholder=False, idx2label=IDX2LABEL, _device=self.flat_device_map[intent])
             res = self._flat_ner_all(self.ner_model, real_text_list, train_path=_train_path, dev_path=_dev_path, \
-                _device=['cuda:1', 'cuda:1', 'cuda:1', 'cuda:1'], idx2label=IDX2LABEL, placeholder_path=_all_placeholder_path, \
-                test_path=_all_test_path)
+                _device=['cuda:1', 'cuda:1', 'cuda:1', 'cuda:1', 'cuda:6'], idx2label=IDX2LABEL_AUG, placeholder_path=_all_placeholder_path, \
+                test_path=_all_test_path, with_test_a=[False, False, False, False, False, False])
             if manager is not None:
                 manager[intent] = res
             return res
@@ -1154,9 +1175,15 @@ class NlpGoGo(object):
             'date_and_time': I2L_DATE_AND_TIME,
             'Calendar-Query': I2L_CALENDAR_QUERY,
         }
+        with_test_a_map = {
+            'Alarm-Update': [False, False, False, False],
+            'FilmTele-Play': [False, False, False, False],
+            'date_and_time': [False, False, False, False],
+            'Calendar-Query': [False, False, False, False],
+        }
         res = self._flat_ner_all(intent2model[intent], real_text_list, train_path=inent2train_path[intent], dev_path=intent2dev_path[intent], \
                 _device=self.flat_device_map[intent], idx2label=idx2label_map[intent], placeholder_path=intent2placeholder_path[intent], \
-                test_path=intent2test_path[intent])
+                test_path=intent2test_path[intent], with_test_a=with_test_a_map[intent])
         if manager is not None:
             manager[intent] = res
         return res
@@ -1164,7 +1191,7 @@ class NlpGoGo(object):
         #         _device=self.device_map[intent], idx2label=I2L_ALARM_UPDATE)
 
     def _flat_ner_all(self, _model, real_text_list, train_path=None, dev_path=None, idx2label=None, with_placeholder=True, _device='cuda', \
-                        placeholder_path=None, test_path=None):
+                        placeholder_path=None, test_path=None, with_test_a=False):
         slots_list = []
         ensemble = False
 
@@ -1177,7 +1204,7 @@ class NlpGoGo(object):
         if not isinstance(_device, list):
             _device = [_device] * len(_model)
 
-        def create_dataloader(_train_path, _dev_path, _test_path, _placeholder_path, _with_placeholder=False):
+        def create_dataloader(_train_path, _dev_path, _test_path, _placeholder_path, _with_placeholder=False, _with_test_a=False):
             datasets, vocabs, embeddings = load_ner(
                 '/root/hub/golden-horse/data',
                 '/root/pretrain-models/flat/gigaword_chn.all.a2b.uni.ite50.vec',
@@ -1188,7 +1215,8 @@ class NlpGoGo(object):
                 train_path=_train_path,
                 dev_path=_dev_path,
                 test_path=_test_path,
-                placeholder_path=_placeholder_path
+                placeholder_path=_placeholder_path,
+                with_test_a=_with_test_a
             )
 
             w_list = load_yangjie_rich_pretrain_word_list(self.yangjie_rich_pretrain_word_path,
@@ -1247,10 +1275,10 @@ class NlpGoGo(object):
             for idx in range(len(_model)):
                 if isinstance(with_placeholder, bool):
                     with_placeholder = [with_placeholder] * len(_model)
-                dataloader_item = create_dataloader(train_path[idx], dev_path[idx], test_path[idx], placeholder_path[idx], with_placeholder[idx])
+                dataloader_item = create_dataloader(train_path[idx], dev_path[idx], test_path[idx], placeholder_path[idx], with_placeholder[idx], with_test_a[idx])
                 dataloader.append(dataloader_item)
         else:
-            dataloader_item = create_dataloader(train_path, dev_path, test_path, placeholder_path, with_placeholder)
+            dataloader_item = create_dataloader(train_path, dev_path, test_path, placeholder_path, with_placeholder, with_test_a)
             dataloader.append(dataloader_item)
 
         for m in _model:
