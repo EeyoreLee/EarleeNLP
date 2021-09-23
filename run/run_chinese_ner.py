@@ -452,7 +452,7 @@ def main(json_path):
 
     # scheduler = LambdaLR(optimizer, lambda ep: 1 / (1 + 0.05*ep) )
 
-    epoch = 200
+    epoch = 150
     # model = nn.DataParallel(model)
     model.cuda()
 
@@ -539,14 +539,15 @@ def main(json_path):
 
         logger.info(_span_f1)
         logger.info('eval loss: ' + str(total_eval_loss / len(dev_dataloader)))
-        if custom_args.deploy is True:
-            logger.info('>>>>>>>>>>>> saving the model <<<<<<<<<<<<<<')
-            logger.info('model named: {}'.format(current_ckpt))
-            torch.save(model, current_ckpt)
-        else:
-            logger.info('>>>>>>>>>>>> saving the state_dict of model <<<<<<<<<<<<<')
-            logger.info('state_dict named: {}'.format(current_ckpt))
-            torch.save(model.state_dict(), current_ckpt)
+        if epoch_n >= 35:
+            if custom_args.deploy is True:
+                logger.info('>>>>>>>>>>>> saving the model <<<<<<<<<<<<<<')
+                logger.info('model named: {}'.format(current_ckpt))
+                torch.save(model, current_ckpt)
+            else:
+                logger.info('>>>>>>>>>>>> saving the state_dict of model <<<<<<<<<<<<<')
+                logger.info('state_dict named: {}'.format(current_ckpt))
+                torch.save(model.state_dict(), current_ckpt)
 
         logger.info('\n')
     print('==============success==============')

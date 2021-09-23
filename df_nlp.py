@@ -33,6 +33,23 @@ from deploy.bert_modeling import bert_classification_inference
 os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3,4,5,6,7'
 
 
+FLOD_TRAIN_MAP = {
+    '1': '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_train_aug3_5flod_1.train',
+    '2': '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_train_aug3_5flod_2.train',
+    '3': '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_train_aug3_5flod_3.train',
+    '4': '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_train_aug3_5flod_4.train',
+    '5': '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_train_aug3_5flod_5.train'
+}
+
+FLOD_TEST_MAP = {
+    '1': '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_train_aug3_5flod_1.test',
+    '2': '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_train_aug3_5flod_2.test',
+    '3': '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_train_aug3_5flod_3.test',
+    '4': '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_train_aug3_5flod_4.test',
+    '5': '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_train_aug3_5flod_5.test'
+}
+
+
 COMMAND2IDX = {'查询状态': 0,
                 '开机': 1,
                 '关机': 2,
@@ -171,7 +188,6 @@ IDX2LABEL = {0: '<pad>', 1: '<unk>', 2: 'O', 3: 'I-name', 4: 'I-channel', 5: 'I-
 
 IDX2LABEL_AUG = {0: '<pad>', 1: '<unk>', 2: 'O', 3: 'I-name', 4: 'I-channel', 5: 'I-notes', 6: 'B-name', 7: 'I-artist', 8: 'I-appliance', 9: 'I-destination', 10: 'I-details', 11: 'I-song', 12: 'I-frequency', 13: 'B-artist', 14: 'I-age', 15: 'B-appliance', 16: 'I-city', 17: 'B-destination', 18: 'B-city', 19: 'B-notes', 20: 'B-details', 21: 'B-channel', 22: 'I-album', 23: 'I-tag', 24: 'I-departure', 25: 'B-song', 26: 'I-play_setting', 27: 'B-tag', 28: 'B-departure', 29: 'B-age', 30: 'B-frequency', 31: 'B-play_setting', 32: 'B-album', 33: 'I-instrument', 34: 'B-instrument'}
 
-
 I2L_CALENDAR_QUERY = {0: '<pad>', 1: '<unk>', 2: 'O', 3: 'I-datetime_date', 4: 'B-datetime_date'}
 
 
@@ -243,12 +259,6 @@ class NlpGoGo(object):
 
         if policy['only_cls'] is False:
             if self.policy['ner'] == 'flat':
-                # self.ner_model = [
-                #     torch.load(flat_all_model_path, map_location=self.flat_device_map['all']),
-                #     torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-13-17-37-50-f1_90.pth', map_location=self.flat_device_map['all']),
-                #     torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-13-17-18-01-f1_89.pth', map_location=self.flat_device_map['all']),
-                #     torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-13-16-48-04-f1_90.pth', map_location=self.flat_device_map['all']),
-                # ]
                 self.ner_model = [
                     torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-19-05-33-49-f1_92.pth', map_location=self.flat_device_map['all']),
                     torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-19-02-40-51-f1_92.pth', map_location=self.flat_device_map['all']),
@@ -290,17 +300,28 @@ class NlpGoGo(object):
         id2label = {idx: label for idx, label in enumerate(INTENT)}
         if self.policy['ood_model'] == 'ensemble':
             self.classification_vote = defaultdict(float)
+            self.total_logits = torch.zeros(11)
 
-            bert_intent = bert_classification_inference(text, self.ood_bert_model, self.ood_bert_tokenizer, idx2label=id2label)
-            bert_6000_intent = bert_classification_inference(text, self.ood_bert_6000_model, self.ood_bert_tokenizer, idx2label=id2label)
-            hfl_bert_6000_large_intent = bert_classification_inference(text, self.ood_fake_roberta_model, self.hfl_ext_large_tokenzier, idx2label=id2label)
-            hfl_bert_2700_large_intent = bert_classification_inference(text, self.ood_fake_roberta_2700_model, self.hfl_ext_large_tokenzier, idx2label=id2label)
-            macbert_6000_intent = bert_classification_inference(text, self.ood_macbert_6000_model, self.macbert_large_tokenizer, idx2label=id2label)
-            hfl_bert_6000_intent = bert_classification_inference(text, self.ood_hfl_model_6000_model, self.hfl_ext_base_tokenizer, idx2label=id2label, device='cuda:3')
-            bert_6000_qingyun_intent = bert_classification_inference(text, self.ood_bert_6000_qingyun_model, self.hfl_ext_base_tokenizer, idx2label=id2label, device='cuda:3')
-            bert_qy_weibo_intent = bert_classification_inference(text, self.ood_bert_qy_weibo_model, self.hfl_ext_base_tokenizer, idx2label=id2label, device='cuda:4')
-            bert_all_tnew_intent = bert_classification_inference(text, self.ood_bert_all_tnew_model, self.hfl_ext_base_tokenizer, idx2label=id2label, device='cuda:4')
-            bert_xhj_intent = bert_classification_inference(text, self.ood_bert_xhj_model, self.hfl_ext_base_tokenizer, idx2label=id2label, device='cuda:4')
+            bert_intent, logits = bert_classification_inference(text, self.ood_bert_model, self.ood_bert_tokenizer, idx2label=id2label, return_logits=True)
+            self.total_logits += F.softmax(logits[:,:-1], dim=-1).detach().cpu()[0]
+            bert_6000_intent, logits = bert_classification_inference(text, self.ood_bert_6000_model, self.ood_bert_tokenizer, idx2label=id2label, return_logits=True)
+            self.total_logits += F.softmax(logits[:,:-1], dim=-1).detach().cpu()[0]
+            hfl_bert_6000_large_intent, logits = bert_classification_inference(text, self.ood_fake_roberta_model, self.hfl_ext_large_tokenzier, idx2label=id2label, return_logits=True)
+            self.total_logits += F.softmax(logits[:,:-1], dim=-1).detach().cpu()[0]
+            hfl_bert_2700_large_intent, logits = bert_classification_inference(text, self.ood_fake_roberta_2700_model, self.hfl_ext_large_tokenzier, idx2label=id2label, return_logits=True)
+            self.total_logits += F.softmax(logits[:,:-1], dim=-1).detach().cpu()[0]
+            macbert_6000_intent, logits = bert_classification_inference(text, self.ood_macbert_6000_model, self.macbert_large_tokenizer, idx2label=id2label, return_logits=True)
+            self.total_logits += F.softmax(logits[:,:-1], dim=-1).detach().cpu()[0]
+            hfl_bert_6000_intent, logits = bert_classification_inference(text, self.ood_hfl_model_6000_model, self.hfl_ext_base_tokenizer, idx2label=id2label, device='cuda:3', return_logits=True)
+            self.total_logits += F.softmax(logits[:,:-1], dim=-1).detach().cpu()[0]
+            bert_6000_qingyun_intent, logits = bert_classification_inference(text, self.ood_bert_6000_qingyun_model, self.hfl_ext_base_tokenizer, idx2label=id2label, device='cuda:3', return_logits=True)
+            self.total_logits += F.softmax(logits[:,:-1], dim=-1).detach().cpu()[0]
+            bert_qy_weibo_intent, logits = bert_classification_inference(text, self.ood_bert_qy_weibo_model, self.hfl_ext_base_tokenizer, idx2label=id2label, device='cuda:4', return_logits=True)
+            self.total_logits += F.softmax(logits[:,:-1], dim=-1).detach().cpu()[0]
+            bert_all_tnew_intent, logits = bert_classification_inference(text, self.ood_bert_all_tnew_model, self.hfl_ext_base_tokenizer, idx2label=id2label, device='cuda:4', return_logits=True)
+            self.total_logits += F.softmax(logits[:,:-1], dim=-1).detach().cpu()[0]
+            bert_xhj_intent, logits = bert_classification_inference(text, self.ood_bert_xhj_model, self.hfl_ext_base_tokenizer, idx2label=id2label, device='cuda:4', return_logits=True)
+            self.total_logits += F.softmax(logits[:,:-1], dim=-1).detach().cpu()[0]
 
             self.classification_vote[bert_intent] += 1
             self.classification_vote[bert_6000_intent] += 1
@@ -337,13 +358,19 @@ class NlpGoGo(object):
         # return INTENT[10]
         id2label = {idx: label for idx, label in enumerate(INTENT)}
         if self.policy['cls_model'] == 'bert':
-            bert_base_intent = bert_classification_inference(text, self.cls_model, self.tokenizer, idx2label=id2label)
+            bert_base_intent, logits = bert_classification_inference(text, self.cls_model, self.tokenizer, idx2label=id2label, return_logits=True)
+            self.total_logits += F.softmax(logits, dim=-1).detach().cpu()[0]
 
             return bert_base_intent
 
         elif self.policy['cls_model'] == 'ensemble':
 
-            bert_base_intent = bert_classification_inference(text, self.cls_model, self.tokenizer, idx2label=id2label)
+            bert_base_intent, logits = bert_classification_inference(text, self.cls_model, self.tokenizer, idx2label=id2label, return_logits=True)
+            self.total_logits += F.softmax(logits, dim=-1).detach().cpu()[0]
+            # result = INTENT[torch.argmax(self.total_logits).numpy()]
+            # return result
+
+
             self.classification_vote[bert_base_intent] += 1
 
             self.classification_vote = sorted(self.classification_vote.items(), key=lambda x: x[-1])
@@ -1047,18 +1074,6 @@ class NlpGoGo(object):
                 '/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter',
                 '/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter',
             ]
-            # _train_path = [
-            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.train',
-            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.train',
-            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.train',
-            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.train',
-            # ]
-            # _dev_path = [
-            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.test',
-            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.test',
-            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.test',
-            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/new_all_train_detached_clean.test',
-            # ]
             _train_path = [
                 '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.train',
                 '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.train',
@@ -1075,7 +1090,7 @@ class NlpGoGo(object):
             ]
             # res = self._flat_ner_all(self.ner_model, real_text_list, with_placeholder=False, idx2label=IDX2LABEL, _device=self.flat_device_map[intent])
             res = self._flat_ner_all(self.ner_model, real_text_list, train_path=_train_path, dev_path=_dev_path, \
-                _device=['cuda:1', 'cuda:1', 'cuda:1', 'cuda:1', 'cuda:6'], idx2label=IDX2LABEL_AUG, placeholder_path=_all_placeholder_path, \
+                _device=['cuda:1', 'cuda:1', 'cuda:1', 'cuda:1', 'cuda:6', 'cuda:2', 'cuda:2', 'cuda:7', 'cuda:7'], idx2label=IDX2LABEL_AUG, placeholder_path=_all_placeholder_path, \
                 test_path=_all_test_path, with_test_a=[False, False, False, False, False, False])
             if manager is not None:
                 manager[intent] = res
@@ -1178,7 +1193,7 @@ class NlpGoGo(object):
         with_test_a_map = {
             'Alarm-Update': [False, False, False, False],
             'FilmTele-Play': [False, False, False, False],
-            'date_and_time': [False, False, False, False],
+            'date_and_time': False,
             'Calendar-Query': [False, False, False, False],
         }
         res = self._flat_ner_all(intent2model[intent], real_text_list, train_path=inent2train_path[intent], dev_path=intent2dev_path[intent], \
@@ -1235,7 +1250,8 @@ class NlpGoGo(object):
                                                                         number_normalized=0,
                                                                         lattice_min_freq=1,
                                                                         only_train_min_freq=True,
-                                                                        with_placeholder=_with_placeholder
+                                                                        with_placeholder=_with_placeholder,
+                                                                        with_test_a=_with_test_a
                                                                         )
 
             def collate_func(batch_dict):

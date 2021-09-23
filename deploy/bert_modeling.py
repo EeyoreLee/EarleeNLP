@@ -35,7 +35,7 @@ def bert_classification_inference(text, model, tokenizer, max_length=150, return
             attention_mask=attention_mask
         )
     if idx2label is None:
-        idx2label = {v:k for k, v in enumerate(label2idx)}
+        idx2label = {v:k for k, v in label2idx.items()}
     classification = idx2label[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
     if manager_dict is not None:
         manager_dict[manager_key] = classification
