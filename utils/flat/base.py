@@ -36,7 +36,7 @@ def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_t
     # dev_path = '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.seq'
     # test_path = '/ai/223/person/lichunyu/datasets/tmp/test_one.txt'
     if test_path is None:
-        test_path = '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.seq'
+        test_path = '/ai/223/person/lichunyu/datasets/dataf/test/test_B_final_text.nonletter'
 
     if placeholder_path is None:
         placeholder_path = '/root/all_train.test'

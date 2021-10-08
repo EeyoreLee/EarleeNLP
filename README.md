@@ -1,4 +1,5 @@
 # EarleeNLP
+trash/ 文件夹内容近期会删除
   
   
 ## To Do

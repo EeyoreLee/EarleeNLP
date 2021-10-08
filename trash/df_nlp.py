@@ -224,12 +224,12 @@ class NERDataset(Dataset):
 
 class NlpGoGo(object):
 
-    def __init__(self, cls_model_path, cls_config_path, ner_model_path, ood_model_path, ood_bert_model_path=None, \
+    def __init__(self, cls_model_path, cls_config_path, ood_model_path, ood_bert_model_path=None, \
                 ood_roberta_model_path=None, query_type_model_path=None, command_model_path=None, ood_bert_6000_model_path=None, \
                 ood_roberta_6000_model_path=None, ood_fake_roberta_6000_model_path=None, ood_fake_roberta_2700_model_path=None, \
                 ood_macbert_model_path=None, device='cuda', max_length=150, policy:dict=None, ood_config_path=None, cls_ext_model_path=None, \
                 flat_alarm_update_model_path=None, flat_all_model_path=None, flat_device_map=None, ood_device_map=None, cls_device_map=None, \
-                ood_hfl_model_path=None, flat_filmtele_play_model_path=None):
+                ood_hfl_model_path=None, flat_filmtele_play_model_path=None, ner_model_path=None):
         """
         policy = {
                 'cls_model': 'bert',
@@ -243,28 +243,26 @@ class NlpGoGo(object):
         self.flat_alarm_update_model_path = flat_alarm_update_model_path
         self.flat_filmtele_play_model_path = flat_filmtele_play_model_path
 
-        self.yangjie_rich_pretrain_word_path = '/root/pretrain-models/flat/ctb.50d.vec'
-        self.yangjie_rich_pretrain_char_and_word_path = '/root/pretrain-models/flat/yangjie_word_char_mix.txt'
+        self.yangjie_rich_pretrain_word_path = '/ai/223/person/lichunyu/models/df/final_test_b/model/pretain_model/flat/ctb.50d.vec'
+        self.yangjie_rich_pretrain_char_and_word_path = '/ai/223/person/lichunyu/models/df/final_test_b/model/pretain_model/flat/yangjie_word_char_mix.txt'
         self.device = device
         self.policy = policy
-        # if policy['cls_model'] == 'bert':
         self.cls_model = torch.load(cls_model_path, map_location=torch.device(device))
-        self.cls_ext_model = torch.load(cls_ext_model_path, map_location=torch.device(device))
         self.tokenizer = BertTokenizer.from_pretrained(cls_config_path)
         self.max_length = max_length
 
-        self.hfl_ext_large_tokenzier = BertTokenizer.from_pretrained('/root/pretrain-models/hfl-chinese-roberta-wwm-ext-large')
-        self.hfl_ext_base_tokenizer = BertTokenizer.from_pretrained('/root/pretrain-models/hfl_chinese-roberta-wwm-ext')
-        self.macbert_large_tokenizer = BertTokenizer.from_pretrained('/root/pretrain-models/hfl-chinese-macbert-large')
+        self.hfl_ext_large_tokenzier = BertTokenizer.from_pretrained('/ai/223/person/lichunyu/models/df/final_test_b/model/pretain_model/hfl-chinese-roberta-wwm-ext-large')
+        self.hfl_ext_base_tokenizer = BertTokenizer.from_pretrained('/ai/223/person/lichunyu/models/df/final_test_b/model/pretain_model/hfl_chinese-roberta-wwm-ext')
+        self.macbert_large_tokenizer = BertTokenizer.from_pretrained('/ai/223/person/lichunyu/models/df/final_test_b/model/pretain_model/hfl-chinese-macbert-large')
 
         if policy['only_cls'] is False:
             if self.policy['ner'] == 'flat':
                 self.ner_model = [
-                    torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-19-05-33-49-f1_92.pth', map_location=self.flat_device_map['all']),
-                    torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-19-02-40-51-f1_92.pth', map_location=self.flat_device_map['all']),
-                    torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-18-21-57-56-f1_91.pth', map_location=self.flat_device_map['all']),
-                    torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-19-00-04-28-f1_91.pth', map_location=self.flat_device_map['all']),
-                    torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-19-03-41-11-f1_91.pth', map_location='cuda:6'),
+                    torch.load('/ai/223/person/lichunyu/models/df/final_test_b/model/ner/flat-2021-09-19-05-33-49-f1_92.pth', map_location='cuda:7'),
+                    torch.load('/ai/223/person/lichunyu/models/df/final_test_b/model/ner/flat-2021-09-19-02-40-51-f1_92.pth', map_location='cuda:7'),
+                    torch.load('/ai/223/person/lichunyu/models/df/final_test_b/model/ner/flat-2021-09-18-21-57-56-f1_91.pth', map_location='cuda:7'),
+                    torch.load('/ai/223/person/lichunyu/models/df/final_test_b/model/ner/flat-2021-09-19-00-04-28-f1_91.pth', map_location='cuda:7'),
+                    torch.load('/ai/223/person/lichunyu/models/df/final_test_b/model/ner/flat-2021-09-19-03-41-11-f1_91.pth', map_location='cuda:7'),
                 ]
             else:
                 m = torch.load(ner_model_path, map_location=torch.device(device))
@@ -287,10 +285,10 @@ class NlpGoGo(object):
             self.ood_fake_roberta_2700_model = torch.load(ood_fake_roberta_2700_model_path, map_location=torch.device(device))
             self.ood_macbert_6000_model = torch.load(ood_macbert_model_path, map_location=torch.device(device))
             self.ood_hfl_model_6000_model = torch.load(ood_macbert_model_path, map_location='cuda:3')
-            self.ood_bert_6000_qingyun_model = torch.load('/ai/223/person/lichunyu/models/df/best/bert-2021-09-08-16-08-12-f1_99.pth', map_location='cuda:3')
-            self.ood_bert_qy_weibo_model = torch.load('/ai/223/person/lichunyu/models/df/best/bert-2021-09-08-17-40-16-f1_99.pth', map_location='cuda:4')
-            self.ood_bert_all_tnew_model = torch.load('/ai/223/person/lichunyu/models/df/best/bert-2021-09-09-10-31-19-f1_99.pth', map_location='cuda:4')
-            self.ood_bert_xhj_model = torch.load('/ai/223/person/lichunyu/models/df/best/bert-2021-09-09-10-30-46-f1_99.pth', map_location='cuda:4')
+            self.ood_bert_6000_qingyun_model = torch.load('/ai/223/person/lichunyu/models/df/final_test_b/model/ood/bert-2021-09-08-16-08-12-f1_99.pth', map_location='cuda:3')
+            self.ood_bert_qy_weibo_model = torch.load('/ai/223/person/lichunyu/models/df/final_test_b/model/ood/bert-2021-09-08-17-40-16-f1_99.pth', map_location='cuda:4')
+            self.ood_bert_all_tnew_model = torch.load('/ai/223/person/lichunyu/models/df/final_test_b/model/ood/bert-2021-09-09-10-31-19-f1_99.pth', map_location='cuda:4')
+            self.ood_bert_xhj_model = torch.load('/ai/223/person/lichunyu/models/df/final_test_b/model/ood/bert-2021-09-09-10-30-46-f1_99.pth', map_location='cuda:4')
 
         self.query_type_model = torch.load(query_type_model_path, map_location=torch.device(device))
         self.command_model = torch.load(command_model_path, map_location=torch.device(device))
@@ -338,7 +336,8 @@ class NlpGoGo(object):
             #     return False
             # else:
             #     return True
-
+            if post_ood(text):
+                return False
             if INTENT[-1] in self.classification_vote:
                 return True
             return False
@@ -1061,36 +1060,36 @@ class NlpGoGo(object):
     def flat_ner_all(self, real_text_list=None, intent='all', manager=None):
         if intent == 'all':
             _all_test_path = [
-                '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter',
-                '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter',
-                '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter',
-                '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter',
-                '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/test_B_final_text.nonletter',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/test_B_final_text.nonletter',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/test_B_final_text.nonletter',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/test_B_final_text.nonletter',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/test_B_final_text.nonletter'
             ]
             _all_placeholder_path = [
-                '/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter',
-                '/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter',
-                '/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter',
-                '/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter',
-                '/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/train.nonletter',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/train.nonletter',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/train.nonletter',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/train.nonletter',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/train.nonletter',
             ]
             _train_path = [
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.train',
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.train',
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.train',
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.train',
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.train',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/all_data_aug_3.train',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/all_data_aug_3.train',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/all_data_aug_3.train',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/all_data_aug_3.train',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/all_data_aug_3.train',
             ]
             _dev_path = [
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.test',
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.test',
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.test',
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.test',
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/all_data_aug_3.test',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/all_data_aug_3.test',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/all_data_aug_3.test',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/all_data_aug_3.test',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/all_data_aug_3.test',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/all_data_aug_3.test',
             ]
             # res = self._flat_ner_all(self.ner_model, real_text_list, with_placeholder=False, idx2label=IDX2LABEL, _device=self.flat_device_map[intent])
             res = self._flat_ner_all(self.ner_model, real_text_list, train_path=_train_path, dev_path=_dev_path, \
-                _device=['cuda:1', 'cuda:1', 'cuda:1', 'cuda:1', 'cuda:6', 'cuda:2', 'cuda:2', 'cuda:7', 'cuda:7'], idx2label=IDX2LABEL_AUG, placeholder_path=_all_placeholder_path, \
+                _device=['cuda:7', 'cuda:7', 'cuda:7', 'cuda:7', 'cuda:7', 'cuda:7', 'cuda:7', 'cuda:7', 'cuda:7'], idx2label=IDX2LABEL_AUG, placeholder_path=_all_placeholder_path, \
                 test_path=_all_test_path, with_test_a=[False, False, False, False, False, False])
             if manager is not None:
                 manager[intent] = res
@@ -1098,101 +1097,77 @@ class NlpGoGo(object):
             # return self._flat_ner_all(self.ner_model, real_text_list, with_placeholder=False, idx2label=IDX2LABEL)
         intent2model = {
             'Alarm-Update': [
-                torch.load('/ai/223/person/lichunyu/models/df/ner/flat-2021-09-10-15-03-03-f1_97.pth', map_location=self.flat_device_map[intent]),
+                torch.load('/ai/223/person/lichunyu/models/df/final_test_b/model/ner/flat-2021-09-10-15-03-03-f1_97.pth', map_location=self.flat_device_map[intent]),
                 ],
             # 'FilmTele-Play': torch.load(self.flat_filmtele_play_model_path, map_location=self.flat_device_map[intent]),
-            'date_and_time': torch.load('/ai/223/person/lichunyu/models/df/best/flat-2021-09-08-11-24-01-f1_97.pth', map_location=self.flat_device_map[intent]),
+            'date_and_time': torch.load('/ai/223/person/lichunyu/models/df/final_test_b/model/ner/flat-2021-09-08-11-24-01-f1_97.pth', map_location=self.flat_device_map[intent]),
                 # torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-16-14-59-07-f1_98.pth', map_location=self.flat_device_map[intent]),
                 # torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-16-14-54-40-f1_98.pth', map_location=self.flat_device_map[intent]),
                 # torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-16-15-25-29-f1_98.pth', map_location=self.flat_device_map[intent]),
                 # ],
             'Calendar-Query': [
-                torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-19-12-48-41-f1_95.pth', map_location=self.flat_device_map[intent]),
-                torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-19-13-10-00-f1_95.pth', map_location=self.flat_device_map[intent]),
-                torch.load('/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-19-13-04-26-f1_95.pth', map_location=self.flat_device_map[intent]),
+                torch.load('/ai/223/person/lichunyu/models/df/final_test_b/model/ner/flat-2021-09-19-12-48-41-f1_95.pth', map_location=self.flat_device_map[intent]),
+                torch.load('/ai/223/person/lichunyu/models/df/final_test_b/model/ner/flat-2021-09-19-13-10-00-f1_95.pth', map_location=self.flat_device_map[intent]),
+                torch.load('/ai/223/person/lichunyu/models/df/final_test_b/model/ner/flat-2021-09-19-13-04-26-f1_95.pth', map_location=self.flat_device_map[intent]),
                 ]
         }
         inent2train_path = {
             'Alarm-Update': [
-                "/ai/223/person/lichunyu/datasets/dataf/seq_label/Alarm-Update_detached_clean.train",
+                "/ai/223/person/lichunyu/models/df/final_test_b/data/flat/Alarm-Update_detached_clean.train",
                 ],
-            'FilmTele-Play': "/ai/223/person/lichunyu/datasets/dataf/seq_label/FilmTele-Play_detached.train",
-            # 'Calendar-Query': '/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query_detached.train',
+            # 'FilmTele-Play': "/ai/223/person/lichunyu/datasets/dataf/seq_label/FilmTele-Play_detached.train",
             'Calendar-Query': [
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query-872.train',
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query-872.train',
-                '/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query-872.train',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/Calendar-Query-872.train',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/Calendar-Query-872.train',
+                '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/Calendar-Query-872.train',
             ],
-            # 'date_and_time': '/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_clean_detached.train'
-            # 'date_and_time': [
-            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_detached_clean.train',
-            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_detached_clean.train',
-            #     '/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_detached_clean.train',
-            # ],
-            'date_and_time': '/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_clean_detached.train',
+            'date_and_time': '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/date_and_time_clean_detached.train',
         }
         intent2dev_path = {
             "Alarm-Update": [
-                "/ai/223/person/lichunyu/datasets/dataf/seq_label/Alarm-Update_detached_clean.test",
+                "/ai/223/person/lichunyu/models/df/final_test_b/data/flat/Alarm-Update_detached_clean.test",
                 ],
-            'FilmTele-Play': "/ai/223/person/lichunyu/datasets/dataf/seq_label/FilmTele-Play_detached.test",
-            'date_and_time': '/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_clean_detached.test',
-            # 'date_and_time': [
-            #     "/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_detached_clean.test",
-            #     "/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_detached_clean.test",
-            #     "/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_detached_clean.test",
-            #     # "/ai/223/person/lichunyu/datasets/dataf/seq_label/date_and_time_clean_detached.test",
-            #     ],
-            # 'Calendar-Query': "/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query_detached.test"
+            # 'FilmTele-Play': "/ai/223/person/lichunyu/datasets/dataf/seq_label/FilmTele-Play_detached.test",
+            'date_and_time': '/ai/223/person/lichunyu/models/df/final_test_b/data/flat/date_and_time_clean_detached.test',
             'Calendar-Query': [
-                "/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query-872.test",
-                "/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query-872.test",
-                "/ai/223/person/lichunyu/datasets/dataf/seq_label/Calendar-Query-872.test",
+                "/ai/223/person/lichunyu/models/df/final_test_b/data/flat/Calendar-Query-872.test",
+                "/ai/223/person/lichunyu/models/df/final_test_b/data/flat/Calendar-Query-872.test",
+                "/ai/223/person/lichunyu/models/df/final_test_b/data/flat/Calendar-Query-872.test",
             ]
         }
         intent2test_path = {
-            'date_and_time': "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter",
-            # 'date_and_time': [
-            #     "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter",
-            #     "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter",
-            #     "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter",
-            #     ],
+            'date_and_time': "/ai/223/person/lichunyu/models/df/final_test_b/data/flat/test_B_final_text.nonletter",
             'Alarm-Update': [
-                "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter",
+                "/ai/223/person/lichunyu/models/df/final_test_b/data/flat/test_B_final_text.nonletter",
                 ],
-            'FilmTele-Play': None,
+            # 'FilmTele-Play': None,
             'Calendar-Query': [
-                "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter",
-                "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter",
-                "/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.nonletter",
+                "/ai/223/person/lichunyu/models/df/final_test_b/data/flat/test_B_final_text.nonletter",
+                "/ai/223/person/lichunyu/models/df/final_test_b/data/flat/test_B_final_text.nonletter",
+                "/ai/223/person/lichunyu/models/df/final_test_b/data/flat/test_B_final_text.nonletter",
                 ]
         }
         intent2placeholder_path = {
-             'date_and_time': "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
-            # 'date_and_time': [
-            #     "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
-            #     # "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
-            #     # "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
-            #     ],
+             'date_and_time': "/ai/223/person/lichunyu/models/df/final_test_b/data/flat/train.nonletter",
             'Alarm-Update': [
-                "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
+                "/ai/223/person/lichunyu/models/df/final_test_b/data/flat/train.nonletter",
                 ],
-            'FilmTele-Play': None,
+            # 'FilmTele-Play': None,
             'Calendar-Query': [
-                "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
-                "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
-                "/ai/223/person/lichunyu/datasets/dataf/test/train.nonletter",
+                "/ai/223/person/lichunyu/models/df/final_test_b/data/flat/train.nonletter",
+                "/ai/223/person/lichunyu/models/df/final_test_b/data/flat/train.nonletter",
+                "/ai/223/person/lichunyu/models/df/final_test_b/data/flat/train.nonletter",
             ]
         }
         idx2label_map = {
             'Alarm-Update': I2L_ALARM_UPDATE,
-            'FilmTele-Play': I2L_FILMTELE_PLAY,
+            # 'FilmTele-Play': I2L_FILMTELE_PLAY,
             'date_and_time': I2L_DATE_AND_TIME,
             'Calendar-Query': I2L_CALENDAR_QUERY,
         }
         with_test_a_map = {
             'Alarm-Update': [False, False, False, False],
-            'FilmTele-Play': [False, False, False, False],
+            # 'FilmTele-Play': [False, False, False, False],
             'date_and_time': False,
             'Calendar-Query': [False, False, False, False],
         }
@@ -1221,9 +1196,9 @@ class NlpGoGo(object):
 
         def create_dataloader(_train_path, _dev_path, _test_path, _placeholder_path, _with_placeholder=False, _with_test_a=False):
             datasets, vocabs, embeddings = load_ner(
-                '/root/hub/golden-horse/data',
-                '/root/pretrain-models/flat/gigaword_chn.all.a2b.uni.ite50.vec',
-                '/root/pretrain-models/flat/gigaword_chn.all.a2b.bi.ite50.vec',
+                None,
+                '/ai/223/person/lichunyu/models/df/final_test_b/model/pretain_model/flat/gigaword_chn.all.a2b.uni.ite50.vec',
+                '/ai/223/person/lichunyu/models/df/final_test_b/model/pretain_model/flat/gigaword_chn.all.a2b.bi.ite50.vec',
                 _refresh=True,
                 index_token=False,
                 with_placeholder=_with_placeholder,
@@ -1353,7 +1328,8 @@ class NlpGoGo(object):
             for idx, text_dict in test_data.items():
                 text = text_dict['text']
                 flat_text_list.append(text)
-            
+            zzzz = self.flat_ner_all(flat_text_list, 'all')
+            pass
             # _ = self.flat_ner_all(flat_text_list, 'all')
             torch.multiprocessing.set_start_method('spawn')
             manager = torch.multiprocessing.Manager()
@@ -1514,6 +1490,12 @@ class NlpGoGo(object):
 
             slots = slot_delete(slots, {'datetime_time': ['一会儿', '一会']})
 
+            if intent == 'Audio-Play':
+                play_setting = play_setting_patch(text)
+                if play_setting:
+                    slots = slot_add(slots, {'play_setting': play_setting})
+                slots = clean_audio_name(slots)
+
             if with_text is True:
                 res[idx]['text'] = text
 
@@ -1535,116 +1517,6 @@ class NlpGoGo(object):
             f.write(res_jsoned)
         print('total cost {}s'.format(time.time()-bt))
         return output_path
-
-
-    def trash_flat_ner_item(self, text, intent):
-        """单条flat抽取，暂时弃用
-
-        :param text: [description]
-        :type text: [type]
-        :param intent: [description]
-        :type intent: [type]
-        :return: [description]
-        :rtype: [type]
-        """
-
-        tmp_test_path = '/ai/223/person/lichunyu/datasets/tmp/test_one.txt'
-
-        with open(tmp_test_path, 'w') as f:
-            normalization_text = normalization(text, letter='@')
-            normalization_text = normalization_text.replace(' ', '')
-            for char in normalization_text:
-                f.write(char + '\t' + 'O' + '\n')
-
-
-        datasets, vocabs, embeddings = load_ner(
-            '/root/hub/golden-horse/data',
-            '/root/pretrain-models/flat/gigaword_chn.all.a2b.uni.ite50.vec',
-            '/root/pretrain-models/flat/gigaword_chn.all.a2b.bi.ite50.vec',
-            _refresh=True,
-            index_token=False,
-            test_path=tmp_test_path,
-        )
-
-        w_list = load_yangjie_rich_pretrain_word_list(self.yangjie_rich_pretrain_word_path,
-                                                    _refresh=True,
-                                                    _cache_fp='cache/{}'.format('yj'))
-
-
-        datasets, vocabs, embeddings = equip_chinese_ner_with_lexicon(datasets,
-                                                                    vocabs,
-                                                                    embeddings,
-                                                                    w_list,
-                                                                    self.yangjie_rich_pretrain_word_path,
-                                                                    _refresh=True,
-                                                                    # _cache_fp=cache_name,
-                                                                    only_lexicon_in_train=False,
-                                                                    word_char_mix_embedding_path=self.yangjie_rich_pretrain_char_and_word_path,
-                                                                    number_normalized=0,
-                                                                    lattice_min_freq=1,
-                                                                    only_train_min_freq=True
-                                                                    )
-
-        def collate_func(batch_dict):
-            batch_len = len(batch_dict)
-            max_seq_length = max([dic['seq_len'] for dic in batch_dict])
-            chars = pad_sequence([i['chars'] for i in batch_dict], batch_first=True)
-            target = pad_sequence([i['target'] for i in batch_dict], batch_first=True)
-            bigrams = pad_sequence([i['bigrams'] for i in batch_dict], batch_first=True)
-            seq_len = torch.tensor([i['seq_len'] for i in batch_dict])
-            lex_num = torch.tensor([i['lex_num'] for i in batch_dict])
-            lex_s = pad_sequence([i['lex_s'] for i in batch_dict], batch_first=True)
-            lex_e = pad_sequence([i['lex_e'] for i in batch_dict], batch_first=True)
-            lattice = pad_sequence([i['lattice'] for i in batch_dict], batch_first=True)
-            pos_s = pad_sequence([i['pos_s'] for i in batch_dict], batch_first=True)
-            pos_e = pad_sequence([i['pos_e'] for i in batch_dict], batch_first=True)
-            raw_chars = [i['raw_chars'] for i in batch_dict]
-            return [chars, target, bigrams, seq_len, lex_num, lex_s, lex_e, lattice, pos_s, pos_e, raw_chars]
-
-        for k, v in datasets.items():
-            v.set_input('lattice','bigrams','target', 'seq_len')
-            v.set_input('lex_num','pos_s','pos_e')
-            v.set_target('target', 'seq_len')
-            v.set_pad_val('lattice',vocabs['lattice'].padding_idx)
-
-
-        dev_ds = NERDataset(datasets['test'])
-        dev_dataloader = DataLoader(
-            dev_ds,
-            batch_size=1,
-            collate_fn=collate_func
-        )
-
-        self.ner_model.eval()
-        for step, batch in enumerate(dev_dataloader):
-            #TODO BERT embedding 前20 epoch 冻结
-            # chars = batch[0].cuda()
-            target = batch[1].cuda()
-            bigrams = batch[2].cuda()
-            seq_len = batch[3].cuda()
-            lex_num = batch[4].cuda()
-            # lex_s = batch[5].cuda()
-            # lex_e = batch[6].cuda()
-            lattice = batch[7].cuda()
-            pos_s = batch[8].cuda()
-            pos_e = batch[9].cuda()
-            raw_chars = batch[10]
-            text_list = [''.join(i) for i in raw_chars]
-
-            with torch.no_grad():
-
-                output = self.ner_model(
-                    lattice,
-                    bigrams,
-                    seq_len,
-                    lex_num,
-                    pos_s,
-                    pos_e,
-                    target
-                )
-            pred = output['pred']
-            res = ner_extract(pred, seq_len, text_list, idx2label=IDX2LABEL)
-            return flat_slot_clean(res, intent=intent, with_intent=True)
 
 
 def slot_add(slot_origin, slot_new):
@@ -1689,9 +1561,51 @@ def slot_delete(slot_origin, slot_new):
     return slot_origin
 
 
+def post_ood(text):
+    db = [
+        'CCTV',
+        '回看',
+        '随机播放'
+    ]
+    for i in db:
+        if i in text:
+            return True
+    p_db = [
+        re.compile('(穿.{0,3}衣服)')
+    ]
+    for p in p_db:
+        res = p.search(text)
+        if res:
+            return True
+    return False
+
+
+def play_setting_patch(text):
+    p = re.compile('(第[0-9一二三四五六七八九十]{1,3}章)')
+    res = p.search(text)
+    if res:
+        return res.groups()[0]
+    return ''
+
+
+def clean_audio_name(slots):
+    if 'name' not in slots:
+        return slots
+    if isinstance(slots['name'], list):
+        return slots
+    text = slots['name']
+    p = re.compile('(第[0-9一二三四五六七八九十]{1,3}章)')
+    res = p.search(text)
+    if res:
+        play_setting = res.groups()[0]
+        if text.endswith(play_setting):
+            text = text.replace(play_setting, '')
+        slots['name'] = text
+    return slots
+
+
 def weather_time_patch(text):
     db = [
-        # ['一会儿', '一会'],
         '现在'
     ]
     res = {
@@ -1750,16 +1664,11 @@ def clean_slot_by_intent(slots_dict, intent, post=False):
                 continue
             k = k.replace(intent+'-', '')
         if k not in CORRESPONDENCE[intent]:
-            # print('bug found+++++++++++++++++++++++')
             continue
         if not v:
             continue
         res[k] = v
     return res
-
-
-def post_process(intent, slots):
-    pass
 
 
 def normalization(text, letter='@'):
@@ -1782,19 +1691,15 @@ def normalization(text, letter='@'):
 
 if __name__ == '__main__':
     nlpgogo = NlpGoGo(
-        cls_model_path='/ai/223/person/lichunyu/models/df/best/bert-2021-08-05-03-19-23-f1_99.pth',  # few_shot
-        cls_ext_model_path='/ai/223/person/lichunyu/models/df/best/bert-2021-09-02-12-19-11-f1_99.pth', # hfl ext eopch 3
-        ood_model_path='/ai/223/person/lichunyu/models/df/best/bert-2021-08-13-02-54-15-f1_98.pth',
-        ood_bert_model_path='/ai/223/person/lichunyu/models/df/best/bert-2021-08-13-02-54-15-f1_98.pth',
-        ood_bert_6000_model_path='/ai/223/person/lichunyu/models/df/best/bert-2021-08-23-04-01-14-f1_99.pth',
-        # ood_roberta_model_path='/ai/223/person/lichunyu/models/df/best/bert-2021-08-19-04-09-06-f1_96.pth',  # roberta
-        # ood_roberta_6000_model_path='/ai/223/person/lichunyu/models/df/best/bert-2021-08-23-07-32-11-f1_96.pth', # roberta
-        ood_fake_roberta_6000_model_path='/ai/223/person/lichunyu/models/df/best/bert-2021-08-23-08-38-13-f1_98.pth',
-        ood_fake_roberta_2700_model_path='/ai/223/person/lichunyu/models/df/best/bert-2021-08-23-09-28-31-f1_98.pth',
-        ood_macbert_model_path='/ai/223/person/lichunyu/models/df/best/bert-2021-08-24-08-49-40-f1_98.pth',
-        ood_hfl_model_path='/ai/223/person/lichunyu/models/df/best/bert-2021-09-06-14-47-38-f1_98.pth',
-        cls_config_path='/root/pretrain-models/bert-base-chinese',
-        ner_model_path='/ai/223/person/lichunyu/models/df/best/bert-2021-09-01-10-31-48-f1_88.pth',
+        cls_model_path='/ai/223/person/lichunyu/models/df/final_test_b/model/classification/bert-2021-08-05-03-19-23-f1_99.pth',  # few_shot
+        ood_model_path='/ai/223/person/lichunyu/models/df/final_test_b/model/ood/bert-2021-08-13-02-54-15-f1_98.pth',
+        ood_bert_model_path='/ai/223/person/lichunyu/models/df/final_test_b/model/ood/bert-2021-08-13-02-54-15-f1_98.pth',
+        ood_bert_6000_model_path='/ai/223/person/lichunyu/models/df/final_test_b/model/ood/bert-2021-08-23-04-01-14-f1_99.pth',
+        ood_fake_roberta_6000_model_path='/ai/223/person/lichunyu/models/df/final_test_b/model/ood/bert-2021-08-23-08-38-13-f1_98.pth',
+        ood_fake_roberta_2700_model_path='/ai/223/person/lichunyu/models/df/final_test_b/model/ood/bert-2021-08-23-09-28-31-f1_98.pth',
+        ood_macbert_model_path='/ai/223/person/lichunyu/models/df/final_test_b/model/ood/bert-2021-08-24-08-49-40-f1_98.pth',
+        ood_hfl_model_path='/ai/223/person/lichunyu/models/df/final_test_b/model/ood/bert-2021-09-06-14-47-38-f1_98.pth',
+        cls_config_path='/ai/223/person/lichunyu/models/df/final_test_b/model/pretain_model/bert-base-chinese',
         policy={
             'cls_model': 'ensemble',
             'only_cls': False,
@@ -1814,27 +1719,17 @@ if __name__ == '__main__':
         cls_device_map = {
             'bert': 'cuda:2'
         },
-        # query_type_model_path='/ai/223/person/lichunyu/models/df/query_type/bert-2021-07-29-02-27-35-f1_97.pth',
-        query_type_model_path='/ai/223/person/lichunyu/models/df/best/bert-2021-07-29-07-48-11-f1_96.pth',
-        # command_model_path='/ai/223/person/lichunyu/models/df/command/bert-2021-07-29-02-34-54-f1_97.pth'
-        command_model_path='/ai/223/person/lichunyu/models/df/best/bert-2021-07-29-07-43-15-f1_97.pth',
-        ood_config_path='/root/pretrain-models/hfl-chinese-roberta-wwm-ext-large',
-        # flat_all_model_path='/ai/223/person/lichunyu/models/df/best/flat-2021-08-30-22-03-15-f1_92.pth',
-        flat_all_model_path='/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-13-19-37-25-f1_91.pth',
-        flat_alarm_update_model_path=[
-            '/ai/223/person/lichunyu/models/df/ner/flat-2021-09-10-15-03-03-f1_97.pth',
-            '/ai/223/person/lichunyu/models/df/ner/flat-2021-09-10-14-41-33-f1_95.pth',
-            '/ai/223/person/lichunyu/models/df/ner/flat-2021-09-10-14-53-13-f1_95.pth',
-            '/ai/223/person/lichunyu/models/df/ner/flat-2021-09-10-14-38-33-f1_95.pth',
-        ],
-        flat_filmtele_play_model_path='/ai/223/person/lichunyu/models/df/best/flat-2021-09-06-15-16-14-f1_94.pth'
+        query_type_model_path='/ai/223/person/lichunyu/models/df/final_test_b/model/slot_classification/bert-2021-07-29-07-48-11-f1_96.pth',
+        command_model_path='/ai/223/person/lichunyu/models/df/final_test_b/model/slot_classification/bert-2021-07-29-07-43-15-f1_97.pth',
+        ood_config_path='/ai/223/person/lichunyu/models/df/final_test_b/model/pretain_model/hfl-chinese-roberta-wwm-ext-large',
+        # flat_all_model_path='/ai/223/person/lichunyu/models/df/ner_detached/flat-2021-09-13-19-37-25-f1_91.pth',
+        # flat_filmtele_play_model_path='/ai/223/person/lichunyu/models/df/best/flat-2021-09-06-15-16-14-f1_94.pth'
     )
 
     _ = nlpgogo.go(
-        data_path='/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.json',
-        # data_path='/root/train.json',  # Music-Play
-        output_path='/ai/223/person/lichunyu/datasets/dataf/output/output.json'
-        # output_path='/ai/223/person/lichunyu/datasets/dataf/output/Radio-Listen.json',
+        # data_path='/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.json',
+        data_path='/ai/223/person/lichunyu/datasets/dataf/test/test_B_final_text.json',
+        output_path='/ai/223/person/lichunyu/datasets/dataf/output/result_test.json',
         # with_text=True,
         # full_slot=True 
     )

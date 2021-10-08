@@ -148,9 +148,9 @@ def viterbi_ensemble_decode(logits, mask, unpad=False, include_start_end_trans=F
                 scores: torch.FloatTensor, size为(batch_size,), 对应每个最优路径的分数。
 
     """
-    logits = [i.to(device) for i in logits]
-    mask = [i.to(device) for i in mask]
-    trans_m = [i.to(device) for i in trans_m]
+    logits = [i.detach().clone().to(device) for i in logits]
+    mask = [i.detach().clone().to(device) for i in mask]
+    trans_m = [i.detach().clone().to(device) for i in trans_m]
     batch_size, seq_len, n_tags = logits[0].size()
     logits = [i.transpose(0, 1).data for i in logits]  # L, B, H
     # mask = [i.transpose(0, 1).data.eq(1) for i in mask]  # L, B
