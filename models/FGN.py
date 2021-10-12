@@ -3,47 +3,52 @@
 @create_time: 2021/08/16 14:10:21
 @author: lichunyu
 '''
+import os
 
 import torch
-from torch.functional import split
 import torch.nn as nn
 import torch.nn.functional as F
-from transformers import BertModel, BertConfig
+from transformers import BertModel, BertConfig, BertTokenizer
+from PIL import Image
+import numpy as np
 
 
 class CGSCNN(nn.Module):
 
-    def __init__(self, num_embeddings, embedding_dim, dropout_prob=0.2):
+    def __init__(self, weights, dropout_prob=0.2, num_embeddings=50):
         super().__init__()
-        self.img_embedding = nn.Embedding(num_embeddings=num_embeddings, embedding_dim=embedding_dim)
-        # self.en_embedding = nn
-        self.conv3d = nn.Conv3d(8, (3,3,3), 1)
-        self.conv2d = nn.Conv2d(16, (3,3), 1)
-        self.pool2d = nn.MaxPool2d((2,2), 2)
-        self.conv2d2 = nn.Conv2d(32, (2,2))
-        self.pool2d2 = nn.MaxPool2d((2,2))
-        self.max_pool1d = nn.MaxPool1d(4)
+        self.num_embeddings = num_embeddings
+        self.img_embedding = nn.Embedding.from_pretrained(weights)
+        self.conv3d = nn.Conv3d(1, 4, (3,3,3), 1, 1)
+        self.conv3d2 = nn.Conv3d(4, 8, (3,3,3), 1, 1)
+        self.conv2d0 = nn.Conv2d(8, 8, (3,3), (1,1))
+        self.conv2d = nn.Conv2d(8, 16, (2,2), (1,1))
+        self.pool2d = nn.MaxPool2d(2, 2)
+        self.conv2d2 = nn.Conv2d(16, 32, (2,2), (1,1))
+        self.conv2d3 = nn.Conv2d(32, 64, (2,2), (1,1))
         self.dropout = nn.Dropout(dropout_prob)
 
-    def forward(self, char_input, bool_input=None):
-        """[summary]
-
-        :param char_input: [description]
-        :type char_input: [type]
-        :param bool_input: [是否是中文], defaults to None
-        :type bool_input: [type], optional
-        :return: [description]
-        :rtype: [type]
-        """
+    def forward(self, char_input):# TODO 加 关于英文的处理
         embed = self.img_embedding(char_input)
+        batch_size, seq_len, _ = embed.shape
+        embed = embed.view(batch_size, seq_len, 1, self.num_embeddings, self.num_embeddings)
+        embed = embed.transpose(1,2)
         droped_embed = self.dropout(embed)
         output = self.conv3d(droped_embed)
+        output = self.conv3d2(output)
+        output = output.transpose(1,2)
+        output = output.view(batch_size*seq_len, -1, self.num_embeddings, self.num_embeddings)
+        output = self.conv2d0(output)
+        output = self.pool2d(output)
         output = self.conv2d(output)
         output = self.pool2d(output)
         output = self.conv2d2(output)
-        output = self.pool2d2(output)
-        output = torch.reshape(output, (4, 64))
-        output = self.max_pool1d(output)  # TODO 加 关于英文的处理
+        output = self.pool2d(output)
+        output = self.conv2d3(output)
+        output = self.pool2d(output)
+        output = torch.reshape(output, (batch_size*seq_len, 4, 64))
+        output = torch.max(output, dim=-2)[0]
+        output = output.reshape(batch_size, seq_len, 64)
         return output
 
 
@@ -116,16 +121,74 @@ class SliceAttention(nn.Module):
         return output
 
 
+class CGS_Tokenzier(object):
+
+    def __init__(self, idx_map) -> None:
+        super().__init__()
+        self.idx_map = idx_map
+
+    def __call__(self, text, return_tensor='pt'):
+        super.__call__()
+        input_ids = []
+        for i in text:
+            if i in self.idx_map:
+                input_ids.append(self.idx_map[i])
+            else:
+                input_ids.append(-100)
+
+        if return_tensor == '':
+            return [input_ids]
+        elif return_tensor == 'pt':
+            return torch.from_numpy(np.array([input_ids]))
+        else:
+            raise Exception('unsupport')
+
+    @classmethod
+    def from_pretained(cls, config_path):
+        if os.path.isdir(config_path):
+            vocab_path = os.path.join(config_path, 'ccfr_vocab.txt')
+        elif os.path.isfile(config_path):
+            vocab_path = config_path
+        else:
+            raise Exception('no file named ccfr_vocab.txt')
+
+        with open(vocab_path, 'r') as f:
+            char_list = f.read().splitlines()
+
+        idx_map = {char: idx for idx, char in enumerate(char_list)}
+        return cls(idx_map)
+
+
 class FGN(nn.Module):
 
-    def __init__(self, bert_model_name_or_path, num_embeddings, embedding_dim, k_c, s_c, k_g, s_g, d_c=512, d_g=64, dropout_prob=0.2):
+    def __init__(self, bert_model_name_or_path, cgs_cnn_weights, k_c, s_c, k_g, s_g, d_c=512, d_g=64, dropout_prob=0.2):
         super().__init__()
-        self.bert = BertModel.from_pretrained(bert_model_name_or_path)
-        self.cgs_cnn = CGSCNN(num_embeddings=num_embeddings, embedding_dim=embedding_dim, dropout_prob=dropout_prob)
+        self.bert_config = BertConfig.from_pretrained(bert_model_name_or_path)
+        self.bert = BertModel(self.bert_config)
+        self.cgs_cnn = CGSCNN(weights=cgs_cnn_weights, dropout_prob=dropout_prob)
         self.oos_sliding_window = OosSlidingWindow(k_c=k_c, s_c=s_c, k_g=k_g, s_g=s_g, d_c=d_c, d_g=d_g)
         self.slice_attention = SliceAttention(k_c=k_c, k_g=k_g)
+        self.lstm = nn.LSTM()
 
-    def forward(self, input_ids, attention_mask=None, token_type_ids=None):
+    def forward(self, input_ids, char_input_ids, attention_mask=None, token_type_ids=None):
         bert_output = self.bert(input_ids=input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids)
         bert_output = bert_output.last_hidden_state
-        cgs_cnn_output = self.cgs_cnn(input_ids)
+        cgs_cnn_output = self.cgs_cnn(char_input_ids)
+
+
+
+
+
+if __name__ == '__main__':
+    bert_model_path = '/ai/223/person/lichunyu/pretrain-models/bert-base-chinese'
+    weights = torch.load('fgn_weights_gray.pth')
+    # fgn = FGN(bert_model_path, weights)
+
+    # bert_tokenizer = BertTokenizer.from_pretrained(bert_model_path)
+    # input_ids = bert_tokenizer('今天是晴天', return_tensors='pt')
+
+    cgs_tokenizer = CGS_Tokenzier.from_pretained('/root/EarleeNLP')
+    res = cgs_tokenizer('一二')
+    cgs_cnn = CGSCNN(weights)
+    y = cgs_cnn(res)
+    pass
