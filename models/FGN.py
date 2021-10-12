@@ -77,7 +77,7 @@ def slide_window(_tensor, window_size=1, stride=None, pad=False):
 
 class OosSlidingWindow(nn.Module):
 
-    def __init__(self, k_c, s_c, k_g, s_g, d_c=512, d_g=64):
+    def __init__(self, k_c, s_c, k_g, s_g, d_c=768, d_g=64):
         super().__init__()
         self.k_c = k_c
         self.s_c = s_c
@@ -102,12 +102,12 @@ class OosSlidingWindow(nn.Module):
 
 class SliceAttention(nn.Module):
 
-    def __init__(self, k_c, k_g):
+    def __init__(self, n):
         super().__init__()
         self.softmax = nn.Softmax()
         self.sigmoid = nn.Sigmoid()
-        self.slice_linear = nn.Linear(k_c*k_g, k_c*k_g)
-        self.query = nn.Linear(k_c*k_g, k_c*k_g)
+        self.slice_linear = nn.Linear(n, n)
+        self.query = nn.Linear(n, n)
 
     def forward(self, outer):
         k = self.slice_linear(outer)
@@ -115,7 +115,7 @@ class SliceAttention(nn.Module):
         k = k.transpose(-1, -2)
         q = self.query(outer)
         q = self.sigmoid(q)
-        attn = self.softmax(q*k)
+        attn = self.softmax(q*k) # TODO bugfix
         output = attn @ outer
         output = output.sum(-1)
         return output
@@ -161,19 +161,24 @@ class CGS_Tokenzier(object):
 
 class FGN(nn.Module):
 
-    def __init__(self, bert_model_name_or_path, cgs_cnn_weights, k_c, s_c, k_g, s_g, d_c=512, d_g=64, dropout_prob=0.2):
+    def __init__(self, bert_model_name_or_path, cgs_cnn_weights, k_c=96, s_c=12, k_g=8, s_g=1, d_c=768, d_g=64, dropout_prob=0.2):
         super().__init__()
         self.bert_config = BertConfig.from_pretrained(bert_model_name_or_path)
         self.bert = BertModel(self.bert_config)
         self.cgs_cnn = CGSCNN(weights=cgs_cnn_weights, dropout_prob=dropout_prob)
         self.oos_sliding_window = OosSlidingWindow(k_c=k_c, s_c=s_c, k_g=k_g, s_g=s_g, d_c=d_c, d_g=d_g)
-        self.slice_attention = SliceAttention(k_c=k_c, k_g=k_g)
-        self.lstm = nn.LSTM()
+        self.n = int(((d_c - k_c) / s_c) + 1) * k_c * k_g
+        self.slice_attention = SliceAttention(self.n)
+        # self.lstm = nn.LSTM()
 
     def forward(self, input_ids, char_input_ids, attention_mask=None, token_type_ids=None):
         bert_output = self.bert(input_ids=input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids)
-        bert_output = bert_output.last_hidden_state
+        bert_output = bert_output.last_hidden_state[:,1:-1,:]
         cgs_cnn_output = self.cgs_cnn(char_input_ids)
+        featrue_fusion = self.oos_sliding_window(bert_output, cgs_cnn_output)
+        feature = self.slice_attention(featrue_fusion)
+
+        pass
 
 
 
@@ -182,13 +187,15 @@ class FGN(nn.Module):
 if __name__ == '__main__':
     bert_model_path = '/ai/223/person/lichunyu/pretrain-models/bert-base-chinese'
     weights = torch.load('fgn_weights_gray.pth')
-    # fgn = FGN(bert_model_path, weights)
+    fgn = FGN(bert_model_path, weights)
 
-    # bert_tokenizer = BertTokenizer.from_pretrained(bert_model_path)
-    # input_ids = bert_tokenizer('今天是晴天', return_tensors='pt')
+    bert_tokenizer = BertTokenizer.from_pretrained(bert_model_path)
+    batch_dict = bert_tokenizer('今天是晴天', return_tensors='pt')
+    input_ids = batch_dict['input_ids']
+    attention_mask = batch_dict['attention_mask']
 
     cgs_tokenizer = CGS_Tokenzier.from_pretained('/root/EarleeNLP')
-    res = cgs_tokenizer('一二')
-    cgs_cnn = CGSCNN(weights)
-    y = cgs_cnn(res)
+    char_input_ids = cgs_tokenizer('今天是晴天')
+
+    res = fgn(input_ids, char_input_ids, attention_mask=attention_mask)
     pass
