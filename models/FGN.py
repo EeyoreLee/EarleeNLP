@@ -12,6 +12,8 @@ from transformers import BertModel, BertConfig, BertTokenizer
 from PIL import Image
 import numpy as np
 
+from .crf import ConditionalRandomField, get_crf_zero_init
+
 
 class CGSCNN(nn.Module):
 
@@ -104,7 +106,7 @@ class SliceAttention(nn.Module):
 
     def __init__(self, n):
         super().__init__()
-        self.softmax = nn.Softmax()
+        self.softmax = nn.Softmax(dim=-1)
         self.sigmoid = nn.Sigmoid()
         self.slice_linear = nn.Linear(n, n)
         self.query = nn.Linear(n, n)
@@ -115,8 +117,8 @@ class SliceAttention(nn.Module):
         k = k.transpose(-1, -2)
         q = self.query(outer)
         q = self.sigmoid(q)
-        attn = self.softmax(q*k) # TODO bugfix
-        output = attn @ outer
+        attn = self.softmax(torch.matmul(q, k)) # TODO bugfix
+        output = torch.matmul(attn, outer)
         output = output.sum(-1)
         return output
 
@@ -161,26 +163,36 @@ class CGS_Tokenzier(object):
 
 class FGN(nn.Module):
 
-    def __init__(self, bert_model_name_or_path, cgs_cnn_weights, k_c=96, s_c=12, k_g=8, s_g=1, d_c=768, d_g=64, dropout_prob=0.2):
+    def __init__(self, bert_model_name_or_path, cgs_cnn_weights, k_c=96, s_c=12, k_g=8, s_g=1, d_c=768, d_g=64, dropout_prob=0.2, label_size=None):
         super().__init__()
+        self.label_size = label_size
         self.bert_config = BertConfig.from_pretrained(bert_model_name_or_path)
         self.bert = BertModel(self.bert_config)
         self.cgs_cnn = CGSCNN(weights=cgs_cnn_weights, dropout_prob=dropout_prob)
         self.oos_sliding_window = OosSlidingWindow(k_c=k_c, s_c=s_c, k_g=k_g, s_g=s_g, d_c=d_c, d_g=d_g)
         self.n = int(((d_c - k_c) / s_c) + 1) * k_c * k_g
         self.slice_attention = SliceAttention(self.n)
-        # self.lstm = nn.LSTM()
+        self.lstm = nn.LSTM(57, 764, num_layers=1, bidirectional=True, batch_first=True)
+        self.crf = get_crf_zero_init(self.label_size)
 
-    def forward(self, input_ids, char_input_ids, attention_mask=None, token_type_ids=None):
+    def forward(self, input_ids, char_input_ids, attention_mask=None, token_type_ids=None, label=None):
         bert_output = self.bert(input_ids=input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids)
         bert_output = bert_output.last_hidden_state[:,1:-1,:]
         cgs_cnn_output = self.cgs_cnn(char_input_ids)
         featrue_fusion = self.oos_sliding_window(bert_output, cgs_cnn_output)
-        feature = self.slice_attention(featrue_fusion)
-
-        pass
-
-
+        funsion_vector = self.slice_attention(featrue_fusion)
+        output, _ = self.lstm(funsion_vector)
+        mask = attention_mask
+        loss = self.crf(output, label, mask).mean(dim=0)
+        result = {'loss': loss}
+        if self.training:
+            return result
+        pred, path = self.crf.viterbi_decode(output, mask)
+        result['pred'] = pred
+        result['trans_m'] = self.crf.trans_m.data
+        result['logits'] = output
+        result['mask'] = mask
+        return result
 
 
 
