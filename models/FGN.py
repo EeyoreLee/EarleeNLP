@@ -117,7 +117,7 @@ class SliceAttention(nn.Module):
         k = k.transpose(-1, -2)
         q = self.query(outer)
         q = self.sigmoid(q)
-        attn = self.softmax(torch.matmul(q, k)) # TODO bugfix
+        attn = self.softmax(torch.matmul(q, k))
         output = torch.matmul(attn, outer)
         output = output.sum(-1)
         return output
