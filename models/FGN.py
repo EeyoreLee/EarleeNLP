@@ -9,10 +9,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from transformers import BertModel, BertConfig, BertTokenizer
-from PIL import Image
 import numpy as np
 
-from .crf import ConditionalRandomField, get_crf_zero_init
+from .crf import get_crf_zero_init
 
 
 class CGSCNN(nn.Module):
