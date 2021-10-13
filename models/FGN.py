@@ -191,6 +191,7 @@ class FGN(nn.Module):
         result['trans_m'] = self.crf.trans_m.data
         result['logits'] = output
         result['mask'] = mask
+        result['path'] = path
         return result
 
 
