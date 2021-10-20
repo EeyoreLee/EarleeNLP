@@ -4,6 +4,7 @@
 @author: lichunyu
 '''
 import os
+import re
 
 import torch
 import torch.nn as nn
@@ -29,7 +30,7 @@ class CGSCNN(nn.Module):
         self.conv2d3 = nn.Conv2d(32, 64, (2,2), (1,1))
         self.dropout = nn.Dropout(dropout_prob)
 
-    def forward(self, char_input):# TODO 加 关于英文的处理
+    def forward(self, char_input):
         embed = self.img_embedding(char_input)
         batch_size, seq_len, _ = embed.shape
         embed = embed.view(batch_size, seq_len, 1, self.num_embeddings, self.num_embeddings)
@@ -110,13 +111,14 @@ class SliceAttention(nn.Module):
         self.slice_linear = nn.Linear(n, n)
         self.query = nn.Linear(n, n)
 
-    def forward(self, outer):
+    def forward(self, outer, extended_attention_mask):
         k = self.slice_linear(outer)
         k = self.sigmoid(k)
         k = k.transpose(-1, -2)
         q = self.query(outer)
         q = self.sigmoid(q)
-        attn = self.softmax(torch.matmul(q, k))
+        s = torch.matmul(q, k) + extended_attention_mask
+        attn = self.softmax(s)
         output = torch.matmul(attn, outer)
         output = output.sum(-1)
         return output
@@ -135,7 +137,7 @@ class CGS_Tokenzier(object):
             if i in self.idx_map:
                 input_ids.append(self.idx_map[i])
             else:
-                input_ids.append(-100)
+                input_ids.append(self.idx_map[self.en_map(i)])
 
         if return_tensor == '':
             return [input_ids]
@@ -143,6 +145,17 @@ class CGS_Tokenzier(object):
             return torch.from_numpy(np.array([input_ids]))
         else:
             raise Exception('unsupport')
+
+    def en_map(self, char):
+        number_pattern = re.compile('[0-9]+')
+        number_search = number_pattern.search(char)
+        if number_search:
+            return '数字'
+        en_pattern = re.compile('[a-zA-Z]+')
+        en_search = en_pattern.search(char)
+        if en_search:
+            return '英文'
+        return '标点符号'
 
     @classmethod
     def from_pretained(cls, config_path):
@@ -174,12 +187,27 @@ class FGN(nn.Module):
         self.lstm = nn.LSTM(57, 764, num_layers=1, bidirectional=True, batch_first=True)
         self.crf = get_crf_zero_init(self.label_size)
 
+    def get_extended_attention_mask(self, attention_mask):
+        if attention_mask.dim() == 3:
+            extended_attention_mask = attention_mask[:, None, :, :]
+        elif attention_mask.dim() == 2:
+            extended_attention_mask = attention_mask[:, None, None, :]
+        else:
+            raise Exception('attention_mask dim is wrong')
+        extended_attention_mask = (1.0 - extended_attention_mask) * -10000.0
+        return extended_attention_mask
+
     def forward(self, input_ids, char_input_ids, attention_mask=None, token_type_ids=None, label=None):
+        device = input_ids.device
+        batch_size, seq_length = input_ids.size()
         bert_output = self.bert(input_ids=input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids)
+        if attention_mask is None:
+            attention_mask = torch.ones(((batch_size, seq_length)), device=device)
         bert_output = bert_output.last_hidden_state[:,1:-1,:]
         cgs_cnn_output = self.cgs_cnn(char_input_ids)
         featrue_fusion = self.oos_sliding_window(bert_output, cgs_cnn_output)
-        funsion_vector = self.slice_attention(featrue_fusion)
+        extended_attention_mask = self.get_extended_attention_mask(attention_mask)
+        funsion_vector = self.slice_attention(featrue_fusion, extended_attention_mask)
         output, _ = self.lstm(funsion_vector)
         mask = attention_mask
         loss = self.crf(output, label, mask).mean(dim=0)
