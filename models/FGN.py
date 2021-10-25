@@ -5,10 +5,12 @@
 '''
 import os
 import re
+import math
 
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from torch.nn.utils.rnn import pad_sequence
 from transformers import BertModel, BertConfig, BertTokenizer
 import numpy as np
 
@@ -21,8 +23,9 @@ class CGSCNN(nn.Module):
         super().__init__()
         self.num_embeddings = num_embeddings
         self.img_embedding = nn.Embedding.from_pretrained(weights)
-        self.conv3d = nn.Conv3d(1, 4, (3,3,3), 1, 1)
-        self.conv3d2 = nn.Conv3d(4, 8, (3,3,3), 1, 1)
+        # self.conv3d = nn.Conv3d(1, 4, (3,3,3), 1, 1)
+        # self.conv3d2 = nn.Conv3d(4, 8, (3,3,3), 1, 1)
+        self.conv3d = nn.Conv3d(1, 8, (3,3,3), 1, 1)
         self.conv2d0 = nn.Conv2d(8, 8, (3,3), (1,1))
         self.conv2d = nn.Conv2d(8, 16, (2,2), (1,1))
         self.pool2d = nn.MaxPool2d(2, 2)
@@ -32,14 +35,17 @@ class CGSCNN(nn.Module):
 
     def forward(self, char_input):
         embed = self.img_embedding(char_input)
+        embed /= 255
         batch_size, seq_len, _ = embed.shape
         embed = embed.view(batch_size, seq_len, 1, self.num_embeddings, self.num_embeddings)
+        # device = embed.device
+        # delimit = torch.zeros((1,50,50), device=device)
         embed = embed.transpose(1,2)
         droped_embed = self.dropout(embed)
         output = self.conv3d(droped_embed)
-        output = self.conv3d2(output)
+        # output = self.conv3d2(output)
         output = output.transpose(1,2)
-        output = output.view(batch_size*seq_len, -1, self.num_embeddings, self.num_embeddings)
+        output = output.reshape(batch_size*seq_len, -1, self.num_embeddings, self.num_embeddings)
         output = self.conv2d0(output)
         output = self.pool2d(output)
         output = self.conv2d(output)
@@ -99,6 +105,7 @@ class OosSlidingWindow(nn.Module):
         g_s_group_r = g_s_group.repeat(1, 1, self.n, 1).unsqueeze(-2)
         outer = torch.einsum('bsihc,bsihg->bsicg', [c_s_group_r, g_s_group_r]).squeeze(dim=-3).reshape(batch, \
                 seq_len, self.n, self.n, c_s_group_r.shape[-1], g_s_group_r.shape[-1]).flatten(start_dim=-3)
+        # outer = torch.einsum('bsihc,bsihg->bsicg', [c_s_group_r, g_s_group_r])
         return outer
 
 
@@ -106,7 +113,8 @@ class SliceAttention(nn.Module):
 
     def __init__(self, n):
         super().__init__()
-        self.softmax = nn.Softmax(dim=-1)
+        self.n = n
+        self.softmax = nn.Softmax(dim=1)
         self.sigmoid = nn.Sigmoid()
         self.slice_linear = nn.Linear(n, n)
         self.query = nn.Linear(n, n)
@@ -117,7 +125,10 @@ class SliceAttention(nn.Module):
         k = k.transpose(-1, -2)
         q = self.query(outer)
         q = self.sigmoid(q)
-        s = torch.matmul(q, k) + extended_attention_mask
+        # s = torch.matmul(q, k) / (math.sqrt(self.n) + 57)
+        s = torch.matmul(q, k) / math.sqrt(57)
+        # s += extended_attention_mask
+        s += extended_attention_mask.transpose(1,3)
         attn = self.softmax(s)
         output = torch.matmul(attn, outer)
         output = output.sum(-1)
@@ -130,7 +141,7 @@ class CGS_Tokenzier(object):
         super().__init__()
         self.idx_map = idx_map
 
-    def __call__(self, text, return_tensor='pt'):
+    def __call__(self, text, return_tensor='pt', max_length=None):
         super.__call__()
         input_ids = []
         for i in text:
@@ -138,6 +149,10 @@ class CGS_Tokenzier(object):
                 input_ids.append(self.idx_map[i])
             else:
                 input_ids.append(self.idx_map[self.en_map(i)])
+        if len(input_ids) < max_length - 2:
+            input_ids += (max_length - 2 - len(input_ids)) * [self.idx_map['[PAD]']]
+        elif len(input_ids) > max_length - 2:
+            input_ids = input_ids[:max_length-1]
 
         if return_tensor == '':
             return [input_ids]
@@ -175,7 +190,8 @@ class CGS_Tokenzier(object):
 
 class FGN(nn.Module):
 
-    def __init__(self, bert_model_name_or_path, cgs_cnn_weights, k_c=96, s_c=12, k_g=8, s_g=1, d_c=768, d_g=64, dropout_prob=0.2, label_size=None):
+    def __init__(self, bert_model_name_or_path, cgs_cnn_weights, k_c=96, s_c=12, k_g=8, s_g=1, d_c=768, d_g=64, dropout_prob=0.2, \
+            label_size=None, lstm_hidden_num=764):
         super().__init__()
         self.label_size = label_size
         self.bert_config = BertConfig.from_pretrained(bert_model_name_or_path)
@@ -184,17 +200,28 @@ class FGN(nn.Module):
         self.oos_sliding_window = OosSlidingWindow(k_c=k_c, s_c=s_c, k_g=k_g, s_g=s_g, d_c=d_c, d_g=d_g)
         self.n = int(((d_c - k_c) / s_c) + 1) * k_c * k_g
         self.slice_attention = SliceAttention(self.n)
-        self.lstm = nn.LSTM(57, 764, num_layers=1, bidirectional=True, batch_first=True)
+        self.lstm = nn.LSTM(57, lstm_hidden_num, num_layers=1, bidirectional=True, batch_first=True)
         self.crf = get_crf_zero_init(self.label_size)
+        self.hidden2tag = nn.Linear(2*lstm_hidden_num, label_size)
 
-    def get_extended_attention_mask(self, attention_mask):
+    def get_extended_attention_mask(self, attention_mask, mask_shape):
         if attention_mask.dim() == 3:
-            extended_attention_mask = attention_mask[:, None, :, :]
+            extended_attention_mask = attention_mask[:, None, :, 2:]
         elif attention_mask.dim() == 2:
-            extended_attention_mask = attention_mask[:, None, None, :]
+            extended_attention_mask = attention_mask[:, None, None, 2:]
         else:
             raise Exception('attention_mask dim is wrong')
-        extended_attention_mask = (1.0 - extended_attention_mask) * -10000.0
+        # def creat_bool_embed(dim):
+        #     weight = np.zeros(shape=(2,dim), dtype=np.float32)
+        #     weight[1,:] = 1.0
+        #     return torch.from_numpy(weight)
+
+        # mask = nn.Embedding.from_pretrained(creat_bool_embed(mask_shape**2))
+        # extended_attention_mask = mask(attention_mask[:,2:])
+        # batch_size, seq_len, power_shape = extended_attention_mask.shape
+        # extended_attention_mask = extended_attention_mask.reshape(batch_size, seq_len, mask_shape, mask_shape)
+
+        extended_attention_mask = (1.0 - extended_attention_mask) * -1e+4
         return extended_attention_mask
 
     def forward(self, input_ids, char_input_ids, attention_mask=None, token_type_ids=None, label=None):
@@ -206,14 +233,19 @@ class FGN(nn.Module):
         bert_output = bert_output.last_hidden_state[:,1:-1,:]
         cgs_cnn_output = self.cgs_cnn(char_input_ids)
         featrue_fusion = self.oos_sliding_window(bert_output, cgs_cnn_output)
-        extended_attention_mask = self.get_extended_attention_mask(attention_mask)
+        mask_shape = featrue_fusion.shape[2]
+        extended_attention_mask = self.get_extended_attention_mask(attention_mask, mask_shape)
         funsion_vector = self.slice_attention(featrue_fusion, extended_attention_mask)
         output, _ = self.lstm(funsion_vector)
-        mask = attention_mask
-        loss = self.crf(output, label, mask).mean(dim=0)
+        output = self.hidden2tag(output)
+        mask = attention_mask[:,2:]
+        seq_length_with_mask = mask.shape[-1]
+        label_with_maks = F.pad(label, (0,seq_length_with_mask-label.shape[-1]))
+        loss = self.crf(output, label_with_maks, mask).mean(dim=0)
         result = {'loss': loss}
         if self.training:
             return result
+        result = {}
         pred, path = self.crf.viterbi_decode(output, mask)
         result['pred'] = pred
         result['trans_m'] = self.crf.trans_m.data
@@ -226,16 +258,37 @@ class FGN(nn.Module):
 
 if __name__ == '__main__':
     bert_model_path = '/ai/223/person/lichunyu/pretrain-models/bert-base-chinese'
-    weights = torch.load('fgn_weights_gray.pth')
-    fgn = FGN(bert_model_path, weights)
+    weights = torch.load('fgn_weights_gray_with_pad.pth')
+    fgn = FGN(bert_model_path, weights, label_size=5)
+    fgn.eval()
 
     bert_tokenizer = BertTokenizer.from_pretrained(bert_model_path)
-    batch_dict = bert_tokenizer('今天是晴天', return_tensors='pt')
+    batch_dict = bert_tokenizer('今天是晴天', return_tensors='pt', padding='max_length', max_length=9)
     input_ids = batch_dict['input_ids']
     attention_mask = batch_dict['attention_mask']
 
     cgs_tokenizer = CGS_Tokenzier.from_pretained('/root/EarleeNLP')
-    char_input_ids = cgs_tokenizer('今天是晴天')
+    # char_input_ids = cgs_tokenizer('今天是晴天')
+    char_input_ids = torch.from_numpy(np.array([[1,2,3,4,5,8630,8630]]))
+    char_input_ids2 = torch.from_numpy(np.array([[1,2,3,4,5]]))
 
-    res = fgn(input_ids, char_input_ids, attention_mask=attention_mask)
+
+    batch_dict2 = bert_tokenizer('今天是晴天', return_tensors='pt')
+    input_ids2 = batch_dict2['input_ids']
+    attention_mask2 = batch_dict2['attention_mask']
+
+
+    batch_input_ids = torch.cat([input_ids], dim=0)
+    batch_attention_mask = torch.cat([attention_mask], dim=0)
+    batch_char_input_ids = torch.cat([char_input_ids], dim=0)
+
+    batch_input_ids2 = torch.cat([input_ids2], dim=0)
+    batch_attention_mask2 = torch.cat([attention_mask2], dim=0)
+    batch_char_input_ids2 = torch.cat([char_input_ids2], dim=0)
+    label = torch.from_numpy(np.array([[1,1,1,1,1,]]))
+
+    res = fgn(batch_input_ids, batch_char_input_ids, attention_mask=batch_attention_mask, label=label)
+    res2 = fgn(batch_input_ids2, batch_char_input_ids2, attention_mask=batch_attention_mask2, label=label)
+    # loss = res['loss']
+    # loss.backward()
     pass
