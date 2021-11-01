@@ -5,6 +5,7 @@
 '''
 import time
 import datetime
+import os
 
 from datasets import load_dataset
 from transformers import BertTokenizer, AdamW
@@ -15,6 +16,8 @@ from torch.utils.data import TensorDataset, DataLoader, RandomSampler, Sequentia
 from seqeval.metrics import accuracy_score, f1_score, classification_report
 
 from models.FGN import FGN, CGS_Tokenzier
+
+os.environ['CUDA_VISIBLE_DEVICES'] = '2'
 
 
 def tokenize_batch(dataset, tokenizer, cgs_tokenizer,max_length=200, text_name='tokens', label_name='label', **kwargs):
@@ -79,17 +82,17 @@ def main():
     print("label size is {}".format(label_size))
 
     max_length = 200
-    bert_model_path = '/ai/223/person/lichunyu/pretrain-models/bert-base-chinese'
+    bert_model_path = '/nas/person/lichunyu/pretrain-models/bert-base-chinese'
 
-    tokenizer = BertTokenizer.from_pretrained('/ai/223/person/lichunyu/pretrain-models/bert-base-chinese')
+    tokenizer = BertTokenizer.from_pretrained('/nas/person/lichunyu/pretrain-models/bert-base-chinese')
 
-    cgs_tokenizer = CGS_Tokenzier.from_pretained('/root/EarleeNLP')
+    cgs_tokenizer = CGS_Tokenzier.from_pretained('/nas/person/lichunyu/workspace/EarleeNLP')
 
     train_tensor_dataset = tokenize_batch(train_dataset, tokenizer, cgs_tokenizer)
     dev_tensor_data = tokenize_batch(dev_dataset, tokenizer, cgs_tokenizer)
 
-    train_dataloader = DataLoader(train_tensor_dataset, sampler=RandomSampler(train_tensor_dataset), batch_size=16)
-    dev_dataloader= DataLoader(dev_tensor_data, sampler=SequentialSampler(dev_tensor_data), batch_size=16)
+    train_dataloader = DataLoader(train_tensor_dataset, sampler=RandomSampler(train_tensor_dataset), batch_size=1)
+    dev_dataloader= DataLoader(dev_tensor_data, sampler=SequentialSampler(dev_tensor_data), batch_size=1)
 
     weights = torch.load('fgn_weights_gray_with_pad.pth')
     model = FGN(bert_model_path, weights, label_size=label_size)
@@ -100,30 +103,30 @@ def main():
                 )
     epoch = 50
 
-    for i in epoch:
+    for i in range(epoch):
 
         bt = time.time()
-        # total_train_loss = 0
-        # model.train()
+        total_train_loss = 0
+        model.train()
 
-        # for step, batch in enumerate(train_dataloader):
-        #     if step % 50 == 0 and not step == 0:
-        #         elapsed = format_time(time.time() - bt)
-        #         print('  Batch {:>5,}  of  {:>5,}.   Elapsed: {:}.'.format(step, len(train_dataloader), elapsed))
+        for step, batch in enumerate(train_dataloader):
+            if step % 50 == 0 and not step == 0:
+                elapsed = format_time(time.time() - bt)
+                print('  Batch {:>5,}  of  {:>5,}.   Elapsed: {:}.'.format(step, len(train_dataloader), elapsed))
 
-        #     model.zero_grad()
+            model.zero_grad()
 
-        #     input_ids = batch[0].cuda()
-        #     char_input_ids = batch[1].cuda()
-        #     attention_masks = batch[2].cuda()
-        #     label = batch[3].cuda()
+            input_ids = batch[0].cuda()
+            char_input_ids = batch[1].cuda()
+            attention_masks = batch[2].cuda()
+            label = batch[3].cuda()
 
-        #     output = model(input_ids, char_input_ids, attention_masks, label=label)
-        #     loss = output['loss']
-        #     total_train_loss += loss.item()
-        #     loss.backward()
-        #     optimizer.step()
-        # print('train loss is {}'.format(total_train_loss))
+            output = model(input_ids, char_input_ids, attention_masks, label=label)
+            loss = output['loss']
+            total_train_loss += loss.item()
+            loss.backward()
+            optimizer.step()
+        print('train loss is {}'.format(total_train_loss))
 
 
         model.eval()

@@ -47,10 +47,6 @@ class Unfreeze_Callback(Callback):
             self.bert_embedding.requires_grad = True
 
 
-
-
-
-
 def collate_func(batch_dict):
     batch_len = len(batch_dict)
     max_seq_length = max([dic['seq_len'] for dic in batch_dict])
@@ -65,8 +61,6 @@ def collate_func(batch_dict):
     pos_s = pad_sequence([i['pos_s'] for i in batch_dict], batch_first=True)
     pos_e = pad_sequence([i['pos_e'] for i in batch_dict], batch_first=True)
     return [chars, target, bigrams, seq_len, lex_num, lex_s, lex_e, lattice, pos_s, pos_e]
-
-
 
 
 class NERDataset(Dataset):
@@ -90,13 +84,6 @@ class NERDataset(Dataset):
         row['pos_s'] = torch.tensor(row['pos_s'])
         row['pos_e'] = torch.tensor(row['pos_e'])
         return row
-
-
-
-
-
-
-
 
 
 def main(json_path):

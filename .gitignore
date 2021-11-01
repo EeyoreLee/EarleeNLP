@@ -4,7 +4,7 @@ bert-base-chinese/*
 models/runs/*
 runs/*
 .DS_Store
-notebook/data/
+notebook/
 data/
 competition/
 logs/

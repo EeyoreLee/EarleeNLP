@@ -1,11 +1,9 @@
-from datasets import load_dataset
-from transformers import BertTokenizer, BertModel
-import torch
-import numpy as np
-import torch.nn as nn
+# -*- encoding: utf-8 -*-
+'''
+@create_time: 2021/10/26 18:27:23
+@author: lichunyu
+'''
 
+import seaborn as sns
 
-
-
-
-pass
+sns.heatmap

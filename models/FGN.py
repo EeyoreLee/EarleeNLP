@@ -245,7 +245,6 @@ class FGN(nn.Module):
         result = {'loss': loss}
         if self.training:
             return result
-        result = {}
         pred, path = self.crf.viterbi_decode(output, mask)
         result['pred'] = pred
         result['trans_m'] = self.crf.trans_m.data
