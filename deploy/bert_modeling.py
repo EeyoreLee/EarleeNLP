@@ -7,6 +7,7 @@ import torch
 import torch.nn.functional as F
 import numpy as np
 
+from utils.common import MirrorDict
 
 def bert_classification_inference(text, model, tokenizer, max_length=150, return_prod=False, label2idx=None, idx2label=None, device='cuda', return_logits=False, manager_dict=None, manager_key=None, **kwargs):
     input_ids = []
@@ -34,8 +35,10 @@ def bert_classification_inference(text, model, tokenizer, max_length=150, return
             input_ids=input_ids,
             attention_mask=attention_mask
         )
-    if idx2label is None:
+    if idx2label is None and label2idx:
         idx2label = {v:k for k, v in label2idx.items()}
+    elif idx2label is None and label2idx is None:
+        idx2label = MirrorDict()
     classification = idx2label[torch.argmax(output.logits).detach().cpu().numpy().tolist()]
     if manager_dict is not None:
         manager_dict[manager_key] = classification

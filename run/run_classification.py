@@ -51,7 +51,7 @@ def tokenize_batch(df, tokenizer, max_length=510, text_name='text', label_name='
     attention_masks = []
     for idx, row in df.iterrows():
         encoded_dict = tokenizer(
-                            row[text_name],
+                            row[text_name] + ',' + ','.join(5*[row['character']]),
                             # row['pair'],
                             add_special_tokens = True,
                             truncation='longest_first',
@@ -77,8 +77,8 @@ def gen_dataloader(df=None, df_train=None, df_eval=None, tokenizer=None, per_dev
                 per_device_eval_batch_size=None, test_size=0.2, label_name='label', **kwargs):
     if df is not None:
         df_train, df_eval, _, _ = train_test_split(df, df[label_name], test_size=test_size, stratify=df[label_name])
-    train_input_ids, train_attention_masks, train_labels = tokenize_batch(df_train, tokenizer, **kwargs)
-    eval_input_ids, eval_attention_masks, eval_labels = tokenize_batch(df_eval, tokenizer,**kwargs)
+    train_input_ids, train_attention_masks, train_labels = tokenize_batch(df_train, tokenizer, label_name=label_name, **kwargs)
+    eval_input_ids, eval_attention_masks, eval_labels = tokenize_batch(df_eval, tokenizer, label_name=label_name,**kwargs)
     train_dataset = TensorDataset(train_input_ids, train_attention_masks, train_labels)
     eval_dataset = TensorDataset(eval_input_ids, eval_attention_masks, eval_labels)
     train_dataloader = DataLoader(train_dataset, sampler=RandomSampler(train_dataset), batch_size=per_device_train_batch_size)
@@ -154,7 +154,7 @@ def main(json_path=''):
         num_labels=custom_args.num_labels
     )
 
-    model = BertForSequenceClassification.from_pretrained(
+    model = BertForClassificationByDice.from_pretrained(
         custom_args.model_name_or_path,
         config=config
     )
@@ -180,11 +180,14 @@ def main(json_path=''):
     data = pd.read_pickle(custom_args.pickle_data_path)
     # df_train = pd.read_pickle(custom_args.train_pickle_data_path)
     # df_eval = pd.read_pickle(custom_args.eval_pickle_data_path)
+    label_name = custom_args.label_name
+    text_name = custom_args.text_name
     train_dataloader, eval_dataloader = gen_dataloader(
         df=data,
         # df_train=df_train,
         # df_eval=df_eval,
-        label_name='label',
+        label_name=label_name,
+        text_name=text_name,
         tokenizer=tokenizer,
         per_device_train_batch_size=training_args.per_device_train_batch_size,
         per_device_eval_batch_size=training_args.per_device_eval_batch_size,
@@ -329,9 +332,4 @@ def main(json_path=''):
 
 
 if __name__ == '__main__':
-    # main('/root/EarleeNLP/args/cls.json')
-    # main('/root/EarleeNLP/args/df_intent_ood_roberta.json')
     main('/root/EarleeNLP/args/df_intent_ood_macbert.json')
-    # main('/root/EarleeNLP/args/news.json')
-    # main('/root/EarleeNLP/args/df_intent_ood.json')
-    # main('/root/EarleeNLP/args/df_intent_ood_roberta_6000.json')

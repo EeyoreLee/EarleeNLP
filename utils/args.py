@@ -202,6 +202,8 @@ class CustomizeArguments:
 
     label_name: str = field(default='label')
 
+    text_name: str = field(default='text')
+
     train_path: str = field(default=None)
 
     dev_path: str = field(default=None)

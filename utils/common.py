@@ -282,6 +282,12 @@ def viterbi_ensemble_decode(logits, mask, unpad=False, include_start_end_trans=F
     return paths, ans_score
 
 
+class MirrorDict(object):
+
+    def __getitem__(self, key):
+        return key
+
+
 
 
 if __name__ == '__main__':
