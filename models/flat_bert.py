@@ -27,7 +27,6 @@ from torch.optim.lr_scheduler import LambdaLR
 
 from functools import partial
 from fastNLP import DataSet
-
 from fastNLP.core import logger
 from fastNLP.core import Trainer
 from fastNLP.modules.utils import _get_file_name_base_on_postfix

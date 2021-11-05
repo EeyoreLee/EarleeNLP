@@ -88,12 +88,12 @@ class NERDataset(Dataset):
 
 def main(json_path):
 
-    yangjie_rich_pretrain_unigram_path = '/root/pretrain-models/flat/gigaword_chn.all.a2b.uni.ite50.vec'
-    yangjie_rich_pretrain_bigram_path = '/root/pretrain-models/flat/gigaword_chn.all.a2b.bi.ite50.vec'
-    yangjie_rich_pretrain_word_path = '/root/pretrain-models/flat/ctb.50d.vec'
-    yangjie_rich_pretrain_char_and_word_path = '/root/pretrain-models/flat/yangjie_word_char_mix.txt'
+    yangjie_rich_pretrain_unigram_path = '/ai/223/person/lichunyu/pretrain-models/flat/gigaword_chn.all.a2b.uni.ite50.vec'
+    yangjie_rich_pretrain_bigram_path = '/ai/223/person/lichunyu/pretrain-models/flat/gigaword_chn.all.a2b.bi.ite50.vec'
+    yangjie_rich_pretrain_word_path = '/ai/223/person/lichunyu/pretrain-models/flat/ctb.50d.vec'
+    yangjie_rich_pretrain_char_and_word_path = '/ai/223/person/lichunyu/pretrain-models/flat/yangjie_word_char_mix.txt'
     # lk_word_path = '/remote-home/xnli/data/pretrain/chinese/sgns.merge.word'
-    lk_word_path_2 = '/root/pretrain-models/flat/sgns.merge.word_2'
+    lk_word_path_2 = '/ai/223/person/lichunyu/pretrain-models/flat/sgns.merge.word_2'
 
     load_dataset_seed = 42
 
@@ -158,9 +158,9 @@ def main(json_path):
     refresh_data = False
 
     datasets, vocabs, embeddings = load_ner(
-        '/root/hub/golden-horse/data',
-        '/root/pretrain-models/flat/gigaword_chn.all.a2b.uni.ite50.vec',
-        '/root/pretrain-models/flat/gigaword_chn.all.a2b.bi.ite50.vec',
+        '/ai/223/person/lichunyu/pretrain-models/golden-horse/data',
+        '/ai/223/person/lichunyu/pretrain-models/flat/gigaword_chn.all.a2b.uni.ite50.vec',
+        '/ai/223/person/lichunyu/pretrain-models/flat/gigaword_chn.all.a2b.bi.ite50.vec',
         _refresh=True,
         index_token=False,
         # train_clip=custom_args.train_clip,
@@ -322,7 +322,10 @@ def main(json_path):
     # fitlog.set_rng_seed(args.seed)
     torch.backends.cudnn.benchmark = False
 
-    bert_embedding = BertEmbedding(vocabs['lattice'],model_dir_or_name='/root/.fastNLP/embedding/chinese-roberta-wwm-ext-large',requires_grad=True,word_dropout=0.01)
+    # bert_embedding = BertEmbedding(vocabs['lattice'],model_dir_or_name='/root/.fastNLP/embedding/chinese-roberta-wwm-ext-large',requires_grad=True,word_dropout=0.01)
+
+
+    bert_embedding = BertEmbedding(vocabs['lattice'],model_dir_or_name='cn-wwm-ext',requires_grad=True,word_dropout=0.01)
 
     # model = torch.load('/ai/223/person/lichunyu/models/df/ner/flat-2021-08-09-08-40-44-f1_70.pth', map_location=torch.device('cuda'))
 
@@ -388,7 +391,7 @@ def main(json_path):
     train_ds = NERDataset(datasets['train'])
     train_dataloader = DataLoader(
         train_ds,
-        batch_size=16,
+        batch_size=64,
         collate_fn=collate_func,
         shuffle=True
     )
@@ -440,7 +443,7 @@ def main(json_path):
     # scheduler = LambdaLR(optimizer, lambda ep: 1 / (1 + 0.05*ep) )
 
     epoch = 150
-    # model = nn.DataParallel(model)
+    model = nn.DataParallel(model)
     model.cuda()
 
 

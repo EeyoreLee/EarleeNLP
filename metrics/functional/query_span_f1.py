@@ -1,7 +1,12 @@
-# encoding: utf-8
-
+# -*- encoding: utf-8 -*-
+'''
+@create_time: 2021/11/04 15:28:22
+@author: lichunyu
+'''
 
 import torch
+import numpy as np
+
 from utils.bmes_decode import bmes_decode
 
 
@@ -48,7 +53,22 @@ def query_span_f1(start_preds, end_preds, match_logits, start_label_mask, end_la
     return 2*pre*recall / (pre + recall)
 
 
-def extract_flat_spans(start_pred, end_pred, match_pred, label_mask):
+def extract_nested_spans(start_preds, end_preds, match_preds, start_label_mask, end_label_mask, pseudo_tag="TAG"):
+    start_label_mask = start_label_mask.bool()
+    end_label_mask = end_label_mask.bool()
+    bsz, seq_len = start_label_mask.size()
+    start_preds = start_preds.bool()
+    end_preds = end_preds.bool()
+
+    match_preds = (match_preds & start_preds.unsqueeze(-1).expand(-1, -1, seq_len) & end_preds.unsqueeze(1).expand(-1, seq_len, -1))
+    match_label_mask = (start_label_mask.unsqueeze(-1).expand(-1, -1, seq_len) & end_label_mask.unsqueeze(1).expand(-1, seq_len, -1))
+    match_label_mask = torch.triu(match_label_mask, 0)  # start should be less or equal to end
+    match_preds = match_label_mask & match_preds
+    match_pos_pairs = np.transpose(np.nonzero(match_preds.numpy())).tolist()
+    return [(pos[0], pos[1], pseudo_tag) for pos in match_pos_pairs]
+
+
+def extract_flat_spans(start_pred, end_pred, match_pred, label_mask, pseudo_tag = "TAG"):
     """
     Extract flat-ner spans from start/end/match logits
     Args:
@@ -66,7 +86,6 @@ def extract_flat_spans(start_pred, end_pred, match_pred, label_mask):
         >>> extract_flat_spans(start_pred, end_pred, match_pred, label_mask)
         [(1, 2)]
     """
-    pseudo_tag = "TAG"
     pseudo_input = "a"
 
     bmes_labels = ["O"] * len(start_pred)
@@ -93,7 +112,7 @@ def extract_flat_spans(start_pred, end_pred, match_pred, label_mask):
 
     tags = bmes_decode([(pseudo_input, label) for label in bmes_labels])
 
-    return [(tag.begin, tag.end) for tag in tags]
+    return [(entity.begin, entity.end, entity.tag) for entity in tags]
 
 
 def remove_overlap(spans):
@@ -113,8 +132,3 @@ def remove_overlap(spans):
         for x in range(start, end + 1):
             occupied.add(x)
     return output
-
-
-
-def logits2answer(start_logits, end_logits, span_logits):
-    ...

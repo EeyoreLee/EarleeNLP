@@ -25,7 +25,7 @@ from torch.nn.utils.rnn import pad_sequence
 from utils.flat.base import load_ner
 from utils.common import text_rm_space, bio_decode, viterbi_ensemble_decode
 from models.flat_bert import load_yangjie_rich_pretrain_word_list, equip_chinese_ner_with_lexicon
-from metircs.functional.f1_score import ner_extract
+from metrics.functional.f1_score import ner_extract
 from run.run_ner import LABEL2IDX
 from deploy.bert_modeling import bert_classification_inference
 

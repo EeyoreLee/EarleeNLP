@@ -38,7 +38,7 @@ from models.bert_query_ner import BertQueryNER, BertQueryNerConfig
 from plugin.FGM import FGM
 from utils.mrc_ner_dataloader import get_dataloader
 from loss.dice_loss import DiceLoss
-from metircs.functional.query_span_f1 import query_span_f1
+from metrics.functional.query_span_f1 import query_span_f1
 from loss.mrc_ner_dice_loss import DiceLoss as MRCDiceLoss
 from utils.args import CustomizeArguments
 

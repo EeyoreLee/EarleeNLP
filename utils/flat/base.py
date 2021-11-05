@@ -42,7 +42,7 @@ def load_ner(path,unigram_embedding_path=None,bigram_embedding_path=None,index_t
         placeholder_path = '/root/all_train.test'
 
     if test_a_path is None:
-        test_a_path = '/ai/223/person/lichunyu/datasets/dataf/test/test_A_text.seq'
+        test_a_path = '/ai/223/person/lichunyu/datasets/df-competition/df-511/test/test_A_text.seq'
 
     paths = {}
     paths['train'] = train_path
