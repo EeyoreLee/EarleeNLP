@@ -34,14 +34,12 @@ from transformers import (
 )
 from transformers.trainer_utils import is_main_process, get_last_checkpoint
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import f1_score, accuracy_score, classification_report
+from sklearn.metrics import f1_score, accuracy_score, classification_report, cohen_kappa_score
 
 from models.BertForClassificationByDice import BertForClassificationByDice
 from plugin.FGM import FGM
 from utils.args import CustomizeArguments
 
-
-os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3,4,5,6,7'
 
 logger = logging.getLogger(__name__)
 
@@ -51,8 +49,7 @@ def tokenize_batch(df, tokenizer, max_length=510, text_name='text', label_name='
     attention_masks = []
     for idx, row in df.iterrows():
         encoded_dict = tokenizer(
-                            row[text_name] + ',' + ','.join(5*[row['character']]),
-                            # row['pair'],
+                            row[text_name],
                             add_special_tokens = True,
                             truncation='longest_first',
                             max_length = max_length,
@@ -177,15 +174,20 @@ def main(json_path=''):
     #     custom_args.tokenizer_name_or_path if custom_args.tokenizer_name_or_path else custom_args.model_name_or_path,
     # )
 
-    data = pd.read_pickle(custom_args.pickle_data_path)
-    # df_train = pd.read_pickle(custom_args.train_pickle_data_path)
-    # df_eval = pd.read_pickle(custom_args.eval_pickle_data_path)
+    if custom_args.pickle_data_path:
+        data = pd.read_pickle(custom_args.pickle_data_path)
+        df_train = None
+        df_eval = None
+    else:
+        data = None
+        df_train = pd.read_pickle(custom_args.train_pickle_data_path)
+        df_eval = pd.read_pickle(custom_args.eval_pickle_data_path)
     label_name = custom_args.label_name
     text_name = custom_args.text_name
     train_dataloader, eval_dataloader = gen_dataloader(
         df=data,
-        # df_train=df_train,
-        # df_eval=df_eval,
+        df_train=df_train,
+        df_eval=df_eval,
         label_name=label_name,
         text_name=text_name,
         tokenizer=tokenizer,
@@ -209,7 +211,7 @@ def main(json_path=''):
     total_steps = len(train_dataloader) * training_args.num_train_epochs
 
     scheduler = get_linear_schedule_with_warmup(optimizer, 
-                                                num_warmup_steps = 2, 
+                                                num_warmup_steps = 10, 
                                                 num_training_steps = total_steps)
 
     # fgm = FGM(model)
@@ -302,6 +304,7 @@ def main(json_path=''):
             total_eval_l.extend(label_ids.flatten().tolist())
 
         logger.info(f'\n{classification_report(total_eval_p, total_eval_l, zero_division=1)}')
+        logger.info(f'Kappa: {cohen_kappa_score(total_eval_l, total_eval_p)}')
         avg_val_f1 = total_eval_f1 / len(eval_dataloader)
         avg_val_acc = total_eval_acc / len(eval_dataloader)
         logger.info('F1: {0:.2f}'.format(avg_val_f1))

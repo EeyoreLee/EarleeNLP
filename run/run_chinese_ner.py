@@ -325,7 +325,7 @@ def main(json_path):
     # bert_embedding = BertEmbedding(vocabs['lattice'],model_dir_or_name='/root/.fastNLP/embedding/chinese-roberta-wwm-ext-large',requires_grad=True,word_dropout=0.01)
 
 
-    bert_embedding = BertEmbedding(vocabs['lattice'],model_dir_or_name='cn-wwm-ext',requires_grad=True,word_dropout=0.01)
+    bert_embedding = BertEmbedding(vocabs['lattice'],model_dir_or_name='cn-wwm',requires_grad=True,word_dropout=0.01)
 
     # model = torch.load('/ai/223/person/lichunyu/models/df/ner/flat-2021-08-09-08-40-44-f1_70.pth', map_location=torch.device('cuda'))
 
