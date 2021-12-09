@@ -333,6 +333,5 @@ def main(json_path=''):
                 torch.save(model.state_dict(), current_ckpt)
 
 
-
 if __name__ == '__main__':
     main('/root/EarleeNLP/args/df_intent_ood_macbert.json')
