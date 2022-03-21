@@ -38,7 +38,7 @@ class JigsawDataset(Dataset):
 
 class JigsawValDataset(Dataset):
 
-    def __init__(self, df, text_name, tokenizer, max_length=128) -> None:
+    def __init__(self, df, text_name, tokenizer, max_length=256) -> None:
         super().__init__()
         self.text_list = df[text_name].to_list()
         self.tokenizer = tokenizer

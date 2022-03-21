@@ -11,7 +11,7 @@ import os
 
 import pandas as pd
 import numpy as np
-from transformers import BertTokenizer
+from transformers import BertTokenizer, AutoTokenizer
 from torch.utils.data import DataLoader
 import torch
 from torch.optim import SGD, AdamW
@@ -24,7 +24,7 @@ from utils.common import date_now
 
 COMMENT_DIR = '/ai/223/person/lichunyu/datasets/kaggle/jigsaw/comment'
 COMMENT_MODEL_DIR = '/ai/223/person/lichunyu/models/kaggle/jigsaw-fourth/comment'
-PreTrainModelPath = '/ai/223/person/lichunyu/pretrain-models/unitary_toxic-bert'
+PreTrainModelPath = '/ai/223/person/lichunyu/pretrain-models/roberta-base'
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '3'
 logger = getLogger(__name__)
@@ -38,11 +38,11 @@ def main():
     logger.setLevel(logging.INFO)
 
     epoch = 10
-    batch_size = 64
+    batch_size = 32
     data = pd.read_pickle(os.path.join(COMMENT_DIR, 'rank_train.pkl'))
     # val_data = pd.read_csv('/ai/223/person/lichunyu/datasets/kaggle/jigsaw/rate/validation_data.csv')
     val_data = pd.read_pickle(os.path.join(COMMENT_DIR, 'rank_val.pkl'))
-    tokenizer = BertTokenizer.from_pretrained(PreTrainModelPath)
+    tokenizer = AutoTokenizer.from_pretrained(PreTrainModelPath)
 
     model = BertRank(model_name_or_path=PreTrainModelPath)
     dataset = RankDataset(data, tokenizer, higher_text_colname='more_toxic', lower_text_colname='less_toxic')
@@ -53,10 +53,11 @@ def main():
     more_val_dataloader = DataLoader(more_val_dataset, batch_size=batch_size)
     # optimizer = SGD(model.parameters(), lr=4e-4, weight_decay=2)
     optimizer = AdamW(
-        [
-            {'params': model.bert.parameters(), 'lr': 5e-5},
-        ],
-        lr=5e-5,
+        # [
+        #     {'params': model.bert.parameters(), 'lr': 5e-5},
+        # ],
+        model.parameters(),
+        lr=2e-5,
     )
 
     model.cuda()

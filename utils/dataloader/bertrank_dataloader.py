@@ -11,7 +11,7 @@ from torch.utils.data import Dataset
 
 class RankDataset(Dataset):
 
-    def __init__(self, df, tokenizer, max_length=128, higher_text_colname='higher', lower_text_colname='lower') -> None:
+    def __init__(self, df, tokenizer, max_length=256, higher_text_colname='higher', lower_text_colname='lower') -> None:
         super().__init__()
         self.higher_text_list = df[higher_text_colname].to_list()
         self.lower_text_list = df[lower_text_colname].to_list()
