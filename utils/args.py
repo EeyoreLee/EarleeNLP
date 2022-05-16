@@ -72,7 +72,7 @@ class CustomizeArguments:
 
     batch: int = field(default=10)
 
-    optim: str = field(default='sgd', metadata={"help": "choice: sgd | adam | adamw"})
+    # optim: str = field(default='sgd', metadata={"help": "choice: sgd | adam | adamw"})
 
     lr: float = field(default=5e-5)
 
