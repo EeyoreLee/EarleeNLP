@@ -151,7 +151,7 @@ def main(json_path=''):
         num_labels=custom_args.num_labels
     )
 
-    model = BertForClassificationByDice.from_pretrained(
+    model = BertForSequenceClassification.from_pretrained(
         custom_args.model_name_or_path,
         config=config
     )

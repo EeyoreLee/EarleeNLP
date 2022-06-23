@@ -11,7 +11,7 @@ from transformers import HfArgumentParser
 from utils.args import TaskArguments
 from run.run_chinese_ner import main as run_chinese_ner
 from run.run_classification import main as run_classification
-from run.run_ner import main as run_ner
+# from run.run_ner import main as run_ner
 
 
 def run(json_path=None):

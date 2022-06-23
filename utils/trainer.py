@@ -3,11 +3,45 @@
 @create_time: 2022/05/12 18:19:11
 @author: lichunyu
 '''
-from transformers import Trainer as _Trainer
+import logging
 
+import torch
+from transformers import (
+    TrainingArguments,
+    enable_full_determinism,
+    set_seed
+)
+from transformers.utils.generic import (
+    cached_property
+)
+
+
+logger = logging.getLogger(__name__)
 
 
 class Trainer():
 
-    def __init__(self) -> None:
-        pass
+    def __init__(
+        self,
+        model=None,
+        args=None,
+        train_dataset=None,
+        eval_dataset=None,
+        model_init=None,
+        callbacks=None,
+        optimizers=None
+    ) -> None:
+        if args is None:
+            output_dir = "tmp_trainer"
+            logger.info(f"No `TrainingArguments` passed, using `output_dir={output_dir}`.")
+            args = TrainingArguments(output_dir=output_dir)
+        enable_full_determinism(self.args.seed) if self.args.full_determinism else set_seed(self.args.seed)
+        self.deepspeed = None
+        self.training = False
+
+
+if __name__ == "__main__":
+    # enable_full_determinism(42)
+    torch.use_deterministic_algorithms(True)
+    import requests
+    requests.post
