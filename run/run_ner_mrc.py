@@ -33,8 +33,8 @@ from transformers.trainer_utils import is_main_process, get_last_checkpoint
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score, accuracy_score, classification_report
 
-from models.BertForClassificationByDice import BertForClassificationByDice
-from models.bert_query_ner import BertQueryNER, BertQueryNerConfig
+from tmp.BertForClassificationByDice import BertForClassificationByDice
+from models.bert_query_ner.bert_query_ner import BertQueryNER, BertQueryNerConfig
 from plugin.FGM import FGM
 from utils.mrc_ner_dataloader import get_dataloader
 from loss.dice_loss import DiceLoss

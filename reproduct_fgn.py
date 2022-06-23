@@ -15,7 +15,7 @@ from torch.nn.utils.rnn import pad_sequence
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler, SequentialSampler
 from seqeval.metrics import accuracy_score, f1_score, classification_report
 
-from models.FGN import FGN, CGS_Tokenzier
+from models.fgn.FGN import FGN, CGS_Tokenzier
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '2'
 

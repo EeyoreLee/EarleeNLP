@@ -36,7 +36,7 @@ from transformers.trainer_utils import is_main_process, get_last_checkpoint
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score, accuracy_score, classification_report, cohen_kappa_score
 
-from models.BertForClassificationByDice import BertForClassificationByDice
+from tmp.BertForClassificationByDice import BertForClassificationByDice
 from plugin.FGM import FGM
 from utils.args import CustomizeArguments
 

@@ -9,7 +9,7 @@ import os
 from fastNLP import cache_results, Vocabulary
 from fastNLP.io.loader import ConllLoader
 
-from models.flat_bert import StaticEmbedding, get_bigrams
+from models.flat.flat_bert import StaticEmbedding, get_bigrams
 
 
 # @cache_results(_cache_fp='cache/weiboNER_uni+bi_new', _refresh=False)

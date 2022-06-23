@@ -40,7 +40,7 @@ from sklearn.model_selection import train_test_split
 from datasets import load_metric
 from seqeval.metrics import accuracy_score, f1_score, classification_report
 
-from models.BertForClassificationByDice import BertForClassificationByDice
+from tmp.BertForClassificationByDice import BertForClassificationByDice
 from plugin.FGM import FGM
 from utils.args import CustomizeArguments
 from utils.common import format_time, seq_idx2label

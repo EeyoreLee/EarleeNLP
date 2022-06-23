@@ -27,7 +27,7 @@ from torch.nn.utils import clip_grad_norm_
 from transformers import TrainingArguments, HfArgumentParser, set_seed
 from transformers.trainer_utils import is_main_process, get_last_checkpoint
 
-from models.flat_bert import Lattice_Transformer_SeqLabel, load_yangjie_rich_pretrain_word_list, equip_chinese_ner_with_lexicon, \
+from models.flat.flat_bert import Lattice_Transformer_SeqLabel, load_yangjie_rich_pretrain_word_list, equip_chinese_ner_with_lexicon, \
     norm_static_embedding, BertEmbedding, LossInForward, SpanFPreRecMetric, AccuracyMetric, Trainer, FitlogCallback, LRScheduler, \
         LambdaLR, GradientClipCallback, EarlyStopCallback, Callback, WarmupCallback
 from utils.common import print_info
