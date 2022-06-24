@@ -4,6 +4,18 @@
 @author: lichunyu
 '''
 from enum import Enum
+from dataclasses import dataclass, field
+
+
+@dataclass
+class AdvanceArguments:
+
+    task: str = field(default='classification', metadata={"help": "classification | chinese_ner | english_ner | mrc_ner"})
+
+    cuda_visible_devices: str = field(default='0')
+
+    model: str = field(default="bert_classification")
+
 
 
 class ExplicitEnum(Enum):
