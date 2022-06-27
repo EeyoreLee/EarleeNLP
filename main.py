@@ -13,6 +13,7 @@ from transformers import HfArgumentParser, TrainingArguments
 
 from utils.generic import AdvanceArguments
 from utils.format_util import snake2upper_camel
+from utils.trainer import Trainer
 
 
 def main(json_path=None):
@@ -45,7 +46,7 @@ def main(json_path=None):
     except ModuleNotFoundError as e:
         raise ImportError(
             f"no model named {model_segment_name}, please select one from "
-            f"{chr(10).join(['']+['* '+i for i in os.listdir('./models') if os.path.isdir(os.path.join('./models', i)) and i != '__pycache__'])}"
+            f"{chr(10).join(['']+['* '+i for i in os.listdir('./models') if os.path.isdir(os.path.join('./models', i)) and not i.startswith('_')])}"
         ) from e
     except AttributeError as e:
         raise NotImplementedError(
@@ -97,9 +98,17 @@ def main(json_path=None):
 
     model = init_func(model, **model_args.init_param)
 
+    collection = collection(data_path=advance_args.data_path)
+    train_dataloader, dev_dataloader = collection()
 
-
-
+    trainer = Trainer(
+        model=model,
+        args=training_args,
+        extra_args=[model_args],
+        train_dataloader=train_dataloader,
+        dev_dataloader=dev_dataloader
+    )
+    trainer.fit()
     ...
 
 

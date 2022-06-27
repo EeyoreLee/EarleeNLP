@@ -10,3 +10,4 @@ from dataclasses import dataclass, field
 class ModelArgument:
 
     author: str = field(default="EeyoreLee", metadata={"help": "author"})
+    init_param: dict = field(default={}, metadata={"help": "param for model's initialization"})

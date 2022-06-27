@@ -23,13 +23,13 @@ class Trainer():
 
     def __init__(
         self,
-        model=None,
-        args=None,
-        train_dataset=None,
-        eval_dataset=None,
-        model_init=None,
-        callbacks=None,
-        optimizers=None
+        model = None,
+        args = None,
+        extra_args: list = None,
+        train_dataloader = None,
+        dev_dataloader = None,
+        callbacks = None,
+        optimizers = None
     ) -> None:
         if args is None:
             output_dir = "tmp_trainer"
@@ -39,9 +39,11 @@ class Trainer():
         self.deepspeed = None
         self.training = False
 
+    def fit():
+        ...
+
 
 if __name__ == "__main__":
     # enable_full_determinism(42)
-    torch.use_deterministic_algorithms(True)
-    import requests
-    requests.post
+    # torch.use_deterministic_algorithms(True)
+    ...

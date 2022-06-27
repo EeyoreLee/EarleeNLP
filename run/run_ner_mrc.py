@@ -40,7 +40,7 @@ from utils.mrc_ner_dataloader import get_dataloader
 from loss.dice_loss import DiceLoss
 from metrics.functional.query_span_f1 import query_span_f1
 from loss.mrc_ner_dice_loss import DiceLoss as MRCDiceLoss
-from utils.args import CustomizeArguments
+from trash.args import CustomizeArguments
 
 
 logger = logging.getLogger(__name__)

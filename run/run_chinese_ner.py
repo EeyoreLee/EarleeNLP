@@ -31,7 +31,7 @@ from models.flat.flat_bert import Lattice_Transformer_SeqLabel, load_yangjie_ric
     norm_static_embedding, BertEmbedding, LossInForward, SpanFPreRecMetric, AccuracyMetric, Trainer, FitlogCallback, LRScheduler, \
         LambdaLR, GradientClipCallback, EarlyStopCallback, Callback, WarmupCallback
 from utils.common import print_info
-from utils.args import CustomizeArguments
+from trash.args import CustomizeArguments
 from utils.flat.base import load_ner
 
 

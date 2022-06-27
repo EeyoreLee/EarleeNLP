@@ -38,7 +38,7 @@ from sklearn.metrics import f1_score, accuracy_score, classification_report, coh
 
 from tmp.BertForClassificationByDice import BertForClassificationByDice
 from plugin.FGM import FGM
-from utils.args import CustomizeArguments
+from trash.args import CustomizeArguments
 
 
 logger = logging.getLogger(__name__)

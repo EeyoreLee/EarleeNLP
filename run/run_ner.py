@@ -42,7 +42,7 @@ from seqeval.metrics import accuracy_score, f1_score, classification_report
 
 from tmp.BertForClassificationByDice import BertForClassificationByDice
 from plugin.FGM import FGM
-from utils.args import CustomizeArguments
+from trash.args import CustomizeArguments
 from utils.common import format_time, seq_idx2label
 
 
