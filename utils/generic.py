@@ -51,3 +51,7 @@ class cached_property(property):
             cached = self.fget(obj)
             setattr(obj, attr, cached)
         return cached
+
+
+def get_args(t_args, extra_args:list):
+    ...
