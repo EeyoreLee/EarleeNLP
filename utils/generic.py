@@ -16,6 +16,8 @@ class AdvanceArguments:
 
     model: str = field(default="bert_classification")
 
+    data_path: str = field(default=None)
+
 
 
 class ExplicitEnum(Enum):
@@ -53,5 +55,9 @@ class cached_property(property):
         return cached
 
 
-def get_args(t_args, extra_args:list):
-    ...
+def get_args(arg_name, t_args, extra_args:list):
+    args_list = [t_args] + extra_args
+    for args in args_list:
+        if arg_name in args.__dict__:
+            return args.__dict__[arg_name]
+    return None

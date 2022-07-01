@@ -88,7 +88,7 @@ def main(json_path=None):
             f"{'/'.join(['./models', model_segment_name, 'collection_'+model_segment_name])}"
         ) from e
 
-    parser = HfArgumentParser(argument, TrainingArguments)
+    parser = HfArgumentParser((argument, TrainingArguments))
     if json_path:
         model_args, training_args = parser.parse_json_file(json_file=json_path)
     elif len(sys.argv) == 2 and sys.argv[1].endswith(".json"):
@@ -96,10 +96,10 @@ def main(json_path=None):
     else:
         model_args, training_args = parser.parse_args_into_dataclasses()
 
-    model = init_func(model, **model_args.init_param)
+    # model = init_func(model, **model_args.init_param)
 
     collection = collection(data_path=advance_args.data_path)
-    train_dataloader, dev_dataloader = collection()
+    train_dataloader, dev_dataloader = collection.collect()
 
     trainer = Trainer(
         model=model,

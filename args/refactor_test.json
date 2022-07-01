@@ -1,3 +1,6 @@
 {
-    "model": "bert_classification"
+    "model": "bert_classification",
+    "output_dir": "tmp_output",
+    "author": "test",
+    "data_path": "/root/workspace/EarleeNLP/data/weibo_senti_100k.csv"
 }

@@ -4,10 +4,11 @@
 @author: lichunyu
 '''
 from dataclasses import dataclass, field
+from typing import Dict
 
 
 @dataclass
 class ModelArgument:
 
     author: str = field(default="EeyoreLee", metadata={"help": "author"})
-    init_param: dict = field(default={}, metadata={"help": "param for model's initialization"})
+    init_param: dict = field(default_factory=dict, metadata={"help": "param for model's initialization"})

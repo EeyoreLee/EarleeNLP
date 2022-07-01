@@ -58,7 +58,6 @@ def tokenize_batch(df, tokenizer, max_length=510, text_name='text', label_name='
                             return_tensors = 'pt',
                        )
 
-
         input_ids.append(encoded_dict['input_ids'])
 
         attention_masks.append(encoded_dict['attention_mask'])

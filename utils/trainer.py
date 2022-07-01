@@ -32,7 +32,7 @@ class Trainer():
         optimizers = None
     ) -> None:
         if args is None:
-            output_dir = "tmp_trainer"
+            output_dir = "tmp_output"
             logger.info(f"No `TrainingArguments` passed, using `output_dir={output_dir}`.")
             args = TrainingArguments(output_dir=output_dir)
         enable_full_determinism(self.args.seed) if self.args.full_determinism else set_seed(self.args.seed)
