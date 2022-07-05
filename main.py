@@ -9,7 +9,11 @@ import os
 import importlib
 
 import torch
-from transformers import HfArgumentParser, TrainingArguments
+from transformers import (
+    HfArgumentParser,
+    TrainingArguments,
+    # Trainer
+)
 
 from utils.generic import AdvanceArguments
 from utils.format_util import snake2upper_camel
@@ -96,17 +100,17 @@ def main(json_path=None):
     else:
         model_args, training_args = parser.parse_args_into_dataclasses()
 
-    # model = init_func(model, **model_args.init_param)
+    model = init_func(model, **model_args.model_init_param)
 
-    collection = collection(data_path=advance_args.data_path)
-    train_dataloader, dev_dataloader = collection.collect()
+    collection = collection(data_path=advance_args.data_path, **model_args.collection_param)
+    train_dataset, dev_dataset = collection.collect()
 
     trainer = Trainer(
-        model=model,
-        args=training_args,
+        model = model,
+        args = training_args,
         extra_args=[model_args],
-        train_dataloader=train_dataloader,
-        dev_dataloader=dev_dataloader
+        train_dataset=train_dataset,
+        dev_dataset=dev_dataset
     )
     trainer.fit()
     ...

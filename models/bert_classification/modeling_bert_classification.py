@@ -9,6 +9,6 @@ from transformers.models.bert.modeling_bert import BertForSequenceClassification
 BertClassification = BertForSequenceClassification
 
 
-def init_func(model, **kwds):
-
+def init_func(model: BertClassification, pretrained_model_name_or_path, **kwds):
+    model = model.from_pretrained(pretrained_model_name_or_path)
     return model

@@ -3,8 +3,6 @@
 @create_time: 2022/06/24 10:55:36
 @author: lichunyu
 '''
-import torch
-from torch.utils.data import DataLoader
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from transformers import (
@@ -24,15 +22,20 @@ class Collection(BaseCollection):
         self._init_tokenzier()
 
     def _init_tokenzier(self):
-        self.tokenizer = BertTokenizer.from_pretrained("/disk/223/person/lichunyu/pretrain-models/bert-base-chinese")
+        self.tokenizer = BertTokenizer.from_pretrained(self.tokenizer_name_or_path)
 
     def collect(self):
-        dataloader_train, dataloader_dev = self._collect_by_csv()
-        ...
+        train_dataset, dev_dataset = self._collect_by_csv()
+        return train_dataset, dev_dataset
 
     def _collect_by_csv(self):
         if self.uncut is True:
             df = pd.read_csv(self.data_path)
+            df, _ = train_test_split(
+                df,
+                test_size=0.9,
+                stratify=df[self.label_name]
+            )
             df_train, df_dev = train_test_split(
                 df,
                 test_size=self.test_size,
@@ -42,26 +45,16 @@ class Collection(BaseCollection):
             df_train = pd.read_csv(self.train_data_path)
             df_dev = pd.read_csv(self.dev_data_path)
 
-        dataset_train = ClassificationDataset(
+        train_dataset = ClassificationDataset(
             df_train,
             tokenizer=self.tokenizer,
             label_name=self.label_name,
             data_name=self.data_name
         )
-        dataset_dev = ClassificationDataset(
+        dev_dataset = ClassificationDataset(
             df_dev,
+            tokenizer=self.tokenizer,
             label_name=self.label_name,
             data_name=self.data_name
         )
-        dataloader_train = DataLoader(
-            dataset=dataset_train,
-            batch_size=self.batch_size
-        )
-        ...
-
-
-
-
-
-def collate_fn(batch_dict, data_name, label_name):
-    ...
+        return train_dataset, dev_dataset

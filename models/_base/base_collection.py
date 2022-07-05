@@ -16,7 +16,7 @@ class BaseCollection(object):
         train_data_path=None,
         dev_data_path=None,
         batch_size=1,
-        tokenizer=None,
+        tokenizer_name_or_path=None,
         test_size=0.2,
         label_name="label",
         data_name="review"  # TODO Temporary test use
@@ -29,9 +29,7 @@ class BaseCollection(object):
         self.label_name = label_name
         self.data_name = data_name
         self.batch_size = batch_size
-        self.tokenizer = tokenizer
-
-
+        self.tokenizer_name_or_path = tokenizer_name_or_path
 
 
 class ClassificationDataset(Dataset):
@@ -59,7 +57,8 @@ class ClassificationDataset(Dataset):
                 row[self.data_name],
                 **self.tokenizer_param
             )
-            batch[self.label_name] = torch.tensor(row[self.label_name])
+            batch = {k: v[0] for k, v in batch.items()}
+            batch["labels"] = torch.tensor(row[self.label_name])
             tokenizered_data.append(batch)
         return tokenizered_data
 
@@ -67,7 +66,7 @@ class ClassificationDataset(Dataset):
         return len(self.data)
 
     def __getitem__(self, index):
-        self.data[index]
+        return self.data[index]
 
 
 def classification_collate_fn(batch_dict, data_name, label_name):
