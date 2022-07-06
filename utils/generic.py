@@ -10,13 +10,16 @@ from dataclasses import dataclass, field
 @dataclass
 class AdvanceArguments:
 
-    task: str = field(default='classification', metadata={"help": "classification | chinese_ner | english_ner | mrc_ner"})
-
     cuda_visible_devices: str = field(default='0')
 
     model: str = field(default="bert_classification")
 
     data_path: str = field(default=None)
+
+    strategy: str = field(default=None)
+
+    log_file_path: str = field(default=None)
+
 
 
 
@@ -61,3 +64,16 @@ def get_args(arg_name, t_args, extra_args:list, default_value=None):
         if arg_name in args.__dict__:
             return args.__dict__[arg_name]
     return default_value
+
+
+def setup_logger(log_file_path=None, rank=-1):
+    import logging
+    import sys
+    handlers = [logging.StreamHandler(sys.stdout)]
+    if log_file_path is not None:
+        handlers.append(logging.FileHandler(log_file_path))
+    logging.basicConfig(
+        format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
+        datefmt="%m/%d/%Y %H:%M:%S",
+        handlers=handlers,
+    )

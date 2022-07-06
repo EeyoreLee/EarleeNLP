@@ -6,10 +6,15 @@
 import logging
 from packaging import version
 import os
+from datetime import datetime
 
 import tqdm
+import numpy as np
 import torch
 import torch.nn as nn
+import torch.distributed as dist
+import torch.multiprocessing as mp
+from sklearn.metrics import f1_score, accuracy_score, classification_report, cohen_kappa_score
 from transformers import Trainer as Trainer_HF
 from transformers import (
     TrainingArguments,
@@ -33,7 +38,7 @@ from torch.utils.data import (
     SequentialSampler
 )
 
-from .generic import get_args
+from .generic import get_args, setup_logger
 
 
 if version.parse(torch.__version__) >= version.parse("1.6"):
@@ -55,7 +60,8 @@ class Trainer():
         train_dataset = None,
         dev_dataset = None,
         callbacks = None,
-        optimizer = None
+        optimizer = None,
+        strategy=None
     ) -> None:
         if args is None:
             output_dir = "tmp_output"
@@ -67,11 +73,19 @@ class Trainer():
         self.deepspeed = None
         self.training = False
         self.model = model  # TODO place this line at the end of __init__() when development is complete.
+        self.rank = -1
+        self.f1_score = 0.0
+        self.warped_model = model
         self.optimizer = optimizer
         self.train_dataset = train_dataset
         self.dev_dataset = dev_dataset
-        args._setup_devices
-        self.epoch = get_args("epoch", self.args, self.extra_args, 4)
+        self.dev_unused_column: list = get_args("dev_unused_column", args, extra_args, [])
+        self.train_unused_column: list = get_args("train_unused_column", args, extra_args, [])
+        self.strategy = get_args("strategy", args, extra_args, None)
+        self.log_file_path = get_args("log_file_path", args, extra_args, None)
+        setup_logger(self.log_file_path)
+        # args._setup_devices
+        self.num_train_epochs = get_args("num_train_epochs", self.args, self.extra_args, 4)
         self.place_model_on_device = get_args("place_model_on_device", self.args, self.extra_args, False)
         self.is_model_parallel = False
         if hasattr(model, "is_parallelizable") and model.is_parallelizable and model.model_parallel:
@@ -91,7 +105,7 @@ class Trainer():
         if self.train_dataset is None:
             return None
         generator = None
-        if self.args.world_size <= 1 and _is_torch_generator_available:
+        if self.args.world_size <= 1 and _is_torch_generator_available:  # BUG fix world_size
             generator = torch.Generator()
             # for backwards compatibility, we generate a seed here (which is sampled from a generator seeded with
             # `args.seed`) if data_seed isn't provided.
@@ -104,43 +118,46 @@ class Trainer():
 
         seed = self.args.data_seed if self.args.data_seed is not None else self.args.seed
         # if self.args.world_size <= 1:  # BUG
-        if False:
+        if self.strategy is None:  # TODO use an Enum to instead of
             if _is_torch_generator_available:
                 return RandomSampler(self.train_dataset, generator=generator)
             return RandomSampler(self.train_dataset)
-        else:
+        elif self.strategy == "ddp":
             return DistributedSampler(
                 self.train_dataset,
-                num_replicas=self.args.world_size,
-                rank=self.args.process_index,
+                num_replicas=torch.cuda.device_count(),
+                rank=self.rank,
                 seed=seed
+            )
+        else:
+            raise NotImplementedError(
+                f"strategy {self.strategy} is not implemented. please choose in"
+                f"null ddp"  # TODO get the strategy list
             )
 
     def get_train_dataloader(self):
         train_dataset = self.train_dataset
         train_sampler = self._get_train_sampler()
 
+        # TODO collate_fn  drop_last  num_workers pin_memory
         return DataLoader(
             train_dataset,
             batch_size=self._train_batch_size,
             sampler=train_sampler,
-            # collate_fn=data_collator,
-            drop_last=self.args.dataloader_drop_last,
-            num_workers=self.args.dataloader_num_workers,
-            pin_memory=self.args.dataloader_pin_memory,
             worker_init_fn=seed_worker,
         )
 
     def _get_dev_sampler(self):
         dev_dataset = self.dev_dataset
-        if self.args.world_size <= 1:
+        # if self.args.world_size <= 1:  # BUG
+        if self.strategy is None:
             return SequentialSampler(dev_dataset)
-        else:
+        elif self.strategy == "ddp":
             return ShardSampler(
                 dev_dataset,
                 batch_size=self.args.per_device_eval_batch_size,
-                num_processes=self.args.world_size,
-                process_index=self.args.process_index,
+                num_processes=torch.cuda.device_count(),
+                process_index=self.rank,
             )
 
     def get_dev_dataloader(self):
@@ -151,47 +168,98 @@ class Trainer():
             dev_dataset,
             sampler=dev_sampler,
             batch_size=self.args.eval_batch_size,
-            # collate_fn=data_collator,
             drop_last=self.args.dataloader_drop_last,
-            num_workers=self.args.dataloader_num_workers,
-            pin_memory=self.args.dataloader_pin_memory,
         )
 
 
     def fit(self, resume_from_checkpoint=None, **kwargs):
         self.training = True
         # TODO resume model   # line 1299 in transformers.trainer
-        return self.inner_training_loop(
-            resume_from_checkpoint=resume_from_checkpoint,
-            **kwargs
-        )
-
-    def inner_training_loop(self, resume_from_checkpoint=None, **kwargs):
         self._train_batch_size = get_args("train_batch_size", self.args, self.extra_args, 32)
+        if self.strategy == "ddp":
+            os.environ['MASTER_ADDR'] = "localhost"
+            os.environ['MASTER_PORT'] = "12355"
+            world_size = torch.cuda.device_count()
+            mp.spawn(
+                self.inner_training_loop,
+                args=(world_size,),
+                nprocs=world_size,
+                join=True
+            )
+        else:
+            return self.inner_training_loop(
+                resume_from_checkpoint=resume_from_checkpoint,
+                **kwargs
+            )
+
+    def inner_training_loop(self, rank=-1, world_size=1, resume_from_checkpoint=None, **kwargs):
+        self.rank = rank
+        if self.strategy == "ddp":
+            dist.init_process_group("nccl", rank=rank, world_size=world_size)
+            torch.cuda.set_device(rank)
+        logger.setLevel(logging.INFO if rank in [-1, 0] else logging.WARNING)
         train_dataloader = self.get_train_dataloader()
         dev_dataloader = self.get_dev_dataloader()
-        model = self._warp_model(self.model)
+        model = self.model.cuda()
+        model = self._warp_model(model)
+        if model is not self.warped_model:
+            self.warped_model = model
         optimizer = self.create_optimizer()
-        data_kwargs = dict(device=self.args.device)
         model.train()
-        for epoch in range(self.epoch):
+        for epoch in range(self.num_train_epochs):
             if isinstance(train_dataloader, DataLoader) and isinstance(train_dataloader.sampler, DistributedSampler):
                 train_dataloader.sampler.set_epoch(epoch)
-            for batch in tqdm.tqdm(train_dataloader):
-                batch = {k: v.to(**data_kwargs) for k, v in batch.items()}
+            logger.info(f" training  epoch:{epoch}/{self.num_train_epochs}")
+            total_train_loss = 0.0
+            for step, batch in tqdm.tqdm(enumerate(train_dataloader), total=len(train_dataloader)):
+                batch = {k: v.cuda() for k, v in batch.items()}
+                model.zero_grad()
                 output = model(**batch)
-                ...
+                loss = output.loss
+                loss = loss.mean()
+                loss.backward()
+                optimizer.step()
+
+                total_train_loss += loss.item()
+
+            logger.info(f"Average training loss: {total_train_loss/len(train_dataloader)}")
+
+            logger.info(f" evaling ...")  # TODO Compatible with distributed evaluation
+            model.eval()
+            total_dev_preds = []
+            total_dev_labels = []
+            for step, batch in tqdm.tqdm(enumerate(dev_dataloader), total=len(dev_dataloader)):
+                labels = batch["labels"]  # TODO dynamic label name
+                batch = {k: v.cuda() for k, v in batch.items() if k not in self.dev_unused_column}
+                with torch.no_grad():
+                    output = model(**batch)
+                    loss = output.loss
+                    loss = loss.mean()
+                    logits = output.logits
+
+                total_dev_preds.extend(np.argmax(logits.detach().cpu().numpy(), axis=-1).flatten().tolist())
+                total_dev_labels.extend(labels.cpu().numpy().flatten().tolist())
+
+            f1 = f1_score(total_dev_labels, total_dev_preds, average="micro")
+            logger.info(f" f1 score for dev dataset is : {f1}")
+
+            if rank in [-1, 0]:
+                if isinstance(model, nn.DataParallel) or isinstance(model, nn.parallel.DistributedDataParallel):
+                    torch.save(model.module, f"model-{datetime.now().strftime('%Y-%m-%d-%H-%M-%S')}-f1-{str(int(f1*100))}.pth")
+                else:
+                    torch.save(model, f"model-{datetime.now().strftime('%Y-%m-%d-%H-%M-%S')}-f1-{str(int(f1*100))}.pth")
+        ...
 
     def _warp_model(self, model):
         if False:  # TODO fp16 deepspeed and so on
             return model
         # elif self.args.local_rank != -1:  # BUG
-        else:
+        elif self.strategy=="ddp":
             kwargs = {}
             model = nn.parallel.DistributedDataParallel(
                 model,
-                device_ids = [self.args.local_rank] if self.args._n_gpu != 0 else None,
-                output_device= self.args.local_rank if self.args._n_gpu != 0 else None,
+                device_ids = [self.rank],
+                # output_device= self.args.local_rank if self.args._n_gpu != 0 else None,
                 **kwargs
             )
         return model
@@ -216,3 +284,8 @@ class Trainer():
             self.optimizer = optimizer_cls(optimizer_grouped_parameters, **optimizer_kwargs)
         return self.optimizer
 
+    def compute_f1(self, preds, labels):
+        flat_preds = np.argmax(preds, axis=1).flatten()
+        flat_labels = labels.flatten()
+        f1 = f1_score(flat_labels, flat_preds, average="micro")
+        return f1

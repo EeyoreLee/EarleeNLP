@@ -108,7 +108,7 @@ def main(json_path=None):
     trainer = Trainer(
         model = model,
         args = training_args,
-        extra_args=[model_args],
+        extra_args=[model_args, advance_args],
         train_dataset=train_dataset,
         dev_dataset=dev_dataset
     )
