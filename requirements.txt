@@ -6,3 +6,4 @@ scikit-learn
 tokenizers
 fastNLP==0.5.0
 seqeval
+tqdm

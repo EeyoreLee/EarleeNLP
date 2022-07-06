@@ -8,7 +8,7 @@ from torch.utils.data import Dataset, DataLoader
 from torch.nn.utils.rnn import pad_sequence
 
 from utils.flat.base import load_ner
-from models.flat_bert import get_embedding, load_yangjie_rich_pretrain_word_list, equip_chinese_ner_with_lexicon
+from models.flat.flat_bert import get_embedding, load_yangjie_rich_pretrain_word_list, equip_chinese_ner_with_lexicon
 from metircs.functional.f1_score import ner_extract
 
 

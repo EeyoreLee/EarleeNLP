@@ -36,9 +36,9 @@ from transformers.trainer_utils import is_main_process, get_last_checkpoint
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score, accuracy_score, classification_report, cohen_kappa_score
 
-from models.BertForClassificationByDice import BertForClassificationByDice
+from tmp.BertForClassificationByDice import BertForClassificationByDice
 from plugin.FGM import FGM
-from utils.args import CustomizeArguments
+from trash.args import CustomizeArguments
 
 
 logger = logging.getLogger(__name__)
@@ -57,7 +57,6 @@ def tokenize_batch(df, tokenizer, max_length=510, text_name='text', label_name='
                             return_attention_mask = True,
                             return_tensors = 'pt',
                        )
-
 
         input_ids.append(encoded_dict['input_ids'])
 

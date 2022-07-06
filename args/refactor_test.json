@@ -1,0 +1,17 @@
+{
+    "model": "bert_classification",
+    "output_dir": "tmp_output",
+    "author": "test",
+    "data_path": "/root/workspace/EarleeNLP/data/weibo_senti_100k.csv",
+    "model_init_param": {
+        "pretrained_model_name_or_path": "/disk/223/person/lichunyu/pretrain-models/bert-base-chinese",
+        "num_labels": 2
+    },
+    "collection_param": {
+        "batch_size": 32,
+        "tokenizer_name_or_path": "/disk/223/person/lichunyu/pretrain-models/bert-base-chinese"
+    },
+    "cuda_visible_devices": "4,5,6,7",
+    "log_file_path": "tmp_refactor.log",
+    "num_train_epochs": 5
+}

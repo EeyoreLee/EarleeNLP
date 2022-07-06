@@ -4,6 +4,23 @@
 @author: lichunyu
 '''
 from enum import Enum
+from dataclasses import dataclass, field
+
+
+@dataclass
+class AdvanceArguments:
+
+    cuda_visible_devices: str = field(default='0')
+
+    model: str = field(default="bert_classification")
+
+    data_path: str = field(default=None)
+
+    strategy: str = field(default=None)
+
+    log_file_path: str = field(default=None)
+
+
 
 
 class ExplicitEnum(Enum):
@@ -39,3 +56,24 @@ class cached_property(property):
             cached = self.fget(obj)
             setattr(obj, attr, cached)
         return cached
+
+
+def get_args(arg_name, t_args, extra_args:list, default_value=None):
+    args_list = [t_args] + extra_args
+    for args in args_list:
+        if arg_name in args.__dict__:
+            return args.__dict__[arg_name]
+    return default_value
+
+
+def setup_logger(log_file_path=None, rank=-1):
+    import logging
+    import sys
+    handlers = [logging.StreamHandler(sys.stdout)]
+    if log_file_path is not None:
+        handlers.append(logging.FileHandler(log_file_path))
+    logging.basicConfig(
+        format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
+        datefmt="%m/%d/%Y %H:%M:%S",
+        handlers=handlers,
+    )
