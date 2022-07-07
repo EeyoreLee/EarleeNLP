@@ -5,7 +5,7 @@
     "data_path": "/disk/223/person/lichunyu/workspace/tmp/weibo_3class_200k.csv",
     "model_init_param": {
         "pretrained_model_name_or_path": "/disk/223/person/lichunyu/pretrain-models/bert-base-chinese",
-        "num_labels": 2
+        "num_labels": 3
     },
     "collection_param": {
         "batch_size": 32,

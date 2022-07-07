@@ -118,4 +118,5 @@ def main(json_path=None):
 
 
 if __name__ == "__main__":
-    main("args/refactor_test.json")
+    # main("args/refactor_test.json")
+    main()

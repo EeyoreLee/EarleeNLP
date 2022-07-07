@@ -17,3 +17,4 @@ df-529*
 tmp/*
 lightning_logs/*
 **/__pycache__
+tmp_output/*

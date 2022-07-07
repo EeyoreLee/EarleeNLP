@@ -70,6 +70,7 @@ class Trainer():
         self.args = args
         self.extra_args = extra_args
         enable_full_determinism(self.args.seed) if self.args.full_determinism else set_seed(self.args.seed)
+        self.output_dir = get_args("output_dir", args, extra_args, "tmp_output")
         self.deepspeed = None
         self.training = False
         self.model = model  # TODO place this line at the end of __init__() when development is complete.
@@ -175,7 +176,7 @@ class Trainer():
     def fit(self, resume_from_checkpoint=None, **kwargs):
         self.training = True
         # TODO resume model   # line 1299 in transformers.trainer
-        self._train_batch_size = get_args("train_batch_size", self.args, self.extra_args, 32)
+        self._train_batch_size = get_args("train_batch_size", self.args, self.extra_args, 128)
         if self.strategy == "ddp":
             os.environ['MASTER_ADDR'] = "localhost"
             os.environ['MASTER_PORT'] = "12355"
@@ -198,6 +199,7 @@ class Trainer():
             dist.init_process_group("nccl", rank=rank, world_size=world_size)
             torch.cuda.set_device(rank)
         logger.setLevel(logging.INFO if rank in [-1, 0] else logging.WARNING)
+        logger.info(f" train batch size is : {self._train_batch_size}")
         train_dataloader = self.get_train_dataloader()
         dev_dataloader = self.get_dev_dataloader()
         model = self.model.cuda()
@@ -242,12 +244,13 @@ class Trainer():
 
             f1 = f1_score(total_dev_labels, total_dev_preds, average="micro")
             logger.info(f" f1 score for dev dataset is : {f1}")
+            logger.info(f'\n{classification_report(total_dev_preds, total_dev_labels, zero_division=1)}')
 
             if rank in [-1, 0]:
                 if isinstance(model, nn.DataParallel) or isinstance(model, nn.parallel.DistributedDataParallel):
-                    torch.save(model.module, f"model-{datetime.now().strftime('%Y-%m-%d-%H-%M-%S')}-f1-{str(int(f1*100))}.pth")
+                    torch.save(model.module, f"{self.output_dir}/model-{datetime.now().strftime('%Y-%m-%d-%H-%M-%S')}-f1-{str(int(f1*100))}.pth")
                 else:
-                    torch.save(model, f"model-{datetime.now().strftime('%Y-%m-%d-%H-%M-%S')}-f1-{str(int(f1*100))}.pth")
+                    torch.save(model, f"{self.output_dir}/model-{datetime.now().strftime('%Y-%m-%d-%H-%M-%S')}-f1-{str(int(f1*100))}.pth")
         ...
 
     def _warp_model(self, model):

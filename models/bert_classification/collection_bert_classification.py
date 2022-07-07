@@ -31,11 +31,11 @@ class Collection(BaseCollection):
     def _collect_by_csv(self):
         if self.uncut is True:
             df = pd.read_csv(self.data_path)
-            df, _ = train_test_split(
-                df,
-                test_size=0.9,
-                stratify=df[self.label_name]
-            )
+            # df, _ = train_test_split(
+            #     df,
+            #     test_size=0.9,
+            #     stratify=df[self.label_name]
+            # )
             df_train, df_dev = train_test_split(
                 df,
                 test_size=self.test_size,
