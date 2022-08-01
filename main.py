@@ -12,12 +12,12 @@ import torch
 from transformers import (
     HfArgumentParser,
     TrainingArguments,
-    # Trainer
+    Trainer
 )
 
 from utils.generic import AdvanceArguments
 from utils.format_util import snake2upper_camel
-from utils.trainer import Trainer
+# from utils.trainer import Trainer
 
 
 def main(json_path=None):
@@ -59,10 +59,10 @@ def main(json_path=None):
         ) from e
 
     try:
-        init_func = getattr(model_module, f"init_func")
+        model_init = getattr(model_module, f"model_init")
     except AttributeError as e:
         raise NotImplementedError(
-            f"init_func is not exist. please check it in "
+            f"model_init is not exist. please check it in "
             f"{'/'.join(['./models', model_segment_name, 'modeling_'+model_segment_name])}"
         ) from e
 
@@ -92,6 +92,19 @@ def main(json_path=None):
             f"{'/'.join(['./models', model_segment_name, 'collection_'+model_segment_name])}"
         ) from e
 
+    try:
+        trainer_module = importlib.import_module(".".join([
+            "models",
+            f"{model_segment_name}",
+            f"trainer_{model_segment_name}",
+        ]))
+        trainer: Trainer = getattr(trainer_module, "ModelTrainer")
+    except AttributeError as e:
+        raise NotImplementedError(
+            f"ModelTrainer is not exist. please check it in "
+            f"{'/'.join(['./models', model_segment_name, 'trainer_'+model_segment_name])}"
+        ) from e
+
     parser = HfArgumentParser((argument, TrainingArguments))
     if json_path:
         model_args, training_args = parser.parse_json_file(json_file=json_path)
@@ -100,23 +113,26 @@ def main(json_path=None):
     else:
         model_args, training_args = parser.parse_args_into_dataclasses()
 
-    model = init_func(model, **model_args.model_init_param)
+    model = model_init(model, **model_args.model_init_param)
 
     collection = collection(data_path=advance_args.data_path, **model_args.collection_param)
     train_dataset, dev_dataset = collection.collect()
 
-    trainer = Trainer(
-        model = model,
-        args = training_args,
-        extra_args=[model_args, advance_args],
+    trainer = trainer(
+        model=model,
+        args=training_args,
         train_dataset=train_dataset,
-        dev_dataset=dev_dataset
+        eval_dataset=dev_dataset
     )
-    trainer.fit()
-    ...
+    if training_args.do_train:
+        trainer.train()
+        trainer.save_model()
+
+    if training_args.do_eval:
+        trainer.evaluate()
 
 
 
 if __name__ == "__main__":
-    # main("args/refactor_test.json")
-    main()
+    main("args/trainer_example.json")
+    # main()

@@ -15,7 +15,6 @@ class BaseCollection(object):
         data_path=None,
         train_data_path=None,
         dev_data_path=None,
-        batch_size=1,
         tokenizer_name_or_path=None,
         test_size=0.2,
         label_name="label",
@@ -28,7 +27,6 @@ class BaseCollection(object):
         self.test_size = test_size
         self.label_name = label_name
         self.data_name = data_name
-        self.batch_size = batch_size
         self.tokenizer_name_or_path = tokenizer_name_or_path
 
 

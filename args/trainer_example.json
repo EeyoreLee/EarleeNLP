@@ -1,19 +1,29 @@
 {
     "model": "bert_classification",
-    "output_dir": "tmp_output",
+    "output_dir": "output_dir",
     "author": "test",
     "data_path": "/disk/223/person/lichunyu/workspace/tmp/weibo_3class_200k.csv",
     "model_init_param": {
         "pretrained_model_name_or_path": "/disk/223/person/lichunyu/pretrain-models/bert-base-chinese",
-        "num_labels": 2
+        "num_labels": 3
     },
     "collection_param": {
-        "batch_size": 32,
         "tokenizer_name_or_path": "/disk/223/person/lichunyu/pretrain-models/bert-base-chinese"
     },
     "cuda_visible_devices": "4,5,6,7",
-    "log_file_path": "tmp_refactor.log",
     "num_train_epochs": 5,
-    "train_batch_size": 128,
-    "local_rank": 0
+    "do_train": true,
+    "do_eval": true,
+    "per_device_train_batch_size": 64,
+    "per_device_eval_batch_size": 64,
+    "evaluation_strategy": "epoch",
+    "log_level": "info",
+    "logging_strategy": "steps",
+    "logging_steps": 5,
+    "load_best_model_at_end": false,
+    "optim": "adamw_hf",
+    "group_by_length": false,
+    "length_column_name": "length",
+    "save_steps": 500,
+    "save_total_limit": 5
 }

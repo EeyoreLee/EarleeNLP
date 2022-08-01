@@ -7,3 +7,5 @@ tokenizers
 fastNLP==0.5.0
 seqeval
 tqdm
+tensorboard
+tensorboardx  # tensorboard --logdir=./output_dir/runs/ --host=0.0.0.0
