@@ -18,7 +18,8 @@ class BaseCollection(object):
         tokenizer_name_or_path=None,
         test_size=0.2,
         label_name="label",
-        data_name="review"  # TODO Temporary test use
+        data_name="review",  # TODO Temporary test use
+        **kwargs
     ) -> None:
         self.uncut = True if train_data_path is None else False
         self.data_path = data_path

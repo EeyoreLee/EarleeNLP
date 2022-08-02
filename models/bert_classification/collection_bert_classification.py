@@ -25,25 +25,26 @@ class Collection(BaseCollection):
         self.tokenizer = BertTokenizer.from_pretrained(self.tokenizer_name_or_path)
 
     def collect(self):
-        train_dataset, dev_dataset = self._collect_by_csv()
+        # train_dataset, dev_dataset = self._collect_by_csv()
+        train_dataset, dev_dataset = self._collect_by_tsv()
         return train_dataset, dev_dataset
 
-    def _collect_by_csv(self):
+    def _collect_by_csv(self, delimiter=None):
         if self.uncut is True:
-            df = pd.read_csv(self.data_path)
-            df, _ = train_test_split(
-                df,
-                test_size=0.8,
-                stratify=df[self.label_name]
-            )
+            df = pd.read_csv(self.data_path, delimiter=delimiter)
+            # df, _ = train_test_split(
+            #     df,
+            #     test_size=0.99,
+            #     stratify=df[self.label_name]
+            # )
             df_train, df_dev = train_test_split(
                 df,
                 test_size=self.test_size,
                 stratify=df[self.label_name]
             )
         else:
-            df_train = pd.read_csv(self.train_data_path)
-            df_dev = pd.read_csv(self.dev_data_path)
+            df_train = pd.read_csv(self.train_data_path, delimiter=delimiter)
+            df_dev = pd.read_csv(self.dev_data_path, delimiter=delimiter)
 
         train_dataset = ClassificationDataset(
             df_train,
@@ -58,3 +59,7 @@ class Collection(BaseCollection):
             data_name=self.data_name
         )
         return train_dataset, dev_dataset
+
+    def _collect_by_tsv(self):
+        return self._collect_by_csv(delimiter='\t')
+

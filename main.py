@@ -115,7 +115,7 @@ def main(json_path=None):
 
     model = model_init(model, **model_args.model_init_param)
 
-    collection = collection(data_path=advance_args.data_path, **model_args.collection_param)
+    collection = collection(**model_args.collection_param)
     train_dataset, dev_dataset = collection.collect()
 
     trainer = trainer(
@@ -134,5 +134,5 @@ def main(json_path=None):
 
 
 if __name__ == "__main__":
-    main("args/trainer_example.json")
-    # main()
+    # main("args/trainer_example.json")
+    main()

@@ -14,7 +14,9 @@ class AdvanceArguments:
 
     model: str = field(default="bert_classification")
 
-    data_path: str = field(default=None)
+    # data_path: str = field(default=None)
+    # train_data_path: str = field(default=None)
+    # dev_data_path: str = field(default=None)
 
     strategy: str = field(default=None)
 
