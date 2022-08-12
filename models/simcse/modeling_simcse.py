@@ -1,3 +1,11 @@
+# -*- encoding: utf-8 -*-
+'''
+@create_time: 2022/08/12 10:44:05
+@author: lichunyu
+'''
+from typing import Union
+
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -387,3 +395,10 @@ class RobertaForCL(RobertaPreTrainedModel):
                 mlm_input_ids=mlm_input_ids,
                 mlm_labels=mlm_labels,
             )
+
+
+Simcse = BertForCL
+
+
+def model_init(model: Union[BertForCL, RobertaForCL], **kwds):
+    ...
