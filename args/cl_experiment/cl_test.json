@@ -1,0 +1,29 @@
+{
+    "model": "simcse",
+    "output_dir": "output_dir",
+    "author": "lichunyu",
+    "model_init_param": {
+        "pretrained_model_name_or_path": "/disk/223/person/lichunyu/pretrain-models/bert-base-chinese"
+    },
+    "collection_param": {
+        "tokenizer_name_or_path": "/disk/223/person/lichunyu/pretrain-models/bert-base-chinese",
+        "train_data_path": "/disk/223/person/lichunyu/datasets/cl/tnews.txt"
+    },
+    "cuda_visible_devices": "4,5,6,7",
+    "num_train_epochs": 10,
+    "do_train": true,
+    "do_eval": true,
+    "per_device_train_batch_size": 64,
+    "per_device_eval_batch_size": 64,
+    "evaluation_strategy": "steps",
+    "eval_steps": 50,
+    "log_level": "info",
+    "logging_strategy": "steps",
+    "logging_steps": 50,
+    "load_best_model_at_end": false,
+    "optim": "adamw_hf",
+    "group_by_length": false,
+    "length_column_name": "length",
+    "save_steps": 500,
+    "save_total_limit": 5
+}
