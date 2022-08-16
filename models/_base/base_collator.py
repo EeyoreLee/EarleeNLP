@@ -4,7 +4,7 @@
 @author: lichunyu
 '''
 from typing import Union, Optional, List, Dict, Tuple
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 import torch
 from transformers import (
@@ -20,12 +20,16 @@ from transformers.tokenization_utils_base import (
 @dataclass
 class MlmDataCollatorWithPadding:
 
-    tokenizer: PreTrainedTokenizerBase
+    tokenizer: Union[str, PreTrainedTokenizerBase] = field(default=None)
     padding: Union[bool, str, PaddingStrategy] = True
     max_length: Optional[int] = None
     pad_to_multiple_of: Optional[int] = None
     mlm: bool = False
     mlm_probability: float = 0.2
+
+    def __post_init__(self):
+        if isinstance(self.tokenizer, str):
+            self.tokenizer = AutoTokenizer.from_pretrained(self.tokenizer)
 
     def __call__(self, features: List[Dict[str, Union[List[int], List[List[int]], torch.Tensor]]]) -> Dict[str, torch.Tensor]:
         special_keys = ['input_ids', 'attention_mask', 'token_type_ids', 'mlm_input_ids', 'mlm_labels']

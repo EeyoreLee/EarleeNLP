@@ -32,7 +32,7 @@ class Collection(BaseCollection):
 
     def collect(self):
         dev_dataset = None  # Unsupervised learning, not available for dev dataset
-        extension = self.data_path.split('.')[-1]
+        extension = self.train_data_path.split('.')[-1]
         if extension == "txt":
             extension = "text"
         if extension == "csv":

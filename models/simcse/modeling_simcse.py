@@ -3,25 +3,21 @@
 @create_time: 2022/08/12 10:44:05
 @author: lichunyu
 '''
+from dataclasses import dataclass, field
 from typing import Union
-
 
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.distributed as dist
 
-import transformers
-from transformers import RobertaTokenizer
+from transformers import (
+    AutoConfig,
+    BertForPreTraining
+)
 from transformers.models.roberta.modeling_roberta import RobertaPreTrainedModel, RobertaModel, RobertaLMHead
 from transformers.models.bert.modeling_bert import BertPreTrainedModel, BertModel, BertLMPredictionHead
 from transformers.activations import gelu
-from transformers.file_utils import (
-    add_code_sample_docstrings,
-    add_start_docstrings,
-    add_start_docstrings_to_model_forward,
-    replace_return_docstrings,
-)
 from transformers.modeling_outputs import SequenceClassifierOutput, BaseModelOutputWithPoolingAndCrossAttentions
 
 class MLPLayer(nn.Module):
@@ -283,7 +279,7 @@ def sentemb_forward(
 class BertForCL(BertPreTrainedModel):
     _keys_to_ignore_on_load_missing = [r"position_ids"]
 
-    def __init__(self, config, *model_args, **model_kargs):
+    def __init__(self, config, **model_kargs):
         super().__init__(config)
         self.model_args = model_kargs["model_args"]
         self.bert = BertModel(config, add_pooling_layer=False)
@@ -342,7 +338,7 @@ class BertForCL(BertPreTrainedModel):
 class RobertaForCL(RobertaPreTrainedModel):
     _keys_to_ignore_on_load_missing = [r"position_ids"]
 
-    def __init__(self, config, *model_args, **model_kargs):
+    def __init__(self, config, **model_kargs):
         super().__init__(config)
         self.model_args = model_kargs["model_args"]
         self.roberta = RobertaModel(config, add_pooling_layer=False)
@@ -396,9 +392,53 @@ class RobertaForCL(RobertaPreTrainedModel):
                 mlm_labels=mlm_labels,
             )
 
-
 Simcse = BertForCL
 
+@dataclass
+class SimcseArgs:
 
-def model_init(model: Union[BertForCL, RobertaForCL], **kwds):
+    temp: float = field(default=0.05, metadata={"help": "Temperature for softmax."})
+    pooler_type: str = field(default="cls", metadata={"help": "What kind of pooler to use (cls, cls_before_pooler, avg, avg_top2, avg_first_last)."})
+    hard_negative_weight: float = field(default=0, metadata={"help": "The **logit** of weight for hard negatives (only effective if hard negatives are used)."})
+    do_mlm: bool = field(default=False, metadata={"help": "Whether to use MLM auxiliary objective."})
+    mlm_weight: float = field(default=0.1, metadata={"help": "Weight for MLM auxiliary objective (only effective if --do_mlm)."})
+    mlp_only_train: bool = field(default=False, metadata={"help": "Use MLP only during training"})
+
+
+def model_init(
+    model: Union[BertForCL, RobertaForCL],
+    model_name_or_path: str,
+    temp: float = 0.05,
+    pooler_type: str = "cls",
+    hard_negative_weight: float = 0.0,
+    do_mlm: bool = False,
+    mlm_weight: float = 0.0,
+    mlp_only_train: bool = False,
+    roberta: bool = False,
+    **kwds
+    ):
+    config = AutoConfig.from_pretrained(model_name_or_path)
+    model_args = SimcseArgs(
+        temp=temp,
+        pooler_type=pooler_type,
+        hard_negative_weight=hard_negative_weight,
+        do_mlm=do_mlm,
+        mlm_weight=mlm_weight,
+        mlp_only_train=mlp_only_train
+    )
+    if roberta:
+        model = RobertaForCL.from_pretrained(
+            model_name_or_path,
+            config=config,
+            model_args=model_args
+        )
+    else:
+        model = BertForCL.from_pretrained(
+            model_name_or_path,
+            config=config,
+            model_args=model_args
+        )
+        if do_mlm:
+            pretrained_model = BertForPreTraining.from_pretrained(model_name_or_path)
+            model.lm_head.load_state_dict(pretrained_model.cls.predictions.state_dict())
     return model
