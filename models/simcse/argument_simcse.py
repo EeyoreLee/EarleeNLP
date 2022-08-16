@@ -13,3 +13,4 @@ class ModelArgument:
     author: str = field(default="EeyoreLee", metadata={"help": "author"})
     model_init_param: dict = field(default_factory=dict, metadata={"help": "param for model's initialization"})
     collection_param: dict = field(default_factory=dict, metadata={"help": "param for collection's initialization"})
+    collator_param: dict = field(default_factory=dict, metadata={"help": "param for DataCollator initialization"})

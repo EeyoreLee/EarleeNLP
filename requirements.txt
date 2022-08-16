@@ -8,3 +8,4 @@ seqeval
 tqdm
 tensorboard
 tensorboardx  # tensorboard --logdir=./output_dir/runs/ --host=0.0.0.0
+datasets

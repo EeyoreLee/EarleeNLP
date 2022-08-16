@@ -12,7 +12,8 @@ import torch
 from transformers import (
     HfArgumentParser,
     TrainingArguments,
-    Trainer
+    Trainer,
+    default_data_collator
 )
 
 from utils.generic import AdvanceArguments
@@ -113,6 +114,12 @@ def main(json_path=None):
     else:
         model_args, training_args = parser.parse_args_into_dataclasses()
 
+    try:
+        data_collator = getattr(collection_module, "DataCollator")
+        data_collator = data_collator(**model_args.collator_param)
+    except AttributeError as e:
+        data_collator = default_data_collator
+
     model = model_init(model, **model_args.model_init_param)
 
     collection = collection(**model_args.collection_param)
@@ -122,7 +129,8 @@ def main(json_path=None):
         model=model,
         args=training_args,
         train_dataset=train_dataset,
-        eval_dataset=dev_dataset
+        eval_dataset=dev_dataset,
+        data_collator=data_collator
     )
     if training_args.do_train:
         trainer.train()
@@ -134,5 +142,5 @@ def main(json_path=None):
 
 
 if __name__ == "__main__":
-    # main("args/trainer_example.json")
-    main()
+    main("args/cl_experiment/cl_test.json")
+    # main()

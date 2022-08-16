@@ -19,6 +19,7 @@ class BaseCollection(object):
         test_size=0.2,
         label_name="label",
         data_name="review",  # TODO Temporary test use
+        max_length=150,
         **kwargs
     ) -> None:
         self.uncut = True if train_data_path is None else False
@@ -29,6 +30,7 @@ class BaseCollection(object):
         self.label_name = label_name
         self.data_name = data_name
         self.tokenizer_name_or_path = tokenizer_name_or_path
+        self.max_length = max_length
 
 
 class ClassificationDataset(Dataset):

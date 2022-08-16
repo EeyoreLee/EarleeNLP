@@ -401,4 +401,4 @@ Simcse = BertForCL
 
 
 def model_init(model: Union[BertForCL, RobertaForCL], **kwds):
-    ...
+    return model
