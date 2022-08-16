@@ -142,5 +142,5 @@ def main(json_path=None):
 
 
 if __name__ == "__main__":
-    main("args/cl_experiment/cl_test.json")
-    # main()
+    # main("args/cl_experiment/cl_test.json")
+    main()
