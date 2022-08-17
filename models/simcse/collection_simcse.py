@@ -111,7 +111,7 @@ class Collection(BaseCollection):
             load_from_cache_file=self.load_from_cache_file,
         )
 
-        return train_dataset, dev_dataset
+        return train_dataset, train_dataset
 
 
 DataCollator = MlmDataCollatorWithPadding

@@ -79,3 +79,9 @@ def setup_logger(log_file_path=None, rank=-1):
         datefmt="%m/%d/%Y %H:%M:%S",
         handlers=handlers,
     )
+
+
+class MirrorDict(object):
+
+    def __getitem__(self, key):
+        return key

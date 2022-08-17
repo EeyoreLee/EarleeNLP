@@ -3,7 +3,7 @@
     "output_dir": "output_dir",
     "author": "lichunyu",
     "model_init_param": {
-        "pretrained_model_name_or_path": "/disk/223/person/lichunyu/pretrain-models/bert-base-uncased",
+        "model_name_or_path": "/disk/223/person/lichunyu/pretrain-models/bert-base-uncased",
         "num_labels": 2
     },
     "collection_param": {

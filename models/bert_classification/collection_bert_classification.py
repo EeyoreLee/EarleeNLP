@@ -3,15 +3,23 @@
 @create_time: 2022/06/24 10:55:36
 @author: lichunyu
 '''
+import json
+
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from transformers import (
+    AutoTokenizer,
     BertTokenizer
 )
+from datasets import load_dataset
 
 from .._base.base_collection import (
     BaseCollection,
-    ClassificationDataset
+    ClassificationDataset,
+    BaseTokenization
+)
+from .._base.base_collator import (
+    BaseDataCollator
 )
 
 
@@ -22,11 +30,21 @@ class Collection(BaseCollection):
         self._init_tokenzier()
 
     def _init_tokenzier(self):
-        self.tokenizer = BertTokenizer.from_pretrained(self.tokenizer_name_or_path)
+        self.tokenizer = AutoTokenizer.from_pretrained(self.tokenizer_name_or_path)
 
     def collect(self):
-        # train_dataset, dev_dataset = self._collect_by_csv()
-        train_dataset, dev_dataset = self._collect_by_tsv()
+        if self.uncut:
+            extension = self.data_path.split(".")[-1]
+        else:
+            extension = self.train_data_path.split(".")[-1]  # TODO Support different extension between train and dev dataset
+        if extension == "csv":
+            train_dataset, dev_dataset = self._collect_by_csv()
+        elif extension == "tsv":
+            train_dataset, dev_dataset = self._collect_by_tsv()
+        elif extension == "json":
+            train_dataset, dev_dataset = self._collect_by_json()
+        else:
+            raise NotImplementedError
         return train_dataset, dev_dataset
 
     def _collect_by_csv(self, delimiter=None):
@@ -63,3 +81,30 @@ class Collection(BaseCollection):
     def _collect_by_tsv(self):
         return self._collect_by_csv(delimiter='\t')
 
+    def _collect_by_json(self):
+        data_files = {
+            "train": self.data_path if self.uncut else self.train_data_path
+        }
+        if self.dev_data_path is not None:
+            data_files["dev"] = self.dev_data_path
+        dataset = load_dataset("json", data_files=data_files)
+        tokenization = BaseTokenization(
+            tokenizer=self.tokenizer,
+            data_name=self.data_name,
+            label_name=self.label_name,
+            label_map=self.label_map
+        )
+        dataset = dataset.map(
+            tokenization,
+            batched=True,
+            num_proc=self.num_proc
+        )
+        if self.dev_data_path is not None:
+            train_dataset = dataset["train"]
+            dev_dataset = dataset["dev"]
+        else:
+            ...
+        return train_dataset, dev_dataset
+
+
+DataCollator = BaseDataCollator
