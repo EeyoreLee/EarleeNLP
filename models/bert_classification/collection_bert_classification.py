@@ -107,4 +107,6 @@ class Collection(BaseCollection):
         return train_dataset, dev_dataset
 
 
-DataCollator = BaseDataCollator
+def data_collator(model_name_or_path, **kwds):
+    collator = BaseDataCollator(tokenizer=model_name_or_path, **kwds)
+    return collator

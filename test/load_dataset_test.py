@@ -13,12 +13,16 @@ import torch
 from models._base.generic import _default_tokenizer_param
 
 
+data_files={
+    "train": [
+        "/disk/223/person/lichunyu/datasets/public_data/clue/tnews_public/train.json",
+        "/disk/223/person/lichunyu/datasets/public_data/clue/tnews_public/dev.json"
+    ]
+}
+
 dataset = load_dataset(
     "json",
-    data_files={
-        "train": "/disk/223/person/lichunyu/datasets/public_data/clue/tnews_public/train.json",
-        "dev": "/disk/223/person/lichunyu/datasets/public_data/clue/tnews_public/dev.json"
-    }
+    data_files=data_files
 )
 
 @dataclass

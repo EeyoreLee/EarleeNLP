@@ -104,10 +104,11 @@ class BaseTokenization:
             sentence,
             **self.tokenizer_param
         )
-        label = examples[self.label_name]
-        if label and not isinstance(label[0], int):
-            label = [self.label_map[int(_)] for _ in label]
-        else:
-            label = [self.label_map[_] for _ in label]
-        batch[self.label_name] = label
+        if self.label_name in examples:
+            label = examples[self.label_name]
+            if label and not isinstance(label[0], int):
+                label = [self.label_map[int(_)] for _ in label]
+            else:
+                label = [self.label_map[_] for _ in label]
+            batch[self.label_name] = label
         return batch

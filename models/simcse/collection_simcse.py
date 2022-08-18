@@ -114,4 +114,6 @@ class Collection(BaseCollection):
         return train_dataset, train_dataset
 
 
-DataCollator = MlmDataCollatorWithPadding
+def data_collator(**kwds):
+    collator = MlmDataCollatorWithPadding(**kwds)
+    return collator

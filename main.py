@@ -115,7 +115,7 @@ def main(json_path=None):
         model_args, training_args = parser.parse_args_into_dataclasses()
 
     try:
-        data_collator = getattr(collection_module, "DataCollator")
+        data_collator = getattr(collection_module, "data_collator")
         data_collator = data_collator(**model_args.collator_param)
     except AttributeError as e:
         data_collator = default_data_collator
@@ -142,5 +142,5 @@ def main(json_path=None):
 
 
 if __name__ == "__main__":
-    main("args/cl_experiment/cl_tnews_cls.json")
+    main("args/cl_experiment/tnews_futher_bert.json")
     # main()

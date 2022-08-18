@@ -105,14 +105,15 @@ class MlmDataCollatorWithPadding:
 @dataclass
 class BaseDataCollator:
 
-    tokenizer: str = field(default=None)
+    tokenizer: Union[str, PreTrainedTokenizerBase] = field(default=None)
     padding: Union[bool, str, PaddingStrategy] = True
     max_length: Optional[int] = None
     pad_to_multiple_of: Optional[int] = None
     return_tensors: str = "pt"
 
     def __post_init__(self):
-        self.tokenizer = AutoTokenizer.from_pretrained(self.tokenizer)
+        if isinstance(self.tokenizer, str):
+            self.tokenizer = AutoTokenizer.from_pretrained(self.tokenizer)
 
     def __call__(self, features: List[Dict[str, Any]]) -> Dict[str, Any]:
         batch = self.tokenizer.pad(
