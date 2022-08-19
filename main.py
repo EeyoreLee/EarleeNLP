@@ -8,7 +8,6 @@ import sys
 import os
 import importlib
 
-import torch
 from transformers import (
     HfArgumentParser,
     TrainingArguments,
@@ -142,5 +141,5 @@ def main(json_path=None):
 
 
 if __name__ == "__main__":
-    main("args/cl_experiment/tnews_futher_bert.json")
-    # main()
+    # main("args/cl_experiment/tnews_futher_bert.json")
+    main()

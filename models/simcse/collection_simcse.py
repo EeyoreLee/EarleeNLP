@@ -110,6 +110,7 @@ class Collection(BaseCollection):
             remove_columns=column_names,
             load_from_cache_file=self.load_from_cache_file,
         )
+        # train_dataset.remove_columns([self.label_name])
 
         return train_dataset, train_dataset
 
