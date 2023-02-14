@@ -31,9 +31,9 @@ def main(json_path=None):
     """    
     parser = HfArgumentParser(AdvanceArguments)
     if json_path:
-        advance_args, = parser.parse_json_file(json_file=json_path)
+        advance_args, = parser.parse_json_file(json_file=json_path, allow_extra_keys=True)
     elif len(sys.argv) == 2 and sys.argv[1].endswith(".json"):
-        advance_args, = parser.parse_json_file(json_file=os.path.abspath(sys.argv[1]))
+        advance_args, = parser.parse_json_file(json_file=os.path.abspath(sys.argv[1]), allow_extra_keys=True)
     else:
         advance_args, = parser.parse_args_into_dataclasses()
 
@@ -107,9 +107,9 @@ def main(json_path=None):
 
     parser = HfArgumentParser((argument, TrainingArguments))
     if json_path:
-        model_args, training_args = parser.parse_json_file(json_file=json_path)
+        model_args, training_args = parser.parse_json_file(json_file=json_path, allow_extra_keys=True)
     elif len(sys.argv) == 2 and sys.argv[1].endswith(".json"):
-        model_args, training_args = parser.parse_json_file(json_file=os.path.abspath(sys.argv[1]))
+        model_args, training_args = parser.parse_json_file(json_file=os.path.abspath(sys.argv[1]), allow_extra_keys=True)
     else:
         model_args, training_args = parser.parse_args_into_dataclasses()
 

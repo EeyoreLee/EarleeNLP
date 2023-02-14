@@ -37,8 +37,6 @@ class Collection(BaseCollection):
             extension = "text"
         if extension == "csv":
             datasets = load_dataset(extension, data_files=self.train_data_path, cache_dir="data/cache_dir", delimiter=",")
-        elif extension == "tsv":
-            datasets = load_dataset(extension, data_files=self.train_data_path, cache_dir="data/cache_dir", delimiter="\t")
         else:
             datasets = load_dataset(extension, data_files=self.train_data_path, cache_dir="data/cache_dir")
 
