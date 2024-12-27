@@ -3,20 +3,25 @@
 @create_time: 2022/06/24 10:24:59
 @author: lichunyu
 '''
-import logging
-import sys
-import os
 import importlib
+import logging
+import os
+import sys
+
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
+os.environ["NCCL_P2P_DISABLE"]="1"
+os.environ["NCCL_IB_DISABLE"]="1"
 
 from transformers import (
     HfArgumentParser,
-    TrainingArguments,
     Trainer,
-    default_data_collator
+    TrainingArguments,
+    default_data_collator,
 )
 
-from utils.generic import AdvanceArguments
 from utils.format_util import snake2upper_camel
+from utils.generic import AdvanceArguments
+
 # from utils.trainer import Trainer
 
 

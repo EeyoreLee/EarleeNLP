@@ -1,0 +1,32 @@
+{
+    "model": "bert_classification",
+    "output_dir": "output_dir/ec",
+    "author": "eeyore",
+    "model_init_param": {
+        "model_name_or_path": "/media/E/lichunyu/models/pretrained_models/bert-tiny-chinese",
+        "num_labels": 1105
+    },
+    "collection_param": {
+        "tokenizer_name_or_path": "/media/E/lichunyu/models/pretrained_models/bert-tiny-chinese",
+        "data_path": "/media/E/lichunyu/EarleeNLP/data/pass_bom/ec_data.tsv",
+        "data_name": "text",
+        "max_length": 30
+    },
+    "cuda_visible_devices": "0",
+    "num_train_epochs": 20,
+    "do_train": true,
+    "do_eval": true,
+    "per_device_train_batch_size": 128,
+    "per_device_eval_batch_size": 128,
+    "evaluation_strategy": "epoch",
+    "log_level": "info",
+    "logging_strategy": "steps",
+    "logging_steps": 50,
+    "load_best_model_at_end": false,
+    "optim": "adamw_hf",
+    "group_by_length": false,
+    "length_column_name": "length",
+    "save_strategy": "epoch",
+    "save_total_limit": 10,
+    "save_safetensors": false
+}

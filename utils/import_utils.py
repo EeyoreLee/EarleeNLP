@@ -1,6 +1,6 @@
-import sys
 import importlib
 import os
+import sys
 from itertools import chain
 from types import ModuleType
 

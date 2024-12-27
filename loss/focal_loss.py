@@ -25,12 +25,12 @@ class FocalLoss(nn.Module):
         >>> output = loss(input, target)
         >>> output.backward()
     """
-    def __init__(self, gamma=0, alpha: List[float] = None, reduction="none", device='cuda:0'):
+    def __init__(self, gamma=0, alpha: List[float] = None, reduction="mean"):
         super(FocalLoss, self).__init__()
         self.gamma = gamma
         self.alpha = alpha
         if alpha is not None:
-            self.alpha = torch.FloatTensor(alpha).to(device)
+            self.alpha = torch.FloatTensor(alpha).cuda()
         self.reduction = reduction
 
     def forward(self, input, target):

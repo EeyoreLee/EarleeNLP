@@ -4,16 +4,15 @@
 @author: lichunyu
 '''
 
-from collections import defaultdict
 import datetime
 import random
+from collections import defaultdict
 
-from sklearn.metrics import f1_score, accuracy_score, classification_report
 import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.init as init
-
+from sklearn.metrics import accuracy_score, classification_report, f1_score
 
 
 def initial_parameter(net, initial_method=None):

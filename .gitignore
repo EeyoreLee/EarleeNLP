@@ -19,3 +19,4 @@ lightning_logs/*
 **/__pycache__
 tmp_output/*
 **/*output_dir
+data/

@@ -1,0 +1,32 @@
+{
+    "model": "bert_classification",
+    "output_dir": "intent_4",
+    "author": "eeyore",
+    "model_init_param": {
+        "model_name_or_path": "/media/E/lichunyu/models/pretrained_models/chinese-macbert-large",
+        "num_labels": 4
+    },
+    "collection_param": {
+        "tokenizer_name_or_path": "/media/E/lichunyu/models/pretrained_models/chinese-macbert-large",
+        "data_path": "/media/E/lichunyu/TS-Chatbot/data/intent_4.tsv",
+        "data_name": "text",
+        "max_length": 100
+    },
+    "cuda_visible_devices": "0,1",
+    "num_train_epochs": 5,
+    "do_train": true,
+    "do_eval": true,
+    "per_device_train_batch_size": 4,
+    "per_device_eval_batch_size": 4,
+    "evaluation_strategy": "epoch",
+    "log_level": "info",
+    "logging_strategy": "steps",
+    "logging_steps": 5,
+    "load_best_model_at_end": false,
+    "optim": "adamw_hf",
+    "group_by_length": false,
+    "length_column_name": "length",
+    "save_steps": 5,
+    "save_total_limit": 5,
+    "save_safetensors": false
+}

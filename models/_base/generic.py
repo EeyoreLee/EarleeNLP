@@ -7,7 +7,7 @@
 _default_tokenizer_param = {
     "add_special_tokens": True,
     "truncation": "longest_first",
-    "max_length": 150,
+    "max_length": 500,
     "padding": "max_length",
     "return_attention_mask": True,
     "return_tensors": "pt"

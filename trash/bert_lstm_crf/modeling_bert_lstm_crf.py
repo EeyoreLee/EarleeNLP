@@ -5,11 +5,11 @@
 '''
 
 import torch
-import torch.nn as nn
 import torch.functional as F
+import torch.nn as nn
 from torchcrf import CRF
+from transformers import BertModel, BertPreTrainedModel
 
-from transformers import BertPreTrainedModel, BertModel
 
 class BERT_BiLSTM_CRF(nn.Module):
 
